@@ -1,0 +1,34 @@
+gacha_wish.1 = {
+  type = country_event
+  title = gacha_wish.1.title
+  desc  = gacha_wish.1.desc
+  # is_triggered_only = yes
+
+  immediate = {
+    event_illustration_estate_effect = {
+      foreground = estate_type:clergy_estate
+      background = estate_type:clergy_estate
+    }
+  }
+
+  # ==========================================
+  # 选项 A：恢复抽卡逻辑 (无脚本版)
+  # ==========================================
+  option = {
+    name = gacha_wish.1.a
+    trigger = { gold >= 100 }
+    add_gold = -10
+    add_legitimacy = legitimacy_mild_bonus
+    # ★加入随机列表，但不调用 gacha_create_common_effect★
+    trigger_event_non_silently = xinhai_events.1
+  }
+  # ==========================================
+  # 选项 B：取消
+  # ==========================================
+  option = {
+    name = gacha_wish.1.b
+    add_legitimacy = legitimacy_mild_bonus
+    add_prestige   = prestige_mild_bonus
+    add_gold = 102
+  }
+}

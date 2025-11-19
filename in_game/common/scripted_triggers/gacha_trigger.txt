@@ -1,10 +1,5 @@
-﻿# mod内部trigger带有此modifier的都是二次元
-gacha_portrait_trigger = {
-    # 只要有通用标签，就算 Gacha 角色
-    has_character_modifier = gacha_core_modifier
-}
-
-# 二向箔的trigger等mod成熟后申请独立的
-ls_snow_portrait_trigger = {
-    gacha_portrait_trigger = yes
+﻿ls_snow_portrait_trigger = {
+  OR = {
+    has_trait = xinhai_origin_trait
+  }
 }

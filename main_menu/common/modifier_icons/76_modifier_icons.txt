@@ -1,11 +1,11 @@
 water_godeye = {
-	positive = "gfx/interface/icons/modifier_types/watered_eye.dds"
+  positive = "gfx/interface/icons/modifier_types/water_godeye.dds"
 }
 
 gacha_core = {
-	positive = "gfx/interface/icons/modifier_types/watered_eye.dds"
+  positive = "gfx/interface/icons/modifier_types/water_godeye.dds"
 }
 
 constellation_level= {
-	positive = "gfx/interface/icons/modifier_types/watered_eye.dds"
+  positive = "gfx/interface/icons/modifier_types/water_godeye.dds"
 }

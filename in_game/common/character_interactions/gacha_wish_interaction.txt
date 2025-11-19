@@ -1,29 +1,40 @@
 gacha_wish_interaction = {
-  # 【UI显示】
   message = no
   is_consort_action = no
   on_own_nation = yes
   ai_tick = never
+  context_menu_click_mode = click
 
-  # 【显示条件】谁能看到这个按钮？
+  # === 【移除】价格系统 ===
+  # 删掉 price = price_gacha_wish
+  # 这样无论你有多少钱，只要符合 potential，按钮都是亮的
+
+  # === 谁能看到？ ===
   potential = {
-    scope:actor = {
-      ruler ?= root
-      # 目前我们不做限制，只要是玩家都能看到
-    }
+    is_ruler = yes
+    is_alive = yes
   }
 
-  # 【点击条件】谁能点？（有钱才行）
+  # === 谁能点？ ===
   allow = {
-    scope:actor = {
-      gold >= 100
+    always = yes
+  }
+
+  # === 必须保留这个“伪”选择器才能点亮按钮 ===
+  select_trigger = {
+    looking_for_a = character
+    source = actor
+    target_flag = recipient
+    name = "gacha_select_title"
+    column = { data = name }
+    visible = {
+      scope:actor = { ruler ?= root }
     }
   }
 
-  # 【效果】扣钱 + 触发通用祈愿事件
+  # === 效果：仅触发事件 ===
   effect = {
     scope:actor = {
-      # 核心改变：不再直接调心海事件，而是调抽卡事件
       trigger_event_non_silently = gacha_wish.1
     }
   }

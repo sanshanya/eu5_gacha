@@ -1,89 +1,89 @@
-# 命之座数值应用脚本
+# 命之座数值应用脚本 有BUG 目前只是思路展示
 # 作用：根据角色的 gacha_constellation_lvl 变量，挂载对应的数值 Modifier
 gacha_apply_constellation_stats_effect = {
-    # 参数：$who$ (例如 xinhai)
-    # === 第一步：清理旧数值 (脱旧衣) ===
-    # 我们不知道他之前穿的是几命的衣服，所以简单粗暴全部尝试移除一遍
-    # (移除不存在的 modifier 不会报错，是安全的)
-    remove_character_modifier = gacha_$who$_c0_modifier
-    remove_character_modifier = gacha_$who$_c1_modifier
-    remove_character_modifier = gacha_$who$_c2_modifier
-    remove_character_modifier = gacha_$who$_c3_modifier
-    remove_character_modifier = gacha_$who$_c4_modifier
-    remove_character_modifier = gacha_$who$_c5_modifier
-    remove_character_modifier = gacha_$who$_c6_modifier
+  # 参数：$who$ (例如 xinhai)
+  # === 第一步：清理旧数值 (脱旧衣) ===
+  # 我们不知道他之前穿的是几命的衣服，所以简单粗暴全部尝试移除一遍
+  # (移除不存在的 modifier 不会报错，是安全的)
+  remove_character_modifier = gacha_$who$_c0_modifier
+  remove_character_modifier = gacha_$who$_c1_modifier
+  remove_character_modifier = gacha_$who$_c2_modifier
+  remove_character_modifier = gacha_$who$_c3_modifier
+  remove_character_modifier = gacha_$who$_c4_modifier
+  remove_character_modifier = gacha_$who$_c5_modifier
+  remove_character_modifier = gacha_$who$_c6_modifier
 
-    # === 第二步：检查等级并穿新衣 ===
-    # Case 0: 0 命 (刚出生)
-    if = {
-        limit = {
-            check_variable = { name = gacha_constellation_lvl value = 0 }
-        }
-        add_character_modifier = {
-            modifier = gacha_$who$_c0_modifier
-            mode     = add_and_extend
-        }
+  # === 第二步：检查等级并穿新衣 ===
+  # Case 0: 0 命 (刚出生)
+  if = {
+    limit = {
+      check_variable = { name = gacha_constellation_lvl value = 0 }
     }
-    # Case 1: 1 命
-    else_if = {
-        limit = {
-            check_variable = { name = gacha_constellation_lvl value = 1 }
-        }
-        add_character_modifier = {
-            modifier = gacha_$who$_c1_modifier
-            mode     = add_and_extend
-        }
+    add_character_modifier = {
+      modifier = gacha_$who$_c0_modifier
+      mode     = add_and_extend
     }
-    # Case 2: 2 命
-    else_if = {
-        limit = {
-            check_variable = { name = gacha_constellation_lvl value = 2 }
-        }
-        add_character_modifier = {
-            modifier = gacha_$who$_c2_modifier
-            mode     = add_and_extend
-        }
+  }
+  # Case 1: 1 命
+  else_if = {
+    limit = {
+      check_variable = { name = gacha_constellation_lvl value = 1 }
     }
-    # Case 3: 3 命
-    else_if = {
-        limit = {
-            check_variable = { name = gacha_constellation_lvl value = 3 }
-        }
-        add_character_modifier = {
-            modifier = gacha_$who$_c3_modifier
-            mode     = add_and_extend
-        }
-        # add_trait = trait:gacha_$who$_ascended_trait #可以把一些关键trait放到3/6命
+    add_character_modifier = {
+      modifier = gacha_$who$_c1_modifier
+      mode     = add_and_extend
     }
-    # Case 4: 4 命
-    else_if = {
-        limit = {
-            check_variable = { name = gacha_constellation_lvl value = 4 }
-        }
-        add_character_modifier = {
-            modifier = gacha_$who$_c4_modifier
-            mode     = add_and_extend
-        }
+  }
+  # Case 2: 2 命
+  else_if = {
+    limit = {
+      check_variable = { name = gacha_constellation_lvl value = 2 }
     }
-    # Case 5: 5 命
-    else_if = {
-        limit = {
-            check_variable = { name = gacha_constellation_lvl value = 5 }
-        }
-        add_character_modifier = {
-            modifier = gacha_$who$_c5_modifier
-            mode     = add_and_extend
-        }
+    add_character_modifier = {
+      modifier = gacha_$who$_c2_modifier
+      mode     = add_and_extend
     }
-    # Case 6: 6 命 (满命)
-    else_if = {
-        limit = {
-            check_variable = { name = gacha_constellation_lvl value >= 6 }
-        }
-        add_character_modifier = {
-            modifier = gacha_$who$_c6_modifier
-            mode     = add_and_extend
-        }
-        # add_trait = trait:gacha_$who$_ascended_trait
+  }
+  # Case 3: 3 命
+  else_if = {
+    limit = {
+      check_variable = { name = gacha_constellation_lvl value = 3 }
     }
+    add_character_modifier = {
+      modifier = gacha_$who$_c3_modifier
+      mode     = add_and_extend
+    }
+    # add_trait = trait:gacha_$who$_ascended_trait #可以把一些关键trait放到3/6命
+  }
+  # Case 4: 4 命
+  else_if = {
+    limit = {
+      check_variable = { name = gacha_constellation_lvl value = 4 }
+    }
+    add_character_modifier = {
+      modifier = gacha_$who$_c4_modifier
+      mode     = add_and_extend
+    }
+  }
+  # Case 5: 5 命
+  else_if = {
+    limit = {
+      check_variable = { name = gacha_constellation_lvl value = 5 }
+    }
+    add_character_modifier = {
+      modifier = gacha_$who$_c5_modifier
+      mode     = add_and_extend
+    }
+  }
+  # Case 6: 6 命 (满命)
+  else_if = {
+    limit = {
+      check_variable = { name = gacha_constellation_lvl value >= 6 }
+    }
+    add_character_modifier = {
+      modifier = gacha_$who$_c6_modifier
+      mode     = add_and_extend
+    }
+    # add_trait = trait:gacha_$who$_ascended_trait
+  }
 }

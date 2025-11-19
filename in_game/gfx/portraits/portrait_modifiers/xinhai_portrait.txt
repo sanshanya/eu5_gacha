@@ -1,27 +1,23 @@
 ﻿xinhai_portrait = {
-    usage    = game
-    priority = 100
+  usage    = game
+  priority = 100
 
-    xinhai_01 = {
-        dna_modifiers = {
-            accessory = {
-                mode     = replace
-                gene     = xinhaiprops_1      # 这里用你 gene 文件里的名字
-                template = xinhai_01          # 用 accessory 的名字
-                value    = 0.5
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 255
-
-                # 触发条件：你可以有两种思路：
-                # 1）重用 ls_snow_portrait_trigger（共用 API）
-                # 2）自己写一个 xinhai_portrait_trigger
-
-                has_character_modifier = gacha_xinhai_visual_modifier
-            }
-        }
+  xinhai_01 = {
+    dna_modifiers = {
+      accessory = {
+        mode     = replace
+        gene     = xinhaiprops_1      # 这里用你 gene 文件里的名字
+        template = xinhai_01          # 用 accessory 的名字
+        value    = 0.5
+      }
     }
+    weight = {
+      base = 0
+      modifier = {
+        add = 255
+
+        has_trait = xinhai_origin_trait
+      }
+    }
+  }
 }

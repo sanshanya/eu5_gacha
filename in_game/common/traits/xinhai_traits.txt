@@ -1,48 +1,45 @@
-xinhai_sea_princess_trait = { #心海海祇姬君 海军
-    category = admiral
-    allow = {
-        # 只通过事件、脚本添加
-        always = no
-    }
+xinhai_origin_trait = { #心海妙算无遗 内阁立法
+  category = ruler
+  allow = {
+    always = no
+  }
 
-    modifier = {
-        naval_morale_modifier = 0.3      # +30% 海军士气
-        navy_movement_speed   = 0.3      # +50% 舰队航速
-        navy_repair_cost  = -0.2      # +50% 运输船战斗力（EU5 里就是运输舰战斗能力）
-    }
+  modifier = {
+    legislative_efficiency       = 0.5   # +50% 立法效率
+    character_cabinet_efficiency = 1.75   # +150% 内阁效率（角色源的那种）
+    country_cabinet_efficiency   = 0.25  # +25% 全国内阁效率
+    cultural_influence_modifier  = 0.15  # +15%文化影响力
+  }
 }
 
+xinhai_awakened_trait = { #心海海月之誓 治疗
+  category = ruler
+  allow = {
+    always = no
+  }
 
-xinhai_miaosuan_trait = { #心海妙算无遗 内阁立法
-    category = ruler
-    allow = {
-        always = no
-    }
+  modifier = {
+    # 所有阶层满意度恢复更快
+    global_estate_satisfaction_recovery = 0.25
 
-    modifier = {
-        legislative_efficiency       = 0.5   # +50% 立法效率
-        character_cabinet_efficiency = 1.75   # +150% 内阁效率（角色源的那种）
-        country_cabinet_efficiency   = 0.25  # +25% 全国内阁效率
-        cultural_influence_modifier  = 0.15  # +15%文化影响力
-    }
+    # 提升疾病抗性
+    global_disease_resistance   = 0.25
+
+    # 繁荣度恢复（全局灾难度下降速度）
+    global_devastation_recovery         = 0.5
+  }
 }
 
+xinhai_transcended_trait = { #心海海祇姬君 海军
+  category = admiral
+  allow = {
+    # 只通过事件、脚本添加
+    always = no
+  }
 
-xinhai_sea_oath_trait = { #心海海月之誓 治疗
-    category = ruler
-    allow = {
-        always = no
-    }
-
-    modifier = {
-        # 所有阶层满意度恢复更快
-        global_estate_satisfaction_recovery = 0.25
-
-        # 提升疾病抗性
-        global_disease_resistance   = 0.25
-
-        # 繁荣度恢复（全局灾难度下降速度）
-        global_devastation_recovery         = 0.5
-    }
+  modifier = {
+    naval_morale_modifier = 0.3      # +30% 海军士气
+    navy_movement_speed   = 0.3      # +50% 舰队航速
+    navy_repair_cost  = -0.2      # +50% 运输船战斗力（EU5 里就是运输舰战斗能力）
+  }
 }
-

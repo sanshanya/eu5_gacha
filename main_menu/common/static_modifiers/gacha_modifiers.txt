@@ -1,8 +1,8 @@
 gacha_core_modifier = {
-    game_data = { category = character decaying = no }
-    # 这里不加数值，只是一个“所有卡池角色共用”的标记
-    # 图标可以在 modifier_types 里配（类似 watered_eye）
-    force_allow_as_leader      = yes
-    ignore_gender_block_cabinet = yes
-    is_immortal                 = yes
+  game_data = { category = character decaying = no }
+  # 这里不加数值，只是一个“所有卡池角色共用”的标记
+  # 图标可以在 modifier_types 里配（类似 watered_eye）
+  force_allow_as_leader      = yes
+  ignore_gender_block_cabinet = yes
+  is_immortal                 = yes
 }
