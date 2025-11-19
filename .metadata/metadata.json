@@ -1,0 +1,21 @@
+﻿{
+	"name":	"eu5_gacha",
+	"id":	"eu5_gacha",
+	"version":	"0.1",
+	"supported_game_version":	"1.*.*",
+	"short_description":	"允许玩家右键统治者互动抽卡,抽取二次元角色",
+	"tags":	["Characters"],
+	"picture" : "thumbnail.png",
+	"relationships" : [
+		{
+		"rel_type" : "dependency",
+		"id" : "2DPortraitFramework",
+		"display_name" : "二向箔 / 2D Portrait Framework",
+		"resource_type" : "mod",
+			"version" : "*.*.*"
+		}
+	],
+	"game_custom_data":	{
+		"multiplayer_synchronized" : true
+	}
+}

@@ -1,0 +1,7 @@
+﻿xinhai_01 = {
+    entity = {
+        required_tags     = ""
+        shared_pose_entity = head
+        entity            = "xinhai_01_entity"
+    }
+}

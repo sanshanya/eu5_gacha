@@ -1,0 +1,19 @@
+xinhai_blessing_of_the_sea = {
+  game_data = {
+    category = character
+  }
+  # 这几条是纯数值效果，先沿用原版强度
+  prestige_from_naval_battle = 1 # 海战威望
+  # 这几条是“能不能当将领 / 入内阁 / 永生”
+  force_allow_as_leader      = yes
+  ignore_gender_block_cabinet = yes
+  is_immortal                 = yes
+  #blocked_from_marriage = yes
+}
+
+water_eye = {
+  game_data = {
+    category = character
+  }
+  watered_eye = yes
+}

@@ -1,0 +1,7 @@
+watered_eye={
+	color=good
+	boolean=yes
+	game_data={
+		category=character
+	}
+}

@@ -1,0 +1,3 @@
+watered_eye = {
+	positive = "gfx/interface/icons/modifier_types/watered_eye.dds"
+}

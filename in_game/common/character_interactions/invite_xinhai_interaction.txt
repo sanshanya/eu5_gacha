@@ -1,0 +1,35 @@
+﻿invite_xinhai_interaction = {
+  message = no
+  is_consort_action = no
+  on_own_nation = yes
+
+  ai_tick = never
+  potential = {
+    always = yes
+  }
+
+  allow = {
+    always = yes
+  }
+
+  select_trigger = {
+    looking_for_a = character
+    source = actor
+    target_flag = recipient
+    name = "choose_character"
+    column = { data = name }
+    visible = {
+      scope:actor = {
+        ruler ?= root
+      }
+    }
+  }
+
+  effect = {
+    scope:actor = {
+      trigger_event_non_silently = xinhai_events.1
+    }
+  }
+
+  ai_will_do = { base = 0 }
+}
