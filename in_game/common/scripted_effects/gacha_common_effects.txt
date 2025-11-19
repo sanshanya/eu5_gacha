@@ -1,0 +1,88 @@
+# ==============================================================================
+# Gacha System: Common Character Creation Template
+# 通用角色创建脚本：所有卡池角色都必须通过此接口创建
+# ==============================================================================
+
+gacha_create_common_effect = {
+  # --------------------------------------------------------------------------
+  # 参数说明 (Arguments):
+  # $who$      : 角色内部代号 (例: xinhai, ayato)。用于拼接 modifier 和变量名。
+  # $age$      : 初始年龄 (int)。
+  # $culture$  : 文化定义 (例: culture:tougokud)。
+  # $religion$ : 宗教定义 (例: religion:shintō)。
+  # $adm/dip/mil$ : 初始属性值 (例: { 85 95 })。
+  # --------------------------------------------------------------------------
+
+  # 1. 检查全局锁：防止重复获得同一角色
+  if = {
+    limit = {
+      has_global_variable = gacha_$who$_is_summoned
+    }
+    # 已经拥有该角色，什么都不做
+    # (重复获得的逻辑应在 gacha_wish 事件的 else 分支处理)
+  }
+  else = {
+    # 2. 创建角色实体
+    create_character = {
+      first_name = first_name_$who$     # 需在 localization 里定义 (如 name_xinhai)
+      last_name  = last_name_$who$   # 需在 localization 里定义 (如 family_xinhai)
+      female     = yes
+      age        = $age$
+      culture    = $culture$
+      religion   = $religion$
+
+      adm = $adm$
+      dip = $dip$
+      mil = $mil$
+
+      # 立即保存 scope 以便后续操作
+      save_scope_as = new_gacha_char
+    }
+
+    # 3. 初始化角色数据
+    scope:new_gacha_char = {
+      # === A. 逻辑层 (Logic Layer) ===
+      # 挂载通用标签。让 gacha_portrait_trigger 识别到"这是个纸片人"。
+      # 此外永生之类的通用buff也在里面
+      add_character_modifier = {
+        modifier = gacha_core_modifier
+        mode     = add_and_extend
+      }
+
+      # === B. 视觉层 (Visual Layer) ===
+      # 挂载身份标识，用于识别这个人。
+      # 对应 modifier: gacha_xinhai_modifier
+      add_character_modifier = {
+        modifier = gacha_$who$_modifier
+        mode     = add_and_extend
+      }
+
+
+      # === D. 系统层 (System Layer) ===
+      # 加入全局管理列表，用于事件遍历 (Event Scoping)
+      add_to_global_variable_list = {
+        name   = gacha_obtained_characters
+        target = this
+      }
+
+      # 初始化命之座变量 (默认为 0)
+      set_variable = {
+        name  = gacha_constellation_lvl
+        value = 0
+      }
+      # 立即应用0名效果，应该会上一个Moddifer
+      gacha_apply_constellation_stats_effect = {
+        who = $who$
+      }
+      # 移动到当前国家并归入王室阶层
+      move_country = root
+      change_character_estate = estate_type:crown_estate
+    }
+
+    # 4. 上全局锁 (Lock)
+    set_global_variable = {
+      name  = gacha_$who$_is_summoned
+      value = yes
+    }
+  }
+}

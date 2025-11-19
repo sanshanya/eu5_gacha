@@ -20,8 +20,7 @@
                 # 1）重用 ls_snow_portrait_trigger（共用 API）
                 # 2）自己写一个 xinhai_portrait_trigger
 
-                ls_snow_portrait_trigger = yes
-                has_trait = xinhai_miaosuan_trait
+                has_character_modifier = gacha_xinhai_visual_modifier
             }
         }
     }

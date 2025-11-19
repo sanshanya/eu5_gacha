@@ -20,6 +20,11 @@
   xinhai_blessing_of_the_sea: "海祇的加护"
   xinhai_blessing_of_the_sea_desc: "在珊瑚宫心海的统筹下，军心稳定如潮汐起落，她的谋略与指挥为我们带来长久的优势。"
 
-  # 角色名（事件里用到的 name_xinhai）
-  name_xinhai: "珊瑚宫心海"
+  # 角色名（事件里用到的 ）
+  first_name_xinhai: "心海"
+  last_name_xinhai: "珊瑚宫"
+
+  gacha_wish.1.title: "祈愿：异世相遇"
+  gacha_wish.1.desc: "你将100枚金币兑换1枚纠缠之缘投入祭坛。这不仅是一次简单的召唤，更是命运的交汇。如果诚心祈祷，或许有命星回应你的请求。"
+  gacha_wish.1.a: "同意 (消耗100金)"
 

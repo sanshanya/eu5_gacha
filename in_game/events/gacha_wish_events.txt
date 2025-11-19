@@ -1,0 +1,74 @@
+namespace = gacha_wish
+
+# ==========================================
+# 祈愿池核心事件
+# ==========================================
+gacha_wish.1 = {
+    type = country_event
+    title = gacha_wish.1.title
+    desc  = gacha_wish.1.desc
+    is_triggered_only = yes # 只能由按钮触发
+    # image = "gfx/interface/illustrations/event/gacha_background.dds" # 未来你可以加个抽卡背景图
+
+    option = {
+        name = gacha_wish.1.a # "祈愿"
+        
+        # 1. 扣费
+        add_gold = -100
+
+        # 2. 摇号
+        random_list = {
+            # === 99% 出货 (心海) ===
+            99 = {
+                # --- 分支 A: 第一次获得 ---
+                if = {
+                    limit = { 
+                        # 检查全局锁：没获得过才执行
+                        NOT = { has_global_variable = gacha_xinhai_is_summoned } 
+                    }
+                    
+                    # 【这里！这就是调用点！】
+                    # 执行通用脚本，把心海造出来，挂上所有 Modifier 和 变量
+                    gacha_create_common_effect = {
+                        who      = xinhai
+                        age      = 18
+                        culture  = culture:tougokud
+                        religion = religion:shintō
+                        adm      = { 85 100 }
+                        dip      = { 80 100 }
+                        mil      = { 60 90 }
+                    }
+
+                    # 造人完成，马上弹窗展示给玩家看
+                    trigger_event_non_silently = xinhai_events.1
+                }
+                
+                # --- 分支 B: 重复获得 (命座升级) ---
+                else = {
+                    # 1. 找到已经存在的心海
+                    random_in_global_list = {
+                        variable = gacha_obtained_characters
+                        limit = { has_character_modifier = gacha_xinhai_modifier }
+                        save_scope_as = current_xinhai
+                    }
+                    
+                    # 2. 对她执行升级脚本
+                    scope:current_xinhai = {
+                        gacha_apply_constellation_stats_effect = { who = xinhai }
+                    }
+                    
+                    # 3. 给玩家一点反馈 (比如弹个小提示或返还资源)
+                    add_gold = 50
+                    add_prestige = 10
+                    # custom_tooltip = "gacha_constellation_up_tt"
+                }
+            }
+
+            # === 1% 歪了 (没出货) ===
+            1 = {
+                add_prestige = 5
+                # 可以在这里写点非酋文本
+            }
+        }
+    }
+}

@@ -1,19 +1,35 @@
-xinhai_blessing_of_the_sea = {
-  game_data = {
-    category = character
-  }
-  # 这几条是纯数值效果，先沿用原版强度
-  prestige_from_naval_battle = 1 # 海战威望
-  # 这几条是“能不能当将领 / 入内阁 / 永生”
-  force_allow_as_leader      = yes
-  ignore_gender_block_cabinet = yes
-  is_immortal                 = yes
-  #blocked_from_marriage = yes
+gacha_xinhai_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    # 同样可以不加任何数值，仅用来识别“这是心海”,图标使用纠缠之源
+    watered_godeye = yes
 }
 
-water_eye = {
-  game_data = {
-    category = character
-  }
-  watered_eye = yes
+xinhai_c0_modifier = {
+    game_data = { category = character decaying = no }
+    constellation_level = 0     # 界面显示：命之座等级 +3
+}
+xinhai_c1_modifier = {
+    game_data = { category = character decaying = no }
+    constellation_level = 1     # 界面显示：命之座等级 +3
+}
+xinhai_c2_modifier = {
+    game_data = { category = character decaying = no }
+    constellation_level = 2     # 界面显示：命之座等级 +3
+}
+xinhai_c3_modifier = {
+    game_data = { category = character decaying = no }
+    constellation_level = 3     # 界面显示：命之座等级 +3
+}
+xinhai_c4_modifier = {
+    game_data = { category = character decaying = no }
+    constellation_level = 4     # 界面显示：命之座等级 +3
+}
+xinhai_c5_modifier = {
+    game_data = { category = character decaying = no }
+    constellation_level = 5     # 界面显示：命之座等级 +3
+}
+xinhai_c6_modifier = {
+    game_data = { category = character decaying = no }
+    constellation_level = 6     # 界面显示：命之座等级 +3
 }

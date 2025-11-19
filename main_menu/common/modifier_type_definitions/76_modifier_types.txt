@@ -1,7 +1,27 @@
-watered_eye={
-	color=good
-	boolean=yes
-	game_data={
-		category=character
-	}
+water_godeye={
+  color=good
+  boolean=yes
+  game_data={
+    category=character
+  }
+}
+
+gacha_core ={
+  color=good
+  boolean=yes
+  game_data={
+    category=character
+  }
+}
+
+constellation_level = {
+    color = neutral     # 中性色（白色）
+    boolean = no        # 是数字
+    percent = no        # 不是百分比，是整数
+    decimals = 0        # 不要小数（显示 3，而不是 3.00）
+    game_data = {
+        category = character
+        min = 0
+        max = 6         # 满命只有 6 命
+    }
 }
