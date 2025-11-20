@@ -1,4 +1,4 @@
-water_godeye={
+gacha_water_godeye={
   color=good
   boolean=yes
   game_data={
@@ -14,7 +14,7 @@ gacha_core ={
   }
 }
 
-constellation_level = {
+gacha_constellation_level = {
   color = neutral     # 中性色（白色）
   boolean = no        # 是数字
   percent = no        # 不是百分比，是整数

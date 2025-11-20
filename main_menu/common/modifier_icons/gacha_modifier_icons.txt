@@ -1,0 +1,11 @@
+gacha_water_godeye = {
+  positive = "gfx/interface/icons/modifier_types/gacha_water_godeye.dds"
+}
+
+gacha_core = {
+  positive = "gfx/interface/icons/modifier_types/gacha_water_godeye.dds"
+}
+
+gacha_constellation_level= {
+  positive = "gfx/interface/icons/modifier_types/gacha_water_godeye.dds"
+}

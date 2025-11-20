@@ -1,28 +1,25 @@
 ﻿l_simp_chinese:
   gacha_events_interaction: "祈愿「异世相遇」"
   gacha_events_interaction_concept: "[ruler|e]"
-  gacha_events_interaction_act: "$invite_xinhai_interaction$"
-  gacha_events_interaction_desc_specific: "消耗金币进行进行祈愿"
+  gacha_events_interaction_act: "$gacha_events_interaction$"
+  gacha_events_interaction_desc_specific: "消耗金币进行祈愿"
   gacha_events_interaction_desc: "呼唤来自海祇岛的军师前来出谋划策。"
   gacha_events_interaction_past: "曾召唤珊瑚宫心海"
   gacha_events_interaction_act_past: "[recipient.GetName]已决定召唤珊瑚宫心海"
 
-  xinhai_events.1.title: "珊瑚宫心海"
-  xinhai_events.1.desc: "传闻海衹岛的「现人神巫女」，精通兵法与筹谋，能为我们的国家带来新的希望。我们是否当即相邀入朝？"
+  gacha_xinhai_events.1.title: "珊瑚宫心海"
+  gacha_xinhai_events.1.desc: "传闻海衹岛的「现人神巫女」，精通兵法与筹谋，能为我们的国家带来新的希望。我们是否当即相邀入朝？"
 
-  xinhai_events.1.a: "欢迎珊瑚宫心海"
-  xinhai_events.1.b: "我们暂时不需要她的协助"
+  gacha_xinhai_events.1.a: "欢迎珊瑚宫心海"
+  gacha_xinhai_events.1.b: "我们暂时不需要她的协助"
 
-  xinhai_events.may_inspire_tt: "珊瑚宫心海作为才智出众的廷臣加入，并可能鼓舞我们的军队。"
-  xinhai_events.disappears_tt: "心海悄然离去。"
+  gacha_xinhai_events.may_inspire_tt: "珊瑚宫心海作为才智出众的廷臣加入，并可能鼓舞我们的军队。"
+  gacha_xinhai_events.disappears_tt: "心海悄然离去。"
 
-  # 心海专属角色修正（你刚刚定义的 xinhai_blessing_of_the_sea）
-  xinhai_blessing_of_the_sea: "海祇的加护"
-  xinhai_blessing_of_the_sea_desc: "在珊瑚宫心海的统筹下，军心稳定如潮汐起落，她的谋略与指挥为我们带来长久的优势。"
 
   # 角色名（事件里用到的 ）
-  first_name_xinhai: "心海"
-  last_name_xinhai: "珊瑚宫"
+  gacha_first_name_xinhai: "心海"
+  gacha_last_name_xinhai: "珊瑚宫"
 
   gacha_events.1.title: "祈愿：异世相遇"
   gacha_events.1.desc: "祭坛的规矩为100枚金币兑换1枚纠缠之缘。纠缠之缘可以从异世中获取命运的交汇。如果诚心祈祷，或许有命星回应你的请求。"

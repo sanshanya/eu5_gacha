@@ -1,0 +1,23 @@
+﻿gacha_xinhai_portrait = {
+  usage    = game
+  priority = 100
+
+  gacha_xinhai_01 = {
+    dna_modifiers = {
+      accessory = {
+        mode     = replace
+        gene     = gacha_xinhai_props_1      # 这里用你 gene 文件里的名字
+        template = gacha_xinhai_01          # 用 accessory 的名字
+        value    = 0.5
+      }
+    }
+    weight = {
+      base = 0
+      modifier = {
+        add = 255
+
+        has_trait = gacha_xinhai_origin_trait
+      }
+    }
+  }
+}

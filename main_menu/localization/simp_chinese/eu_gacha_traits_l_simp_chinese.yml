@@ -1,14 +1,14 @@
 ﻿l_simp_chinese:
   STATIC_MODIFIER_NAME_gacha_core_modifier:0 "祈愿的加护"
-  STATIC_MODIFIER_NAME_gacha_xinhai_modifier:0 "珊瑚宫心海"
+  STATIC_MODIFIER_NAME_gacha_xinhai_modifier:0 "海祇的加护"
   MODIFIER_TYPE_NAME_gacha_core:0 "来自异世界的旅人"
-  MODIFIER_TYPE_NAME_water_godeye:0 "水元素神之眼「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
+  MODIFIER_TYPE_NAME_gacha_water_godeye:0 "水元素神之眼「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
 
-  xinhai_origin_trait:0 "庙算无遗"
-  desc_xinhai_origin_trait:0 "人们普遍认为珊瑚宫心海是一名足智多谋、深不可测的领导者。因为她脸上总是带着恬静的笑容，谈笑间将所有事务安排得井井有条。"
+  gacha_xinhai_origin_trait:0 "庙算无遗"
+  desc_gacha_xinhai_origin_trait:0 "人们普遍认为珊瑚宫心海是一名足智多谋、深不可测的领导者。因为她脸上总是带着恬静的笑容，谈笑间将所有事务安排得井井有条。"
 
-  xinhai_awakened_trait:0 "海月之誓"
-  desc_xinhai_awakened_trait:0 "作为海祇岛的领袖，我带领大家逆流前行的日子也过去了许久。我们能有如今这样和谐安宁的时光，你的努力必不可少。"
+  gacha_xinhai_awakened_trait:0 "海月之誓"
+  desc_gacha_xinhai_awakened_trait:0 "作为海祇岛的领袖，我带领大家逆流前行的日子也过去了许久。我们能有如今这样和谐安宁的时光，你的努力必不可少。"
 
-  xinhai_transcended_trait:0 "海祇姬君"
-  desc_xinhai_transcended_trait:0 "在碧波游鱼间穿行，感受海水轻抚脸颊的温柔，内心也跟着平静下来了呢。"
+  gacha_xinhai_transcended_trait:0 "海祇姬君"
+  desc_gacha_xinhai_transcended_trait:0 "在碧波游鱼间穿行，感受海水轻抚脸颊的温柔，内心也跟着平静下来了呢。"

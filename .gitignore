@@ -1,1 +1,21 @@
+# Gemini CLI folder
+.gemini/
+
+# Modding tools
+EU5-Modding-Mcp/
+
+# Python scripts
 allinone.py
+
+# Output directory
+output/
+
+# Executables
+image_cropper.exe
+
+# Configuration files
+mod_cropper_config.json
+settings.json
+
+# Other
+all_project_context.txt

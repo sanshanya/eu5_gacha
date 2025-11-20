@@ -1,10 +1,10 @@
 accessory_genes = {
-  xinhaiprops_1 = {
+  gacha_xinhai_props_1 = {
     gene_xinhai_blank_1 = { index = 0 }
 
-    xinhai_01 = {
+    gacha_xinhai_01 = {
       index = 1
-      male   = { 1 = xinhai_01 }
+      male   = { 1 = gacha_xinhai_01 }
       female = male
       boy    = male
       girl   = male

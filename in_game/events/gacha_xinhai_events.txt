@@ -1,11 +1,11 @@
-namespace = xinhai_events
+namespace = gacha_xinhai_events
 
-xinhai_events.1 = {
+gacha_xinhai_events.1 = {
   type = country_event
 
   # 用你自己的本地化 key，而不是原来的 flavor_fra
-  title = xinhai_events.1.title
-  desc  = xinhai_events.1.desc
+  title = gacha_xinhai_events.1.title
+  desc  = gacha_xinhai_events.1.desc
 
   fire_only_once = yes
 
@@ -23,8 +23,8 @@ xinhai_events.1 = {
 
     # 创建“心海”角色
     create_character = {
-      first_name = first_name_xinhai         # 自己在本地化里定义 name_xinhai
-      last_name  = last_name_xinhai             # 或者 name_kokomi，都行
+      first_name = gacha_first_name_xinhai         # 自己在本地化里定义 name_xinhai
+      last_name  = gacha_last_name_xinhai             # 或者 name_kokomi，都行
       female     = yes
       adm = { 90 100 }
       dip = { 85 100 }
@@ -39,32 +39,32 @@ xinhai_events.1 = {
       age = 16
 
       # 统筹 / 内阁 / 文化影响：庙算无遗
-      add_trait = trait:xinhai_origin_trait
+      add_trait = trait:gacha_xinhai_origin_trait
 
       # 民心 & 繁荣：海月之誓
-      add_trait = trait:xinhai_awakened_trait
+      add_trait = trait:gacha_xinhai_awakened_trait
 
       # 海军向：海祇姬君 – Admiral 专用
-      add_trait = trait:xinhai_transcended_trait
+      add_trait = trait:gacha_xinhai_transcended_trait
 
 
       estate = estate_type:crown_estate
 
-      save_scope_as = xinhai_character   # 自己起名，方便下面引用
+      save_scope_as = gacha_xinhai_character   # 自己起名，方便下面引用
 
       # 若你已有外观脚本，可解注下一行并在 character_scripts 里提供
-      script = xinhai_character
+      # script = gacha_xinhai_character
     }
   }
 
   option = {
-    name = xinhai_events.1.a            # 接纳心海（本地化里写）
+    name = gacha_xinhai_events.1.a            # 接纳心海（本地化里写）
     historical_option = yes
-    custom_tooltip = xinhai_events.may_inspire_tt
+    custom_tooltip = gacha_xinhai_events.may_inspire_tt
     add_army_tradition = army_tradition_extreme_bonus
 
     # 加入本国作为廷臣，并附带 buff
-    character:xinhai_character = {
+    scope:gacha_xinhai_character = {
       move_country = scope:actor
       add_character_modifier = {
         modifier = gacha_core_modifier
@@ -87,9 +87,9 @@ xinhai_events.1 = {
   }
 
   option = {
-    name = xinhai_events.1.b            # 婉拒
+    name = gacha_xinhai_events.1.b            # 婉拒
     add_legitimacy = legitimacy_mild_bonus
     add_prestige   = prestige_mild_bonus
-    custom_tooltip = xinhai_events.disappears_tt
+    custom_tooltip = gacha_xinhai_events.disappears_tt
   }
 }
