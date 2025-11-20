@@ -1,4 +1,4 @@
-gacha_wish_interaction = {
+gacha_events_interaction = {
   message = no
   is_consort_action = no
   on_own_nation = yes
@@ -6,7 +6,7 @@ gacha_wish_interaction = {
   context_menu_click_mode = click
 
   # === 【移除】价格系统 ===
-  # 删掉 price = price_gacha_wish
+  # 删掉 price = price_gacha_events
   # 这样无论你有多少钱，只要符合 potential，按钮都是亮的
 
   # === 谁能看到？ ===
@@ -35,7 +35,7 @@ gacha_wish_interaction = {
   # === 效果：仅触发事件 ===
   effect = {
     scope:actor = {
-      trigger_event_non_silently = gacha_wish.1
+      trigger_event_non_silently = gacha_events.1
     }
   }
 

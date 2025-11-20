@@ -1,11 +1,11 @@
 ﻿l_simp_chinese:
-  gacha_wish_interaction: "祈愿「异世相遇」"
-  gacha_wish_interaction_concept: "[ruler|e]"
-  gacha_wish_interaction_act: "$invite_xinhai_interaction$"
-  gacha_wish_interaction_desc_specific: "消耗金币进行进行祈愿"
-  gacha_wish_interaction_desc: "呼唤来自海祇岛的军师前来出谋划策。"
-  gacha_wish_interaction_past: "曾召唤珊瑚宫心海"
-  gacha_wish_interaction_act_past: "[recipient.GetName]已决定召唤珊瑚宫心海"
+  gacha_events_interaction: "祈愿「异世相遇」"
+  gacha_events_interaction_concept: "[ruler|e]"
+  gacha_events_interaction_act: "$invite_xinhai_interaction$"
+  gacha_events_interaction_desc_specific: "消耗金币进行进行祈愿"
+  gacha_events_interaction_desc: "呼唤来自海祇岛的军师前来出谋划策。"
+  gacha_events_interaction_past: "曾召唤珊瑚宫心海"
+  gacha_events_interaction_act_past: "[recipient.GetName]已决定召唤珊瑚宫心海"
 
   xinhai_events.1.title: "珊瑚宫心海"
   xinhai_events.1.desc: "传闻海衹岛的「现人神巫女」，精通兵法与筹谋，能为我们的国家带来新的希望。我们是否当即相邀入朝？"
@@ -24,8 +24,8 @@
   first_name_xinhai: "心海"
   last_name_xinhai: "珊瑚宫"
 
-  gacha_wish.1.title: "祈愿：异世相遇"
-  gacha_wish.1.desc: "祭坛的规矩为100枚金币兑换1枚纠缠之缘。纠缠之缘可以从异世中获取命运的交汇。如果诚心祈祷，或许有命星回应你的请求。"
-  gacha_wish.1.a: "同意 (消耗100金)"
-  gacha_wish.1.b: "拒绝"
+  gacha_events.1.title: "祈愿：异世相遇"
+  gacha_events.1.desc: "祭坛的规矩为100枚金币兑换1枚纠缠之缘。纠缠之缘可以从异世中获取命运的交汇。如果诚心祈祷，或许有命星回应你的请求。"
+  gacha_events.1.a: "同意 (消耗100金)"
+  gacha_events.1.b: "拒绝"
 

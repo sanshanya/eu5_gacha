@@ -20,7 +20,7 @@ gacha_create_common_effect = {
       has_global_variable = gacha_$who$_is_summoned
     }
     # 已经拥有该角色，什么都不做
-    # (重复获得的逻辑应在 gacha_wish 事件的 else 分支处理)
+    # (重复获得的逻辑应在 gacha_events 事件的 else 分支处理)
   }
   else = {
     # 2. 创建角色实体
