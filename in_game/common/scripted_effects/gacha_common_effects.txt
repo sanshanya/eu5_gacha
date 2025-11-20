@@ -1,89 +1,130 @@
-# 有BUG 目前只是思路展示
 # ==============================================================================
-# Gacha System: Common Character Creation Template
-# 通用角色创建脚本：所有卡池角色都必须通过此接口创建
+# GACHA SYSTEM: COMMON EFFECTS LIBRARY
+# 抽卡系统核心逻辑库
 # ==============================================================================
 
-gacha_create_common_effect = {
-  # --------------------------------------------------------------------------
-  # 参数说明 (Arguments):
-  # $who$      : 角色内部代号 (例: xinhai, ayato)。用于拼接 modifier 和变量名。
-  # $age$      : 初始年龄 (int)。
-  # $culture$  : 文化定义 (例: culture:tougokud)。
-  # $religion$ : 宗教定义 (例: religion:shintō)。
-  # $adm/dip/mil$ : 初始属性值 (例: { 85 95 })。
-  # --------------------------------------------------------------------------
-
-  # 1. 检查全局锁：防止重复获得同一角色
-  if = {
-    limit = {
-      has_global_variable = gacha_$who$_is_summoned
+# ------------------------------------------------------------------------------
+# 1. 通用注册内核 (Register Core)
+# 作用：负责处理角色生成后的通用逻辑（加Buff、加列表、初始化数值）
+# 接收参数：$who$ (角色代号字符串，如 xinhai)
+# ------------------------------------------------------------------------------
+gacha_register_new_character = {
+    # === A. 挂载修正 (Modifiers) ===
+    # 核心标记 (永久)
+    add_character_modifier = { 
+        modifier = gacha_core_modifier 
+        years    = -1 
+        mode     = add_and_extend 
     }
-    # 已经拥有该角色，什么都不做
-    # (重复获得的逻辑应在 gacha_events 事件的 else 分支处理)
-  }
-  else = {
-    # 2. 创建角色实体
-    create_character = {
-      first_name = first_name_$who$     # 需在 localization 里定义 (如 name_xinhai)
-      last_name  = last_name_$who$   # 需在 localization 里定义 (如 family_xinhai)
-      female     = yes
-      age        = $age$
-      culture    = $culture$
-      religion   = $religion$
-
-      adm = $adm$
-      dip = $dip$
-      mil = $mil$
-
-      # 立即保存 scope 以便后续操作
-      save_scope_as = new_gacha_char
+    
+    # 角色专属 Buff (永久)
+    add_character_modifier = { 
+        modifier = gacha_$who$_modifier 
+        years    = -1 
+        mode     = add_and_extend 
     }
-
-    # 3. 初始化角色数据
-    scope:new_gacha_char = {
-      # === A. 逻辑层 (Logic Layer) ===
-      # 挂载通用标签。让 gacha_portrait_trigger 识别到"这是个纸片人"。
-      # 此外永生之类的通用buff也在里面
-      add_character_modifier = {
-        modifier = gacha_core_modifier
-        mode     = add_and_extend
-      }
-
-      # === B. 视觉层 (Visual Layer) ===
-      # 挂载身份标识，用于识别这个人。
-      # 对应 modifier: gacha_xinhai_modifier
-      add_character_modifier = {
-        modifier = gacha_$who$_modifier
-        mode     = add_and_extend
-      }
-
-
-      # === D. 系统层 (System Layer) ===
-      # 加入全局管理列表，用于事件遍历 (Event Scoping)
-      add_to_global_variable_list = {
-        name   = gacha_obtained_characters
-        target = this
-      }
-
-      # 初始化命之座变量 (默认为 0)
-      set_variable = {
-        name  = gacha_constellation_lvl
-        value = 0
-      }
-      # 立即应用0名效果，应该会上一个Moddifer
-      gacha_apply_constellation_stats_effect = {
-        who = $who$
-      }
-      # 移动到当前国家并归入王室阶层
-      move_country = root
-      change_character_estate = estate_type:crown_estate
+    
+    # 禁止结婚逻辑 (永久)
+    add_character_modifier = { 
+        modifier = block_marriage 
+        years    = -1 
+        mode     = add_and_extend 
     }
-
-    # 4. 上全局锁 (Lock)
-    set_global_variable = {
-      name  = gacha_$who$_is_summoned
-      value = yes
+    
+    # === B. 挂载特质 (Traits) ===
+    # 用于触发 2D 立绘显示
+    add_trait = trait:gacha_$who$_origin_trait
+    
+    # === C. 系统管理 (System) ===
+    # 加入全局管理列表，方便后续遍历查找
+    add_to_global_variable_list = { 
+        name   = gacha_obtained_characters 
+        target = this 
     }
-  }
+    
+    # 初始化命之座变量为 0
+    set_variable = { 
+        name  = gacha_constellation_lvl 
+        value = 0 
+    }
+    
+    # 刷新数值 (调用命座计算脚本)
+    gacha_apply_constellation_stats_effect = { who = $who$ }
+    
+    # === D. 身份确立 (Citizenship) ===
+    # 关键步骤：在名字和特质确定后，再移动到国家并封爵
+    # 这样可以防止引擎因为文化不匹配而强行修改角色的姓氏(Last Name)
+    move_country = root
+    change_character_estate = estate_type:crown_estate
+}
+
+# ------------------------------------------------------------------------------
+# 2. 珊瑚宫心海专属包装壳 (Xinhai Wrapper)
+# 作用：处理“敏感数据”的硬编码，并分流 首次/重复 获取逻辑
+# ------------------------------------------------------------------------------
+gacha_create_xinhai_effect = {
+    # ==========================================
+    # 分支 A：已拥有 -> 命之座升级 (Duplicate)
+    # ==========================================
+    if = {
+        limit = { has_global_variable = gacha_xinhai_is_summoned }
+        
+        # 1. 在全局列表中找到已存在的角色实例
+        random_in_global_list = {
+            variable = gacha_obtained_characters
+            limit = { has_trait = gacha_xinhai_origin_trait }
+            save_scope_as = existing_char
+        }
+        
+        # 2. 对老角色进行操作
+        scope:existing_char = {
+            # 命座变量 +1
+            change_variable = { name = gacha_constellation_lvl add = 1 }
+            
+            # 重新计算数值 Buff
+            gacha_apply_constellation_stats_effect = { who = xinhai }
+        }
+        
+        # 3. 触发命座提升事件 (.2)
+        trigger_event_non_silently = gacha_xinhai_events.2
+    }
+    
+    # ==========================================
+    # 分支 B：未拥有 -> 首次创建 (New)
+    # ==========================================
+    else = {
+        # 1. 创建实体 (数据硬编码，避开参数传递 Bug)
+        create_character = {
+            first_name = gacha_first_name_xinhai
+            last_name  = gacha_last_name_xinhai
+            
+            female     = yes
+            age        = 16
+            
+            # 硬编码文化与宗教，防止回退
+            culture  = culture:tougokud
+            religion = religion:shintō
+            
+            adm = { 90 100 }
+            dip = { 85 100 }
+            mil = { 65 90 }
+            
+            # 关键：在“虚空”中创建，暂不指定阶层和国家
+            # 保护“珊瑚宫”这个姓氏不被随机池覆盖
+            create_in_limbo = yes 
+            
+            save_scope_as = new_gacha_char
+        }
+        
+        # 2. 调用通用内核处理杂活
+        scope:new_gacha_char = {
+            gacha_register_new_character = { who = xinhai }
+        }
+        
+        # 3. 上全局锁
+        set_global_variable = { name = gacha_xinhai_is_summoned value = 1 }
+        
+        # 4. 触发初次见面事件 (.1)
+        trigger_event_non_silently = gacha_xinhai_events.1
+    }
 }

@@ -1,28 +1,43 @@
 ﻿l_simp_chinese:
+  # === 交互按钮 ===
   gacha_events_interaction: "祈愿「异世相遇」"
-  gacha_events_interaction_concept: "[ruler|e]"
-  gacha_events_interaction_act: "$gacha_events_interaction$"
-  gacha_events_interaction_desc_specific: "消耗金币进行祈愿"
   gacha_events_interaction_desc: "呼唤来自海祇岛的军师前来出谋划策。"
-  gacha_events_interaction_past: "曾召唤珊瑚宫心海"
-  gacha_events_interaction_act_past: "[recipient.GetName]已决定召唤珊瑚宫心海"
 
-  gacha_xinhai_events.1.title: "珊瑚宫心海"
-  gacha_xinhai_events.1.desc: "传闻海衹岛的「现人神巫女」，精通兵法与筹谋，能为我们的国家带来新的希望。我们是否当即相邀入朝？"
+  # === 祈愿主菜单 (.1) ===
+  gacha_events.1.title: "祈愿：异世相遇"
+  # 纯文本描述，不再读取变量，绝对不会报错
+  gacha_events.1.desc: "祭坛的规矩为100枚金币兑换1枚纠缠之缘。\n\n当前概率公示：\n5星角色（珊瑚宫心海）：10%\n3星物品（无锋剑）：90%\n\n如果诚心祈祷，或许有命星回应你的请求。"
+  
+  gacha_events.1.a: "祈愿 (消耗100金)"
+  gacha_events.1.b: "离开"
+  
+  # 备用的提示文本
+  gacha_events.1.single_lack: "祈愿 (金币不足)"
+  gacha_not_enough_gold_tt: "囊中羞涩，派蒙摊开了双手。"
 
-  gacha_xinhai_events.1.a: "欢迎珊瑚宫心海"
-  gacha_xinhai_events.1.b: "我们暂时不需要她的协助"
+  # === 结果：凡铁/蓝光 (.2) ===
+  gacha_events.2.title: "祈愿结果：凡铁"
+  gacha_events.2.desc: "流星划过天际，光芒黯淡。\n\n你只找到了一把锈迹斑斑的无锋剑 (返还 1 金)。"
+  gacha_events.2.a: "收下吧"
 
-  gacha_xinhai_events.may_inspire_tt: "珊瑚宫心海作为才智出众的廷臣加入，并可能鼓舞我们的军队。"
-  gacha_xinhai_events.disappears_tt: "心海悄然离去。"
+  # === 结果：歪了 (.3) ===
+  # (虽然当前简化版逻辑暂时没用到这个，但保留着也没事)
+  gacha_events.3.title: "祈愿结果：金光...但是？"
+  gacha_events.3.desc: "金光乍现！但走出来的似乎不是你期待的那位...(歪了)\n你获得了 50 威望。"
+  gacha_events.3.a: "下次一定不歪"
 
-
-  # 角色名（事件里用到的 ）
+  # === 心海相关 ===
+  # 这里的名字必须和 common/scripted_effects 里的拼写一致
   gacha_first_name_xinhai: "心海"
   gacha_last_name_xinhai: "珊瑚宫"
+  
+  # 初次获得
+  gacha_xinhai_events.1.title: "珊瑚宫心海"
+  gacha_xinhai_events.1.desc: "传闻海衹岛的「现人神巫女」，精通兵法与筹谋，能为我们的国家带来新的希望。"
+  gacha_xinhai_events.1.desc_constellation: "命星归位！\n\n珊瑚宫心海的力量得到了进一步的增强。"
+  gacha_xinhai_events.1.a: "欢迎"
 
-  gacha_events.1.title: "祈愿：异世相遇"
-  gacha_events.1.desc: "祭坛的规矩为100枚金币兑换1枚纠缠之缘。纠缠之缘可以从异世中获取命运的交汇。如果诚心祈祷，或许有命星回应你的请求。"
-  gacha_events.1.a: "同意 (消耗100金)"
-  gacha_events.1.b: "拒绝"
-
+  # 命座提升
+  gacha_xinhai_events.2.title: "命星闪烁"
+  gacha_xinhai_events.2.desc: "随着祈愿的光芒汇入体内，珊瑚宫心海感到了一股熟悉的力量回归。"
+  gacha_xinhai_events.2.a: "太好了！"

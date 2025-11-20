@@ -1,36 +1,67 @@
 namespace = gacha_events
 
+# ==========================================
+# 1. 祈愿主菜单
+# ==========================================
 gacha_events.1 = {
-  type = country_event
-  title = gacha_events.1.title
-  desc  = gacha_events.1.desc
-  # is_triggered_only = yes
+    type = country_event
+    title = gacha_events.1.title
+    desc  = gacha_events.1.desc
+    is_triggered_only = yes
 
-  immediate = {
-    event_illustration_estate_effect = {
-      foreground = estate_type:clergy_estate
-      background = estate_type:clergy_estate
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+        # 移除了所有复杂的变量初始化逻辑
     }
-  }
 
-  # ==========================================
-  # 选项 A：恢复抽卡逻辑 (无脚本版)
-  # ==========================================
-  option = {
-    name = gacha_events.1.a
-    trigger = { gold >= 1 }
-    add_gold = -100
-    add_legitimacy = legitimacy_mild_bonus
-    # ★加入随机列表，但不调用 gacha_create_common_effect★
-    trigger_event_non_silently = gacha_xinhai_events.1
-  }
-  # ==========================================
-  # 选项 B：取消
-  # ==========================================
-  option = {
-    name = gacha_events.1.b
-    add_legitimacy = legitimacy_mild_bonus
-    add_prestige   = prestige_mild_bonus
-    add_gold = 102
-  }
+    # 选项 A：祈愿
+    option = {
+        name = gacha_events.1.a
+        # trigger = { gold >= 100 }
+        add_gold = -100
+        
+        hidden_effect = {
+            # 调用简化后的逻辑
+            gacha_execute_single_roll = yes
+        }
+    }
+
+    # 选项 B：重置 (依然保留，防止以前的脏数据干扰)
+    option = {
+        name = "调试：重置角色状态"
+        hidden_effect = {
+            remove_global_variable = gacha_xinhai_is_summoned
+            set_variable = { name = gacha_constellation_lvl value = 0 }
+        }
+    }
+    
+    # 选项 C：离开
+    option = {
+        name = gacha_events.1.b
+    }
+}
+
+# ==========================================
+# 2. 祈愿结果：凡铁 (蓝光)
+# ==========================================
+gacha_events.2 = {
+    type = country_event
+    title = gacha_events.2.title
+    desc  = gacha_events.2.desc
+    is_triggered_only = yes
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:burghers_estate
+            background = estate_type:burghers_estate
+        }
+    }
+
+    option = {
+        name = gacha_events.2.a
+        add_gold = 100
+    }
 }

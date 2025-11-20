@@ -1,95 +1,51 @@
 namespace = gacha_xinhai_events
 
+# ==========================================
+# 事件 1：初次见面 (First Meeting)
+# ==========================================
 gacha_xinhai_events.1 = {
-  type = country_event
-
-  # 用你自己的本地化 key，而不是原来的 flavor_fra
-  title = gacha_xinhai_events.1.title
-  desc  = gacha_xinhai_events.1.desc
-
-  fire_only_once = yes
-
-  trigger = {
-    # 如果你想加前置条件（比如某国家、某宗教、某任务完成）
-    # 可以写在这里；现在先留空，完全由互动强制触发
-  }
-
-  immediate = {
-    # 事件插画，先随便占位一张，之后你可以自己换 estate
-    event_illustration_estate_effect = {
-      foreground = estate_type:peasants_estate
-      background = estate_type:peasants_estate
+    type = country_event
+    title = gacha_xinhai_events.1.title
+    desc  = gacha_xinhai_events.1.desc
+    
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:peasants_estate
+            background = estate_type:peasants_estate
+        }
     }
 
-    # 创建“心海”角色
-    create_character = {
-      first_name = gacha_first_name_xinhai         # 自己在本地化里定义 name_xinhai
-      last_name  = gacha_last_name_xinhai             # 或者 name_kokomi，都行
-      female     = yes
-      adm = { 90 100 }
-      dip = { 85 100 }
-      mil = { 65 90 }
-
-      # 这里你可以先沿用原来设置，等有自己的文化/宗教再改
-      culture  = culture:tougokud
-      religion = religion:shintō
-
-      # 出生地同理，先用原来的占位
-      birth_location = location:kyoto
-      age = 16
-
-      # 统筹 / 内阁 / 文化影响：庙算无遗
-      add_trait = trait:gacha_xinhai_origin_trait
-
-      # 民心 & 繁荣：海月之誓
-      add_trait = trait:gacha_xinhai_awakened_trait
-
-      # 海军向：海祇姬君 – Admiral 专用
-      add_trait = trait:gacha_xinhai_transcended_trait
-
-
-      estate = estate_type:crown_estate
-
-      save_scope_as = gacha_xinhai_character   # 自己起名，方便下面引用
-
-      # 若你已有外观脚本，可解注下一行并在 character_scripts 里提供
-      # script = gacha_xinhai_character
+    option = {
+        name = gacha_xinhai_events.1.a
+        historical_option = yes
+        # 首次见面，加点好感初始值
+        # change_variable = { name = xinhai_favor add = 10 }
     }
-  }
+}
 
-  option = {
-    name = gacha_xinhai_events.1.a            # 接纳心海（本地化里写）
-    historical_option = yes
-    custom_tooltip = gacha_xinhai_events.may_inspire_tt
-    add_army_tradition = army_tradition_extreme_bonus
-
-    # 加入本国作为廷臣，并附带 buff
-    scope:gacha_xinhai_character = {
-      move_country = scope:actor
-      add_character_modifier = {
-        modifier = gacha_core_modifier
-        mode = add_and_extend
-      }
-      add_character_modifier = {
-        modifier = gacha_xinhai_modifier
-        mode = add_and_extend
-      }
-      add_character_modifier = {
-        modifier = block_marriage
-        mode = add_and_extend
-      }
-      # add_character_modifier = {
-      #   modifier = xinhai_c0_modifier
-      #   mode = add_and_extend
-      # } #这个modifier实测是有bug的可能考虑其他途径实现
-      change_character_estate = estate_type:crown_estate
+# ==========================================
+# 事件 2：命座提升 (Constellation Up)
+# ==========================================
+gacha_xinhai_events.2 = {
+    type = country_event
+    title = gacha_xinhai_events.2.title # "命之座：沉玉之梦"
+    desc  = gacha_xinhai_events.2.desc  # "她的力量在这个世界得到了进一步的解放..."
+    
+    immediate = {
+        # 这里以后可以换成“命星”的图片
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
     }
-  }
 
-  option = {
-    name = gacha_xinhai_events.1.b            # 婉拒
-    add_legitimacy = legitimacy_mild_bonus
-    add_prestige   = prestige_mild_bonus
-    custom_tooltip = gacha_xinhai_events.disappears_tt
-  }
+    option = {
+        name = gacha_xinhai_events.2.a
+        
+        # 命座提升的奖励
+        add_prestige = 10
+        
+        # 未来可以在这里加好感度
+        # change_variable = { name = xinhai_favor add = 20 } 
+    }
 }

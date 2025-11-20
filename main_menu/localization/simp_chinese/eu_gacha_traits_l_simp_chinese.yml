@@ -3,6 +3,15 @@
   STATIC_MODIFIER_NAME_gacha_xinhai_modifier:0 "海祇的加护"
   MODIFIER_TYPE_NAME_gacha_core:0 "来自异世界的旅人"
   MODIFIER_TYPE_NAME_gacha_water_godeye:0 "水元素神之眼「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier:0 "0命 P社代码应该导致不显示"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c1_modifier:0 "决水于溪"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c2_modifier:0 "波起云海"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c3_modifier:0 "海渚月舟"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c4_modifier:0 "月摄千川"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c5_modifier:0 "百川集海"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c6_modifier:0 "珊瑚一心"
+
+  MODIFIER_TYPE_NAME_gacha_constellation_level:0 "命之座·眠龙座"
 
   gacha_xinhai_origin_trait:0 "庙算无遗"
   desc_gacha_xinhai_origin_trait:0 "人们普遍认为珊瑚宫心海是一名足智多谋、深不可测的领导者。因为她脸上总是带着恬静的笑容，谈笑间将所有事务安排得井井有条。"
