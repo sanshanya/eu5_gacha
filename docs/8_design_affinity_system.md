@@ -274,12 +274,16 @@ add_country_modifier = {
 ## 6. Integration with Marriage System
 
 ### A. Marriage Interaction Update
+
+> [!NOTE]
+> **Cross-Reference**: The `gacha_marry_interaction` mentioned here should be implemented according to the revised design in [`6_design_marriage_system.md`](file:///e:/app/steam/steamapps/common/Europa%20Universalis%20V/game/mod/eu5_gacha/docs/6_design_marriage_system.md), which uses three separate modifiers (`gacha_marriage_slot_1/2/3_modifier`) with a "remove-all, then-apply-correct-one" pattern. This affinity requirement is an **additional condition** to be added to that revised design.
+
 ```jomini
 gacha_marry_interaction = {
     allow = {
         scope:recipient = {
-            var:gacha_constellation_lvl >= 6
-            var:gacha_affinity_level >= 100  # 新增好感度要求
+            var:gacha_constellation_lvl >= 6  # Must be C6
+            var:gacha_affinity_level >= 100   # NEW: Affinity requirement
             is_married = no
         }
     }
@@ -326,15 +330,162 @@ gacha_affinity_decay_event = {
 }
 ```
 
-## 7. UI Integration
+## 7. UI Integration (可行方案)
 
-### A. Affinity Display
-在角色面板显示好感度：
-```
-[好感度]: ❤❤❤❤❤ (80/100) - 挚友
+> [!WARNING]
+> **Technical Limitation**: As documented in [`5_reference_technical.md`](file:///e:/app/steam/steamapps/common/Europa%20Universalis%20V/game/mod/eu5_gacha/docs/5_reference_technical.md), directly displaying dynamic script variable values (like `gacha_affinity_level = 80`) in the UI is **not feasible** with standard Jomini UI components.
+
+### Solution: Modifier-Based Display
+
+We use an **indirect but reliable** method: create a dedicated character modifier for each affinity tier. As affinity increases, we swap the old modifier for the new one. Players can see their current affinity tier in the character's modifier list.
+
+### A. Define Affinity Tier Modifiers
+
+Add to `main_menu/common/static_modifiers/gacha_modifiers.txt`:
+
+```paradox
+# 好感度等级修正（仅用于显示，不提供实际加成）
+gacha_affinity_tier_0_modifier = {
+    game_data = { category = character }
+}
+
+gacha_affinity_tier_1_modifier = {
+    game_data = { category = character }
+}
+
+gacha_affinity_tier_2_modifier = {
+    game_data = { category = character }
+}
+
+gacha_affinity_tier_3_modifier = {
+    game_data = { category = character }
+}
+
+gacha_affinity_tier_4_modifier = {
+    game_data = { category = character }
+}
+
+gacha_affinity_tier_5_modifier = {
+    game_data = { category = character }
+}
 ```
 
-### B. Interaction Buttons
+### B. Localize Modifier Names
+
+Add to `main_menu/localization/simp_chinese/eu_gacha_l_simp_chinese.yml`:
+
+```yaml
+STATIC_MODIFIER_NAME_gacha_affinity_tier_0_modifier: "好感度：陌生 ★☆☆☆☆"
+STATIC_MODIFIER_NAME_gacha_affinity_tier_1_modifier: "好感度：熟识 ★★☆☆☆"
+STATIC_MODIFIER_NAME_gacha_affinity_tier_2_modifier: "好感度：友善 ★★★☆☆"
+STATIC_MODIFIER_NAME_gacha_affinity_tier_3_modifier: "好感度：信赖 ★★★★☆"
+STATIC_MODIFIER_NAME_gacha_affinity_tier_4_modifier: "好感度：挚友 ★★★★★"
+STATIC_MODIFIER_NAME_gacha_affinity_tier_5_modifier: "好感度：永恒之约 ❤"
+```
+
+### C. Update Milestone Check Logic
+
+Modify `gacha_check_affinity_milestone_effect` to swap modifiers when affinity changes:
+
+```paradox
+gacha_check_affinity_milestone_effect = {
+    # Step 1: Remove all old tier modifiers to ensure clean state
+    remove_character_modifier = gacha_affinity_tier_0_modifier
+    remove_character_modifier = gacha_affinity_tier_1_modifier
+    remove_character_modifier = gacha_affinity_tier_2_modifier
+    remove_character_modifier = gacha_affinity_tier_3_modifier
+    remove_character_modifier = gacha_affinity_tier_4_modifier
+    remove_character_modifier = gacha_affinity_tier_5_modifier
+    
+    # Step 2: Apply the correct tier modifier based on current affinity
+    if = {
+        limit = { var:gacha_affinity_level >= 100 }
+        add_character_modifier = { 
+            modifier = gacha_affinity_tier_5_modifier 
+            years = -1 
+        }
+    }
+    else_if = {
+        limit = { var:gacha_affinity_level >= 80 }
+        add_character_modifier = { 
+            modifier = gacha_affinity_tier_4_modifier 
+            years = -1 
+        }
+    }
+    else_if = {
+        limit = { var:gacha_affinity_level >= 60 }
+        add_character_modifier = { 
+            modifier = gacha_affinity_tier_3_modifier 
+            years = -1 
+        }
+    }
+    else_if = {
+        limit = { var:gacha_affinity_level >= 40 }
+        add_character_modifier = { 
+            modifier = gacha_affinity_tier_2_modifier 
+            years = -1 
+        }
+    }
+    else_if = {
+        limit = { var:gacha_affinity_level >= 20 }
+        add_character_modifier = { 
+            modifier = gacha_affinity_tier_1_modifier 
+            years = -1 
+        }
+    }
+    else = {
+        add_character_modifier = { 
+            modifier = gacha_affinity_tier_0_modifier 
+            years = -1 
+        }
+    }
+    
+    # Step 3: Check for milestone events (original logic)
+    # 达到 20 好感度
+    if = {
+        limit = {
+            var:gacha_affinity_level >= 20
+            NOT = { has_variable = gacha_affinity_tier_1_unlocked }
+        }
+        set_variable = { name = gacha_affinity_tier_1_unlocked value = 1 }
+        
+        if = {
+            limit = { has_trait = gacha_xinhai_origin_trait }
+            employer = { trigger_event_non_silently = { id = gacha_xinhai_events.11 } }
+        }
+    }
+    
+    # 达到 40 好感度
+    if = {
+        limit = {
+            var:gacha_affinity_level >= 40
+            NOT = { has_variable = gacha_affinity_tier_2_unlocked }
+        }
+        set_variable = { name = gacha_affinity_tier_2_unlocked value = 1 }
+        
+        if = {
+            limit = { has_trait = gacha_xinhai_origin_trait }
+            employer = { trigger_event_non_silently = { id = gacha_xinhai_events.12 } }
+        }
+    }
+    
+    # ... (Continue for tiers 3, 4, 5)
+}
+```
+
+### D. Final UI Effect
+
+When players open the character panel, they will see in the **modifier list**:
+
+```
+好感度：挚友 ★★★★★
+```
+
+This clearly displays the current affinity tier without needing to show the exact numeric value (e.g., 87/100).
+
+### E. Character Interaction Buttons
+
+These interactions remain functional as designed:
 - **对话** (Talk): +5 好感度, 1个月冷却
 - **赠礼** (Gift): +10 好感度, 花费金币100
 - **委托** (Mission): +20 好感度（完成后），3个月冷却

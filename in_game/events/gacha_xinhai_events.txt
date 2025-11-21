@@ -7,6 +7,7 @@ gacha_xinhai_events.1 = {
     type = country_event
     title = gacha_xinhai_events.1.title
     desc  = gacha_xinhai_events.1.desc
+    is_triggered_only = yes
 
     immediate = {
         event_illustration_estate_effect = {
@@ -18,18 +19,17 @@ gacha_xinhai_events.1 = {
     option = {
         name = gacha_xinhai_events.1.a
         historical_option = yes
-        # 首次见面，加点好感初始值
-        # change_variable = { name = xinhai_favor add = 10 }
     }
 }
 
 # ==========================================
-# 事件 2：命座提升 (Constellation Up)
+# 事件 2：通用命座提升 (Constellation Up)
 # ==========================================
 gacha_xinhai_events.2 = {
     type = country_event
     title = gacha_xinhai_events.2.title
     desc  = gacha_xinhai_events.2.desc
+    is_triggered_only = yes
 
     immediate = {
         event_illustration_estate_effect = {
@@ -40,8 +40,6 @@ gacha_xinhai_events.2 = {
 
     option = {
         name = gacha_xinhai_events.2.a
-
-        # 命座提升的奖励
         add_prestige = 10
     }
 }
@@ -53,6 +51,7 @@ gacha_xinhai_events.4 = {
     type = country_event
     title = gacha_xinhai_events.4.title
     desc  = gacha_xinhai_events.4.desc
+    is_triggered_only = yes
 
     immediate = {
         event_illustration_estate_effect = {
@@ -63,9 +62,37 @@ gacha_xinhai_events.4 = {
 
     option = {
         name = gacha_xinhai_events.4.a
-
-        # 满命奖励
         add_prestige = 50
         add_legitimacy = 20
+    }
+}
+
+# ==========================================
+# 事件 11：命之座·觉醒 (C2)
+# ==========================================
+gacha_xinhai_events.11 = {
+    type = country_event
+    title = "gacha_xinhai_events.11.title"
+    desc  = "gacha_xinhai_events.11.desc"
+    is_triggered_only = yes
+
+    option = {
+        name = "gacha_xinhai_events.11.a"
+        add_stability = 0.25
+    }
+}
+
+# ==========================================
+# 事件 12：命之座·超越 (C4)
+# ==========================================
+gacha_xinhai_events.12 = {
+    type = country_event
+    title = "gacha_xinhai_events.12.title"
+    desc  = "gacha_xinhai_events.12.desc"
+    is_triggered_only = yes
+
+    option = {
+        name = "gacha_xinhai_events.12.a"
+        add_legitimacy = 5
     }
 }

@@ -1,25 +1,32 @@
 # ============================================================
-# 核心抽卡逻辑 (PRNG + Pity System)
+# 核心抽卡逻辑 (PRNG + Pity System) - 最终正确版
 # ============================================================
 gacha_execute_single_roll = {
-    # 使用 random_list + 动态权重 (Script Value)
-    # 这是 Jomini 引擎下实现动态概率的标准做法
-    random_list = {
-        # 1. 出金 (Success)
-        # 权重 = 当前阈值 (例如 6 或 1000)
-        value:gacha_5star_threshold_value = {
-            gacha_handle_5star_outcome = yes
-        }
+    # 步骤1: 生成一个 0 到 999 之间的随机数
+    random = {
+        min = 0
+        max = 999
+        save_as = gacha_roll_value # 将随机数保存到临时变量 gacha_roll_value
+    }
 
-        # 2. 没出金 (Failure)
-        # 权重 = 1000 - 当前阈值
-        value:gacha_5star_failure_value = {
-            # 垫子 +1
-            change_variable = { name = gacha_pity_count add = 1 }
-
-            # 发放安慰奖
-            trigger_event_non_silently = gacha_events.2
+    # 步骤2: 将随机数与我们动态计算出的概率阈值进行比较
+    if = {
+        limit = {
+            # 检查 gacha_roll_value 是否 小于 概率阈值
+            # (例如，如果阈值是6(0.6%)，那么roll到0,1,2,3,4,5就算成功)
+            check_variable = {
+                which = gacha_roll_value
+                which_right = script_value:gacha_5star_threshold_value
+                compare = less
+            }
         }
+        # 如果成功，则进入5星处理流程
+        gacha_handle_5star_outcome = yes
+    }
+    else = {
+        # 如果失败，则增加Pity并给予安慰奖
+        change_variable = { name = gacha_pity_count add = 1 }
+        trigger_event_non_silently = gacha_events.2
     }
 }
 
@@ -45,7 +52,6 @@ gacha_handle_5star_outcome = {
             50 = {
                 # 赢了：获得 UP
                 gacha_get_up_character = yes
-                # 不需要设变量，下次还是 50/50
             }
             50 = {
                 # 歪了：获得常驻
@@ -66,11 +72,10 @@ gacha_get_up_character = {
 }
 
 gacha_get_standard_character = {
-    # 歪了！给个“七七”或者“刻晴”
-    # 这里暂时给个通用的 5 星甚至只是大量威望
+    # 歪了！目前是给通用奖励
     add_prestige = 50
     add_legitimacy = 10
-
-    # 弹窗告诉玩家歪了
-    # post_notification = { title = "gacha_lost_50_50_title" text = "gacha_lost_50_50_desc" }
+    
+    # 未来若要触发"歪了"的事件，可以在此添加
+    # trigger_event_non_silently = gacha_events.3 
 }

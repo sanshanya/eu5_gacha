@@ -31,11 +31,21 @@
 
 ## 4. 文件结构 (File Structure)
 
-*   **通用 Gacha 层**
-    *   `common/scripted_effects/gacha_common_effects.txt`: 通用效果
-    *   `common/scripted_effects/gacha_logic_effects.txt`: 核心概率逻辑
-    *   `events/gacha_events.txt`: 抽卡界面与结果事件
-*   **角色层 (以心海为例)**
-    *   `events/gacha_xinhai_events.txt`: 角色专属事件
-    *   `common/scripted_effects/xinhai_effects.txt`: 角色专属逻辑
-    *   `localization/simp_chinese/gacha_xinhai_l_simp_chinese.yml`: 角色本地化
+### 通用 Gacha 层
+
+| 路径 | 说明 | 状态 |
+|------|------|------|
+| `in_game/common/character_interactions/gacha_wish_interaction.txt` | 祈愿交互入口 | ✅ 正确 |
+| `in_game/common/script_values/gacha_values.txt` | 抽卡概率计算 | ✅ 正确 |
+| `in_game/common/scripted_effects/gacha_common_effects.txt` | 通用角色注册内核 | ✅ 正确 |
+| `in_game/common/scripted_effects/gacha_logic_effects.txt` | 核心抽卡结果逻辑 | ✅ 正确 |
+| `in_game/common/scripted_effects/gacha_constellation_effects.txt` | 命座效果通用逻辑 | ✅ 正确 |
+| `in_game/events/gacha_events.txt` | 抽卡主界面与通用结果事件 | ✅ 正确 |
+
+### 角色层 (心海)
+
+| 路径 | 说明 | 状态 |
+|------|------|------|
+| `in_game/events/gacha_xinhai_events.txt` | 角色专属事件（初见/命座/满命） | ✅ 正确 |
+| `in_game/common/scripted_effects/gacha_xinhai_effects.txt` | 角色专属效果 Wrapper | ✅ 正确 |
+| `main_menu/localization/simp_chinese/eu_gacha_l_simp_chinese.yml` | 项目主本地化文件 | ✅ 正确 |

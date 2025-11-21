@@ -81,9 +81,43 @@ ls_snow_Heimdall_estate = {
 - `can_generate_character_dynasties = no`: Prevents the engine from creating new dynasties
 
 ### Applicability to Our Gacha Mod
-**Highly Applicable**: We should create a custom `gacha_guild_estate` with these same properties to ensure:
-1. Only Gacha characters are assigned to this estate
-2. No random characters pollute our Gacha roster
+
+**Status**: **Deferred** (搁置) - Custom estate encountered technical issues.
+
+### Current Implementation: Using Crown Estate ✅
+
+**Code**:
+```paradox
+# gacha_common_effects.txt
+change_character_estate = estate_type:crown_estate
+```
+
+**Rationale**:
+- Custom estate implementation is complex and lacks reference examples
+- Crown Estate is designed for special characters (royal advisors)
+- Works immediately without additional configuration
+- Characters can serve as generals and cabinet members
+
+**Files Disabled** (renamed to `.disabled`):
+- `gacha_estates.txt.disabled`
+- `gacha_privileges.txt.disabled`
+
+### Future Consideration
+
+Custom estate may be revisited when:
+1. Reference implementations become available
+2. EU5 documentation improves
+3. Core Gacha systems are stable
+
+### Alternative Approaches
+
+For "Gacha-specific" feel without custom estate:
+- Use trait system (`gacha_*_origin_trait`)
+- Apply special modifiers
+- Create dedicated event chains
+- Use government reforms
+
+**Recommendation**: Accept Crown Estate as the permanent solution unless specific gameplay needs arise.
 
 ---
 
@@ -126,10 +160,36 @@ ls_snow_wife_reform = {
 This reform is automatically granted to subjects of the custom vassal type.
 
 ### Applicability to Our Gacha Mod
-**Potentially Applicable**: Instead of increasing spouse limits via traits, we could create a government reform that players get when they perform their first Gacha pull. This reform would:
-- Grant bonus spouse slots
-- Unlock the Marriage interaction
-- Provide other "Summoner" bonuses
+
+**Potentially Applicable**: The method of using a government reform to grant spouse slots is a valid alternative to our current variable-based system (as designed in [`6_design_marriage_system.md`](file:///e:/app/steam/steamapps/common/Europa%20Universalis%20V/game/mod/eu5_gacha/docs/6_design_marriage_system.md)).
+
+#### Design Choice:
+
+| Approach | Snow Mod's Reform Method | Our Current Variable Method |
+|----------|-------------------------|-----------------------------|
+| **Implementation** | Government reform grants fixed bonus | Variable counter increments per marriage |
+| **Spouse Slots** | Large, fixed number (+50) | Incremental growth (up to +3) |
+| **Feel** | "Cheat" or "sandbox" mode | Sense of progression and achievement |
+| **Best For** | Quick testing, casual play | Affinity system, RPG-like growth |
+
+#### Recommendation:
+
+✅ **Stick with our current variable-based design** as it aligns better with our "Affinity" and "progression" goals.
+
+✅ **Still create `gacha_summoner_reform`** but use it for **other thematic bonuses** (not spouse slots):
+```paradox
+gacha_summoner_reform = {
+    modifier = {
+        tolerance_of_different_culture = 3
+        tolerance_of_different_religion = 3
+        allow_female_cabinet = yes
+        allow_female_leaders = yes
+        allow_female_generals = yes
+    }
+}
+```
+
+This reform provides cultural tolerance and gender equality bonuses, fitting the "Golden Apple Archipelago" worldview without undermining the marriage progression system.
 
 ---
 
@@ -163,10 +223,10 @@ ls_snow_Heimdall_estate = {
 
 | Feature | Priority | Recommendation |
 | :--- | :--- | :--- |
-| **Custom Estate** | **High** | Create `gacha_guild_estate` with `can_randomly_spawn_characters = no` |
-| **Government Reform** | **Medium** | Consider using a reform instead of a trait for spouse limit increases |
-| **Subject Type** | **Low** | Not needed unless we add "Gacha Nations" feature |
-| **Customizable Localization** | **Low** | Nice-to-have for polish |
+| **Custom Estate** | **High** | **Implement immediately**. Create `gacha_guild_estate` and migrate all Gacha characters to it. See Section 2 for detailed action plan. |
+| **Government Reform** | **Medium** | Create `gacha_summoner_reform` for **non-marriage bonuses** (cultural tolerance, gender equality). **Do not** use it for spouse slots—keep the current variable-based marriage system for progression. |
+| **Subject Type** | **Low** | Not needed unless we add "Gacha Nations" feature in future phases. |
+| **Customizable Localization** | **Low** | Nice-to-have for polish and immersion, but not critical. |
 
 ---
 

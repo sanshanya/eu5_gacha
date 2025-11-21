@@ -1,43 +1,116 @@
 ﻿l_simp_chinese:
   # ============================================================
-  # Gacha System Localization (抽卡系统通用文本)
+  # §Y Part 1: Reusable Text Snippets (可复用文本片段) §!
+  # ============================================================
+  gacha_text_reward_prestige_small: "你获得了 10 点威望。"
+  gacha_text_reward_prestige_medium: "你获得了 50 点威望。"
+  gacha_text_reward_legitimacy_small: "你获得了 5 点正统性。"
+  gacha_text_reward_legitimacy_medium: "你获得了 20 点正统性。"
+  gacha_text_reward_stability_small: "国家稳定度提升了 0.25 。"
+  gacha_text_reward_prestige_overflow: "溢出的祈愿之力转化为 2 点国家威望。"
+  gacha_text_reward_gold_refund: "祭坛上只留有些许残破的兵刃与物资 (返还 1 金)。"
+
+  # ============================================================
+  # §Y Part 2: Gacha System Localization (抽卡系统通用文本) §!
   # ============================================================
 
   # === 交互按钮 ===
   gacha_events_interaction: "祈愿：异世相遇"
-  gacha_events_interaction_desc: "设坛祈愿，感召来自异界的英灵与智者。"
+  gacha_events_interaction_desc: "[actor.GetName]将设坛祈愿，感召来自异界的英灵与智者。"
 
   # === 核心修饰符 (Core Modifiers) ===
-  STATIC_MODIFIER_NAME_gacha_core_modifier:0 "祈愿的加护"
-  MODIFIER_TYPE_NAME_gacha_core:0 "来自异世界的旅人"
+  STATIC_MODIFIER_NAME_gacha_core_modifier: "祈愿的加护"
+  MODIFIER_TYPE_NAME_gacha_core: "来自异世界的旅人"
 
   # === 祈愿主菜单 (.1) ===
   gacha_events.1.title: "祈愿：异世相遇"
-  
-  # 条件描述：大保底状态
-  gacha_events.1.desc_guaranteed: "当前祈愿状态：\\n\\n已垫抽数：[Root.Var('gacha_pity_count').GetValue]/90\\n下个五星概率：[Root.GetScriptValue('gacha_5star_threshold_value')|1]‰\\n#bold 当前是否大保底：是#!\\n\\n投入资源，祈求命运的回应吧。"
-  
-  # 条件描述：非大保底状态
-  gacha_events.1.desc_not_guaranteed: "当前祈愿状态：\\n\\n已垫抽数：[Root.Var('gacha_pity_count').GetValue]/90\\n下个五星概率：[Root.GetScriptValue('gacha_5star_threshold_value')|1]‰\\n当前是否大保底：否\\n\\n投入资源，祈求命运的回应吧。"
-  
+  gacha_events.1.desc_guaranteed: "当前祈愿已受祝福，下次获得的必定是当期角色！\n投入资源，祈求命运的回应吧。"
+  gacha_events.1.desc_not_guaranteed: "投入资源，祈求命运的回应吧。"
   gacha_events.1.a: "奉纳金币 (祈愿)"
   gacha_events.1.b: "暂且观望"
-  
-  # 备用的提示文本
   gacha_events.1.single_lack: "奉纳不足"
   gacha_not_enough_gold_tt: "国库空虚，无法筹措祈愿所需的祭品。"
 
   # === 结果：凡铁/蓝光 (.2) ===
   gacha_events.2.title: "祈愿结果：凡铁"
-  gacha_events.2.desc: "星光黯淡，似乎未有英灵回应你的呼唤。\\n\\n祭坛上只留有些许残破的兵刃与物资 (返还 1 金)。"
+  gacha_events.2.desc: "星光黯淡，似乎未有英灵回应你的呼唤。\n\n$gacha_text_reward_gold_refund$"
   gacha_events.2.a: "聊胜于无"
 
   # === 结果：歪了 (.3) ===
   gacha_events.3.title: "祈愿结果：意外之客"
-  gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是一位陌生的异界旅人。\\n你获得了 50 威望。"
+  gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是一位陌生的异界旅人。\n\n$gacha_text_reward_prestige_medium$"
   gacha_events.3.a: "既来之，则安之"
 
   # === 结果：满命通用 (.4) ===
   gacha_events.4.title: "命星至臻"
-  gacha_events.4.desc: "这位异界英雄的能力已臻化境。\\n\\n溢出的祈愿之力转化为国家威望 (获得 2 威望)。"
+  gacha_events.4.desc: "这位异界英雄的能力已臻化境。\n\n$gacha_text_reward_prestige_overflow$"
   gacha_events.4.a: "物尽其用"
+
+  # ============================================================
+  # §Y Part 3: Character - Xinhai (珊瑚宫心海) §!
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_xinhai: "心海"
+  gacha_last_name_xinhai: "珊瑚宫"
+
+  # === 特质 (Traits) ===
+  gacha_xinhai_origin_trait: "现人神巫女"
+  desc_gacha_xinhai_origin_trait: "这位来自海祇岛的领袖拥有卓越的战略眼光和治愈能力。作为现人神巫女，她不仅是精神领袖，更是抵抗军的最高指挥官。\n\n效果：\n立法效率：+50%\n角色内阁效率：+175%\n全国内阁效率：+25%\n文化影响力：+15%\n\n“兵法在于，料敌先机。”"
+
+  gacha_xinhai_awakened_trait: "海月之誓"
+  desc_gacha_xinhai_awakened_trait: "作为海祇岛的领袖，我带领大家逆流前行的日子也过去了许久。我们能有如今这样和谐安宁的时光，你的努力必不可少。\n\n效果：\n全局阶层满意度恢复速度：+25%\n全局疾病抗性：+25%\n全局荒废度恢复速度：+50%"
+
+  gacha_xinhai_transcended_trait: "海祇姬君"
+  desc_gacha_xinhai_transcended_trait: "在碧波游鱼间穿行，感受海水轻抚脸颊的温柔，内心也跟着平静下来了呢。\n\n效果：\n海军士气：+30%\n海军移动速度：+30%\n海军维修花费：-50%"
+  
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_xinhai_modifier: "海祇的加护"
+  gacha_xinhai_modifier: "海祇之志"
+  gacha_xinhai_modifier_desc: "珊瑚宫心海的战略部署正在为国家带来稳定的行政流转与后勤保障。"
+  MODIFIER_TYPE_NAME_gacha_water_godeye: "水元素神之眼"
+  MODIFIER_TYPE_NAME_gacha_water_godeye_desc: "「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
+
+  # === 命之座 (Constellations) ===
+  MODIFIER_TYPE_NAME_gacha_constellation_level: "命之座·眠龙座"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier: "眠龙座·零命"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c1_modifier: "决水于溪"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c2_modifier: "波起云海"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c3_modifier: "海渚月舟"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c4_modifier: "月摄千川"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c5_modifier: "百川集海"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c6_modifier: "珊瑚一心"
+
+  # === 事件 (Events) ===
+  gacha_xinhai_events.1.title: "深海的明珠"
+  gacha_xinhai_events.1.desc: "一位身着蓝白礼服的少女缓缓步入大殿。她自称来自遥远的海祇岛，是那里的现人神巫女。\n\n“妾身珊瑚宫心海。听闻阁下治国有方，愿以海祇岛兵法相助。不过，妾身精力有限，还望莫要安排过多的繁文缛节。”\n\n她手中的兵书似乎记录着无数战役的胜负手。得此一人，吾国之军政必将如虎添翼。"
+  gacha_xinhai_events.1.a: "恭迎军师入朝。"
+
+  gacha_xinhai_events.2.title: "锦囊妙计"
+  gacha_xinhai_events.2.desc: "随着祈愿之力的加深，珊瑚宫心海感到了一股熟悉的力量回归。\n\n她对兵法的理解愈发精进，仿佛已洞察未来战场的每一处变数。\n\n$gacha_text_reward_prestige_small$"
+  gacha_xinhai_events.2.a: "深谋远虑，决胜千里。"
+
+  gacha_xinhai_events.4.title: "海染之龙"
+  gacha_xinhai_events.4.desc: "珊瑚宫心海的力量已臻化境。她周身环绕着如同深海般深邃的气息，仿佛古老的水龙王再次降临。\n\n“如今的我，已可应对任何风浪。无论是深海的巨兽，亦或是陆上的强敌，皆无法阻挡海祇岛的意志。”\n\n她的存在本身，便是三军士气的绝对保障。\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_xinhai_events.4.a: "此乃天助我也！"
+
+  # === 专属命座事件 (Awakening/Transcendence) ===
+  gacha_xinhai_events.11.title: "命之座·觉醒"
+  gacha_xinhai_events.11.desc: "随着命星再度闪耀，心海感到体内的力量涌现出了新的形态。她领悟了「海月之誓」，能够更好地守护您的子民，祛除灾厄。\n\n“感觉就像卸下了某种枷锁……现在，我可以更有效地将海祇岛的恩泽播撒到您的国度了。”\n\n$gacha_text_reward_stability_small$"
+  gacha_xinhai_events.11.a: "她的忠诚弥足珍贵。"
+
+  gacha_xinhai_events.12.title: "命之座·超越"
+  gacha_xinhai_events.12.desc: "更深层次的力量被解放了。心海的血脉中似乎蕴含着驾驭海洋的古老权能，她现在能够以「海祇姬君」之名，为您祝福整支舰队。\n\n“只要是为了胜利……无论是怎样的力量，我都会为您运用。请下令吧，我的大人。”\n\n$gacha_text_reward_legitimacy_small$"
+  gacha_xinhai_events.12.a: "大海将是我们最锋利的武器！"
+
+  # ============================================================
+  # §Y Part 4: Notification Text (通知文本) §!
+  # ============================================================
+  gacha_new_character_title: "祈愿回应！"
+  gacha_new_character_desc: "获得了5星廷臣：珊瑚宫心海"
+  gacha_constellation_up_title: "命星闪烁"
+  gacha_constellation_up_desc: "珊瑚宫心海的命之座等级提升了！"
+  gacha_max_constellation_title: "命星至臻"
+  gacha_max_constellation_desc: "珊瑚宫心海已经达到了完美状态！"
+  gacha_already_owned_title: "重复祈愿"
+  gacha_already_owned_desc: "该廷臣已由他国聘用，转化为资源补偿。"

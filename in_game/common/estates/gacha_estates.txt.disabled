@@ -1,0 +1,42 @@
+# ============================================================
+# Gacha Guild Estate (祈愿旅人公会) - 最终净化版 v7.1
+#
+# 设计哲学:
+# 1. 彻底移除所有未经EU5原生文件验证的模块，尤其是整个 'opinion' 块。
+# 2. 只保留一个阶层能正常工作所必需的最简结构。
+# 3. 确保文件语法100%合法，以避免引擎解析失败。
+# ============================================================
+gacha_guild_estate = {
+    # --- 核心属性 ---
+    color = { 255 215 0 }
+    character_estate = yes
+    can_randomly_spawn_characters = no
+    characters_have_dynasty = never
+    bank = no
+
+    # ✅ 新增：允许此阶层角色担任将军和内阁职位
+    can_be_general = yes
+    can_be_admiral = yes
+    
+    # --- 模板占位符 (保留结构，但内容清空或设为0) ---
+    power_per_pop = 0
+    tax_per_pop = 0
+    rival = 0
+    alliance = 0
+    revolt_court_language = common_language
+
+    # --- 增益/减益块 (保留最基础的、经过验证的结构) ---
+    satisfaction = {
+        diplomatic_reputation = 1
+    }
+	
+    high_power = {
+        all_power_cost = -0.05
+    }
+	
+    low_power = {
+        all_power_cost = 0.05
+    }
+    
+    power = {}
+}

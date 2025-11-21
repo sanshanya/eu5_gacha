@@ -1,10 +1,8 @@
 {
   "mcpServers": {
     "eu5-modding-mcp": {
-      "command": "uv",
+      "command": "python",
       "args": [
-        "run",
-        "--quiet",
         "E:/github/EU5-Modding-Mcp/server.py"
       ]
     }

@@ -1,0 +1,23 @@
+l_simp_chinese:
+ # ============================================================
+ # Gacha Guild Estate - 祈愿旅人公会
+ # ============================================================
+ gacha_guild_estate:0 "祈愿旅人公会"
+ gacha_guild_estate_desc:0 "这些来自异界的旅人为您的国家效力，她们拥有超凡的能力和智慧。"
+ 
+ # Estate UI
+ gacha_guild_estate_privilege_name:0 "祈愿公会特权"
+ 
+ # Privileges
+ privilege_gacha_establish_guild:0 "建立祈愿公会"
+ privilege_gacha_establish_guild_desc:0 "正式承认这些异界来客的地位，并建立专门的管理机构。每获得一位新角色，公会的影响力都会增加。"
+ 
+ privilege_gacha_advisory_council:0 "异界顾问团"
+ privilege_gacha_advisory_council_desc:0 "将祈愿公会的成员正式任命为国家核心顾问，利用她们的智慧来帮助管理国家。需要至少拥有3位角色。"
+ 
+ privilege_gacha_divine_priestess_envoy:0 "现人神使节"
+ privilege_gacha_divine_priestess_envoy_desc:0 "委任珊瑚宫心海作为您的外交使节，利用她作为现人神巫女的特殊地位来改善您与其他国家的关系。"
+ 
+ # Modifiers (for UI display)
+ gacha_guild_estate_satisfaction_desc:0 "祈愿公会满意度"
+ gacha_guild_estate_power_desc:0 "祈愿公会影响力"

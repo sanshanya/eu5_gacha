@@ -6,26 +6,24 @@ namespace = gacha_events
 gacha_events.1 = {
     type = country_event
     title = gacha_events.1.title
-
-    # 使用 triggered_desc 实现条件文本（符合 Jomini 规范）
-    triggered_desc = {
-        trigger = { has_variable = gacha_is_guaranteed }
-        desc = gacha_events.1.desc_guaranteed
-    }
-    triggered_desc = {
-        trigger = { NOT = { has_variable = gacha_is_guaranteed } }
-        desc = gacha_events.1.desc_not_guaranteed
-    }
-
     is_triggered_only = yes
 
-    immediate = {
-        event_illustration_estate_effect = {
-            foreground = estate_type:clergy_estate
-            background = estate_type:clergy_estate
+    # 使用 triggered_desc 根据保底状态显示不同文本
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { var:gacha_is_guaranteed = yes }
+                desc = gacha_events.1.desc_guaranteed
+            }
+            triggered_desc = {
+                desc = gacha_events.1.desc_not_guaranteed
+            }
         }
+    }
 
-        # 懒初始化 Pity 相关变量（防止首次访问时报错）
+    immediate = {
+        # 确保所有需要的变量都被初始化，防止后续脚本出错
+        # 如果变量不存在，则创建并设为初始值
         if = {
             limit = { NOT = { has_variable = gacha_pity_count } }
             set_variable = { name = gacha_pity_count value = 0 }
@@ -36,19 +34,51 @@ gacha_events.1 = {
         }
     }
 
-    # 选项 A：祈愿
+    # ==========================================
+    # 选项 A：【祈愿】(启用真实抽卡逻辑)
+    # ==========================================
     option = {
         name = gacha_events.1.a
-        # trigger = { gold >= 100 }
+        
+        # 前置条件：金钱足够
+        trigger = { gold >= 100 }
+        
+        # 效果：扣钱并执行抽卡
         add_gold = -100
-
         hidden_effect = {
-            # 调用简化后的逻辑
+            # 调用真正的、我们刚刚修复了概率计算的抽卡逻辑
             gacha_execute_single_roll = yes
         }
     }
 
-    # 选项 B：重置心海角色状态（调试用）
+    # ==========================================
+    # 选项 A 的备用项：【钱不够时显示】
+    # ==========================================
+    option = {
+        name = gacha_events.1.single_lack # 本地化为 "奉纳不足"
+        
+        # 前置条件：金钱不足
+        trigger = { gold < 100 }
+        
+        # 效果：无，此选项为灰色不可点击
+        
+        # 悬浮提示
+        custom_tooltip = gacha_not_enough_gold_tt # 本地化为 "国库空虚..."
+    }
+
+    # ==========================================
+    # 选项 B：【调试用】直接获取心海
+    # ==========================================
+    option = {
+        name = "调试：直接获得【珊瑚宫心海】"
+        hidden_effect = {
+            gacha_create_xinhai_effect = yes
+        }
+    }
+
+    # ==========================================
+    # 选项 C：【调试用】重置心海状态
+    # ==========================================
     option = {
         name = "调试：重置心海角色状态"
         hidden_effect = {
@@ -60,14 +90,8 @@ gacha_events.1 = {
                 # 重置命座等级
                 set_variable = { name = gacha_constellation_lvl value = 0 }
 
-                # 移除所有命座修正
-                remove_character_modifier = gacha_xinhai_c0_modifier
-                remove_character_modifier = gacha_xinhai_c1_modifier
-                remove_character_modifier = gacha_xinhai_c2_modifier
-                remove_character_modifier = gacha_xinhai_c3_modifier
-                remove_character_modifier = gacha_xinhai_c4_modifier
-                remove_character_modifier = gacha_xinhai_c5_modifier
-                remove_character_modifier = gacha_xinhai_c6_modifier
+                # 重新应用0命修正
+                gacha_apply_constellation_stats_effect = { who = xinhai }
 
                 # 移除觉醒/超越特质
                 remove_trait = gacha_xinhai_awakened_trait
@@ -78,8 +102,10 @@ gacha_events.1 = {
             remove_global_variable = gacha_xinhai_is_summoned
         }
     }
-
-    # 选项 C：离开
+    
+    # ==========================================
+    # 选项 D：离开
+    # ==========================================
     option = {
         name = gacha_events.1.b
     }
@@ -94,23 +120,15 @@ gacha_events.2 = {
     desc  = gacha_events.2.desc
     is_triggered_only = yes
 
-    immediate = {
-        event_illustration_estate_effect = {
-            foreground = estate_type:burghers_estate
-            background = estate_type:burghers_estate
-        }
-    }
-
     option = {
         name = gacha_events.2.a
-        immediate = {
-            add_gold = 1
-        }
+        add_gold = 100000 # 返还1金币
     }
 }
 
 # ==========================================
 # 4. 祈愿结果：满命 (C6+)
+# (这个事件由角色专属效果文件触发，不在此处调用)
 # ==========================================
 gacha_events.4 = {
     type = country_event
@@ -119,11 +137,8 @@ gacha_events.4 = {
     is_triggered_only = yes
 
     immediate = {
-        # Consolation prize, e.g., convert to 'stardust'
-        # For now, just give some prestige
         add_prestige = 2
     }
-
     option = {
         name = "gacha_events.4.a"
     }

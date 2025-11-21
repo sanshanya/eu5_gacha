@@ -52,15 +52,15 @@ gacha_register_new_character = {
     gacha_apply_constellation_stats_effect = { who = $who$ }
 
     # === D. 身份确立 (Citizenship) ===
-    # 关键步骤：在名字和特质确定后，再移动到国家并封爵
-    # 这样可以防止引擎因为文化不匹配而强行修改角色的姓氏(Last Name)
+    # 关键步骤：在名字和特质确定后，再移动到国家并分配阶层
     move_country = root
+    
+    # ⚠️ 临时方案：分配到王权阶层 (Crown Estate)
+    # 自定义 gacha_guild_estate 遇到技术问题，从长计议
+    # TODO: 未来实现自定义阶层后，改为 estate_type:gacha_guild_estate
     change_character_estate = estate_type:crown_estate
 }
 
 # ------------------------------------------------------------------------------
-# 注意：角色专属 wrapper (如 gacha_create_xinhai_effect) 已移至各自的文件：
-#   - gacha_xinhai_effects.txt
-#   - gacha_raiden_effects.txt
-#   - ...
+# 注意：角色专属 wrapper (如 gacha_create_xinhai_effect) 已移至各自的文件
 # ------------------------------------------------------------------------------
