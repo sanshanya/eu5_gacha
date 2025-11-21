@@ -1,3 +1,4 @@
+<div align=center> <img src="https://sansme.oss-cn-beijing.aliyuncs.com/thumbnail.png" width="360" height="360"></div>
 # EU5 Gacha Mod - 原神抽卡系统
 
 试图将原神的抽卡系统带入Europa Universalis V
