@@ -1,8 +1,8 @@
 # 工作流：如何添加新角色 (Add New Character)
 
-本文档详细说明如何向卡池中添加一位新角色（以“雷电将军” `raiden` 为例）。
+本文档详细说明如何向卡池中添加一位新角色（以"雷电将军" `raiden` 为例）。
 
-## 1. 核心文件清单 (Checklist)
+## 1. Núcleo文件清单 (Checklist)
 
 你需要创建或修改以下文件：
 
@@ -13,7 +13,7 @@
 | **立绘** | `gfx/portraits/portrait_modifiers/gacha_raiden_portrait.txt` | 定义角色的 2D/3D 立绘绑定 |
 | **本地化** | `localization/simp_chinese/gacha_raiden_l_simp_chinese.yml` | 名字、描述、事件文本 |
 | **事件** | `events/gacha_raiden_events.txt` | 初次见面、命座提升、满命事件 |
-| **逻辑** | `common/scripted_effects/gacha_common_effects.txt` | 复制并修改创建角色的 Wrapper |
+| **逻辑** | `common/scripted_effects/gacha_raiden_effects.txt` | **新架构**：角色专属 Wrapper 文件 |
 | **奖池** | `common/scripted_effects/gacha_pools.txt` | 将角色加入卡池 |
 
 ---
@@ -34,6 +34,24 @@ gacha_raiden_origin_trait = {
         # 在这里写角色的强力 Buff
         global_tax_modifier = 0.20      # 税收 +20%
         land_morale_modifier = 0.10     # 士气 +10%
+    }
+}
+
+# C2 觉醒特质
+gacha_raiden_awakened_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = {
+        discipline = 0.05
+    }
+}
+
+# C4 超越特质
+gacha_raiden_transcended_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = {
+        army_morale_modifier = 0.15
     }
 }
 ```
@@ -69,7 +87,7 @@ l_simp_chinese:
  
  # 特质
  gacha_raiden_origin_trait: "御建鸣神主尊"
- gacha_raiden_origin_trait_desc: "稻妻的雷神，追求永恒的统治者。\n§Y效果：§!\n税收：§G+20%§!\n士气：§G+10%§!"
+ gacha_raiden_origin_trait_desc: "稻妻的雷神，追求永恒的统治者。\\n§Y效果：§!\\n税收：§G+20%§!\\n士气：§G+10%§!"
 
  # 事件标题
  gacha_raiden_events.1.title: "雷霆的威光"
@@ -117,8 +135,10 @@ gacha_raiden_events.4 = {
 
 ### 步骤 5：编写逻辑 Wrapper (Scripted Effects)
 
-打开 `common/scripted_effects/gacha_common_effects.txt`。
-复制 `gacha_create_xinhai_effect`，重命名为 `gacha_create_raiden_effect`。
+**新架构**：每个角色使用独立的 effect 文件。
+
+创建 `common/scripted_effects/gacha_raiden_effects.txt`。
+参考 `gacha_xinhai_effects.txt`，复制并修改为 `gacha_create_raiden_effect`。
 
 **需要修改的关键点**：
 1.  **全局变量锁**: `gacha_xinhai_is_summoned` -> `gacha_raiden_is_summoned`
@@ -126,7 +146,9 @@ gacha_raiden_events.4 = {
 3.  **事件 ID**: `gacha_xinhai_events.1/2/4` -> `gacha_raiden_events.1/2/4`
 4.  **名字 Key**: `gacha_first_name_xinhai` -> `gacha_first_name_raiden`
 5.  **注册调用**: `gacha_register_new_character = { who = raiden }`
-6.  **数值**: 修改 `adm/dip/mil` 属性。
+6.  **数值**: 修改 `adm/dip/mil` 属性、文化、宗教
+
+> **重要**：`gacha_common_effects.txt` 仅包含通用内核 (`gacha_register_new_character`)，不要在里面添加角色专属代码！
 
 ### 步骤 6：加入奖池 (Pools)
 
@@ -150,4 +172,6 @@ random_list = {
 *   **Q: 抽到了但是没弹窗？**
     *   A: 检查 `gacha_raiden_events.txt` 顶部是否写了 `namespace = gacha_raiden_events`。
 *   **Q: 角色没有特质？**
-    *   A: 检查 `gacha_common_effects.txt` 里的 `gacha_register_new_character` 调用参数是否正确。
+    *   A: 检查 `gacha_raiden_effects.txt` 里的 `gacha_register_new_character` 调用参数是否正确。
+*   **Q: 命座特质没有生效？**
+    *   A: 确保定义了 `gacha_raiden_awakened_trait` 和 `gacha_raiden_transcended_trait`，并且 `gacha_apply_constellation_stats_effect` 使用了正确的 `$who$` 参数。

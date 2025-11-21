@@ -6,7 +6,17 @@ namespace = gacha_events
 gacha_events.1 = {
     type = country_event
     title = gacha_events.1.title
-    desc  = "当前祈愿状态：\n\n已垫抽数：[Root.Var('gacha_pity_count').GetValue]/90\n下个五星概率：[Root.GetScriptValue('gacha_5star_threshold_value')|1]‰\n当前是否大保底：[Root.Var('gacha_is_guaranteed') ? '是' : '否']\n\n投入资源，祈求命运的回应吧。"
+
+    # 使用 triggered_desc 实现条件文本（符合 Jomini 规范）
+    triggered_desc = {
+        trigger = { has_variable = gacha_is_guaranteed }
+        desc = gacha_events.1.desc_guaranteed
+    }
+    triggered_desc = {
+        trigger = { NOT = { has_variable = gacha_is_guaranteed } }
+        desc = gacha_events.1.desc_not_guaranteed
+    }
+
     is_triggered_only = yes
 
     immediate = {
@@ -14,7 +24,16 @@ gacha_events.1 = {
             foreground = estate_type:clergy_estate
             background = estate_type:clergy_estate
         }
-        # 移除了所有复杂的变量初始化逻辑
+
+        # 懒初始化 Pity 相关变量（防止首次访问时报错）
+        if = {
+            limit = { NOT = { has_variable = gacha_pity_count } }
+            set_variable = { name = gacha_pity_count value = 0 }
+        }
+        if = {
+            limit = { NOT = { has_variable = gacha_is_guaranteed } }
+            set_variable = { name = gacha_is_guaranteed value = no }
+        }
     }
 
     # 选项 A：祈愿
@@ -29,12 +48,34 @@ gacha_events.1 = {
         }
     }
 
-    # 选项 B：重置 (依然保留，防止以前的脏数据干扰)
+    # 选项 B：重置心海角色状态（调试用）
     option = {
-        name = "调试：重置角色状态"
+        name = "调试：重置心海角色状态"
         hidden_effect = {
+            # 找到心海角色并重置
+            random_in_global_list = {
+                variable = gacha_obtained_characters
+                limit = { has_trait = gacha_xinhai_origin_trait }
+
+                # 重置命座等级
+                set_variable = { name = gacha_constellation_lvl value = 0 }
+
+                # 移除所有命座修正
+                remove_character_modifier = gacha_xinhai_c0_modifier
+                remove_character_modifier = gacha_xinhai_c1_modifier
+                remove_character_modifier = gacha_xinhai_c2_modifier
+                remove_character_modifier = gacha_xinhai_c3_modifier
+                remove_character_modifier = gacha_xinhai_c4_modifier
+                remove_character_modifier = gacha_xinhai_c5_modifier
+                remove_character_modifier = gacha_xinhai_c6_modifier
+
+                # 移除觉醒/超越特质
+                remove_trait = gacha_xinhai_awakened_trait
+                remove_trait = gacha_xinhai_transcended_trait
+            }
+
+            # 重置全局召唤标记
             remove_global_variable = gacha_xinhai_is_summoned
-            set_variable = { name = gacha_constellation_lvl value = 0 }
         }
     }
 

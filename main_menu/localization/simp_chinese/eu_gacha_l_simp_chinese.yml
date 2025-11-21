@@ -13,7 +13,12 @@
 
   # === 祈愿主菜单 (.1) ===
   gacha_events.1.title: "祈愿：异世相遇"
-  gacha_events.1.desc: "钦天监已选定吉时。只需奉纳金币百枚，便可向星空祈愿，寻求异界之灵的回应。\n\n当前祈愿概率公示：\n5星廷臣（珊瑚宫心海）：50% (异界名将)\n3星杂物（凡铁军备）：50% (普通物资)\n\n诚心祈祷，命星自会指引方向。"
+  
+  # 条件描述：大保底状态
+  gacha_events.1.desc_guaranteed: "当前祈愿状态：\\n\\n已垫抽数：[Root.Var('gacha_pity_count').GetValue]/90\\n下个五星概率：[Root.GetScriptValue('gacha_5star_threshold_value')|1]‰\\n#bold 当前是否大保底：是#!\\n\\n投入资源，祈求命运的回应吧。"
+  
+  # 条件描述：非大保底状态
+  gacha_events.1.desc_not_guaranteed: "当前祈愿状态：\\n\\n已垫抽数：[Root.Var('gacha_pity_count').GetValue]/90\\n下个五星概率：[Root.GetScriptValue('gacha_5star_threshold_value')|1]‰\\n当前是否大保底：否\\n\\n投入资源，祈求命运的回应吧。"
   
   gacha_events.1.a: "奉纳金币 (祈愿)"
   gacha_events.1.b: "暂且观望"
@@ -24,15 +29,15 @@
 
   # === 结果：凡铁/蓝光 (.2) ===
   gacha_events.2.title: "祈愿结果：凡铁"
-  gacha_events.2.desc: "星光黯淡，似乎未有英灵回应你的呼唤。\n\n祭坛上只留有些许残破的兵刃与物资 (返还 1 金)。"
+  gacha_events.2.desc: "星光黯淡，似乎未有英灵回应你的呼唤。\\n\\n祭坛上只留有些许残破的兵刃与物资 (返还 1 金)。"
   gacha_events.2.a: "聊胜于无"
 
   # === 结果：歪了 (.3) ===
   gacha_events.3.title: "祈愿结果：意外之客"
-  gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是一位陌生的异界旅人。\n你获得了 50 威望。"
+  gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是一位陌生的异界旅人。\\n你获得了 50 威望。"
   gacha_events.3.a: "既来之，则安之"
 
   # === 结果：满命通用 (.4) ===
   gacha_events.4.title: "命星至臻"
-  gacha_events.4.desc: "这位异界英雄的能力已臻化境。\n\n溢出的祈愿之力转化为国家威望 (获得 2 威望)。"
+  gacha_events.4.desc: "这位异界英雄的能力已臻化境。\\n\\n溢出的祈愿之力转化为国家威望 (获得 2 威望)。"
   gacha_events.4.a: "物尽其用"

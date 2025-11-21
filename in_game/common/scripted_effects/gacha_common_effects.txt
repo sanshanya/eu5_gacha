@@ -1,10 +1,10 @@
 # ==============================================================================
 # GACHA SYSTEM: COMMON EFFECTS LIBRARY
-# 抽卡系统核心逻辑库
+# 抽卡系统核心逻辑库（仅包含通用内核，不含角色特异逻辑）
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
-# 1. 通用注册内核 (Register Core)
+# 通用注册内核 (Register Core)
 # 作用：负责处理角色生成后的通用逻辑（加Buff、加列表、初始化数值）
 # 接收参数：$who$ (角色代号字符串，如 xinhai)
 # ------------------------------------------------------------------------------
@@ -59,122 +59,8 @@ gacha_register_new_character = {
 }
 
 # ------------------------------------------------------------------------------
-# 2. 珊瑚宫心海专属包装壳 (Xinhai Wrapper)
-# 作用：处理“敏感数据”的硬编码，并分流 首次/重复 获取逻辑
+# 注意：角色专属 wrapper (如 gacha_create_xinhai_effect) 已移至各自的文件：
+#   - gacha_xinhai_effects.txt
+#   - gacha_raiden_effects.txt
+#   - ...
 # ------------------------------------------------------------------------------
-gacha_create_xinhai_effect = {
-    # ==========================================
-    # 分支 A：已拥有 -> 命之座升级 (Duplicate)
-    # ==========================================
-    if = {
-        limit = { has_global_variable = gacha_xinhai_is_summoned }
-
-        # 1. 在全局列表中找到已存在的角色实例
-        random_in_global_list = {
-            variable = gacha_obtained_characters
-            limit = { has_trait = gacha_xinhai_origin_trait }
-            save_scope_as = existing_char
-        }
-
-        # 2. 判定归属权 (Multiplayer Check)
-        if = {
-            limit = {
-                scope:existing_char = {
-                    # 检查角色的雇主是否是当前抽卡的国家
-                    employer = root
-                }
-            }
-            # === 归属权确认：是我的角色 ===
-            scope:existing_char = {
-                # 如果命座未满
-                if = {
-                    limit = { NOT = { var:gacha_constellation_lvl >= 6 } }
-
-                    # 命座变量 +1
-                    change_variable = { name = gacha_constellation_lvl add = 1 }
-
-                    # 重新计算数值 Buff
-                    gacha_apply_constellation_stats_effect = { who = xinhai }
-
-                    # 触发普通命座提升事件
-                    trigger_event_non_silently = gacha_xinhai_events.2
-
-                    # Toast 通知
-                    post_notification = {
-                        title = "gacha_constellation_up_title"
-                        text = "gacha_constellation_up_desc"
-                    }
-                }
-                # 如果命座已满
-                else = {
-                    # 触发已满命事件 (使用角色专属事件)
-                    trigger_event_non_silently = gacha_xinhai_events.4
-
-                    # Toast 通知
-                    post_notification = {
-                        title = "gacha_max_constellation_title"
-                        text = "gacha_max_constellation_desc"
-                    }
-                }
-            }
-        }
-        else = {
-            # === 归属权冲突：是别人的角色 ===
-            # 既然是全局唯一，别人有了我就不能有了
-            # 发放安慰奖 (Refund)
-            add_gold = 100
-            add_prestige = 50
-
-            # Toast 通知
-            post_notification = {
-                title = "gacha_already_owned_title"
-                text = "gacha_already_owned_desc"
-            }
-        }
-    }
-
-    # ==========================================
-    # 分支 B：未拥有 -> 首次创建 (New)
-    # ==========================================
-    else = {
-        # 1. 创建实体 (数据硬编码，避开参数传递 Bug)
-        create_character = {
-            first_name = gacha_first_name_xinhai
-            last_name  = gacha_last_name_xinhai
-
-            female     = yes
-            age        = 16
-
-            # 硬编码文化与宗教，防止回退
-            culture  = culture:tougokud
-            religion = religion:shintō
-
-            adm = { 90 100 }
-            dip = { 85 100 }
-            mil = { 65 90 }
-
-            # 关键：在“虚空”中创建，暂不指定阶层和国家
-            # 保护“珊瑚宫”这个姓氏不被随机池覆盖
-            create_in_limbo = yes
-
-            save_scope_as = new_gacha_char
-        }
-
-        # 2. 调用通用内核处理杂活
-        scope:new_gacha_char = {
-            gacha_register_new_character = { who = xinhai }
-        }
-
-        # 3. 上全局锁
-        set_global_variable = { name = gacha_xinhai_is_summoned value = 1 }
-
-        # 4. 触发初次见面事件 (.1)
-        trigger_event_non_silently = gacha_xinhai_events.1
-
-        # Toast 通知
-        post_notification = {
-            title = "gacha_new_character_title"
-            text = "gacha_new_character_desc"
-        }
-    }
-}

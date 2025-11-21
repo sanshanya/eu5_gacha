@@ -17,41 +17,22 @@ gacha_5star_threshold_value = {
             value = root.var:gacha_pity_count
             subtract = 73
             multiply = 60
-            # ============================================================
-            # 抽卡概率计算器 (千分制) - 正式版
-            # ============================================================
-            gacha_5star_threshold_value = {
-                # 基础概率 0.6%
-                value = 6
+            add = 60
+        }
+    }
 
-                # === 软保底机制 (Soft Pity) ===
-                # 74抽 (>=73) 开始，每抽增加 6% (60)
-                if = {
-                    limit = {
-                        # ★ 修正：使用 root 作用域
-                        root = { var:gacha_pity_count >= 73 }
-                    }
-                    add = {
-                        # ★ 修正：读取 root 身上的变量
-                        value = root.var:gacha_pity_count
-                        subtract = 73
-                        multiply = 60
-                        add = 60
-                    }
-                }
+    # === 硬保底机制 (Hard Pity) ===
+    # 90抽 (>=89) 概率直接拉满到 100%
+    if = {
+        limit = {
+            root = { var:gacha_pity_count >= 89 }
+        }
+        value = 1000
+    }
+}
 
-                # === 硬保底机制 (Hard Pity) ===
-                # 90抽 (>=89) 概率直接拉满到 100%
-                if = {
-                    limit = {
-                        root = { var:gacha_pity_count >= 89 }
-                    }
-                    value = 1000
-                }
-            }
-
-            # 失败概率 (用于 random_list 的权重)
-            gacha_5star_failure_value = {
-                value = 1000
-                subtract = root.script_value:gacha_5star_threshold_value
-            }
+# 失败概率 (用于 random_list 的权重)
+gacha_5star_failure_value = {
+    value = 1000
+    subtract = root.script_value:gacha_5star_threshold_value
+}
