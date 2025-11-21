@@ -2,31 +2,30 @@
 # 核心抽卡逻辑 (PRNG + Pity System) - 最终正确版
 # ============================================================
 gacha_execute_single_roll = {
-    # 步骤1: 生成一个 0 到 999 之间的随机数
-    random = {
-        min = 0
-        max = 999
-        save_as = gacha_roll_value # 将随机数保存到临时变量 gacha_roll_value
-    }
+    # 使用 random_list + script_value 动态权重
+    # 这是最稳健的概率实现方式，避免了随机数变量生成的潜在问题
+    random_list = {
+        # === 成功 (5星) ===
+        # 权重 = script_value:gacha_5star_threshold_value (例如 6 或 1000)
+        1 = {
+            modifier = {
+                factor = script_value:gacha_5star_threshold_value
+            }
+            gacha_handle_5star_outcome = yes
+        }
 
-    # 步骤2: 将随机数与我们动态计算出的概率阈值进行比较
-    if = {
-        limit = {
-            # 检查 gacha_roll_value 是否 小于 概率阈值
-            # (例如，如果阈值是6(0.6%)，那么roll到0,1,2,3,4,5就算成功)
-            check_variable = {
-                which = gacha_roll_value
-                which_right = script_value:gacha_5star_threshold_value
-                compare = less
+        # === 失败 (3/4星) ===
+        # 权重 = script_value:gacha_5star_failure_value (例如 994 或 0)
+        1 = {
+            modifier = {
+                factor = script_value:gacha_5star_failure_value
+            }
+            # 失败逻辑：增加保底，给安慰奖
+            change_variable = { name = gacha_pity_count add = 1 }
+            root = {
+                trigger_event_non_silently = { id = gacha_events.2 }
             }
         }
-        # 如果成功，则进入5星处理流程
-        gacha_handle_5star_outcome = yes
-    }
-    else = {
-        # 如果失败，则增加Pity并给予安慰奖
-        change_variable = { name = gacha_pity_count add = 1 }
-        trigger_event_non_silently = gacha_events.2
     }
 }
 
