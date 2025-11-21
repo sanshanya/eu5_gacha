@@ -1,13 +1,11 @@
 {
-  "general": {
-    "previewFeatures": true
-  },
   "mcpServers": {
     "eu5-modding-mcp": {
       "command": "uv",
       "args": [
         "run",
-        "D:/github/EU5-Modding-Mcp/server.py"
+        "--quiet",
+        "E:/github/EU5-Modding-Mcp/server.py"
       ]
     }
   }

@@ -78,15 +78,25 @@ gacha_create_xinhai_effect = {
         
         # 2. 对老角色进行操作
         scope:existing_char = {
-            # 命座变量 +1
-            change_variable = { name = gacha_constellation_lvl add = 1 }
-            
-            # 重新计算数值 Buff
-            gacha_apply_constellation_stats_effect = { who = xinhai }
+            # 如果命座未满
+            if = {
+                limit = { NOT = { var:gacha_constellation_lvl >= 6 } }
+
+                # 命座变量 +1
+                change_variable = { name = gacha_constellation_lvl add = 1 }
+                
+                # 重新计算数值 Buff
+                gacha_apply_constellation_stats_effect = { who = xinhai }
+
+                # 触发普通命座提升事件
+                trigger_event_non_silently = gacha_xinhai_events.2
+            }
+            # 如果命座已满
+            else = {
+                # 触发已满命事件 (待创建)
+                trigger_event_non_silently = gacha_events.4
+            }
         }
-        
-        # 3. 触发命座提升事件 (.2)
-        trigger_event_non_silently = gacha_xinhai_events.2
     }
     
     # ==========================================

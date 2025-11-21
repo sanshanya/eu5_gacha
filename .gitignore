@@ -1,9 +1,6 @@
 # Gemini CLI folder
 .gemini/
 
-# Modding tools
-EU5-Modding-Mcp/
-
 # Python scripts
 allinone.py
 

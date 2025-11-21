@@ -1,29 +1,15 @@
 # ============================================================
-# 极简概率逻辑 (Random Command)
+# 极简概率逻辑 (使用 random_list 的推荐写法)
 # ============================================================
 gacha_execute_single_roll = {
-    # 1. 初始化开关：先假设这次没中 (Fail)
-    set_variable = { name = gacha_roll_success value = 0 }
-
-    # 2. 执行随机判定 (10% 概率)
-    # 如果中了，就把开关设为 1 (Success)
-    random = {
-        chance = 99
-        set_variable = { name = gacha_roll_success value = 1 }
+    random_list = {
+        # 50% 的权重
+        50 = {
+            gacha_create_xinhai_effect = yes
+        }
+        # 50% 的权重
+        50 = {
+            trigger_event_non_silently = gacha_events.2
+        }
     }
-
-    # 3. 根据开关分发奖励
-    if = {
-        # === 中了！(开关被改成了 1) ===
-        limit = { var:gacha_roll_success = 1 }
-        
-        gacha_create_xinhai_effect = yes
-    }
-    else = {
-        # === 没中 (开关还是 0) ===
-        trigger_event_non_silently = gacha_events.2
-    }
-    
-    # 4. 清理变量 (好习惯)
-    remove_variable = gacha_roll_success
 }
