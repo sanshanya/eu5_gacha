@@ -1,48 +1,38 @@
 ﻿l_simp_chinese:
+  # ============================================================
+  # Gacha System Localization (抽卡系统通用文本)
+  # ============================================================
+
   # === 交互按钮 ===
-  gacha_events_interaction: "祈愿「异世相遇」"
-  gacha_events_interaction_desc: "呼唤来自海祇岛的军师前来出谋划策。"
+  gacha_events_interaction: "祈愿：异世相遇"
+  gacha_events_interaction_desc: "设坛祈愿，感召来自异界的英灵与智者。"
+
+  # === 核心修饰符 (Core Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_core_modifier:0 "祈愿的加护"
+  MODIFIER_TYPE_NAME_gacha_core:0 "来自异世界的旅人"
 
   # === 祈愿主菜单 (.1) ===
   gacha_events.1.title: "祈愿：异世相遇"
-  # 纯文本描述，不再读取变量，绝对不会报错
-  gacha_events.1.desc: "祭坛的规矩为100枚金币兑换1枚纠缠之缘。\n\n当前概率公示：\n5星角色（珊瑚宫心海）：50% (开发中)\n3星物品（无锋剑）：50% (开发中)\n\n如果诚心祈祷，或许有命星回应你的请求。"
+  gacha_events.1.desc: "钦天监已选定吉时。只需奉纳金币百枚，便可向星空祈愿，寻求异界之灵的回应。\n\n当前祈愿概率公示：\n5星廷臣（珊瑚宫心海）：50% (异界名将)\n3星杂物（凡铁军备）：50% (普通物资)\n\n诚心祈祷，命星自会指引方向。"
   
-  gacha_events.1.a: "祈愿 (消耗100金)"
-  gacha_events.1.b: "离开"
+  gacha_events.1.a: "奉纳金币 (祈愿)"
+  gacha_events.1.b: "暂且观望"
   
   # 备用的提示文本
-  gacha_events.1.single_lack: "祈愿 (金币不足)"
-  gacha_not_enough_gold_tt: "囊中羞涩，派蒙摊开了双手。"
+  gacha_events.1.single_lack: "奉纳不足"
+  gacha_not_enough_gold_tt: "国库空虚，无法筹措祈愿所需的祭品。"
 
   # === 结果：凡铁/蓝光 (.2) ===
   gacha_events.2.title: "祈愿结果：凡铁"
-  gacha_events.2.desc: "流星划过天际，光芒黯淡。\n\n你只找到了一把锈迹斑斑的无锋剑 (返还 1 金)。"
-  gacha_events.2.a: "收下吧"
+  gacha_events.2.desc: "星光黯淡，似乎未有英灵回应你的呼唤。\n\n祭坛上只留有些许残破的兵刃与物资 (返还 1 金)。"
+  gacha_events.2.a: "聊胜于无"
 
   # === 结果：歪了 (.3) ===
-  # (虽然当前简化版逻辑暂时没用到这个，但保留着也没事)
-  gacha_events.3.title: "祈愿结果：金光...但是？"
-  gacha_events.3.desc: "金光乍现！但走出来的似乎不是你期待的那位...(歪了)\n你获得了 50 威望。"
-  gacha_events.3.a: "下次一定不歪"
+  gacha_events.3.title: "祈愿结果：意外之客"
+  gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是一位陌生的异界旅人。\n你获得了 50 威望。"
+  gacha_events.3.a: "既来之，则安之"
 
-  # === 心海相关 ===
-  # 这里的名字必须和 common/scripted_effects 里的拼写一致
-  gacha_first_name_xinhai: "心海"
-  gacha_last_name_xinhai: "珊瑚宫"
-  
-  # 初次获得
-  gacha_xinhai_events.1.title: "珊瑚宫心海"
-  gacha_xinhai_events.1.desc: "传闻海衹岛的「现人神巫女」，精通兵法与筹谋，能为我们的国家带来新的希望。"
-  gacha_xinhai_events.1.desc_constellation: "命星归位！\n\n珊瑚宫心海的力量得到了进一步的增强。"
-  gacha_xinhai_events.1.a: "欢迎"
-
-  # 命座提升
-  gacha_xinhai_events.2.title: "命星闪烁"
-  gacha_xinhai_events.2.desc: "随着祈愿的光芒汇入体内，珊瑚宫心海感到了一股熟悉的力量回归。"
-  gacha_xinhai_events.2.a: "太好了！"
-
-  # === 结果：满命 (.4) ===
-  gacha_events.4.title: "命星已至尽头"
-  gacha_events.4.desc: "珊瑚宫心海的命之座已达至臻之境。\n\n重复的命星转化为少量国家威望 (获得 2 威望)。"
-  gacha_events.4.a: "不错"
+  # === 结果：满命通用 (.4) ===
+  gacha_events.4.title: "命星至臻"
+  gacha_events.4.desc: "这位异界英雄的能力已臻化境。\n\n溢出的祈愿之力转化为国家威望 (获得 2 威望)。"
+  gacha_events.4.a: "物尽其用"

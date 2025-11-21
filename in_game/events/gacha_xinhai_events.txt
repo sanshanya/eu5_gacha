@@ -7,7 +7,7 @@ gacha_xinhai_events.1 = {
     type = country_event
     title = gacha_xinhai_events.1.title
     desc  = gacha_xinhai_events.1.desc
-    
+
     immediate = {
         event_illustration_estate_effect = {
             foreground = estate_type:peasants_estate
@@ -28,11 +28,10 @@ gacha_xinhai_events.1 = {
 # ==========================================
 gacha_xinhai_events.2 = {
     type = country_event
-    title = gacha_xinhai_events.2.title # "命之座：沉玉之梦"
-    desc  = gacha_xinhai_events.2.desc  # "她的力量在这个世界得到了进一步的解放..."
-    
+    title = gacha_xinhai_events.2.title
+    desc  = gacha_xinhai_events.2.desc
+
     immediate = {
-        # 这里以后可以换成“命星”的图片
         event_illustration_estate_effect = {
             foreground = estate_type:clergy_estate
             background = estate_type:clergy_estate
@@ -41,11 +40,32 @@ gacha_xinhai_events.2 = {
 
     option = {
         name = gacha_xinhai_events.2.a
-        
+
         # 命座提升的奖励
         add_prestige = 10
-        
-        # 未来可以在这里加好感度
-        # change_variable = { name = xinhai_favor add = 20 } 
+    }
+}
+
+# ==========================================
+# 事件 4：满命 (Max Constellation)
+# ==========================================
+gacha_xinhai_events.4 = {
+    type = country_event
+    title = gacha_xinhai_events.4.title
+    desc  = gacha_xinhai_events.4.desc
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:nobles_estate
+            background = estate_type:nobles_estate
+        }
+    }
+
+    option = {
+        name = gacha_xinhai_events.4.a
+
+        # 满命奖励
+        add_prestige = 50
+        add_legitimacy = 20
     }
 }

@@ -1,0 +1,66 @@
+l_simp_chinese:
+ # ============================================================
+ # 角色：珊瑚宫心海 (Sangonomiya Kokomi)
+ # ============================================================
+ gacha_first_name_xinhai: "心海"
+ gacha_last_name_xinhai: "珊瑚宫"
+ 
+ # === 特质 (Traits) ===
+ gacha_xinhai_origin_trait: "现人神巫女"
+ gacha_xinhai_origin_trait_desc: "这位来自海祇岛的领袖拥有卓越的战略眼光和治愈能力。作为现人神巫女，她不仅是精神领袖，更是抵抗军的最高指挥官。\n\n§Y效果：§!\n行政效率：§G+10%§!\n陆军士气：§G+5%§!\n\n§L“兵法在于，料敌先机。”§!"
+ 
+ gacha_xinhai_awakened_trait:0 "海月之誓"
+ desc_gacha_xinhai_awakened_trait:0 "作为海祇岛的领袖，我带领大家逆流前行的日子也过去了许久。我们能有如今这样和谐安宁的时光，你的努力必不可少。"
+
+ gacha_xinhai_transcended_trait:0 "海祇姬君"
+ desc_gacha_xinhai_transcended_trait:0 "在碧波游鱼间穿行，感受海水轻抚脸颊的温柔，内心也跟着平静下来了呢。"
+
+ # === 修正 (Modifiers) ===
+ STATIC_MODIFIER_NAME_gacha_xinhai_modifier:0 "海祇的加护"
+ gacha_xinhai_modifier: "海祇之志"
+ gacha_xinhai_modifier_desc: "珊瑚宫心海的战略部署正在为国家带来稳定的行政流转与后勤保障。"
+ 
+ MODIFIER_TYPE_NAME_gacha_water_godeye:0 "水元素神之眼「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
+
+ # === 命之座修正 (Constellations) ===
+ MODIFIER_TYPE_NAME_gacha_constellation_level:0 "命之座·眠龙座"
+ STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier:0 "眠龙座·零命"
+ STATIC_MODIFIER_NAME_gacha_xinhai_c1_modifier:0 "决水于溪"
+ STATIC_MODIFIER_NAME_gacha_xinhai_c2_modifier:0 "波起云海"
+ STATIC_MODIFIER_NAME_gacha_xinhai_c3_modifier:0 "海渚月舟"
+ STATIC_MODIFIER_NAME_gacha_xinhai_c4_modifier:0 "月摄千川"
+ STATIC_MODIFIER_NAME_gacha_xinhai_c5_modifier:0 "百川集海"
+ STATIC_MODIFIER_NAME_gacha_xinhai_c6_modifier:0 "珊瑚一心"
+
+ # ============================================================
+ # 事件：初次见面
+ # ============================================================
+ gacha_xinhai_events.1.title: "深海的明珠"
+ gacha_xinhai_events.1.desc: "一位身着蓝白礼服的少女缓缓步入大殿。她自称来自遥远的海祇岛，是那里的现人神巫女。\n\n“妾身珊瑚宫心海。听闻阁下治国有方，愿以海祇岛兵法相助。不过，妾身精力有限，还望莫要安排过多的繁文缛节。”\n\n她手中的兵书似乎记录着无数战役的胜负手。得此一人，吾国之军政必将如虎添翼。"
+ gacha_xinhai_events.1.a: "恭迎军师入朝。"
+
+ # ============================================================
+ # 事件：命座提升
+ # ============================================================
+ gacha_xinhai_events.2.title: "锦囊妙计"
+ gacha_xinhai_events.2.desc: "随着祈愿之力的加深，珊瑚宫心海感到了一股熟悉的力量回归。\n\n她对兵法的理解愈发精进，仿佛已洞察未来战场的每一处变数。\n\n当前命座等级：§Y[This.Var('gacha_constellation_lvl').GetValue]§!"
+ gacha_xinhai_events.2.a: "深谋远虑，决胜千里。"
+
+ # ============================================================
+ # 事件：满命 (C6)
+ # ============================================================
+ gacha_xinhai_events.4.title: "海染之龙"
+ gacha_xinhai_events.4.desc: "珊瑚宫心海的力量已臻化境。她周身环绕着如同深海般深邃的气息，仿佛古老的水龙王再次降临。\n\n“如今的我，已可应对任何风浪。无论是深海的巨兽，亦或是陆上的强敌，皆无法阻挡海祇岛的意志。”\n\n她的存在本身，便是三军士气的绝对保障。"
+ gacha_xinhai_events.4.a: "此乃天助我也！"
+
+ # ============================================================
+ # Toast 通知 (目前由心海脚本触发，故放在此处)
+ # ============================================================
+ gacha_new_character_title: "祈愿回应！"
+ gacha_new_character_desc: "获得了5星廷臣：珊瑚宫心海"
+ gacha_constellation_up_title: "命星闪烁"
+ gacha_constellation_up_desc: "珊瑚宫心海的命之座等级提升了！"
+ gacha_max_constellation_title: "命星至臻"
+ gacha_max_constellation_desc: "珊瑚宫心海已经达到了完美状态！"
+ gacha_already_owned_title: "重复祈愿"
+ gacha_already_owned_desc: "该廷臣已由他国聘用，转化为资源补偿。"

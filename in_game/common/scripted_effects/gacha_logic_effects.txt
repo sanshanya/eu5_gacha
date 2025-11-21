@@ -1,15 +1,76 @@
 # ============================================================
-# 极简概率逻辑 (使用 random_list 的推荐写法)
+# 核心抽卡逻辑 (PRNG + Pity System)
 # ============================================================
 gacha_execute_single_roll = {
+    # 使用 random_list + 动态权重 (Script Value)
+    # 这是 Jomini 引擎下实现动态概率的标准做法
     random_list = {
-        # 50% 的权重
-        50 = {
-            gacha_create_xinhai_effect = yes
+        # 1. 出金 (Success)
+        # 权重 = 当前阈值 (例如 6 或 1000)
+        value:gacha_5star_threshold_value = {
+            gacha_handle_5star_outcome = yes
         }
-        # 50% 的权重
-        50 = {
+
+        # 2. 没出金 (Failure)
+        # 权重 = 1000 - 当前阈值
+        value:gacha_5star_failure_value = {
+            # 垫子 +1
+            change_variable = { name = gacha_pity_count add = 1 }
+
+            # 发放安慰奖
             trigger_event_non_silently = gacha_events.2
         }
     }
+}
+
+# ============================================================
+# 五星处理逻辑 (50/50 与 大保底)
+# ============================================================
+gacha_handle_5star_outcome = {
+    # 1. 先重置垫子 (Pity Reset)
+    set_variable = { name = gacha_pity_count value = 0 }
+
+    # 2. 判定是不是 UP 角色
+    if = {
+        # 情况 A: 必定 UP (大保底生效中)
+        limit = {
+            var:gacha_is_guaranteed = yes
+        }
+        gacha_get_up_character = yes
+        set_variable = { name = gacha_is_guaranteed value = no } # 消耗大保底
+    }
+    else = {
+        # 情况 B: 50/50 赌命
+        random_list = {
+            50 = {
+                # 赢了：获得 UP
+                gacha_get_up_character = yes
+                # 不需要设变量，下次还是 50/50
+            }
+            50 = {
+                # 歪了：获得常驻
+                gacha_get_standard_character = yes
+                # 加上大保底标记，下次必中
+                set_variable = { name = gacha_is_guaranteed value = yes }
+            }
+        }
+    }
+}
+
+# ============================================================
+# 实际发放奖励 (Helper Effects)
+# ============================================================
+gacha_get_up_character = {
+    # 获得心海
+    gacha_create_xinhai_effect = yes
+}
+
+gacha_get_standard_character = {
+    # 歪了！给个“七七”或者“刻晴”
+    # 这里暂时给个通用的 5 星甚至只是大量威望
+    add_prestige = 50
+    add_legitimacy = 10
+
+    # 弹窗告诉玩家歪了
+    # post_notification = { title = "gacha_lost_50_50_title" text = "gacha_lost_50_50_desc" }
 }

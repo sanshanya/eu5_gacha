@@ -6,7 +6,7 @@ namespace = gacha_events
 gacha_events.1 = {
     type = country_event
     title = gacha_events.1.title
-    desc  = gacha_events.1.desc
+    desc  = "当前祈愿状态：\n\n已垫抽数：[Root.Var('gacha_pity_count').GetValue]/90\n下个五星概率：[Root.GetScriptValue('gacha_5star_threshold_value')|1]‰\n当前是否大保底：[Root.Var('gacha_is_guaranteed') ? '是' : '否']\n\n投入资源，祈求命运的回应吧。"
     is_triggered_only = yes
 
     immediate = {
@@ -22,7 +22,7 @@ gacha_events.1 = {
         name = gacha_events.1.a
         # trigger = { gold >= 100 }
         add_gold = -100
-        
+
         hidden_effect = {
             # 调用简化后的逻辑
             gacha_execute_single_roll = yes
@@ -37,7 +37,7 @@ gacha_events.1 = {
             set_variable = { name = gacha_constellation_lvl value = 0 }
         }
     }
-    
+
     # 选项 C：离开
     option = {
         name = gacha_events.1.b
@@ -62,9 +62,9 @@ gacha_events.2 = {
 
     option = {
         name = gacha_events.2.a
-immediate = {
-		add_gold = 1
-	}
+        immediate = {
+            add_gold = 1
+        }
     }
 }
 
@@ -72,18 +72,18 @@ immediate = {
 # 4. 祈愿结果：满命 (C6+)
 # ==========================================
 gacha_events.4 = {
-	type = country_event
-	title = "gacha_events.4.title"
-	desc = "gacha_events.4.desc"
-	is_triggered_only = yes
+    type = country_event
+    title = "gacha_events.4.title"
+    desc = "gacha_events.4.desc"
+    is_triggered_only = yes
 
-	immediate = {
-		# Consolation prize, e.g., convert to 'stardust'
+    immediate = {
+        # Consolation prize, e.g., convert to 'stardust'
         # For now, just give some prestige
         add_prestige = 2
-	}
-	
-	option = {
-		name = "gacha_events.4.a"
-	}
+    }
+
+    option = {
+        name = "gacha_events.4.a"
+    }
 }
