@@ -20,7 +20,10 @@
 
   # === 核心修饰符 (Core Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_core_modifier: "祈愿的加护"
+  STATIC_MODIFIER_DESC_gacha_core_modifier: "祈愿的加护"
+
   MODIFIER_TYPE_NAME_gacha_core: "来自异世界的旅人"
+  MODIFIER_TYPE_DESC_gacha_core: "「来自异世界的旅人」"
 
   # === 祈愿主菜单 (.1) ===
   gacha_events.1.title: "祈愿：异世相遇"
@@ -37,14 +40,26 @@
   gacha_events.2.a: "聊胜于无"
 
   # === 结果：歪了 (.3) ===
-  gacha_events.3.title: "祈愿结果：意外之客"
-  gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是一位陌生的异界旅人。\n\n$gacha_text_reward_prestige_medium$"
+  gacha_events.3.title: "祈愿结果：小保底"
+  gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是来自稻妻的雷电将军。\n\n虽然失去了五五开的赌注，但获得常驻池五星角色也是不错的收获。下次祈愿将必定获得UP角色！"
   gacha_events.3.a: "既来之，则安之"
 
   # === 结果：满命通用 (.4) ===
   gacha_events.4.title: "命星至臻"
   gacha_events.4.desc: "这位异界英雄的能力已臻化境。\n\n$gacha_text_reward_prestige_overflow$"
   gacha_events.4.a: "物尽其用"
+
+
+  MODIFIER_TYPE_NAME_gacha_constellation_level: "命之座"
+  MODIFIER_TYPE_DESC_gacha_constellation_level: "「当凡人的渴望强烈到足以撼动星空的转瞬，来自高天的视线便会投射而下，凝结为这枚引导元素之力、以此见证命运的崇高信物。」"
+
+
+  MODIFIER_TYPE_NAME_gacha_electro_godeye: "雷元素神之眼"
+  MODIFIER_TYPE_DESC_gacha_electro_godeye: "「雷系神之眼持有者往往是人群中的异类。他们不在乎世俗的眼光，为了心中的某个执念，显得有些格格不入。」"
+
+  MODIFIER_TYPE_NAME_gacha_water_godeye: "水元素神之眼"
+  MODIFIER_TYPE_DESC_gacha_water_godeye: "「水系神之眼持有者往往为了别人、为了正义或为了艺术，可以牺牲自己或变得极度执着。」"
+
 
   # ============================================================
   # §Y Part 3: Character - Xinhai (珊瑚宫心海) §!
@@ -66,13 +81,11 @@
   
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_xinhai_modifier: "海祇的加护"
+  STATIC_MODIFIER_DESC_gacha_xinhai_modifier: "「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
   gacha_xinhai_modifier: "海祇之志"
   gacha_xinhai_modifier_desc: "珊瑚宫心海的战略部署正在为国家带来稳定的行政流转与后勤保障。"
-  MODIFIER_TYPE_NAME_gacha_water_godeye: "水元素神之眼"
-  MODIFIER_TYPE_NAME_gacha_water_godeye_desc: "「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
 
   # === 命之座 (Constellations) ===
-  MODIFIER_TYPE_NAME_gacha_constellation_level: "命之座·眠龙座"
   STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier: "眠龙座·零命"
   STATIC_MODIFIER_NAME_gacha_xinhai_c1_modifier: "决水于溪"
   STATIC_MODIFIER_NAME_gacha_xinhai_c2_modifier: "波起云海"
@@ -114,3 +127,449 @@
   gacha_max_constellation_desc: "珊瑚宫心海已经达到了完美状态！"
   gacha_already_owned_title: "重复祈愿"
   gacha_already_owned_desc: "该廷臣已由他国聘用，转化为资源补偿。"
+
+  # ============================================================
+  # §Y Part 5: Character - Raiden Shogun (雷电将军) §!
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_raiden: "将军"
+  gacha_last_name_raiden: "雷电"
+
+  # === 特质 (Traits) ===
+  gacha_raiden_origin_trait: "御建鸣神主尊"
+  desc_gacha_raiden_origin_trait: "稻妻幕府的最高主宰，许以臣民“永恒”之梦的殊胜尊贵之身。\n\n效果：\n国家人力修正：+25%\n陆军士气：+15%\n训练度：+5%\n正统性：+1.00/年\n\n“此身即是尘世最为殊胜尊贵之身。”"
+
+  gacha_raiden_awakened_trait: "梦想一心"
+  desc_gacha_raiden_awakened_trait: "斩断杂念，只为永恒。那无想的一刀，终将为这个国度带来长久的安宁。\n\n效果：\n行政效率：+5%\n全局叛乱：-2.00"
+
+  gacha_raiden_transcended_trait: "殊胜尊荣"
+  desc_gacha_raiden_transcended_trait: "威光无赦。在雷霆的威光之下，一切阻碍都将化为灰烬。\n\n效果：\n冲击伤害：+15%\n受到的火力伤害：-10%\n移动速度：+15%"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_raiden_modifier: "鸣神的加护"
+  STATIC_MODIFIER_DESC_gacha_raiden_modifier: "「浮世景色百千年依旧，人之在世却如白露与泡影。」"
+  gacha_raiden_modifier: "永恒之诺"
+  gacha_raiden_modifier_desc: "雷电将军的威光正在庇护着这个国家，确保其向着永恒迈进。"
+  MODIFIER_TYPE_NAME_gacha_electro_godeye: "雷元素神之眼"
+  MODIFIER_TYPE_NAME_gacha_electro_godeye_desc: "「浮世景色百千年依旧，人之在世却如白露与泡影。」"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_raiden_c0_modifier: "恶曜影向·零命"
+  STATIC_MODIFIER_NAME_gacha_raiden_c1_modifier: "恶曜卜词"
+  STATIC_MODIFIER_NAME_gacha_raiden_c2_modifier: "斩铁断金"
+  STATIC_MODIFIER_NAME_gacha_raiden_c3_modifier: "真影旧事"
+  STATIC_MODIFIER_NAME_gacha_raiden_c4_modifier: "誓奉常道"
+  STATIC_MODIFIER_NAME_gacha_raiden_c5_modifier: "凶将之降临"
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_modifier: "负愿前行"
+
+  # === 事件 (Events) ===
+  gacha_raiden_events.1.title: "鸣神以此身许诺"
+  gacha_raiden_events.1.desc: "伴随着一道划破天际的紫雷，一位威严的女性降临在宫殿之中。她手持薙刀，眼神冷冽而深邃。\n\n“我是雷电将军，稻妻幕府的最高主宰。既然你已通过了试炼，我便许你一诺：此身将助你扫清一切阻碍，直至永恒降临。”\n\n空气中弥漫着雷元素的威压，令人不由自主地想要臣服。"
+  gacha_raiden_events.1.a: "为了永恒！"
+
+  gacha_raiden_events.2.title: "雷光闪烁"
+  gacha_raiden_events.2.desc: "雷电将军的力量似乎增强了。她手中的刀锋更加锐利，周身的雷光也更加耀眼。\n\n“无念，无想。”\n\n$gacha_text_reward_prestige_small$"
+  gacha_raiden_events.2.a: "威光无赦。"
+
+  gacha_raiden_events.4.title: "永恒之梦"
+  gacha_raiden_events.4.desc: "雷电将军已臻至化境。她不再仅仅是威严的统治者，更是守护永恒的化身。\n\n“现在的我，已能斩断一切迷惘。无论是过去、现在，还是未来，都将由我亲手铸就。”\n\n整个国家都沐浴在她的雷光之下，无人敢于挑战您的权威。\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_raiden_events.4.a: "此即，永恒！"
+l_simp_chinese:
+  # ============================================================
+  # §Y Part 1: Reusable Text Snippets (可复用文本片段) §!
+  # ============================================================
+  gacha_text_reward_prestige_small: "你获得了 10 点威望。"
+  gacha_text_reward_prestige_medium: "你获得了 50 点威望。"
+  gacha_text_reward_legitimacy_small: "你获得了 5 点正统性。"
+  gacha_text_reward_legitimacy_medium: "你获得了 20 点正统性。"
+  gacha_text_reward_stability_small: "国家稳定度提升了 0.25 。"
+  gacha_text_reward_prestige_overflow: "溢出的祈愿之力转化为 2 点国家威望。"
+  gacha_text_reward_gold_refund: "祭坛上只留有些许残破的兵刃与物资 (返还 1 金)。"
+
+  # ============================================================
+  # §Y Part 2: Gacha System Localization (抽卡系统通用文本) §!
+  # ============================================================
+
+  # === 交互按钮 ===
+  gacha_events_interaction: "祈愿：异世相遇"
+  gacha_events_interaction_desc: "[actor.GetName]将设坛祈愿，感召来自异界的英灵与智者。"
+
+  # === 核心修饰符 (Core Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_core_modifier: "祈愿的加护"
+  STATIC_MODIFIER_DESC_gacha_core_modifier: "祈愿的加护"
+
+  MODIFIER_TYPE_NAME_gacha_core: "来自异世界的旅人"
+  MODIFIER_TYPE_DESC_gacha_core: "「来自异世界的旅人」"
+
+  # === 祈愿主菜单 (.1) ===
+  gacha_events.1.title: "祈愿：异世相遇"
+  gacha_events.1.desc_guaranteed: "当前祈愿已受祝福，下次获得的必定是当期角色！\n投入资源，祈求命运的回应吧。"
+  gacha_events.1.desc_not_guaranteed: "投入资源，祈求命运的回应吧。"
+  gacha_events.1.a: "奉纳金币 (祈愿)"
+  gacha_events.1.b: "暂且观望"
+  gacha_events.1.single_lack: "奉纳不足"
+  gacha_not_enough_gold_tt: "国库空虚，无法筹措祈愿所需的祭品。"
+
+  # === 3星 (凡铁) ===
+  gacha_events.2.title: "祈愿结果：凡铁"
+  gacha_events.2.desc: "星光黯淡，似乎未有英灵回应你的呼唤。\n\n除了寂静，什么也没有留下。"
+  gacha_events.2.a: "再接再厉"
+
+  # === 结果：歪了 (.3) ===
+  gacha_events.3.title: "祈愿结果：小保底"
+  gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是来自稻妻的雷电将军。\n\n虽然失去了五五开的赌注，但获得常驻池五星角色也是不错的收获。下次祈愿将必定获得UP角色！"
+  gacha_events.3.a: "既来之，则安之"
+
+  # === 结果：满命通用 (.4) ===
+  gacha_events.4.title: "命星至臻"
+  gacha_events.4.desc: "这位异界英雄的能力已臻化境。\n\n$gacha_text_reward_prestige_overflow$"
+  gacha_events.4.a: "物尽其用"
+
+
+  MODIFIER_TYPE_NAME_gacha_constellation_level: "命之座"
+  MODIFIER_TYPE_DESC_gacha_constellation_level: "「当凡人的渴望强烈到足以撼动星空的转瞬，来自高天的视线便会投射而下，凝结为这枚引导元素之力、以此见证命运的崇高信物。」"
+
+
+  MODIFIER_TYPE_NAME_gacha_electro_godeye: "雷元素神之眼"
+  MODIFIER_TYPE_DESC_gacha_electro_godeye: "「雷系神之眼持有者往往是人群中的异类。他们不在乎世俗的眼光，为了心中的某个执念，显得有些格格不入。」"
+
+  MODIFIER_TYPE_NAME_gacha_water_godeye: "水元素神之眼"
+  MODIFIER_TYPE_DESC_gacha_water_godeye: "「水系神之眼持有者往往为了别人、为了正义或为了艺术，可以牺牲自己或变得极度执着。」"
+
+
+  # ============================================================
+  # §Y Part 3: Character - Xinhai (珊瑚宫心海) §!
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_xinhai: "心海"
+  gacha_last_name_xinhai: "珊瑚宫"
+
+  # === 特质 (Traits) ===
+  gacha_xinhai_origin_trait: "现人神巫女"
+  desc_gacha_xinhai_origin_trait: "这位来自海祇岛的领袖拥有卓越的战略眼光和治愈能力。作为现人神巫女，她不仅是精神领袖，更是抵抗军的最高指挥官。\n\n效果：\n立法效率：+50%\n角色内阁效率：+175%\n全国内阁效率：+25%\n文化影响力：+15%\n\n“兵法在于，料敌先机。”"
+
+  gacha_xinhai_awakened_trait: "海月之誓"
+  desc_gacha_xinhai_awakened_trait: "作为海祇岛的领袖，我带领大家逆流前行的日子也过去了许久。我们能有如今这样和谐安宁的时光，你的努力必不可少。\n\n效果：\n全局阶层满意度恢复速度：+25%\n全局疾病抗性：+25%\n全局荒废度恢复速度：+50%"
+
+  gacha_xinhai_transcended_trait: "海祇姬君"
+  desc_gacha_xinhai_transcended_trait: "在碧波游鱼间穿行，感受海水轻抚脸颊的温柔，内心也跟着平静下来了呢。\n\n效果：\n海军士气：+30%\n海军移动速度：+30%\n海军维修花费：-50%"
+  
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_xinhai_modifier: "海祇的加护"
+  STATIC_MODIFIER_DESC_gacha_xinhai_modifier: "「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
+  gacha_xinhai_modifier: "海祇之志"
+  gacha_xinhai_modifier_desc: "珊瑚宫心海的战略部署正在为国家带来稳定的行政流转与后勤保障。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier: "眠龙座·零命"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c1_modifier: "决水于溪"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c2_modifier: "波起云海"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c3_modifier: "海渚月舟"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c4_modifier: "月摄千川"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c5_modifier: "百川集海"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c6_modifier: "珊瑚一心"
+
+  # === 事件 (Events) ===
+  gacha_xinhai_events.1.title: "深海的明珠"
+  gacha_xinhai_events.1.desc: "一位身着蓝白礼服的少女缓缓步入大殿。她自称来自遥远的海祇岛，是那里的现人神巫女。\n\n“妾身珊瑚宫心海。听闻阁下治国有方，愿以海祇岛兵法相助。不过，妾身精力有限，还望莫要安排过多的繁文缛节。”\n\n她手中的兵书似乎记录着无数战役的胜负手。得此一人，吾国之军政必将如虎添翼。"
+  gacha_xinhai_events.1.a: "恭迎军师入朝。"
+
+  gacha_xinhai_events.2.title: "锦囊妙计"
+  gacha_xinhai_events.2.desc: "随着祈愿之力的加深，珊瑚宫心海感到了一股熟悉的力量回归。\n\n她对兵法的理解愈发精进，仿佛已洞察未来战场的每一处变数。\n\n$gacha_text_reward_prestige_small$"
+  gacha_xinhai_events.2.a: "深谋远虑，决胜千里。"
+
+  gacha_xinhai_events.4.title: "海染之龙"
+  gacha_xinhai_events.4.desc: "珊瑚宫心海的力量已臻化境。她周身环绕着如同深海般深邃的气息，仿佛古老的水龙王再次降临。\n\n“如今的我，已可应对任何风浪。无论是深海的巨兽，亦或是陆上的强敌，皆无法阻挡海祇岛的意志。”\n\n她的存在本身，便是三军士气的绝对保障。\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_xinhai_events.4.a: "此乃天助我也！"
+
+  # === 专属命座事件 (Awakening/Transcendence) ===
+  gacha_xinhai_events.11.title: "命之座·觉醒"
+  gacha_xinhai_events.11.desc: "随着命星再度闪耀，心海感到体内的力量涌现出了新的形态。她领悟了「海月之誓」，能够更好地守护您的子民，祛除灾厄。\n\n“感觉就像卸下了某种枷锁……现在，我可以更有效地将海祇岛的恩泽播撒到您的国度了。”\n\n$gacha_text_reward_stability_small$"
+  gacha_xinhai_events.11.a: "她的忠诚弥足珍贵。"
+
+  gacha_xinhai_events.12.title: "命之座·超越"
+  gacha_xinhai_events.12.desc: "更深层次的力量被解放了。心海的血脉中似乎蕴含着驾驭海洋的古老权能，她现在能够以「海祇姬君」之名，为您祝福整支舰队。\n\n“只要是为了胜利……无论是怎样的力量，我都会为您运用。请下令吧，我的大人。”\n\n$gacha_text_reward_legitimacy_small$"
+  gacha_xinhai_events.12.a: "大海将是我们最锋利的武器！"
+
+  # ============================================================
+  # §Y Part 4: Notification Text (通知文本) §!
+  # ============================================================
+  gacha_new_character_title: "祈愿回应！"
+  gacha_new_character_desc: "获得了5星廷臣：珊瑚宫心海"
+  gacha_constellation_up_title: "命星闪烁"
+  gacha_constellation_up_desc: "珊瑚宫心海的命之座等级提升了！"
+  gacha_max_constellation_title: "命星至臻"
+  gacha_max_constellation_desc: "珊瑚宫心海已经达到了完美状态！"
+  gacha_already_owned_title: "重复祈愿"
+  gacha_already_owned_desc: "该廷臣已由他国聘用，转化为资源补偿。"
+
+  # ============================================================
+  # §Y Part 5: Character - Raiden Shogun (雷电将军) §!
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_raiden: "将军"
+  gacha_last_name_raiden: "雷电"
+
+  # === 特质 (Traits) ===
+  gacha_raiden_origin_trait: "御建鸣神主尊"
+  desc_gacha_raiden_origin_trait: "稻妻幕府的最高主宰，许以臣民“永恒”之梦的殊胜尊贵之身。\n\n效果：\n国家人力修正：+25%\n陆军士气：+15%\n训练度：+5%\n正统性：+1.00/年\n\n“此身即是尘世最为殊胜尊贵之身。”"
+
+  gacha_raiden_awakened_trait: "梦想一心"
+  desc_gacha_raiden_awakened_trait: "斩断杂念，只为永恒。那无想的一刀，终将为这个国度带来长久的安宁。\n\n效果：\n行政效率：+5%\n全局叛乱：-2.00"
+
+  gacha_raiden_transcended_trait: "殊胜尊荣"
+  desc_gacha_raiden_transcended_trait: "威光无赦。在雷霆的威光之下，一切阻碍都将化为灰烬。\n\n效果：\n冲击伤害：+15%\n受到的火力伤害：-10%\n移动速度：+15%"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_raiden_modifier: "鸣神的加护"
+  STATIC_MODIFIER_DESC_gacha_raiden_modifier: "「浮世景色百千年依旧，人之在世却如白露与泡影。」"
+  gacha_raiden_modifier: "永恒之诺"
+  gacha_raiden_modifier_desc: "雷电将军的威光正在庇护着这个国家，确保其向着永恒迈进。"
+  MODIFIER_TYPE_NAME_gacha_electro_godeye: "雷元素神之眼"
+  MODIFIER_TYPE_NAME_gacha_electro_godeye_desc: "「浮世景色百千年依旧，人之在世却如白露与泡影。」"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_raiden_c0_modifier: "恶曜影向·零命"
+  STATIC_MODIFIER_NAME_gacha_raiden_c1_modifier: "恶曜卜词"
+  STATIC_MODIFIER_NAME_gacha_raiden_c2_modifier: "斩铁断金"
+  STATIC_MODIFIER_NAME_gacha_raiden_c3_modifier: "真影旧事"
+  STATIC_MODIFIER_NAME_gacha_raiden_c4_modifier: "誓奉常道"
+  STATIC_MODIFIER_NAME_gacha_raiden_c5_modifier: "凶将之降临"
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_modifier: "负愿前行"
+
+  # === 事件 (Events) ===
+  gacha_raiden_events.1.title: "鸣神以此身许诺"
+  gacha_raiden_events.1.desc: "伴随着一道划破天际的紫雷，一位威严的女性降临在宫殿之中。她手持薙刀，眼神冷冽而深邃。\n\n“我是雷电将军，稻妻幕府的最高主宰。既然你已通过了试炼，我便许你一诺：此身将助你扫清一切阻碍，直至永恒降临。”\n\n空气中弥漫着雷元素的威压，令人不由自主地想要臣服。"
+  gacha_raiden_events.1.a: "为了永恒！"
+
+  gacha_raiden_events.2.title: "雷光闪烁"
+  gacha_raiden_events.2.desc: "雷电将军的力量似乎增强了。她手中的刀锋更加锐利，周身的雷光也更加耀眼。\n\n“无念，无想。”\n\n$gacha_text_reward_prestige_small$"
+  gacha_raiden_events.2.a: "威光无赦。"
+
+  gacha_raiden_events.4.title: "永恒之梦"
+  gacha_raiden_events.4.desc: "雷电将军已臻至化境。她不再仅仅是威严的统治者，更是守护永恒的化身。\n\n“现在的我，已能斩断一切迷惘。无论是过去、现在，还是未来，都将由我亲手铸就。”\n\n整个国家都沐浴在她的雷光之下，无人敢于挑战您的权威。\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_raiden_events.4.a: "此即，永恒！"
+
+  gacha_raiden_events.11.title: "命之座·觉醒"
+  gacha_raiden_events.11.desc: "“梦想一心”的真意已然浮现。雷电将军领悟了新的力量，她将以更高效的手段治理国家，消除一切不稳定的因素。\n\n“杂音已除，现在我们可以专注于更重要的事情了。”\n\n$gacha_text_reward_stability_small$"
+  gacha_raiden_events.11.a: "天下太平。"
+
+  gacha_raiden_events.12.title: "命之座·超越"
+  gacha_raiden_events.12.desc: "雷电将军展现出了“殊胜尊荣”的姿态。她在战场上的身姿如同鬼神般令人战栗，任何敌人在她面前都不过是蝼蚁。\n\n“此刻，寂灭之时！”\n\n$gacha_text_reward_legitimacy_small$"
+  gacha_raiden_events.12.a: "所向披靡！"
+  gacha_raiden_events.1.desc: "伴随着一道划破天际的紫雷，一位威严的女性降临在宫殿之中。她手持薙刀，眼神冷冽而深邃。\n\n“我是雷电将军，稻妻幕府的最高主宰。既然你已通过了试炼，我便许你一诺：此身将助你扫清一切阻碍，直至永恒降临。”\n\n空气中弥漫着雷元素的威压，令人不由自主地想要臣服。"
+  gacha_raiden_events.1.a: "为了永恒！"
+
+  gacha_raiden_events.2.title: "雷光闪烁"
+  gacha_raiden_events.2.desc: "雷电将军的力量似乎增强了。她手中的刀锋更加锐利，周身的雷光也更加耀眼。\n\n“无念，无想。”\n\n$gacha_text_reward_prestige_small$"
+  gacha_raiden_events.2.a: "威光无赦。"
+
+  gacha_raiden_events.4.title: "永恒之梦"
+  gacha_raiden_events.4.desc: "雷电将军已臻至化境。她不再仅仅是威严的统治者，更是守护永恒的化身。\n\n“现在的我，已能斩断一切迷惘。无论是过去、现在，还是未来，都将由我亲手铸就。”\n\n整个国家都沐浴在她的雷光之下，无人敢于挑战您的权威。\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_raiden_events.4.a: "此即，永恒！"
+l_simp_chinese:
+  # ============================================================
+  # §Y Part 1: Reusable Text Snippets (可复用文本片段) §!
+  # ============================================================
+  gacha_text_reward_prestige_small: "你获得了 10 点威望。"
+  gacha_text_reward_prestige_medium: "你获得了 50 点威望。"
+  gacha_text_reward_legitimacy_small: "你获得了 5 点正统性。"
+  gacha_text_reward_legitimacy_medium: "你获得了 20 点正统性。"
+  gacha_text_reward_stability_small: "国家稳定度提升了 0.25 。"
+  gacha_text_reward_prestige_overflow: "溢出的祈愿之力转化为 2 点国家威望。"
+  gacha_text_reward_gold_refund: "祭坛上只留有些许残破的兵刃与物资 (返还 1 金)。"
+
+  # ============================================================
+  # §Y Part 2: Gacha System Localization (抽卡系统通用文本) §!
+  # ============================================================
+
+  # === 交互按钮 ===
+  gacha_events_interaction: "祈愿：异世相遇"
+  gacha_events_interaction_desc: "[actor.GetName]将设坛祈愿，感召来自异界的英灵与智者。"
+
+  # === 核心修饰符 (Core Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_core_modifier: "祈愿的加护"
+  STATIC_MODIFIER_DESC_gacha_core_modifier: "祈愿的加护"
+
+  MODIFIER_TYPE_NAME_gacha_core: "来自异世界的旅人"
+  MODIFIER_TYPE_DESC_gacha_core: "「来自异世界的旅人」"
+
+  # === 祈愿主菜单 (.1) ===
+  gacha_events.1.title: "祈愿：异世相遇"
+  gacha_events.1.desc_guaranteed: "当前祈愿已受祝福，下次获得的必定是当期角色！\n投入资源，祈求命运的回应吧。"
+  gacha_events.1.desc_not_guaranteed: "投入资源，祈求命运的回应吧。"
+  gacha_events.1.a: "奉纳金币 (祈愿)"
+  gacha_events.1.b: "暂且观望"
+  gacha_events.1.single_lack: "奉纳不足"
+  gacha_not_enough_gold_tt: "国库空虚，无法筹措祈愿所需的祭品。"
+
+  # === 3星 (凡铁) ===
+  gacha_events.2.title: "祈愿结果：凡铁"
+  gacha_events.2.desc: "星光黯淡，似乎未有英灵回应你的呼唤。\n\n除了寂静，什么也没有留下。"
+  gacha_events.2.a: "再接再厉"
+
+  # === 结果：歪了 (.3) ===
+  gacha_events.3.title: "祈愿结果：小保底"
+  gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是来自稻妻的雷电将军。\n\n虽然失去了五五开的赌注，但获得常驻池五星角色也是不错的收获。下次祈愿将必定获得UP角色！"
+  gacha_events.3.a: "既来之，则安之"
+
+  # === 结果：满命通用 (.4) ===
+  gacha_events.4.title: "命星至臻"
+  gacha_events.4.desc: "这位异界英雄的能力已臻化境。\n\n$gacha_text_reward_prestige_overflow$"
+  gacha_events.4.a: "物尽其用"
+
+
+  MODIFIER_TYPE_NAME_gacha_constellation_level: "命之座"
+  MODIFIER_TYPE_DESC_gacha_constellation_level: "「当凡人的渴望强烈到足以撼动星空的转瞬，来自高天的视线便会投射而下，凝结为这枚引导元素之力、以此见证命运的崇高信物。」"
+
+
+  MODIFIER_TYPE_NAME_gacha_electro_godeye: "雷元素神之眼"
+  MODIFIER_TYPE_DESC_gacha_electro_godeye: "「雷系神之眼持有者往往是人群中的异类。他们不在乎世俗的眼光，为了心中的某个执念，显得有些格格不入。」"
+
+  MODIFIER_TYPE_NAME_gacha_water_godeye: "水元素神之眼"
+  MODIFIER_TYPE_DESC_gacha_water_godeye: "「水系神之眼持有者往往为了别人、为了正义或为了艺术，可以牺牲自己或变得极度执着。」"
+
+
+  # ============================================================
+  # §Y Part 3: Character - Xinhai (珊瑚宫心海) §!
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_xinhai: "心海"
+  gacha_last_name_xinhai: "珊瑚宫"
+
+  # === 特质 (Traits) ===
+  gacha_xinhai_origin_trait: "现人神巫女"
+  desc_gacha_xinhai_origin_trait: "这位来自海祇岛的领袖拥有卓越的战略眼光和治愈能力。作为现人神巫女，她不仅是精神领袖，更是抵抗军的最高指挥官。\n\n效果：\n立法效率：+50%\n角色内阁效率：+175%\n全国内阁效率：+25%\n文化影响力：+15%\n\n“兵法在于，料敌先机。”"
+
+  gacha_xinhai_awakened_trait: "海月之誓"
+  desc_gacha_xinhai_awakened_trait: "作为海祇岛的领袖，我带领大家逆流前行的日子也过去了许久。我们能有如今这样和谐安宁的时光，你的努力必不可少。\n\n效果：\n全局阶层满意度恢复速度：+25%\n全局疾病抗性：+25%\n全局荒废度恢复速度：+50%"
+
+  gacha_xinhai_transcended_trait: "海祇姬君"
+  desc_gacha_xinhai_transcended_trait: "在碧波游鱼间穿行，感受海水轻抚脸颊的温柔，内心也跟着平静下来了呢。\n\n效果：\n海军士气：+30%\n海军移动速度：+30%\n海军维修花费：-50%"
+  
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_xinhai_modifier: "海祇的加护"
+  STATIC_MODIFIER_DESC_gacha_xinhai_modifier: "「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
+  gacha_xinhai_modifier: "海祇之志"
+  gacha_xinhai_modifier_desc: "珊瑚宫心海的战略部署正在为国家带来稳定的行政流转与后勤保障。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier: "眠龙座·零命"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c1_modifier: "决水于溪"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c2_modifier: "波起云海"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c3_modifier: "海渚月舟"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c4_modifier: "月摄千川"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c5_modifier: "百川集海"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c6_modifier: "珊瑚一心"
+
+  # === 事件 (Events) ===
+  gacha_xinhai_events.1.title: "深海的明珠"
+  gacha_xinhai_events.1.desc: "一位身着蓝白礼服的少女缓缓步入大殿。她自称来自遥远的海祇岛，是那里的现人神巫女。\n\n“妾身珊瑚宫心海。听闻阁下治国有方，愿以海祇岛兵法相助。不过，妾身精力有限，还望莫要安排过多的繁文缛节。”\n\n她手中的兵书似乎记录着无数战役的胜负手。得此一人，吾国之军政必将如虎添翼。"
+  gacha_xinhai_events.1.a: "恭迎军师入朝。"
+
+  gacha_xinhai_events.2.title: "锦囊妙计"
+  gacha_xinhai_events.2.desc: "随着祈愿之力的加深，珊瑚宫心海感到了一股熟悉的力量回归。\n\n她对兵法的理解愈发精进，仿佛已洞察未来战场的每一处变数。\n\n$gacha_text_reward_prestige_small$"
+  gacha_xinhai_events.2.a: "深谋远虑，决胜千里。"
+
+  gacha_xinhai_events.4.title: "海染之龙"
+  gacha_xinhai_events.4.desc: "珊瑚宫心海的力量已臻化境。她周身环绕着如同深海般深邃的气息，仿佛古老的水龙王再次降临。\n\n“如今的我，已可应对任何风浪。无论是深海的巨兽，亦或是陆上的强敌，皆无法阻挡海祇岛的意志。”\n\n她的存在本身，便是三军士气的绝对保障。\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_xinhai_events.4.a: "此乃天助我也！"
+
+  # === 专属命座事件 (Awakening/Transcendence) ===
+  gacha_xinhai_events.11.title: "命之座·觉醒"
+  gacha_xinhai_events.11.desc: "随着命星再度闪耀，心海感到体内的力量涌现出了新的形态。她领悟了「海月之誓」，能够更好地守护您的子民，祛除灾厄。\n\n“感觉就像卸下了某种枷锁……现在，我可以更有效地将海祇岛的恩泽播撒到您的国度了。”\n\n$gacha_text_reward_stability_small$"
+  gacha_xinhai_events.11.a: "她的忠诚弥足珍贵。"
+
+  gacha_xinhai_events.12.title: "命之座·超越"
+  gacha_xinhai_events.12.desc: "更深层次的力量被解放了。心海的血脉中似乎蕴含着驾驭海洋的古老权能，她现在能够以「海祇姬君」之名，为您祝福整支舰队。\n\n“只要是为了胜利……无论是怎样的力量，我都会为您运用。请下令吧，我的大人。”\n\n$gacha_text_reward_legitimacy_small$"
+  gacha_xinhai_events.12.a: "大海将是我们最锋利的武器！"
+
+  # ============================================================
+  # §Y Part 4: Notification Text (通知文本) §!
+  # ============================================================
+  gacha_new_character_title: "祈愿回应！"
+  gacha_new_character_desc: "获得了5星廷臣：珊瑚宫心海"
+  gacha_constellation_up_title: "命星闪烁"
+  gacha_constellation_up_desc: "珊瑚宫心海的命之座等级提升了！"
+  gacha_max_constellation_title: "命星至臻"
+  gacha_max_constellation_desc: "珊瑚宫心海已经达到了完美状态！"
+  gacha_already_owned_title: "重复祈愿"
+  gacha_already_owned_desc: "该廷臣已由他国聘用，转化为资源补偿。"
+
+  # ============================================================
+  # §Y Part 5: Character - Raiden Shogun (雷电将军) §!
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_raiden: "将军"
+  gacha_last_name_raiden: "雷电"
+
+  # === 特质 (Traits) ===
+  gacha_raiden_origin_trait: "御建鸣神主尊"
+  desc_gacha_raiden_origin_trait: "稻妻幕府的最高主宰，许以臣民“永恒”之梦的殊胜尊贵之身。\n\n效果：\n国家人力修正：+25%\n陆军士气：+15%\n训练度：+5%\n正统性：+1.00/年\n\n“此身即是尘世最为殊胜尊贵之身。”"
+
+  gacha_raiden_awakened_trait: "梦想一心"
+  desc_gacha_raiden_awakened_trait: "斩断杂念，只为永恒。那无想的一刀，终将为这个国度带来长久的安宁。\n\n效果：\n行政效率：+5%\n全局叛乱：-2.00"
+
+  gacha_raiden_transcended_trait: "殊胜尊荣"
+  desc_gacha_raiden_transcended_trait: "威光无赦。在雷霆的威光之下，一切阻碍都将化为灰烬。\n\n效果：\n冲击伤害：+15%\n受到的火力伤害：-10%\n移动速度：+15%"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_raiden_modifier: "鸣神的加护"
+  STATIC_MODIFIER_DESC_gacha_raiden_modifier: "「浮世景色百千年依旧，人之在世却如白露与泡影。」"
+  gacha_raiden_modifier: "永恒之诺"
+  gacha_raiden_modifier_desc: "雷电将军的威光正在庇护着这个国家，确保其向着永恒迈进。"
+  MODIFIER_TYPE_NAME_gacha_electro_godeye: "雷元素神之眼"
+  MODIFIER_TYPE_NAME_gacha_electro_godeye_desc: "「浮世景色百千年依旧，人之在世却如白露与泡影。」"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_raiden_c0_modifier: "恶曜影向·零命"
+  STATIC_MODIFIER_NAME_gacha_raiden_c1_modifier: "恶曜卜词"
+  STATIC_MODIFIER_NAME_gacha_raiden_c2_modifier: "斩铁断金"
+  STATIC_MODIFIER_NAME_gacha_raiden_c3_modifier: "真影旧事"
+  STATIC_MODIFIER_NAME_gacha_raiden_c4_modifier: "誓奉常道"
+  STATIC_MODIFIER_NAME_gacha_raiden_c5_modifier: "凶将之降临"
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_modifier: "负愿前行"
+
+  # === 事件 (Events) ===
+  gacha_raiden_events.1.title: "鸣神以此身许诺"
+  gacha_raiden_events.1.desc: "伴随着一道划破天际的紫雷，一位威严的女性降临在宫殿之中。她手持薙刀，眼神冷冽而深邃。\n\n“我是雷电将军，稻妻幕府的最高主宰。既然你已通过了试炼，我便许你一诺：此身将助你扫清一切阻碍，直至永恒降临。”\n\n空气中弥漫着雷元素的威压，令人不由自主地想要臣服。"
+  gacha_raiden_events.1.a: "为了永恒！"
+
+  gacha_raiden_events.2.title: "雷光闪烁"
+  gacha_raiden_events.2.desc: "雷电将军的力量似乎增强了。她手中的刀锋更加锐利，周身的雷光也更加耀眼。\n\n“无念，无想。”\n\n$gacha_text_reward_prestige_small$"
+  gacha_raiden_events.2.a: "威光无赦。"
+
+  gacha_raiden_events.4.title: "永恒之梦"
+  gacha_raiden_events.4.desc: "雷电将军已臻至化境。她不再仅仅是威严的统治者，更是守护永恒的化身。\n\n“现在的我，已能斩断一切迷惘。无论是过去、现在，还是未来，都将由我亲手铸就。”\n\n整个国家都沐浴在她的雷光之下，无人敢于挑战您的权威。\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_raiden_events.4.a: "此即，永恒！"
+
+  gacha_raiden_events.11.title: "命之座·觉醒"
+  gacha_raiden_events.11.desc: "“梦想一心”的真意已然浮现。雷电将军领悟了新的力量，她将以更高效的手段治理国家，消除一切不稳定的因素。\n\n“杂音已除，现在我们可以专注于更重要的事情了。”\n\n$gacha_text_reward_stability_small$"
+  gacha_raiden_events.11.a: "天下太平。"
+
+  gacha_raiden_events.12.title: "命之座·超越"
+  gacha_raiden_events.12.desc: "雷电将军展现出了“殊胜尊荣”的姿态。她在战场上的身姿如同鬼神般令人战栗，任何敌人在她面前都不过是蝼蚁。\n\n“此刻，寂灭之时！”\n\n$gacha_text_reward_legitimacy_small$"
+  gacha_raiden_events.12.a: "所向披靡！"
+
+  # ============================================================
+  # §Y Part 6: New Interactive Events (新交互事件) §!
+  # ============================================================
+
+  # === 5星动画 ===
+  gacha_events.5.title: "金光乍现！"
+  gacha_events.5.desc: "天空中划过一道耀眼的金色流星，整个祭坛都被神圣的光芒笼罩……\n\n这股气息，非比寻常！"
+  gacha_events.5.a: "揭示命运！"
+
+  # === 4星奖励 ===
+  gacha_events.6.title: "意外之财"
+  gacha_events.6.desc: "虽然没有英灵回应，但你在祭坛角落发现了一些古代遗留的宝藏。\n\n获得：500 金币"
+  gacha_events.7.title: "名声大噪"
+  gacha_events.7.desc: "你的虔诚祈愿感动了围观的民众，你的声望得到了提升。\n\n获得：100 威望"
+  gacha_events.8.title: "天命所归"
+  gacha_events.8.desc: "虽然没有召唤出异界之人，但这祥瑞之兆巩固了你的统治合法性。\n\n获得：20 正统性"
+  gacha_events.common.a: "收下恩赐"

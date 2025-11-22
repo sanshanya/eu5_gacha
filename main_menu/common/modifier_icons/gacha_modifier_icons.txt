@@ -2,10 +2,14 @@ gacha_water_godeye = {
   positive = "gfx/interface/icons/modifier_types/gacha_water_godeye.dds"
 }
 
+gacha_electro_godeye = {
+  positive = "gfx/interface/icons/modifier_types/gacha_electro_godeye.dds"
+}
+
 gacha_core = {
-  positive = "gfx/interface/icons/modifier_types/gacha_water_godeye.dds"
+  positive = "gfx/interface/icons/modifier_types/intertwined_fate.dds"
 }
 
 gacha_constellation_level= {
-  positive = "gfx/interface/icons/modifier_types/gacha_water_godeye.dds"
+  positive = "gfx/interface/icons/modifier_types/constellation.dds"
 }

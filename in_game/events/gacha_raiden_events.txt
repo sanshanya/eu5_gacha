@@ -1,0 +1,86 @@
+namespace = gacha_raiden_events
+
+# ============================================================
+# 首次获得 (First Summon)
+# ============================================================
+gacha_raiden_events.1 = {
+	type = character_event
+	title = gacha_raiden_events.1.title
+	desc = gacha_raiden_events.1.desc
+	
+	# 临时配图，后续可换
+	picture = event_picture:city_celebration
+
+	option = {
+		name = gacha_raiden_events.1.a
+		# 触发后效果
+	}
+}
+
+# ============================================================
+# 命座提升 (Generic Constellation Up)
+# ============================================================
+gacha_raiden_events.2 = {
+	type = character_event
+	title = gacha_raiden_events.2.title
+	desc = gacha_raiden_events.2.desc
+	
+	picture = event_picture:library
+
+	option = {
+		name = gacha_raiden_events.2.a
+	}
+}
+
+# ============================================================
+# 满命 (C6)
+# ============================================================
+gacha_raiden_events.4 = {
+	type = character_event
+	title = gacha_raiden_events.4.title
+	desc = gacha_raiden_events.4.desc
+	
+	picture = event_picture:throne_room
+
+	option = {
+		name = gacha_raiden_events.4.a
+	}
+}
+
+# ============================================================
+# 命座觉醒 (C2)
+# ============================================================
+gacha_raiden_events.11 = {
+	type = character_event
+	title = gacha_raiden_events.11.title
+	desc = gacha_raiden_events.11.desc
+	
+	picture = event_picture:temple_prayer
+
+	option = {
+		name = gacha_raiden_events.11.a
+		# 添加觉醒特质
+		scope:existing_char = {
+			add_trait = gacha_raiden_awakened_trait
+		}
+	}
+}
+
+# ============================================================
+# 命座超越 (C4)
+# ============================================================
+gacha_raiden_events.12 = {
+	type = character_event
+	title = gacha_raiden_events.12.title
+	desc = gacha_raiden_events.12.desc
+	
+	picture = event_picture:admiral
+
+	option = {
+		name = gacha_raiden_events.12.a
+		# 添加超越特质
+		scope:existing_char = {
+			add_trait = gacha_raiden_transcended_trait
+		}
+	}
+}

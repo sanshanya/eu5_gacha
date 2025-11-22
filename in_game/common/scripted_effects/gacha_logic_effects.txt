@@ -138,10 +138,9 @@ gacha_get_up_character = {
 }
 
 gacha_get_standard_character = {
-    # 歪了！目前是给通用奖励
-    add_prestige = 50
-    add_legitimacy = 10
+    # 小保底：获得常驻池雷电将军
+    gacha_create_raiden_effect = yes
     
-    # 未来若要触发"歪了"的事件，可以在此添加
+    # 可选：触发"歪了"的提示事件
     # trigger_event_non_silently = gacha_events.3 
 }

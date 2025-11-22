@@ -1,0 +1,23 @@
+gacha_raiden_portrait = {
+  usage    = game
+  priority = 100
+
+  gacha_raiden_01 = {
+    dna_modifiers = {
+      accessory = {
+        mode     = replace
+        gene     = gacha_raiden_props_1      # 对应 gene 文件里的名字
+        template = gacha_raiden_01          # 对应 accessory 的名字
+        value    = 0.5
+      }
+    }
+    weight = {
+      base = 0
+      modifier = {
+        add = 255
+
+        has_trait = gacha_raiden_origin_trait
+      }
+    }
+  }
+}

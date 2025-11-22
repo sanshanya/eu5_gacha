@@ -6,6 +6,14 @@ gacha_water_godeye={
   }
 }
 
+gacha_electro_godeye={
+  color=good
+  boolean=yes
+  game_data={
+    category=character
+  }
+}
+
 gacha_core ={
   color=good
   boolean=yes
