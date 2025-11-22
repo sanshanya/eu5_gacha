@@ -77,20 +77,26 @@ gacha_create_xinhai_effect = {
       last_name  = gacha_last_name_xinhai
       female     = yes
       age        = 16
-      culture  = culture:tougokud
-      religion = religion:shintō
+      culture  = culture:tougokud          # 原设文化（游戏内有效）
+      religion = religion:shintō           # 原设宗教（游戏内有效）
       adm = { 90 100 } dip = { 85 100 } mil = { 65 90 }
       create_in_limbo = yes
-      save_scope_as = new_gacha_char
+      save_scope_as = gacha_xinhai_new_char
     }
-    scope:new_gacha_char = {
+    scope:gacha_xinhai_new_char = {
+      # 再次强制文化/宗教，避免后续迁移时被同化
+      culture = culture:tougokud
+      religion = religion:shintō
       gacha_register_new_character = { who = xinhai }
+      # 注册后再强制一次姓名，避免 move_country 同化姓氏
+      first_name = gacha_first_name_xinhai
+      last_name  = gacha_last_name_xinhai
     }
     set_global_variable = { name = gacha_xinhai_is_summoned value = 1 }
 
     # --- 触发初次见面事件 ---
     # 使用作用域切换传递角色上下文，不再使用save_event_target
-    scope:new_gacha_char = {
+    scope:gacha_xinhai_new_char = {
       root = {
         trigger_event_non_silently = { id = gacha_xinhai_events.1 }
       }

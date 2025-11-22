@@ -52,6 +52,20 @@ gacha_events.1 = {
     }
 
     # ==========================================
+    # 选项 A2：【十连】(连续抽取10次)
+    # ==========================================
+    option = {
+        name = gacha_events.1.a10
+        
+        trigger = { gold >= 1000 }
+        
+        add_gold = -1000
+        hidden_effect = {
+            gacha_execute_ten_rolls = yes
+        }
+    }
+
+    # ==========================================
     # 选项 A 的备用项：【钱不够时显示】
     # ==========================================
     option = {
@@ -122,7 +136,54 @@ gacha_events.2 = {
 
     option = {
         name = gacha_events.2.a
-        add_gold = 100000 # 返还1金币
+    }
+}
+
+# ==========================================
+# 5. 祈愿结果：金光演出（先展示再揭晓）
+# ==========================================
+gacha_events.5 = {
+    type = country_event
+    title = gacha_events.5.title
+    desc  = gacha_events.5.desc
+    is_triggered_only = yes
+
+    option = {
+        name = gacha_events.5.a
+        hidden_effect = {
+            # 显式回到事件的 root（国家）作用域执行奖励，避免作用域漂移
+            root = { gacha_handle_5star_outcome = yes }
+        }
+    }
+}
+
+# ==========================================
+# 20. 祈愿结果：四星奖励
+# ==========================================
+gacha_events.20 = {
+    type = country_event
+    title = gacha_events.20.title
+    desc  = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { var:gacha_last_4star_reward = 0 }
+                desc = gacha_events.20.desc_gold
+            }
+            triggered_desc = {
+                trigger = { var:gacha_last_4star_reward = 1 }
+                desc = gacha_events.20.desc_prestige
+            }
+            triggered_desc = {
+                trigger = { var:gacha_last_4star_reward = 2 }
+                desc = gacha_events.20.desc_legitimacy
+            }
+        }
+    }
+    is_triggered_only = yes
+
+    option = {
+        name = gacha_events.20.a
+        hidden_effect = { remove_variable = gacha_last_4star_reward }
     }
 }
 

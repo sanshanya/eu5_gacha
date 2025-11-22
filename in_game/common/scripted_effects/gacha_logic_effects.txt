@@ -9,6 +9,10 @@ gacha_execute_single_roll = {
         limit = { NOT = { has_variable = gacha_total_rolls } }
         set_variable = { name = gacha_total_rolls value = 0 }
     }
+    if = {
+        limit = { NOT = { has_variable = gacha_pity_4star } }
+        set_variable = { name = gacha_pity_4star value = 0 }
+    }
     change_variable = { name = gacha_total_rolls add = 1 }
     
     # ============================================================
@@ -67,14 +71,39 @@ gacha_execute_single_roll = {
     # ============================================================
     if = {
         limit = { var:gacha_temp_roll_result = 1 }
-        gacha_handle_5star_outcome = yes
+        trigger_event_non_silently = { id = gacha_events.5 }
     }
     else = {
         # 失败逻辑：增加保底，给安慰奖
         change_variable = { name = gacha_pity_count add = 1 }
-        root = {
-            trigger_event_non_silently = { id = gacha_events.2 }
+        change_variable = { name = gacha_pity_4star add = 1 }
+
+        # 计算 4 星判定用的 0-99 数值：total_rolls(个位)*10 + rand_ones
+        set_variable = { name = gacha_rand_4star value = var:gacha_total_rolls }
+        while = {
+            limit = { var:gacha_rand_4star >= 10 }
+            change_variable = { name = gacha_rand_4star subtract = 10 }
         }
+        change_variable = { name = gacha_rand_4star multiply = 10 }
+        change_variable = { name = gacha_rand_4star add = var:gacha_rand_ones }
+
+        if = {
+            limit = {
+                OR = {
+                    var:gacha_pity_4star >= 10    # 10 抽硬保底
+                    var:gacha_rand_4star < 5      # ~5% 概率
+                }
+            }
+            # 命中 4 星
+            set_variable = { name = gacha_pity_4star value = 0 }
+            gacha_pool_4star_rewards = yes
+            root = { trigger_event_non_silently = { id = gacha_events.20 } }
+        }
+        else = {
+            # 3 星：无奖励，仅弹窗
+            root = { trigger_event_non_silently = { id = gacha_events.2 } }
+        }
+        remove_variable = gacha_rand_4star
     }
     
     # 保留关键变量供 debug tool 查看
@@ -133,14 +162,27 @@ gacha_handle_5star_outcome = {
 # 实际发放奖励 (Helper Effects)
 # ============================================================
 gacha_get_up_character = {
-    # 获得心海
-    gacha_create_xinhai_effect = yes
+    # 统一走 5 星限定池
+    gacha_pool_5star_limited = yes
 }
 
 gacha_get_standard_character = {
-    # 小保底：获得常驻池雷电将军
-    gacha_create_raiden_effect = yes
+    # 小保底：获得常驻池
+    gacha_pool_5star_standard = yes
     
     # 可选：触发"歪了"的提示事件
     # trigger_event_non_silently = gacha_events.3 
+}
+
+# ============================================================
+# 十连抽包装：重复调用单抽逻辑
+# ============================================================
+gacha_execute_ten_rolls = {
+    set_variable = { name = gacha_tenroll_counter value = 0 }
+    while = {
+        limit = { var:gacha_tenroll_counter < 10 }
+        gacha_execute_single_roll = yes
+        change_variable = { name = gacha_tenroll_counter add = 1 }
+    }
+    remove_variable = gacha_tenroll_counter
 }
