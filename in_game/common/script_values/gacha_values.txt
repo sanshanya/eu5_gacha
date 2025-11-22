@@ -1,5 +1,5 @@
 # ============================================================
-# 抽卡概率计算器 (千分制) - 修正版
+# 抽卡概率计算器 (千分制)
 # ============================================================
 gacha_5star_threshold_value = {
     # 基础概率 0.6% (6/1000)
@@ -9,11 +9,9 @@ gacha_5star_threshold_value = {
     # 74抽 (>=73) 开始，每抽增加 6% (60/1000)
     if = {
         limit = {
-            # 直接在当前作用域 (国家) 检查变量
             var:gacha_pity_count >= 73
         }
         add = {
-            # 直接读取当前作用域 (国家) 的变量
             value = var:gacha_pity_count
             subtract = 73
             multiply = 60
@@ -26,14 +24,12 @@ gacha_5star_threshold_value = {
         limit = {
             var:gacha_pity_count >= 89
         }
-        # 使用 set 效果，而不是 value = ，确保覆盖之前所有的计算
         set = 1000
     }
 }
 
-# 失败概率 (用于 random_list 的权重)
+# 失败概率 (用于 random_list 的权重 - 已弃用，保留用于兼容性)
 gacha_5star_failure_value = {
     value = 1000
-    # 从当前作用域读取正确的概率值
     subtract = script_value:gacha_5star_threshold_value
 }

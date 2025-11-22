@@ -1,0 +1,7 @@
+on_actions = {
+    on_game_start = {
+        effect = {
+            # Gacha system ready to use - no initialization needed
+        }
+    }
+}
