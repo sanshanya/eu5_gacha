@@ -60,11 +60,17 @@ gacha_create_raiden_effect = {
           }
         }
       }
+      
+      # 清理existing_char作用域
+      clear_saved_scope = existing_char
     }
     else = {
       # 归属权冲突：是别人的角色
       add_gold = 100
       add_prestige = 50
+      
+      # 修复：清理existing_char作用域
+      clear_saved_scope = existing_char
     }
   }
 
@@ -84,13 +90,7 @@ gacha_create_raiden_effect = {
       save_scope_as = gacha_raiden_new_char
     }
     scope:gacha_raiden_new_char = {
-      # 再次强制文化/宗教，避免后续迁移时被同化
-      culture = culture:tougokud
-      religion = religion:shintō
       gacha_register_new_character = { who = raiden }
-      # 注册后再强制一次姓名，避免 move_country 同化姓氏
-      first_name = gacha_first_name_raiden
-      last_name  = gacha_last_name_raiden
     }
     set_global_variable = { name = gacha_raiden_is_summoned value = 1 }
 
@@ -100,5 +100,8 @@ gacha_create_raiden_effect = {
         trigger_event_non_silently = { id = gacha_raiden_events.1 }
       }
     }
+    
+    # 清理作用域，防止污染下次抽卡
+    clear_saved_scope = gacha_raiden_new_char
   }
 }
