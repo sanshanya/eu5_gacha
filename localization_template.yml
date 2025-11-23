@@ -1,0 +1,68 @@
+
+# ============================================================
+# Character - 可莉 (klee)
+# ============================================================
+
+# === 姓名 ===
+gacha_first_name_klee: "可莉"
+gacha_last_name_klee: "蒙德"
+
+# === 特质 (Traits) ===
+gacha_klee_origin_trait: "逃跑的太阳"
+desc_gacha_klee_origin_trait: "TODO: 添加描述"
+
+gacha_klee_awakened_trait: "蹦蹦炸弹"
+desc_gacha_klee_awakened_trait: "TODO: 添加描述"
+
+gacha_klee_transcended_trait: "轰轰火花"
+desc_gacha_klee_transcended_trait: "TODO: 添加描述"
+
+# === 修正 (Modifiers) ===
+STATIC_MODIFIER_NAME_gacha_klee_modifier: "TODO: 添加修正名称"
+STATIC_MODIFIER_DESC_gacha_klee_modifier: "TODO: 添加修正描述"
+gacha_klee_modifier: "TODO"
+gacha_klee_modifier_desc: "TODO"
+
+# === 命之座 (Constellations) ===
+STATIC_MODIFIER_NAME_gacha_klee_c0_modifier: "四叶草座"
+STATIC_MODIFIER_NAME_gacha_klee_c1_modifier: "蹦蹦炸弹"
+STATIC_MODIFIER_NAME_gacha_klee_c2_modifier: "破破弹片"
+STATIC_MODIFIER_NAME_gacha_klee_c3_modifier: "全力冲刺"
+STATIC_MODIFIER_NAME_gacha_klee_c4_modifier: "砰砰礼物"
+STATIC_MODIFIER_NAME_gacha_klee_c5_modifier: "火焰抽击"
+STATIC_MODIFIER_NAME_gacha_klee_c6_modifier: "到处都是宝藏"
+
+# === 事件 (Events) ===
+gacha_klee_events.1.title: "火花骑士报到！"
+gacha_klee_events.1.desc: "一个提着红色背包的小女孩蹦蹦跳跳地跑进大殿，她有着金色的头发和红色的眼睛，脸上挂着灿烂的笑容。
+
+「哒哒哒！可莉来啦~！」她举起手中的炸弹，兴奋地说：「我是骑士团的火花骑士可莉！虽然琴团长总是把可莉关禁闭，但可莉可厉害了！可以帮你炸掉所有的坏蛋！」
+
+她的眼睛闪闪发光，似乎已经在计划下一次的爆炸了。"
+gacha_klee_events.1.a: "欢迎你，可莉！"
+
+gacha_klee_events.2.title: "更大的爆炸！"
+gacha_klee_events.2.desc: "可莉的力量得到了提升，她兴奋地跳了起来。
+
+「哇~可莉变强了！这样就能做出更大的炸弹了！嘻嘻，到时候一定要炸好多好多鱼！」"
+gacha_klee_events.2.a: "爆炸就是艺术！"
+
+gacha_klee_events.4.title: "最强的火花骑士"
+gacha_klee_events.4.desc: "可莉已经达到了力量的巅峰。红色的火焰在她周围跳跃，每一朵火花都蕴含着惊人的力量。
+
+「可莉现在超级厉害了！不过...还是不能在城里随便炸东西。琴团长说了，要做个乖孩子~但是在外面炸坏蛋没问题对吧？」
+
+她歪着头，一脸天真地问道。"
+gacha_klee_events.4.a: "当然可以！"
+
+gacha_klee_events.11.title: "命之座·觉醒"
+gacha_klee_events.11.desc: "可莉领悟了「破破弹片」的真意。她的炸弹威力变得更加强大。
+
+「嘿嘿，可莉的新炸弹超级厉害的！一个炸弹能炸出好多小炸弹，砰砰砰！」"
+gacha_klee_events.11.a: "连锁爆炸！"
+
+gacha_klee_events.12.title: "命之座·超越"
+gacha_klee_events.12.desc: "可莉展现出了「砰砰礼物」的姿态。她能够将火花的力量发挥到极致。
+
+「这是可莉给大家的礼物哦~虽然是炸弹，但可莉是认真准备的！砰！」"
+gacha_klee_events.12.a: "爆炸的礼物！"

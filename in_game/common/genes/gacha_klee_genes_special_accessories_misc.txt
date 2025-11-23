@@ -1,0 +1,16 @@
+accessory_genes = {
+  gacha_klee_props_1 = {
+    gene_klee_blank_1 = { index = 0 }
+
+    gacha_klee_01 = {
+      index = 1
+      male   = { 1 = gacha_klee_01 }
+      female = male
+      boy    = male
+      girl   = male
+      adolescent_boy  = male
+      adolescent_girl = male
+      infant = male
+    }
+  }
+}

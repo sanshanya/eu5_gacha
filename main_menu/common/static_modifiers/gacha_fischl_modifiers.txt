@@ -1,0 +1,39 @@
+gacha_fischl_modifier = {
+  game_data = { category = character decaying = no }
+  gacha_core = yes
+  gacha_electro_godeye = yes
+}
+
+gacha_fischl_c0_modifier = {
+  game_data = { category = character decaying = no }
+  gacha_constellation_level = 0
+}
+gacha_fischl_c1_modifier = {
+  game_data = { category = character decaying = no }
+  gacha_constellation_level = 1
+}
+gacha_fischl_c2_modifier = {
+  game_data = { category = character decaying = no }
+  gacha_constellation_level = 2
+}
+gacha_fischl_c3_modifier = {
+  game_data = { category = character decaying = no }
+  gacha_constellation_level = 3
+}
+gacha_fischl_c4_modifier = {
+  game_data = { category = character decaying = no }
+  gacha_constellation_level = 4
+}
+gacha_fischl_c5_modifier = {
+  game_data = { category = character decaying = no }
+  gacha_constellation_level = 5
+}
+gacha_fischl_c6_modifier = {
+  game_data = { category = character decaying = no }
+  gacha_constellation_level = 6
+}
+
+gacha_fischl_c6_country_modifier = {
+  game_data = { category = country decaying = no }
+  government_size = 1
+}

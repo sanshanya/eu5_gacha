@@ -99,6 +99,22 @@ gacha_events.1 = {
     }
 
     # ==========================================
+    # 选项 C：星辉兑换
+    # ==========================================
+    option = {
+        name = gacha_events.1.starlight_exchange
+        
+        # 前置条件：至少有3个星辉
+        trigger = {
+            var:gacha_starlight >= 3
+        }
+        
+        hidden_effect = {
+            trigger_event_non_silently = { id = gacha_starlight_events.1 }
+        }
+    }
+
+    # ==========================================
     # 选项 D：离开
     # ==========================================
     option = {
@@ -187,5 +203,27 @@ gacha_events.4 = {
     }
     option = {
         name = "gacha_events.4.a"
+    }
+}
+
+# ==========================================
+# 30. 星辉获得提示
+# ==========================================
+gacha_events.30 = {
+    type = country_event
+    title = gacha_events.30.title
+    desc  = gacha_events.30.desc
+    is_triggered_only = yes
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+    }
+
+    option = {
+        name = gacha_events.30.a
+        # 仅提示，不做其他操作
     }
 }

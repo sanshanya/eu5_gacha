@@ -1,0 +1,84 @@
+﻿gacha_create_hutao_effect = {
+    # === A. Duplicate Logic ===
+    if = {
+        limit = { has_global_variable = gacha_hutao_is_summoned }
+        random_in_global_list = {
+            variable = gacha_obtained_characters
+            limit = { has_trait = gacha_hutao_origin_trait }
+            save_scope_as = existing_char
+        }
+        if = {
+            limit = { scope:existing_char = { employer = root } }
+            # Owns char -> Upgrade / 溢出
+            if = {
+                limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+                scope:existing_char = {
+                    root = {
+                        change_variable = { name = gacha_starlight add = 1 }
+                        trigger_event_non_silently = { id = gacha_events.30 }
+                    }
+                }
+            }
+            else = {
+                scope:existing_char = {
+                    change_variable = { name = gacha_constellation_lvl add = 1 }
+                    gacha_apply_constellation_stats_effect = { who = hutao }
+                }
+                # Trigger Event based on NEW level
+                if = {
+                    limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_hutao_events.4 } } }
+                }
+                else_if = {
+                    limit = { scope:existing_char = { var:gacha_constellation_lvl = 4 } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_hutao_events.12 } } }
+                }
+                else_if = {
+                    limit = { scope:existing_char = { var:gacha_constellation_lvl = 2 } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_hutao_events.11 } } }
+                }
+                else = {
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_hutao_events.2 } } }
+                }
+            }
+            clear_saved_scope = existing_char
+        }
+        else = {
+            # Not owner -> Refund
+            if = {
+                limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+                root = {
+                    change_variable = { name = gacha_starlight add = 1 }
+                    trigger_event_non_silently = { id = gacha_events.30 }
+                }
+            }
+            else = {
+                add_gold = 100
+                add_prestige = 50
+            }
+            clear_saved_scope = existing_char
+        }
+    }
+    # === B. New Creation ===
+    else = {
+        create_character = {
+            first_name = gacha_first_name_hutao
+            last_name = gacha_last_name_hutao
+            female = yes
+            age = 18
+            culture = culture:tougokud
+            religion = religion:shintō
+            adm = { 80 100 }
+            dip = { 80 100 }
+            mil = { 80 100 }
+            create_in_limbo = yes
+            save_scope_as = new_char
+        }
+        scope:new_char = {
+            gacha_register_new_character = { who = hutao }
+        }
+        set_global_variable = { name = gacha_hutao_is_summoned value = 1 }
+        scope:new_char = { root = { trigger_event_non_silently = { id = gacha_hutao_events.1 } } }
+        clear_saved_scope = new_char
+    }
+}

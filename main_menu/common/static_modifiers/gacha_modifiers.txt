@@ -4,5 +4,4 @@ gacha_core_modifier = {
   force_allow_as_leader      = yes
   ignore_gender_block_cabinet = yes
   is_immortal                 = yes
-  icon = "gfx/interface/icons/modifier_types/intertwined_fate.dds"
 }

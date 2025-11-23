@@ -1,0 +1,16 @@
+accessory_genes = {
+  gacha_hutao_props_1 = {
+    gene_hutao_blank_1 = { index = 0 }
+
+    gacha_hutao_01 = {
+      index = 1
+      male   = { 1 = gacha_hutao_01 }
+      female = male
+      boy    = male
+      girl   = male
+      adolescent_boy  = male
+      adolescent_girl = male
+      infant = male
+    }
+  }
+}

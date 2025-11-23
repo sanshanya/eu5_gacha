@@ -1,0 +1,38 @@
+gacha_fischl_origin_trait = {
+  category = ruler  # 注意：origin和awakened使用同一category，可以共存
+  allow = {
+    always = no
+  }
+
+  modifier = {
+    spy_network_construction    = 0.25
+    army_movement_speed         = 0.25
+    prestige_from_land_battle   = 0.25
+  }
+}
+
+gacha_fischl_awakened_trait = {
+  category = ruler  # 与origin相同，不会冲突
+  allow = {
+    always = no
+  }
+
+  modifier = {
+    land_morale_modifier                = 0.20
+    army_infantry_power                 = 0.20
+    global_levy_recruitment_speed_modifier = 0.30
+  }
+}
+
+gacha_fischl_transcended_trait = {
+  category = general  # ⚠️ 必须不同！否则会移除origin trait
+  allow = {
+    always = no
+  }
+
+  modifier = {
+    siege_ability              = 0.30
+    army_movement_speed        = 0.15
+    discipline                 = 0.15
+  }
+}

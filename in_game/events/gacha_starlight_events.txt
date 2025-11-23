@@ -1,0 +1,109 @@
+namespace = gacha_starlight_events
+
+# ==========================================
+# 事件 1：星辉兑换主菜单
+# ==========================================
+gacha_starlight_events.1 = {
+    type = country_event
+    title = gacha_starlight_events.1.title
+    desc  = gacha_starlight_events.1.desc
+    is_triggered_only = yes
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+    }
+
+    # 选项1：兑换心海
+    option = {
+        name = gacha_starlight_events.1.xinhai
+        trigger = {
+            var:gacha_starlight >= 3
+        }
+        
+        change_variable = { name = gacha_starlight subtract = 3 }
+        gacha_create_xinhai_effect = yes
+    }
+    
+    # 选项2：兑换雷电将军
+    option = {
+        name = gacha_starlight_events.1.raiden
+        trigger = {
+            var:gacha_starlight >= 3
+        }
+        
+        change_variable = { name = gacha_starlight subtract = 3 }
+        gacha_create_raiden_effect = yes
+    }
+    
+    # 选项3：兑换刻晴
+    option = {
+        name = gacha_starlight_events.1.keqing
+        trigger = {
+            var:gacha_starlight >= 3
+        }
+        
+        change_variable = { name = gacha_starlight subtract = 3 }
+        gacha_create_keqing_effect = yes
+    }
+    
+    # 选项4：兑换芙宁娜
+    option = {
+        name = gacha_starlight_events.1.furina
+        trigger = {
+            var:gacha_starlight >= 3
+        }
+        
+        change_variable = { name = gacha_starlight subtract = 3 }
+        gacha_create_furina_effect = yes
+    }
+    
+    # 选项5：兑换胡桃
+    option = {
+        name = gacha_starlight_events.1.hutao
+        trigger = {
+            var:gacha_starlight >= 3
+        }
+        
+        change_variable = { name = gacha_starlight subtract = 3 }
+        gacha_create_hutao_effect = yes
+    }
+
+    option = {
+        name = gacha_starlight_events.1.fischl
+        trigger = {
+            var:gacha_starlight >= 3
+        }
+        
+        change_variable = { name = gacha_starlight subtract = 3 }
+        gacha_create_fischl_effect = yes
+    }
+
+    option = {
+        name = gacha_starlight_events.1.klee
+        trigger = {
+            var:gacha_starlight >= 3
+        }
+        
+        change_variable = { name = gacha_starlight subtract = 3 }
+        gacha_create_klee_effect = yes
+    }
+    
+    option = {
+        name = gacha_starlight_events.1.nahida
+        trigger = {
+            var:gacha_starlight >= 3
+        }
+        
+        change_variable = { name = gacha_starlight subtract = 3 }
+        gacha_create_nahida_effect = yes
+    }
+    
+    # 选项6：取消
+    option = {
+        name = gacha_starlight_events.1.cancel
+        # 什么也不做
+    }
+}

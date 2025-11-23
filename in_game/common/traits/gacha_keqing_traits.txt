@@ -1,39 +1,31 @@
+﻿# Generated Traits for keqing
 gacha_keqing_origin_trait = {
-  category = ruler
-  allow = {
-    always = no
-  }
-
-  modifier = {
-    land_morale_modifier        = 0.15   # +15% 陆军士气
-    discipline                  = 0.05   # +5% 训练度
-    general_effectiveness       = 0.25   # +25% 将领效能
-    land_forcelimit_modifier    = 0.10   # +10% 陆军规模上限
-  }
+    category = ruler
+    allow = { always = no }
+    modifier = {
+        legislative_efficiency          = 0.10   # 玉衡日夜修订律令
+        tax_income_efficiency           = 0.10   # 对商路与关税的精算
+        global_levy_size_modifier       = 0.10   # 整顿兵籍，提升征调规模
+        army_infantry_power             = 0.05   # 雷元素剑术训练步兵
+    }
 }
 
 gacha_keqing_awakened_trait = {
-  category = ruler
-  allow = {
-    always = no
-  }
-
-  modifier = {
-    manpower_recovery_speed     = 0.20   # +20% 人力恢复速度
-    global_regiment_recruit_speed = -0.25  # -25% 招募时间
-    infantry_power              = 0.10   # +10% 步兵战斗力
-  }
+    category = ruler
+    allow = { always = no }
+    modifier = {
+        global_levy_recruitment_speed_modifier = 0.15   # 动员流程提速
+        army_movement_speed         = 0.10   # 征调后快速机动
+        stability_cost              = -0.05  # 以雷霆决策压缩争议成本
+    }
 }
 
 gacha_keqing_transcended_trait = {
-  category = general
-  allow = {
-    always = no
-  }
-
-  modifier = {
-    shock_damage                = 0.15   # +15% 冲击伤害
-    movement_speed              = 0.15   # +15% 移动速度
-    siege_ability               = 0.20   # +20% 围城能力
-  }
+    category = general 
+    allow = { always = no }
+    modifier = {
+        siege_ability               = 0.15
+        army_movement_speed         = 0.15
+        prestige_from_land_battle   = 0.10
+    }
 }

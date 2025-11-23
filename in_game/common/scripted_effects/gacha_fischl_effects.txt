@@ -1,0 +1,105 @@
+gacha_create_fischl_effect = {
+  # ==========================================
+  # 分支 A：已拥有 -> 命之座升级 (Duplicate)
+  # ==========================================
+  if = {
+    limit = { has_global_variable = gacha_fischl_is_summoned }
+
+    random_in_global_list = {
+      variable = gacha_obtained_characters
+      limit = { has_trait = gacha_fischl_origin_trait }
+      save_scope_as = existing_char
+    }
+
+    if = {
+      limit = { scope:existing_char = { employer = root } }
+      # 满命溢出：转化为星辉
+      if = {
+        limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+        scope:existing_char = {
+          root = {
+            change_variable = { name = gacha_starlight add = 1 }
+            trigger_event_non_silently = { id = gacha_events.30 }
+          }
+        }
+      }
+      else = {
+        # --- 先处理角色数值变化 ---
+        scope:existing_char = {
+          change_variable = { name = gacha_constellation_lvl add = 1 }
+          gacha_apply_constellation_stats_effect = { who = fischl }
+        }
+
+        # --- 根据【新的】命座等级触发对应的事件 ---
+        if = {
+          limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+          scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_fischl_events.4 } } }
+        }
+        else_if = {
+          limit = { scope:existing_char = { var:gacha_constellation_lvl = 4 } }
+          scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_fischl_events.12 } } }
+        }
+        else_if = {
+          limit = { scope:existing_char = { var:gacha_constellation_lvl = 2 } }
+          scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_fischl_events.11 } } }
+        }
+        else = {
+          scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_fischl_events.2 } } }
+        }
+      }
+
+      clear_saved_scope = existing_char
+    }
+    else = {
+      # 归属权冲突：是别人的角色
+      # 检查是否满命，如果满命给予星辉
+      if = {
+        limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+        # 满命溢出：给予1星辉 (明确在root作用域)
+        root = {
+          change_variable = { name = gacha_starlight add = 1 }
+          # 触发星辉获得提示
+          trigger_event_non_silently = { id = gacha_events.30 }
+        }
+      }
+      else = {
+        # 未满命，给予普通补偿
+        add_gold = 100
+        add_prestige = 50
+      }
+      
+      clear_saved_scope = existing_char
+    }
+  }
+
+  # ==========================================
+  # 分支 B：未拥有 -> 首次创建 (New)
+  # ==========================================
+  else = {
+    create_character = {
+      first_name = gacha_first_name_fischl
+      last_name  = gacha_last_name_fischl
+      female     = yes
+      age        = 16
+      culture  = culture:tougokud
+      religion = religion:shintō
+      adm = { 65 80 }
+      dip = { 75 90 }
+      mil = { 70 85 }
+      create_in_limbo = yes
+      save_scope_as = gacha_fischl_new_char
+    }
+    scope:gacha_fischl_new_char = {
+      gacha_register_new_character = { who = fischl }
+    }
+    set_global_variable = { name = gacha_fischl_is_summoned value = 1 }
+
+    scope:gacha_fischl_new_char = {
+      root = {
+        trigger_event_non_silently = { id = gacha_fischl_events.1 }
+      }
+    }
+    
+    clear_saved_scope = gacha_fischl_new_char
+  }
+}

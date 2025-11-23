@@ -7,6 +7,7 @@ gacha_apply_constellation_stats_effect = {
     remove_character_modifier = gacha_$who$_c4_modifier
     remove_character_modifier = gacha_$who$_c5_modifier
     remove_character_modifier = gacha_$who$_c6_modifier
+    remove_country_modifier   = gacha_$who$_c6_country_modifier
 
     # 2. 应用新修正 (使用 var: 写法)
     if = {
@@ -36,6 +37,12 @@ gacha_apply_constellation_stats_effect = {
     else_if = {
         limit = { var:gacha_constellation_lvl >= 6 }
         add_character_modifier = { modifier = gacha_$who$_c6_modifier mode = add_and_extend years = -1 }
+    }
+    if = {
+        limit = { var:gacha_constellation_lvl >= 6 }
+        root = {
+            add_country_modifier = { modifier = gacha_$who$_c6_country_modifier days = -1 }
+        }
     }
 
     # 3. 根据命座等级，添加额外的特性（完全泛型）

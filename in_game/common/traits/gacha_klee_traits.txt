@@ -1,0 +1,38 @@
+gacha_klee_origin_trait = {
+  category = ruler  # 注意：origin和awakened使用同一category，可以共存
+  allow = {
+    always = no
+  }
+
+  modifier = {
+    army_artillery_power        = 0.15
+    prestige_from_land_battle   = 0.15
+    artillery_bonus_vs_fort     = 0.10
+  }
+}
+
+gacha_klee_awakened_trait = {
+  category = ruler  # 与origin相同，不会冲突
+  allow = {
+    always = no
+  }
+
+  modifier = {
+    global_levy_recruitment_speed_modifier = 0.10
+    army_movement_speed              = 0.10
+    tax_income_efficiency            = 0.05
+  }
+}
+
+gacha_klee_transcended_trait = {
+  category = general  # ⚠️ 必须不同！否则会移除origin trait
+  allow = {
+    always = no
+  }
+
+  modifier = {
+    siege_ability               = 0.20
+    army_artillery_power        = 0.10
+    army_movement_speed         = 0.10
+  }
+}

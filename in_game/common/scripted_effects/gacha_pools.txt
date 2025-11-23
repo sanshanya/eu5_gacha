@@ -1,43 +1,29 @@
-# ============================================================
-# 抽卡奖池定义（不使用 random_list，全部自研伪随机）
-# ============================================================
-
-# 5 星限定池（当前 UP：心海）
-gacha_pool_5star_limited = {
+﻿gacha_pool_5star_limited = {
     gacha_create_xinhai_effect = yes
 }
 
-# 5 星常驻池（当前：雷电将军、芙宁娜、刻晴）
+# 5星常驻池 (自动生成)
 gacha_pool_5star_standard = {
-    # 1. 计算选择变量 (0, 1, 或 2)
     set_variable = { name = gacha_5star_choice value = var:gacha_rand }
-    
-    # 增加一些熵源，避免和4星池完全同步
     change_variable = { name = gacha_5star_choice add = var:gacha_total_rolls }
     
-    # 取模 3
+    # 取模 87
     while = {
-        limit = { var:gacha_5star_choice >= 3 }
-        change_variable = { name = gacha_5star_choice subtract = 3 }
+        limit = { var:gacha_5star_choice >= 8 }
+        change_variable = { name = gacha_5star_choice subtract = 7 }
     }
-
-    # 2. 根据结果分发
-    if = {
-        limit = { var:gacha_5star_choice = 0 }
-        gacha_create_furina_effect = yes
-    }
-    else_if = {
-        limit = { var:gacha_5star_choice = 1 }
-        gacha_create_raiden_effect = yes
-    }
-    else = {
-        # choice = 2
-        gacha_create_keqing_effect = yes
-    }
-
-    # 3. 清理变量
+    
+    if = { limit = { var:gacha_5star_choice = 0 } gacha_create_xinhai_effect = yes }
+    else_if = { limit = { var:gacha_5star_choice = 1 } gacha_create_raiden_effect = yes }
+    else_if = { limit = { var:gacha_5star_choice = 2 } gacha_create_furina_effect = yes }
+    else_if = { limit = { var:gacha_5star_choice = 3 } gacha_create_keqing_effect = yes }
+    else_if = { limit = { var:gacha_5star_choice = 4 } gacha_create_hutao_effect = yes }
+    else_if = { limit = { var:gacha_5star_choice = 5 } gacha_create_klee_effect = yes }
+    else_if = { limit = { var:gacha_5star_choice = 6 } gacha_create_nahida_effect = yes }
+    else = { gacha_create_fischl_effect = yes }
     remove_variable = gacha_5star_choice
 }
+
 
 
 # 4 星奖励池：金币 / 威望 / 正统性 / 稳定度
@@ -79,3 +65,4 @@ gacha_pool_4star_rewards = {
 
 # 3 星占位池：无奖励（仅维持结构）
 gacha_pool_3star_empty = { }
+

@@ -6,10 +6,18 @@ gacha_electro_godeye = {
   positive = "gfx/interface/icons/modifier_types/gacha_electro_godeye.dds"
 }
 
+gacha_fire_godeye = {
+  positive = "gfx/interface/icons/modifier_types/gacha_fire_godeye.dds"
+}
+
+gacha_grass_godeye = {
+  positive = "gfx/interface/icons/modifier_types/gacha_grass_godeye.dds"
+}
+
 gacha_core = {
-  positive = "gfx/interface/icons/modifier_types/intertwined_fate.dds"
+  positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds"
 }
 
 gacha_constellation_level= {
-  positive = "gfx/interface/icons/modifier_types/constellation.dds"
+  positive = "gfx/interface/icons/modifier_types/gacha_constellation.dds"
 }

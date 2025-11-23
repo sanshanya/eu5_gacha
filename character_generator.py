@@ -238,8 +238,23 @@ gacha_{self.char_id}_transcended_trait = {{
       clear_saved_scope = existing_char
     }}
     else = {{
-      add_gold = 100
-      add_prestige = 50
+      # 归属权冲突：是别人的角色
+      # 检查是否满命，如果满命给予星辉
+      if = {{
+        limit = {{ scope:existing_char = {{ var:gacha_constellation_lvl >= 6 }} }}
+        # 满命溢出：给予1星辉 (明确在root作用域)
+        root = {{
+          change_variable = {{ name = gacha_starlight add = 1 }}
+          # 触发星辉获得提示
+          trigger_event_non_silently = {{ id = gacha_events.30 }}
+        }}
+      }}
+      else = {{
+        # 未满命，给予普通补偿
+        add_gold = 100
+        add_prestige = 50
+      }}
+      
       clear_saved_scope = existing_char
     }}
   }}

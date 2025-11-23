@@ -7,6 +7,7 @@ gacha_init_variables = {
     if = { limit = { NOT = { has_variable = gacha_pity_4star } } set_variable = { name = gacha_pity_4star value = 0 } }
     if = { limit = { NOT = { has_variable = gacha_block_has_4star } } set_variable = { name = gacha_block_has_4star value = no } }
     if = { limit = { NOT = { has_variable = gacha_is_guaranteed } } set_variable = { name = gacha_is_guaranteed value = no } }
+    if = { limit = { NOT = { has_variable = gacha_starlight } } set_variable = { name = gacha_starlight value = 0 } }
 }
 
 # ============================================================

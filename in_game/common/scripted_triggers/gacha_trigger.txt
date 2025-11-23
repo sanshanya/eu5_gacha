@@ -4,5 +4,9 @@
     has_trait = gacha_raiden_origin_trait
     has_trait = gacha_furina_origin_trait
     has_trait = gacha_keqing_origin_trait
+    has_trait = gacha_hutao_origin_trait
+    has_trait = gacha_fischl_origin_trait
+    has_trait = gacha_klee_origin_trait
+    has_trait = gacha_nahida_origin_trait
   }
 }

@@ -1,41 +1,31 @@
-gacha_raiden_origin_trait = { #御建鸣神主尊
-  category = ruler
-  allow = {
-    always = no
-  }
-
-  modifier = {
-    global_manpower_modifier = 0.25   # +25% 人力
-    land_morale_modifier = 0.15       # +15% 陆军士气
-    discipline = 0.05                 # +5% 训练度
-    legitimacy = 1.0                  # +1 正统性/年
-  }
+﻿# Generated Traits for raiden
+gacha_raiden_origin_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = {
+        global_manpower_modifier = 0.20   # 稻妻军政一体的征兵网络
+        land_morale_modifier = 0.15       # 雷霆镇国的气势
+        discipline = 0.05                 # 御前刀阵的严格操典
+        monthly_legitimacy = 0.08         # 以「永恒」正名的权威
+    }
 }
 
-gacha_raiden_awakened_trait = { #梦想一心
-  category = ruler
-  allow = {
-    always = no
-  }
-
-  modifier = {
-    # 提升行政效率
-    administrative_efficiency = 0.05
-    # 减少叛乱
-    global_unrest = -2
-  }
+gacha_raiden_awakened_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = {
+        legislative_efficiency = 0.05
+        stability_cost = -0.10
+        global_estate_satisfaction_recovery = 0.15
+    }
 }
 
-gacha_raiden_transcended_trait = { #殊胜尊荣
-  category = general
-  allow = {
-    # 只通过事件、脚本添加
-    always = no
-  }
-
-  modifier = {
-    shock_damage = 0.15      # +15% 冲击伤害
-    fire_damage_received = -0.10 # -10% 受到的火力伤害
-    movement_speed = 0.15    # +15% 移动速度
-  }
+gacha_raiden_transcended_trait = {
+    category = general 
+    allow = { always = no }
+    modifier = {
+        army_movement_speed = 0.15
+        land_morale_modifier = 0.05
+        army_infantry_power = 0.10
+    }
 }

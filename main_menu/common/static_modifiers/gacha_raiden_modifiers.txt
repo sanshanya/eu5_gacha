@@ -1,35 +1,41 @@
+﻿# Generated Modifiers for raiden
 gacha_raiden_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_core = yes
-  # 雷元素神之眼
-  gacha_electro_godeye = yes
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    # 雷元素神之眼
+    gacha_electro_godeye = yes
 }
 
 gacha_raiden_c0_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 0
+    game_data = { category = character decaying = no }
+    gacha_constellation_level = 0
 }
 gacha_raiden_c1_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 1
+    game_data = { category = character decaying = no }
+    gacha_constellation_level = 1
 }
 gacha_raiden_c2_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 2
+    game_data = { category = character decaying = no }
+    gacha_constellation_level = 2
 }
 gacha_raiden_c3_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 3
+    game_data = { category = character decaying = no }
+    gacha_constellation_level = 3
 }
 gacha_raiden_c4_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 4
+    game_data = { category = character decaying = no }
+    gacha_constellation_level = 4
 }
 gacha_raiden_c5_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 5
+    game_data = { category = character decaying = no }
+    gacha_constellation_level = 5
 }
 gacha_raiden_c6_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 6
+    game_data = { category = character decaying = no }
+    gacha_constellation_level = 6
+}
+
+gacha_raiden_c6_country_modifier = {
+    game_data = { category = country decaying = no }
+    government_size = 1
 }
