@@ -12,12 +12,13 @@
 | **修正** | `common/static_modifiers/gacha_raiden_modifiers.txt` | 定义角色的永久修正 (可选) |
 | **修正类型** | `common/modifier_type_definitions/gacha_modifier_types.txt` | **[NEW]** 定义新的神之眼/命座修正类型 |
 | **图标** | `common/modifier_icons/gacha_modifier_icons.txt` | **[NEW]** 绑定修正类型的图标 |
+| **特质图标** | `gfx/interface/icons/traits/gacha_raiden_origin_trait.dds` | **[NEW]** 特质图标 (必须与特质同名) |
 | **立绘** | `gfx/portraits/portrait_modifiers/gacha_raiden_portrait.txt` | 定义角色的 2D/3D 立绘绑定 |
 | **配件** | `gfx/portraits/accessories/gacha_raiden_props.txt` | **[NEW]** 定义角色使用的配件 (Props) |
 | **基因** | `common/genes/gacha_raiden_genes_special_accessories_misc.txt` | **[NEW]** 定义配件的基因绑定 |
 | **资产** | `gfx/models/props/gacha_raiden/gacha_raiden_01.asset` | **[NEW]** 定义 3D 模型/贴图资产 |
 | **触发器** | `common/scripted_triggers/gacha_trigger.txt` | **[NEW]** 更新立绘显示触发器 |
-| **本地化** | `localization/simp_chinese/gacha_raiden_l_simp_chinese.yml` | 名字、描述、事件文本 |
+| **本地化** | `localization/simp_chinese/eu_gacha_l_simp_chinese.yml` | **[UPDATE]** 添加名字、描述、事件文本 (不要新建文件) |
 | **事件** | `events/gacha_raiden_events.txt` | 初次见面、命座提升、满命事件 |
 | **逻辑** | `common/scripted_effects/gacha_raiden_effects.txt` | **新架构**：角色专属 Wrapper 文件 |
 | **奖池** | `common/scripted_effects/gacha_pools.txt` | 将角色加入卡池 |
@@ -154,10 +155,10 @@ gacha_raiden_portrait = {
 ```
 
 #### 2.5 更新触发器 (Triggers)
-修改 `common/scripted_triggers/gacha_trigger.txt`，将新角色的特质加入 `ls_snow_portrait_trigger`。
+修改 `common/scripted_triggers/gacha_trigger.txt`，将新角色的特质加入 `ls_gacha_portrait_trigger`。
 
 ```paradox
-ls_snow_portrait_trigger = {
+ls_gacha_portrait_trigger = {
   OR = {
     has_trait = gacha_xinhai_origin_trait
     has_trait = gacha_raiden_origin_trait # 新增
@@ -203,10 +204,13 @@ gacha_raiden_modifier = {
 # ... 命座修正 ...
 ```
 
+#### 3.4 制作特质图标 (Trait Icons)
+**重要**：你需要为每个特质制作对应的图标，并放入 `gfx/interface/icons/traits/` 目录。
+文件名必须与特质名完全一致（例如 `gacha_raiden_origin_trait.dds`）。
+
 ### 步骤 4：本地化 (Localization)
 
-创建 `localization/simp_chinese/gacha_raiden_l_simp_chinese.yml`。
-**注意**：文件名必须以 `l_simp_chinese.yml` 结尾。
+**重要**：请直接修改 `localization/simp_chinese/eu_gacha_l_simp_chinese.yml`，**不要**创建新的 `.yml` 文件，否则可能导致加载失败。
 
 ```yaml
 l_simp_chinese:
@@ -221,6 +225,9 @@ l_simp_chinese:
  # 修正类型描述 (重要！)
  MODIFIER_TYPE_NAME_gacha_electro_godeye: "雷元素神之眼"
  MODIFIER_TYPE_DESC_gacha_electro_godeye: "「...」"
+ 
+ # 静态修正描述 (必须添加！)
+ STATIC_MODIFIER_NAME_gacha_raiden_modifier: "鸣神的加护"
  STATIC_MODIFIER_DESC_gacha_raiden_modifier: "..."
 
  # 事件标题
@@ -231,10 +238,27 @@ l_simp_chinese:
 ### 步骤 5：创建事件 (Events)
 
 创建 `events/gacha_raiden_events.txt`。
-你需要至少 3 个事件：
+**注意**：必须使用 `character_event` 类型，而不是 `country_event`。
+
+你需要至少 5 个事件：
 1.  `.1`: 初次获得 (First Meeting)
 2.  `.2`: 命座提升 (Constellation Up)
 3.  `.4`: 满命 (Max Constellation)
+4.  `.11`: 命座觉醒 (C2) - **必须在 option 中添加 `add_trait`**
+5.  `.12`: 命座超越 (C4) - **必须在 option 中添加 `add_trait`**
+
+```paradox
+gacha_raiden_events.11 = {
+    type = character_event
+    # ...
+    option = {
+        name = gacha_raiden_events.11.a
+        scope:existing_char = {
+            add_trait = gacha_raiden_awakened_trait
+        }
+    }
+}
+```
 
 ### 步骤 6：编写逻辑 Wrapper (Scripted Effects)
 
@@ -244,7 +268,7 @@ l_simp_chinese:
 **需要修改的关键点**：
 1.  **全局变量锁**: `gacha_xinhai_is_summoned` -> `gacha_raiden_is_summoned`
 2.  **特质检查**: `gacha_xinhai_origin_trait` -> `gacha_raiden_origin_trait`
-3.  **事件 ID**: `gacha_xinhai_events.1/2/4` -> `gacha_raiden_events.1/2/4`
+3.  **事件 ID**: `gacha_xinhai_events.1/2/4/11/12` -> `gacha_raiden_events.1/2/4/11/12`
 4.  **名字 Key**: `gacha_first_name_xinhai` -> `gacha_first_name_raiden`
 5.  **注册调用**: `gacha_register_new_character = { who = raiden }`
 6.  **数值**: 修改 `adm/dip/mil` 属性、文化、宗教
@@ -252,12 +276,35 @@ l_simp_chinese:
 ### 步骤 7：加入奖池 (Pools)
 
 打开 `common/scripted_effects/gacha_pools.txt`。
-在 5 星池中加入一行：
+
+**重要**：不要使用 `random_list`！必须使用基于 `gacha_rand` 的伪随机逻辑来保证公平性。
 
 ```paradox
-random_list = {
-    # ... 其他角色 ...
-    10 = { gacha_create_raiden_effect = yes }
+gacha_pool_5star_standard = {
+    # 1. 计算选择变量 (0 或 1)
+    set_variable = { name = gacha_5star_choice value = var:gacha_rand }
+    
+    # 增加一些熵源
+    change_variable = { name = gacha_5star_choice add = var:gacha_total_rolls }
+    
+    # 取模 2
+    while = {
+        limit = { var:gacha_5star_choice >= 2 }
+        change_variable = { name = gacha_5star_choice subtract = 2 }
+    }
+
+    # 2. 根据结果分发
+    if = {
+        limit = { var:gacha_5star_choice = 0 }
+        gacha_create_raiden_effect = yes
+    }
+    else = {
+        # choice = 1
+        gacha_create_furina_effect = yes
+    }
+
+    # 3. 清理变量
+    remove_variable = gacha_5star_choice
 }
 ```
 
@@ -268,8 +315,10 @@ random_list = {
 *   **Q: 角色名字显示乱码？**
     *   A: 检查 `.yml` 文件是否以 UTF-8 BOM 格式保存。
 *   **Q: 抽到了但是没弹窗？**
-    *   A: 检查 `gacha_raiden_events.txt` 顶部是否写了 `namespace = gacha_raiden_events`。
+    *   A: 检查 `gacha_raiden_events.txt` 顶部是否写了 `namespace = gacha_raiden_events`，以及事件类型是否为 `character_event`。
 *   **Q: 角色没有特质？**
     *   A: 检查 `gacha_raiden_effects.txt` 里的 `gacha_register_new_character` 调用参数是否正确。
 *   **Q: 立绘不显示？**
     *   A: 检查 `gacha_trigger.txt` 是否加入了新角色的特质，以及 `.asset` 文件中的贴图路径是否正确。
+*   **Q: 修正描述显示为代码？**
+    *   A: 确保在本地化文件中添加了 `STATIC_MODIFIER_NAME_xxx` 和 `STATIC_MODIFIER_DESC_xxx`。

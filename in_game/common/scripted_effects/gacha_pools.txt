@@ -9,7 +9,31 @@ gacha_pool_5star_limited = {
 
 # 5 星常驻池（当前：雷电将军）
 gacha_pool_5star_standard = {
-    gacha_create_raiden_effect = yes
+    # 1. 计算选择变量 (0 或 1)
+    set_variable = { name = gacha_5star_choice value = var:gacha_rand }
+    
+    # 增加一些熵源，避免和4星池完全同步
+    change_variable = { name = gacha_5star_choice add = var:gacha_total_rolls }
+    
+    # 取模 2
+    while = {
+        limit = { var:gacha_5star_choice >= 2 }
+        change_variable = { name = gacha_5star_choice subtract = 2 }
+    }
+
+    # 2. 根据结果分发
+    if = {
+        limit = { var:gacha_5star_choice = 0 }
+        gacha_create_furina_effect = yes
+    }
+    else = {
+        # choice = 1
+        
+        gacha_create_raiden_effect = yes
+    }
+
+    # 3. 清理变量
+    remove_variable = gacha_5star_choice
 }
 
 # 4 星奖励池：金币 / 威望 / 正统性 / 稳定度

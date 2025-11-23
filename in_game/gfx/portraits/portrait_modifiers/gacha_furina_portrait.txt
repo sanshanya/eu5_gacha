@@ -1,0 +1,22 @@
+gacha_furina_portrait = {
+  usage    = game
+  priority = 100
+
+  gacha_furina_01 = {
+    dna_modifiers = {
+      accessory = {
+        mode     = replace
+        gene     = gacha_furina_props_1
+        template = gacha_furina_01
+        value    = 0.5
+      }
+    }
+    weight = {
+      base = 0
+      modifier = {
+        add = 255
+        has_trait = gacha_furina_origin_trait
+      }
+    }
+  }
+}
