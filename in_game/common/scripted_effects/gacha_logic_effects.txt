@@ -1,129 +1,230 @@
 # ============================================================
-# 核心抽卡逻辑 - 伪随机版 (最简版)
+# 变量初始化集中管理
 # ============================================================
-gacha_execute_single_roll = {
-    # ============================================================
-    # 步骤 1: 永久总抽数 +1
-    # ============================================================
-    if = {
-        limit = { NOT = { has_variable = gacha_total_rolls } }
-        set_variable = { name = gacha_total_rolls value = 0 }
-    }
-    if = {
-        limit = { NOT = { has_variable = gacha_pity_4star } }
-        set_variable = { name = gacha_pity_4star value = 0 }
-    }
-    change_variable = { name = gacha_total_rolls add = 1 }
-    
-    # ============================================================
-    # 步骤 2: 伪随机数生成 (最简版，不做模运算)
-    # ============================================================
-    set_variable = { name = gacha_rand value = var:gacha_total_rolls }
-    change_variable = { name = gacha_rand add = var:gacha_pity_count }
-    change_variable = { name = gacha_rand add = treasury }
-    
-    # ============================================================
-    # 步骤 3: 5星阈值计算
-    # ============================================================
-    set_variable = { name = gacha_thresh5 value = 6 }  # 基础 0.6%
-    
-    # 软保底
-    if = {
-        limit = { var:gacha_pity_count >= 73 }
-        set_variable = { name = gacha_temp value = var:gacha_pity_count }
-        change_variable = { name = gacha_temp subtract = 73 }
-        change_variable = { name = gacha_temp multiply = 60 }
-        change_variable = { name = gacha_thresh5 add = var:gacha_temp }
-    }
-    
-    # 硬保底
-    if = {
-        limit = { var:gacha_pity_count >= 89 }
-        set_variable = { name = gacha_thresh5 value = 1000 }
-    }
-    
-    # ============================================================
-    # 步骤 4: 5星判定 (简化版：rand的个位数 < thresh5)
-    # ============================================================
-    set_variable = { name = gacha_rand_ones value = var:gacha_rand }
-    
-    # 提取个位数 (简单方法：循环减10直到 < 10)
-    while = {
-        limit = { var:gacha_rand_ones >= 10 }
-        change_variable = { name = gacha_rand_ones subtract = 10 }
-    }
-    
-    # 个位数 * 100 作为模拟的千分数 (0-9 映射到 0-900)
-    change_variable = { name = gacha_rand_ones multiply = 100 }
-    
-    if = {
-        limit = { var:gacha_rand_ones < var:gacha_thresh5 }
-        # 出5星！
-        set_variable = { name = gacha_temp_roll_result value = 1 }
-    }
-    else = {
-        # 未出5星
-        set_variable = { name = gacha_temp_roll_result value = 0 }
-    }
-    
-    # ============================================================
-    # 步骤 5: 回到主作用域执行结果
-    # ============================================================
-    if = {
-        limit = { var:gacha_temp_roll_result = 1 }
-        trigger_event_non_silently = { id = gacha_events.5 }
-    }
-    else = {
-        # 失败逻辑：增加保底，给安慰奖
-        change_variable = { name = gacha_pity_count add = 1 }
-        change_variable = { name = gacha_pity_4star add = 1 }
-
-        # 计算 4 星判定用的 0-99 数值：total_rolls(个位)*10 + rand_ones
-        set_variable = { name = gacha_rand_4star value = var:gacha_total_rolls }
-        while = {
-            limit = { var:gacha_rand_4star >= 10 }
-            change_variable = { name = gacha_rand_4star subtract = 10 }
-        }
-        change_variable = { name = gacha_rand_4star multiply = 10 }
-        change_variable = { name = gacha_rand_4star add = var:gacha_rand_ones }
-
-        if = {
-            limit = {
-                OR = {
-                    var:gacha_pity_4star >= 10    # 10 抽硬保底
-                    var:gacha_rand_4star < 5      # ~5% 概率
-                }
-            }
-            # 命中 4 星
-            set_variable = { name = gacha_pity_4star value = 0 }
-            gacha_pool_4star_rewards = yes
-            root = { trigger_event_non_silently = { id = gacha_events.20 } }
-        }
-        else = {
-            # 3 星：无奖励，仅弹窗
-            root = { trigger_event_non_silently = { id = gacha_events.2 } }
-        }
-        remove_variable = gacha_rand_4star
-    }
-    
-    # 保留关键变量供 debug tool 查看
-    # gacha_rand, gacha_thresh5, gacha_rand_ones 会保留
-    # 只清理临时结果变量
-    remove_variable = gacha_temp_roll_result
-    if = {
-        limit = { has_variable = gacha_temp }
-        remove_variable = gacha_temp
-    }
+gacha_init_variables = {
+    if = { limit = { NOT = { has_variable = gacha_total_rolls } } set_variable = { name = gacha_total_rolls value = 0 } }
+    if = { limit = { NOT = { has_variable = gacha_pity_count } } set_variable = { name = gacha_pity_count value = 0 } }
+    if = { limit = { NOT = { has_variable = gacha_pity_4star } } set_variable = { name = gacha_pity_4star value = 0 } }
+    if = { limit = { NOT = { has_variable = gacha_block_has_4star } } set_variable = { name = gacha_block_has_4star value = no } }
+    if = { limit = { NOT = { has_variable = gacha_is_guaranteed } } set_variable = { name = gacha_is_guaranteed value = no } }
 }
 
 # ============================================================
-# 五星处理逻辑 (50/50 与 大保底)
+# 核心：单次抽卡计算 (纯净内核 - 只算不弹)
+# ============================================================
+gacha_execute_single_roll_silent = {
+    gacha_init_variables = yes
+
+    # 1. 更新总数 & 块索引
+    change_variable = { name = gacha_total_rolls add = 1 }
+    
+    # 计算块索引 (0-9)
+    set_variable = { name = gacha_block_index value = var:gacha_total_rolls }
+    while = {
+        limit = { var:gacha_block_index >= 10 }
+        change_variable = { name = gacha_block_index subtract = 10 }
+    }
+
+    # 新块重置
+    if = {
+        limit = { var:gacha_block_index = 1 }
+        set_variable = { name = gacha_block_has_4star value = no }
+    }
+
+    # 2. 生成伪随机数 (质数混合 + 固定偏移)
+    # 基础偏移 (质数937，确保初始值够大)
+    set_variable = { name = gacha_rand value = 937 }
+    
+    # 熵源1: total_rolls × 17 (质数)
+    set_variable = { name = gacha_temp_seed value = var:gacha_total_rolls }
+    change_variable = { name = gacha_temp_seed multiply = 17 }
+    change_variable = { name = gacha_rand add = var:gacha_temp_seed }
+    remove_variable = gacha_temp_seed
+    
+    # 熵源2: treasury的绝对值（避免负金币影响）
+    if = {
+        limit = { treasury >= 0 }
+        change_variable = { name = gacha_rand add = treasury }
+    }
+    else = {
+        set_variable = { name = gacha_temp_treasury value = treasury }
+        change_variable = { name = gacha_temp_treasury multiply = -1 }
+        change_variable = { name = gacha_rand add = var:gacha_temp_treasury }
+        remove_variable = gacha_temp_treasury
+    }
+    
+    # 熵源3: pity_count × 13 (质数)
+    set_variable = { name = gacha_temp_pity value = var:gacha_pity_count }
+    change_variable = { name = gacha_temp_pity multiply = 13 }
+    change_variable = { name = gacha_rand add = var:gacha_temp_pity }
+    remove_variable = gacha_temp_pity
+    
+    # 熵源4: block_index × 7 (质数)
+    set_variable = { name = gacha_temp_block value = var:gacha_block_index }
+    change_variable = { name = gacha_temp_block multiply = 7 }
+    change_variable = { name = gacha_rand add = var:gacha_temp_block }
+    remove_variable = gacha_temp_block
+
+    # 安全取模 1000
+    while = {
+        limit = { var:gacha_rand >= 10000 }
+        change_variable = { name = gacha_rand subtract = 10000 }
+    }
+    while = {
+        limit = { var:gacha_rand >= 1000 }
+        change_variable = { name = gacha_rand subtract = 1000 }
+    }
+
+    # 3. 计算5星阈值 (内联计算，不使用script_value)
+    set_variable = { name = gacha_curr_thresh5 value = 6 }  # 基础0.6%
+    
+    # 软保底: 74抽起每抽+6%
+    if = {
+        limit = { var:gacha_pity_count >= 73 }
+        set_variable = { name = gacha_temp_pity value = var:gacha_pity_count }
+        change_variable = { name = gacha_temp_pity subtract = 73 }
+        change_variable = { name = gacha_temp_pity multiply = 60 }
+        change_variable = { name = gacha_curr_thresh5 add = var:gacha_temp_pity }
+        remove_variable = gacha_temp_pity
+    }
+    
+    # 硬保底: 90抽必出
+    if = {
+        limit = { var:gacha_pity_count >= 89 }
+        set_variable = { name = gacha_curr_thresh5 value = 1000 }
+    }
+    
+    # 4. 计算4星阈值 (内联计算)
+    set_variable = { name = gacha_curr_thresh4 value = 51 }  # 基础5.1%
+    
+    # 软保底: 9抽起概率暴涨
+    if = {
+        limit = { var:gacha_pity_4star >= 8 }
+        set_variable = { name = gacha_temp_pity4 value = var:gacha_pity_4star }
+        change_variable = { name = gacha_temp_pity4 subtract = 8 }
+        change_variable = { name = gacha_temp_pity4 multiply = 500 }
+        change_variable = { name = gacha_curr_thresh4 add = var:gacha_temp_pity4 }
+        remove_variable = gacha_temp_pity4
+    }
+    
+    # 上限保护
+    if = {
+        limit = { var:gacha_curr_thresh4 >= 1000 }
+        set_variable = { name = gacha_curr_thresh4 value = 1000 }
+    }
+
+    # 5. 结果判定 (0=3星, 1=4星, 2=5星)
+    set_variable = { name = gacha_roll_result_tier value = 0 }
+
+    if = {
+        limit = { var:gacha_rand < var:gacha_curr_thresh5 }
+        # >>> 5 星 <<<
+        set_variable = { name = gacha_roll_result_tier value = 2 }
+    }
+    else = {
+        set_variable = { name = gacha_is_4star_win value = no }
+        
+        # 4星判定: 块保底 OR 概率命中
+        if = {
+            limit = { var:gacha_block_index = 0 var:gacha_block_has_4star = no }
+            set_variable = { name = gacha_is_4star_win value = yes }
+        }
+        else_if = {
+            limit = { var:gacha_rand < var:gacha_curr_thresh4 }
+            set_variable = { name = gacha_is_4star_win value = yes }
+        }
+
+        if = {
+            limit = { var:gacha_is_4star_win = yes }
+            # >>> 4 星 <<<
+            set_variable = { name = gacha_roll_result_tier value = 1 }
+        }
+    }
+
+    # 5. 更新保底计数
+    # 注意：4星奖励在此处直接发放，5星奖励延迟到event.5的option中发放
+    if = {
+        limit = { var:gacha_roll_result_tier = 2 } # 5星
+        set_variable = { name = gacha_pity_count value = 0 }
+        set_variable = { name = gacha_block_has_4star value = yes }
+    }
+    else_if = {
+        limit = { var:gacha_roll_result_tier = 1 } # 4星
+        gacha_pool_4star_rewards = yes
+        set_variable = { name = gacha_pity_4star value = 0 }
+        set_variable = { name = gacha_block_has_4star value = yes }
+        change_variable = { name = gacha_pity_count add = 1 }
+    }
+    else = { # 3星
+        change_variable = { name = gacha_pity_count add = 1 }
+        change_variable = { name = gacha_pity_4star add = 1 }
+    }
+
+    # 清理
+    remove_variable = gacha_is_4star_win
+    remove_variable = gacha_block_index
+}
+
+# ============================================================
+# 单抽逻辑 (全弹窗)
+# ============================================================
+gacha_execute_single_roll = {
+    gacha_execute_single_roll_silent = yes
+
+    if = {
+        limit = { var:gacha_roll_result_tier = 2 }
+        trigger_event_non_silently = { id = gacha_events.5 }
+    }
+    else_if = {
+        limit = { var:gacha_roll_result_tier = 1 }
+        trigger_event_non_silently = { id = gacha_events.20 }
+    }
+    else = {
+        # 3星也弹窗
+        trigger_event_non_silently = { id = gacha_events.2 }
+    }
+    
+    remove_variable = gacha_roll_result_tier
+}
+
+# ============================================================
+# 十连逻辑 (仅静默3星，4/5星照常弹)
+# ============================================================
+gacha_execute_ten_rolls = {
+    set_variable = { name = gacha_loop_i value = 0 }
+    
+    while = {
+        limit = { var:gacha_loop_i < 10 }
+        
+        # 1. 跑内核
+        gacha_execute_single_roll_silent = yes
+        
+        # 2. 根据星级决定是否弹窗
+        if = {
+            limit = { var:gacha_roll_result_tier = 2 } # 5星
+            trigger_event_non_silently = { id = gacha_events.5 }
+        }
+        else_if = {
+            limit = { var:gacha_roll_result_tier = 1 } # 4星
+            trigger_event_non_silently = { id = gacha_events.20 }
+        }
+        # 3星 (Tier 0) 什么也不做，保持静默
+
+        change_variable = { name = gacha_loop_i add = 1 }
+    }
+    
+    remove_variable = gacha_loop_i
+    remove_variable = gacha_roll_result_tier
+}
+
+# ============================================================
+# 5星处理逻辑 (50/50 与 大保底)
 # ============================================================
 gacha_handle_5star_outcome = {
     # 1. 先重置垫子 (Pity Reset)
     set_variable = { name = gacha_pity_count value = 0 }
 
-    # 2. 判定是不是 UP 角色 (简化版：用 total_rolls 的奇偶性)
+    # 2. 判定是不是 UP 角色 (简化版：用 gacha_rand 的奇偶性)
     if = {
         # 情况 A: 必定 UP (大保底生效中)
         limit = {
@@ -133,8 +234,8 @@ gacha_handle_5star_outcome = {
         set_variable = { name = gacha_is_guaranteed value = no } # 消耗大保底
     }
     else = {
-        # 情况 B: 50/50 赌命 (用 total_rolls % 2)
-        set_variable = { name = gacha_r50 value = var:gacha_total_rolls }
+        # 情况 B: 50/50 赌命 (用 gacha_rand % 2)
+        set_variable = { name = gacha_r50 value = var:gacha_rand }
         
         # 简单奇偶判断：减2直到 < 2
         while = {
@@ -172,17 +273,4 @@ gacha_get_standard_character = {
     
     # 可选：触发"歪了"的提示事件
     # trigger_event_non_silently = gacha_events.3 
-}
-
-# ============================================================
-# 十连抽包装：重复调用单抽逻辑
-# ============================================================
-gacha_execute_ten_rolls = {
-    set_variable = { name = gacha_tenroll_counter value = 0 }
-    while = {
-        limit = { var:gacha_tenroll_counter < 10 }
-        gacha_execute_single_roll = yes
-        change_variable = { name = gacha_tenroll_counter add = 1 }
-    }
-    remove_variable = gacha_tenroll_counter
 }

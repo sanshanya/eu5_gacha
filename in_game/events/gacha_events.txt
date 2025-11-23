@@ -40,11 +40,11 @@ gacha_events.1 = {
     option = {
         name = gacha_events.1.a
         
-        # 前置条件：金钱足够
-        trigger = { gold >= 100 }
+        # # 前置条件：金钱足够 无需 玩家借贷即可
+        # trigger = { gold >= 100 }
         
         # 效果：扣钱并执行抽卡
-        add_gold = -100
+        add_gold = -16
         hidden_effect = {
             # 调用真正的、我们刚刚修复了概率计算的抽卡逻辑
             gacha_execute_single_roll = yes
@@ -57,9 +57,7 @@ gacha_events.1 = {
     option = {
         name = gacha_events.1.a10
         
-        trigger = { gold >= 1000 }
-        
-        add_gold = -1000
+        add_gold = -160
         hidden_effect = {
             gacha_execute_ten_rolls = yes
         }
@@ -68,55 +66,38 @@ gacha_events.1 = {
     # ==========================================
     # 选项 A 的备用项：【钱不够时显示】
     # ==========================================
-    option = {
-        name = gacha_events.1.single_lack # 本地化为 "奉纳不足"
+    # option = {
+    #     name = gacha_events.1.single_lack # 本地化为 "奉纳不足"
         
-        # 前置条件：金钱不足
-        trigger = { gold < 100 }
+    #     # 前置条件：金钱不足 无需 玩家借贷即可
+    #     # trigger = { gold < 100 }
         
-        # 效果：无，此选项为灰色不可点击
+    #     # 效果：无，此选项为灰色不可点击
         
-        # 悬浮提示
-        custom_tooltip = gacha_not_enough_gold_tt # 本地化为 "国库空虚..."
-    }
+    #     # 悬浮提示
+    #     custom_tooltip = gacha_not_enough_gold_tt # 本地化为 "国库空虚..."
+    # }
 
     # ==========================================
     # 选项 B：【调试用】直接获取心海
     # ==========================================
     option = {
-        name = "调试：直接获得【珊瑚宫心海】"
-        hidden_effect = {
-            gacha_create_xinhai_effect = yes
-        }
+      name = gacha_free_first_roll
+      
+      # 前置条件：只能使用一次
+      trigger = {
+          NOT = { has_variable = gacha_used_free_first }
+      }
+      
+      hidden_effect = {
+          # 标记已使用
+          set_variable = { name = gacha_used_free_first value = yes }
+          
+          # 强制出5星（直接触发金光事件）
+          trigger_event_non_silently = { id = gacha_events.5 }
+      }
     }
 
-    # ==========================================
-    # 选项 C：【调试用】重置心海状态
-    # ==========================================
-    option = {
-        name = "调试：重置心海角色状态"
-        hidden_effect = {
-            # 找到心海角色并重置
-            random_in_global_list = {
-                variable = gacha_obtained_characters
-                limit = { has_trait = gacha_xinhai_origin_trait }
-
-                # 重置命座等级
-                set_variable = { name = gacha_constellation_lvl value = 0 }
-
-                # 重新应用0命修正
-                gacha_apply_constellation_stats_effect = { who = xinhai }
-
-                # 移除觉醒/超越特质
-                remove_trait = gacha_xinhai_awakened_trait
-                remove_trait = gacha_xinhai_transcended_trait
-            }
-
-            # 重置全局召唤标记
-            remove_global_variable = gacha_xinhai_is_summoned
-        }
-    }
-    
     # ==========================================
     # 选项 D：离开
     # ==========================================
@@ -176,6 +157,10 @@ gacha_events.20 = {
             triggered_desc = {
                 trigger = { var:gacha_last_4star_reward = 2 }
                 desc = gacha_events.20.desc_legitimacy
+            }
+            triggered_desc = {
+                trigger = { var:gacha_last_4star_reward = 3 }
+                desc = gacha_events.20.desc_stability
             }
         }
     }

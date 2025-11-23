@@ -30,6 +30,8 @@
   gacha_events.1.desc_guaranteed: "当前祈愿已受祝福，下次获得的必定是当期角色！\n投入资源，祈求命运的回应吧。"
   gacha_events.1.desc_not_guaranteed: "投入资源，祈求命运的回应吧。"
   gacha_events.1.a: "奉纳金币 (祈愿)"
+  gacha_events.1.a10: "盛大祈愿 (十连)"
+  gacha_free_first_roll: "免费首抽（新手福利）"
   gacha_events.1.b: "暂且观望"
   gacha_events.1.single_lack: "奉纳不足"
   gacha_not_enough_gold_tt: "国库空虚，无法筹措祈愿所需的祭品。"
@@ -46,6 +48,7 @@
   gacha_events.20.desc_gold: "星光凝结成一袋闪耀的金币。或许用来继续祈愿也是个好主意。"
   gacha_events.20.desc_prestige: "星辉化作一纸号令，提升了我们在诸国间的声望。"
   gacha_events.20.desc_legitimacy: "星光在宫廷回荡，民众对王权的信任更为稳固。"
+  gacha_events.20.desc_stability: "星光照耀国土，国家变得更加稳定和谐。"
   gacha_events.20.a: "收下馈赠"
 
   # === 结果：小保底/歪了 (.3) ===

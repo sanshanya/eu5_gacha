@@ -12,18 +12,18 @@ gacha_pool_5star_standard = {
     gacha_create_raiden_effect = yes
 }
 
-# 4 星奖励池：金币 / 威望 / 正统性
-# 随机源采用小型种子，避免 date-lock 与大数 while 性能问题
+# 4 星奖励池：金币 / 威望 / 正统性 / 稳定度
+# 使用当前抽卡的随机数来决定奖励类型
 gacha_pool_4star_rewards = {
-    # 基础种子：个位随机 + 总抽数 + 垫子
-    set_variable = { name = gacha_4star_choice value = var:gacha_rand_ones }
+    # 使用gacha_rand的模3来决定奖励类型
+    set_variable = { name = gacha_4star_choice value = var:gacha_rand }
     change_variable = { name = gacha_4star_choice add = var:gacha_total_rolls }
     change_variable = { name = gacha_4star_choice add = var:gacha_pity_count }
 
-    # 取模 3（最多 2-3 次循环）
+    # 取模 4（最多 2-3 次循环）
     while = {
-        limit = { var:gacha_4star_choice >= 3 }
-        change_variable = { name = gacha_4star_choice subtract = 3 }
+        limit = { var:gacha_4star_choice >= 4 }
+        change_variable = { name = gacha_4star_choice subtract = 4 }
     }
 
     # 记录奖励类型，事件用来展示
@@ -31,14 +31,19 @@ gacha_pool_4star_rewards = {
 
     if = {
         limit = { var:gacha_4star_choice = 0 }
-        add_gold = 300
+        add_gold = 240
     }
     else_if = {
         limit = { var:gacha_4star_choice = 1 }
         add_prestige = 10
     }
-    else = {
+    else_if = {
+        limit = { var:gacha_4star_choice = 2 }
         add_legitimacy = 10
+    }
+    else = {
+        # choice = 3，稳定度
+        add_stability = 5
     }
 
     remove_variable = gacha_4star_choice
