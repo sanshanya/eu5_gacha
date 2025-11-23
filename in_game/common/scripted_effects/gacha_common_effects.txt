@@ -53,7 +53,7 @@ gacha_register_new_character = {
 
     #  临时方案：分配到王权阶层 (Crown Estate)
     # 自定义 gacha_guild_estate 遇到技术问题，从长计议
-    change_character_estate = estate_type:crown_estate
+    # change_character_estate = estate_type:crown_estate
 
     # === D. 身份确立 (Citizenship) ===
     # 关键步骤：在名字和特质和阶层确定后，再移动到国家，否则会发生奇怪的事情

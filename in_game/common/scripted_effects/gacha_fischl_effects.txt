@@ -83,6 +83,7 @@ gacha_create_fischl_effect = {
       age        = 16
       culture  = culture:tougokud
       religion = religion:shintō
+      estate = estate_type:crown_estate
       adm = { 65 80 }
       dip = { 75 90 }
       mil = { 70 85 }

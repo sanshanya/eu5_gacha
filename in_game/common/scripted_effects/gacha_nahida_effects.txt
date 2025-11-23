@@ -83,6 +83,7 @@ gacha_create_nahida_effect = {
       age        = 500
       culture  = culture:tougokud
       religion = religion:shintō
+      estate = estate_type:crown_estate
       adm = { 90 100 }
       dip = { 85 95 }
       mil = { 60 75 }

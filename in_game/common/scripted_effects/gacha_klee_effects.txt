@@ -84,6 +84,7 @@ gacha_create_klee_effect = {
       age        = 120
       culture  = culture:tougokud
       religion = religion:shintō
+      estate = estate_type:crown_estate
       adm = { 50 65 }
       dip = { 70 85 }
       mil = { 80 95 }
