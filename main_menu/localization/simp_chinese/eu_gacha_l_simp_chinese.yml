@@ -241,3 +241,58 @@
   gacha_furina_events.4.title: "满命达成"
   gacha_furina_events.4.desc: "芙宁娜已经达到了力量的巅峰！"
   gacha_furina_events.4.a: "不可思议的力量！"
+
+  # ============================================================
+  # §Y Part 6: Character - Keqing (刻晴) §!
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_keqing: "刻晴"
+  gacha_last_name_keqing: "璃月"
+
+  # === 特质 (Traits) ===
+  gacha_keqing_origin_trait: "玉衡星"
+  desc_gacha_keqing_origin_trait: "璃月七星之一，掌管"土地"与"民生"。她以雷霆般的速度处理政务，以利剑般的决断平定敌人。作为实干派的代表，她坚信人定胜天，凭借自身的力量开拓未来。\n\n效果：\n陆军士气：+15%\n训练度：+5%\n将领效能：+25%\n陆军规模上限：+10%\n\n"有什么问题，直接去解决就好了。武力可以帮上忙时，就武力解决。武力帮不上忙时，璃月还有我们玉衡在。""
+
+  gacha_keqing_awakened_trait: "斫断愚昧"
+  desc_gacha_keqing_awakened_trait: "既然身处乱世，就需要更强的力量来守护国家。刻晴深知这个道理，因此不断磨练自己的剑术与领导能力。\n\n效果：\n人力恢复速度：+20%\n招募时间：-25%\n步兵战斗力：+10%"
+
+  gacha_keqing_transcended_trait: "天街巡游"
+  desc_gacha_keqing_transcended_trait: "从天衡山巅到无妄坡底，刻晴的身影如同紫色的闪电划破天际。无论是在战场还是在政务上，她都能以最快的速度完成任务。\n\n效果：\n冲击伤害：+15%\n移动速度：+15%\n围城能力：+20%"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_keqing_modifier: "雷光的加护"
+  STATIC_MODIFIER_DESC_gacha_keqing_modifier: "「所谓神明，不过是比普通人更强的生命而已。我既然有了神之眼，就意味着我拥有了能够媲美"神"的可能性。」"
+  gacha_keqing_modifier: "玉衡之志"
+  gacha_keqing_modifier_desc: "刻晴的实干精神正在感染整个国家，人们开始相信自己的力量。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_keqing_c0_modifier: "紫薇座·零命"
+  STATIC_MODIFIER_NAME_gacha_keqing_c1_modifier: "雷厉"
+  STATIC_MODIFIER_NAME_gacha_keqing_c2_modifier: "苛征"
+  STATIC_MODIFIER_NAME_gacha_keqing_c3_modifier: "璇玑"
+  STATIC_MODIFIER_NAME_gacha_keqing_c4_modifier: "调停"
+  STATIC_MODIFIER_NAME_gacha_keqing_c5_modifier: "贯彻"
+  STATIC_MODIFIER_NAME_gacha_keqing_c6_modifier: "廉贞"
+
+  # === 事件 (Events) ===
+  gacha_keqing_events.1.title: "雷光闪耀"
+  gacha_keqing_events.1.desc: "随着雷光闪过，一位身着紫色服饰的女性出现在大殿中。她手持长剑，目光锐利而坚定。\n\n"我是璃月七星之一的玉衡，刻晴。听闻您治国有方，特来相助。不过，我可不相信什么神明的庇护——真正能改变这个世界的，是我们自己的双手和智慧。"\n\n她的话语中充满了自信与决断，仿佛没有什么困难能够阻挡她前进的脚步。"
+  gacha_keqing_events.1.a: "此乃吾国之幸！"
+
+  gacha_keqing_events.2.title: "紫电流转"
+  gacha_keqing_events.2.desc: "刻晴的力量得到了进一步的提升。她的剑术更加精湛，雷元素在她的刀刃上跳跃，仿佛要将一切敌人斩断。\n\n"力量的提升，是为了更好地守护这个国家。我会用这份力量，为您开辟更广阔的未来。"\n\n$gacha_text_reward_prestige_small$"
+  gacha_keqing_events.2.a: "继续前进！"
+
+  gacha_keqing_events.4.title: "璇玑无双"
+  gacha_keqing_events.4.desc: "刻晴已经达到了力量的巅峰。她周身环绕着紫色的雷光，每一次挥剑都能劈开山峦。\n\n"现在的我，已经可以为这个国家斩断一切阻碍。无论是外敌还是内患，都将在我的剑下灰飞烟灭。"\n\n她的存在本身，便是国家最强大的保障。\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_keqing_events.4.a: "天下无敌！"
+
+  gacha_keqing_events.11.title: "命之座·觉醒"
+  gacha_keqing_events.11.desc: "随着命星的闪耀，刻晴领悟了「斫断愚昧」的真意。她的剑术更加凌厉，能够更快地调集军队，击溃敌人。\n\n"只有不断磨练自己，才能在这个世界上立足。现在，我已经准备好迎接任何挑战了。"\n\n$gacha_text_reward_stability_small$"
+  gacha_keqing_events.11.a: "所向披靡！"
+
+  gacha_keqing_events.12.title: "命之座·超越"
+  gacha_keqing_events.12.desc: "刻晴展现出了「天街巡游」的姿态。她的身影如同闪电般在战场上穿梭，无人能够捕捉到她的踪迹。\n\n"速度，是胜利的关键。无论是在战场还是在政务上，我都不会让任何人等待。"\n\n$gacha_text_reward_legitimacy_small$"
+  gacha_keqing_events.12.a: "快如闪电！"
+

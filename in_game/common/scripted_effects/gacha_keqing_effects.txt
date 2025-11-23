@@ -1,0 +1,108 @@
+gacha_create_keqing_effect = {
+  # ==========================================
+  # 分支 A：已拥有 -> 命之座升级 (Duplicate)
+  # ==========================================
+  if = {
+    limit = { has_global_variable = gacha_keqing_is_summoned }
+
+    random_in_global_list = {
+      variable = gacha_obtained_characters
+      limit = { has_trait = gacha_keqing_origin_trait }
+      save_scope_as = existing_char
+    }
+
+    if = {
+      limit = { scope:existing_char = { employer = root } }
+
+      # --- 先处理角色数值变化 ---
+      scope:existing_char = {
+        if = {
+          limit = { NOT = { var:gacha_constellation_lvl >= 6 } }
+          change_variable = { name = gacha_constellation_lvl add = 1 }
+          gacha_apply_constellation_stats_effect = { who = keqing }
+        }
+      }
+
+      # --- 然后在root作用域下，根据【新的】命座等级触发对应的事件 ---
+      # 使用作用域切换传递角色上下文
+      if = {
+        limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+        # 命座已满 (C6+)
+        scope:existing_char = {
+          root = {
+            trigger_event_non_silently = { id = gacha_keqing_events.4 }
+          }
+        }
+      }
+      else_if = {
+        limit = { scope:existing_char = { var:gacha_constellation_lvl = 4 } }
+        # 正好达到4命 (超越)
+        scope:existing_char = {
+          root = {
+            trigger_event_non_silently = { id = gacha_keqing_events.12 }
+          }
+        }
+      }
+      else_if = {
+        limit = { scope:existing_char = { var:gacha_constellation_lvl = 2 } }
+        # 正好达到2命 (觉醒)
+        scope:existing_char = {
+          root = {
+            trigger_event_non_silently = { id = gacha_keqing_events.11 }
+          }
+        }
+      }
+      else = {
+        # 其他命座提升 (1, 3, 5命)
+        scope:existing_char = {
+          root = {
+            trigger_event_non_silently = { id = gacha_keqing_events.2 }
+          }
+        }
+      }
+      
+      # 清理existing_char作用域
+      clear_saved_scope = existing_char
+    }
+    else = {
+      # 归属权冲突：是别人的角色
+      add_gold = 100
+      add_prestige = 50
+      
+      # 修复：清理existing_char作用域
+      clear_saved_scope = existing_char
+    }
+  }
+
+  # ==========================================
+  # 分支 B：未拥有 -> 首次创建 (New)
+  # ==========================================
+  else = {
+    create_character = {
+      first_name = gacha_first_name_keqing
+      last_name  = gacha_last_name_keqing
+      female     = yes
+      age        = 22
+      culture  = culture:tougokud          # 原设文化（游戏内有效）
+      religion = religion:shintō           # 原设宗教（游戏内有效）
+      adm = { 75 90 } dip = { 70 85 } mil = { 85 100 }
+      create_in_limbo = yes
+      save_scope_as = gacha_keqing_new_char
+    }
+    scope:gacha_keqing_new_char = {
+      gacha_register_new_character = { who = keqing }
+    }
+    set_global_variable = { name = gacha_keqing_is_summoned value = 1 }
+
+    # --- 触发初次见面事件 ---
+    # 使用作用域切换传递角色上下文，不再使用save_event_target
+    scope:gacha_keqing_new_char = {
+      root = {
+        trigger_event_non_silently = { id = gacha_keqing_events.1 }
+      }
+    }
+    
+    # 清理作用域，防止污染下次抽卡
+    clear_saved_scope = gacha_keqing_new_char
+  }
+}

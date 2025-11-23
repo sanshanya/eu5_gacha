@@ -1,0 +1,18 @@
+
+pdxmesh = {
+	name = "gacha_keqing_01_mesh"
+	file = "gacha_hm_prophet.mesh"
+	scale = 1
+	meshsettings = {
+		name = "prophet_shieldShape"
+		index = 0
+		texture_diffuse = "gacha_keqing_1024_0.dds"
+		texture_specular = "gacha_keqing_1024_0.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/hmportrait.shader"
+	}
+}
+entity = {
+	name = "gacha_keqing_01_entity"
+	pdxmesh = "gacha_keqing_01_mesh"
+}

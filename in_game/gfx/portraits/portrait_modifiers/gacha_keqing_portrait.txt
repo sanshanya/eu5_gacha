@@ -1,0 +1,22 @@
+gacha_keqing_portrait = {
+  usage    = game
+  priority = 100
+
+  gacha_keqing_01 = {
+    dna_modifiers = {
+      accessory = {
+        mode     = replace
+        gene     = gacha_keqing_props_1
+        template = gacha_keqing_01
+        value    = 0.5
+      }
+    }
+    weight = {
+      base = 0
+      modifier = {
+        add = 255
+        has_trait = gacha_keqing_origin_trait
+      }
+    }
+  }
+}

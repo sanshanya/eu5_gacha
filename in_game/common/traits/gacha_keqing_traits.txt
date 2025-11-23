@@ -1,0 +1,39 @@
+gacha_keqing_origin_trait = {
+  category = general
+  allow = {
+    always = no
+  }
+
+  modifier = {
+    land_morale_modifier        = 0.15   # +15% 陆军士气
+    discipline                  = 0.05   # +5% 训练度
+    general_effectiveness       = 0.25   # +25% 将领效能
+    land_forcelimit_modifier    = 0.10   # +10% 陆军规模上限
+  }
+}
+
+gacha_keqing_awakened_trait = {
+  category = general
+  allow = {
+    always = no
+  }
+
+  modifier = {
+    manpower_recovery_speed     = 0.20   # +20% 人力恢复速度
+    global_regiment_recruit_speed = -0.25  # -25% 招募时间
+    infantry_power              = 0.10   # +10% 步兵战斗力
+  }
+}
+
+gacha_keqing_transcended_trait = {
+  category = general
+  allow = {
+    always = no
+  }
+
+  modifier = {
+    shock_damage                = 0.15   # +15% 冲击伤害
+    movement_speed              = 0.15   # +15% 移动速度
+    siege_ability               = 0.20   # +20% 围城能力
+  }
+}
