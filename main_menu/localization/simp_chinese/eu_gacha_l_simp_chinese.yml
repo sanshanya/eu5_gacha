@@ -2,21 +2,21 @@
   # ============================================================
   # §Y Part 1: Reusable Text Snippets (可复用文本片段) §!
   # ============================================================
-  gacha_text_reward_prestige_small: "你获得了 10 点威望。"
-  gacha_text_reward_prestige_medium: "你获得了 50 点威望。"
-  gacha_text_reward_legitimacy_small: "你获得了 5 点正统性。"
-  gacha_text_reward_legitimacy_medium: "你获得了 20 点正统性。"
-  gacha_text_reward_stability_small: "国家稳定度提升了 0.25 。"
-  gacha_text_reward_prestige_overflow: "溢出的祈愿之力转化为 2 点国家威望。"
-  gacha_text_reward_gold_refund: "祭坛上只留有些许残破的兵刃与物资 (返还 1 金)。"
+  gacha_text_reward_prestige_small: "你的威名在邻国间流传。（威望 +10）"
+  gacha_text_reward_prestige_medium: "此次神迹令你的声望如日中天。（威望 +50）"
+  gacha_text_reward_legitimacy_small: "民众对你的统治更加信服。（正统性 +5）"
+  gacha_text_reward_legitimacy_medium: "王权的合法性得到了神圣的背书。（正统性 +20）"
+  gacha_text_reward_stability_small: "社会秩序因祥瑞而稳固。（稳定度 +0.25）"
+  gacha_text_reward_prestige_overflow: "满盈的星辰之力化作了国家的荣耀。（溢出转化为威望）"
+  gacha_text_reward_gold_refund: "祭坛之上，仅余些许残兵旧物资，折价充入国库。（返还 1 金）"
 
   # ============================================================
   # §Y Part 2: Gacha System Localization (抽卡系统通用文本) §!
   # ============================================================
 
   # === 交互按钮 ===
-  gacha_events_interaction: "祈愿：异世相遇"
-  gacha_events_interaction_desc: "[actor.GetName]将设坛祈愿，感召来自异界的英灵与智者。"
+  gacha_events_interaction: "举行：异世降灵祭典"
+  gacha_events_interaction_desc: "[actor.GetName]将设立祭坛，以此世的财帛，感召彼方星海的英灵与智者。"
 
   # === 核心修饰符 (Core Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_core_modifier: "祈愿的加护"
@@ -38,18 +38,18 @@
   gacha_not_enough_gold_tt: "国库空虚，无法筹措祈愿所需的祭品。"
 
   # === 结果：凡铁/蓝光 (.2) ===
-  gacha_events.2.title: "祈愿结果：凡铁"
-  gacha_events.2.desc: "星光黯淡，似乎未有英灵回应你的呼唤。\n\n除了寂静，什么也没有留下。"
-  gacha_events.2.a: "聊胜于无"
+  gacha_events.2.title: "祈愿结果：寂静星空"
+  gacha_events.2.desc: "群星缄默，星辉黯淡，似乎并无英灵回应今夜的呼唤，唯有祭坛上冷风掠过。\n\n除了徒劳的寂静，什么也没有留下。"
+  gacha_events.2.a: "记下此兆"
 
   # === 结果：四星奖励 (.20) ===
-  gacha_events.20.title: "祈愿结果：馈赠"
-  gacha_events.20.desc: "虽然未能呼唤到五星角色，但星辉化作了实在的馈赠。"
-  gacha_events.20.desc_gold: "星光凝结成一袋闪耀的金币。或许用来继续祈愿也是个好主意。"
-  gacha_events.20.desc_prestige: "星辉化作一纸号令，提升了我们在诸国间的声望。"
-  gacha_events.20.desc_legitimacy: "星光在宫廷回荡，民众对王权的信任更为稳固。"
-  gacha_events.20.desc_stability: "星光照耀国土，国家变得更加稳定和谐。"
-  gacha_events.20.a: "收下馈赠"
+  gacha_events.20.title: "祈愿结果：星辰的馈赠"
+  gacha_events.20.desc: "虽未有英杰降临，星海却没有辜负你的诚意。散落的星辉凝聚成实质的恩赐，充盈国家的府库。"
+  gacha_events.20.desc_gold: "星光汇成一袋闪亮的金币，或许可以再次诱引命运。"
+  gacha_events.20.desc_prestige: "星辉化作一纸诏令，你的名讳传遍诸国。"
+  gacha_events.20.desc_legitimacy: "星光在宫廷回响，巩固民众对王座的信任。"
+  gacha_events.20.desc_stability: "星光照耀田野，国土吐纳着安定的呼吸。"
+  gacha_events.20.a: "收下恩赐"
 
   # === 结果：小保底/歪了 (.3) ===
   gacha_events.3.title: "祈愿结果：小保底"
@@ -125,7 +125,7 @@
 
   # === 特质 (Traits) ===
   gacha_xinhai_origin_trait: "现人神巫女"
-  desc_gacha_xinhai_origin_trait: "这位来自海祇岛的领袖拥有卓越的战略眼光和治愈能力。作为现人神巫女，她不仅是精神领袖，更是抵抗军的最高指挥官。\n\n「兵法在于，料敌先机。」"
+  desc_gacha_xinhai_origin_trait: "海祇岛的最高领袖，集神权与军权于一身。她深谙「庙算」之道，善于在战前推演一切变数，以最小代价换取最大胜利。\n\n「兵法之要在于料敌先机，治国之要在于安抚人心。」"
 
   gacha_xinhai_awakened_trait: "海月之誓"
   desc_gacha_xinhai_awakened_trait: "作为海祇岛的领袖，我带领大家逆流前行的日子也过去了许久。我们能有如今这样和谐安宁的时光，你的努力必不可少。\n\n效果：\n全局阶层满意度恢复速度：+25%\n全局疾病抗性：+25%\n全局荒废度恢复速度：+50%"
@@ -152,7 +152,7 @@
 
   # === 事件 (Events) ===
   gacha_xinhai_events.1.title: "深海的明珠"
-  gacha_xinhai_events.1.desc: "一位身着蓝白礼服的少女缓缓步入大殿。她自称来自遥远的海祇岛，是那里的现人神巫女。\n\n「妾身珊瑚宫心海。听闻阁下治国有方，愿以海祇岛兵法相助。不过，妾身精力有限，还望莫要安排过多的繁文缛节。」\n\n她手中的兵书似乎记录着无数战役的胜负手。得此一人，吾国之军政必将如虎添翼。"
+  gacha_xinhai_events.1.desc: "一位身着蓝白礼服的少女步入殿堂，步履轻盈如海面微澜。她自称来自海祇岛，不仅是现人神巫女，更是统御反抗军的谋主。\n\n「妾身珊瑚宫心海。听闻阁下治国有方，愿以海祇兵法相佐。不过，比起案牍劳形，妾身更擅长在幕后推演大局。还请……稍微控制一下工作量。」\n\n她手中的兵书蕴含着逆转战局的智慧。得此军师，国之军政必如潮汐般进退有度。"
   gacha_xinhai_events.1.a: "恭迎军师入朝。"
 
   gacha_xinhai_events.2.title: "锦囊妙计"
@@ -181,7 +181,7 @@
 
   # === 特质 (Traits) ===
   gacha_raiden_origin_trait: "御建鸣神主尊"
-  desc_gacha_raiden_origin_trait: "稻妻幕府的最高主宰，许以臣民「永恒」之梦的殊胜尊贵之身。\n\n「此身即是尘世最为殊胜尊贵之身。」"
+  desc_gacha_raiden_origin_trait: "稻妻幕府的最高主宰，以无上的威权许诺臣民「永恒」的殊胜之身。在她的注视下，国家机器如精密钟表般运转，动荡则被雷霆燃尽。\n\n「此身即是尘世最为殊胜尊贵之身，应持天下之大权。」"
 
   gacha_raiden_awakened_trait: "梦想一心"
   desc_gacha_raiden_awakened_trait: "斩断杂念，只为永恒。那无想的一刀，终将为这个国度带来长久的安宁。\n\n效果：\n行政效率：+5%\n全局叛乱：-2.00"
@@ -208,7 +208,7 @@
 
   # === 事件 (Events) ===
   gacha_raiden_events.1.title: "鸣神以此身许诺"
-  gacha_raiden_events.1.desc: "伴随着一道划破天际的紫雷，一位威严的女性降临在宫殿之中。她手持薙刀，眼神冷冽而深邃。\n\n「我是雷电将军，稻妻幕府的最高主宰。既然你已通过了试炼，我便许你一诺：此身将助你扫清一切阻碍，直至永恒降临。」\n\n空气中弥漫着雷元素的威压，令人不由自主地想要臣服。"
+  gacha_raiden_events.1.desc: "苍穹被紫雷撕裂，空气中弥漫着令人战栗的静电。一位威严的女性降临王座侧旁，手持薙刀，眼神如深渊般冷冽。\n\n「吾乃雷电将军。既然你通过了试炼，吾便许你一诺：此身将化为你的利刃，为你斩断通往『永恒』路上的一切阻碍。」\n\n那是凌驾凡俗王权之上的威压，令人不禁俯首。"
   gacha_raiden_events.1.a: "为了永恒！"
 
   gacha_raiden_events.2.title: "雷光闪烁"
@@ -216,7 +216,7 @@
   gacha_raiden_events.2.a: "威光无赦。"
 
   gacha_raiden_events.4.title: "永恒之梦"
-  gacha_raiden_events.4.desc: "雷电将军已臻至化境。她不再仅仅是威严的统治者，更是守护永恒的化身。\n\n「现在的我，已能斩断一切迷惘。无论是过去、现在，还是未来，都将由我亲手铸就。」\n\n整个国家都沐浴在她的雷光之下，无人敢于挑战您的权威。\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_raiden_events.4.desc: "将军已臻至化境，不再只是统治者，而是「永恒」本身的形象。\n\n「此刻的我，可斩尽迷惘与业障。过去与未来的篇章，皆由我亲手铸就。」\n\n在雷光庇护下，你的意志即是国家意志，无人敢违。\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
   gacha_raiden_events.4.a: "此即，永恒！"
 
   gacha_raiden_events.11.title: "命之座·觉醒"
@@ -274,7 +274,7 @@
 
   # === 特质 (Traits) ===
   gacha_keqing_origin_trait: "玉衡星"
-  desc_gacha_keqing_origin_trait: "璃月七星之一，掌管土地与民生。她以雷霆般的速度处理政务，以利剑般的决断平定敌人。作为实干派的代表，她坚信人定胜天，凭借自身的力量开拓未来。\n\n有什么问题，直接去解决就好了。武力可以帮上忙时，就武力解决。武力帮不上忙时，璃月还有我们玉衡在。」"
+  desc_gacha_keqing_origin_trait: "璃月七星之玉衡，坚定的变革者与实干家。她对因循守旧的官僚主义深恶痛绝，主张以雷霆手段提升行政效率。在她眼中，人治终将取代神治。\n\n「变革的时机已经成熟。如果旧的制度阻碍了发展，那就由我来打破它。」"
 
   gacha_keqing_awakened_trait: "斫断愚昧"
   desc_gacha_keqing_awakened_trait: "既然身处乱世，就需要更强的力量来守护国家。刻晴深知这个道理，因此不断磨练自己的剑术与领导能力。\n\n效果：\n人力恢复速度：+20%\n招募时间：-25%\n步兵战斗力：+10%"
@@ -297,11 +297,11 @@
   STATIC_MODIFIER_NAME_gacha_keqing_c5_modifier: "贯彻"
   STATIC_MODIFIER_NAME_gacha_keqing_c6_modifier: "廉贞"
   STATIC_MODIFIER_NAME_gacha_keqing_c6_country_modifier: "玉衡治世之席"
-  STATIC_MODIFIER_DESC_gacha_keqing_c6_country_modifier: "刻晴扩充议政席次，将效率与实干精神刻进律令，让内阁运作如雷电般迅捷。"
+  STATIC_MODIFIER_DESC_gacha_keqing_c6_country_modifier: "刻晴重组冗余的官僚机构，把「实干」刻入律法。内阁的决策如雷电般迅捷，不再容忍拖沓。"
 
   # === 事件 (Events) ===
   gacha_keqing_events.1.title: "雷光闪耀"
-  gacha_keqing_events.1.desc: "随着雷光闪过，一位身着紫色服饰的女性出现在大殿中。她手持长剑，目光锐利而坚定。\n\n「我是璃月七星之一的玉衡，刻晴。听闻您治国有方，特来相助。不过，我可不相信什么神明的庇护——真正能改变这个世界的，是我们自己的双手和智慧。」\n\n她的话语中充满了自信与决断，仿佛没有什么困难能够阻挡她前进的脚步。"
+  gacha_keqing_events.1.desc: "紫色雷楔划破长空，一位干练的女性瞬息落在殿中。她环视四周，仿佛在瞬间就评估出朝局弊端。\n\n「璃月七星·刻晴。听闻贵国正值用人之际，我特来助力。但我先说明：我这里没有神迹，只有效率和实干。如果准备好迎接变革，我们就立即开始。」\n\n她的话语锋利如剑，毫不拖泥带水。"
   gacha_keqing_events.1.a: "此乃吾国之幸！"
 
   gacha_keqing_events.2.title: "紫电流转"
@@ -330,7 +330,7 @@
 
   # === 特质 (Traits) ===
   gacha_hutao_origin_trait: "往生堂主"
-  desc_gacha_hutao_origin_trait: "往生堂第七十七代堂主，精通生死之道的少女。她看似活泼开朗，实则对生死有着超乎寻常的深刻理解。手持护摩之杖，以蝶火引渡亡灵。\n\n「呀，哈哈，吓到你了吧？」\n\n「没关系啦，我这不是来帮你忙的嘛。」"
+  desc_gacha_hutao_origin_trait: "往生堂第七十七代堂主，行走于阴阳两界的奇妙少女。她以独特方式诠释死亡，让生者无憾，死者安息，使灾后民心得以抚慰。\n\n「呀，哈哈，吓到你了吧？」\n\n「放心嘛，死亡也只是另一场盛大典礼。我也可以帮你把活人事儿理顺哦。」"
 
   gacha_hutao_awakened_trait: "血梅香"
   desc_gacha_hutao_awakened_trait: "领悟了「最不安神」的真意，胡桃的力量得到了进一步的升华。她的火焰变得更加炽烈，如同盛开在冬日的血色梅花。\n\n效果：\n顾问能力：+2\n思潮传播速度：+15%\n革命抵抗：+0.05"
@@ -357,7 +357,7 @@
 
   # === 事件 (Events) ===
   gacha_hutao_events.1.title: "蝶舞秋庭"
-  gacha_hutao_events.1.desc: "一位活泼的少女突然出现在大殿中，手持护摩之杖，笑容灿烂。她自称是往生堂第七十七代堂主，胡桃。\n\n「哈喽！我是往生堂的堂主胡桃，专业送人上路五百年！啊，别误会，我是说帮人安详地走完最后一程啦。」\n\n虽然年纪轻轻，但她的话语中却透露着对生死的深刻理解。周身环绕着幽幽的蝶火，既温暖又神秘。"
+  gacha_hutao_events.1.desc: "一位古灵精怪的少女不知何时倚在王座旁，把玩着护摩之杖。她的眼里闪着梅花般的光，笑容里藏着看透生死的狡黠。\n\n「呀！吓到了吗？我是往生堂堂主胡桃。看你这一脸操劳的样子……放心，还没到我接单的时候呢！不过，帮你打理国家大事，顺便推销一下业务，也是可以的哟。」\n\n她跳脱的语气中却带来奇异的安宁，蝶火环绕，让人心头一静。"
   gacha_hutao_events.1.a: "有趣的客人。"
 
   gacha_hutao_events.2.title: "命火燃烧"
@@ -398,7 +398,7 @@
 
   # === 特质 (Traits) ===
   gacha_fischl_origin_trait: "幽夜净土皇女"
-  desc_gacha_fischl_origin_trait: "自称来自「幽夜净土」的断罪之皇女，与能言的夜鸦眷属奥兹一同巡视这个世界。虽然言辞晦涩难懂，但其敏锐的洞察力与夜鸦的侦查能力无人能及。\n\n「我即是断罪之皇女菲谢尔，此乃裁断世界森罗万象之崇高眼眸！」"
+  desc_gacha_fischl_origin_trait: "自称流落此世的「断罪之皇女」，带着名为「奥兹」的夜鸦眷属巡视诸国。她的言辞充满戏剧性隐喻，但那只夜鸦的眼睛能轻易刺穿邻国阴谋。\n\n「我即是断罪之皇女菲谢尔，此乃裁断世界森罗万象之崇高眼眸！……奥兹，把那边的文件递给我。」"
 
   gacha_fischl_awakened_trait: "断罪之雷"
   desc_gacha_fischl_awakened_trait: "皇女的左眼「奥兹」能洞察因果的丝线，降下紫色的雷霆审判一切不义。在战场上，夜鸦的协同攻击将成为敌人的噩梦。\n\n效果：\n将领冲击：+1\n炮兵战斗力：+10%\n要塞防御：+10%"
@@ -425,7 +425,7 @@
 
   # === 事件 (Events) ===
   gacha_fischl_events.1.title: "断罪皇女降临"
-  gacha_fischl_events.1.desc: "伴随着夜鸦的鸣叫，一位身着华丽服饰的少女出现在大殿中。她左眼戴着眼罩，周身环绕着紫色的雷光。\n\n「吾乃断罪皇女菲谢尔·冯·露弗施洛斯·那菲多特！来自幽夜纯土的皇女，奉命审视此界之罪孽！」\n\n她的随行夜鸦奥兹飞到一旁，用更加易懂的语言翻译道：「小姐的意思是，她很高兴来到这里为您效力。」"
+  gacha_fischl_events.1.desc: "伴随着夜鸦振翅，一位金发少女摆出极其夸张的姿势降临大殿。遮蔽左眼的眼罩散发着神秘气息——至少她自己这么认为。\n\n菲谢尔：「欢呼吧！本皇女跨越因果的视界，降临于此枯竭之地，赐予尔等幽夜的荣光！」\n\n奥兹（叹气）：「小姐的意思是，很高兴见到您，并愿意为您效劳。」\n\n交流或许有些独特，但你感觉在这个组合面前，没有秘密能被藏住。"
   gacha_fischl_events.1.a: "欢迎您，断罪皇女。"
 
   gacha_fischl_events.2.title: "命运的宣告"
@@ -441,7 +441,7 @@
   gacha_fischl_events.11.a: "雷霆之怒！"
 
   gacha_fischl_events.12.title: "命之座·超越"
-  gacha_fischl_events.12.desc: "菲谢尔展现出了「皇女的幻梦」的姿态。夜鸦奥兹的形态愈发凝实，紫色的羽翼舒展开来。\n\n「这便是幻想与现实交织之处！吾之眷属，以吾之名，降下制裁！」\n\n奥兹：「这次的力量确实很强大，小姐。」"
+  gacha_fischl_events.12.desc: "菲谢尔彻底解放了「皇女的幻梦」。在她的领域内，幻想与现实的界限被打破，夜鸦的黑翼遮蔽了天空。\n\n菲谢尔：「这便是终焉的序曲！因果的丝线已尽在掌握，名为『现实』的剧本将由本皇女重新书写！」\n\n奥兹：「小姐现在的力量非常强大，请务必善用。」"
   gacha_fischl_events.12.a: "幻想成真！"
 
   # ============================================================
@@ -454,7 +454,7 @@
 
   # === 特质 (Traits) ===
   gacha_nahida_origin_trait: "智慧女神"
-  desc_gacha_nahida_origin_trait: "须弥的神明，小吉祥草王。她深居净善宫，却心系天下万物。作为智慧的化身，她能极大地促进国家的科研与文化发展。\n\n「知识，若是不能分享，便失去了意义。」"
+  desc_gacha_nahida_origin_trait: "须弥的神明，布耶尔，意识与世界树相连。虽身居净善宫，她知晓万物的运行逻辑。作为顾问，她提供远超时代的知识体系，能极大促进科研与文化。\n\n「知识是通往未来的阶梯，而我，愿做那个扶梯的人。」"
 
   gacha_nahida_awakened_trait: "梦境编织"
   desc_gacha_nahida_awakened_trait: "纳西妲能够进入并安抚人们的梦境，消除恐惧与迷茫。在她的引导下，民众的思想空前统一，动荡与不安烟消云散。\n\n效果：\n国家动乱度：-2.00\n思潮传播速度：+20%\n宗教统一度：+25%"
@@ -481,7 +481,7 @@
 
   # === 事件 (Events) ===
   gacha_nahida_events.1.title: "草之智慧"
-  gacha_nahida_events.1.desc: "一位看似年幼的少女出现在大殿中，她有着翠绿色的长发和纯净的眼眸。虽然外表稚嫩，但她的言语中却蕴含着超越常人的智慧。\n\n「你好呀~我是纳西妲，掌管智慧的草神。虽然我看起来小小的，但我已经活了五百年了哦。我可以帮助你更好地治理国家，让每个人都能幸福快乐地生活~」\n\n她的笑容温柔而真挚，仿佛能看透人心。"
+  gacha_nahida_events.1.desc: "殿内并未响起惊雷或异象，一位白发绿瞳的小神明只是静静站在那里，仿佛她一直都在。她的眼神清澈如林间朝露，却深邃如夜空。\n\n「初次见面，我是纳西妲。世界树告诉我，你正在为国家的未来而迷茫。虽然我的身体不大，但也许……我的智慧能为你解开那些缠绕的死结。要不要一起做个关于好梦的实验呢？」\n\n她的声音温柔理性，抚平了朝堂上的焦躁。"
   gacha_nahida_events.1.a: "欢迎您，智慧之神。"
 
   gacha_nahida_events.2.title: "智慧增长"
@@ -493,7 +493,7 @@
   gacha_nahida_events.4.a: "智慧照耀世界！"
 
   gacha_nahida_events.11.title: "命之座·觉醒"
-  gacha_nahida_events.11.desc: "纳西妲领悟了「正觉善见」的真意。她能够更清晰地看到事物的本质，洞察隐藏的真相。\n\n「嗯...这样就能更好地理解大家的内心了。知道别人在想什么，就能更好地帮助他们呢~」"
+  gacha_nahida_events.11.desc: "纳西妲领悟了「正觉善见」的权能。她能透过现象看到本质，洞察人心深处的渴望与恐惧。\n\n「每个人都是一颗星，只要读懂他们的轨迹，就没有解不开的误会。治理国家也是如此，要听懂风的声音。」"
   gacha_nahida_events.11.a: "洞察一切！"
 
   gacha_nahida_events.12.title: "命之座·超越"
@@ -512,13 +512,13 @@
 
   # === 特质 (Traits) ===
   gacha_klee_origin_trait: "逃跑的太阳"
-  desc_gacha_klee_origin_trait: "西风骑士团的「火花骑士」，拥有极强的爆破天赋。虽然经常因为过度破坏被关禁闭，但她在攻坚战中的破坏力无人能出其右。\n\n「城里放炮，禁闭室报道；炸弹伤人，琴找上门...」"
+  desc_gacha_klee_origin_trait: "西风骑士团的「火花骑士」，拥有与年龄不符的毁灭性火力。对她来说，炸鱼与攻城没有本质区别——都是快乐的爆炸。请务必注意灾后重建的预算。\n\n「只要把看不顺眼的东西全部炸飞，大家就都安全啦！这就叫……防御工事？对吧？」"
 
   gacha_klee_awakened_trait: "蹦蹦炸弹"
   desc_gacha_klee_awakened_trait: "可莉制作的炸弹不仅威力巨大，还会分裂出无数诡雷。这种无差别的火力覆盖能瞬间瓦解敌军的阵型。\n\n效果：\n陆军火力伤害：+10%\n冲击伤害：+5%\n敌军损耗：+10%"
 
   gacha_klee_transcended_trait: "轰轰火花"
-  desc_gacha_klee_transcended_trait: "全功率全开！幸运与破坏力的完美结合。虽然所到之处往往化为焦土，但对于任何试图阻挡你们的敌人来说，这就是绝对的毁灭。\n\n效果：\n训练度：+5%\n炮兵火力：+15%\n省份荒废度月度增长：+0.05"
+  desc_gacha_klee_transcended_trait: "全功率全开！幸运与破坏力的完美结合。她所经之处常化为焦土，但对敢于阻挡帝国的敌人而言，这便是绝对毁灭。\n\n效果：\n训练度：+5%\n炮兵火力：+15%\n省份荒废度月度增长：+0.05（破坏力过于惊人）"
 
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_klee_modifier: "火花的加护"
@@ -539,7 +539,7 @@
 
   # === 事件 (Events) ===
   gacha_klee_events.1.title: "火花骑士报到！"
-  gacha_klee_events.1.desc: "一个提着红色背包的小女孩蹦蹦跳跳地跑进大殿，她有着金色的头发和红色的眼睛，脸上挂着灿烂的笑容。\n\n「哒哒哒！可莉来啦~！」她举起手中的炸弹，兴奋地说：「我是骑士团的火花骑士可莉！虽然琴团长总是把可莉关禁闭，但可莉可厉害了！可以帮你炸掉所有的坏蛋！」\n\n她的眼睛闪闪发光，似乎已经在计划下一次的爆炸了。"
+  gacha_klee_events.1.desc: "一个背着红色书包的小女孩蹦蹦跳跳闯进了严肃的议会厅，卫兵还没反应过来，她就掏出了一枚还在冒烟的炸弹。\n\n「哒哒哒！可莉来啦~！」她把炸弹当礼物举高，「我是火花骑士可莉！琴团长说我要出来‘历练’……总之，只要是坏人，或者看起来很坚固的城墙，交给可莉就对啦！」\n\n看着她纯真的笑容和手里的危险品，你不禁为敌国城防感到一丝同情。"
   gacha_klee_events.1.a: "欢迎你，可莉！"
 
   gacha_klee_events.2.title: "更大的爆炸！"

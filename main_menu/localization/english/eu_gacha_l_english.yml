@@ -1,0 +1,557 @@
+l_english:
+  # ============================================================
+  # §Y Part 1: Reusable Text Snippets §!
+  # ============================================================
+  gacha_text_reward_prestige_small: "Your name drifts between courts and taverns. (Prestige +10)"
+  gacha_text_reward_prestige_medium: "This omen makes your renown blaze like the noonday sun. (Prestige +50)"
+  gacha_text_reward_legitimacy_small: "The people cleave tighter to your rule. (Legitimacy +5)"
+  gacha_text_reward_legitimacy_medium: "The crown's mandate is hallowed anew. (Legitimacy +20)"
+  gacha_text_reward_stability_small: "Order settles over the realm like a gentle rain. (Stability +0.25)"
+  gacha_text_reward_prestige_overflow: "Full-to-brimming starlight spills over into the realm's glory. (Overflow to Prestige)"
+  gacha_text_reward_gold_refund: "Only battered gear and scraps remain upon the altar, tallied back into the treasury. (Refund 1 gold)"
+
+  # ============================================================
+  # §Y Part 2: Gacha System Localization §!
+  # ============================================================
+
+  # === Interaction Buttons ===
+  gacha_events_interaction: "Conduct Rite: Otherworldly Descent"
+  gacha_events_interaction_desc: "[actor.GetName] shall raise an altar and, with this world's silver, beckon heroes and sages from beyond the stars."
+
+  # === Core Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_core_modifier: "Blessing of Wishes"
+  STATIC_MODIFIER_DESC_gacha_core_modifier: "Blessing of Wishes"
+
+  MODIFIER_TYPE_NAME_gacha_core: "Travelers from Another World"
+  MODIFIER_TYPE_DESC_gacha_core: "\"Travelers from Another World\""
+
+  # === Wish Main Menu (.1) ===
+  gacha_events.1.title: "Wish: Meeting the Otherworld"
+  gacha_events.1.desc_guaranteed: "This wish is blessed; the next pull is guaranteed to be the featured character!\nInvest resources and await fate's answer."
+  gacha_events.1.desc_not_guaranteed: "Invest resources and await fate's answer."
+  gacha_events.1.a: "Offer Gold (Wish)"
+  gacha_events.1.a10: "Grand Wish (Ten-pull)"
+  gacha_events.1.starlight_exchange: "Starlight Exchange (requires 3 Starlight)"
+  gacha_free_first_roll: "Free first pull (newcomer bonus)"
+  gacha_events.1.b: "Wait and see"
+  gacha_events.1.single_lack: "Insufficient offering"
+  gacha_not_enough_gold_tt: "The treasury is empty; we cannot prepare the offerings for a wish."
+
+  # === Result: Blue/Purple (.2) ===
+  gacha_events.2.title: "Wish Result: Silent Firmament"
+  gacha_events.2.desc: "The firmament holds its breath, starshine guttering low. No spirit answers tonight, and only the cold wind haunts the altar.\n\nNothing remains but the futility of silence."
+  gacha_events.2.a: "Mark the omen"
+
+  # === Result: Four-star Reward (.20) ===
+  gacha_events.20.title: "Wish Result: Gift of the Stars"
+  gacha_events.20.desc: "No champion stepped through the gate, yet the starry sea did not scorn your devotion. Scattered light congeals into a tangible boon, filling the coffers of state."
+  gacha_events.20.desc_gold: "Starlight pools into a purse of bright coin. Perhaps spend it to tempt fate once more."
+  gacha_events.20.desc_prestige: "Starlight becomes a sealed decree, your name carried further across the courts of men."
+  gacha_events.20.desc_legitimacy: "Starlight hums within the palace, steadying the people's trust in the throne."
+  gacha_events.20.desc_stability: "Starlight bathes the fields; the realm breathes in calm harmony."
+  gacha_events.20.a: "Receive the boon"
+
+  # === Result: Soft Pity (.3) ===
+  gacha_events.3.title: "Wish Result: Soft Pity"
+  gacha_events.3.desc: "A burst of gold! Yet stepping from the star gate is the Raiden Shogun of Inazuma, not the featured strategist.\n\nThough the 50/50 was lost, pulling a standard five-star is still a fine haul. The next wish is guaranteed to be the featured character!"
+  gacha_events.3.a: "So be it"
+
+  # === Result: Max Constellation (.4) ===
+  gacha_events.4.title: "Constellations Perfected"
+  gacha_events.4.desc: "This hero's power has reached perfection.\n\n$gacha_text_reward_prestige_overflow$"
+  gacha_events.4.a: "Put it to use"
+
+  # === Result: Golden Show (.5) ===
+  gacha_events.5.title: "Golden Radiance!"
+  gacha_events.5.desc: "A dazzling golden meteor streaks across the sky, bathing the altar in holy light...\n\nThis aura is extraordinary!"
+  gacha_events.5.a: "Reveal fate!"
+
+  # === Other Results ===
+  gacha_events.6.title: "Unexpected Windfall"
+  gacha_events.6.desc: "No hero answered, but you found ancient treasure in a corner of the altar.\n\nGain: 500 gold"
+  gacha_events.common.a: "Accept the boon"
+
+  gacha_events.7.title: "Famed Far and Wide"
+  gacha_events.7.desc: "Your devout wish moved the onlookers; your prestige rose.\n\nGain: 100 Prestige"
+
+  gacha_events.8.title: "Mandate of Heaven"
+  gacha_events.8.desc: "Though no one was summoned, this auspicious sign strengthened your legitimacy.\n\nGain: 20 Legitimacy"
+
+  # ============================================================
+  # §Y Starlight Exchange System §!
+  # ============================================================
+
+  # === Starlight Variable ===
+  gacha_starlight: "Starlight"
+  gacha_starlight_desc: "A crystallized blessing from a maxed constellation character, usable to exchange for a five-star character. Three Starlight may be exchanged for any five-star."
+
+  # === Starlight Gain Event ===
+  gacha_events.30.title: "Glow of Constellations"
+  gacha_events.30.desc: "This hero's strength is perfected and cannot grow further. Their constellation turns into a shining Starlight, awaiting a new encounter.\n\nYou gained §Y1 Starlight§!\nCurrent Starlight: §Y[ROOT.GetVariable('gacha_starlight')|0]§!"
+  gacha_events.30.a: "Collect the Starlight"
+
+  # === Starlight Exchange Events ===
+  gacha_starlight_events.1.title: "Starlight Exchange"
+  gacha_starlight_events.1.desc: "With the blessing of three constellations, you may choose to summon any five-star hero.\n\nCurrent Starlight: §Y[ROOT.GetVariable('gacha_starlight')|0]§!"
+  gacha_starlight_events.1.xinhai: "Exchange: Sangonomiya Kokomi (-3 Starlight)"
+  gacha_starlight_events.1.raiden: "Exchange: Raiden Shogun (-3 Starlight)"
+  gacha_starlight_events.1.keqing: "Exchange: Keqing (-3 Starlight)"
+  gacha_starlight_events.1.furina: "Exchange: Furina (-3 Starlight)"
+  gacha_starlight_events.1.hutao: "Exchange: Hu Tao (-3 Starlight)"
+  gacha_starlight_events.1.fischl: "Exchange: Fischl (-3 Starlight)"
+  gacha_starlight_events.1.klee: "Exchange: Klee (-3 Starlight)"
+  gacha_starlight_events.1.nahida: "Exchange: Nahida (-3 Starlight)"
+  gacha_starlight_events.1.cancel: "Check later"
+
+  # === Generic Modifiers ===
+  MODIFIER_TYPE_NAME_gacha_constellation_level: "Constellation"
+  MODIFIER_TYPE_DESC_gacha_constellation_level: "\"When mortal longing burns bright enough to shake the stars for an instant, a gaze from the high heavens falls and condenses into this noble token that guides elemental power and bears witness to fate.\""
+  MODIFIER_TYPE_NAME_gacha_electro_godeye: "Electro Vision"
+  MODIFIER_TYPE_DESC_gacha_electro_godeye: "A mark of Inazuma, proof of Electro's recognition."
+  MODIFIER_TYPE_NAME_gacha_water_godeye: "Hydro Vision"
+  MODIFIER_TYPE_DESC_gacha_water_godeye: "A blessing from the Hydro Archon, symbol of flow and healing."
+  MODIFIER_TYPE_NAME_gacha_fire_godeye: "Pyro Vision"
+  MODIFIER_TYPE_DESC_gacha_fire_godeye: "A mark from the Pyro Archon, symbol of passion and flame."
+  MODIFIER_TYPE_NAME_gacha_grass_godeye: "Dendro Vision"
+  MODIFIER_TYPE_DESC_gacha_grass_godeye: "An enlightenment of Dendro power that lets knowledge and life sprout."
+
+  # ============================================================
+  # §Y Character - Sangonomiya Kokomi §!
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_xinhai: "Kokomi"
+  gacha_last_name_xinhai: "Sangonomiya"
+
+  # === Traits ===
+  gacha_xinhai_origin_trait: "Divine Priestess"
+  desc_gacha_xinhai_origin_trait: "Supreme of Watatsumi, holding both shrine and army in her grasp. She reads the tides of war as a diviner reads omens, trading the smallest cost for the greatest triumph.\n\n\"To foresee the foe is the heart of strategy; to soothe the people, the heart of rule.\""
+
+  gacha_xinhai_awakened_trait: "Oath of the Moonlit Seas"
+  desc_gacha_xinhai_awakened_trait: "As Watatsumi's leader, I have steered everyone against the current for quite some time. The peace we enjoy today owes much to your efforts.\n\nEffects:\nEstate Loyalty Equilibrium Speed: +25%\nGlobal Disease Resistance: +25%\nGlobal Devastation Recovery Speed: +50%"
+
+  gacha_xinhai_transcended_trait: "Princess of Watatsumi"
+  desc_gacha_xinhai_transcended_trait: "Gliding among the fish of the blue depths, feeling the gentle caress of seawater calms the heart.\n\nEffects:\nNaval Morale: +30%\nNaval Movement Speed: +30%\nNaval Maintenance: -50%"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_xinhai_modifier: "Watatsumi's Blessing"
+  STATIC_MODIFIER_DESC_gacha_xinhai_modifier: "\"Protect everything on Watatsumi Island so that everyone here can live happily ever after.\""
+  gacha_xinhai_modifier: "Will of Watatsumi"
+  gacha_xinhai_modifier_desc: "Kokomi's strategic planning brings steady administration and logistics to the realm."
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier: "Sleepy Dragon · C0"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c1_modifier: "At Water's Edge"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c2_modifier: "The Clouds Like Waves Rippling"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c3_modifier: "The Moon, A Ship O'er the Seas"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c4_modifier: "The Moon Overlooks the Waters"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c5_modifier: "All Streams Flow to the Sea"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c6_modifier: "Sango Isshin"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c6_country_modifier: "Handbook of Stratagems"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c6_country_modifier: "Kokomi's logistics expand the central cabinet; the added seats let decisions flow like the tide."
+
+  # === Events ===
+  gacha_xinhai_events.1.title: "Pearl of the Deep"
+  gacha_xinhai_events.1.desc: "A maiden in blue-white robes glides into the hall, her steps as calm as a moonlit tide. She names herself from far Watatsumi, both Divine Priestess and mastermind of a rebel host.\n\n\"I am Sangonomiya Kokomi. Word says your governance is deft; I would lend you the stratagems of Watatsumi. Yet I excel more at the war table than at petty protocol—pray do not drown me in paperwork.\"\n\nThe codex in her hand gleams with reversals of fortune. With such a counselor, the kingdom's arms and edicts will ebb and flow like a well-timed tide."
+  gacha_xinhai_events.1.a: "Welcome, strategist."
+
+  gacha_xinhai_events.2.title: "Hidden Stratagems"
+  gacha_xinhai_events.2.desc: "As the wish's power deepens, Sangonomiya Kokomi feels a familiar force returning.\n\nHer grasp of warfare grows sharper, as if she can already see every turn the battlefield will take.\n\n$gacha_text_reward_prestige_small$"
+  gacha_xinhai_events.2.a: "Win from a thousand miles away."
+
+  gacha_xinhai_events.4.title: "Ocean-Dyed Dragon"
+  gacha_xinhai_events.4.desc: "Kokomi's strength has reached perfection. A deep, oceanic aura surrounds her, like the ancient Dragon King of the seas returned.\n\n\"Now I can weather any storm. Neither the beasts of the deep nor foes on land can defy Watatsumi's will.\"\n\nHer mere presence is absolute assurance to the troops.\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_xinhai_events.4.a: "Heaven favors us!"
+
+  gacha_xinhai_events.11.title: "Constellation · Awakening"
+  gacha_xinhai_events.11.desc: "As the constellation shines anew, Kokomi senses a fresh shape to her power. She comprehends the true meaning of \"Oath of the Moonlit Seas,\" better shielding your people and dispelling calamity.\n\n\"It feels as if some shackle fell away... Now I can spread Watatsumi's grace across your realm far more effectively.\"\n\n$gacha_text_reward_stability_small$"
+  gacha_xinhai_events.11.a: "Her loyalty is priceless."
+
+  gacha_xinhai_events.12.title: "Constellation · Transcendence"
+  gacha_xinhai_events.12.desc: "Deeper power is unleashed. Kokomi's blood seems to carry an ancient authority over the seas; as \"Princess of Watatsumi,\" she can now bless your entire fleet.\n\n\"As long as it is for victory... whatever power is needed, I will wield it for you. Give the order, my lord.\"\n\n$gacha_text_reward_legitimacy_small$"
+  gacha_xinhai_events.12.a: "The sea will be our sharpest blade!"
+
+  # ============================================================
+  # §Y Character - Raiden Shogun §!
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_raiden: "Shogun"
+  gacha_last_name_raiden: "Raiden"
+
+  # === Traits ===
+  gacha_raiden_origin_trait: "Her Excellency, the Almighty Narukami Ogosho"
+  desc_gacha_raiden_origin_trait: "The sovereign of Inazuma, a blade-given form to the promise of \"Eternity.\" Under her gaze, the state hums like clockwork and unrest is burned away by lightning.\n\n\"This body is the most exalted and noble beneath the heavens, fit to bear the world.\""
+
+  gacha_raiden_awakened_trait: "Transcendence: Baleful Omen"
+  desc_gacha_raiden_awakened_trait: "Cutting down distractions for Eternity. That Musou no Hitotachi will bring lasting peace to this land.\n\nEffects:\nAdministrative Efficiency: +5%\nGlobal Unrest: -2.00"
+
+  gacha_raiden_transcended_trait: "Shogun's Excellency"
+  desc_gacha_raiden_transcended_trait: "No mercy before her might. Under her thunderous radiance, all obstacles turn to ash.\n\nEffects:\nShock Damage: +15%\nFire Damage Received: -10%\nMovement Speed: +15%"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_raiden_modifier: "Blessing of Narukami"
+  STATIC_MODIFIER_DESC_gacha_raiden_modifier: "\"The fleeting world remains unchanged for centuries; human life is but dew and a phantom.\""
+  gacha_raiden_modifier: "Promise of Eternity"
+  gacha_raiden_modifier_desc: "The Raiden Shogun's radiance shields this nation and drives it toward Eternity."
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_raiden_c0_modifier: "Ominous Destiny · C0"
+  STATIC_MODIFIER_NAME_gacha_raiden_c1_modifier: "Ominous Inscription"
+  STATIC_MODIFIER_NAME_gacha_raiden_c2_modifier: "Steelbreaker"
+  STATIC_MODIFIER_NAME_gacha_raiden_c3_modifier: "Shinkage Bygones"
+  STATIC_MODIFIER_NAME_gacha_raiden_c4_modifier: "Pledge of Propriety"
+  STATIC_MODIFIER_NAME_gacha_raiden_c5_modifier: "Shogun's Descent"
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_modifier: "Wishbearer"
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_country_modifier: "Realm of Musou Isshin"
+  STATIC_MODIFIER_DESC_gacha_raiden_c6_country_modifier: "In the name of Eternity, she orders the court, adding seats and cabinet efficiency so the Shogun's will reaches every corner of governance."
+
+  # === Events ===
+  gacha_raiden_events.1.title: "Narukami's Pledge"
+  gacha_raiden_events.1.desc: "The firmament is rent by violet thunder; the air prickles with silent static. A regal figure alights beside the throne, naginata in hand, eyes cold as a storm at sea.\n\n\"I am the Raiden Shogun. You have endured the trial; I grant you this vow—this body will be your blade, cleaving every obstacle on the road to Eternity.\"\n\nIt is a weight of authority above mortal crowns, bidding all heads to bow."
+  gacha_raiden_events.1.a: "For Eternity!"
+
+  gacha_raiden_events.2.title: "Lightning Flash"
+  gacha_raiden_events.2.desc: "The Raiden Shogun's power seems to grow. Her blade is keener, and the lightning around her shines brighter.\n\n\"No thoughts. No distractions.\"\n\n$gacha_text_reward_prestige_small$"
+  gacha_raiden_events.2.a: "Mercy to none."
+
+  gacha_raiden_events.4.title: "Dream of Eternity"
+  gacha_raiden_events.4.desc: "The Shogun stands perfected, less woman than the very shape of \"Eternity.\" \n\n\"At this height I sever all doubt and dross. History and what lies ahead shall be forged by my hand alone.\"\n\nBeneath her thunderous canopy your will is the nation's will; none dare gainsay it.\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_raiden_events.4.a: "This is Eternity!"
+
+  gacha_raiden_events.11.title: "Constellation · Awakening"
+  gacha_raiden_events.11.desc: "The true meaning of \"Musou Isshin\" emerges. The Raiden Shogun grasps new power, governing more efficiently and erasing instability.\n\n\"The noise is gone. Now we can focus on what matters.\"\n\n$gacha_text_reward_stability_small$"
+  gacha_raiden_events.11.a: "Peace under heaven."
+
+  gacha_raiden_events.12.title: "Constellation · Transcendence"
+  gacha_raiden_events.12.desc: "The Raiden Shogun displays the stance of \"Shogun's Excellency.\" On the battlefield she is like a demon god; all enemies before her are but ants.\n\n\"This moment is one of annihilation!\"\n\n$gacha_text_reward_legitimacy_small$"
+  gacha_raiden_events.12.a: "Invincible!"
+
+  # ============================================================
+  # §Y Character - Furina §!
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_furina: "Furina"
+  gacha_last_name_furina: "de Fontaine"
+
+  # === Traits ===
+  gacha_furina_origin_trait: "Hydro Archon"
+  desc_gacha_furina_origin_trait: "She is the ruler of all waters and the incarnation of justice."
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_furina_modifier: "Blessing of the Many Waters"
+  STATIC_MODIFIER_DESC_gacha_furina_modifier: "\"The world is but a grand stage play, and I shall be its eternal lead.\""
+
+  # === Events ===
+  gacha_furina_events.1.title: "Queen of All Waters, All Scenes, All People, All Laws"
+  gacha_furina_events.1.desc: "A girl in splendid dress appears in your court, calling herself Furina de Fontaine."
+  gacha_furina_events.1.a: "Welcome, Your Majesty."
+
+  gacha_furina_events.2.title: "Constellation Raised"
+  gacha_furina_events.2.desc: "Furina's power has grown."
+  gacha_furina_events.2.a: "Wonderful!"
+
+  gacha_furina_events.11.title: "Constellation Awakened"
+  gacha_furina_events.11.desc: "Furina awakens new power!"
+  gacha_furina_events.11.a: "Feel the strength!"
+
+  gacha_furina_events.12.title: "Constellation Transcended"
+  gacha_furina_events.12.desc: "Furina surpasses herself!"
+  gacha_furina_events.12.a: "Unrivaled!"
+
+  gacha_furina_events.4.title: "Max Constellations"
+  gacha_furina_events.4.desc: "Furina has reached the peak of her strength!"
+  gacha_furina_events.4.a: "Unbelievable power!"
+
+  # ============================================================
+  # §Y Character - Keqing §!
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_keqing: "Keqing"
+  gacha_last_name_keqing: "Liyue"
+
+  # === Traits ===
+  gacha_keqing_origin_trait: "Yuheng of the Qixing"
+  desc_gacha_keqing_origin_trait: "The Yuheng star of Liyue, a reformer and consummate executor. She loathes sclerotic bureaucracy and wields thunderbolt methods to quicken administration. To her, mortal will must surpass divine decree.\n\n\"The time for change is ripe. If old laws choke progress, I'll be the one to cut them down.\""
+
+  gacha_keqing_awakened_trait: "Thundering Edict"
+  desc_gacha_keqing_awakened_trait: "In troubled times, greater power is needed to guard the nation. Knowing this, Keqing keeps honing her swordplay and leadership.\n\nEffects:\nManpower Recovery Speed: +20%\nRecruitment Time: -25%\nInfantry Combat Ability: +10%"
+
+  gacha_keqing_transcended_trait: "Starward Sword"
+  desc_gacha_keqing_transcended_trait: "From Mt. Tianheng's peak to the foot of Wuwang Hill, Keqing cuts through the sky like violet lightning. In war or governance, she finishes tasks with unmatched speed.\n\nEffects:\nShock Damage: +15%\nMovement Speed: +15%\nSiege Ability: +20%"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_keqing_modifier: "Blessing of Lightning"
+  STATIC_MODIFIER_DESC_gacha_keqing_modifier: "\"Gods are merely stronger beings. With a Vision, I hold the chance to rival 'gods' themselves.\""
+  gacha_keqing_modifier: "Will of the Yuheng"
+  gacha_keqing_modifier_desc: "Keqing's hands-on spirit is inspiring the nation; people begin to trust their own strength."
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_keqing_c0_modifier: "Ziwei · C0"
+  STATIC_MODIFIER_NAME_gacha_keqing_c1_modifier: "Thundering Might"
+  STATIC_MODIFIER_NAME_gacha_keqing_c2_modifier: "Keen Extraction"
+  STATIC_MODIFIER_NAME_gacha_keqing_c3_modifier: "Foreseen Reformation"
+  STATIC_MODIFIER_NAME_gacha_keqing_c4_modifier: "Attunement"
+  STATIC_MODIFIER_NAME_gacha_keqing_c5_modifier: "Beckoning Stars"
+  STATIC_MODIFIER_NAME_gacha_keqing_c6_modifier: "Tenacious Star"
+  STATIC_MODIFIER_NAME_gacha_keqing_c6_country_modifier: "Seat of the Yuheng's Governance"
+  STATIC_MODIFIER_DESC_gacha_keqing_c6_country_modifier: "Keqing razes redundant bureaus and chisels \"hands-on\" into statute. The cabinet now answers like lightning, with no patience for drag or delay."
+
+  # === Events ===
+  gacha_keqing_events.1.title: "Lightning Ablaze"
+  gacha_keqing_events.1.desc: "A violet wedge splits the clouds; a pragmatic woman lands at the hall's center. Her gaze sweeps the chamber as if cataloging every flaw in your bureaucracy.\n\n\"Keqing of the Liyue Qixing. I hear your state seeks hands. I trade not in miracles, only in efficiency and hard work. If you're ready for reform, we begin at once.\" \n\nHer confidence cuts as sharply as her blade."
+  gacha_keqing_events.1.a: "Our nation's fortune!"
+
+  gacha_keqing_events.2.title: "Violet Currents"
+  gacha_keqing_events.2.desc: "Keqing's power rises further. Her swordplay grows ever sharper, Electro dancing on her blade as if to cut down all foes.\n\n\"Power grows so I can guard this nation better. With it, I'll open a broader future for you.\"\n\n$gacha_text_reward_prestige_small$"
+  gacha_keqing_events.2.a: "Onward!"
+
+  gacha_keqing_events.4.title: "Peerless Star Jade"
+  gacha_keqing_events.4.desc: "Keqing stands at her peak. Violet lightning wreathes her; each swing can cleave mountains.\n\n\"Now I can cut through every obstacle to this nation. External foes or internal woes will all turn to dust beneath my sword.\"\n\nHer presence alone is the state's strongest shield.\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_keqing_events.4.a: "Unmatched under heaven!"
+
+  gacha_keqing_events.11.title: "Constellation · Awakening"
+  gacha_keqing_events.11.desc: "With the constellation shining, Keqing grasps the true meaning of \"Thundering Edict.\" Her sword is fiercer, able to muster troops swiftly and crush enemies.\n\n\"Only by honing oneself can one stand in this world. I'm ready for any challenge now.\"\n\n$gacha_text_reward_stability_small$"
+  gacha_keqing_events.11.a: "Strike unstoppable!"
+
+  gacha_keqing_events.12.title: "Constellation · Transcendence"
+  gacha_keqing_events.12.desc: "Keqing displays the stance of \"Starward Sword.\" She moves like lightning across the battlefield; none can catch her.\n\n\"Speed is the key to victory. On the battlefield or in government, I won't keep anyone waiting.\"\n\n$gacha_text_reward_legitimacy_small$"
+  gacha_keqing_events.12.a: "Fast as lightning!"
+
+  # ============================================================
+  # §Y Character - Hu Tao §!
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_hutao: "Hu Tao"
+  gacha_last_name_hutao: "Wangsheng"
+
+  # === Traits ===
+  gacha_hutao_origin_trait: "Master of the Wangsheng Funeral Parlor"
+  desc_gacha_hutao_origin_trait: "The 77th Director of the Wangsheng Funeral Parlor, a curious soul walking both yin and yang. She reframes death as ceremony, leaving the living unburdened and the dead at peace—so that calamity finds the people calm, not frantic.\n\n\"Boo! Did I scare you?\"\n\n\"Relax—death is just another grand procession. I'm here to help with the living, too.\""
+
+  gacha_hutao_awakened_trait: "Blood Blossom Fragrance"
+  desc_gacha_hutao_awakened_trait: "Having grasped the truth of \"Ominous Rainfall,\" Hu Tao's power soars. Her flames burn brighter, like blood-red plum blossoms in winter.\n\nEffects:\nAdvisor Skill: +2\nSpread of Institutions: +15%\nRevolutionary Resistance: +0.05"
+
+  gacha_hutao_transcended_trait: "Secret Soother"
+  desc_gacha_hutao_transcended_trait: "Having mastered the parlor's highest secret, \"Spirit Soother,\" Hu Tao moves freely between life and death. Her very presence embodies death's true meaning.\n\nEffects:\nStability Growth: +30%\nEstate Loyalty Equilibrium Speed: +20%\nMonarch Life Expectancy: +5 years"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_hutao_modifier: "Butterfly Flame's Blessing"
+  STATIC_MODIFIER_DESC_gacha_hutao_modifier: "\"Life and death are just states of being. Like a butterfly breaking its cocoon—it's just another way to live.\""
+  gacha_hutao_modifier: "Power of Passing On"
+  gacha_hutao_modifier_desc: "Hu Tao's unique view of life and death helps the people face the cycle of fate with calm."
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_hutao_c0_modifier: "The Homa · C0"
+  STATIC_MODIFIER_NAME_gacha_hutao_c1_modifier: "Crimson Bouquet"
+  STATIC_MODIFIER_NAME_gacha_hutao_c2_modifier: "Ominous Rainfall"
+  STATIC_MODIFIER_NAME_gacha_hutao_c3_modifier: "Lingering Carmine"
+  STATIC_MODIFIER_NAME_gacha_hutao_c4_modifier: "Garden of Eternal Rest"
+  STATIC_MODIFIER_NAME_gacha_hutao_c5_modifier: "Floral Incense"
+  STATIC_MODIFIER_NAME_gacha_hutao_c6_modifier: "Butterfly's Embrace"
+  STATIC_MODIFIER_NAME_gacha_hutao_c6_country_modifier: "Butterflies on the Dais"
+  STATIC_MODIFIER_DESC_gacha_hutao_c6_country_modifier: "Hu Tao brings her philosophy of life and death to court, expanding seats and binding loyalty so decisions move with grace."
+
+  # === Events ===
+  gacha_hutao_events.1.title: "Butterflies in the Autumn Court"
+  gacha_hutao_events.1.desc: "A sprightly girl lounges by the throne, twirling the Staff of Homa. Plum-blossom light flickers in her eyes, equal parts mischief and insight.\n\n\"Ya! Startled? I'm Hu Tao, Director of Wangsheng. You look overworked—don't worry, I'm not here to collect you. But running a realm and arranging a few grand send-offs? That I can help with.\"\n\nHer playful tone belies a strange peace; butterfly flames dance around her, bringing an eerie calm to the court."
+  gacha_hutao_events.1.a: "An intriguing guest."
+
+  gacha_hutao_events.2.title: "Flame of Fate"
+  gacha_hutao_events.2.desc: "Hu Tao's power rises further, ghostly butterfly flames swirling around her.\n\n\"Hehe, feel it? That's the power of the Wangsheng Funeral Parlor!\"\n\n$gacha_text_reward_prestige_small$"
+  gacha_hutao_events.2.a: "Let it burn!"
+
+  gacha_hutao_events.4.title: "Butterfly Guides the Afterlife"
+  gacha_hutao_events.4.desc: "Hu Tao has reached her peak. She chuckles, saying she can now move freely between life and death.\n\n\"Life and death cycle like a dream. Still, while alive, we should savor life's beauty!\"\n\nCountless butterflies dance around her, each carrying the blessings of the departed.\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_hutao_events.4.a: "Such is the parlor's power!"
+
+  gacha_hutao_events.11.title: "Constellation · Awakening"
+  gacha_hutao_events.11.desc: "Hu Tao grasps the true meaning of \"Ominous Rainfall.\" Her flames burn hotter.\n\n\"The line between life and death was never that clear. Now I know better how to balance both.\"\n\n$gacha_text_reward_stability_small$"
+  gacha_hutao_events.11.a: "Burn, butterflies!"
+
+  gacha_hutao_events.12.title: "Constellation · Transcendence"
+  gacha_hutao_events.12.desc: "Hu Tao displays the form of \"Spirit Soother\" and fully commands the power of passing on.\n\n\"Flowers bloom and fade, the moon waxes and wanes—everything has its time. Grasp that, and you understand the truth of life and death.\"\n\nButterfly flames form a perfect ring around her, symbolizing life's endless cycle.\n\n$gacha_text_reward_legitimacy_small$"
+  gacha_hutao_events.12.a: "Life without end!"
+
+  # ============================================================
+  # §Y Notification Text §!
+  # ============================================================
+  gacha_new_character_title: "Wish Answered!"
+  gacha_new_character_desc: "Gained a 5-star courtier"
+  gacha_constellation_up_title: "Constellation Shines"
+  gacha_constellation_up_desc: "Constellation level increased!"
+  gacha_max_constellation_title: "Constellations Perfected"
+  gacha_max_constellation_desc: "Now in perfect state!"
+  gacha_already_owned_title: "Duplicate Wish"
+  gacha_already_owned_desc: "This courtier serves another realm; converted to resources."
+
+  # ============================================================
+  # §Y Character - Fischl §!
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_fischl: "Fischl"
+  gacha_last_name_fischl: "der Nachtdämmerung"
+
+  # === Traits ===
+  gacha_fischl_origin_trait: "Prinzessin der Verurteilung"
+  desc_gacha_fischl_origin_trait: "A self-styled Prinzessin der Verurteilung, claiming exile from the Immernachtreich and trailed by her raven familiar Oz. Her diction is drenched in drama and metaphor, yet Oz's eyes pierce schemes no envoy can hide.\n\n\"I am Fischl, Prinzessin der Verurteilung, whose exalted gaze surveys all sin! ...Oz, fetch me that dossier.\""
+
+  gacha_fischl_awakened_trait: "Lightning of Judgment"
+  desc_gacha_fischl_awakened_trait: "The left eye of the Prinzessin—Oz—sees the threads of causality, calling down violet lightning to judge all injustice. On the battlefield, the raven's coordinated strikes are an enemy's nightmare.\n\nEffects:\nGeneral Shock: +1\nArtillery Combat Ability: +10%\nFort Defense: +10%"
+
+  gacha_fischl_transcended_trait: "Evernight Reverie"
+  desc_gacha_fischl_transcended_trait: "The line between fantasy and reality blurs. In the Prinzessin's realm, night becomes the firmest shield, and the destiny she scripts will be enacted.\n\nEffects:\nHostile Attrition: -25%\nGlobal Manpower Modifier: +15%\nYearly Legitimacy: +1.00"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_fischl_modifier: "Blessing of the Immernachtreich"
+  STATIC_MODIFIER_DESC_gacha_fischl_modifier: "\"Rejoice, my familiars! At the world's end, offer praises to the noble Prinzessin!\""
+  gacha_fischl_modifier: "Royal Ceremony"
+  gacha_fischl_modifier_desc: "The gaze of the Prinzessin and her familiar fills the court with mystery and majesty."
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_fischl_c0_modifier: "Corvus"
+  STATIC_MODIFIER_NAME_gacha_fischl_c1_modifier: "Gaze of the Deep"
+  STATIC_MODIFIER_NAME_gacha_fischl_c2_modifier: "Devourer of All Sins"
+  STATIC_MODIFIER_NAME_gacha_fischl_c3_modifier: "Wings of Nightmare"
+  STATIC_MODIFIER_NAME_gacha_fischl_c4_modifier: "Her Pilgrimage of Bleak"
+  STATIC_MODIFIER_NAME_gacha_fischl_c5_modifier: "Against the Fleeing Light"
+  STATIC_MODIFIER_NAME_gacha_fischl_c6_modifier: "Evernight Raven"
+  STATIC_MODIFIER_NAME_gacha_fischl_c6_country_modifier: "Evernight Regency"
+  STATIC_MODIFIER_DESC_gacha_fischl_c6_country_modifier: "The seats and decrees the Prinzessin adds to the court mirror the laws of the Immernachtreich, making the cabinet run more efficiently."
+
+  # === Events ===
+  gacha_fischl_events.1.title: "Prinzessin Descends"
+  gacha_fischl_events.1.desc: "With a rush of black wings, a blonde girl strikes a theatrical pose in the hall. The eyepatch over her left eye radiates mystery—perhaps only in her mind.\n\nFischl: \"Rejoice! I, the Prinzessin, have crossed the gulf of causality to this withered realm, to bestow upon thee the radiance of the Immernachtreich!\"\n\nOz (sighing): \"My lady means she is pleased to meet you and will serve loyally.\"\n\nAn odd duet, but you sense few secrets can elude them."
+  gacha_fischl_events.1.a: "Welcome, Prinzessin."
+
+  gacha_fischl_events.2.title: "Declaration of Fate"
+  gacha_fischl_events.2.desc: "Fischl's power grows; violet lightning dances around her.\n\n\"The wheel of fate turns anew! My constellation shines ever brighter in the firmament!\"\n\nOz: \"My lady has grown stronger.\""
+  gacha_fischl_events.2.a: "Power of the constellations!"
+
+  gacha_fischl_events.4.title: "Judgment of Evernight"
+  gacha_fischl_events.4.desc: "Fischl reaches the height of her power. Violet lightning forms a massive raven silhouette.\n\n\"Dusk shall bow, and the light of Evernight shall bathe the world! Now I wield the full power to judge all!\"\n\nOz: \"My lady has reached her peak.\""
+  gacha_fischl_events.4.a: "The Prinzessin is invincible!"
+
+  gacha_fischl_events.11.title: "Constellation · Awakening"
+  gacha_fischl_events.11.desc: "Fischl comprehends the true meaning of \"Devourer of All Sins.\" Thunder gathers at her fingertips like the pronouncement of judgment.\n\n\"Hear it! This is the sound of condemnation from the Immernachtreich! Sinners, face the lightning!\"\n\nOz: \"My lady has mastered new thunder arts.\""
+  gacha_fischl_events.11.a: "Fury of lightning!"
+
+  gacha_fischl_events.12.title: "Constellation · Transcendence"
+  gacha_fischl_events.12.desc: "Fischl wholly unshackles the \"Phantasms of the Prinzessin.\" In her realm the border of dream and waking tears; raven wings blot the sun.\n\nFischl: \"Behold the overture of ends! The threads of causality now dance to my script; the farce called 'reality' shall be rewritten by my hand!\"\n\nOz: \"My lady's power is formidable. Please employ it wisely.\""
+  gacha_fischl_events.12.a: "Fantasy made real!"
+
+  # ============================================================
+  # Character - Nahida
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_nahida: "Nahida"
+  gacha_last_name_nahida: "Sumeru"
+
+  # === Traits ===
+  gacha_nahida_origin_trait: "God of Wisdom"
+  desc_gacha_nahida_origin_trait: "The Archon of Sumeru, Buer, mind entwined with the World Tree. Though she dwells in Surasthana, she traces the logic of all things. As advisor she offers a lattice of knowledge far ahead of its age, quickening research and culture alike.\n\n\"Knowledge is the stair to tomorrow. Let me be the one who steadies it.\""
+
+  gacha_nahida_awakened_trait: "Dream-Weaving"
+  desc_gacha_nahida_awakened_trait: "Nahida can enter and soothe people's dreams, dispelling fear and confusion. Under her guidance, minds unite and turmoil fades.\n\nEffects:\nNational Unrest: -2.00\nSpread of Institutions: +20%\nReligious Unity: +25%"
+
+  gacha_nahida_transcended_trait: "Guardian of the World Tree"
+  desc_gacha_nahida_transcended_trait: "Connected to the consciousness of the World Tree, she knows truths of past and future. The path she guides will not err; the nation advances under peak efficiency.\n\nEffects:\nAdministrative Efficiency: +5%\nMonthly Autonomy Change: -0.10\nMax Administrative Capacity: +20%"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_nahida_modifier: "Blessing of Surasthana"
+  STATIC_MODIFIER_DESC_gacha_nahida_modifier: "\"The mind rules the body, and wisdom feeds the mind. Let me water this land a little.\""
+  gacha_nahida_modifier: "Light of Wisdom"
+  gacha_nahida_modifier_desc: "The god of wisdom's favor fills the nation with research and critical thought."
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_nahida_c0_modifier: "Lotos Somno · C0"
+  STATIC_MODIFIER_NAME_gacha_nahida_c1_modifier: "The Seed of Stored Knowledge"
+  STATIC_MODIFIER_NAME_gacha_nahida_c2_modifier: "The Root of All Fullness"
+  STATIC_MODIFIER_NAME_gacha_nahida_c3_modifier: "The Shoot of Conscious Attainment"
+  STATIC_MODIFIER_NAME_gacha_nahida_c4_modifier: "The Stem of Manifest Inference"
+  STATIC_MODIFIER_NAME_gacha_nahida_c5_modifier: "The Leaves of Conscious Attainment"
+  STATIC_MODIFIER_NAME_gacha_nahida_c6_modifier: "The Fruit of Reason's Culmination"
+  STATIC_MODIFIER_NAME_gacha_nahida_c6_country_modifier: "Hall of Wisdom"
+  STATIC_MODIFIER_DESC_gacha_nahida_c6_country_modifier: "Nahida opens new seats for scholars and officials, letting reforms and policy sprout in a larger hall."
+
+  # === Events ===
+  gacha_nahida_events.1.title: "Wisdom of Grass"
+  gacha_nahida_events.1.desc: "No thunder heralds her—only a white-haired, green-eyed child standing where perhaps she always was. Her gaze is as clear as morning dew in the forest, yet deep as a starry night.\n\n\"Pleased to meet you; I am Nahida. The World Tree whispers that you puzzle over this realm's future. My frame is small, but perhaps my wisdom can untangle those knots. Shall we make a little experiment about good dreams together?\"\n\nHer gentle, rational voice smooths the court's restlessness."
+  gacha_nahida_events.1.a: "Welcome, God of Wisdom."
+
+  gacha_nahida_events.2.title: "Wisdom Grows"
+  gacha_nahida_events.2.desc: "Nahida's power strengthens, emerald Dendro energy swirling around her.\n\n\"Look, the World Tree granted me new strength. Now I can help everyone even better~\""
+  gacha_nahida_events.2.a: "Power of knowledge!"
+
+  gacha_nahida_events.4.title: "Great Dream Awakened"
+  gacha_nahida_events.4.desc: "Nahida has reached her peak. Brilliant green light surrounds her, as if the whole world rests under her wisdom.\n\n\"So this is power fully awakened... Now I can truly guard everyone's dreams. Thank you for your trust—let's create a wonderful future together~\""
+  gacha_nahida_events.4.a: "Wisdom lights the world!"
+
+  gacha_nahida_events.11.title: "Constellation · Awakening"
+  gacha_nahida_events.11.desc: "Nahida takes hold of the power of \"The Root of All Fullness.\" She peers past surface into essence, reading the quiet longings and fears in every heart.\n\n\"Each person is a star; once you read their course, no misunderstanding is beyond mending. The same is true of rule—listen for the wind, and you hear the nation.\""
+  gacha_nahida_events.11.a: "See through everything!"
+
+  gacha_nahida_events.12.title: "Constellation · Transcendence"
+  gacha_nahida_events.12.desc: "Nahida shows the stance of \"The Stem of Manifest Inference.\" Her wisdom dispels people's confusion and doubt.\n\n\"Wisdom isn't for show; it's to help others. Let's banish ignorance together and let the light of knowledge shine on everyone~\""
+  gacha_nahida_events.12.a: "Light of wisdom!"
+
+  # ============================================================
+  # # Character - Klee
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_klee: "Klee"
+  gacha_last_name_klee: "Mondstadt"
+
+  # === Traits ===
+  gacha_klee_origin_trait: "Fleeing Sunlight"
+  desc_gacha_klee_origin_trait: "The Knights of Favonius' \"Spark Knight,\" possessed of ruinous firepower beyond her years. To her, breaching a fortress differs little from blasting fish—both are great fun. Mind the reconstruction budget.\n\n\"If I blow up all the bad stuff, everyone stays safe! That's called... defensive works, right?\""
+
+  gacha_klee_awakened_trait: "Jumpy Dumpty"
+  desc_gacha_klee_awakened_trait: "Klee's bombs are not only powerful but split into numerous mines. This indiscriminate coverage can shatter enemy formations in an instant.\n\nEffects:\nFire Damage: +10%\nShock Damage: +5%\nEnemy Attrition: +10%"
+
+  gacha_klee_transcended_trait: "Kaboom!"
+  desc_gacha_klee_transcended_trait: "Full power unleashed! Fortune and firepower entwine. Land in her wake often smolders, but to foes blocking the empire, it is total annihilation.\n\nEffects:\nArmy Drill: +5%\nArtillery Fire Damage: +15%\nMonthly Devastation Increase: +0.05 (her blasts spare nothing)"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_klee_modifier: "Blessing of Sparks"
+  STATIC_MODIFIER_DESC_gacha_klee_modifier: "\"Red is for Jumpy Dumpty, blue is for... huh? No blue ones? Then blow it all up!\""
+  gacha_klee_modifier: "Joy of Blasting"
+  gacha_klee_modifier_desc: "Klee's delighted laughter and distant explosions greatly spur the front line's urge to destroy."
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_klee_c0_modifier: "Four-Leaf Clover"
+  STATIC_MODIFIER_NAME_gacha_klee_c1_modifier: "Chained Reactions"
+  STATIC_MODIFIER_NAME_gacha_klee_c2_modifier: "Explosive Frags"
+  STATIC_MODIFIER_NAME_gacha_klee_c3_modifier: "Exquisite Compound"
+  STATIC_MODIFIER_NAME_gacha_klee_c4_modifier: "Sparkly Explosion"
+  STATIC_MODIFIER_NAME_gacha_klee_c5_modifier: "Nova Burst"
+  STATIC_MODIFIER_NAME_gacha_klee_c6_modifier: "Blazing Delight"
+  STATIC_MODIFIER_NAME_gacha_klee_c6_country_modifier: "Spark Combat Agenda"
+  STATIC_MODIFIER_DESC_gacha_klee_c6_country_modifier: "Klee's sparks ignite the war room; the added seats and efficient cabinet make every battle prep as swift as festival fireworks."
+
+  # === Events ===
+  gacha_klee_events.1.title: "Spark Knight Reporting!"
+  gacha_klee_events.1.desc: "A tiny girl with a red pack bounds into the solemn council chamber, brandishing a smoking bomb before the guards can react.\n\n\"Da-da-da! Klee is here~!\" She hoists the bomb like a gift. \"I'm Klee, Spark Knight! Captain Jean said I needed 'experience'... so, bad guys or really tough walls, leave 'em to me!\"\n\nHer innocent grin and the live explosive in her hand inspire sympathy—mostly for enemy fortresses."
+  gacha_klee_events.1.a: "Welcome, Klee!"
+
+  gacha_klee_events.2.title: "Bigger Boom!"
+  gacha_klee_events.2.desc: "Klee's power grows; she jumps up in delight.\n\n\"Wow~ Klee got stronger! Now I can make even bigger bombs! Heehee, we can blow up so, so many fish!\""
+  gacha_klee_events.2.a: "Explosion is art!"
+
+  gacha_klee_events.4.title: "Mightiest Spark Knight"
+  gacha_klee_events.4.desc: "Klee has reached her peak. Red flames dance around her, each spark brimming with power.\n\n\"Klee is super strong now! But... still can't blow stuff up in the city. Captain Jean said I have to be a good girl~ but blowing up bad guys outside is fine, right?\"\n\nShe tilts her head, asking innocently."
+  gacha_klee_events.4.a: "Of course!"
+
+  gacha_klee_events.11.title: "Constellation · Awakening"
+  gacha_klee_events.11.desc: "Klee grasps the true meaning of \"Explosive Frags.\" Her bombs grow even deadlier.\n\n\"Hehe, Klee's new bombs are super strong! One bomb can make a bunch of little bombs—boom boom boom!\""
+  gacha_klee_events.11.a: "Chain explosion!"
+
+  gacha_klee_events.12.title: "Constellation · Transcendence"
+  gacha_klee_events.12.desc: "Klee displays the form of \"Sparkly Explosion.\" She can now unleash the full might of her sparks.\n\n\"This is a present from Klee~ It's a bomb, but I made it seriously! Boom!\""
+  gacha_klee_events.12.a: "Explosive gift!"
