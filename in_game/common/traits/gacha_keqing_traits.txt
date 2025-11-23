@@ -1,5 +1,5 @@
 gacha_keqing_origin_trait = {
-  category = general
+  category = ruler
   allow = {
     always = no
   }
@@ -13,7 +13,7 @@ gacha_keqing_origin_trait = {
 }
 
 gacha_keqing_awakened_trait = {
-  category = general
+  category = ruler
   allow = {
     always = no
   }

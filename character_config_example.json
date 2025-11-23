@@ -1,0 +1,72 @@
+{
+  "character_id": "hutao",
+  "first_name": "胡桃",
+  "last_name": "往生堂",
+  "display_name": "胡桃",
+  "title": "雪霁梅香",
+  "element": "pyro",
+  "rarity": 5,
+  "gender": "female",
+  "age": 19,
+  "culture": "tougokud",
+  "religion": "shintō",
+  
+  "stats": {
+    "adm": [80, 95],
+    "dip": [90, 100],
+    "mil": [70, 85]
+  },
+  
+  "trait_focus": "diplomatic",
+  
+  "constellations": {
+    "c0": "彼岸座",
+    "c1": "赤转蝶舞",
+    "c2": "最不安神",
+    "c3": "临别在世",
+    "c4": "花好月圆",
+    "c5": "红尘客栈",
+    "c6": "幽蝶殊途"
+  },
+  
+  "traits": {
+    "origin": "往生堂主",
+    "awakened": "血梅香",
+    "transcended": "安神秘传"
+  },
+  
+  "events": {
+    "first_meeting": {
+      "title": "蝶舞秋庭",
+      "desc": "一位活泼的少女突然出现在大殿中，手持护摩之杖，笑容灿烂。她自称是往生堂第七十七代堂主，胡桃。虽然年纪轻轻，但她的话语中却透露着对生死的深刻理解。",
+      "option": "有趣的客人。"
+    },
+    "constellation_up": {
+      "title": "命火燃烧",
+      "desc": "胡桃的力量得到了进一步的提升，周身环绕着幽幽的蝶火。",
+      "option": "继续燃烧吧！"
+    },
+    "max_constellation": {
+      "title": "蝶引来生",
+      "desc": "胡桃已经达到了力量的巅峰。她轻笑着说，现在的她可以自如地游走于生死两界之间。",
+      "option": "这就是往生堂的力量！"
+    },
+    "c2_awakening": {
+      "title": "命之座·觉醒",
+      "desc": "胡桃领悟了「最不安神」的真意，她的火焰变得更加炽烈。",
+      "option": "燃烧吧，蝴蝶！"
+    },
+    "c4_transcendence": {
+      "title": "命之座·超越",
+      "desc": "胡桃展现出了「花好月圆」的姿态，她已经完全掌握了往生之力。",
+      "option": "生生不息！"
+    }
+  },
+  
+  "assets": {
+    "portrait_texture": "path/to/hutao_portrait_1024.dds",
+    "origin_trait_icon": "path/to/hutao_origin_icon.dds",
+    "awakened_trait_icon": "path/to/hutao_awakened_icon.dds",
+    "transcended_trait_icon": "path/to/hutao_transcended_icon.dds"
+  }
+}
