@@ -49,15 +49,15 @@ gacha_pool_4star_rewards = {
     }
     else_if = {
         limit = { var:gacha_4star_choice = 1 }
-        add_prestige = 10
+        add_prestige = 8
     }
     else_if = {
         limit = { var:gacha_4star_choice = 2 }
-        add_legitimacy = 10
+        add_legitimacy = 8
     }
     else = {
         # choice = 3，稳定度
-        add_stability = 5
+        add_stability = 4
     }
 
     remove_variable = gacha_4star_choice

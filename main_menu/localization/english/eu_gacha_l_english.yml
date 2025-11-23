@@ -45,10 +45,10 @@ l_english:
   # === Result: Four-star Reward (.20) ===
   gacha_events.20.title: "Wish Result: Gift of the Stars"
   gacha_events.20.desc: "No champion stepped through the gate, yet the starry sea did not scorn your devotion. Scattered light congeals into a tangible boon, filling the coffers of state."
-  gacha_events.20.desc_gold: "Starlight pools into a purse of bright coin. Perhaps spend it to tempt fate once more."
-  gacha_events.20.desc_prestige: "Starlight becomes a sealed decree, your name carried further across the courts of men."
-  gacha_events.20.desc_legitimacy: "Starlight hums within the palace, steadying the people's trust in the throne."
-  gacha_events.20.desc_stability: "Starlight bathes the fields; the realm breathes in calm harmony."
+  gacha_events.20.desc_gold: "Starlight pools into a purse of bright coin, perhaps to tempt fate once more.\n\nGain: 240 gold"
+  gacha_events.20.desc_prestige: "Starlight becomes a sealed decree, your name carried further across the courts of men.\n\nGain: 8 Prestige"
+  gacha_events.20.desc_legitimacy: "Starlight hums within the palace, steadying the people's trust in the throne.\n\nGain: 8 Legitimacy"
+  gacha_events.20.desc_stability: "Starlight bathes the fields; the realm draws a calmer breath.\n\nGain: 4 Stability"
   gacha_events.20.a: "Receive the boon"
 
   # === Result: Soft Pity (.3) ===

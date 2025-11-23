@@ -45,10 +45,10 @@
   # === 结果：四星奖励 (.20) ===
   gacha_events.20.title: "祈愿结果：星辰的馈赠"
   gacha_events.20.desc: "虽未有英杰降临，星海却没有辜负你的诚意。散落的星辉凝聚成实质的恩赐，充盈国家的府库。"
-  gacha_events.20.desc_gold: "星光汇成一袋闪亮的金币，或许可以再次诱引命运。"
-  gacha_events.20.desc_prestige: "星辉化作一纸诏令，你的名讳传遍诸国。"
-  gacha_events.20.desc_legitimacy: "星光在宫廷回响，巩固民众对王座的信任。"
-  gacha_events.20.desc_stability: "星光照耀田野，国土吐纳着安定的呼吸。"
+  gacha_events.20.desc_gold: "星光汇成一袋闪亮的金币，或许可以再次诱引命运。\n\n获得：240 金币"
+  gacha_events.20.desc_prestige: "星辉化作一纸诏令，你的名讳传遍诸国。\n\n获得：8 威望"
+  gacha_events.20.desc_legitimacy: "星光在宫廷回响，巩固民众对王座的信任。\n\n获得：8 正统性"
+  gacha_events.20.desc_stability: "星光照耀田野，国土吐纳着安定的呼吸。\n\n获得：4 稳定度"
   gacha_events.20.a: "收下恩赐"
 
   # === 结果：小保底/歪了 (.3) ===
