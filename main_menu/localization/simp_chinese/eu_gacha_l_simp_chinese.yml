@@ -15,7 +15,7 @@
   # ============================================================
 
   # === 交互按钮 ===
-  gacha_events_interaction: "举行：异世降灵祭典"
+  gacha_events_interaction: "祭典：相遇之缘"
   gacha_events_interaction_desc: "[actor.GetName]将设立祭坛，以此世的财帛，感召彼方星海的英灵与智者。"
 
   # === 核心修饰符 (Core Modifiers) ===
