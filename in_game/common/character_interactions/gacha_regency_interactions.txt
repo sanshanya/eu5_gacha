@@ -1,0 +1,69 @@
+gacha_delegate_regency_interaction = {
+    message = no
+    is_consort_action = no
+    on_own_nation = yes
+    ai_tick = never
+    context_menu_click_mode = click
+
+    # actor = country
+    potential = {
+        scope:actor = {
+            has_ruler = yes
+        }
+    }
+
+    allow = { always = yes }
+
+    # 选择代政者（gacha 角色）
+    select_trigger = {
+        looking_for_a = character
+        source = actor
+        target_flag = recipient
+        name = "gacha_delegate_regency_select"
+        column = { data = name }
+        visible = {
+            is_alive = yes
+            NOT = { is_ruler = yes }
+            OR = {
+                ls_gacha_portrait_trigger = yes
+                has_character_modifier = gacha_former_ruler_modifier
+            }
+        }
+    }
+
+    effect = {
+        hidden_effect = {
+            # 1. 保存当前统治者为旧统治者
+            scope:actor = {
+                ruler = { save_scope_as = gacha_old_ruler }
+            }
+
+            # 2. 清理旧统治者上的修正，并确保留在王权阶层
+            scope:gacha_old_ruler = {
+                remove_character_modifier = gacha_temp_regent_modifier
+                remove_character_modifier = gacha_former_ruler_modifier
+                change_character_estate = estate_type:crown_estate
+            }
+
+            # 3. 切换统治者到目标角色
+            scope:actor = {
+                set_new_ruler_with_union = { character = scope:recipient }
+            }
+
+            # 4. 给旧统治者打“前任统治者”修正
+            scope:gacha_old_ruler = {
+                add_character_modifier = { modifier = gacha_former_ruler_modifier years = -1 mode = add_and_extend }
+            }
+
+            # 5. 给新统治者打“代政中”修正，并放入王权阶层
+            scope:recipient = {
+                add_character_modifier = { modifier = gacha_temp_regent_modifier years = -1 mode = add_and_extend }
+                change_character_estate = estate_type:crown_estate
+            }
+
+            clear_saved_scope = gacha_old_ruler
+        }
+    }
+
+    ai_will_do = { base = 0 }
+}

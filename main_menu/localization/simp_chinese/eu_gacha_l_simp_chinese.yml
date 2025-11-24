@@ -24,6 +24,19 @@
 
   MODIFIER_TYPE_NAME_gacha_core: "来自异世界的旅人"
   MODIFIER_TYPE_DESC_gacha_core: "「来自异世界的旅人」"
+  MODIFIER_TYPE_NAME_gacha_country_aura: "国策共鸣"
+  MODIFIER_TYPE_DESC_gacha_country_aura: "该角色为国家提供一项常驻的国策增益。"
+
+  # 星辉共治系统
+  gacha_delegate_regency_interaction: "星辉共治"
+  gacha_delegate_regency_interaction_concept: "星辉共治"
+  gacha_delegate_regency_interaction_desc_specific: "让该角色成为名义上的执政者，与您一同分担国政与命运。原统治者退居幕后一线，仍可在内阁与军中发挥作用。"
+  gacha_delegate_regency_select: "选择共治之星"
+
+  STATIC_MODIFIER_NAME_gacha_temp_regent_modifier: "代政者"
+  STATIC_MODIFIER_DESC_gacha_temp_regent_modifier: "在星辉的见证下，暂时执掌王权，与幕后君主共治天下。"
+  STATIC_MODIFIER_NAME_gacha_former_ruler_modifier: "前任统治者"
+  STATIC_MODIFIER_DESC_gacha_former_ruler_modifier: "暂让王位、退居幕后，保有内阁与将领资格，以另一种方式守护国家。"
 
   # === 祈愿主菜单 (.1) ===
   gacha_events.1.title: "祈愿：异世相遇"
@@ -136,8 +149,14 @@
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_xinhai_modifier: "海祇的加护"
   STATIC_MODIFIER_DESC_gacha_xinhai_modifier: "「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
+  STATIC_MODIFIER_NAME_gacha_xinhai_country_modifier: "海祇的国策"
+  STATIC_MODIFIER_DESC_gacha_xinhai_country_modifier: "心海的战略布局强化了内阁运转与文化影响力。"
   gacha_xinhai_modifier: "海祇之志"
   gacha_xinhai_modifier_desc: "珊瑚宫心海的战略部署正在为国家带来稳定的行政流转与后勤保障。"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c2_country_modifier: "海月之誓·国度"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c2_country_modifier: "海祇的恩泽修复灾厄，抚平阶层情绪。"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c4_country_modifier: "海祇姬君·舰阵"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c4_country_modifier: "海祇姬君庇护舰队，提升士气、航速与修理效率。"
 
   # === 命之座 (Constellations) ===
   STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier: "眠龙座·零命"

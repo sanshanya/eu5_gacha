@@ -445,3 +445,235 @@ gacha_execute_single_roll = {
 ---
 
 **记住**: 作用域就像房间，进去了就要出来，用完了就要打扫干净！🧹
+
+---
+
+## 🧪 案例：代政交互踩坑与修复日志
+
+> 文件：`in_game/common/character_interactions/gacha_regency_interactions.txt`  
+> 目标：实现“任意抽卡角色 / 前统治者都可以被任命为统治者”的交互
+
+这个功能一开始看起来很简单：“点一下按钮，把某个角色设为统治者”。  
+实际实现过程中却经历了一整套**作用域误用 → 状态设计过度复杂 → 回到最简模型**的迭代。
+
+下面按时间顺序记录问题与最终定稿方案，作为反面教材。
+
+### 1. 错误设计：scripted_effect + 虚构参数
+
+**错误做法**
+
+```paradox
+gacha_start_regency_effect = {
+    # Params: regent (character)
+    scope:regent = { save_scope_as = regent_scope }
+    random_character = {
+        limit = { is_ruler = yes employer = root }
+        save_scope_as = old_ruler_scope
+    }
+    ...
+    set_new_ruler_with_union = { character = scope:regent_scope }
+}
+```
+
+- 在 `scripted_effect` 里幻想存在 `regent` / `former_ruler` 之类的**位置参数**，实际上调用方从未正确传递这些作用域。
+- 使用 `scope:regent`、`scope:former_ruler` 等“伪参数”让代码看起来很合理，但运行时统统是 `none`。
+
+**教训**
+- Jomini 的 `scripted_effect` 没有“自动命名参数”的机制，**所有作用域都必须由调用方用 `save_scope_as` 显式保存**。
+- 如果只是一次性交互（按钮点一次做完），优先考虑**直接把逻辑内联到 interaction 的 `effect` 里**，减少跨文件的作用域传递。
+
+### 2. 错误设计：国家/角色状态混用 + 作用域错位
+
+**错误做法**
+
+```paradox
+root = {
+    set_country_flag = gacha_regency_active
+    add_character_modifier = { modifier = gacha_regency_country_tt years = 1 } # ❌ 在国家加角色修正
+}
+```
+
+- 试图用 `gacha_regency_active` 国家旗标和一个“国家代政修正”来标记状态，但把 `add_character_modifier` 放在了国家作用域。
+- 导致引擎报错：`remove_character_modifier missing perspective`。
+
+**教训**
+- **修正类型一定要和作用域对应**：
+  - 国家修正：`add_country_modifier` / `remove_country_modifier`
+  - 角色修正：`add_character_modifier` / `remove_character_modifier`
+- 如果只是为了 UI 提示，可以完全不要国家级状态，用角色身上的标记（修正/trait）就足够。
+
+### 3. 错误设计：在 interaction 里误用角色作用域
+
+一度尝试让交互“直接点在角色头上执行”，于是写出过类似代码：
+
+```paradox
+gacha_delegate_regency_interaction = {
+    potential = { has_ruler = yes }
+    allow = {
+        scope:recipient = { has_trait = gacha_xxx_origin_trait } # ❌ 这里没有 recipient
+    }
+}
+```
+
+**问题**
+- `character_interactions` 的 `potential` / `allow` 默认作用域是 `scope:actor = country`。
+- 在 `allow` 里直接写 `has_trait` 不会自动切到角色身上，结果就是**永远为假** → 按钮灰掉/消失。
+
+**正确理解**
+- **交互阶段的作用域：**
+  - `potential` / `allow`：`scope:actor = country`
+  - `select_trigger.visible` / `enabled`：`root = 候选对象`，`scope:actor = country`
+  - `effect`：`scope:actor = country`，`scope:recipient` 等由 `select_trigger` 选出
+
+如果要基于角色是否为“前统治者”来判断是否显示按钮，最安全的做法是：
+
+```paradox
+select_trigger = {
+    looking_for_a = character
+    source = actor
+    target_flag = recipient
+    visible = {
+        is_alive = yes
+        NOT = { is_ruler = yes }
+        OR = {
+            ls_gacha_portrait_trigger = yes                  # 抽卡角色
+            has_character_modifier = gacha_former_ruler_modifier # 前统治者
+        }
+    }
+}
+```
+
+### 4. 错误设计：引入不存在的 trait category
+
+曾经试图用 trait 来标记“前统治者/代政者”，写出了：
+
+```paradox
+gacha_former_ruler_trait = {
+    category = character  # ❌ EU5 中不存在这个category
+    allow = { always = no }
+}
+```
+
+结果自然是：`add_trait` 没报错，但 trait 从未真正挂上去，UI 也不显示。
+
+**教训**
+- trait 的 `category` 必须使用引擎已有的类别（如 `ruler`，`general`，`explorer` 等）。
+- 本案例里，最终发现 trait 只是“锦上添花的 UI”，而逻辑完全可以只靠 **静态修正** 完成，所以干脆删掉 trait 方案。
+
+### 5. 最终定稿：单交互 + 静态修正的极简模型
+
+**文件**：`in_game/common/character_interactions/gacha_regency_interactions.txt`  
+**辅助修正**：`main_menu/common/static_modifiers/gacha_modifiers.txt`
+
+#### 5.1 静态修正设计
+
+```paradox
+gacha_temp_regent_modifier = {
+  game_data = { category = character decaying = no }
+  icon = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds"
+  monthly_prestige = 0.25
+}
+
+gacha_former_ruler_modifier = {
+  game_data = { category = character decaying = no }
+  icon = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds"
+  force_allow_as_leader       = yes
+  ignore_gender_block_cabinet = yes
+}
+```
+
+- 逻辑判定完全依赖这两个修正：
+  - “是否是代政者”：`has_character_modifier = gacha_temp_regent_modifier`
+  - “是否是前统治者”：`has_character_modifier = gacha_former_ruler_modifier`
+- 本地化中直接给它们起了好记的名字，方便玩家在 UI 中识别。
+
+#### 5.2 交互显示逻辑
+
+```paradox
+gacha_delegate_regency_interaction = {
+    # actor = country
+    potential = {
+        scope:actor = { has_ruler = yes }
+    }
+
+    # 选目标：抽卡角色 或 带前统治者修正的人
+    select_trigger = {
+        looking_for_a = character
+        source = actor
+        target_flag = recipient
+        name = "gacha_delegate_regency_select"
+        column = { data = name }
+        visible = {
+            is_alive = yes
+            NOT = { is_ruler = yes }
+            OR = {
+                ls_gacha_portrait_trigger = yes
+                has_character_modifier = gacha_former_ruler_modifier
+            }
+        }
+    }
+    ...
+}
+```
+
+**效果**：
+- 任意抽卡角色（有 gacha origin trait）都有“委任代政”按钮。
+- 退位后的前统治者因为带有 `gacha_former_ruler_modifier`，也在候选列表里 → 可以随时被点回去。
+
+#### 5.3 切换统治者核心逻辑（最终版）
+
+```paradox
+effect = {
+    hidden_effect = {
+        # 1. 保存当前统治者为旧统治者
+        scope:actor = { ruler = { save_scope_as = gacha_old_ruler } }
+
+        # 2. 清理旧统治者上的修正，并确保留在王权阶层
+        scope:gacha_old_ruler = {
+            remove_character_modifier = gacha_temp_regent_modifier
+            remove_character_modifier = gacha_former_ruler_modifier
+            change_character_estate = estate_type:crown_estate
+        }
+
+        # 3. 切换统治者到目标角色
+        scope:actor = {
+            set_new_ruler_with_union = { character = scope:recipient }
+        }
+
+        # 4. 给旧统治者打“前任统治者”修正
+        scope:gacha_old_ruler = {
+            add_character_modifier = {
+                modifier = gacha_former_ruler_modifier
+                years    = -1
+                mode     = add_and_extend
+            }
+        }
+
+        # 5. 给新统治者打“代政中”修正，并放入王权阶层
+        scope:recipient = {
+            add_character_modifier = {
+                modifier = gacha_temp_regent_modifier
+                years    = -1
+                mode     = add_and_extend
+            }
+            change_character_estate = estate_type:crown_estate
+        }
+
+        clear_saved_scope = gacha_old_ruler
+    }
+}
+```
+
+**特点**：
+- **全部逻辑都在 interaction 的 `effect` 里完成**，不再依赖额外的 `scripted_effect`。
+- 只使用一个 `save_scope_as`（当前统治者），并在末尾 `clear_saved_scope`，作用域简单清晰。
+- 不再有国家级代政旗标；整个系统靠“谁有哪种修正”来判断状态。
+
+### 6. 总体经验总结
+
+1. **不要提前设计复杂的“状态机”**（旗标、trait、scripted_effect 乱飞），先写一个**能跑通的最小内联版本**。
+2. `character_interactions` 的 `potential/allow` 一定要按**国家作用域**来写，角色相关条件放在 `select_trigger.visible`。
+3. 角色标记优先用**静态修正**：
+   - 既能在 UI 上显示，又能在脚本里用 `has_character_modifier` 判定；
+   - 比引入新 trait 更稳定、侵入性更小。
+4. 如果某个辅助文件（比如 `gacha_regency_effects.txt`）最终完全没用到了，**就删除**，避免以后自己或别的 AI 再被误导。 

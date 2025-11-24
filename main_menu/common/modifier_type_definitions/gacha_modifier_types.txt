@@ -38,6 +38,16 @@ gacha_core ={
   }
 }
 
+gacha_country_aura ={
+  color=good
+  boolean=yes
+  game_data={
+    category=character
+  }
+}
+
+
+
 gacha_constellation_level = {
   color = neutral     # 中性色（白色）
   boolean = no        # 是数字

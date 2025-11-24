@@ -24,6 +24,19 @@ l_english:
 
   MODIFIER_TYPE_NAME_gacha_core: "Travelers from Another World"
   MODIFIER_TYPE_DESC_gacha_core: "\"Travelers from Another World\""
+  MODIFIER_TYPE_NAME_gacha_country_aura: "National Aura"
+  MODIFIER_TYPE_DESC_gacha_country_aura: "This character grants a permanent national-scale buff."
+
+  # Starlight Co-Regency system
+  gacha_delegate_regency_interaction: "Starlight Co-Regency"
+  gacha_delegate_regency_interaction_concept: "Starlight Co-Regency"
+  gacha_delegate_regency_interaction_desc_specific: "Entrust the visible crown to this character as your starlit co-ruler. You step back into the court’s shadows, still free to serve in council and in the field."
+  gacha_delegate_regency_select: "Choose a Co-Ruler"
+
+  STATIC_MODIFIER_NAME_gacha_temp_regent_modifier: "Regent"
+  STATIC_MODIFIER_DESC_gacha_temp_regent_modifier: "Holds the visible reins of state, sharing rule with the unseen sovereign behind the throne."
+  STATIC_MODIFIER_NAME_gacha_former_ruler_modifier: "Former Ruler"
+  STATIC_MODIFIER_DESC_gacha_former_ruler_modifier: "Has yielded the crown for now, remaining free to serve in council and command."
 
   # === Wish Main Menu (.1) ===
   gacha_events.1.title: "Wish: Meeting the Otherworld"
@@ -136,8 +149,14 @@ l_english:
   # === Modifiers ===
   STATIC_MODIFIER_NAME_gacha_xinhai_modifier: "Watatsumi's Blessing"
   STATIC_MODIFIER_DESC_gacha_xinhai_modifier: "\"Protect everything on Watatsumi Island so that everyone here can live happily ever after.\""
+  STATIC_MODIFIER_NAME_gacha_xinhai_country_modifier: "Watatsumi National Strategy"
+  STATIC_MODIFIER_DESC_gacha_xinhai_country_modifier: "Kokomi's planning strengthens cabinet efficiency and cultural influence across the realm."
   gacha_xinhai_modifier: "Will of Watatsumi"
   gacha_xinhai_modifier_desc: "Kokomi's strategic planning brings steady administration and logistics to the realm."
+  STATIC_MODIFIER_NAME_gacha_xinhai_c2_country_modifier: "Oath of the Moonlit Seas – Realm"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c2_country_modifier: "The blessing of the sea soothes estates, resists disease, and heals devastation."
+  STATIC_MODIFIER_NAME_gacha_xinhai_c4_country_modifier: "Princess of Watatsumi – Fleet"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c4_country_modifier: "The princess shields the fleet, boosting morale, speed, and repair throughput."
 
   # === Constellations ===
   STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier: "Sleepy Dragon · C0"

@@ -18,6 +18,10 @@ gacha_core = {
   positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds"
 }
 
+gacha_country_aura = {
+  positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds"
+}
+
 gacha_constellation_level= {
   positive = "gfx/interface/icons/modifier_types/gacha_constellation.dds"
 }

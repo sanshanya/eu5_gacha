@@ -5,3 +5,16 @@ gacha_core_modifier = {
   ignore_gender_block_cabinet = yes
   is_immortal                 = yes
 }
+
+gacha_temp_regent_modifier = {
+  game_data = { category = character decaying = no }
+  icon = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds"
+  monthly_prestige = 0.25
+}
+
+gacha_former_ruler_modifier = {
+  game_data = { category = character decaying = no }
+  icon = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds"
+  force_allow_as_leader       = yes
+  ignore_gender_block_cabinet = yes
+}

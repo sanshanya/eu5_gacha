@@ -23,6 +23,7 @@
                 scope:existing_char = {
                     change_variable = { name = gacha_constellation_lvl add = 1 }
                     gacha_apply_constellation_stats_effect = { who = xinhai }
+                    gacha_xinhai_apply_country_modifiers = yes
                 }
                 # Trigger Event based on NEW level
                 if = {
@@ -77,9 +78,34 @@
         }
         scope:new_char = {
             gacha_register_new_character = { who = xinhai }
+            gacha_xinhai_apply_country_modifiers = yes
         }
         set_global_variable = { name = gacha_xinhai_is_summoned value = 1 }
         scope:new_char = { root = { trigger_event_non_silently = { id = gacha_xinhai_events.1 } } }
         clear_saved_scope = new_char
+    }
+}
+
+# 将需要国家作用域的心海加成挂在国家上，保证不受职位限制
+gacha_xinhai_apply_country_modifiers = {
+    root = {
+        remove_country_modifier = gacha_xinhai_country_modifier
+        remove_country_modifier = gacha_xinhai_c2_country_modifier
+        remove_country_modifier = gacha_xinhai_c4_country_modifier
+    }
+    root = {
+        add_country_modifier = { modifier = gacha_xinhai_country_modifier years = -1 mode = add_and_extend }
+    }
+    if = {
+        limit = { var:gacha_constellation_lvl >= 2 }
+        root = {
+            add_country_modifier = { modifier = gacha_xinhai_c2_country_modifier years = -1 mode = add_and_extend }
+        }
+    }
+    if = {
+        limit = { var:gacha_constellation_lvl >= 4 }
+        root = {
+            add_country_modifier = { modifier = gacha_xinhai_c4_country_modifier years = -1 mode = add_and_extend }
+        }
     }
 }
