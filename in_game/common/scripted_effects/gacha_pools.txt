@@ -1,4 +1,4 @@
-﻿﻿gacha_pool_5star_limited = {
+﻿gacha_pool_5star_limited = {
     gacha_create_xinhai_effect = yes
 }
 
@@ -65,4 +65,3 @@ gacha_pool_4star_rewards = {
 
 # 3 星占位池：无奖励（仅维持结构）
 gacha_pool_3star_empty = { }
-

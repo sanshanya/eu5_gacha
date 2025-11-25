@@ -1,4 +1,4 @@
-﻿﻿gacha_create_keqing_effect = {
+﻿gacha_create_keqing_effect = {
     # === A. Duplicate Logic ===
     if = {
         limit = { has_global_variable = gacha_keqing_is_summoned }

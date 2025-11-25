@@ -15,7 +15,8 @@
       base = 0
       modifier = {
         add = 255
-        has_character_modifier = gacha_raiden_modifier
+
+        has_trait = gacha_raiden_origin_trait
       }
     }
   }

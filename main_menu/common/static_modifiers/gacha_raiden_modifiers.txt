@@ -1,4 +1,4 @@
-﻿﻿# Generated Modifiers for raiden
+﻿# Generated Modifiers for raiden
 gacha_raiden_modifier = {
     game_data = { category = character decaying = no }
     gacha_core = yes

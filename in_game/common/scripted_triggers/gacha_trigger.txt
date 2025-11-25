@@ -1,4 +1,4 @@
-﻿﻿ls_gacha_portrait_trigger = {
+﻿ls_gacha_portrait_trigger = {
   OR = {
     has_trait = gacha_core_trait
   }

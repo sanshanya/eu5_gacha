@@ -1,4 +1,4 @@
-﻿﻿gacha_create_furina_effect = {
+﻿gacha_create_furina_effect = {
     # === A. Duplicate Logic ===
     if = {
         limit = { has_global_variable = gacha_furina_is_summoned }

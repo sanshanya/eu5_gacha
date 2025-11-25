@@ -1,4 +1,4 @@
-pdxmesh = {
+﻿pdxmesh = {
 	name = "gacha_furina_01_mesh"
 	file = "gacha_hm_prophet.mesh"
 	scale = 1

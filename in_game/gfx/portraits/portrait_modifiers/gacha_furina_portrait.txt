@@ -15,7 +15,7 @@
       base = 0
       modifier = {
         add = 255
-        has_character_modifier = gacha_furina_modifier
+        has_trait = gacha_furina_origin_trait
       }
     }
   }

@@ -1,4 +1,4 @@
-﻿﻿gacha_create_xinhai_effect = {
+﻿gacha_create_xinhai_effect = {
     # === A. Duplicate Logic ===
     if = {
         limit = { has_global_variable = gacha_xinhai_is_summoned }

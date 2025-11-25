@@ -1,4 +1,4 @@
-﻿﻿gacha_create_hutao_effect = {
+﻿gacha_create_hutao_effect = {
     # === A. Duplicate Logic ===
     if = {
         limit = { has_global_variable = gacha_hutao_is_summoned }

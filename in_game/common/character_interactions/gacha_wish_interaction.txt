@@ -1,40 +1,39 @@
-﻿﻿gacha_events_interaction = {
-    message = no
-    is_consort_action = no
-    on_own_nation = yes
-    ai_tick = never
-    context_menu_click_mode = click
+﻿gacha_events_interaction = {
+   message = no
+   is_consort_action = no
+   on_own_nation = yes
+   ai_tick = never
+   context_menu_click_mode = click
 
-    # === 谁能看到 ===
-    potential = {
-        scope:actor = { # 显式指向 Actor
-            is_alive = yes # 国家总是活的，这一行可能多余，除非检查是否灭亡
-            is_ruler = yes # 检查是否统治者
-        }
-    }
+   # === 谁能看到 ===
+   potential = {
+      is_alive = yes # 国家总是活的，这一行可能多余，除非检查是否灭亡
+      is_ruler = yes # 检查是否统治者
 
-    # === 谁能点 ===
-    # 这里始终允许，因为没钱的判断我们放在事件菜单里了
-    allow = {
-        always = yes
-    }
-    select_trigger = {
-        looking_for_a = character
-        source = actor
-        target_flag = recipient
-        name = "gacha_select_title"
-        column = { data = name }
-        visible = {
-            scope:actor = { ruler ?= root }
-        }
-    }
-    # === 效果 ===
-    effect = {
-        scope:actor = {
-            # 直接触发主菜单事件，没有任何多余动作
-            trigger_event_non_silently = gacha_events.1
-        }
-    }
+   }
 
-    ai_will_do = { base = 0 }
-}
+   # === 谁能点 ===
+   # 这里始终允许，因为没钱的判断我们放在事件菜单里了
+   allow = {
+     always = yes
+   }
+   select_trigger = {
+     looking_for_a = character
+     source = actor
+     target_flag = recipient
+     name = "gacha_select_title"
+     column = { data = name }
+     visible = {
+       scope:actor = { ruler ?= root }
+     }
+   }
+   # === 效果 ===
+   effect = {
+     scope:actor = {
+       # 直接触发主菜单事件，没有任何多余动作
+       trigger_event_non_silently = gacha_events.1
+     }
+   }
+
+   ai_will_do = { base = 0 }
+ }

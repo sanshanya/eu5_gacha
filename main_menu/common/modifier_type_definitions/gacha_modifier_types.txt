@@ -1,4 +1,4 @@
-﻿﻿gacha_water_godeye={
+﻿gacha_water_godeye={
   color=good
   boolean=yes
   game_data={

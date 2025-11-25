@@ -1,4 +1,4 @@
-﻿﻿# Generated Modifiers for furina
+﻿# Generated Modifiers for furina
 gacha_furina_modifier = {
     game_data = { category = character decaying = no }
     gacha_core = yes

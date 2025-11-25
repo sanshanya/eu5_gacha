@@ -1,4 +1,4 @@
-﻿﻿# Generated Modifiers for xinhai
+﻿# Generated Modifiers for xinhai
 gacha_xinhai_modifier = {
     game_data = { category = character decaying = no }
     gacha_core = yes
