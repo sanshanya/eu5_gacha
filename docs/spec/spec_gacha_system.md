@@ -86,14 +86,14 @@ set_variable = { name = gacha_trait_id value = 1001 }        # 角色ID
 
 **公式** (千分制):
 ```
-rand = 937 + 17×total_rolls + |treasury| + 13×pity_count + 7×block_index
+rand = 937 + 17×total_rolls + |gold| + 13×pity_count + 7×block_index
 rand = rand mod 1000
 ```
 
 **熵源说明**:
 - `937`: 质数偏移，确保初始值够大
 - `17×total_rolls`: 线性增长因子
-- `|treasury|`: 国库金币的绝对值（避免负数影响）
+- `|gold|`: 国库金币的绝对值（避免负数影响）
 - `13×pity_count`: 保底计数的质数混淆
 - `7×block_index`: 块索引的质数混淆
 

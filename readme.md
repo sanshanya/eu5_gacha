@@ -149,7 +149,7 @@ eu5_gacha/
 ### 随机数生成
 使用质数混合算法确保分布均匀：
 ```
-rand = 937 + 17×total_rolls + |treasury| + 13×pity + 7×block_index
+rand = 937 + 17×total_rolls + |gold| + 13×pity + 7×block_index
 ```
 
 ### Silent内核架构

@@ -30,7 +30,7 @@
 **根本原因**:
 ```paradox
 # 旧代码: 随机数永远=5
-rand = total_rolls + treasury + pity_count
+rand = total_rolls + gold + pity_count
      = 5 + 0 + 0 = 5
 
 # 阈值 = 6 (0.6%)
@@ -39,7 +39,7 @@ rand = total_rolls + treasury + pity_count
 
 **修复方案**:
 - 使用质数混合 + 固定偏移937
-- 添加多个熵源（total_rolls×17, treasury, pity×13, block×7）
+- 添加多个熵源（total_rolls×17, gold, pity×13, block×7）
 - 确保随机数在0-999范围均匀分布
 
 **修复后代码**:
@@ -49,7 +49,7 @@ change_variable = {
     name = gacha_rand 
     add = { value = var:gacha_total_rolls multiply = 17 }
 }
-change_variable = { name = gacha_rand add = abs_treasury }
+change_variable = { name = gacha_rand add = abs_gold }
 change_variable = { 
     name = gacha_rand 
     add = { value = var:gacha_pity_count multiply = 13 }
@@ -175,26 +175,26 @@ if = {
 
 **根本原因**:
 ```paradox
-# 直接加上treasury
-change_variable = { name = gacha_rand add = treasury }
-# 如果treasury=-500，rand会减少500
+# 直接加上gold
+change_variable = { name = gacha_rand add = gold }
+# 如果gold=-500，rand会减少500
 ```
 
 **修复方案**:
-- 使用 treasury 的绝对值
+- 使用 gold 的绝对值
 - 负数时先×(-1)再加到 rand
 
 **修复后代码**:
 ```paradox
 # 计算绝对值
-set_variable = { name = abs_treasury value = treasury }
+set_variable = { name = abs_gold value = gold }
 if = {
-    limit = { treasury < 0 }
-    change_variable = { name = abs_treasury multiply = -1 }
+    limit = { gold < 0 }
+    change_variable = { name = abs_gold multiply = -1 }
 }
 
 # 加入随机数池
-change_variable = { name = gacha_rand add = var:abs_treasury }
+change_variable = { name = gacha_rand add = var:abs_gold }
 ```
 
 **文件**: `in_game/common/scripted_effects/gacha_logic_effects.txt:44-54`
@@ -355,7 +355,7 @@ rand = rand mod 范围
 
 **本项目实现**:
 ```paradox
-rand = 937 + 17×total_rolls + |treasury| + 13×pity + 7×block_index
+rand = 937 + 17×total_rolls + |gold| + 13×pity + 7×block_index
 rand = rand mod 1000
 ```
 

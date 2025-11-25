@@ -43,6 +43,6 @@
 
 记得时刻查看"C:\Users\sansm\OneDrive\文档\Paradox Interactive\Europa Universalis V\logs\game.log" 来获取最新错误信息
 
-已知 is_triggered_only = yes 不存在 [21:17:24][pdx_persistent_reader.cpp:289]: Error: "Unexpected token: is_triggered_only, near line: 18" in file: "events/gacha_xinhai_events.txt" near line: 18
+已知  不存在 [21:17:24][pdx_persistent_reader.cpp:289]: Error: "Unexpected token: is_triggered_only, near line: 18" in file: "events/gacha_xinhai_events.txt" near line: 18
 
 已知需要用utf8-bom [21:17:22][lexer.cpp:286]: File 'common/static_modifiers/gacha_klee_modifiers.txt' should be in utf8-bom encoding (will try to use it anyways)

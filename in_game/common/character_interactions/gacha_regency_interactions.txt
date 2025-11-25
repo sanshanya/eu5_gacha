@@ -65,5 +65,5 @@
     }
   }
 
-  ai_will_do = { base = 0 }
+  ai_will_do = { value = 0 }
 }

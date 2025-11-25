@@ -131,7 +131,7 @@ Since `random_list` is unusable, we generate pseudo-random numbers from naturall
 
 ```paradox
 # Entropy sources that change with each pull:
-gacha_rand = gacha_total_rolls + gacha_pity_count + treasury
+gacha_rand = gacha_total_rolls + gacha_pity_count + gold
 ```
 
 ### Key Components
@@ -142,10 +142,10 @@ Increments by 1 with each pull, ensuring the random value always changes:
 change_variable = { name = gacha_total_rolls add = 1 }
 ```
 
-#### 2. Treasury as Entropy
+#### 2. gold as Entropy
 Player's gold decreases with each pull (cost deduction), adding natural variance:
 ```paradox
-change_variable = { name = gacha_rand add = treasury }
+change_variable = { name = gacha_rand add = gold }
 ```
 
 #### 3. Pity Counter Integration
@@ -203,7 +203,7 @@ if = { limit = { var:gacha_rand_ones < var:gacha_thresh5 } ... }
 
 ### How to Verify Randomness
 1. Start game and pause immediately
-2. Open Debug Tool (if available) or note starting treasury
+2. Open Debug Tool (if available) or note starting gold
 3. Perform 5-10 consecutive pulls
 4. Check Script Variables on your country:
    - `gacha_rand` - Should vary each pull
@@ -212,7 +212,7 @@ if = { limit = { var:gacha_rand_ones < var:gacha_thresh5 } ... }
 5. Observe pull results - should show variance (not all success/failure)
 
 ### Expected Behavior
-- **Same day, paused game**: Results vary due to changing treasury and total_rolls
+- **Same day, paused game**: Results vary due to changing gold and total_rolls
 - **Different days**: Results vary even more due to date-independent logic
 - **Save-scumming**: No longer predictable (different from `random_list` approach)
 
@@ -228,7 +228,7 @@ if = { limit = { var:gacha_rand_ones < var:gacha_thresh5 } ... }
 
 ### Best Practices for EU5 Modding
 1. **Don't rely on `random_list`** for player-facing randomness on the same day
-2. **Use game state as entropy**: Treasury, diplomatic power, manpower, etc.
+2. **Use game state as entropy**: gold, diplomatic power, manpower, etc.
 3. **Debug Tool is essential**: View variables in real-time without console
 4. **Test rigorously**: Paradox documentation doesn't always match engine behavior
 
@@ -247,7 +247,7 @@ if = { limit = { var:gacha_rand_ones < var:gacha_thresh5 } ... }
 
 ### Known Limitations
 - **Current range**: Only uses 0-900 (ones digit × 100), not full 0-1000
-- **Low entropy**: On same-day pulls, only treasury and total_rolls vary
+- **Low entropy**: On same-day pulls, only gold and total_rolls vary
 - **Predictability**: Advanced players could theoretically predict by tracking gold
 
 ---

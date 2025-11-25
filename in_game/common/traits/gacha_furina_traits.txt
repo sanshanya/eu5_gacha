@@ -21,7 +21,7 @@ gacha_furina_awakened_trait = {
 }
 
 gacha_furina_transcended_trait = {
-    category = general 
+    category = general
     allow = { always = no }
     modifier = {
         naval_morale_modifier = 0.20

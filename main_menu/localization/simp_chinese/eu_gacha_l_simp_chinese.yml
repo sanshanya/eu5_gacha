@@ -145,7 +145,7 @@
 
   gacha_xinhai_transcended_trait: "海祇姬君"
   desc_gacha_xinhai_transcended_trait: "在碧波游鱼间穿行，感受海水轻抚脸颊的温柔，内心也跟着平静下来了呢。\n\n效果：\n海军士气：+30%\n海军移动速度：+30%\n海军维修花费：-50%"
-  
+
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_xinhai_modifier: "海祇的加护"
   STATIC_MODIFIER_DESC_gacha_xinhai_modifier: "「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
@@ -253,20 +253,20 @@
   # === 姓名 ===
   gacha_first_name_furina: "芙宁娜"
   gacha_last_name_furina: "德·枫丹"
-  
+
   # === 特质 ===
   gacha_furina_origin_trait: "众水之神"
   desc_gacha_furina_origin_trait: "她是一切水域的统治者，正义的化身。"
-  
+
   # === 修正 ===
   STATIC_MODIFIER_NAME_gacha_furina_modifier: "众水的加护"
   STATIC_MODIFIER_DESC_gacha_furina_modifier: "「世界不过是一场盛大的舞台剧，而我将是永远的主角。」"
-  
+
   # === 事件 ===
   gacha_furina_events.1.title: "众水、众方、众民与众律法的女王"
   gacha_furina_events.1.desc: "一位身着华丽服饰的少女出现在你的宫廷中，她自称是芙宁娜·德·枫丹。"
   gacha_furina_events.1.a: "欢迎您的到来，女王陛下。"
-  
+
   gacha_furina_events.2.title: "命座提升"
   gacha_furina_events.2.desc: "芙宁娜的力量得到了提升。"
   gacha_furina_events.2.a: "太好了！"
@@ -518,8 +518,6 @@
   gacha_nahida_events.12.title: "命之座·超越"
   gacha_nahida_events.12.desc: "纳西妲展现出了「比量破愚」的姿态。她的智慧已经能够消除人们心中的迷惘与困惑。\n\n「智慧不是用来炫耀的，而是用来帮助别人的。让我们一起驱散无知的黑暗，让知识的光芒照亮每一个人~」"
   gacha_nahida_events.12.a: "智慧之光！"
-
-
 
   # ============================================================
   # Character - 可莉 (klee)

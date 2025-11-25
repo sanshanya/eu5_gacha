@@ -8,7 +8,7 @@
   gacha_text_reward_legitimacy_medium: "The crown's mandate is hallowed anew. (Legitimacy +20)"
   gacha_text_reward_stability_small: "Order settles over the realm like a gentle rain. (Stability +0.25)"
   gacha_text_reward_prestige_overflow: "Full-to-brimming starlight spills over into the realm's glory. (Overflow to Prestige)"
-  gacha_text_reward_gold_refund: "Only battered gear and scraps remain upon the altar, tallied back into the treasury. (Refund 1 gold)"
+  gacha_text_reward_gold_refund: "Only battered gear and scraps remain upon the altar, tallied back into the gold. (Refund 1 gold)"
 
   # ============================================================
   # §Y Part 2: Gacha System Localization §!
@@ -48,7 +48,7 @@
   gacha_free_first_roll: "Free first pull (newcomer bonus)"
   gacha_events.1.b: "Wait and see"
   gacha_events.1.single_lack: "Insufficient offering"
-  gacha_not_enough_gold_tt: "The treasury is empty; we cannot prepare the offerings for a wish."
+  gacha_not_enough_gold_tt: "The gold is empty; we cannot prepare the offerings for a wish."
 
   # === Result: Blue/Purple (.2) ===
   gacha_events.2.title: "Wish Result: Silent Firmament"

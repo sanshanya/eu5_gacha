@@ -225,7 +225,7 @@ else = {
 ### What
 使用质数混合的伪随机数生成器:
 ```paradox
-rand = 937 + 17×total_rolls + |treasury| + 13×pity + 7×block_index
+rand = 937 + 17×total_rolls + |gold| + 13×pity + 7×block_index
 rand = rand mod 1000
 ```
 
@@ -238,13 +238,13 @@ rand = rand mod 1000
 **设计要点**:
 1. **固定偏移937**: 避免初始值过小
 2. **质数系数**: 17, 13, 7 - 增加均匀性
-3. **多熵源**: total_rolls, treasury, pity, block_index
-4. **绝对值处理**: treasury可能为负
+3. **多熵源**: total_rolls, gold, pity, block_index
+4. **绝对值处理**: gold可能为负
 
 ### Alternative Considered
 **方案A** (已否决): 简单相加
 ```paradox
-rand = total_rolls + treasury + pity
+rand = total_rolls + gold + pity
 ```
 - ❌ 可预测
 - ❌ 分布不均

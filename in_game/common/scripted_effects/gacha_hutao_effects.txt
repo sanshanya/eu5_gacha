@@ -66,8 +66,8 @@
             last_name = gacha_last_name_hutao
             female = yes
             age = 18
-            culture  = culture:tougokud
-            religion = religion:shinto
+            culture  = root.culture
+            religion = root.religion
             estate = estate_type:crown_estate
             adm = { 80 100 }
             dip = { 80 100 }

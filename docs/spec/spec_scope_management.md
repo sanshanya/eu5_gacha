@@ -231,7 +231,7 @@ effect = {
 **最优**: 完全在Country Scope工作(项目主要模式)
 ```paradox
 gacha_execute_roll = {
-    set_variable = { name = result value = treasury }
+    set_variable = { name = result value = gold }
     if = { limit = { var:result < 100 } ... }
     trigger_event_non_silently = { id = event.1 }
 }
