@@ -1,5 +1,15 @@
 # Technical Reference (技术参考)
 
+> [!WARNING]
+> **本文档包含混合内容**
+> 
+> 1. **引擎特性与限制**：关于本地化限制、Scope 作用域的部分仍然有效，可作为参考。
+> 2. **已修复 Bug**：关于 RNG 修复等内容已过时，请参阅 `spec/spec_gacha_system.md` 获取最新实现。
+> 
+> 未来建议将有效部分拆分至 `spec/spec_engine_technical_notes.md`。
+>
+> <!-- TODO: Split this file into spec_engine_technical_notes.md (valid engine notes) and archive_technical_bugs_and_workarounds.md (old bugs) during a future documentation cleanup. -->
+
 ## 1. 重要教训：本地化限制 (Localization Limitations)
 
 > [!CAUTION]

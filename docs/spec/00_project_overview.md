@@ -49,3 +49,11 @@
 | `in_game/events/gacha_xinhai_events.txt` | 角色专属事件（初见/命座/满命） | ✅ 正确 |
 | `in_game/common/scripted_effects/gacha_xinhai_effects.txt` | 角色专属效果 Wrapper | ✅ 正确 |
 | `main_menu/localization/simp_chinese/eu_gacha_l_simp_chinese.yml` | 项目主本地化文件 | ✅ 正确 |
+
+---
+
+## 5. 快速导航 (Quick Navigation)
+
+- **我要添加新角色** → [Workflow: Add Character](spec_workflow_add_character.md)
+- **我要修改抽卡概率** → [Spec: Gacha System](spec_gacha_system.md)
+- **我要写复杂脚本** → [Standard: Scope Management](spec_scope_management.md)

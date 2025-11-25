@@ -1,4 +1,13 @@
-# 工作流：如何添加新角色 (Add New Character)
+# Workflow: Add New Character (添加新角色工作流)
+
+- **Version**: 1.0
+- **Last Verified**: 2025-11-25
+- **Relevant Files**:
+  - `in_game/common/traits/`
+  - `main_menu/common/static_modifiers/`
+  - `main_menu/localization/simp_chinese/`
+
+> **See Also**: 关于特质与修正的设计理念，请参阅 [Design: Traits & Modifiers](../design/design_traits_and_modifiers.md)。
 
 本文档详细说明如何向卡池中添加一位新角色（以"雷电将军" `raiden` 为例）。
 
@@ -8,20 +17,20 @@
 
 | 类别 | 路径 | 说明 |
 | :--- | :--- | :--- |
-| **特质** | `common/traits/gacha_raiden_traits.txt` | 定义角色的核心特质与属性加成 |
-| **修正** | `common/static_modifiers/gacha_raiden_modifiers.txt` | 定义角色的永久修正 (可选) |
-| **修正类型** | `common/modifier_type_definitions/gacha_modifier_types.txt` | **[NEW]** 定义新的神之眼/命座修正类型 |
-| **图标** | `common/modifier_icons/gacha_modifier_icons.txt` | **[NEW]** 绑定修正类型的图标 |
-| **特质图标** | `gfx/interface/icons/traits/gacha_raiden_origin_trait.dds` | **[NEW]** 特质图标 (必须与特质同名) |
-| **立绘** | `gfx/portraits/portrait_modifiers/gacha_raiden_portrait.txt` | 定义角色的 2D/3D 立绘绑定 |
-| **配件** | `gfx/portraits/accessories/gacha_raiden_props.txt` | **[NEW]** 定义角色使用的配件 (Props) |
-| **基因** | `common/genes/gacha_raiden_genes_special_accessories_misc.txt` | **[NEW]** 定义配件的基因绑定 |
-| **资产** | `gfx/models/props/gacha_raiden/gacha_raiden_01.asset` | **[NEW]** 定义 3D 模型/贴图资产 |
-| **触发器** | `common/scripted_triggers/gacha_trigger.txt` | **[NEW]** 更新立绘显示触发器 |
-| **本地化** | `localization/simp_chinese/eu_gacha_l_simp_chinese.yml` | **[UPDATE]** 添加名字、描述、事件文本 (不要新建文件) |
-| **事件** | `events/gacha_raiden_events.txt` | 初次见面、命座提升、满命事件 |
-| **逻辑** | `common/scripted_effects/gacha_raiden_effects.txt` | **新架构**：角色专属 Wrapper 文件 |
-| **奖池** | `common/scripted_effects/gacha_pools.txt` | 将角色加入卡池 |
+| **特质** | `in_game/common/traits/gacha_raiden_traits.txt` | 定义角色的核心特质与属性加成 |
+| **修正** | `main_menu/common/static_modifiers/gacha_raiden_modifiers.txt` | 定义角色的永久修正 (可选) |
+| **修正类型** | `main_menu/common/modifier_type_definitions/gacha_modifier_types.txt` | **[NEW]** 定义新的神之眼/命座修正类型 |
+| **图标** | `main_menu/common/modifier_icons/gacha_modifier_icons.txt` | **[NEW]** 绑定修正类型的图标 |
+| **特质图标** | `main_menu/gfx/interface/icons/traits/gacha_raiden_origin_trait.dds` | **[NEW]** 特质图标 (必须与特质同名) |
+| **立绘** | `in_game/gfx/portraits/portrait_modifiers/gacha_raiden_portrait.txt` | 定义角色的 2D/3D 立绘绑定 |
+| **配件** | `in_game/gfx/portraits/accessories/gacha_raiden_props.txt` | **[NEW]** 定义角色使用的配件 (Props) |
+| **基因** | `in_game/common/genes/gacha_raiden_genes_special_accessories_misc.txt` | **[NEW]** 定义配件的基因绑定 |
+| **资产** | `in_game/gfx/models/props/gacha_raiden/gacha_raiden_01.asset` | **[NEW]** 定义 3D 模型/贴图资产 |
+| **触发器** | `in_game/common/scripted_triggers/gacha_trigger.txt` | **[NEW]** 更新立绘显示触发器 |
+| **本地化** | `main_menu/localization/simp_chinese/eu_gacha_l_simp_chinese.yml` | **[UPDATE]** 添加名字、描述、事件文本 (不要新建文件) |
+| **事件** | `in_game/events/gacha_raiden_events.txt` | 初次见面、命座提升、满命事件 |
+| **逻辑** | `in_game/common/scripted_effects/gacha_raiden_effects.txt` | **新架构**：角色专属 Wrapper 文件 |
+| **奖池** | `in_game/common/scripted_effects/gacha_pools.txt` | 将角色加入卡池 |
 
 ---
 
@@ -29,7 +38,7 @@
 
 ### 步骤 1：定义特质 (Traits)
 
-创建 `common/traits/gacha_raiden_traits.txt`。
+创建 `in_game/common/traits/gacha_raiden_traits.txt`。
 这是角色最核心的属性来源。
 
 ```paradox
@@ -68,7 +77,7 @@ gacha_raiden_transcended_trait = {
 这是一个多步骤过程，涉及 4 个文件。
 
 #### 2.1 创建资产定义 (.asset)
-创建 `gfx/models/props/gacha_raiden/gacha_raiden_01.asset`。
+创建 `in_game/gfx/models/props/gacha_raiden/gacha_raiden_01.asset`。
 定义模型的 Mesh 和贴图路径。
 
 ```paradox
@@ -92,7 +101,7 @@ entity = {
 ```
 
 #### 2.2 定义配件 (Props)
-创建 `gfx/portraits/accessories/gacha_raiden_props.txt`。
+创建 `in_game/gfx/portraits/accessories/gacha_raiden_props.txt`。
 
 ```paradox
 gacha_raiden_01 = {
@@ -105,7 +114,7 @@ gacha_raiden_01 = {
 ```
 
 #### 2.3 定义基因 (Genes)
-创建 `common/genes/gacha_raiden_genes_special_accessories_misc.txt`。
+创建 `in_game/common/genes/gacha_raiden_genes_special_accessories_misc.txt`。
 
 ```paradox
 accessory_genes = {
@@ -127,7 +136,7 @@ accessory_genes = {
 ```
 
 #### 2.4 绑定立绘 (Portrait Modifiers)
-创建 `gfx/portraits/portrait_modifiers/gacha_raiden_portrait.txt`。
+创建 `in_game/gfx/portraits/portrait_modifiers/gacha_raiden_portrait.txt`。
 
 ```paradox
 gacha_raiden_portrait = {
@@ -155,7 +164,7 @@ gacha_raiden_portrait = {
 ```
 
 #### 2.5 更新触发器 (Triggers)
-修改 `common/scripted_triggers/gacha_trigger.txt`，将新角色的特质加入 `ls_gacha_portrait_trigger`。
+修改 `in_game/common/scripted_triggers/gacha_trigger.txt`，将新角色的特质加入 `ls_gacha_portrait_trigger`。
 
 ```paradox
 ls_gacha_portrait_trigger = {
@@ -169,7 +178,7 @@ ls_gacha_portrait_trigger = {
 ### 步骤 3：配置修正与图标 (Modifiers & Icons)
 
 #### 3.1 定义修正类型
-修改 `common/modifier_type_definitions/gacha_modifier_types.txt`。
+修改 `main_menu/common/modifier_type_definitions/gacha_modifier_types.txt`。
 如果角色有新的神之眼类型（如雷元素），需要在此定义。
 
 ```paradox
@@ -183,7 +192,7 @@ gacha_electro_godeye={
 ```
 
 #### 3.2 绑定图标
-修改 `common/modifier_icons/gacha_modifier_icons.txt`。
+修改 `main_menu/common/modifier_icons/gacha_modifier_icons.txt`。
 
 ```paradox
 gacha_electro_godeye = {
@@ -192,7 +201,7 @@ gacha_electro_godeye = {
 ```
 
 #### 3.3 定义静态修正
-创建 `common/static_modifiers/gacha_raiden_modifiers.txt`。
+创建 `main_menu/common/static_modifiers/gacha_raiden_modifiers.txt`。
 
 ```paradox
 gacha_raiden_modifier = {
@@ -205,12 +214,12 @@ gacha_raiden_modifier = {
 ```
 
 #### 3.4 制作特质图标 (Trait Icons)
-**重要**：你需要为每个特质制作对应的图标，并放入 `gfx/interface/icons/traits/` 目录。
+**重要**：你需要为每个特质制作对应的图标，并放入 `main_menu/gfx/interface/icons/traits/` 目录。
 文件名必须与特质名完全一致（例如 `gacha_raiden_origin_trait.dds`）。
 
 ### 步骤 4：本地化 (Localization)
 
-**重要**：请直接修改 `localization/simp_chinese/eu_gacha_l_simp_chinese.yml`，**不要**创建新的 `.yml` 文件，否则可能导致加载失败。
+**重要**：请直接修改 `main_menu/localization/simp_chinese/eu_gacha_l_simp_chinese.yml`，**不要**创建新的 `.yml` 文件，否则可能导致加载失败。
 
 ```yaml
 l_simp_chinese:
@@ -237,7 +246,7 @@ l_simp_chinese:
 
 ### 步骤 5：创建事件 (Events)
 
-创建 `events/gacha_raiden_events.txt`。
+创建 `in_game/events/gacha_raiden_events.txt`。
 **注意**：必须使用 `character_event` 类型，而不是 `country_event`。
 
 你需要至少 5 个事件：
@@ -262,7 +271,7 @@ gacha_raiden_events.11 = {
 
 ### 步骤 6：编写逻辑 Wrapper (Scripted Effects)
 
-创建 `common/scripted_effects/gacha_raiden_effects.txt`。
+创建 `in_game/common/scripted_effects/gacha_raiden_effects.txt`。
 参考 `gacha_xinhai_effects.txt`，复制并修改为 `gacha_create_raiden_effect`。
 
 **需要修改的关键点**：
@@ -275,7 +284,7 @@ gacha_raiden_events.11 = {
 
 ### 步骤 7：加入奖池 (Pools)
 
-打开 `common/scripted_effects/gacha_pools.txt`。
+打开 `in_game/common/scripted_effects/gacha_pools.txt`。
 
 **重要**：不要使用 `random_list`！必须使用基于 `gacha_rand` 的伪随机逻辑来保证公平性。
 

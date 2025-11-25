@@ -1,9 +1,3 @@
-# Snow Project Advanced Features Analysis
-
-## 1. Custom Subject Type: `ls_snow_common_vassal`
-
-### Overview
-The reference mod creates a custom subject type that requires the overlord to have the `ls_snow_overlord_reform` government reform (granted when the ruler has the MASTER trait).
 
 ### Key Features
 

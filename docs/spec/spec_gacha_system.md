@@ -1,9 +1,53 @@
-# Gacha System Design (抽卡系统设计)
+# Gacha System Specification (抽卡系统规范)
 
-> **最后更新**: 2025-11-23  
-> **当前版本**: 2.0 (经过重大Bug修复)
+> **Verified**: 2025-11-25 | Game v1.0.0  
+> **Purpose**: 定义抽卡系统的核心机制、概率模型与实现规范
 
 ---
+
+## Technical Details
+
+### File Locations
+
+| 文件 | 路径 | 说明 |
+|:---|:---|:---|
+| **抽卡入口** | `in_game/common/character_interactions/gacha_wish_interaction.txt` | 玩家可观交互 |
+| **概率计算** | `in_game/common/script_values/gacha_values.txt` | 动态阈值、RNG公式 |
+| **核心逻辑** | `in_game/common/scripted_effects/gacha_logic_effects.txt` | 单次抽卡、十连Silent内核 |
+| **角色池** | `in_game/common/scripted_effects/gacha_pools.txt` | 多角色池定义 |
+| **Event UI** | `in_game/events/gacha_events.txt` | 抽卡界面与结果展示 |
+| **角色Effects** | `in_game/common/scripted_effects/gacha_xinhai_effects.txt` | 角色专属Wrapper |
+
+### Key Data Structures
+
+**Country Variables** (保底状态):
+```paradox
+set_variable = { name = gacha_total_rolls value = 0 }        # 总抽卡次数
+set_variable = { name = gacha_pity_count value = 0 }         # 5星保底计数 (0-89)
+set_variable = { name = gacha_pity_4star value = 0 }         # 4星保底计数 (0-9)
+set_variable = { name = gacha_block_has_4star value = 0 }    # 当前十连BLOCK状态
+set_variable = { name = gacha_is_guaranteed value = 0 }      # 大保底Flag
+```
+
+**Global Lists** (角色池):
+```paradox
+add_to_global_variable_list = {               # 已获得角色列表
+  name = gacha_obtained_characters
+  target = scope:new_char
+}
+```
+
+**Character Variables** (命之座):
+```paradox
+set_variable = { name = gacha_constellation_lvl value = 0 }  # 0-6
+set_variable = { name = gacha_trait_id value = 1001 }        # 角色ID
+```
+
+### Dependencies
+
+- **Required**: `spec_scope_management.md` - Scope清理规范
+- **Required**: `spec_engine_basics.md` - Script Value机制
+- **Optional**: `design_engine_pitfalls.md` - Random List陷阱
 
 ## Part 1: Probability Logic (概率逻辑)
 
@@ -138,10 +182,10 @@ if (block_index = 0 AND block_has_4star = no) {
 
 | 文件 | 用途 | 状态 |
 |------|------|------|
-| `gacha_logic_effects.txt` | 核心逻辑（Silent内核、十连等） | ✅ 使用中 |
-| `gacha_pools.txt` | 奖池定义（5星/4星/3星） | ✅ 使用中 |
-| `gacha_events.txt` | 主事件（菜单、结果展示） | ✅ 使用中 |
-| `gacha_values.txt` | 概率计算器 | ⚠️ 已弃用（仅文档） |
+| `in_game/common/scripted_effects/gacha_logic_effects.txt` | 核心逻辑（Silent内核、十连等） | ✅ 使用中 |
+| `in_game/common/scripted_effects/gacha_pools.txt` | 奖池定义（5星/4星/3星） | ✅ 使用中 |
+| `in_game/events/gacha_events.txt` | 主事件（菜单、结果展示） | ✅ 使用中 |
+| `in_game/common/script_values/gacha_values.txt` | 概率计算器 | ⚠️ 已弃用（仅文档） |
 
 ### 2. 为什么弃用gacha_values.txt？
 
@@ -154,219 +198,6 @@ set_variable = {
     name = gacha_curr_thresh5 
     value = script_value:gacha_5star_threshold_value 
 }
-# 结果: gacha_curr_thresh5 = none (而不是计算出的值)
-```
-
-**解决方案**: 阈值计算内联到`gacha_logic_effects.txt`第78-111行
-
----
-
-## Part 4: Bug修复历史
-
-> **本节记录所有重大bug及其修复，作为开发经验总结**
-
-### Bug #1: 单抽100%出5星 🔴
-**日期**: 2025-11-23  
-**严重程度**: 严重
-
-**表现**:
-- 每次单抽必出5星
-- 概率完全失效
-
-**根本原因**:
-```paradox
-# 旧代码: 随机数永远=5
-rand = total_rolls + treasury + pity_count
-     = 5 + 0 + 0 = 5
-
-# 阈值 = 6 (0.6%)
-# 判定: 5 < 6 → 永远出5星！
-```
-
-**修复方案**:
-- 使用质数混合 + 固定偏移937
-- 添加多个熵源（total_rolls×17, treasury, pity×13, block×7）
-- 确保随机数在0-999范围均匀分布
-
-**文件**: `gacha_logic_effects.txt:34-76`
-
----
-
-### Bug #2: 硬保底失效 🔴
-**日期**: 2025-11-23  
-**严重程度**: 严重
-
-**表现**:
-- 90抽未必出5星
-- 保底计数超过91仍未出货
-
-**根本原因**:
-```paradox
-# script_value在effects中返回none
-gacha_curr_thresh5 = script_value:gacha_5star_threshold_value
-# 结果: gacha_curr_thresh5 = none
-
-# 判定失效
-if (rand < none) → 永远false
-```
-
-**修复方案**:
-- 放弃`script_value`，直接内联计算
-- 第90抽时强制设置阈值为1000（100%）
-
-**文件**: `gacha_logic_effects.txt:78-95`
-
----
-
-### Bug #3: 块内保底失效 🔴
-**日期**: 2025-11-23  
-**严重程度**: 高
-
-**表现**:
-- 10抽可能全是3星
-- 块内保底机制完全无效
-
-**根本原因**:
-```paradox
-# 使用了未定义的变量
-limit = { var:gacha_block_index = 0 }  # block_index从未计算！
-```
-
-**修复方案**:
-- 初始化`gacha_block_has_4star`
-- 每抽计算`block_index = total_rolls mod 10`
-- 每个新块重置标记
-
-**文件**: `gacha_logic_effects.txt:8, 21-32`
-
----
-
-### Bug #4: 负金币影响随机数 🟡
-**日期**: 2025-11-23  
-**严重程度**: 中
-
-**表现**:
-- 负金币时随机数偏小
-- 轻微影响概率分布
-
-**根本原因**:
-```paradox
-# 直接加上treasury
-change_variable = { name = gacha_rand add = treasury }
-# 如果treasury=-500，rand会减少500
-```
-
-**修复方案**:
-- 使用treasury的绝对值
-- 负数时先×(-1)再加到rand
-
-**文件**: `gacha_logic_effects.txt:44-54`
-
----
-
-### Bug #5: 4星奖励池随机数源错误 🟡
-**日期**: 2025-11-23  
-**严重程度**: 中
-
-**表现**:
-- 4星奖励可能不随机
-- 报错变量不存在
-
-**根本原因**:
-```paradox
-# 使用了不存在的变量
-set_variable = { name = gacha_4star_choice value = var:gacha_rand_ones }
-# gacha_rand_ones从未定义！
-```
-
-**修复方案**:
-- 改用已存在的`gacha_rand`
-- 通过mod 3来随机选择奖励类型
-
-**文件**: `gacha_pools.txt:19`
-
----
-
-### Bug #6: 事件顺序错误 🟡  
-**日期**: 早期版本  
-**严重程度**: 中
-
-**表现**:
-- 5星抽卡时，角色事件先于金光事件弹出
-- 顺序不符合原神体验
-
-**根本原因**:
-- Silent内核错误地调用了`gacha_handle_5star_outcome`
-- 导致角色在金光演出前就发放
-
-**修复方案**:
-- Silent内核只重置pity，不发放角色
-- 角色发放移到event.5的option中
-
-**文件**: `gacha_logic_effects.txt:146-149`, `gacha_events.txt:140-158`
-
----
-
-## Part 5: 设计决策
-
-### 决策1: 为什么4星直接发放，5星延迟发放？
-
-**4星** (在Silent内核中发放):
-- 简单随机奖励（金币/威望/正统性）
-- 无复杂逻辑
-- 效率优先
-
-**5星** (在event option中发放):
-- 需要50/50判定
-- 需要大保底逻辑
-- 需要玩家"揭示命运"的仪式感
-
-### 决策2: 为什么不移除十连结算页面？
-
-**已移除**（2025-11-23）
-- 用户反馈：十连已经通过4/5星单独弹窗有足够反馈
-- 结算页面显得冗余
-
-### 决策3: 为什么允许负金币抽卡？
-
-**原因**:
-- EU5允许玩家借贷
-- 负金币后可立即通过借贷还款
-- 不应该限制玩家的游戏体验
-
----
-
-## Part 6: 扩展性
-
-### 添加新5星角色
-
-1. 创建角色effect文件(`gacha_xxx_effects.txt`)
-2. 创建角色event文件(`gacha_xxx_events.txt`)
-3. 在`gacha_pools.txt`中更新奖池:
-   ```paradox
-   gacha_pool_5star_limited = {
-       gacha_create_xxx_effect = yes
-   }
-   ```
-
-### 修改概率
-
-修改`gacha_logic_effects.txt`中的内联计算:
-- 5星基础概率: 第79行
-- 5星软保底: 第82-89行
-- 5星硬保底: 第92-95行
-- 4星基础概率: 第98行
-- 4星软保底: 第101-109行
-
----
-
-## 附录: 关键代码片段
-
-### 随机数生成
-```paradox
-# 质数混合 + 固定偏移
-rand = 937 + 17×total_rolls + |treasury| + 13×pity + 7×block
-rand = rand mod 1000
 ```
 
 ### 硬保底判定
