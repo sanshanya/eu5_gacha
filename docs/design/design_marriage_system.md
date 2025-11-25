@@ -1,4 +1,4 @@
-# Gacha Marriage System Design
+﻿# Gacha Marriage System Design
 
 ## 1. Objective
 Allow players to marry **up to 3 Gacha characters** who have reached **Max Constellation (C6)**. This acts as the ultimate "Affinity" reward.
@@ -152,7 +152,6 @@ gacha_events.100 = {
     title = gacha_marriage_event_title
     desc = gacha_marriage_event_desc
     
-    is_triggered_only = yes
     
     option = {
         name = gacha_marriage_event_accept

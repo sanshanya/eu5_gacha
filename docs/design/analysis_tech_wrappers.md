@@ -1,4 +1,4 @@
-# Character Creation Wrapper Comparison
+﻿# Character Creation Wrapper Comparison
 
 ## 1. Overview
 We compared the reference mod's `ls_snow_create_common_effect` with our `gacha_register_new_character` + `gacha_create_xinhai_effect` architecture.

@@ -1,4 +1,4 @@
-# Character Story System Design (角色剧情系统设计)
+﻿# Character Story System Design (角色剧情系统设计)
 
 ## 1. 目标 (Objective)
 建立一套**动态响应式**的剧情触发机制，让角色对玩家的国家行为（战争、扩张、灾难）做出反应。
@@ -107,7 +107,6 @@ gacha_story_events.1 = {
     title = "军师的锦囊"
     desc = "战争的号角已经吹响。珊瑚宫心海步入殿前，向您呈上两份早已拟好的作战方略。\n\n"兵者，诡道也。根据敌我之势，妾身有二策可选，请定夺。""
     
-    is_triggered_only = yes
 
     # 选项A: 奇袭
     option = {

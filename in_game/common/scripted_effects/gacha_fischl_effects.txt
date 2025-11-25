@@ -1,4 +1,4 @@
-gacha_create_fischl_effect = {
+﻿gacha_create_fischl_effect = {
   # ==========================================
   # 分支 A：已拥有 -> 命之座升级 (Duplicate)
   # ==========================================
@@ -7,7 +7,7 @@ gacha_create_fischl_effect = {
 
     random_in_global_list = {
       variable = gacha_obtained_characters
-      limit = { has_trait = gacha_fischl_origin_trait }
+      limit = { has_character_modifier = gacha_fischl_modifier }
       save_scope_as = existing_char
     }
 
@@ -82,7 +82,7 @@ gacha_create_fischl_effect = {
       female     = yes
       age        = 16
       culture  = culture:tougokud
-      religion = religion:shintō
+      religion = religion:shinto
       estate = estate_type:crown_estate
       adm = { 65 80 }
       dip = { 75 90 }

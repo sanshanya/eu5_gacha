@@ -1,4 +1,4 @@
-accessory_genes = {
+﻿accessory_genes = {
   gacha_klee_props_1 = {
     gene_klee_blank_1 = { index = 0 }
 

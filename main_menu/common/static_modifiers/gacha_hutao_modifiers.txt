@@ -1,8 +1,8 @@
-﻿# Generated Modifiers for hutao
+﻿﻿# Generated Modifiers for hutao
 gacha_hutao_modifier = {
     game_data = { category = character decaying = no }
     gacha_core = yes
-    gacha_pyro_godeye = yes
+    gacha_fire_godeye = yes
 }
 
 gacha_hutao_c0_modifier = {

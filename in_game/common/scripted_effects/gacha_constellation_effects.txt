@@ -1,4 +1,4 @@
-gacha_apply_constellation_stats_effect = {
+﻿gacha_apply_constellation_stats_effect = {
     # 1. 清理旧修正
     remove_character_modifier = gacha_$who$_c0_modifier
     remove_character_modifier = gacha_$who$_c1_modifier

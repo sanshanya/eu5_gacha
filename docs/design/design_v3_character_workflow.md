@@ -1,4 +1,4 @@
-# V3 Character Design Workflow
+﻿# V3 Character Design Workflow
 
 **Version**: 1.0  
 **Last Updated**: 2025-11-25  
@@ -106,7 +106,7 @@ gacha_xinhai_events.1 = {
     type = country_event
     title = gacha_xinhai_events.1.title
     desc = gacha_xinhai_events.1.desc
-    is_triggered_only = yes
+    
     
     immediate = { 
         event_illustration_estate_effect = { 
@@ -239,7 +239,7 @@ gacha_xinhai_events.11 = {
     type = country_event
     title = gacha_xinhai_events.11.title
     desc = gacha_xinhai_events.11.desc
-    is_triggered_only = yes
+    
     
     # 显示角色肖像
     character = scope:xinhai_char
@@ -288,7 +288,7 @@ gacha_xinhai_events.30 = {
     type = country_event
     title = gacha_xinhai_c3_title
     desc = gacha_xinhai_c3_desc_intro
-    is_triggered_only = yes
+    
     
     # 显示角色肖像
     character = scope:gacha_c3_target_char
@@ -329,7 +329,7 @@ gacha_xinhai_events.31 = {
         }
     }
     
-    is_triggered_only = yes
+    
     character = scope:gacha_c3_target_char
     
     # 高好感结局

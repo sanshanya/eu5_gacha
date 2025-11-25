@@ -1,4 +1,4 @@
-gacha_events_interaction = {
+﻿﻿gacha_events_interaction = {
     message = no
     is_consort_action = no
     on_own_nation = yes
@@ -7,8 +7,10 @@ gacha_events_interaction = {
 
     # === 谁能看到 ===
     potential = {
-        is_ruler = yes
-        is_alive = yes
+        scope:actor = { # 显式指向 Actor
+            is_alive = yes # 国家总是活的，这一行可能多余，除非检查是否灭亡
+            is_ruler = yes # 检查是否统治者
+        }
     }
 
     # === 谁能点 ===

@@ -1,4 +1,4 @@
-# Project Overview: EU5 Gacha Mod
+﻿# Project Overview: EU5 Gacha Mod
 
 ## 1. 核心理念 (Core Concept)
 

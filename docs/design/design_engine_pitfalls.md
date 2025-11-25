@@ -1,4 +1,4 @@
-# Engine Pitfalls & Verified Behaviors
+﻿# Engine Pitfalls & Verified Behaviors
 
 - **Version**: 2.0
 - **Last Verified**: 2025-11-25

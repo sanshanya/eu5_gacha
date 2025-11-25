@@ -1,4 +1,4 @@
-﻿# Generated Traits for raiden
+﻿﻿# Generated Traits for raiden
 gacha_raiden_origin_trait = {
     category = ruler
     allow = { always = no }

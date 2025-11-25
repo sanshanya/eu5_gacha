@@ -1,4 +1,4 @@
-# Workflow: Add New Character (添加新角色工作流)
+﻿# Workflow: Add New Character (添加新角色工作流)
 
 - **Version**: 1.0
 - **Last Verified**: 2025-11-25

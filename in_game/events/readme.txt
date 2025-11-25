@@ -1,4 +1,4 @@
-﻿#Make sure that for the event file you first define the namespace for all the events in the file!
+﻿﻿#Make sure that for the event file you first define the namespace for all the events in the file!
 # namespace = <event id name>
 
 #The id number must be between 1 and 9999. Also, the event id as a whole must be unique

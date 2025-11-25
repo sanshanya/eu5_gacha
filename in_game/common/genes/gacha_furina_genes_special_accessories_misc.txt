@@ -1,4 +1,4 @@
-accessory_genes = {
+﻿accessory_genes = {
   gacha_furina_props_1 = {
     gene_furina_blank_1 = { index = 0 }
 

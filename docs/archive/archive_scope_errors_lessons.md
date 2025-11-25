@@ -1,4 +1,4 @@
-# Scope Management - Historical Errors and Lessons
+﻿# Scope Management - Historical Errors and Lessons
 
 > **Archive Date**: 2025-11-25  
 > **Origin**: Extracted from `spec_scope_management.md` during documentation restructuring.  

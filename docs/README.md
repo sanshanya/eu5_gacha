@@ -1,4 +1,4 @@
-# EU5 Gacha Mod - 文档总导航
+﻿# EU5 Gacha Mod - 文档总导航
 
 > **欢迎!** 这是 EU5 Gacha Mod 项目的文档中枢。
 
@@ -96,3 +96,9 @@
 - **Bug追踪**: 见各 `archive/archive_*_log.md`
 - **技术债务**: 见 `spec/spec_engine_basics.md` §Unverified
 - **设计讨论**: 见 `design/` 各系统设计文档
+
+
+文档需要更新的地方
+
+角色唯一标识变为了has_character_modifier = gacha_XXXX_modifier
+添加了通用trait gacha_core_trait 来给 2D头像识别

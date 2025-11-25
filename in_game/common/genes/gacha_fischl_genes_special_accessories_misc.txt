@@ -1,4 +1,4 @@
-accessory_genes = {
+﻿accessory_genes = {
   gacha_fischl_props_1 = {
     gene_fischl_blank_1 = { index = 0 }
 

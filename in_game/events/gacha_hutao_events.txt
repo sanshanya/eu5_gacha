@@ -1,11 +1,11 @@
-﻿namespace = gacha_hutao_events
+﻿﻿namespace = gacha_hutao_events
 
 # 1. 初见
 gacha_hutao_events.1 = {
     type = country_event
     title = gacha_hutao_events.1.title
     desc = gacha_hutao_events.1.desc
-    is_triggered_only = yes
+    
     immediate = { event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate } }
     option = { name = gacha_hutao_events.1.a historical_option = yes }
 }
@@ -15,7 +15,7 @@ gacha_hutao_events.2 = {
     type = country_event
     title = gacha_hutao_events.2.title
     desc = gacha_hutao_events.2.desc
-    is_triggered_only = yes
+    
     immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
     option = { name = gacha_hutao_events.2.a add_prestige = 10 }
 }
@@ -25,7 +25,7 @@ gacha_hutao_events.4 = {
     type = country_event
     title = gacha_hutao_events.4.title
     desc = gacha_hutao_events.4.desc
-    is_triggered_only = yes
+    
     immediate = { event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate } }
     option = { name = gacha_hutao_events.4.a add_prestige = 50 add_legitimacy = 20 }
 }
@@ -35,7 +35,7 @@ gacha_hutao_events.11 = {
     type = country_event
     title = gacha_hutao_events.11.title
     desc = gacha_hutao_events.11.desc
-    is_triggered_only = yes
+    
     option = { name = gacha_hutao_events.11.a add_stability = 0.25 scope:existing_char = { add_trait = gacha_hutao_awakened_trait } }
 }
 
@@ -44,6 +44,6 @@ gacha_hutao_events.12 = {
     type = country_event
     title = gacha_hutao_events.12.title
     desc = gacha_hutao_events.12.desc
-    is_triggered_only = yes
+    
     option = { name = gacha_hutao_events.12.a add_legitimacy = 5 scope:existing_char = { add_trait = gacha_hutao_transcended_trait } }
 }

@@ -1,4 +1,4 @@
-# Trait & Modifier 设计说明：从“职位特效”到“全局加成”
+﻿# Trait & Modifier 设计说明：从“职位特效”到“全局加成”
 
 > 目的：解释 EU5 中 trait 的实际生效范围，以及本 Mod 为什么将数值效果迁移到静态修正（character / country modifier），并以心海为例说明具体落地方案。后续所有角色数值与设计，应以本文为准进行评估与复盘。
 

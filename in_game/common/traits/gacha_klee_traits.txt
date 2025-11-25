@@ -1,4 +1,4 @@
-gacha_klee_origin_trait = {
+﻿gacha_klee_origin_trait = {
   category = ruler  # 注意：origin和awakened使用同一category，可以共存
   allow = {
     always = no

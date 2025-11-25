@@ -1,4 +1,4 @@
-# Gacha Affinity System Design (好感度系统设计)
+﻿# Gacha Affinity System Design (好感度系统设计)
 
 ## 1. Overview
 好感度系统让玩家通过与Gacha角色互动来提升关系，解锁专属事件和奖励。在C6时，最高好感度将解锁婚姻系统。

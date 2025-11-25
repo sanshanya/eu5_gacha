@@ -1,4 +1,4 @@
-gacha_nahida_01 = {
+﻿gacha_nahida_01 = {
   entity = {
     required_tags     = ""
     shared_pose_entity = head

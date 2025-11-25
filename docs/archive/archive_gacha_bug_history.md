@@ -1,4 +1,4 @@
-# Gacha System Bug History
+﻿# Gacha System Bug History
 
 > **Status**: 归档 - 所有问题已修复  
 > **Purpose**: 记录抽卡系统历史 Bug 及修复过程，供后人参考  

@@ -1,4 +1,4 @@
-# Gacha System Design Decisions
+﻿# Gacha System Design Decisions
 
 > **Purpose**: 解释抽卡系统的设计决策和权衡  
 > **Target Audience**: 开发者、设计者  

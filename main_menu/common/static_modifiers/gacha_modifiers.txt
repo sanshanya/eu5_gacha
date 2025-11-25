@@ -1,4 +1,4 @@
-gacha_core_modifier = {
+﻿gacha_core_modifier = {
   game_data = { category = character decaying = no }
   # 这里不加数值，只是一个“所有卡池角色共用”的标记
   force_allow_as_leader      = yes

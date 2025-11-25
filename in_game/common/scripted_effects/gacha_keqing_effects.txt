@@ -1,10 +1,10 @@
-﻿gacha_create_keqing_effect = {
+﻿﻿gacha_create_keqing_effect = {
     # === A. Duplicate Logic ===
     if = {
         limit = { has_global_variable = gacha_keqing_is_summoned }
         random_in_global_list = {
             variable = gacha_obtained_characters
-            limit = { has_trait = gacha_keqing_origin_trait }
+            limit = { has_character_modifier = gacha_keqing_modifier }
             save_scope_as = existing_char
         }
         if = {
@@ -67,7 +67,7 @@
             female = yes
             age = 18
             culture  = culture:tougokud
-            religion = religion:shintō
+            religion = religion:shinto
             estate = estate_type:crown_estate
             adm = { 80 100 }
             dip = { 80 100 }

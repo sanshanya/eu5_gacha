@@ -1,0 +1,7 @@
+﻿gacha_core_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = {
+        gacha_core = yes
+    }
+}

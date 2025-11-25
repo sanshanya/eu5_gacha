@@ -1,4 +1,4 @@
-accessory_genes = {
+﻿accessory_genes = {
   gacha_keqing_props_1 = {
     gene_keqing_blank_1 = { index = 0 }
 

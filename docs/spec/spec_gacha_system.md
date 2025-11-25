@@ -1,4 +1,4 @@
-# Gacha System Specification (抽卡系统规范)
+﻿# Gacha System Specification (抽卡系统规范)
 
 > **Verified**: 2025-11-25 | Game v1.0.0  
 > **Purpose**: 定义抽卡系统的核心机制、概率模型与实现规范

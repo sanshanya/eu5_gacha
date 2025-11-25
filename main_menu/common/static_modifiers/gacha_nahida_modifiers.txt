@@ -1,4 +1,4 @@
-gacha_nahida_modifier = {
+﻿gacha_nahida_modifier = {
   game_data = { category = character decaying = no }
   gacha_core = yes
   gacha_fire_godeye = yes

@@ -1,4 +1,4 @@
-# Scope Management Standards (作用域管理规范)
+﻿# Scope Management Standards (作用域管理规范)
 
 - **Version**: 2.0
 - **Last Verified**: 2025-11-25

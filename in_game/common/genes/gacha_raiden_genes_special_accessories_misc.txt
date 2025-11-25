@@ -1,4 +1,4 @@
-accessory_genes = {
+﻿accessory_genes = {
   gacha_raiden_props_1 = {
     gene_raiden_blank_1 = { index = 0 }
 

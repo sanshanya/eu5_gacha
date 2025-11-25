@@ -1,4 +1,4 @@
-# Scope Alignment Report
+﻿# Scope Alignment Report
 
 - **Date**: 2025-11-25
 - **Official Reference**: [EU5 Wiki - Scope](https://eu5.paradoxwikis.com/Scope)

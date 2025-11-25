@@ -1,4 +1,4 @@
-gacha_delegate_regency_interaction = {
+﻿gacha_delegate_regency_interaction = {
     message = no
     is_consort_action = no
     on_own_nation = yes

@@ -1,4 +1,4 @@
-# Technical Reference (技术参考)
+﻿# Technical Reference (技术参考)
 
 > [!WARNING]
 > **本文档包含混合内容**

@@ -1,4 +1,4 @@
-# Project Guidelines (Modding Bible)
+﻿# Project Guidelines (Modding Bible)
 
 - **Version**: 1.0
 - **Last Verified**: 2025-11-25

@@ -1,4 +1,4 @@
-# Snow Project Reference Analysis
+﻿# Snow Project Reference Analysis
 
 ## Overview
 The "Snow Project" is a character-focused mod that emphasizes "Waifu" collection, management, and powerful cheat-like mechanics. Unlike our Gacha mod, which focuses on the *acquisition* process (RNG, Pity), the Snow Project focuses on the *management* and *interaction* with these characters after they are acquired.

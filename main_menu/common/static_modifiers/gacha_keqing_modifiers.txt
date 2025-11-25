@@ -1,4 +1,4 @@
-﻿# Generated Modifiers for keqing
+﻿﻿# Generated Modifiers for keqing
 gacha_keqing_modifier = {
     game_data = { category = character decaying = no }
     gacha_core = yes

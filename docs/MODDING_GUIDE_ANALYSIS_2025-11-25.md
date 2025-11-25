@@ -1,4 +1,4 @@
-# Official Modding Guides Analysis & Recommendations
+﻿# Official Modding Guides Analysis & Recommendations
 
 **Date**: 2025-11-25  
 **Analyzed Documents**: 

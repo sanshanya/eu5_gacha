@@ -1,12 +1,5 @@
-﻿ls_gacha_portrait_trigger = {
+﻿﻿ls_gacha_portrait_trigger = {
   OR = {
-    has_trait = gacha_xinhai_origin_trait
-    has_trait = gacha_raiden_origin_trait
-    has_trait = gacha_furina_origin_trait
-    has_trait = gacha_keqing_origin_trait
-    has_trait = gacha_hutao_origin_trait
-    has_trait = gacha_fischl_origin_trait
-    has_trait = gacha_klee_origin_trait
-    has_trait = gacha_nahida_origin_trait
+    has_trait = gacha_core_trait
   }
 }

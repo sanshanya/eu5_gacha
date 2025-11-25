@@ -1,4 +1,4 @@
-gacha_water_godeye = {
+﻿gacha_water_godeye = {
   positive = "gfx/interface/icons/modifier_types/gacha_water_godeye.dds"
 }
 

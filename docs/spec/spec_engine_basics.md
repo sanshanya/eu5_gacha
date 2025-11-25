@@ -1,4 +1,4 @@
-# Engine Truth: Basics & Verified Behaviors
+﻿# Engine Truth: Basics & Verified Behaviors
 
 - **Version**: 1.0
 - **Last Verified**: 2025-11-25

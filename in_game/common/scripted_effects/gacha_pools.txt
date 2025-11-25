@@ -1,4 +1,4 @@
-﻿gacha_pool_5star_limited = {
+﻿﻿gacha_pool_5star_limited = {
     gacha_create_xinhai_effect = yes
 }
 

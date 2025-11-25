@@ -1,4 +1,4 @@
-﻿# Here you can define any kind of scripted effect which then can be used globally in the script
+﻿﻿# Here you can define any kind of scripted effect which then can be used globally in the script
 # my_simple_effect = {
 #     <list of effects>
 # }

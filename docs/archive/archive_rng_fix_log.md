@@ -1,4 +1,4 @@
-# EU5 Gacha RNG Fix - Complete Walkthrough
+﻿# EU5 Gacha RNG Fix - Complete Walkthrough
 
 ## 🎯 Final Success
 

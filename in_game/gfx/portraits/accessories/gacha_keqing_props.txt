@@ -1,4 +1,4 @@
-gacha_keqing_01 = {
+﻿gacha_keqing_01 = {
   entity = {
     required_tags     = ""
     shared_pose_entity = head

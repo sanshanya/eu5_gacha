@@ -1,4 +1,4 @@
-﻿#<interaction_name> = {
+﻿﻿#<interaction_name> = {
 #	
 # message = yes/no whether or not to show a message about this interaction
 # sound = sound to use for the action

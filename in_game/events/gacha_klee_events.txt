@@ -1,4 +1,4 @@
-namespace = gacha_klee_events
+﻿namespace = gacha_klee_events
 
 # ==========================================
 # 事件 1：初次见面 (First Meeting)
@@ -7,7 +7,7 @@ gacha_klee_events.1 = {
     type = country_event
     title = gacha_klee_events.1.title
     desc  = gacha_klee_events.1.desc
-    is_triggered_only = yes
+    
 
     immediate = {
         event_illustration_estate_effect = {
@@ -29,7 +29,7 @@ gacha_klee_events.2 = {
     type = country_event
     title = gacha_klee_events.2.title
     desc  = gacha_klee_events.2.desc
-    is_triggered_only = yes
+    
 
     immediate = {
         event_illustration_estate_effect = {
@@ -51,7 +51,7 @@ gacha_klee_events.4 = {
     type = country_event
     title = gacha_klee_events.4.title
     desc  = gacha_klee_events.4.desc
-    is_triggered_only = yes
+    
 
     immediate = {
         event_illustration_estate_effect = {
@@ -74,7 +74,7 @@ gacha_klee_events.11 = {
     type = country_event
     title = "gacha_klee_events.11.title"
     desc  = "gacha_klee_events.11.desc"
-    is_triggered_only = yes
+    
 
     option = {
         name = "gacha_klee_events.11.a"
@@ -89,7 +89,7 @@ gacha_klee_events.12 = {
     type = country_event
     title = "gacha_klee_events.12.title"
     desc  = "gacha_klee_events.12.desc"
-    is_triggered_only = yes
+    
 
     option = {
         name = "gacha_klee_events.12.a"

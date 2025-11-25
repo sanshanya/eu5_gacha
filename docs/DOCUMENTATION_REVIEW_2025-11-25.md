@@ -1,4 +1,4 @@
-# Documentation Review & Optimization Report
+﻿# Documentation Review & Optimization Report
 
 **Date**: 2025-11-25  
 **Scope**: Complete review of 23 markdown files across spec/, design/, and archive/
