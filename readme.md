@@ -1,4 +1,4 @@
-<div align=center> <img src="https://sansme.oss-cn-beijing.aliyuncs.com/thumbnail.png" width="360" height="360"></div>
+﻿<div align=center> <img src="https://sansme.oss-cn-beijing.aliyuncs.com/thumbnail.png" width="360" height="360"></div>
 
 # EU5 Gacha Mod - 抽卡系统
 
