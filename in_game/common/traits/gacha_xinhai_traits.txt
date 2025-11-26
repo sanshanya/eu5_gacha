@@ -1,20 +1,69 @@
-﻿# Generated Traits for xinhai
+﻿# Generated Traits for xinhai (V3)
+
+# C0 初始三格（角色面板三格）
+
+# 1. 海祇岛珊瑚灯火
 gacha_xinhai_origin_trait = {
     category = ruler
     allow = { always = no }
-    modifier = {
-        gacha_country_aura = yes # purely to show Kokomi grants a national aura
-    } # values moved to static modifiers for global uptime
+    # 数值效果由国家修正 gacha_xinhai_country_modifier 提供
+    modifier = { gacha_country_aura = yes }
 }
 
+# 2. 望泷村军师少女（职业 Trait：海军）
 gacha_xinhai_awakened_trait = {
-    category = ruler
-    allow = { always = no }
-    modifier = { }
-}
-
-gacha_xinhai_transcended_trait = {
     category = admiral
     allow = { always = no }
-    modifier = { }
+    # 职业加成：海军士气 +20%，移动 +20%，损耗 -20%
+    modifier = {
+        naval_morale_modifier = 0.20
+        navy_movement_speed   = 0.20
+        navy_repair_cost      = -0.20
+    }
+}
+
+# 3. 现人神巫女之位（统治者 Trait 基础加成）
+gacha_xinhai_transcended_trait = {
+    category = ruler
+    allow = { always = no }
+    # 统治者加成：全局叛乱 -0.10，战争耗损 -0.10，纪律 +0.10
+    modifier = {
+        global_unrest        = -0.10
+        war_exhaustion_change = -0.10
+        discipline           = 0.10
+    }
+}
+
+# 命座进阶三格（随命座等级解锁）
+
+# C2：白夜国 · 圣土潮音
+gacha_xinhai_c2_trait = {
+    category = ruler
+    allow = { always = no }
+    # 实际 Buff 由 gacha_xinhai_c2_country_modifier 提供
+    modifier = { gacha_country_aura = yes }
+}
+
+# C4：渊下宫 · 抗狩龙王
+gacha_xinhai_c4_trait = {
+    category = admiral
+    allow = { always = no }
+    # 进阶职业加成：渊下宫·抗狩龙王（总计 40/40/-40）
+    modifier = {
+        naval_morale_modifier = 0.40
+        navy_movement_speed   = 0.40
+        navy_repair_cost      = -0.40
+    }
+}
+
+# C6：奥罗巴斯 · 现人神
+gacha_xinhai_c6_trait = {
+    category = ruler
+    allow = { always = no }
+    # 统治者进阶加成：奥罗巴斯·现人神（总计 -0.20/-0.20/+0.20）
+    modifier = {
+        global_unrest        = -0.20
+        war_exhaustion_change = -0.20
+        discipline           = 0.20
+    }
 }

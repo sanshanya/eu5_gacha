@@ -24,13 +24,17 @@
     name = "gacha_select_title"
     column = { data = name }
     visible = {
-      scope:actor = { ruler ?= root }
+      is_alive = yes
+      is_ruler = yes
     }
   }
   # === 效果 ===
   effect = {
     scope:actor = {
-      # 直接触发主菜单事件，没有任何多余动作
+      # [V3] 打开菜单前先进行懒加载初始化，确保所有抽卡变量已就绪
+      gacha_ensure_state_initialized = yes
+
+      # 触发祈愿主菜单事件
       trigger_event_non_silently = gacha_events.1
     }
   }

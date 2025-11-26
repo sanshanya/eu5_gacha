@@ -4,6 +4,32 @@
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
+# [V3] 状态卫兵 (Gatekeeper)
+# 作用：懒加载初始化所有抽卡相关的持久变量
+# 要求：在 Country Scope 下调用
+# ------------------------------------------------------------------------------
+gacha_ensure_state_initialized = {
+    # --- 计数器 (_count) ---
+    if = { limit = { NOT = { has_variable = gacha_total_rolls_count } }  set_variable = { name = gacha_total_rolls_count value = 0 } }
+    if = { limit = { NOT = { has_variable = gacha_pity_5star_count } }   set_variable = { name = gacha_pity_5star_count value = 0 } }
+    if = { limit = { NOT = { has_variable = gacha_pity_4star_count } }   set_variable = { name = gacha_pity_4star_count value = 0 } }
+
+    # --- 结果统计 (_count) ---
+    if = { limit = { NOT = { has_variable = gacha_std5_result_count } }  set_variable = { name = gacha_std5_result_count value = 0 } }
+    if = { limit = { NOT = { has_variable = gacha_4star_result_count } } set_variable = { name = gacha_4star_result_count value = 0 } }
+
+    # --- 状态旗标 (_bool) ---
+    if = { limit = { NOT = { has_variable = gacha_is_guaranteed_bool } }  set_variable = { name = gacha_is_guaranteed_bool value = 0 } }
+    if = { limit = { NOT = { has_variable = gacha_block_pity_met_bool } } set_variable = { name = gacha_block_pity_met_bool value = 0 } }
+
+    # --- 熵资源 (_amt) ---
+    if = { limit = { NOT = { has_variable = gacha_entropy_gold_amt } }   set_variable = { name = gacha_entropy_gold_amt value = 10000 } }
+
+    # --- 其他持久资源 ---
+    if = { limit = { NOT = { has_variable = gacha_starlight } } set_variable = { name = gacha_starlight value = 0 } }
+}
+
+# ------------------------------------------------------------------------------
 # 通用注册内核 (Register Core)
 # 作用：负责处理角色生成后的通用逻辑（加Buff、加列表、初始化数值）
 # 接收参数：$who$ (角色代号字符串，如 xinhai)
@@ -33,6 +59,7 @@ gacha_register_new_character = {
 
     # === B. 挂载特质 (Traits) ===
     # 用于触发 2D 立绘显示
+    remove_traits_of_category = ruler
     add_trait = trait:gacha_core_trait
     add_trait = trait:gacha_$who$_origin_trait
     
@@ -49,6 +76,12 @@ gacha_register_new_character = {
         value = 0
     }
 
+    # 初始化好感度变量为 0（角色本地变量）
+    set_variable = {
+        name  = gacha_affinity_level
+        value = 0
+    }
+
     # 刷新数值 (调用命座计算脚本)
     gacha_apply_constellation_stats_effect = { who = $who$ }
 
@@ -56,12 +89,13 @@ gacha_register_new_character = {
     # 自定义 gacha_guild_estate 遇到技术问题，从长计议
     # change_character_estate = estate_type:crown_estate
 
-    # === D. 身份确立 (Citizenship) ===
+    # === D. 身份确立 (Citizenship) & Scope 绑定 ===
     # 关键步骤：在名字和特质和阶层确定后，再移动到国家，否则会发生奇怪的事情
     move_country = root
-    
-    
-    
+
+    # 【V3 契约】保存当前角色 Scope，供 UI 事件使用
+    # 注意：不要在角色 wrapper 中清理该 Scope，由展示事件的 after 块负责清理
+    save_scope_as = gacha_last_pulled_char
 }
 
 # ------------------------------------------------------------------------------

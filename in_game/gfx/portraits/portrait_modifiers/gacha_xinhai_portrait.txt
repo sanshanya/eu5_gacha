@@ -16,7 +16,7 @@
       modifier = {
         add = 255
 
-        has_trait = gacha_xinhai_origin_trait
+        has_character_modifier = gacha_xinhai_modifier
       }
     }
   }

@@ -14,6 +14,9 @@
     if = {
       limit = { scope:existing_char = { employer = root } }
 
+      # 将当前角色保存为最近抽到的角色，供 V3 UI 使用
+      scope:existing_char = { save_scope_as = gacha_last_pulled_char }
+
       # 满命溢出：转化为星辉
       if = {
         limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
@@ -52,6 +55,8 @@
       clear_saved_scope = existing_char
     }
     else = {
+      # 归属权冲突：是别人的角色，但仍保存 Scope 供展示使用
+      scope:existing_char = { save_scope_as = gacha_last_pulled_char }
       # 归属权冲突：是别人的角色
       # 检查是否满命，如果满命给予星辉
       if = {
@@ -82,8 +87,9 @@
       last_name  = gacha_last_name_klee
       female     = yes
       age        = 120
-      culture  = root.culture
-      religion = root.religion
+      culture = culture:lorrain
+      religion = religion:catholic
+      birth_location = location:la_mothe_en_bassigny
       estate = estate_type:crown_estate
       adm = { 50 65 }
       dip = { 70 85 }

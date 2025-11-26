@@ -6,31 +6,21 @@
 gacha_events.1 = {
     type = country_event
     title = gacha_events.1.title
-    is_triggered_only = yes
+    immediate = {
+        # 再保险：在事件 root（Country）下初始化一遍
+        gacha_ensure_state_initialized = yes
+    }
 
-    # 使用 triggered_desc 根据保底状态显示不同文本
+    # 使用 triggered_desc 根据保底状态显示不同文本（V3: 使用 *_bool 变量）
     desc = {
         first_valid = {
             triggered_desc = {
-                trigger = { var:gacha_is_guaranteed = yes }
+                trigger = { var:gacha_is_guaranteed_bool = 1 }
                 desc = gacha_events.1.desc_guaranteed
             }
             triggered_desc = {
                 desc = gacha_events.1.desc_not_guaranteed
             }
-        }
-    }
-
-    immediate = {
-        # 确保所有需要的变量都被初始化，防止后续脚本出错
-        # 如果变量不存在，则创建并设为初始值
-        if = {
-            limit = { NOT = { has_variable = gacha_pity_count } }
-            set_variable = { name = gacha_pity_count value = 0 }
-        }
-        if = {
-            limit = { NOT = { has_variable = gacha_is_guaranteed } }
-            set_variable = { name = gacha_is_guaranteed value = no }
         }
     }
 
@@ -43,11 +33,11 @@ gacha_events.1 = {
         # # 前置条件：金钱足够 无需 玩家借贷即可
         # trigger = { gold >= 100 }
         
-        # 效果：扣钱并执行抽卡
+        # 效果：扣钱并执行 V3 抽卡包装器
         add_gold = -16
         hidden_effect = {
-            # 调用真正的、我们刚刚修复了概率计算的抽卡逻辑
-            gacha_execute_single_roll = yes
+            gacha_ensure_state_initialized = yes 
+            gacha_wrapper_single_pull = yes
         }
     }
 
@@ -59,7 +49,8 @@ gacha_events.1 = {
         
         add_gold = -160
         hidden_effect = {
-            gacha_execute_ten_rolls = yes
+            gacha_ensure_state_initialized = yes 
+            gacha_wrapper_ten_pull = yes
         }
     }
 
@@ -91,9 +82,13 @@ gacha_events.1 = {
       
       hidden_effect = {
           # 标记已使用
+          gacha_ensure_state_initialized = yes
           set_variable = { name = gacha_used_free_first value = yes }
-          
-          # 强制出5星（直接触发金光事件）
+
+          # 使用 V3 解析逻辑：直接生成 5 星角色并保存 Scope
+          gacha_resolve_5star_and_save_scope = yes   # 保险
+
+          # 触发展示事件，由事件自身的 immediate 块抓取 Scope 快照
           trigger_event_non_silently = { id = gacha_events.5 }
       }
     }
@@ -110,6 +105,7 @@ gacha_events.1 = {
         }
         
         hidden_effect = {
+            gacha_ensure_state_initialized = yes
             trigger_event_non_silently = { id = gacha_starlight_events.1 }
         }
     }
@@ -129,62 +125,91 @@ gacha_events.2 = {
     type = country_event
     title = gacha_events.2.title
     desc  = gacha_events.2.desc
-    is_triggered_only = yes
+    
 
     option = {
         name = gacha_events.2.a
+        # 3 星作为安慰奖，给予少量金币
+        add_gold = 10
     }
 }
 
 # ==========================================
-# 5. 祈愿结果：金光演出（先展示再揭晓）
+# 5. 祈愿结果：金光演出（角色展示）
+# V3：利用 saved scope + implicit portrait 绑定，不再在此事件中发放奖励
 # ==========================================
 gacha_events.5 = {
     type = country_event
     title = gacha_events.5.title
     desc  = gacha_events.5.desc
-    is_triggered_only = yes
+    
+
+    # 【Scope Snapshot】
+    # 在事件触发瞬间，将当前的 gacha_last_pulled_char 锁定为本窗口专用的 target
+    immediate = {
+        scope:gacha_last_pulled_char = {
+            save_scope_as = gacha_event_target_char
+        }
+    }
+
+    # V3 Rev 4.7：依赖引擎的隐式立绘绑定，不显式写 character = scope:xxx
 
     option = {
         name = gacha_events.5.a
-        hidden_effect = {
-            # 显式回到事件的 root（国家）作用域执行奖励，避免作用域漂移
-            root = { gacha_handle_5star_outcome = yes }
-        }
+        # 奖励已在内核发放，此处为空
+    }
+
+    # 【Cleanup】窗口关闭后清理 Scope，避免泄漏
+    after = {
+        clear_saved_scope = gacha_event_target_char
+        clear_saved_scope = gacha_last_pulled_char
     }
 }
 
 # ==========================================
-# 20. 祈愿结果：四星奖励
+# 21-24. 祈愿结果：四星奖励（按类别拆分事件，避免异步文本错位）
 # ==========================================
-gacha_events.20 = {
+gacha_events.21 = {
     type = country_event
     title = gacha_events.20.title
-    desc  = {
-        first_valid = {
-            triggered_desc = {
-                trigger = { var:gacha_last_4star_reward = 0 }
-                desc = gacha_events.20.desc_gold
-            }
-            triggered_desc = {
-                trigger = { var:gacha_last_4star_reward = 1 }
-                desc = gacha_events.20.desc_prestige
-            }
-            triggered_desc = {
-                trigger = { var:gacha_last_4star_reward = 2 }
-                desc = gacha_events.20.desc_legitimacy
-            }
-            triggered_desc = {
-                trigger = { var:gacha_last_4star_reward = 3 }
-                desc = gacha_events.20.desc_stability
-            }
-        }
-    }
-    is_triggered_only = yes
+    desc  = gacha_events.20.desc_gold
+    
 
     option = {
         name = gacha_events.20.a
-        hidden_effect = { remove_variable = gacha_last_4star_reward }
+    }
+}
+
+gacha_events.22 = {
+    type = country_event
+    title = gacha_events.20.title
+    desc  = gacha_events.20.desc_prestige
+    
+
+    option = {
+        name = gacha_events.20.a
+    }
+}
+
+gacha_events.23 = {
+    type = country_event
+    title = gacha_events.20.title
+    desc  = gacha_events.20.desc_legitimacy
+    
+
+    option = {
+        name = gacha_events.20.a
+    }
+}
+
+gacha_events.24 = {
+    type = country_event
+    title = gacha_events.20.title
+    desc  = gacha_events.20.desc_stability
+    
+
+    option = {
+        name = gacha_events.20.a
     }
 }
 
@@ -192,19 +217,19 @@ gacha_events.20 = {
 # 4. 祈愿结果：满命 (C6+)
 # (这个事件由角色专属效果文件触发，不在此处调用)
 # ==========================================
-gacha_events.4 = {
-    type = country_event
-    title = "gacha_events.4.title"
-    desc = "gacha_events.4.desc"
-    is_triggered_only = yes
+# gacha_events.4 = {
+#     type = country_event
+#     title = "gacha_events.4.title"
+#     desc = "gacha_events.4.desc"
+    
 
-    immediate = {
-        add_prestige = 2
-    }
-    option = {
-        name = "gacha_events.4.a"
-    }
-}
+#     immediate = {
+#         add_prestige = 2
+#     }
+#     option = {
+#         name = "gacha_events.4.a"
+#     }
+# }
 
 # ==========================================
 # 30. 星辉获得提示
@@ -213,7 +238,7 @@ gacha_events.30 = {
     type = country_event
     title = gacha_events.30.title
     desc  = gacha_events.30.desc
-    is_triggered_only = yes
+    
 
     immediate = {
         event_illustration_estate_effect = {

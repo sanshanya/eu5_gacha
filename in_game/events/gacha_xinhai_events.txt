@@ -36,7 +36,7 @@ gacha_xinhai_events.11 = {
     title = gacha_xinhai_events.11.title
     desc = gacha_xinhai_events.11.desc
 
-    option = { name = gacha_xinhai_events.11.a add_stability = 0.25 scope:existing_char = { add_trait = trait:gacha_xinhai_awakened_trait } }
+    option = { name = gacha_xinhai_events.11.a add_stability = 0.25 }
 }
 
 # 12. 超越 (C4)
@@ -45,5 +45,115 @@ gacha_xinhai_events.12 = {
     title = gacha_xinhai_events.12.title
     desc = gacha_xinhai_events.12.desc
 
-    option = { name = gacha_xinhai_events.12.a add_legitimacy = 5 scope:existing_char = { add_trait = trait:gacha_xinhai_transcended_trait } }
+    option = { name = gacha_xinhai_events.12.a add_legitimacy = 5 }
+}
+
+# 13. 意外多出的位置 (C1 内阁席位 +1)
+gacha_xinhai_events.13 = {
+    type = country_event
+    title = gacha_xinhai_events.13.title
+    desc  = gacha_xinhai_events.13.desc
+
+    option = {
+        name = gacha_xinhai_events.13.a
+    }
+}
+
+# 14. 意外多出的国策位 (C5 国策槽位 +1)
+gacha_xinhai_events.14 = {
+    type = country_event
+    title = gacha_xinhai_events.14.title
+    desc  = gacha_xinhai_events.14.desc
+
+    option = {
+        name = gacha_xinhai_events.14.a
+    }
+}
+
+# 30. C3 好感事件 · 第一轮
+gacha_xinhai_events.30 = {
+    type = country_event
+    title = gacha_xinhai_c3_title
+    desc = gacha_xinhai_c3_desc_intro
+    
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:nobles_estate
+            background = estate_type:nobles_estate
+        }
+    }
+
+    # 路径 A：好奇探索
+    option = {
+        name = gacha_xinhai_c3_option_a1
+        set_variable = { name = gacha_c3_path value = 1 }
+        trigger_event_non_silently = { id = gacha_xinhai_events.31 }
+    }
+
+    # 路径 B：温柔陪伴
+    option = {
+        name = gacha_xinhai_c3_option_b1
+        set_variable = { name = gacha_c3_path value = 2 }
+        trigger_event_non_silently = { id = gacha_xinhai_events.31 }
+    }
+
+    # 路径 C：关心日常
+    option = {
+        name = gacha_xinhai_c3_option_c1
+        set_variable = { name = gacha_c3_path value = 3 }
+        trigger_event_non_silently = { id = gacha_xinhai_events.31 }
+    }
+}
+
+# 31. C3 好感事件 · 第二轮（动态描述）
+gacha_xinhai_events.31 = {
+    type = country_event
+    title = gacha_xinhai_c3_title
+    
+
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { var:gacha_c3_path = 1 }
+                desc = gacha_xinhai_c3_desc_path_a
+            }
+            triggered_desc = {
+                trigger = { var:gacha_c3_path = 2 }
+                desc = gacha_xinhai_c3_desc_path_b
+            }
+            triggered_desc = {
+                trigger = { var:gacha_c3_path = 3 }
+                desc = gacha_xinhai_c3_desc_path_c
+            }
+        }
+    }
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:nobles_estate
+            background = estate_type:nobles_estate
+        }
+    }
+
+    # 高好感结局
+    option = {
+        name = gacha_xinhai_c3_option_good
+        scope:gacha_c3_target_char = {
+            change_variable = { name = gacha_affinity_level add = 20 }
+        }
+    }
+
+    # 普通结局
+    option = {
+        name = gacha_xinhai_c3_option_neutral
+        scope:gacha_c3_target_char = {
+            change_variable = { name = gacha_affinity_level add = 10 }
+        }
+    }
+
+    after = {
+        clear_saved_scope = gacha_c3_target_char
+        remove_variable = gacha_c3_path
+    }
 }

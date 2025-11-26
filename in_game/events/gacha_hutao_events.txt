@@ -35,8 +35,8 @@ gacha_hutao_events.11 = {
     type = country_event
     title = gacha_hutao_events.11.title
     desc = gacha_hutao_events.11.desc
-    
-    option = { name = gacha_hutao_events.11.a add_stability = 0.25 scope:existing_char = { add_trait = trait:acha_hutao_awakened_trait } }
+
+    option = { name = gacha_hutao_events.11.a add_stability = 0.25 }
 }
 
 # 12. 超越 (C4)
@@ -44,6 +44,6 @@ gacha_hutao_events.12 = {
     type = country_event
     title = gacha_hutao_events.12.title
     desc = gacha_hutao_events.12.desc
-    
-    option = { name = gacha_hutao_events.12.a add_legitimacy = 5 scope:existing_char = { add_trait = trait:gacha_hutao_transcended_trait } }
+
+    option = { name = gacha_hutao_events.12.a add_legitimacy = 5 }
 }

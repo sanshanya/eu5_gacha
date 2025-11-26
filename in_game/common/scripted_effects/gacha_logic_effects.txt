@@ -1,277 +1,237 @@
 ﻿# ============================================================
-# 变量初始化集中管理
+# GACHA SYSTEM V3 - CORE LOGIC
+# 抽卡系统 V3 核心逻辑：
+# - 单抽静默内核（Script Value 数据层）
+# - 5 星 / 4 星解析器
+# - 单抽 / 十连包装器（负责触发 UI 事件）
 # ============================================================
-gacha_init_variables = {
-    if = { limit = { NOT = { has_variable = gacha_total_rolls } } set_variable = { name = gacha_total_rolls value = 0 } }
-    if = { limit = { NOT = { has_variable = gacha_pity_count } } set_variable = { name = gacha_pity_count value = 0 } }
-    if = { limit = { NOT = { has_variable = gacha_pity_4star } } set_variable = { name = gacha_pity_4star value = 0 } }
-    if = { limit = { NOT = { has_variable = gacha_block_has_4star } } set_variable = { name = gacha_block_has_4star value = no } }
-    if = { limit = { NOT = { has_variable = gacha_is_guaranteed } } set_variable = { name = gacha_is_guaranteed value = no } }
-    if = { limit = { NOT = { has_variable = gacha_starlight } } set_variable = { name = gacha_starlight value = 0 } }
-}
 
-# ============================================================
-# 核心：单次抽卡计算 (纯净内核 - 只算不弹)
-# ============================================================
+# ------------------------------------------------------------
+# 5.1 单抽静默内核 (Silent Kernel)
+# 职责：状态步进 -> 读取 Script Values -> 判定星级 -> 更新保底 -> 分发结算
+# 规范：全程在 Country Scope 运行
+# ------------------------------------------------------------
 gacha_execute_single_roll_silent = {
-    gacha_init_variables = yes
+    # Step 0: 懒加载初始化（Gatekeeper）
+    gacha_ensure_state_initialized = yes
 
-    # 1. 更新总数 & 块索引
-    change_variable = { name = gacha_total_rolls add = 1 }
-    
-    # 计算块索引 (0-9)
-    set_variable = { name = gacha_block_index value = var:gacha_total_rolls }
-    while = {
-        limit = { var:gacha_block_index >= 10 }
-        change_variable = { name = gacha_block_index subtract = 10 }
-    }
+    # --------------------------------------------------------
+    # Step 1: 状态步进
+    # --------------------------------------------------------
+    change_variable = { name = gacha_total_rolls_count add = 1 }
+    change_variable = { name = gacha_entropy_gold_amt subtract = 16 }
 
-    # 新块重置
+    # --------------------------------------------------------
+    # Step 2: 数据快照 (Script Values -> Local Variables)
+    # --------------------------------------------------------
+    set_local_variable = { name = gacha_calc_entropy_val    value = gacha_calc_entropy_sv }
+    set_local_variable = { name = gacha_threshold_5star_val value = gacha_calc_5star_prob_sv }
+    set_local_variable = { name = gacha_threshold_4star_val value = gacha_calc_4star_prob_sv }
+    set_local_variable = { name = gacha_calc_block_idx_val  value = gacha_calc_block_idx_sv }
+
+    # 新十连块重置逻辑：
+    # 设计稿中 block_idx = 1 时重置块保底 Flag
     if = {
-        limit = { var:gacha_block_index = 1 }
-        set_variable = { name = gacha_block_has_4star value = no }
-    }
-
-    # 2. 生成伪随机数 (质数混合 + 固定偏移)
-    # 基础偏移 (质数937，确保初始值够大)
-    set_variable = { name = gacha_rand value = 937 }
-    
-    # 熵源1: total_rolls × 17 (质数)
-    set_variable = { name = gacha_temp_seed value = var:gacha_total_rolls }
-    change_variable = { name = gacha_temp_seed multiply = 17 }
-    change_variable = { name = gacha_rand add = var:gacha_temp_seed }
-    remove_variable = gacha_temp_seed
-    
-    # 熵源2: treasury的绝对值（避免负金币影响）
-    if = {
-        limit = { treasury >= 0 }
-        change_variable = { name = gacha_rand add = treasury }
-    }
-    else = {
-        set_variable = { name = gacha_temp_treasury value = treasury }
-        change_variable = { name = gacha_temp_treasury multiply = -1 }
-        change_variable = { name = gacha_rand add = var:gacha_temp_treasury }
-        remove_variable = gacha_temp_treasury
-    }
-    
-    # 熵源3: pity_count × 13 (质数)
-    set_variable = { name = gacha_temp_pity value = var:gacha_pity_count }
-    change_variable = { name = gacha_temp_pity multiply = 13 }
-    change_variable = { name = gacha_rand add = var:gacha_temp_pity }
-    remove_variable = gacha_temp_pity
-    
-    # 熵源4: block_index × 7 (质数)
-    set_variable = { name = gacha_temp_block value = var:gacha_block_index }
-    change_variable = { name = gacha_temp_block multiply = 7 }
-    change_variable = { name = gacha_rand add = var:gacha_temp_block }
-    remove_variable = gacha_temp_block
-
-    # 安全取模 1000
-    while = {
-        limit = { var:gacha_rand >= 10000 }
-        change_variable = { name = gacha_rand subtract = 10000 }
-    }
-    while = {
-        limit = { var:gacha_rand >= 1000 }
-        change_variable = { name = gacha_rand subtract = 1000 }
+        limit = { local_var:gacha_calc_block_idx_val = 1 }
+        set_variable = { name = gacha_block_pity_met_bool value = 0 }
     }
 
-    # 3. 计算5星阈值 (内联计算，不使用script_value)
-    set_variable = { name = gacha_curr_thresh5 value = 6 }  # 基础0.6%
-    
-    # 软保底: 74抽起每抽+6%
-    if = {
-        limit = { var:gacha_pity_count >= 73 }
-        set_variable = { name = gacha_temp_pity value = var:gacha_pity_count }
-        change_variable = { name = gacha_temp_pity subtract = 73 }
-        change_variable = { name = gacha_temp_pity multiply = 60 }
-        change_variable = { name = gacha_curr_thresh5 add = var:gacha_temp_pity }
-        remove_variable = gacha_temp_pity
-    }
-    
-    # 硬保底: 90抽必出
-    if = {
-        limit = { var:gacha_pity_count >= 89 }
-        set_variable = { name = gacha_curr_thresh5 value = 1000 }
-    }
-    
-    # 4. 计算4星阈值 (内联计算)
-    set_variable = { name = gacha_curr_thresh4 value = 51 }  # 基础5.1%
-    
-    # 软保底: 9抽起概率暴涨
-    if = {
-        limit = { var:gacha_pity_4star >= 8 }
-        set_variable = { name = gacha_temp_pity4 value = var:gacha_pity_4star }
-        change_variable = { name = gacha_temp_pity4 subtract = 8 }
-        change_variable = { name = gacha_temp_pity4 multiply = 500 }
-        change_variable = { name = gacha_curr_thresh4 add = var:gacha_temp_pity4 }
-        remove_variable = gacha_temp_pity4
-    }
-    
-    # 上限保护
-    if = {
-        limit = { var:gacha_curr_thresh4 >= 1000 }
-        set_variable = { name = gacha_curr_thresh4 value = 1000 }
-    }
-
-    # 5. 结果判定 (0=3星, 1=4星, 2=5星)
-    set_variable = { name = gacha_roll_result_tier value = 0 }
+    # --------------------------------------------------------
+    # Step 3: 星级判定 (Tier Decision)
+    # 0 = 3 星, 1 = 4 星, 2 = 5 星
+    # --------------------------------------------------------
+    set_local_variable = { name = gacha_calc_tier_idx value = 0 }
 
     if = {
-        limit = { var:gacha_rand < var:gacha_curr_thresh5 }
-        # >>> 5 星 <<<
-        set_variable = { name = gacha_roll_result_tier value = 2 }
-    }
-    else = {
-        set_variable = { name = gacha_is_4star_win value = no }
-        
-        # 4星判定: 块保底 OR 概率命中
-        if = {
-            limit = { var:gacha_block_index = 0 var:gacha_block_has_4star = no }
-            set_variable = { name = gacha_is_4star_win value = yes }
-        }
-        else_if = {
-            limit = { var:gacha_rand < var:gacha_curr_thresh4 }
-            set_variable = { name = gacha_is_4star_win value = yes }
-        }
-
-        if = {
-            limit = { var:gacha_is_4star_win = yes }
-            # >>> 4 星 <<<
-            set_variable = { name = gacha_roll_result_tier value = 1 }
-        }
-    }
-
-    # 5. 更新保底计数
-    # 注意：4星奖励在此处直接发放，5星奖励延迟到event.5的option中发放
-    if = {
-        limit = { var:gacha_roll_result_tier = 2 } # 5星
-        set_variable = { name = gacha_pity_count value = 0 }
-        set_variable = { name = gacha_block_has_4star value = yes }
+        # 5 星判定
+        limit = { local_var:gacha_calc_entropy_val < local_var:gacha_threshold_5star_val }
+        set_local_variable = { name = gacha_calc_tier_idx value = 2 }
     }
     else_if = {
-        limit = { var:gacha_roll_result_tier = 1 } # 4星
-        gacha_pool_4star_rewards = yes
-        set_variable = { name = gacha_pity_4star value = 0 }
-        set_variable = { name = gacha_block_has_4star value = yes }
-        change_variable = { name = gacha_pity_count add = 1 }
-    }
-    else = { # 3星
-        change_variable = { name = gacha_pity_count add = 1 }
-        change_variable = { name = gacha_pity_4star add = 1 }
+        # 4 星判定 (概率 OR 块保底)
+        limit = {
+            OR = {
+                local_var:gacha_calc_entropy_val < local_var:gacha_threshold_4star_val
+                AND = {
+                    local_var:gacha_calc_block_idx_val = 0
+                    var:gacha_block_pity_met_bool = 0
+                }
+            }
+        }
+        set_local_variable = { name = gacha_calc_tier_idx value = 1 }
     }
 
-    # 清理
-    remove_variable = gacha_is_4star_win
-    remove_variable = gacha_block_index
+    # --------------------------------------------------------
+    # Step 4: 结算分发 (Resolve & Update)
+    # --------------------------------------------------------
+    if = {
+        # >>> 5 星 <<<
+        limit = { local_var:gacha_calc_tier_idx = 2 }
+
+        # 更新保底
+        set_variable = { name = gacha_pity_5star_count value = 0 }
+        set_variable = { name = gacha_block_pity_met_bool value = 1 }
+        change_variable = { name = gacha_pity_4star_count add = 1 }
+
+        # 解析并生成角色 Scope（内部会调用 save_scope_as = gacha_last_pulled_char）
+        gacha_resolve_5star_and_save_scope = yes
+    }
+    else_if = {
+        # >>> 4 星 <<<
+        limit = { local_var:gacha_calc_tier_idx = 1 }
+
+        # 更新保底
+        set_variable = { name = gacha_pity_4star_count value = 0 }
+        set_variable = { name = gacha_block_pity_met_bool value = 1 }
+        change_variable = { name = gacha_pity_5star_count add = 1 }
+
+        # 解析并发放奖励
+        gacha_resolve_4star_logic = yes
+    }
+    else = {
+        # >>> 3 星 <<<
+        # 仅增加垫子
+        change_variable = { name = gacha_pity_5star_count add = 1 }
+        change_variable = { name = gacha_pity_4star_count add = 1 }
+    }
 }
 
-# ============================================================
-# 单抽逻辑 (全弹窗)
-# ============================================================
-gacha_execute_single_roll = {
+# ------------------------------------------------------------
+# 6.1 五星解析 (Resolve & Save)
+# 职责：判定 UP/歪 -> 轮询常驻 -> 发放角色 -> 确保保存 Scope
+# ------------------------------------------------------------
+gacha_resolve_5star_and_save_scope = {
+    # 1. 获取二级熵 (用于 50/50)
+    set_local_variable = { name = gacha_calc_entropy2_val value = gacha_calc_entropy2_sv }
+    set_local_variable = { name = gacha_is_up_bool_val   value = 0 }
+
+    # 2. 判定逻辑
+    if = {
+        # 情况 A: 大保底生效
+        limit = { var:gacha_is_guaranteed_bool = 1 }
+        set_local_variable = { name = gacha_is_up_bool_val value = 1 }
+        set_variable = { name = gacha_is_guaranteed_bool value = 0 } # 消耗保底
+    }
+    else = {
+        # 情况 B: 概率判定 (阈值 5000 / 10000)
+        if = {
+            limit = { local_var:gacha_calc_entropy2_val < 5000 }
+            set_local_variable = { name = gacha_is_up_bool_val value = 1 }
+        }
+        else = {
+            set_local_variable = { name = gacha_is_up_bool_val value = 0 }
+            set_variable = { name = gacha_is_guaranteed_bool value = 1 } # 设为大保底
+        }
+    }
+
+    # 3. 发放角色
+    # 注意：各角色创建 Effect 内部必须执行 save_scope_as = gacha_last_pulled_char
+    if = {
+        # 当期 UP
+        limit = { local_var:gacha_is_up_bool_val = 1 }
+        gacha_create_xinhai_effect = yes
+    }
+    else = {
+        # 歪常驻：轮询
+        change_variable = { name = gacha_std5_result_count add = 1 }
+        set_local_variable = { name = gacha_standard_5_idx value = gacha_calc_standard_5_idx_sv }
+
+        if = { limit = { local_var:gacha_standard_5_idx = 0 } gacha_create_keqing_effect = yes }
+        else_if = { limit = { local_var:gacha_standard_5_idx = 1 } gacha_create_raiden_effect = yes }
+        else_if = { limit = { local_var:gacha_standard_5_idx = 2 } gacha_create_furina_effect = yes }
+        else_if = { limit = { local_var:gacha_standard_5_idx = 3 } gacha_create_hutao_effect = yes }
+        else_if = { limit = { local_var:gacha_standard_5_idx = 4 } gacha_create_klee_effect = yes }
+        else_if = { limit = { local_var:gacha_standard_5_idx = 5 } gacha_create_nahida_effect = yes }
+        else = { gacha_create_fischl_effect = yes } # Index 6-7 归并到菲谢尔
+    }
+}
+
+# ------------------------------------------------------------
+# 6.2 四星解析 (Resolve Reward)
+# 职责：计算索引 -> 直接发放资源
+# ------------------------------------------------------------
+gacha_resolve_4star_logic = {
+    # 1. 轮询索引
+    change_variable = { name = gacha_4star_result_count add = 1 }
+    set_local_variable = { name = gacha_4star_idx_val value = gacha_calc_4star_idx_sv }
+
+    # 2. 实发奖励（不依赖事件选项）
+    if = { limit = { local_var:gacha_4star_idx_val = 0 } add_gold = 240 }
+    else_if = { limit = { local_var:gacha_4star_idx_val = 1 } add_prestige = 8 }
+    else_if = { limit = { local_var:gacha_4star_idx_val = 2 } add_legitimacy = 8 }
+    else = { add_stability = 0.25 }
+}
+
+# ------------------------------------------------------------
+# 7.1 十连包装器 (Ten Pull)
+# 职责：循环调用内核 + 根据结果触发 UI 事件
+# ------------------------------------------------------------
+gacha_wrapper_ten_pull = {
+    set_local_variable = { name = gacha_loop_idx value = 0 }
+
+    while = {
+        limit = { local_var:gacha_loop_idx < 10 }
+
+        # A. 运行内核 (结算并产生 gacha_last_pulled_char)
+        gacha_execute_single_roll_silent = yes
+
+        # B. 事件分发
+        if = {
+            # 5 星：角色展示
+            limit = { local_var:gacha_calc_tier_idx = 2 }
+            trigger_event_non_silently = gacha_events.5
+        }
+        else_if = {
+            # 4 星：根据索引分流到不同静态文本
+            limit = { local_var:gacha_calc_tier_idx = 1 }
+
+            if = { limit = { local_var:gacha_4star_idx_val = 0 } trigger_event_non_silently = gacha_events.21 }
+            else_if = { limit = { local_var:gacha_4star_idx_val = 1 } trigger_event_non_silently = gacha_events.22 }
+            else_if = { limit = { local_var:gacha_4star_idx_val = 2 } trigger_event_non_silently = gacha_events.23 }
+            else = { trigger_event_non_silently = gacha_events.24 }
+        }
+        # 3 星静默
+
+        change_local_variable = { name = gacha_loop_idx add = 1 }
+    }
+}
+
+# ------------------------------------------------------------
+# 7.2 单抽包装器 (Single Pull)
+# 职责：调用内核 + 触发对应 UI 事件
+# ------------------------------------------------------------
+gacha_wrapper_single_pull = {
     gacha_execute_single_roll_silent = yes
 
     if = {
-        limit = { var:gacha_roll_result_tier = 2 }
-        trigger_event_non_silently = { id = gacha_events.5 }
+        # 5 星：角色展示
+        limit = { local_var:gacha_calc_tier_idx = 2 }
+        trigger_event_non_silently = gacha_events.5
     }
     else_if = {
-        limit = { var:gacha_roll_result_tier = 1 }
-        trigger_event_non_silently = { id = gacha_events.20 }
+        # 4 星：保持与十连一致的分流
+        limit = { local_var:gacha_calc_tier_idx = 1 }
+
+        if = { limit = { local_var:gacha_4star_idx_val = 0 } trigger_event_non_silently = gacha_events.21 }
+        else_if = { limit = { local_var:gacha_4star_idx_val = 1 } trigger_event_non_silently = gacha_events.22 }
+        else_if = { limit = { local_var:gacha_4star_idx_val = 2 } trigger_event_non_silently = gacha_events.23 }
+        else = { trigger_event_non_silently = gacha_events.24 }
     }
     else = {
-        # 3星也弹窗
-        trigger_event_non_silently = { id = gacha_events.2 }
+        # 3 星：弹出简短提示
+        trigger_event_non_silently = gacha_events.2
     }
-    
-    remove_variable = gacha_roll_result_tier
 }
 
-# ============================================================
-# 十连逻辑 (仅静默3星，4/5星照常弹)
-# ============================================================
+# ------------------------------------------------------------
+# 兼容层：保持旧接口名称可用
+# 说明：旧的 gacha_execute_single_roll / gacha_execute_ten_rolls
+#       现在仅作为 V3 包装器的别名，避免外部脚本报错。
+# ------------------------------------------------------------
+gacha_execute_single_roll = {
+    gacha_wrapper_single_pull = yes
+}
+
 gacha_execute_ten_rolls = {
-    set_variable = { name = gacha_loop_i value = 0 }
-    
-    while = {
-        limit = { var:gacha_loop_i < 10 }
-        
-        # 1. 跑内核
-        gacha_execute_single_roll_silent = yes
-        
-        # 2. 根据星级决定是否弹窗
-        if = {
-            limit = { var:gacha_roll_result_tier = 2 } # 5星
-            trigger_event_non_silently = { id = gacha_events.5 }
-        }
-        else_if = {
-            limit = { var:gacha_roll_result_tier = 1 } # 4星
-            trigger_event_non_silently = { id = gacha_events.20 }
-        }
-        # 3星 (Tier 0) 什么也不做，保持静默
-
-        change_variable = { name = gacha_loop_i add = 1 }
-    }
-    
-    remove_variable = gacha_loop_i
-    remove_variable = gacha_roll_result_tier
-}
-
-# ============================================================
-# 5星处理逻辑 (50/50 与 大保底)
-# ============================================================
-gacha_handle_5star_outcome = {
-    # 1. 先重置垫子 (Pity Reset)
-    set_variable = { name = gacha_pity_count value = 0 }
-
-    # 2. 判定是不是 UP 角色 (简化版：用 gacha_rand 的奇偶性)
-    if = {
-        # 情况 A: 必定 UP (大保底生效中)
-        limit = {
-            var:gacha_is_guaranteed = yes
-        }
-        gacha_get_up_character = yes
-        set_variable = { name = gacha_is_guaranteed value = no } # 消耗大保底
-    }
-    else = {
-        # 情况 B: 50/50 赌命 (用 gacha_rand % 2)
-        set_variable = { name = gacha_r50 value = var:gacha_rand }
-        
-        # 简单奇偶判断：减2直到 < 2
-        while = {
-            limit = { var:gacha_r50 >= 2 }
-            change_variable = { name = gacha_r50 subtract = 2 }
-        }
-        
-        if = {
-            limit = { var:gacha_r50 = 0 }
-            # 赢了：获得 UP
-            gacha_get_up_character = yes
-        }
-        else = {
-            # 歪了：获得常驻
-            gacha_get_standard_character = yes
-            # 加上大保底标记，下次必中
-            set_variable = { name = gacha_is_guaranteed value = yes }
-        }
-        
-        remove_variable = gacha_r50
-    }
-}
-
-# ============================================================
-# 实际发放奖励 (Helper Effects)
-# ============================================================
-gacha_get_up_character = {
-    # 统一走 5 星限定池
-    gacha_pool_5star_limited = yes
-}
-
-gacha_get_standard_character = {
-    # 小保底：获得常驻池
-    gacha_pool_5star_standard = yes
-    
-    # 可选：触发"歪了"的提示事件
-    # trigger_event_non_silently = gacha_events.3 
+    gacha_wrapper_ten_pull = yes
 }

@@ -1,0 +1,178 @@
+﻿# ===================================================
+# EU5 Gacha System V3 - Data Layer (Script Values)
+# 抽卡系统 V3 数据层：熵值与概率公式、池子索引等
+# ---------------------------------------------------
+# 说明：
+# - 所有公式仅依赖 var: 与其他 script_value
+# - 仅负责数学计算，不做任何状态修改
+# - 对“未初始化变量”做容错处理（当作 0）
+# ===================================================
+
+# ---------------------------------------------------
+# 1. 主熵计算 (0-9999)
+# 逻辑：(937 + 总抽数*17 + 5星垫子*13 + |熵资源|) % 10000
+# ---------------------------------------------------
+gacha_calc_entropy_sv = {
+    # 基础偏移
+    value = 937
+
+    # 总抽数 * 17（缺变量则视作 0）
+    if = {
+        limit = { has_variable = gacha_total_rolls_count }
+        add = {
+            value = var:gacha_total_rolls_count
+            multiply = 17
+        }
+    }
+
+    # 5 星垫子 * 13（缺变量则视作 0）
+    if = {
+        limit = { has_variable = gacha_pity_5star_count }
+        add = {
+            value = var:gacha_pity_5star_count
+            multiply = 13
+        }
+    }
+
+    # |熵资源|（缺变量则略过）
+    if = {
+        limit = { has_variable = gacha_entropy_gold_amt }
+        add = {
+            value = var:gacha_entropy_gold_amt
+            abs = yes
+        }
+    }
+
+    modulo = 10000
+}
+
+# ---------------------------------------------------
+# 2. 5 星动态概率阈值 (0-10000)
+# 基础 0.6% (60)，74 抽开始软保底，89 抽硬保底
+# ---------------------------------------------------
+gacha_calc_5star_prob_sv = {
+    # 基础概率：0.6% -> 60/10000
+    value = 60
+
+    # 只有在有变量时才做软保底计算
+    if = {
+        limit = {
+            has_variable = gacha_pity_5star_count
+            var:gacha_pity_5star_count >= 73
+        }
+        add = {
+            value = var:gacha_pity_5star_count
+            subtract = 73
+            multiply = 600
+        }
+    }
+
+    # 硬保底哨兵值 (确保 > 9999)
+    if = {
+        limit = {
+            has_variable = gacha_pity_5star_count
+            var:gacha_pity_5star_count >= 89
+        }
+        value = 10001
+    }
+}
+
+# ---------------------------------------------------
+# 3. 4 星动态概率阈值 (0-10000)
+# 基础 5.1% (510)，8 抽开始软保底
+# ---------------------------------------------------
+gacha_calc_4star_prob_sv = {
+    value = 510
+
+    # 只有在有变量时才做软保底计算
+    if = {
+        limit = {
+            has_variable = gacha_pity_4star_count
+            var:gacha_pity_4star_count >= 8
+        }
+        add = {
+            value = var:gacha_pity_4star_count
+            subtract = 8
+            multiply = 5000
+        }
+    }
+
+    max = 10001
+}
+
+# ---------------------------------------------------
+# 4. 十连块索引 (0-9)
+# 缺变量时默认 0
+# ---------------------------------------------------
+gacha_calc_block_idx_sv = {
+    # 默认 0
+    value = 0
+
+    if = {
+        limit = { has_variable = gacha_total_rolls_count }
+        add = { value = var:gacha_total_rolls_count }
+    }
+
+    modulo = 10
+}
+
+# ---------------------------------------------------
+# 5. 二级熵 (用于 50/50 判定)
+# ---------------------------------------------------
+gacha_calc_entropy2_sv = {
+    # 如果主熵能算，就用主熵，否则退化为 0
+    value = gacha_calc_entropy_sv
+
+    # 加一点总抽数扰动（缺变量则不加）
+    if = {
+        limit = { has_variable = gacha_total_rolls_count }
+        add = {
+            value = var:gacha_total_rolls_count
+            multiply = 13
+        }
+    }
+
+    multiply = 31
+    modulo = 10000
+}
+
+# ---------------------------------------------------
+# 6. 池子配置与索引
+# ---------------------------------------------------
+
+# --- 常驻 5 星池大小 ---
+gacha_pool_size_standard_5_sv = { value = 8 }
+
+# 索引计算: (歪次数 * 17) % 池子大小
+# 缺变量时默认索引 0
+gacha_calc_standard_5_idx_sv = {
+    value = 0
+
+    if = {
+        limit = { has_variable = gacha_std5_result_count }
+        add = {
+            value = var:gacha_std5_result_count
+            multiply = 17
+        }
+    }
+
+    modulo = gacha_pool_size_standard_5_sv
+}
+
+# --- 4 星奖励池大小 ---
+gacha_pool_size_4star_sv = { value = 4 }
+
+# 索引计算: (4 星次数 * 17) % 池子大小，缺变量时默认 0
+gacha_calc_4star_idx_sv = {
+    value = 0
+
+    if = {
+        limit = { has_variable = gacha_4star_result_count }
+        add = {
+            value = var:gacha_4star_result_count
+            multiply = 17
+        }
+    }
+
+    modulo = gacha_pool_size_4star_sv
+}

@@ -190,6 +190,16 @@
   gacha_xinhai_events.12.desc: "Deeper power is unleashed. Kokomi's blood seems to carry an ancient authority over the seas; as \"Princess of Watatsumi,\" she can now bless your entire fleet.\n\n\"As long as it is for victory... whatever power is needed, I will wield it for you. Give the order, my lord.\"\n\n$gacha_text_reward_legitimacy_small$"
   gacha_xinhai_events.12.a: "The sea will be our sharpest blade!"
 
+  # === C3 Affinity Event (V3) ===
+  gacha_xinhai_c3_title: "Moonlit Conversation"
+  gacha_xinhai_c3_desc_intro: "On a night when court business finally relents, you and Sangonomiya Kokomi stand upon the terrace. Moonlight spills over maps and war manuals alike, and over the strategist who tries to hide her weariness behind a calm smile.\n\nShe clutches her codex a little tighter as she sits beside you, eyes drifting more to the night sky than to the pages in her hands."
+  gacha_xinhai_c3_desc_path_a: "You ask her to speak of Watatsumi.\n\nHer gaze brightens in the silver light as she describes coral lanterns in Bourou Village, tides glimmering with scattered stars, and children chasing shoals under a crescent moon. As she speaks, you can almost hear the distant hush of waves against her island's shores."
+  gacha_xinhai_c3_desc_path_b: "You say nothing at all, simply setting a cloak over her shoulders and sharing the silence.\n\nKokomi's posture slowly relaxes. In a quiet voice she admits that, somehow, this foreign palace feels a little like home—at least on nights when someone is willing to watch the moon with her."
+  gacha_xinhai_c3_option_a1: "\"Tell me more about your home.\""
+  gacha_xinhai_c3_option_b1: "\"For tonight, let's just sit here.\""
+  gacha_xinhai_c3_option_good: "\"Next time, we'll watch the moon again.\""
+  gacha_xinhai_c3_option_neutral: "\"Get some rest—tomorrow brings more work.\""
+
   # ============================================================
   # §Y Character - Raiden Shogun §!
   # ============================================================

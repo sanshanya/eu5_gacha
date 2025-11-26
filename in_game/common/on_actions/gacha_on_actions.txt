@@ -1,7 +1,11 @@
 ﻿on_actions = {
     on_game_start = {
         effect = {
-            # Gacha system ready to use - no initialization needed
+            # 提前为玩家国家初始化抽卡相关变量，避免首次点击祈愿时报“变量未设置”的错误
+            every_country = {
+                limit = { is_ai = no }
+                gacha_ensure_state_initialized = yes
+            }
         }
     }
 }
