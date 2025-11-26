@@ -3,7 +3,7 @@
 # 抽卡系统 V3 数据层：熵值与概率公式、池子索引等
 # ---------------------------------------------------
 # 说明：
-# - 所有公式仅依赖 var: 与其他 script_value
+# - 所有公式仅依赖  与其他 script_value
 # - 仅负责数学计算，不做任何状态修改
 # - 对“未初始化变量”做容错处理（当作 0）
 # ===================================================
@@ -20,7 +20,7 @@ gacha_calc_entropy_sv = {
     if = {
         limit = { has_variable = gacha_total_rolls_count }
         add = {
-            value = var:gacha_total_rolls_count
+            value = gacha_total_rolls_count
             multiply = 17
         }
     }
@@ -29,7 +29,7 @@ gacha_calc_entropy_sv = {
     if = {
         limit = { has_variable = gacha_pity_5star_count }
         add = {
-            value = var:gacha_pity_5star_count
+            value = gacha_pity_5star_count
             multiply = 13
         }
     }
@@ -38,7 +38,7 @@ gacha_calc_entropy_sv = {
     if = {
         limit = { has_variable = gacha_entropy_gold_amt }
         add = {
-            value = var:gacha_entropy_gold_amt
+            value = gacha_entropy_gold_amt
             abs = yes
         }
     }
@@ -58,10 +58,10 @@ gacha_calc_5star_prob_sv = {
     if = {
         limit = {
             has_variable = gacha_pity_5star_count
-            var:gacha_pity_5star_count >= 73
+            gacha_pity_5star_count >= 73
         }
         add = {
-            value = var:gacha_pity_5star_count
+            value = gacha_pity_5star_count
             subtract = 73
             multiply = 600
         }
@@ -71,7 +71,7 @@ gacha_calc_5star_prob_sv = {
     if = {
         limit = {
             has_variable = gacha_pity_5star_count
-            var:gacha_pity_5star_count >= 89
+            gacha_pity_5star_count >= 89
         }
         value = 10001
     }
@@ -88,10 +88,10 @@ gacha_calc_4star_prob_sv = {
     if = {
         limit = {
             has_variable = gacha_pity_4star_count
-            var:gacha_pity_4star_count >= 8
+            gacha_pity_4star_count >= 8
         }
         add = {
-            value = var:gacha_pity_4star_count
+            value = gacha_pity_4star_count
             subtract = 8
             multiply = 5000
         }
@@ -110,7 +110,7 @@ gacha_calc_block_idx_sv = {
 
     if = {
         limit = { has_variable = gacha_total_rolls_count }
-        add = { value = var:gacha_total_rolls_count }
+        add = { value = gacha_total_rolls_count }
     }
 
     modulo = 10
@@ -127,7 +127,7 @@ gacha_calc_entropy2_sv = {
     if = {
         limit = { has_variable = gacha_total_rolls_count }
         add = {
-            value = var:gacha_total_rolls_count
+            value = gacha_total_rolls_count
             multiply = 13
         }
     }
@@ -151,7 +151,7 @@ gacha_calc_standard_5_idx_sv = {
     if = {
         limit = { has_variable = gacha_std5_result_count }
         add = {
-            value = var:gacha_std5_result_count
+            value = gacha_std5_result_count
             multiply = 17
         }
     }
@@ -169,7 +169,7 @@ gacha_calc_4star_idx_sv = {
     if = {
         limit = { has_variable = gacha_4star_result_count }
         add = {
-            value = var:gacha_4star_result_count
+            value = gacha_4star_result_count
             multiply = 17
         }
     }

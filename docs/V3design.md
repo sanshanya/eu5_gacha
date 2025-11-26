@@ -65,7 +65,7 @@
 1. **`gacha_calc_block_idx_val`**
    * 表里定义：索引类 Local 用 `_idx` 后缀。
    * 代码里：`gacha_calc_block_idx_val`，逻辑上它是 0..9 的索引。
-     → 建议改名为 `gacha_block_idx_idx` 或 `gacha_block_idx`，保持 `_idx` 后缀，减少混淆。
+     → 代码实际使用了 `gacha_calc_block_idx_val`。
 2. **`gacha_standard_5_idx` vs `_idx_val`**
    * 在 Data Layer 里是 `gacha_calc_standard_5_idx_sv`
    * 在 Resolver 里是 `gacha_standard_5_idx`（local）
@@ -73,7 +73,7 @@
      → 建议把所有「本质是索引」的 Local 都用 `_idx` 结尾。
 3. **`_bool_val` 行为未落地**
    * 表里有 `_bool_val`，但实现用的是 `gacha_is_up_bool_var` 这种名字。
-   * 要么表里就写 `_bool_var`，要么代码里统一用 `_bool_val`。
+   * 代码里实际使用了 `gacha_is_up_bool_var`。
      现在属于“没人真的照着表写”的状态。
 
 这些都不影响运行，但对你想要的“命名即类型系统”是减分的。**启动报告里最好给一个「已知命名差异」的小列表，或者直接修一版统一。**
@@ -93,13 +93,13 @@
 1. **Script Value 能力** ：假设 `script_value` 支持嵌套 Math Blocks (`add = { ... }`)、条件逻辑 (`if`) 以及原生取模 (`modulo`)。
 2. **Local Variable 隔离** ：假设 `set_local_variable` 创建的变量仅在当前 Effect Chain 中有效，不会污染存档。
 3. **Event 触发机制** ：假设 `country_event` 是 EU5 的标准事件类型；假设 `trigger_event` 是异步入队，但 `immediate` 块是在触发瞬间同步执行的（用于快照）。
-4. **UI 绑定** ：假设 UI 肖像显示需要通过 `character = scope:xxx` 显式指定。
+4. **UI 绑定** ：假设 UI 肖像显示通过隐式绑定（Implicit Binding）实现，即事件自动抓取 `immediate` 块中保存的第一个 Scope。
 
 ---
 
 ## 3. 数据层代码 (The Data Layer)
 
- **文件路径** : `in_game/common/script_values/gacha_values.txt`
+ **文件路径** : `in_game/common/script_values/gacha_eu_values.txt`
 
 ### 3.1 熵值与概率公式
 
@@ -656,8 +656,8 @@ gacha_events.5 = {
     }
 
     # 【UI Binding】
-    # 显式绑定：告诉 UI 使用哪个 Scope 渲染 3D/2D 立绘
-    character = scope:gacha_event_target_char
+    # V3 Rev 4.7：依赖引擎的隐式立绘绑定，不显式写 character = scope:xxx
+    # 引擎会自动抓取 immediate 块中保存的第一个 Scope 作为事件主图
 
     option = {
         name = gacha_events.5.a # "揭示命运"

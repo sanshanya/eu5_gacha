@@ -12,9 +12,9 @@
 | 文件 | 路径 | 说明 |
 |:---|:---|:---|
 | **抽卡入口** | `in_game/common/character_interactions/gacha_wish_interaction.txt` | 玩家可观交互 |
-| **概率计算** | `in_game/common/script_values/gacha_values.txt` | 动态阈值、RNG公式 |
+| **概率计算** | `in_game/common/script_values/gacha_eu_values.txt` | 动态阈值、RNG公式 |
 | **核心逻辑** | `in_game/common/scripted_effects/gacha_logic_effects.txt` | 单次抽卡、十连Silent内核 |
-| **角色池** | `in_game/common/scripted_effects/gacha_pools.txt` | 多角色池定义 |
+| **角色池** | `in_game/common/scripted_effects/gacha_logic_effects.txt` | 多角色池选择逻辑 |
 | **Event UI** | `in_game/events/gacha_events.txt` | 抽卡界面与结果展示 |
 | **角色Effects** | `in_game/common/scripted_effects/gacha_xinhai_effects.txt` | 角色专属Wrapper |
 
@@ -183,9 +183,9 @@ if (block_index = 0 AND block_has_4star = no) {
 | 文件 | 用途 | 状态 |
 |------|------|------|
 | `in_game/common/scripted_effects/gacha_logic_effects.txt` | 核心逻辑（Silent内核、十连等） | ✅ 使用中 |
-| `in_game/common/scripted_effects/gacha_pools.txt` | 奖池定义（5星/4星/3星） | ✅ 使用中 |
+| `in_game/common/scripted_effects/gacha_logic_effects.txt` | 奖池定义（5星/4星/3星） | ✅ 集成在逻辑中 |
 | `in_game/events/gacha_events.txt` | 主事件（菜单、结果展示） | ✅ 使用中 |
-| `in_game/common/script_values/gacha_values.txt` | 概率计算器 | ⚠️ 已弃用（仅文档） |
+| `in_game/common/script_values/gacha_eu_values.txt` | 概率计算器 | ✅ 使用中 |
 
 ### 2. 为什么弃用gacha_values.txt？
 

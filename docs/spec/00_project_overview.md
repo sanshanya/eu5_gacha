@@ -36,7 +36,7 @@
 | 路径 | 说明 | 状态 |
 |------|------|------|
 | `in_game/common/character_interactions/gacha_wish_interaction.txt` | 祈愿交互入口 | ✅ 正确 |
-| `in_game/common/script_values/gacha_values.txt` | 抽卡概率计算 | ✅ 正确 |
+| `in_game/common/script_values/gacha_eu_values.txt` | 抽卡概率计算 | ✅ 正确 |
 | `in_game/common/scripted_effects/gacha_common_effects.txt` | 通用角色注册内核 | ✅ 正确 |
 | `in_game/common/scripted_effects/gacha_logic_effects.txt` | 核心抽卡结果逻辑 | ✅ 正确 |
 | `in_game/common/scripted_effects/gacha_constellation_effects.txt` | 命座效果通用逻辑 | ✅ 正确 |

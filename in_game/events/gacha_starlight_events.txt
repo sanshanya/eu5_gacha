@@ -20,7 +20,7 @@ gacha_starlight_events.1 = {
     option = {
         name = gacha_starlight_events.1.xinhai
         trigger = {
-            var:gacha_starlight >= 3
+            gacha_starlight >= 3
         }
         
         change_variable = { name = gacha_starlight subtract = 3 }
@@ -31,7 +31,7 @@ gacha_starlight_events.1 = {
     option = {
         name = gacha_starlight_events.1.raiden
         trigger = {
-            var:gacha_starlight >= 3
+            gacha_starlight >= 3
         }
         
         change_variable = { name = gacha_starlight subtract = 3 }
@@ -42,7 +42,7 @@ gacha_starlight_events.1 = {
     option = {
         name = gacha_starlight_events.1.keqing
         trigger = {
-            var:gacha_starlight >= 3
+            gacha_starlight >= 3
         }
         
         change_variable = { name = gacha_starlight subtract = 3 }
@@ -53,7 +53,7 @@ gacha_starlight_events.1 = {
     option = {
         name = gacha_starlight_events.1.furina
         trigger = {
-            var:gacha_starlight >= 3
+            gacha_starlight >= 3
         }
         
         change_variable = { name = gacha_starlight subtract = 3 }
@@ -64,7 +64,7 @@ gacha_starlight_events.1 = {
     option = {
         name = gacha_starlight_events.1.hutao
         trigger = {
-            var:gacha_starlight >= 3
+            gacha_starlight >= 3
         }
         
         change_variable = { name = gacha_starlight subtract = 3 }
@@ -74,7 +74,7 @@ gacha_starlight_events.1 = {
     option = {
         name = gacha_starlight_events.1.fischl
         trigger = {
-            var:gacha_starlight >= 3
+            gacha_starlight >= 3
         }
         
         change_variable = { name = gacha_starlight subtract = 3 }
@@ -84,7 +84,7 @@ gacha_starlight_events.1 = {
     option = {
         name = gacha_starlight_events.1.klee
         trigger = {
-            var:gacha_starlight >= 3
+            gacha_starlight >= 3
         }
         
         change_variable = { name = gacha_starlight subtract = 3 }
@@ -94,7 +94,7 @@ gacha_starlight_events.1 = {
     option = {
         name = gacha_starlight_events.1.nahida
         trigger = {
-            var:gacha_starlight >= 3
+            gacha_starlight >= 3
         }
         
         change_variable = { name = gacha_starlight subtract = 3 }

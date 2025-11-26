@@ -241,8 +241,8 @@ gacha_xinhai_events.11 = {
     desc = gacha_xinhai_events.11.desc
     
     
-    # 显示角色肖像
-    character = scope:xinhai_char
+    # 显示角色肖像 (V3: Implicit binding via immediate scope)
+    # character = scope:xinhai_char
     
     option = { 
         name = gacha_xinhai_events.11.a 
@@ -290,8 +290,8 @@ gacha_xinhai_events.30 = {
     desc = gacha_xinhai_c3_desc_intro
     
     
-    # 显示角色肖像
-    character = scope:gacha_c3_target_char
+    # 显示角色肖像 (V3: Implicit binding)
+    # character = scope:gacha_c3_target_char
     
     # 路径A: 好奇探索
     option = {
@@ -330,7 +330,7 @@ gacha_xinhai_events.31 = {
     }
     
     
-    character = scope:gacha_c3_target_char
+    # character = scope:gacha_c3_target_char (V3: Implicit binding)
     
     # 高好感结局
     option = {
@@ -438,7 +438,7 @@ STATIC_MODIFIER_DESC_gacha_xinhai_c2_country_modifier: "阶层满意恢复 +0.25
 | `random_in_global_list` | ✅ | `gacha_xinhai_effects.txt` |
 | `save_scope_as` | ✅ | 所有effects文件 |
 | `triggered_desc` | ✅ | `gacha_events.txt` |
-| `character = scope:xxx` | ✅ | 事件中显示肖像 |
+| Implicit Binding | ✅ | 事件中显示肖像 (自动抓取immediate scope) |
 | `after = {}` | ✅ | 事件后清理 |
 
 ### 6.2 常见陷阱

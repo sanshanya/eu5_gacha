@@ -120,7 +120,7 @@ scope:xinhai_char = {
 # Event中使用并清理
 gacha_xinhai_events.30 = {
     type = country_event
-    character = scope:xinhai_char  # 使用传递的scope
+    # character = scope:xinhai_char  # (V3: Implicit binding)
     
     option = {
         scope:xinhai_char = { add_trait = some_trait }
