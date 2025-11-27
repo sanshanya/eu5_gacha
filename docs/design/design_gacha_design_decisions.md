@@ -71,10 +71,10 @@ Silent内核计算 → 保存结果 → 触发Event → 读取结果展示
 ### Implementation
 ```paradox
 # Silent内核
-if = { limit = { var:gacha_tier = 1 }  # 4星
+if = { limit = { gacha_tier = 1 }  # 4星
     gacha_grant_4star_reward = yes  # ✅ 立即发放
 }
-else_if = { limit = { var:gacha_tier = 2 }  # 5星
+else_if = { limit = { gacha_tier = 2 }  # 5星
     # ❌ 不在这里发放
     set_variable = { name = gacha_pity_count value = 0 }  # 只重置pity
 }
@@ -186,14 +186,14 @@ set_variable = {
 # 结果: gacha_curr_thresh5 = none
 
 # ✅ 正确用法 (内联计算)
-if = { limit = { var:gacha_pity_count >= 89 }
+if = { limit = { gacha_pity_count >= 89 }
     set_variable = { name = gacha_curr_thresh5 value = 1000 }
 }
-else_if = { limit = { var:gacha_pity_count >= 73 }
+else_if = { limit = { gacha_pity_count >= 73 }
     set_variable = { name = gacha_curr_thresh5 value = 66 }
     change_variable = { 
         name = gacha_curr_thresh5 
-        add = { value = var:gacha_pity_count subtract = 73 multiply = 60 }
+        add = { value = gacha_pity_count subtract = 73 multiply = 60 }
     }
 }
 else = {

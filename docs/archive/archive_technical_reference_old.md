@@ -143,7 +143,7 @@ random_list = {
 
 ### 问题
 
-最初的代码中大量使用 `root.var:gacha_pity_count`，但这种写法在某些上下文中会失败。
+最初的代码中大量使用 `root.gacha_pity_count`，但这种写法在某些上下文中会失败。
 
 ### 正确做法
 
@@ -155,9 +155,9 @@ gacha_5star_threshold_value = {
     value = 6
     
     if = {
-        limit = { var:gacha_pity_count >= 73 }  # 直接读取
+        limit = { gacha_pity_count >= 73 }  # 直接读取
         add = {
-            value = var:gacha_pity_count
+            value = gacha_pity_count
             subtract = 73
             multiply = 60
         }
@@ -169,9 +169,9 @@ gacha_5star_threshold_value = {
     value = 6
     
     if = {
-        limit = { root = { var:gacha_pity_count >= 73 } }  # 过度嵌套
+        limit = { root = { gacha_pity_count >= 73 } }  # 过度嵌套
         add = {
-            value = root.var:gacha_pity_count
+            value = root.gacha_pity_count
             # ...
         }
     }

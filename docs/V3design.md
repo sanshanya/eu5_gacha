@@ -112,17 +112,17 @@ gacha_calc_entropy_sv = {
     value = 937
 
     add = {
-        value = var:gacha_total_rolls_count
+        value = gacha_total_rolls_count
         multiply = 17
     }
 
     add = {
-        value = var:gacha_pity_5star_count
+        value = gacha_pity_5star_count
         multiply = 13
     }
 
     add = {
-        value = var:gacha_entropy_gold_amt
+        value = gacha_entropy_gold_amt
         abs = yes
     }
 
@@ -138,9 +138,9 @@ gacha_calc_5star_prob_sv = {
 
     # 软保底逻辑
     if = {
-        limit = { var:gacha_pity_5star_count >= 73 }
+        limit = { gacha_pity_5star_count >= 73 }
         add = {
-            value = var:gacha_pity_5star_count
+            value = gacha_pity_5star_count
             subtract = 73
             multiply = 600
         }
@@ -148,7 +148,7 @@ gacha_calc_5star_prob_sv = {
 
     # 硬保底哨兵值 (确保 > 9999)
     if = {
-        limit = { var:gacha_pity_5star_count >= 89 }
+        limit = { gacha_pity_5star_count >= 89 }
         value = 10001
     }
 }
@@ -162,9 +162,9 @@ gacha_calc_4star_prob_sv = {
 
     # 软保底逻辑
     if = {
-        limit = { var:gacha_pity_4star_count >= 8 }
+        limit = { gacha_pity_4star_count >= 8 }
         add = {
-            value = var:gacha_pity_4star_count
+            value = gacha_pity_4star_count
             subtract = 8
             multiply = 5000
         }
@@ -182,7 +182,7 @@ gacha_calc_4star_prob_sv = {
 # 4. 十连块索引 (0-9)
 # ===================================================
 gacha_calc_block_idx_sv = {
-    value = var:gacha_total_rolls_count
+    value = gacha_total_rolls_count
     modulo = 10
 }
 
@@ -194,7 +194,7 @@ gacha_calc_entropy2_sv = {
     value = gacha_calc_entropy_sv
     multiply = 31
     add = {
-        value = var:gacha_total_rolls_count
+        value = gacha_total_rolls_count
         multiply = 13
     }
     modulo = 10000
@@ -214,7 +214,7 @@ gacha_pool_size_standard_5_sv = { value = 8 }
 
 # 索引计算: (歪次数 * 17) % 池子大小
 gacha_calc_standard_5_idx_sv = {
-    value = var:gacha_std5_result_count
+    value = gacha_std5_result_count
     multiply = 17
     modulo = gacha_pool_size_standard_5_sv
 }
@@ -224,7 +224,7 @@ gacha_pool_size_4star_sv = { value = 4 }
 
 # 索引计算
 gacha_calc_4star_idx_sv = {
-    value = var:gacha_4star_result_count
+    value = gacha_4star_result_count
     multiply = 17
     modulo = gacha_pool_size_4star_sv
 }
@@ -311,7 +311,7 @@ gacha_execute_single_roll_silent = {
 
     # 新十连块重置逻辑
     if = {
-        limit = { local_var:gacha_calc_block_idx_val = 1 }
+        limit = { local_gacha_calc_block_idx_val = 1 }
         set_variable = { name = gacha_block_pity_met_bool value = 0 }
     }
 
@@ -323,17 +323,17 @@ gacha_execute_single_roll_silent = {
 
     if = {
         # 5星判定
-        limit = { local_var:gacha_calc_entropy_val < local_var:gacha_threshold_5star_val }
+        limit = { local_gacha_calc_entropy_val < local_gacha_threshold_5star_val }
         set_local_variable = { name = gacha_calc_tier_idx value = 2 }
     }
     else_if = {
         # 4星判定 (概率 OR 块保底)
         limit = {
             OR = {
-                local_var:gacha_calc_entropy_val < local_var:gacha_threshold_4star_val
+                local_gacha_calc_entropy_val < local_gacha_threshold_4star_val
                 AND = {
-                    local_var:gacha_calc_block_idx_val = 0
-                    var:gacha_block_pity_met_bool = 0
+                    local_gacha_calc_block_idx_val = 0
+                    gacha_block_pity_met_bool = 0
                 }
             }
         }
@@ -344,7 +344,7 @@ gacha_execute_single_roll_silent = {
     # Step 3: 结算分发 (Resolve & Update)
     # --------------------------------------------------------
     if = {
-        limit = { local_var:gacha_calc_tier_idx = 2 }
+        limit = { local_gacha_calc_tier_idx = 2 }
         # 更新保底
         set_variable = { name = gacha_pity_5star_count value = 0 }
         set_variable = { name = gacha_block_pity_met_bool value = 1 }
@@ -354,7 +354,7 @@ gacha_execute_single_roll_silent = {
         gacha_resolve_5star_and_save_scope = yes
     }
     else_if = {
-        limit = { local_var:gacha_calc_tier_idx = 1 }
+        limit = { local_gacha_calc_tier_idx = 1 }
         # 更新保底
         set_variable = { name = gacha_pity_4star_count value = 0 }
         set_variable = { name = gacha_block_pity_met_bool value = 1 }
@@ -391,14 +391,14 @@ gacha_resolve_5star_and_save_scope = {
     # 2. 判定逻辑
     if = {
         # 情况 A: 大保底生效
-        limit = { var:gacha_is_guaranteed_bool = 1 }
+        limit = { gacha_is_guaranteed_bool = 1 }
         set_local_variable = { name = gacha_is_up_bool_var value = 1 }
         set_variable = { name = gacha_is_guaranteed_bool value = 0 } # 消耗保底
     }
     else = {
         # 情况 B: 概率判定 (阈值 5000/10000)
         if = {
-            limit = { local_var:gacha_calc_entropy2_val < 5000 }
+            limit = { local_gacha_calc_entropy2_val < 5000 }
             set_local_variable = { name = gacha_is_up_bool_var value = 1 }
         }
         else = {
@@ -410,7 +410,7 @@ gacha_resolve_5star_and_save_scope = {
     # 3. 发放角色
     # 注意：被调用的 Effect 内部必须执行 save_scope_as = gacha_last_pulled_char
     if = {
-        limit = { local_var:gacha_is_up_bool_var = 1 }
+        limit = { local_gacha_is_up_bool_var = 1 }
         gacha_create_xinhai_effect = yes # 当期 UP
     }
     else = {
@@ -418,13 +418,13 @@ gacha_resolve_5star_and_save_scope = {
         change_variable = { name = gacha_std5_result_count add = 1 }
         set_local_variable = { name = gacha_standard_5_idx value = gacha_calc_standard_5_idx_sv }
 
-        if = { limit = { local_var:gacha_standard_5_idx = 0 } gacha_create_keqing_effect = yes }
-        else_if = { limit = { local_var:gacha_standard_5_idx = 1 } gacha_create_raiden_effect = yes }
-        else_if = { limit = { local_var:gacha_standard_5_idx = 2 } gacha_create_furina_effect = yes }
-        else_if = { limit = { local_var:gacha_standard_5_idx = 3 } gacha_create_hutao_effect = yes }
-        else_if = { limit = { local_var:gacha_standard_5_idx = 4 } gacha_create_klee_effect = yes }
-        else_if = { limit = { local_var:gacha_standard_5_idx = 5 } gacha_create_nahida_effect = yes }
-        else_if = { limit = { local_var:gacha_standard_5_idx = 6 } gacha_create_fischl_effect = yes }
+        if = { limit = { local_gacha_standard_5_idx = 0 } gacha_create_keqing_effect = yes }
+        else_if = { limit = { local_gacha_standard_5_idx = 1 } gacha_create_raiden_effect = yes }
+        else_if = { limit = { local_gacha_standard_5_idx = 2 } gacha_create_furina_effect = yes }
+        else_if = { limit = { local_gacha_standard_5_idx = 3 } gacha_create_hutao_effect = yes }
+        else_if = { limit = { local_gacha_standard_5_idx = 4 } gacha_create_klee_effect = yes }
+        else_if = { limit = { local_gacha_standard_5_idx = 5 } gacha_create_nahida_effect = yes }
+        else_if = { limit = { local_gacha_standard_5_idx = 6 } gacha_create_fischl_effect = yes }
         else = { gacha_create_ayaka_effect = yes } # Index 7
     }
 }
@@ -442,9 +442,9 @@ gacha_resolve_4star_logic = {
     set_local_variable = { name = gacha_4star_idx_val value = gacha_calc_4star_idx_sv }
 
     # 2. 实发奖励 (不再依赖 Event Option)
-    if = { limit = { local_var:gacha_4star_idx_val = 0 } add_gold = 240 }
-    else_if = { limit = { local_var:gacha_4star_idx_val = 1 } add_prestige = 8 }
-    else_if = { limit = { local_var:gacha_4star_idx_val = 2 } add_legitimacy = 8 }
+    if = { limit = { local_gacha_4star_idx_val = 0 } add_gold = 240 }
+    else_if = { limit = { local_gacha_4star_idx_val = 1 } add_prestige = 8 }
+    else_if = { limit = { local_gacha_4star_idx_val = 2 } add_legitimacy = 8 }
     else = { add_stability = 0.25 }
 }
 
@@ -466,22 +466,22 @@ gacha_wrapper_ten_pull = {
     set_local_variable = { name = gacha_loop_idx value = 0 }
 
     while = {
-        limit = { local_var:gacha_loop_idx < 10 }
+        limit = { local_gacha_loop_idx < 10 }
 
         # A. 运行内核 (结算并产生 gacha_last_pulled_char)
         gacha_execute_single_roll_silent = yes
 
         # B. 事件分发
         if = {
-            limit = { local_var:gacha_calc_tier_idx = 2 } # 5星
+            limit = { local_gacha_calc_tier_idx = 2 } # 5星
             trigger_event_non_silently = gacha_events.5
         }
         else_if = {
-            limit = { local_var:gacha_calc_tier_idx = 1 } # 4星
+            limit = { local_gacha_calc_tier_idx = 1 } # 4星
             # ID 分流，对应不同的静态文本
-            if = { limit = { local_var:gacha_4star_idx_val = 0 } trigger_event_non_silently = gacha_events.21 }
-            else_if = { limit = { local_var:gacha_4star_idx_val = 1 } trigger_event_non_silently = gacha_events.22 }
-            else_if = { limit = { local_var:gacha_4star_idx_val = 2 } trigger_event_non_silently = gacha_events.23 }
+            if = { limit = { local_gacha_4star_idx_val = 0 } trigger_event_non_silently = gacha_events.21 }
+            else_if = { limit = { local_gacha_4star_idx_val = 1 } trigger_event_non_silently = gacha_events.22 }
+            else_if = { limit = { local_gacha_4star_idx_val = 2 } trigger_event_non_silently = gacha_events.23 }
             else = { trigger_event_non_silently = gacha_events.24 }
         }
         # 3星静默
@@ -499,15 +499,15 @@ gacha_wrapper_single_pull = {
     gacha_execute_single_roll_silent = yes
 
     if = {
-        limit = { local_var:gacha_calc_tier_idx = 2 }
+        limit = { local_gacha_calc_tier_idx = 2 }
         trigger_event_non_silently = gacha_events.5
     }
     else_if = {
-        limit = { local_var:gacha_calc_tier_idx = 1 }
+        limit = { local_gacha_calc_tier_idx = 1 }
         # 保持与十连一致的分流
-        if = { limit = { local_var:gacha_4star_idx_val = 0 } trigger_event_non_silently = gacha_events.21 }
-        else_if = { limit = { local_var:gacha_4star_idx_val = 1 } trigger_event_non_silently = gacha_events.22 }
-        else_if = { limit = { local_var:gacha_4star_idx_val = 2 } trigger_event_non_silently = gacha_events.23 }
+        if = { limit = { local_gacha_4star_idx_val = 0 } trigger_event_non_silently = gacha_events.21 }
+        else_if = { limit = { local_gacha_4star_idx_val = 1 } trigger_event_non_silently = gacha_events.22 }
+        else_if = { limit = { local_gacha_4star_idx_val = 2 } trigger_event_non_silently = gacha_events.23 }
         else = { trigger_event_non_silently = gacha_events.24 }
     }
     else = {
@@ -574,7 +574,7 @@ gacha_events.1 = {
     desc = {
         first_valid = {
             triggered_desc = {
-                trigger = { var:gacha_is_guaranteed_bool = 1 }
+                trigger = { gacha_is_guaranteed_bool = 1 }
                 desc = gacha_events.1.desc_guaranteed
             }
             triggered_desc = {
@@ -747,7 +747,7 @@ gacha_create_ayaka_effect = {
             limit = { has_character_modifier = gacha_ayaka_modifier }
             save_scope_as = existing_char
         }
-        scope:existing_char = {
+        scope:existing_char ?= {
             # 升级逻辑...
             change_variable = { name = gacha_constellation_lvl add = 1 }
 
@@ -778,7 +778,7 @@ gacha_resolve_5star_and_save_scope = {
     else = {
         # 常驻分支
         # 假设 Ayaka 是常驻池 Index 8
-        else_if = { limit = { local_var:gacha_standard_5_idx = 8 } gacha_create_ayaka_effect = yes }
+        else_if = { limit = { local_gacha_standard_5_idx = 8 } gacha_create_ayaka_effect = yes }
     }
 }
 
@@ -887,17 +887,17 @@ after = {
 
 首先clear_saved_scope 永远写 clear_saved_scope = existing_char，不要加 scope:。
 
-在 effect 里对那个角色做事，要用 scope:existing_char = { ... }，而不是 existing_char = { ... }。，其次character = scope:gacha_c3_target_char是幻觉。
+在 effect 里对那个角色做事，要用 scope:existing_char ?= { ... }，而不是 existing_char = { ... }。，其次character = scope:gacha_c3_target_char是幻觉。
 
 
 首先clear_saved_scope 永远写 clear_saved_scope = existing_char，不要加 scope:。
 
-在 effect 里对那个角色做事，要用 scope:existing_char = { ... }，而不是 existing_char = { ... }。，其次character = scope:gacha_c3_target_char是幻觉。
+在 effect 里对那个角色做事，要用 scope:existing_char ?= { ... }，而不是 existing_char = { ... }。，其次character = scope:gacha_c3_target_char是幻觉。
 
 
 首先clear_saved_scope 永远写 clear_saved_scope = existing_char，不要加 scope:。
 
-在 effect 里对那个角色做事，要用 scope:existing_char = { ... }，而不是 existing_char = { ... }。，其次character = scope:gacha_c3_target_char是幻觉。
+在 effect 里对那个角色做事，要用 scope:existing_char ?= { ... }，而不是 existing_char = { ... }。，其次character = scope:gacha_c3_target_char是幻觉。
 
 ## 1. V3 设计理念
 
@@ -1086,11 +1086,11 @@ scope:gacha_c3_target_char = {
 desc = {
     first_valid = {
         triggered_desc = {
-            trigger = { var:gacha_c3_path = 1 }
+            trigger = { gacha_c3_path = 1 }
             desc = gacha_xinhai_c3_desc_path_a
         }
         triggered_desc = {
-            trigger = { var:gacha_c3_path = 2 }
+            trigger = { gacha_c3_path = 2 }
             desc = gacha_xinhai_c3_desc_path_b
         }
     }
@@ -1194,14 +1194,14 @@ gacha_create_xinhai_effect = {
         
             # C2事件
             if = {
-                limit = { var:gacha_constellation_lvl = 2 }
+                limit = { gacha_constellation_lvl = 2 }
                 root = { 
                     trigger_event_non_silently = { id = gacha_xinhai_events.11 } 
                 }
             }
             # C3好感事件
             else_if = {
-                limit = { var:gacha_constellation_lvl = 3 }
+                limit = { gacha_constellation_lvl = 3 }
                 save_scope_as = gacha_c3_target_char
                 root = {
                     trigger_event_non_silently = { id = gacha_xinhai_events.30 }
@@ -1209,7 +1209,7 @@ gacha_create_xinhai_effect = {
             }
             # C4事件
             else_if = {
-                limit = { var:gacha_constellation_lvl = 4 }
+                limit = { gacha_constellation_lvl = 4 }
                 root = { 
                     trigger_event_non_silently = { id = gacha_xinhai_events.13 } 
                 }
@@ -1265,11 +1265,11 @@ gacha_xinhai_events.31 = {
     desc = {
         first_valid = {
             triggered_desc = {
-                trigger = { var:gacha_c3_path = 1 }
+                trigger = { gacha_c3_path = 1 }
                 desc = gacha_xinhai_c3_desc_path_a
             }
             triggered_desc = {
-                trigger = { var:gacha_c3_path = 2 }
+                trigger = { gacha_c3_path = 2 }
                 desc = gacha_xinhai_c3_desc_path_b
             }
         }

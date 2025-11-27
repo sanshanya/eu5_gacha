@@ -68,7 +68,7 @@ gacha_execute_roll = {
 
 ```paradox
 if = {
-    limit = { scope:char = { employer = root } }
+    limit = { scope:char ?= { employer = root } }
     # 分支 A 逻辑
     clear_saved_scope = char  # ✅ 必须
 }
@@ -97,7 +97,7 @@ trigger_event_non_silently = { id = event.1 }  # 2. 后触发
 **原因**: 避免Event UI捕捉不需要的Scope引用。
 
 #### 规则B: Event-bound Scope - 在Event的`after`中清理
-> **[SAFEGUARD]** 所有「供event使用的saved scope」必须在event的`after`块中统一清理。
+> **[SAFEGUARD]** 如果 Scope 是为了在 Event UI 中显示（如立绘），则必须在 Event 的 `after` 块中清理。如果在触发前清理，UI 将无法获取该对象。
 
 ```paradox
 # Effect中保存scope
@@ -145,11 +145,12 @@ gacha_xinhai_events.30 = {
 ### 3.1 基础模式: 创建-使用-清理
 ```paradox
 # 场景1: Effect内临时使用
-any_character = {\n    limit = { has_trait = gacha_xinhai_origin_trait }
+any_character = {
+    limit = { has_trait = gacha_xinhai_origin_trait }
     save_scope_as = existing_char
 }
 
-scope:existing_char = {
+scope:existing_char ?= {
     change_variable = { name = gacha_constellation_lvl add = 1 }
 }
 
@@ -232,7 +233,7 @@ effect = {
 ```paradox
 gacha_execute_roll = {
     set_variable = { name = result value = gold }
-    if = { limit = { var:result < 100 } ... }
+    if = { limit = { result < 100 } ... }
     trigger_event_non_silently = { id = event.1 }
 }
 ```

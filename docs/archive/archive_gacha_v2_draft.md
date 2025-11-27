@@ -41,9 +41,9 @@ gacha_5star_threshold_value = {
   
     # 软保底: 73+ 每抽 +6%
     if = {
-        limit = { var:gacha_pity_count >= 73 }
+        limit = { gacha_pity_count >= 73 }
         add = {
-            value = var:gacha_pity_count
+            value = gacha_pity_count
             subtract = 73
             multiply = 60  # 每抽 +60/1000 = +6%
         }
@@ -51,7 +51,7 @@ gacha_5star_threshold_value = {
   
     # 硬保底: 89+ 强制 100%
     if = {
-        limit = { var:gacha_pity_count >= 89 }
+        limit = { gacha_pity_count >= 89 }
         set = 1000
     }
 }
@@ -88,16 +88,16 @@ gacha_5star_threshold_value = {
 
 ```paradox
 # 步骤 1: 生成种子
-set_variable = { name = gacha_rand value = var:gacha_total_rolls }
-change_variable = { name = gacha_rand add = var:gacha_pity_count }
+set_variable = { name = gacha_rand value = gacha_total_rolls }
+change_variable = { name = gacha_rand add = gacha_pity_count }
 change_variable = { name = gacha_rand add = gold }  # 动态组件
 
 # 步骤 2: 数学法取模 1000 (O(1))
 # 公式: Rand = Seed - (1000 * (Seed / 1000))
-set_variable = { name = gacha_temp_calc value = var:gacha_rand }
+set_variable = { name = gacha_temp_calc value = gacha_rand }
 change_variable = { name = gacha_temp_calc divide = 1000 }  # 整数除法自动取整
 change_variable = { name = gacha_temp_calc multiply = 1000 }
-change_variable = { name = gacha_rand subtract = var:gacha_temp_calc }
+change_variable = { name = gacha_rand subtract = gacha_temp_calc }
 remove_variable = gacha_temp_calc
 
 # 现在 gacha_rand ∈ [0, 999]
@@ -167,13 +167,13 @@ set_variable = { name = gacha_r50 value = gold }
 ```paradox
 # 混合种子 (关键：total_rolls 每次+1，打破锁定)
 set_variable = { name = gacha_r50 value = gold }
-change_variable = { name = gacha_r50 add = var:gacha_total_rolls }
+change_variable = { name = gacha_r50 add = gacha_total_rolls }
 
 # 数学法取模 2
-set_variable = { name = gacha_r50_calc value = var:gacha_r50 }
+set_variable = { name = gacha_r50_calc value = gacha_r50 }
 change_variable = { name = gacha_r50_calc divide = 2 }
 change_variable = { name = gacha_r50_calc multiply = 2 }
-change_variable = { name = gacha_r50 subtract = var:gacha_r50_calc }
+change_variable = { name = gacha_r50 subtract = gacha_r50_calc }
 remove_variable = gacha_r50_calc
 
 # gacha_r50 = 0 (偶数) → UP
@@ -198,7 +198,7 @@ remove_variable = gacha_r50_calc
 
 ```paradox
 # 在 gacha_handle_5star_outcome 中处理
-if = { limit = { var:gacha_is_guaranteed = 1 }
+if = { limit = { gacha_is_guaranteed = 1 }
     gacha_create_xinhai_effect = yes  # 必定UP
 }
 else = {
@@ -214,7 +214,7 @@ gacha_standard_5star_pool = {
     gacha_create_raiden_effect = yes
   
     # 未来扩展: 使用 (gold + total_rolls) mod N
-    # if = { limit = { var:choice = 0 } ... }
+    # if = { limit = { choice = 0 } ... }
 }
 ```
 

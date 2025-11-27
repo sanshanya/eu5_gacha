@@ -178,11 +178,11 @@ gacha_xinhai_apply_country_modifiers = {
         add_country_modifier = { modifier = gacha_xinhai_country_modifier years = -1 }
     }
     if = {
-        limit = { var:gacha_constellation_lvl >= 2 }
+        limit = { gacha_constellation_lvl >= 2 }
         root = { add_country_modifier = { modifier = gacha_xinhai_c2_country_modifier years = -1 } }
     }
     if = {
-        limit = { var:gacha_constellation_lvl >= 4 }
+        limit = { gacha_constellation_lvl >= 4 }
         root = { add_country_modifier = { modifier = gacha_xinhai_c4_country_modifier years = -1 } }
     }
 }

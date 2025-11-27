@@ -28,10 +28,10 @@
 
 ```paradox
 # ❌ 文档声称的"数学法" - 这是幻觉！
-set_variable = { name = gacha_temp_calc value = var:gacha_rand }
+set_variable = { name = gacha_temp_calc value = gacha_rand }
 change_variable = { name = gacha_temp_calc divide = 1000 }  # 整数除法自动取整
 change_variable = { name = gacha_temp_calc multiply = 1000 }
-change_variable = { name = gacha_rand subtract = var:gacha_temp_calc }
+change_variable = { name = gacha_rand subtract = gacha_temp_calc }
 ```
 
 **现实**:
@@ -46,7 +46,7 @@ change_variable = { name = gacha_rand subtract = var:gacha_temp_calc }
 ```paradox
 # ✅ 实际使用的方法：while 循环
 while = {
-    limit = { var:gacha_rand_ones >= 10 }
+    limit = { gacha_rand_ones >= 10 }
     change_variable = { name = gacha_rand_ones subtract = 10 }
 }
 ```
@@ -68,11 +68,11 @@ while = {
 
 **实际代码** (`gacha_logic_effects.txt` 第 44-50 行):
 ```paradox
-set_variable = { name = gacha_rand_ones value = var:gacha_rand }
+set_variable = { name = gacha_rand_ones value = gacha_rand }
 
 # 提取个位数 (最多 10 次循环)
 while = {
-    limit = { var:gacha_rand_ones >= 10 }
+    limit = { gacha_rand_ones >= 10 }
     change_variable = { name = gacha_rand_ones subtract = 10 }
 }
 ```
@@ -94,7 +94,7 @@ while = {
 **实际代码** (`gacha_logic_effects.txt` 第 108 行):
 ```paradox
 # ✅ 实际：只用 total_rolls（每次+1，必然翻转）
-set_variable = { name = gacha_r50 value = var:gacha_total_rolls }
+set_variable = { name = gacha_r50 value = gacha_total_rolls }
 ```
 
 **结论**: **没有陷阱，因为从未掉进去过**。文档可能在描述某个废弃的设计。
@@ -121,7 +121,7 @@ random_list = {
 ```paradox
 # ✅ 当前逻辑：纯 if 判断，无 random_list
 if = {
-    limit = { var:gacha_rand_ones < var:gacha_thresh5 }
+    limit = { gacha_rand_ones < gacha_thresh5 }
     set_variable = { name = gacha_temp_roll_result value = 1 }
 }
 ```
@@ -148,8 +148,8 @@ if = {
 
 **实际代码** (`gacha_logic_effects.txt` 第 17-19 行):
 ```paradox
-set_variable = { name = gacha_rand value = var:gacha_total_rolls }
-change_variable = { name = gacha_rand add = var:gacha_pity_count }
+set_variable = { name = gacha_rand value = gacha_total_rolls }
+change_variable = { name = gacha_rand add = gacha_pity_count }
 change_variable = { name = gacha_rand add = gold }
 ```
 

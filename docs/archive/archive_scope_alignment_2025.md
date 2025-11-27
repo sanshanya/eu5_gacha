@@ -37,7 +37,7 @@
 **文件**: `gacha_xinhai_effects.txt`, `gacha_raiden_effects.txt` 等
 
 ```paradox
-scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_xinhai_events.4 } } }
+scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_xinhai_events.4 } } }
 ```
 
 ✅ **符合**: 正确使用 `root` 从 Character Scope 回到 Country Scope 触发事件。
@@ -62,7 +62,7 @@ any_character = {
     save_scope_as = existing_char
 }
 if = {
-    limit = { scope:existing_char = { employer = root } }
+    limit = { scope:existing_char ?= { employer = root } }
     # ... 使用 scope:existing_char ...
     clear_saved_scope = existing_char
 }
@@ -80,7 +80,7 @@ any_character = {
     save_scope_as = existing_char
 }
 if = {
-    limit = { scope:existing_char = { employer = root } }
+    limit = { scope:existing_char ?= { employer = root } }
     # ...
 }
 ```
@@ -93,7 +93,7 @@ any_character = {
 }
 if = {
     limit = { scope:existing_char ?= yes }  # 先检查存在性
-    limit = { scope:existing_char = { employer = root } }
+    limit = { scope:existing_char ?= { employer = root } }
     # ...
 }
 ```

@@ -206,14 +206,14 @@ gacha_create_xinhai_effect = {
             
             # C2事件
             if = {
-                limit = { var:gacha_constellation_lvl = 2 }
+                limit = { gacha_constellation_lvl = 2 }
                 root = { 
                     trigger_event_non_silently = { id = gacha_xinhai_events.11 } 
                 }
             }
             # C4事件
             else_if = {
-                limit = { var:gacha_constellation_lvl = 4 }
+                limit = { gacha_constellation_lvl = 4 }
                 root = { 
                     trigger_event_non_silently = { id = gacha_xinhai_events.13 } 
                 }
@@ -274,7 +274,7 @@ gacha_xinhai_events.11 = {
 ```paradox
 # 在命座升级逻辑中触发
 else_if = {
-    limit = { var:gacha_constellation_lvl = 3 }
+    limit = { gacha_constellation_lvl = 3 }
     save_scope_as = gacha_c3_target_char  # 保存角色引用
     root = {
         trigger_event_non_silently = { id = gacha_xinhai_events.30 }
@@ -319,11 +319,11 @@ gacha_xinhai_events.31 = {
     desc = {
         first_valid = {
             triggered_desc = {
-                trigger = { var:gacha_c3_path = 1 }
+                trigger = { gacha_c3_path = 1 }
                 desc = gacha_xinhai_c3_desc_path_a
             }
             triggered_desc = {
-                trigger = { var:gacha_c3_path = 2 }
+                trigger = { gacha_c3_path = 2 }
                 desc = gacha_xinhai_c3_desc_path_b
             }
         }
@@ -438,7 +438,7 @@ STATIC_MODIFIER_DESC_gacha_xinhai_c2_country_modifier: "阶层满意恢复 +0.25
 | `random_in_global_list` | ✅ | `gacha_xinhai_effects.txt` |
 | `save_scope_as` | ✅ | 所有effects文件 |
 | `triggered_desc` | ✅ | `gacha_events.txt` |
-| Implicit Binding | ✅ | 事件中显示肖像 (自动抓取immediate scope) |
+| Implicit Binding | ⚠️ | 事件中显示肖像 (经验规则：UI倾向于使用immediate中保存的前几个scope，非官方文档明确行为) |
 | `after = {}` | ✅ | 事件后清理 |
 
 ### 6.2 常见陷阱
@@ -525,6 +525,7 @@ add_country_modifier = {
 - [Spec: Scope Management](../spec/spec_scope_management.md) - Scope管理规范
 - [Spec: Workflow Add Character](../spec/spec_workflow_add_character.md) - 添加角色流程
 - [Design: Affinity System](design_affinity_system.md) - 好感度系统设计
+- [Reference: Hallucination Table](../幻觉表.md) - **必读**：CK3/EU4 习惯导致的常见错误汇总
 
 ---
 

@@ -203,7 +203,7 @@ set_variable = {
 ### 硬保底判定
 ```paradox
 if = {
-    limit = { var:gacha_pity_count >= 89 }
+    limit = { gacha_pity_count >= 89 }
     set_variable = { name = gacha_curr_thresh5 value = 1000 }  # 100%
 }
 ```
@@ -211,7 +211,7 @@ if = {
 ### 块内保底
 ```paradox
 if = {
-    limit = { var:gacha_block_index = 0 var:gacha_block_has_4star = no }
+    limit = { gacha_block_index = 0 gacha_block_has_4star = no }
     set_variable = { name = gacha_is_4star_win value = yes }  # 强制4星
 }
 ```

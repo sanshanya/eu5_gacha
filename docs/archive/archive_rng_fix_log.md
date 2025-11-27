@@ -65,7 +65,7 @@ scope:gacha_rng_temp_char = {
 **Implementation**:
 ```paradox
 while = {
-    limit = { var:gacha_burn_counter > 0 }
+    limit = { gacha_burn_counter > 0 }
     random_list = { 50 = { } 50 = { } }
     change_variable = { name = gacha_burn_counter add = -1 }
 }
@@ -81,7 +81,7 @@ while = {
 **Implementation**:
 ```paradox
 while = {
-    limit = { var:gacha_burn_counter > 0 }
+    limit = { gacha_burn_counter > 0 }
     create_character = { ... }
     kill_character = { ... }
     change_variable = { name = gacha_burn_counter add = -1 }
@@ -151,7 +151,7 @@ change_variable = { name = gacha_rand add = gold }
 #### 3. Pity Counter Integration
 Existing pity system counter also contributes to randomness:
 ```paradox
-change_variable = { name = gacha_rand add = var:gacha_pity_count }
+change_variable = { name = gacha_rand add = gacha_pity_count }
 ```
 
 ### Randomness Extraction
@@ -160,7 +160,7 @@ To convert the large pseudo-random number into a usable range (0-1000):
 ```paradox
 # Extract ones digit using modulo-10 (via while loop)
 while = {
-    limit = { var:gacha_rand_ones >= 10 }
+    limit = { gacha_rand_ones >= 10 }
     change_variable = { name = gacha_rand_ones subtract = 10 }
 }
 
@@ -168,7 +168,7 @@ while = {
 change_variable = { name = gacha_rand_ones multiply = 100 }
 
 # Compare against threshold
-if = { limit = { var:gacha_rand_ones < var:gacha_thresh5 } ... }
+if = { limit = { gacha_rand_ones < gacha_thresh5 } ... }
 ```
 
 ---

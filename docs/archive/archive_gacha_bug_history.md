@@ -47,16 +47,16 @@ rand = total_rolls + gold + pity_count
 set_variable = { name = gacha_rand value = 937 }
 change_variable = { 
     name = gacha_rand 
-    add = { value = var:gacha_total_rolls multiply = 17 }
+    add = { value = gacha_total_rolls multiply = 17 }
 }
 change_variable = { name = gacha_rand add = abs_gold }
 change_variable = { 
     name = gacha_rand 
-    add = { value = var:gacha_pity_count multiply = 13 }
+    add = { value = gacha_pity_count multiply = 13 }
 }
 change_variable = { 
     name = gacha_rand 
-    add = { value = var:gacha_block_index multiply = 7 }
+    add = { value = gacha_block_index multiply = 7 }
 }
 change_variable = { name = gacha_rand modulo = 1000 }
 ```
@@ -93,11 +93,11 @@ if (rand < none) → 永远false
 ```paradox
 # 硬保底
 if = {
-    limit = { var:gacha_pity_count >= 89 }
+    limit = { gacha_pity_count >= 89 }
     set_variable = { name = gacha_curr_thresh5 value = 1000 }  # 100%
 }
 else_if = {
-    limit = { var:gacha_pity_count >= 73 }
+    limit = { gacha_pity_count >= 73 }
     # 软保底计算...
 }
 else = {
@@ -125,7 +125,7 @@ else = {
 **根本原因**:
 ```paradox
 # 使用了未定义的变量
-limit = { var:gacha_block_index = 0 }  # block_index从未计算！
+limit = { gacha_block_index = 0 }  # block_index从未计算！
 ```
 
 **修复方案**:
@@ -138,7 +138,7 @@ limit = { var:gacha_block_index = 0 }  # block_index从未计算！
 # 步骤1: 计算块索引
 set_variable = { 
     name = gacha_block_index 
-    value = var:gacha_total_rolls 
+    value = gacha_total_rolls 
 }
 change_variable = { 
     name = gacha_block_index 
@@ -147,15 +147,15 @@ change_variable = {
 
 # 步骤2: 新块重置标记
 if = {
-    limit = { var:gacha_block_index = 0 }
+    limit = { gacha_block_index = 0 }
     set_variable = { name = gacha_block_has_4star value = 0 }
 }
 
 # 步骤3: 第10抽检查
 if = {
     limit = { 
-        var:gacha_block_index = 0 
-        var:gacha_block_has_4star = 0 
+        gacha_block_index = 0 
+        gacha_block_has_4star = 0 
     }
     set_variable = { name = gacha_is_4star_win value = yes }  # 强制4星
 }
@@ -194,7 +194,7 @@ if = {
 }
 
 # 加入随机数池
-change_variable = { name = gacha_rand add = var:abs_gold }
+change_variable = { name = gacha_rand add = abs_gold }
 ```
 
 **文件**: `in_game/common/scripted_effects/gacha_logic_effects.txt:44-54`
@@ -212,7 +212,7 @@ change_variable = { name = gacha_rand add = var:abs_gold }
 **根本原因**:
 ```paradox
 # 使用了不存在的变量
-set_variable = { name = gacha_4star_choice value = var:gacha_rand_ones }
+set_variable = { name = gacha_4star_choice value = gacha_rand_ones }
 # gacha_rand_ones从未定义！
 ```
 
@@ -224,7 +224,7 @@ set_variable = { name = gacha_4star_choice value = var:gacha_rand_ones }
 ```paradox
 set_variable = { 
     name = gacha_4star_choice 
-    value = var:gacha_rand 
+    value = gacha_rand 
 }
 change_variable = { 
     name = gacha_4star_choice 
@@ -232,8 +232,8 @@ change_variable = {
 }
 
 # 0=金币, 1=威望, 2=正统性
-if = { limit = { var:gacha_4star_choice = 0 } add_gold = 100 }
-else_if = { limit = { var:gacha_4star_choice = 1 } add_prestige = 50 }
+if = { limit = { gacha_4star_choice = 0 } add_gold = 100 }
+else_if = { limit = { gacha_4star_choice = 1 } add_prestige = 50 }
 else = { add_legitimacy = 10 }
 ```
 
@@ -273,7 +273,7 @@ gacha_execute_single_roll_silent = {
     # ... 计算逻辑 ...
     
     if = {
-        limit = { var:gacha_tier = 2 }  # 5星
+        limit = { gacha_tier = 2 }  # 5星
         set_variable = { name = gacha_pity_count value = 0 }
         # ❌ 删除: gacha_handle_5star_outcome = yes
         # ✅ 只重置pity，不发放角色
@@ -315,7 +315,7 @@ gacha_events.5 = {
 
 **错误示例**:
 ```paradox
-if = { limit = { var:foo = 0 } ... }  # 如果foo未初始化，limit失败
+if = { limit = { foo = 0 } ... }  # 如果foo未初始化，limit失败
 ```
 
 **正确模式**:
@@ -324,7 +324,7 @@ if = { limit = { var:foo = 0 } ... }  # 如果foo未初始化，limit失败
 set_variable = { name = foo value = 0 }
 
 # 使用
-if = { limit = { var:foo = 0 } ... }
+if = { limit = { foo = 0 } ... }
 ```
 
 ---

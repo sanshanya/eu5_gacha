@@ -95,7 +95,7 @@ gacha_mission_interaction = {
     allow = {
         scope:recipient = {
             is_employed_as = advisor
-            var:gacha_affinity_level >= 20
+            gacha_affinity_level >= 20
         }
     }
     
@@ -131,7 +131,7 @@ option = {
         any_in_list = {
             variable = gacha_obtained_characters
             has_trait = gacha_xinhai_origin_trait
-            var:gacha_affinity_level >= 40
+            gacha_affinity_level >= 40
         }
     }
     
@@ -152,7 +152,7 @@ gacha_check_affinity_milestone_effect = {
     # 达到 20 好感度
     if = {
         limit = {
-            var:gacha_affinity_level >= 20
+            gacha_affinity_level >= 20
             NOT = { has_variable = gacha_affinity_tier_1_unlocked }
         }
         set_variable = { name = gacha_affinity_tier_1_unlocked value = 1 }
@@ -167,7 +167,7 @@ gacha_check_affinity_milestone_effect = {
     # 达到 40 好感度
     if = {
         limit = {
-            var:gacha_affinity_level >= 40
+            gacha_affinity_level >= 40
             NOT = { has_variable = gacha_affinity_tier_2_unlocked }
         }
         set_variable = { name = gacha_affinity_tier_2_unlocked value = 1 }
@@ -282,8 +282,8 @@ add_country_modifier = {
 gacha_marry_interaction = {
     allow = {
         scope:recipient = {
-            var:gacha_constellation_lvl >= 6  # Must be C6
-            var:gacha_affinity_level >= 100   # NEW: Affinity requirement
+            gacha_constellation_lvl >= 6  # Must be C6
+            gacha_affinity_level >= 100   # NEW: Affinity requirement
             is_married = no
         }
     }
@@ -305,7 +305,7 @@ gacha_affinity_decay_event = {
     trigger = {
         any_in_list = {
             variable = gacha_obtained_characters
-            var:gacha_affinity_level > 0
+            gacha_affinity_level > 0
             NOT = { has_variable = gacha_affinity_interaction_this_year }
         }
     }
@@ -314,7 +314,7 @@ gacha_affinity_decay_event = {
         every_in_list = {
             variable = gacha_obtained_characters
             limit = {
-                var:gacha_affinity_level > 0
+                gacha_affinity_level > 0
                 NOT = { has_variable = gacha_affinity_interaction_this_year }
             }
             # -5 好感度/年
@@ -399,35 +399,35 @@ gacha_check_affinity_milestone_effect = {
     
     # Step 2: Apply the correct tier modifier based on current affinity
     if = {
-        limit = { var:gacha_affinity_level >= 100 }
+        limit = { gacha_affinity_level >= 100 }
         add_character_modifier = { 
             modifier = gacha_affinity_tier_5_modifier 
             years = -1 
         }
     }
     else_if = {
-        limit = { var:gacha_affinity_level >= 80 }
+        limit = { gacha_affinity_level >= 80 }
         add_character_modifier = { 
             modifier = gacha_affinity_tier_4_modifier 
             years = -1 
         }
     }
     else_if = {
-        limit = { var:gacha_affinity_level >= 60 }
+        limit = { gacha_affinity_level >= 60 }
         add_character_modifier = { 
             modifier = gacha_affinity_tier_3_modifier 
             years = -1 
         }
     }
     else_if = {
-        limit = { var:gacha_affinity_level >= 40 }
+        limit = { gacha_affinity_level >= 40 }
         add_character_modifier = { 
             modifier = gacha_affinity_tier_2_modifier 
             years = -1 
         }
     }
     else_if = {
-        limit = { var:gacha_affinity_level >= 20 }
+        limit = { gacha_affinity_level >= 20 }
         add_character_modifier = { 
             modifier = gacha_affinity_tier_1_modifier 
             years = -1 
@@ -444,7 +444,7 @@ gacha_check_affinity_milestone_effect = {
     # 达到 20 好感度
     if = {
         limit = {
-            var:gacha_affinity_level >= 20
+            gacha_affinity_level >= 20
             NOT = { has_variable = gacha_affinity_tier_1_unlocked }
         }
         set_variable = { name = gacha_affinity_tier_1_unlocked value = 1 }
@@ -458,7 +458,7 @@ gacha_check_affinity_milestone_effect = {
     # 达到 40 好感度
     if = {
         limit = {
-            var:gacha_affinity_level >= 40
+            gacha_affinity_level >= 40
             NOT = { has_variable = gacha_affinity_tier_2_unlocked }
         }
         set_variable = { name = gacha_affinity_tier_2_unlocked value = 1 }

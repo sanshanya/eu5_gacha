@@ -32,7 +32,7 @@
 
 ### 2.1 作用域行为
 - **上下文**: `script_value` 计算时，`THIS` 指针直接指向调用者的作用域。
-- **Root 访问**: 无需通过 `root.var` 访问变量，直接使用 `var:variable_name` 即可读取当前作用域变量。
+- **Root 访问**: 无需通过 `root.var` 访问变量，直接使用 `variable_name` 即可读取当前作用域变量。
 - **验证状态**: ✅ **已验证** (Ref: `archive_technical_reference_old.md`)
 
 ### 2.2 限制
@@ -82,7 +82,7 @@
 ### 4.5 Scope Existence Checks
 - **?= 操作符**: 检查 Scope 是否存在。
 - **语法**: `scope:name ?= yes/no`
-- **验证状态**: ⚠️ **未在项目中使用**（当前代码未利用此特性）
+- **验证状态**: ✅ **推荐使用** (Ref: `spec_scope_management.md` & `design_engine_pitfalls.md`)
 
 ---
 

@@ -1,7 +1,7 @@
 ﻿# Engine Pitfalls & Verified Behaviors
 
-- **Version**: 2.0
-- **Last Verified**: 2025-11-25
+- **Version**: 2.2
+- **Last Verified**: 2025-11-27
 - **Purpose**: 记录开发过程中踩过的坑,将错误经验转化为工程规范。
 
 ---
@@ -46,8 +46,8 @@
 **正确代码**:
 ```paradox
 if = {
-    limit = { scope:existing_char = { employer = root } }
-    scope:existing_char = { change_variable = { name = gacha_constellation_lvl add = 1 } }
+    limit = { scope:existing_char ?= { employer = root } }
+    scope:existing_char ?= { change_variable = { name = gacha_constellation_lvl add = 1 } }
     clear_saved_scope = existing_char  # ✅ 分支 A 清理
 }
 else = {
@@ -58,7 +58,7 @@ else = {
 
 ---
 
-##§3. Template Parameters (The "Type Trap")
+## §3. Template Parameters (The "Type Trap")
 
 ### 官方/源头
 - **机制**: Jomini 引擎的模板参数 (`$ARG$`) 本质上是简单的字符串替换。
@@ -88,3 +88,53 @@ else = {
 ### 规避规范
 - **DO**: 事件正文使用静态文本。
 - **DO**: 利用事件窗口顶部的 Portrait UI 来展示当前角色信息。
+
+---
+
+## §5. Common Hallucinations (CK3/EU4 Legacy)
+
+> **Source**: [幻觉表.md](../幻觉表.md) - 详细记录了从 CK3/EU4 迁移时的思维误区。
+
+### 5.1 Event Types
+- **幻觉**: `type = character_event`
+- **现实**: EU5 只有 `country_event`, `location_event`, `unit_event` 等。角色相关逻辑通常挂在 `country_event` 下。
+
+### 5.2 Portrait Binding
+- **幻觉**: `character = scope:my_char`
+- **现实**: EU5 事件 UI 使用 **Illustration System**。
+  - 机制: 引擎通常会抓取 `immediate` 块中保存的前几个 Scope (如 `save_scope_as`) 来决定显示内容。
+  - 做法: 在 `immediate` 中 `save_scope_as` 目标角色，不要使用 `character = ...` 参数。
+
+### 5.3 Variable Access Syntax
+- **幻觉**: 在 `script_value` 或 `trigger` 中使用 `var:my_var` 获取数值。
+- **现实**: 
+  - `var:` 是 **Event Target Link** (用于切换 Scope)。
+  - 获取数值直接使用 **变量名**。
+  - **错误**: `add = { value = var:count }` (引擎尝试把 count 当作 scope)
+  - **正确**: `add = { value = count }`
+
+### 5.4 Triggered Only
+- **幻觉**: `is_triggered_only = yes`
+- **现实**: 该字段不存在。不挂在 `on_action` 且 `trigger = { always = no }` (可选) 即可实现仅脚本触发。
+
+### 5.5 Scope Existence in Triggers
+- **幻觉**: `limit = { scope:char = { ... } }` (假设 scope 永远存在)
+- **现实**: 如果 scope 为空，会报错 "Invalid object"。
+- **正确**: 使用 `?=` 操作符: `limit = { scope:char ?= { ... } }`。
+
+### 5.6 Modulo Operator
+- **幻觉**: 认为引擎不支持 `%` 或 `modulo`，必须用 `while` 循环模拟 (源自旧 Archive)。
+- **现实**: `script_value` 完全支持 `modulo` 运算。
+  - **代码证明**: `gacha_eu_values.txt` 中大量使用 `modulo = 10000`。
+  - **修正**: 不要用 `while` 循环去模拟取模，直接用 `modulo`。
+
+### 5.7 Interaction select_trigger
+- **误区**: 看起来像 CK3 的 `select_trigger` (包含 `looking_for_a`, `column` 等) 是幻觉。
+- **现实**: ✅ **已验证有效**。EU5 的 Interaction 系统确实支持这种复杂的选择器语法。
+### 5.8 Flag Prefix Usage (`flag:`)
+- **幻觉**: 认为 `value = flag:xxx` 是在引用某种布尔值标记或特殊变量。
+- **现实**: `flag:` 前缀专门用于 **存储本地化键 (Localization Key)**。
+  - `set_variable = { name = my_var value = flag:loc_key_name }`
+  - 效果: 变量 `my_var` 存储了字符串键 `loc_key_name`。
+  - 用途: 在 GUI 或文本中通过 `[Var('my_var').GetFlagName]` 动态显示对应的本地化文本。
+- **警示**: 绝不要把 `flag:` 当作数值或布尔值来运算。

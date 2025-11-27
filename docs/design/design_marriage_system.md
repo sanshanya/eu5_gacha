@@ -65,7 +65,7 @@ gacha_marry_interaction = {
             # Check marriage count limit
             trigger_if = {
                 limit = { has_variable = gacha_marriage_count }
-                var:gacha_marriage_count < 3
+                gacha_marriage_count < 3
             }
             trigger_else = {
                 always = yes  # First marriage
@@ -75,7 +75,7 @@ gacha_marry_interaction = {
         scope:recipient = {
             # Must be a Gacha Character with C6
             has_variable = gacha_constellation_lvl
-            var:gacha_constellation_lvl >= 6
+            gacha_constellation_lvl >= 6
             
             # Must not be married
             is_married = no
@@ -101,21 +101,21 @@ gacha_marry_interaction = {
 
             # 3. 根据当前的结婚次数，添加正确的修正
             if = {
-                limit = { var:gacha_marriage_count = 1 }
+                limit = { gacha_marriage_count = 1 }
                 add_character_modifier = { 
                     modifier = gacha_marriage_slot_1_modifier 
                     years = -1 
                 }
             }
             else_if = {
-                limit = { var:gacha_marriage_count = 2 }
+                limit = { gacha_marriage_count = 2 }
                 add_character_modifier = { 
                     modifier = gacha_marriage_slot_2_modifier 
                     years = -1 
                 }
             }
             else_if = {
-                limit = { var:gacha_marriage_count >= 3 }
+                limit = { gacha_marriage_count >= 3 }
                 add_character_modifier = { 
                     modifier = gacha_marriage_slot_3_modifier 
                     years = -1 

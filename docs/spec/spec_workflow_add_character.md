@@ -262,7 +262,7 @@ gacha_raiden_events.11 = {
     # ...
     option = {
         name = gacha_raiden_events.11.a
-        scope:existing_char = {
+        scope:existing_char ?= {
             add_trait = gacha_raiden_awakened_trait
         }
     }
@@ -291,20 +291,20 @@ gacha_raiden_events.11 = {
 ```paradox
 gacha_pool_5star_standard = {
     # 1. 计算选择变量 (0 或 1)
-    set_variable = { name = gacha_5star_choice value = var:gacha_rand }
+    set_variable = { name = gacha_5star_choice value = gacha_rand }
     
     # 增加一些熵源
-    change_variable = { name = gacha_5star_choice add = var:gacha_total_rolls }
+    change_variable = { name = gacha_5star_choice add = gacha_total_rolls }
     
     # 取模 2
     while = {
-        limit = { var:gacha_5star_choice >= 2 }
+        limit = { gacha_5star_choice >= 2 }
         change_variable = { name = gacha_5star_choice subtract = 2 }
     }
 
     # 2. 根据结果分发
     if = {
-        limit = { var:gacha_5star_choice = 0 }
+        limit = { gacha_5star_choice = 0 }
         gacha_create_raiden_effect = yes
     }
     else = {
