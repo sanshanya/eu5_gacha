@@ -1,0 +1,56 @@
+l_simp_chinese:
+  # ============================================================
+  # Character - 可莉 (Klee)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_klee: "可莉"
+  gacha_last_name_klee: "蒙德"
+
+  # === 特质 (Traits) ===
+  gacha_klee_origin_trait: "逃跑的太阳"
+  desc_gacha_klee_origin_trait: "西风骑士团的「火花骑士」，拥有与年龄不符的毁灭性火力。对她来说，炸鱼与攻城没有本质区别——都是快乐的爆炸。请务必注意灾后重建的预算。\\n\\n「只要把看不顺眼的东西全部炸飞，大家就都安全啦！这就叫……防御工事？对吧？」"
+
+  gacha_klee_awakened_trait: "蹦蹦炸弹"
+  desc_gacha_klee_awakened_trait: "可莉制作的炸弹不仅威力巨大，还会分裂出无数诡雷。这种无差别的火力覆盖能瞬间瓦解敌军的阵型。\\n\\n效果：\\n陆军火力伤害：+10%\\n冲击伤害：+5%\\n敌军损耗：+10%"
+
+  gacha_klee_transcended_trait: "轰轰火花"
+  desc_gacha_klee_transcended_trait: "全功率全开！幸运与破坏力的完美结合。她所经之处常化为焦土，但对敢于阻挡帝国的敌人而言，这便是绝对毁灭。\\n\\n效果：\\n训练度：+5%\\n炮兵火力：+15%\\n省份荒废度月度增长：+0.05(破坏力过于惊人)"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_klee_modifier: "火花的加护"
+  STATIC_MODIFIER_DESC_gacha_klee_modifier: "「红色的是蹦蹦，蓝色的是...诶？这里没有蓝色的吗？那就全部炸飞吧！」"
+  gacha_klee_modifier: "爆破之乐"
+  gacha_klee_modifier_desc: "可莉快乐的笑声伴随着远处的爆炸声，极大地鼓舞了前线士兵的破坏欲。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_klee_c0_modifier: "四叶草座"
+  STATIC_MODIFIER_NAME_gacha_klee_c1_modifier: "蹦蹦炸弹"
+  STATIC_MODIFIER_NAME_gacha_klee_c2_modifier: "破破弹片"
+  STATIC_MODIFIER_NAME_gacha_klee_c3_modifier: "全力冲刺"
+  STATIC_MODIFIER_NAME_gacha_klee_c4_modifier: "砰砰礼物"
+  STATIC_MODIFIER_NAME_gacha_klee_c5_modifier: "火焰抽击"
+  STATIC_MODIFIER_NAME_gacha_klee_c6_modifier: "到处都是宝藏"
+  STATIC_MODIFIER_NAME_gacha_klee_c6_country_modifier: "火花作战议程"
+  STATIC_MODIFIER_DESC_gacha_klee_c6_country_modifier: "可莉的火花点燃了决策室，新增的席位与高效内阁让每次作战准备都像节日烟花般迅速。"
+
+  # === 事件 (Events) ===
+  gacha_klee_events.1.title: "火花骑士报到！"
+  gacha_klee_events.1.desc: "一个背着红色书包的小女孩蹦蹦跳跳闯进了严肃的议会厅，卫兵还没反应过来，她就掏出了一枚还在冒烟的炸弹。\\n\\n「哒哒哒！可莉来啦~！」她把炸弹当礼物举高，「我是火花骑士可莉！琴团长说我要出来'历练'……总之，只要是坏人，或者看起来很坚固的城墙，交给可莉就对啦！」\\n\\n看着她纯真的笑容和手里的危险品，你不禁为敌国城防感到一丝同情。"
+  gacha_klee_events.1.a: "欢迎你，可莉！"
+
+  gacha_klee_events.2.title: "更大的爆炸！"
+  gacha_klee_events.2.desc: "可莉的力量得到了提升，她兴奋地跳了起来。\\n\\n「哇~可莉变强了！这样就能做出更大的炸弹了！嘻嘻，到时候一定要炸好多好多鱼！」"
+  gacha_klee_events.2.a: "爆炸就是艺术！"
+
+  gacha_klee_events.4.title: "最强的火花骑士"
+  gacha_klee_events.4.desc: "可莉已经达到了力量的巅峰。红色的火焰在她周围跳跃，每一朵火花都蕴含着惊人的力量。\\n\\n「可莉现在超级厉害了！不过...还是不能在城里随便炸东西。琴团长说了，要做个乖孩子~但是在外面炸坏蛋没问题对吧？」\\n\\n她歪着头，一脸天真地问道。"
+  gacha_klee_events.4.a: "当然可以！"
+
+  gacha_klee_events.11.title: "命之座·觉醒"
+  gacha_klee_events.11.desc: "可莉领悟了「破破弹片」的真意。她的炸弹威力变得更加强大。\\n\\n「嘿嘿，可莉的新炸弹超级厉害的！一个炸弹能炸出好多小炸弹，砰砰砰！」"
+  gacha_klee_events.11.a: "连锁爆炸！"
+
+  gacha_klee_events.12.title: "命之座·超越"
+  gacha_klee_events.12.desc: "可莉展现出了「砰砰礼物」的姿态。她能够将火花的力量发挥到极致。\\n\\n「这是可莉给大家的礼物哦~虽然是炸弹，但可莉是认真准备的！砰！」"
+  gacha_klee_events.12.a: "爆炸的礼物！"

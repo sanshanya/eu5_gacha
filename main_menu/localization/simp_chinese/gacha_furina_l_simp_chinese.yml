@@ -1,0 +1,37 @@
+l_simp_chinese:
+  # ============================================================
+  # Character - 芙宁娜 (Furina)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_furina: "芙宁娜"
+  gacha_last_name_furina: "德·枫丹"
+
+  # === 特质 ===
+  gacha_furina_origin_trait: "众水之神"
+  desc_gacha_furina_origin_trait: "她是一切水域的统治者，正义的化身。"
+
+  # === 修正 ===
+  STATIC_MODIFIER_NAME_gacha_furina_modifier: "众水的加护"
+  STATIC_MODIFIER_DESC_gacha_furina_modifier: "「世界不过是一场盛大的舞台剧，而我将是永远的主角。」"
+
+  # === 事件 ===
+  gacha_furina_events.1.title: "众水、众方、众民与众律法的女王"
+  gacha_furina_events.1.desc: "一位身着华丽服饰的少女出现在你的宫廷中，她自称是芙宁娜·德·枫丹。"
+  gacha_furina_events.1.a: "欢迎您的到来，女王陛下。"
+
+  gacha_furina_events.2.title: "命座提升"
+  gacha_furina_events.2.desc: "芙宁娜的力量得到了提升。"
+  gacha_furina_events.2.a: "太好了！"
+
+  gacha_furina_events.11.title: "命座觉醒"
+  gacha_furina_events.11.desc: "芙宁娜觉醒了新的力量！"
+  gacha_furina_events.11.a: "感受这股力量！"
+
+  gacha_furina_events.12.title: "命座超越"
+  gacha_furina_events.12.desc: "芙宁娜超越了自我！"
+  gacha_furina_events.12.a: "无可匹敌！"
+
+  gacha_furina_events.4.title: "满命达成"
+  gacha_furina_events.4.desc: "芙宁娜已经达到了力量的巅峰！"
+  gacha_furina_events.4.a: "不可思议的力量！"

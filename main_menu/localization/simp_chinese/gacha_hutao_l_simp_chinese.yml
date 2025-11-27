@@ -1,0 +1,56 @@
+l_simp_chinese:
+  # ============================================================
+  # Character - 胡桃 (Hutao)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_hutao: "胡桃"
+  gacha_last_name_hutao: "往生堂"
+
+  # === 特质 (Traits) ===
+  gacha_hutao_origin_trait: "往生堂主"
+  desc_gacha_hutao_origin_trait: "往生堂第七十七代堂主，行走于阴阳两界的奇妙少女。她以独特方式诠释死亡，让生者无憾，死者安息，使灾后民心得以抚慰。\\n\\n「呀，哈哈，吓到你了吧？」\\n\\n「放心嘛，死亡也只是另一场盛大典礼。我也可以帮你把活人事儿理顺哦。」"
+
+  gacha_hutao_awakened_trait: "血梅香"
+  desc_gacha_hutao_awakened_trait: "领悟了「最不安神」的真意，胡桃的力量得到了进一步的升华。她的火焰变得更加炽烈，如同盛开在冬日的血色梅花。\\n\\n效果：\\n顾问能力：+2\\n思潮传播速度：+15%\\n革命抵抗：+0.05"
+
+  gacha_hutao_transcended_trait: "安神秘传"
+  desc_gacha_hutao_transcended_trait: "掌握了往生堂最高秘传「花好月圆」，胡桃已经可以自如地游走于生死两界。她的存在本身，便是对死亡的最好诠释。\\n\\n效果：\\n稳定度提升速度：+30%\\n阶层忠诚度均衡速度：+20%\\n君主寿命：+5年"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_hutao_modifier: "蝶火的加护"
+  STATIC_MODIFIER_DESC_gacha_hutao_modifier: "「生与死，只不过是不同的状态。就像蝴蝶破茧而出，只是换了一个活法罢了。」"
+  gacha_hutao_modifier: "往生之力"
+  gacha_hutao_modifier_desc: "胡桃对生死的独特理解，让这个国家的人民更加从容面对命运的轮回。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_hutao_c0_modifier: "彼岸座·零命"
+  STATIC_MODIFIER_NAME_gacha_hutao_c1_modifier: "赤转蝶舞"
+  STATIC_MODIFIER_NAME_gacha_hutao_c2_modifier: "最不安神"
+  STATIC_MODIFIER_NAME_gacha_hutao_c3_modifier: "临别在世"
+  STATIC_MODIFIER_NAME_gacha_hutao_c4_modifier: "花好月圆"
+  STATIC_MODIFIER_NAME_gacha_hutao_c5_modifier: "红尘客栈"
+  STATIC_MODIFIER_NAME_gacha_hutao_c6_modifier: "幽蝶殊途"
+  STATIC_MODIFIER_NAME_gacha_hutao_c6_country_modifier: "蝶引政坛"
+  STATIC_MODIFIER_DESC_gacha_hutao_c6_country_modifier: "胡桃把生死哲学带进朝堂，拓展席位、凝聚忠诚，让决策更为灵动。"
+
+  # === 事件 (Events) ===
+  gacha_hutao_events.1.title: "蝶舞秋庭"
+  gacha_hutao_events.1.desc: "一位古灵精怪的少女不知何时倚在王座旁，把玩着护摩之杖。她的眼里闪着梅花般的光，笑容里藏着看透生死的狡黠。\\n\\n「呀！吓到了吗？我是往生堂堂主胡桃。看你这一脸操劳的样子……放心，还没到我接单的时候呢！不过，帮你打理国家大事，顺便推销一下业务，也是可以的哟。」\\n\\n她跳脱的语气中却带来奇异的安宁，蝶火环绕，让人心头一静。"
+  gacha_hutao_events.1.a: "有趣的客人。"
+
+  gacha_hutao_events.2.title: "命火燃烧"
+  gacha_hutao_events.2.desc: "胡桃的力量得到了进一步的提升，周身环绕着幽幽的蝶火。\\n\\n「嘿嘿，感觉到了吗？这就是往生堂的力量！」\\n\\n$gacha_text_reward_prestige_small$"
+  gacha_hutao_events.2.a: "继续燃烧吧！"
+
+  gacha_hutao_events.4.title: "蝶引来生"
+  gacha_hutao_events.4.desc: "胡桃已经达到了力量的巅峰。她轻笑着说，现在的她可以自如地游走于生死两界之间。\\n\\n「生死轮转，如梦如幻。不过呢，活着的时候还是要好好享受生命的美好呀！」\\n\\n无数蝴蝶围绕着她翩翩起舞，每一只都承载着逝者的祝福。\\n\\n$gacha_text_reward_prestige_medium$\\n$gacha_text_reward_legitimacy_medium$"
+  gacha_hutao_events.4.a: "这就是往生堂的力量！"
+
+  gacha_hutao_events.11.title: "命之座·觉醒"
+  gacha_hutao_events.11.desc: "胡桃领悟了「最不安神」的真意，她的火焰变得更加炽烈。\\n\\n「生与死的界限，本来就不该那么清晰。现在的我，更懂得如何平衡两界的力量了。」\\n\\n$gacha_text_reward_stability_small$"
+  gacha_hutao_events.11.a: "燃烧吧，蝴蝶！"
+
+  gacha_hutao_events.12.title: "命之座·超越"
+  gacha_hutao_events.12.desc: "胡桃展现出了「花好月圆」的姿态，她已经完全掌握了往生之力。\\n\\n「花开花落，月圆月缺，万物皆有其时。掌握了这个道理，就能理解生死的真谛了。」\\n\\n蝶火在她周围形成了一个完美的圆环，象征着生命的循环往复。\\n\\n$gacha_text_reward_legitimacy_small$"
+  gacha_hutao_events.12.a: "生生不息！"

@@ -1,0 +1,56 @@
+l_simp_chinese:
+  # ============================================================
+  # Character - 菲谢尔 (Fischl)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_fischl: "菲谢尔"
+  gacha_last_name_fischl: "幽夜"
+
+  # === 特质 (Traits) ===
+  gacha_fischl_origin_trait: "幽夜净土皇女"
+  desc_gacha_fischl_origin_trait: "自称流落此世的「断罪之皇女」，带着名为「奥兹」的夜鸦眷属巡视诸国。她的言辞充满戏剧性隐喻，但那只夜鸦的眼睛能轻易刺穿邻国阴谋。\\n\\n「我即是断罪之皇女菲谢尔，此乃裁断世界森罗万象之崇高眼眸！……奥兹，把那边的文件递给我。」"
+
+  gacha_fischl_awakened_trait: "断罪之雷"
+  desc_gacha_fischl_awakened_trait: "皇女的左眼「奥兹」能洞察因果的丝线，降下紫色的雷霆审判一切不义。在战场上，夜鸦的协同攻击将成为敌人的噩梦。\\n\\n效果：\\n将领冲击：+1\\n炮兵战斗力：+10%\\n要塞防御：+10%"
+
+  gacha_fischl_transcended_trait: "永夜幻想"
+  desc_gacha_fischl_transcended_trait: "幻想与现实的界限已然模糊。在这位皇女的领域内，夜色将成为最坚实的庇护，而她编写的命运剧本必将上演。\\n\\n效果：\\n敌对行动花费：-25%\\n全局人力修正：+15%\\n年度正统性：+1.00"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_fischl_modifier: "幽夜的加护"
+  STATIC_MODIFIER_DESC_gacha_fischl_modifier: "「欢唱吧，我的眷属！在此世的尽头，为高贵的皇女献上祝词！」"
+  gacha_fischl_modifier: "皇女之仪"
+  gacha_fischl_modifier_desc: "断罪皇女与其眷属的注视，让宫廷充满了神秘与威严的氛围。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_fischl_c0_modifier: "夜鸦座"
+  STATIC_MODIFIER_NAME_gacha_fischl_c1_modifier: "断罪雷影"
+  STATIC_MODIFIER_NAME_gacha_fischl_c2_modifier: "圣裁鸣雷"
+  STATIC_MODIFIER_NAME_gacha_fischl_c3_modifier: "黄昏的庇佑者"
+  STATIC_MODIFIER_NAME_gacha_fischl_c4_modifier: "皇女的幻梦"
+  STATIC_MODIFIER_NAME_gacha_fischl_c5_modifier: "对世界的诅咒"
+  STATIC_MODIFIER_NAME_gacha_fischl_c6_modifier: "永夜的极光"
+  STATIC_MODIFIER_NAME_gacha_fischl_c6_country_modifier: "幽夜极光摄政"
+  STATIC_MODIFIER_DESC_gacha_fischl_c6_country_modifier: "皇女为现世增设的议席与法案，如同幽夜纯土的律令，让朝堂运作更加高效。"
+
+  # === 事件 (Events) ===
+  gacha_fischl_events.1.title: "断罪皇女降临"
+  gacha_fischl_events.1.desc: "伴随着夜鸦振翅，一位金发少女摆出极其夸张的姿势降临大殿。遮蔽左眼的眼罩散发着神秘气息——至少她自己这么认为。\\n\\n菲谢尔：「欢呼吧！本皇女跨越因果的视界，降临于此枯竭之地，赐予尔等幽夜的荣光！」\\n\\n奥兹(叹气)：「小姐的意思是，很高兴见到您，并愿意为您效劳。」\\n\\n交流或许有些独特，但你感觉在这个组合面前，没有秘密能被藏住。"
+  gacha_fischl_events.1.a: "欢迎您，断罪皇女。"
+
+  gacha_fischl_events.2.title: "命运的宣告"
+  gacha_fischl_events.2.desc: "菲谢尔的力量得到了提升，紫色的雷电在她周围跳跃。\\n\\n「命运之轮再度转动！吾之星座于苍穹之上愈发璀璨！」\\n\\n奥兹：「小姐变强了。」"
+  gacha_fischl_events.2.a: "星座的力量！"
+
+  gacha_fischl_events.4.title: "永夜的审判"
+  gacha_fischl_events.4.desc: "菲谢尔已经达到了力量的巅峰。紫色的雷光形成了一只巨大的夜鸦虚影。\\n\\n「黄昏终将谢幕，永夜之光照耀寰宇！此刻，吾已掌握审判众生的全部力量！」\\n\\n奥兹：「小姐已经达到了她能力的巅峰。」"
+  gacha_fischl_events.4.a: "断罪皇女无敌！"
+
+  gacha_fischl_events.11.title: "命之座·觉醒"
+  gacha_fischl_events.11.desc: "菲谢尔领悟了「圣裁鸣雷」的真意。雷鸣在她的指尖汇聚，如同审判的宣告。\\n\\n「聆听！这是来自幽夜纯土的制裁之音！罪人当受天雷惩戒！」\\n\\n奥兹：「小姐掌握了新的雷电技巧。」"
+  gacha_fischl_events.11.a: "雷霆之怒！"
+
+  gacha_fischl_events.12.title: "命之座·超越"
+  gacha_fischl_events.12.desc: "菲谢尔彻底解放了「皇女的幻梦」。在她的领域内，幻想与现实的界限被打破，夜鸦的黑翼遮蔽了天空。\\n\\n菲谢尔：「这便是终焉的序曲！因果的丝线已尽在掌握，名为『现实』的剧本将由本皇女重新书写！」\\n\\n奥兹：「小姐现在的力量非常强大，请务必善用。」"
+  gacha_fischl_events.12.a: "幻想成真！"

@@ -1,0 +1,92 @@
+l_simp_chinese:
+  # ============================================================
+  # Character - 珊瑚宫心海 (Sangonomiya Kokomi)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_xinhai: "心海"
+  gacha_last_name_xinhai: "珊瑚宫"
+
+  # === 特质 (Traits) ===
+  gacha_xinhai_origin_trait: "海祇岛珊瑚灯火"
+  desc_gacha_xinhai_origin_trait: "「你的国土在生病……就像以前圣土白化一样。望泷村的珊瑚灯亮着的时候，我总觉得一切都会好起来。或许……我可以把那种感觉也带到这里来。」"
+
+  gacha_xinhai_awakened_trait: "望泷村军师少女"
+  desc_gacha_xinhai_awakened_trait: "「在望泷村的海风里推演兵书，感觉敌人都会被浪花冲走呢……你的战场比我想的要大很多。我试着庙算一次，只是这一次，打完我就想回去睡觉了。」"
+
+  gacha_xinhai_transcended_trait: "现人神巫女之位"
+  desc_gacha_xinhai_transcended_trait: "「您让我坐在这个显眼位置，但我不习惯万众朝拜。比起统治，我更希望像御灵祭那样，让人们心灵平静。民心安定，叛乱火种自然熄灭。」"
+
+  # 命座进阶 Traits
+  gacha_xinhai_c2_trait: "白夜国·圣土潮音"
+  desc_gacha_xinhai_c2_trait: "「听到了吗？那是圣土中涌动的潮音。我已将海祇的仪式融入了这片大地。瘟疫会被海水洗净，废墟会在潮汐中重生。只要这声音不停，各阶层的人心便不会干涸。请放心，这片土地正在呼吸。」"
+
+  gacha_xinhai_c4_trait: "渊下宫·抗狩龙王"
+  desc_gacha_xinhai_c4_trait: "「我又梦见渊下宫的灯火了……映在水面上，像长出了鳞片。你的舰队在海上排开阵型的时候，我突然就知道该怎么做了。兵法之道，在于庙算于未雨绸缪之际……只是，我有点累了。」\\n\\n「我梦见过深海龙蜥的狩猎……那种在黑暗中潜游的压迫感。现在，我将这种战术赋予您的舰队。它们将如幽灵般迅捷，如礁石般坚固。在这片大海上，没有风浪能损耗您的意志——因为舵盘，在我手中。」"
+
+  gacha_xinhai_c6_trait: "奥罗巴斯·现人神"
+  desc_gacha_xinhai_c6_trait: "「曾经，我视『现人神巫女』之位为一种不得不背负的责任。但如今……看着您的背影，我明白了『统治』的真意。不必担忧叛乱与疲惫，我会像奥罗巴斯守护海祇岛一样，用绝对的纪律与温柔，为您守住这万世太平。」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_xinhai_modifier: "海祇的加护"
+  STATIC_MODIFIER_DESC_gacha_xinhai_modifier: "「守护海祗岛的一切，让这里的每一个人，都能幸福快乐地活下去。」"
+  STATIC_MODIFIER_NAME_gacha_xinhai_country_modifier: "海祇的国策"
+  STATIC_MODIFIER_DESC_gacha_xinhai_country_modifier: "心海的战略布局强化了内阁运转与文化影响力。"
+  gacha_xinhai_modifier: "海祇之志"
+  gacha_xinhai_modifier_desc: "珊瑚宫心海的战略部署正在为国家带来稳定的行政流转与后勤保障。"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c2_country_modifier: "海月之誓·国度"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c2_country_modifier: "海祇的恩泽修复灾厄，抚平阶层情绪。"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c4_country_modifier: "海祇姬君·舰阵"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c4_country_modifier: "海祇姬君庇护舰队，提升士气、航速与修理效率。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier: "眠龙座·零命"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c1_modifier: "决水于溪"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c2_modifier: "波起云海"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c3_modifier: "海渚月舟"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c4_modifier: "月摄千川"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c5_modifier: "百川集海"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c6_modifier: "珊瑚一心"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c6_country_modifier: "锦囊妙计之书"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c6_country_modifier: "心海的后勤体系拓展了中央政务空间，额外的席位让决策如潮水般流畅。"
+
+  # === 事件 (Events) ===
+  gacha_xinhai_events.1.title: "现人神巫女·珊瑚宫心海 — 临时战略顾问"
+  gacha_xinhai_events.1.desc: "「我是珊瑚宫心海。虽然早有预感，但被直接召唤到这里还是意外。\\n\\n刚才看了您的疆域图。补给线比海祇岛复杂百倍，列强外交盘根错节。这些行政文书堆成山，我的能量快耗尽了。\\n\\n您用了召唤仪式，想必是遇到了死局。作为军师，我无法对混乱战局坐视不理。我会试着推演局势。\\n\\n但请记住，胜局已定后，务必准许我回房间休息。一定要准许。」"
+  gacha_xinhai_events.1.a: "恭迎军师入朝。"
+
+  gacha_xinhai_events.2.title: "锦囊妙计"
+  gacha_xinhai_events.2.desc: "随着祈愿之力的加深，珊瑚宫心海感到了一股熟悉的力量回归。\\n\\n她对兵法的理解愈发精进，仿佛已洞察未来战场的每一处变数。\\n\\n$gacha_text_reward_prestige_small$"
+  gacha_xinhai_events.2.a: "深谋远虑，决胜千里。"
+
+  gacha_xinhai_events.4.title: "海染之龙"
+  gacha_xinhai_events.4.desc: "珊瑚宫心海的力量已臻化境。她周身环绕着如同深海般深邃的气息，仿佛古老的水龙王再次降临。\\n\\n「如今的我，已可应对任何风浪。无论是深海的巨兽，亦或是陆上的强敌，皆无法阻挡海祇岛的意志。」\\n\\n她的存在本身，便是三军士气的绝对保障。\\n\\n$gacha_text_reward_prestige_medium$\\n$gacha_text_reward_legitimacy_medium$"
+  gacha_xinhai_events.4.a: "此乃天助我也！"
+
+  gacha_xinhai_events.11.title: "命之座·觉醒"
+  gacha_xinhai_events.11.desc: "随着命星再度闪耀，心海感到体内的力量涌现出了新的形态。她领悟了「海月之誓」，能够更好地守护您的子民，祛除灾厄。\\n\\n「感觉就像卸下了某种枷锁……现在，我可以更有效地将海祇岛的恩泽播撒到您的国度了。」\\n\\n$gacha_text_reward_stability_small$"
+  gacha_xinhai_events.11.a: "她的忠诚弥足珍贵。"
+
+  gacha_xinhai_events.12.title: "命之座·超越"
+  gacha_xinhai_events.12.desc: "更深层次的力量被解放了。心海的血脉中似乎蕴含着驾驭海洋的古老权能，她现在能够以「海祇姬君」之名，为您祝福整支舰队。\\n\\n「只要是为了胜利……无论是怎样的力量，我都会为您运用。请下令吧，我的大人。」\\n\\n$gacha_text_reward_legitimacy_small$"
+  gacha_xinhai_events.12.a: "大海将是我们最锋利的武器！"
+
+  gacha_xinhai_events.13.title: "意外多出的位置"
+  gacha_xinhai_events.13.desc: "内阁的图表上，多出了一格空白。\\n\\n「没想到……我的推演让你的内阁多出了一个位置。谢谢你陪我散步这么久，既宝贵又难得的时间。望泷村的晚风吹过来的时候，我总觉得……多一个人商量，战争或许能少死一些人。」"
+  gacha_xinhai_events.13.a: "那就多一把椅子吧。"
+
+  gacha_xinhai_events.14.title: "意外多出的国策位"
+  gacha_xinhai_events.14.desc: "在你尚未下令之前，政务官已经为你准备好了另一份国策草案。\\n\\n「没想到国策多出了一个位置……我不太擅长应付这么多目光。我明明说过我只是军师而已……不过，弱者要团结，才能反抗。既然来了，我就再陪你走一段吧。」"
+  gacha_xinhai_events.14.a: "那就再多想一层吧。"
+
+  # === C3 好感事件 (V3) ===
+  gacha_xinhai_c3_title: "月光下的闲聊"
+  gacha_xinhai_c3_desc_intro: "忙完政务的夜晚，你与珊瑚宫心海一同站在露台上。月光铺洒在地图与兵书上，也落在她认真却略带疲惫的侧脸。\\n\\n她抱着兵书，有些局促地与您并肩坐下，目光却总飘向远方的夜空。"
+  gacha_xinhai_c3_desc_path_a: "你提起她的故乡，心海的眼神在月色中渐渐亮起来，她轻声讲起望泷村的珊瑚灯、海风与浪花。当她描绘那些被潮水照亮的夜晚时，你仿佛也能听见远方海面的低语。"
+  gacha_xinhai_c3_desc_path_b: "你什么也不问，只是把披风披在她的肩上，安静地与她一起看月亮。心海的肩膀慢慢放松下来，她低声道谢，又像是在对自己呢喃：原来，在异乡的王座旁，也能找到和海祇岛一样安心的夜晚。"
+  gacha_xinhai_c3_desc_path_c: "你注意到她抱着兵书的手有些发酸，便轻声提议休息。心海先是愣了一下，随即小声承认自己确实有些累了。\\n\\n「有点……我不太擅长和人相处，但兵法之道，在于庙算于未雨绸缪之际。今晚不推演了，就看看月亮吧。」\\n\\n你们把复杂的战局先放到一边，只是在露台上并肩而坐，听风吹过旗帜与树梢。她偶尔会抬头看你一眼，又赶紧移开视线，把脸埋进书本后面。"
+  gacha_xinhai_c3_option_a1: "「看你看得出神……是想起了故乡的月色吗？」"
+  gacha_xinhai_c3_option_b1: "「今晚难得安静，一起坐坐？」"
+  gacha_xinhai_c3_option_c1: "「兵书看得累了？休息会儿。」"
+  gacha_xinhai_c3_option_good: "「听你说故乡，我都想去看看了。」"
+  gacha_xinhai_c3_option_neutral: "「下次再陪你看月亮。」"
