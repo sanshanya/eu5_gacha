@@ -12,13 +12,13 @@
     }
 
     if = {
-      limit = { scope:existing_char = { employer = root } }
+      limit = { scope:existing_char ?= { employer = root } }
       # 将当前角色保存为最近抽到的角色，供 V3 UI 使用
-      scope:existing_char = { save_scope_as = gacha_last_pulled_char }
+      scope:existing_char ?= { save_scope_as = gacha_last_pulled_char }
       # 满命溢出：转化为星辉
       if = {
-        limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
-        scope:existing_char = {
+        limit = { scope:existing_char ?= { var:gacha_constellation_lvl >= 6 } }
+        scope:existing_char ?= {
           root = {
             change_variable = { name = gacha_starlight add = 1 }
             trigger_event_non_silently = { id = gacha_events.30 }
@@ -27,26 +27,26 @@
       }
       else = {
         # --- 先处理角色数值变化 ---
-        scope:existing_char = {
+        scope:existing_char ?= {
           change_variable = { name = gacha_constellation_lvl add = 1 }
           gacha_apply_constellation_stats_effect = { who = nahida }
         }
 
         # --- 然后在root作用域下，根据【新的】命座等级触发对应的事件 ---
         if = {
-          limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
-          scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_nahida_events.4 } } }
+          limit = { scope:existing_char ?= { var:gacha_constellation_lvl >= 6 } }
+          scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_nahida_events.4 } } }
         }
         else_if = {
-          limit = { scope:existing_char = { var:gacha_constellation_lvl = 4 } }
-          scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_nahida_events.12 } } }
+          limit = { scope:existing_char ?= { var:gacha_constellation_lvl = 4 } }
+          scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_nahida_events.12 } } }
         }
         else_if = {
-          limit = { scope:existing_char = { var:gacha_constellation_lvl = 2 } }
-          scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_nahida_events.11 } } }
+          limit = { scope:existing_char ?= { var:gacha_constellation_lvl = 2 } }
+          scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_nahida_events.11 } } }
         }
         else = {
-          scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_nahida_events.2 } } }
+          scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_nahida_events.2 } } }
         }
       }
 
@@ -54,11 +54,11 @@
     }
     else = {
       # 归属权冲突：是别人的角色，但仍保存 Scope 供展示使用
-      scope:existing_char = { save_scope_as = gacha_last_pulled_char }
+      scope:existing_char ?= { save_scope_as = gacha_last_pulled_char }
       # 归属权冲突：是别人的角色
       # 检查是否满命，如果满命给予星辉
       if = {
-        limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+        limit = { scope:existing_char ?= { var:gacha_constellation_lvl >= 6 } }
         # 满命溢出：给予1星辉 (明确在root作用域)
         root = {
           change_variable = { name = gacha_starlight add = 1 }

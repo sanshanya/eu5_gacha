@@ -112,17 +112,17 @@ gacha_calc_entropy_sv = {
     value = 937
 
     add = {
-        value = gacha_total_rolls_count
+        value = var:gacha_total_rolls_count
         multiply = 17
     }
 
     add = {
-        value = gacha_pity_5star_count
+        value = var:gacha_pity_5star_count
         multiply = 13
     }
 
     add = {
-        value = gacha_entropy_gold_amt
+        value = var:gacha_entropy_gold_amt
         abs = yes
     }
 
@@ -140,7 +140,7 @@ gacha_calc_5star_prob_sv = {
     if = {
         limit = { gacha_pity_5star_count >= 73 }
         add = {
-            value = gacha_pity_5star_count
+            value = var:gacha_pity_5star_count
             subtract = 73
             multiply = 600
         }
@@ -164,7 +164,7 @@ gacha_calc_4star_prob_sv = {
     if = {
         limit = { gacha_pity_4star_count >= 8 }
         add = {
-            value = gacha_pity_4star_count
+            value = var:gacha_pity_4star_count
             subtract = 8
             multiply = 5000
         }
@@ -182,7 +182,7 @@ gacha_calc_4star_prob_sv = {
 # 4. 十连块索引 (0-9)
 # ===================================================
 gacha_calc_block_idx_sv = {
-    value = gacha_total_rolls_count
+    value = var:gacha_total_rolls_count
     modulo = 10
 }
 
@@ -194,7 +194,7 @@ gacha_calc_entropy2_sv = {
     value = gacha_calc_entropy_sv
     multiply = 31
     add = {
-        value = gacha_total_rolls_count
+        value = var:gacha_total_rolls_count
         multiply = 13
     }
     modulo = 10000
@@ -214,7 +214,7 @@ gacha_pool_size_standard_5_sv = { value = 8 }
 
 # 索引计算: (歪次数 * 17) % 池子大小
 gacha_calc_standard_5_idx_sv = {
-    value = gacha_std5_result_count
+    value = var:gacha_std5_result_count
     multiply = 17
     modulo = gacha_pool_size_standard_5_sv
 }
@@ -224,7 +224,7 @@ gacha_pool_size_4star_sv = { value = 4 }
 
 # 索引计算
 gacha_calc_4star_idx_sv = {
-    value = gacha_4star_result_count
+    value = var:gacha_4star_result_count
     multiply = 17
     modulo = gacha_pool_size_4star_sv
 }

@@ -1,4 +1,5 @@
 ﻿gacha_apply_constellation_stats_effect = {
+    if = { limit = { NOT = { has_variable = gacha_total_rolls_count } }  set_variable = { name = gacha_total_rolls_count value = 0 } }
     # 1. 清理旧修正
     remove_character_modifier = gacha_$who$_c0_modifier
     remove_character_modifier = gacha_$who$_c1_modifier

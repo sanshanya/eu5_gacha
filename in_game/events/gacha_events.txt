@@ -15,7 +15,7 @@ gacha_events.1 = {
     desc = {
         first_valid = {
             triggered_desc = {
-                trigger = { gacha_is_guaranteed_bool = 1 }
+                trigger = { var:gacha_is_guaranteed_bool = 1 }
                 desc = gacha_events.1.desc_guaranteed
             }
             triggered_desc = {
@@ -101,7 +101,7 @@ gacha_events.1 = {
         
         # 前置条件：至少有3个星辉
         trigger = {
-            gacha_starlight >= 3
+            var:gacha_starlight >= 3
         }
         
         hidden_effect = {
