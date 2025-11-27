@@ -8,13 +8,13 @@
             save_scope_as = existing_char
         }
         if = {
-            limit = { scope:existing_char ?= { employer = root } }
+            limit = { scope:existing_char = { employer = root } }
             # 将当前角色保存为最近抽到的角色，供 V3 UI 使用
-            scope:existing_char ?= { save_scope_as = gacha_last_pulled_char }
+            scope:existing_char = { save_scope_as = gacha_last_pulled_char }
             # Owns char -> Upgrade / 溢出
             if = {
-                limit = { scope:existing_char ?= { gacha_constellation_lvl >= 6 } }
-                scope:existing_char ?= {
+                limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+                scope:existing_char = {
                     root = {
                         change_variable = { name = gacha_starlight add = 1 }
                         trigger_event_non_silently = { id = gacha_events.30 }
@@ -22,7 +22,7 @@
                 }
             }
             else = {
-                scope:existing_char ?= {
+                scope:existing_char = {
                     change_variable = { name = gacha_constellation_lvl add = 1 }
                     gacha_apply_constellation_stats_effect = { who = xinhai }
                     gacha_xinhai_apply_country_modifiers = yes
@@ -36,37 +36,37 @@
                     remove_trait = trait:gacha_xinhai_c6_trait
 
                     if = {
-                        limit = { gacha_constellation_lvl >= 6 }
+                        limit = { var:gacha_constellation_lvl >= 6 }
                         add_trait = trait:gacha_xinhai_c2_trait
                         add_trait = trait:gacha_xinhai_c4_trait
                         add_trait = trait:gacha_xinhai_c6_trait
                     }
                     else_if = {
-                        limit = { gacha_constellation_lvl >= 5 }
+                        limit = { var:gacha_constellation_lvl >= 5 }
                         add_trait = trait:gacha_xinhai_c2_trait
                         add_trait = trait:gacha_xinhai_c4_trait
                         add_trait = trait:gacha_xinhai_transcended_trait
                     }
                     else_if = {
-                        limit = { gacha_constellation_lvl >= 4 }
+                        limit = { var:gacha_constellation_lvl >= 4 }
                         add_trait = trait:gacha_xinhai_c2_trait
                         add_trait = trait:gacha_xinhai_c4_trait
                         add_trait = trait:gacha_xinhai_transcended_trait
                     }
                     else_if = {
-                        limit = { gacha_constellation_lvl >= 3 }
+                        limit = { var:gacha_constellation_lvl >= 3 }
                         add_trait = trait:gacha_xinhai_c2_trait
                         add_trait = trait:gacha_xinhai_awakened_trait
                         add_trait = trait:gacha_xinhai_transcended_trait
                     }
                     else_if = {
-                        limit = { gacha_constellation_lvl >= 2 }
+                        limit = { var:gacha_constellation_lvl >= 2 }
                         add_trait = trait:gacha_xinhai_c2_trait
                         add_trait = trait:gacha_xinhai_awakened_trait
                         add_trait = trait:gacha_xinhai_transcended_trait
                     }
                     else_if = {
-                        limit = { gacha_constellation_lvl >= 1 }
+                        limit = { var:gacha_constellation_lvl >= 1 }
                         add_trait = trait:gacha_xinhai_origin_trait
                         add_trait = trait:gacha_xinhai_awakened_trait
                         add_trait = trait:gacha_xinhai_transcended_trait
@@ -74,41 +74,41 @@
                 }
                 # Trigger Event based on NEW level (V3 映射：C1/C2/C3/C4/C5/C6)
                 if = {
-                    limit = { scope:existing_char ?= { gacha_constellation_lvl >= 6 } }
-                    scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_xinhai_events.4 } } }
+                    limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_xinhai_events.4 } } }
                 }
                 else_if = {
-                    limit = { scope:existing_char ?= { gacha_constellation_lvl = 5 } }
-                    scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_xinhai_events.14 } } }
+                    limit = { scope:existing_char = { var:gacha_constellation_lvl = 5 } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_xinhai_events.14 } } }
                 }
                 else_if = {
-                    limit = { scope:existing_char ?= { gacha_constellation_lvl = 4 } }
-                    scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_xinhai_events.12 } } }
+                    limit = { scope:existing_char = { var:gacha_constellation_lvl = 4 } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_xinhai_events.12 } } }
                 }
                 else_if = {
                     # C3：好感事件入口，保存角色 Scope 并触发对话链
-                    limit = { scope:existing_char ?= { gacha_constellation_lvl = 3 } }
-                    scope:existing_char ?= {
+                    limit = { scope:existing_char = { var:gacha_constellation_lvl = 3 } }
+                    scope:existing_char = {
                         save_scope_as = gacha_c3_target_char
                         root = { trigger_event_non_silently = { id = gacha_xinhai_events.30 } }
                     }
                 }
                 else_if = {
-                    limit = { scope:existing_char ?= { gacha_constellation_lvl = 2 } }
-                    scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_xinhai_events.11 } } }
+                    limit = { scope:existing_char = { var:gacha_constellation_lvl = 2 } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_xinhai_events.11 } } }
                 }
                 else = {
                     # C1：专属机制事件
-                    scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_xinhai_events.13 } } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_xinhai_events.13 } } }
                 }
             }
             clear_saved_scope = existing_char
         }
         else = {
             # Not owner -> Refund，但仍保存 Scope 供展示使用
-            scope:existing_char ?= { save_scope_as = gacha_last_pulled_char }
+            scope:existing_char = { save_scope_as = gacha_last_pulled_char }
             if = {
-                limit = { scope:existing_char ?= { gacha_constellation_lvl >= 6 } }
+                limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
                 root = {
                     change_variable = { name = gacha_starlight add = 1 }
                     trigger_event_non_silently = { id = gacha_events.30 }
@@ -165,32 +165,32 @@ gacha_xinhai_apply_country_modifiers = {
         add_country_modifier = { modifier = gacha_xinhai_country_modifier years = -1 mode = add_and_extend }
     }
     if = {
-        limit = { gacha_constellation_lvl >= 1 }
+        limit = { var:gacha_constellation_lvl >= 1 }
         root = {
             add_country_modifier = { modifier = gacha_xinhai_c1_country_modifier years = -1 mode = add_and_extend }
         }
     }
     if = {
-        limit = { gacha_constellation_lvl >= 2 }
+        limit = { var:gacha_constellation_lvl >= 2 }
         root = {
             remove_country_modifier = gacha_xinhai_country_modifier
             add_country_modifier = { modifier = gacha_xinhai_c2_country_modifier years = -1 mode = add_and_extend }
         }
     }
     if = {
-        limit = { gacha_constellation_lvl >= 4 }
+        limit = { var:gacha_constellation_lvl >= 4 }
         root = {
             add_country_modifier = { modifier = gacha_xinhai_c4_country_modifier years = -1 mode = add_and_extend }
         }
     }
     if = {
-        limit = { gacha_constellation_lvl >= 5 }
+        limit = { var:gacha_constellation_lvl >= 5 }
         root = {
             add_country_modifier = { modifier = gacha_xinhai_c5_country_modifier years = -1 mode = add_and_extend }
         }
     }
     if = {
-        limit = { gacha_constellation_lvl >= 6 }
+        limit = { var:gacha_constellation_lvl >= 6 }
         root = {
             add_country_modifier = { modifier = gacha_xinhai_c6_country_modifier years = -1 mode = add_and_extend }
         }

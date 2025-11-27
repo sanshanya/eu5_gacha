@@ -1,6 +1,6 @@
 ﻿{
-	"name":	"eu5_gacha",
-	"id":	"eu5_gacha",
+	"name":	"gacha",
+	"id":	"gacha",
 	"version":	"0.2",
 	"supported_game_version":	"1.*.*",
 	"short_description":	"允许玩家右键统治者互动抽卡,抽取二次元角色",

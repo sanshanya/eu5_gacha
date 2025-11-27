@@ -8,13 +8,13 @@
             save_scope_as = existing_char
         }
         if = {
-            limit = { scope:existing_char ?= { employer = root } }
+            limit = { scope:existing_char = { employer = root } }
             # 将当前角色保存为最近抽到的角色，供 V3 UI 使用
-            scope:existing_char ?= { save_scope_as = gacha_last_pulled_char }
+            scope:existing_char = { save_scope_as = gacha_last_pulled_char }
             # Owns char -> Upgrade / 溢出
             if = {
-                limit = { scope:existing_char ?= { gacha_constellation_lvl >= 6 } }
-                scope:existing_char ?= {
+                limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+                scope:existing_char = {
                     root = {
                         change_variable = { name = gacha_starlight add = 1 }
                         trigger_event_non_silently = { id = gacha_events.30 }
@@ -22,34 +22,34 @@
                 }
             }
             else = {
-                scope:existing_char ?= {
+                scope:existing_char = {
                     change_variable = { name = gacha_constellation_lvl add = 1 }
                     gacha_apply_constellation_stats_effect = { who = keqing }
                 }
                 # Trigger Event based on NEW level
                 if = {
-                    limit = { scope:existing_char ?= { gacha_constellation_lvl >= 6 } }
-                    scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_keqing_events.4 } } }
+                    limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_keqing_events.4 } } }
                 }
                 else_if = {
-                    limit = { scope:existing_char ?= { gacha_constellation_lvl = 4 } }
-                    scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_keqing_events.12 } } }
+                    limit = { scope:existing_char = { var:gacha_constellation_lvl = 4 } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_keqing_events.12 } } }
                 }
                 else_if = {
-                    limit = { scope:existing_char ?= { gacha_constellation_lvl = 2 } }
-                    scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_keqing_events.11 } } }
+                    limit = { scope:existing_char = { var:gacha_constellation_lvl = 2 } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_keqing_events.11 } } }
                 }
                 else = {
-                    scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_keqing_events.2 } } }
+                    scope:existing_char = { root = { trigger_event_non_silently = { id = gacha_keqing_events.2 } } }
                 }
             }
             clear_saved_scope = existing_char
         }
         else = {
             # Not owner -> Refund，但仍保存 Scope 供展示使用
-            scope:existing_char ?= { save_scope_as = gacha_last_pulled_char }
+            scope:existing_char = { save_scope_as = gacha_last_pulled_char }
             if = {
-                limit = { scope:existing_char ?= { gacha_constellation_lvl >= 6 } }
+                limit = { scope:existing_char = { var:gacha_constellation_lvl >= 6 } }
                 root = {
                     change_variable = { name = gacha_starlight add = 1 }
                     trigger_event_non_silently = { id = gacha_events.30 }

@@ -115,15 +115,15 @@ gacha_xinhai_events.31 = {
     desc = {
         first_valid = {
             triggered_desc = {
-                trigger = { gacha_c3_path = 1 }
+                trigger = { var:gacha_c3_path = 1 }
                 desc = gacha_xinhai_c3_desc_path_a
             }
             triggered_desc = {
-                trigger = { gacha_c3_path = 2 }
+                trigger = { var:gacha_c3_path = 2 }
                 desc = gacha_xinhai_c3_desc_path_b
             }
             triggered_desc = {
-                trigger = { gacha_c3_path = 3 }
+                trigger = { var:gacha_c3_path = 3 }
                 desc = gacha_xinhai_c3_desc_path_c
             }
         }
