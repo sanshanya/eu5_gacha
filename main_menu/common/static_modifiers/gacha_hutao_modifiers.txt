@@ -1,40 +1,54 @@
-﻿# Generated Modifiers for hutao
+﻿# Generated Modifiers for hutao (V3) "解构严肃"
+
+# 角色标识：胡桃本体
 gacha_hutao_modifier = {
     game_data = { category = character decaying = no }
     gacha_core = yes
     gacha_fire_godeye = yes
 }
 
-gacha_hutao_c0_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 0
-}
-gacha_hutao_c1_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 1
-}
-gacha_hutao_c2_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 2
-}
-gacha_hutao_c3_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 3
-}
-gacha_hutao_c4_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 4
-}
-gacha_hutao_c5_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 5
-}
-gacha_hutao_c6_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 6
+# 命之座等级展示（0-6）
+gacha_hutao_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_hutao_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_hutao_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_hutao_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_hutao_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_hutao_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_hutao_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（稳定度花费-10%, 疾病抗性+20%）
+gacha_hutao_country_modifier = {
+    game_data = { category = country decaying = no }
+    stability_cost = -0.10
+    global_disease_resistance = 0.20
 }
 
+# C2 光环升级（稳定度花费-20%, 疾病抗性+40%, 人力恢复+10%）
+gacha_hutao_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    stability_cost = -0.20
+    global_disease_resistance = 0.40
+    global_manpower_modifier = 0.10
+}
+
+# C1 专属机制：顾问花费 -20%
+gacha_hutao_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    hire_advisor_cost_modifier = -0.20
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_hutao_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：传教力量 +2%
+gacha_hutao_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    building_missionary_effort_modifier = 0.02
+}
+
+# C6 国家级机制（稳定度花费-40%, 叛乱-2, 君主寿命+20%）
 gacha_hutao_c6_country_modifier = {
     game_data = { category = country decaying = no }
-    government_size = 1
 }

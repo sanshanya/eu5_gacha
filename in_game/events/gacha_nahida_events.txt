@@ -1,98 +1,179 @@
 ﻿namespace = gacha_nahida_events
 
-# ==========================================
-# 事件 1：初次见面 (First Meeting)
-# ==========================================
+# 1. 初见："被世界遗忘的备份"
 gacha_nahida_events.1 = {
     type = country_event
     title = gacha_nahida_events.1.title
-    desc  = gacha_nahida_events.1.desc
+    desc = gacha_nahida_events.1.desc
     
-
-    immediate = {
-        event_illustration_estate_effect = {
-            foreground = estate_type:nobles_estate
-            background = estate_type:nobles_estate
-        }
-    }
-
-    option = {
-        name = gacha_nahida_events.1.a
-        historical_option = yes
-    }
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate } }
+    option = { name = gacha_nahida_events.1.a historical_option = yes }
 }
 
-# ==========================================
-# 事件 2：通用命座提升 (Constellation Up)
-# ==========================================
+# 2. 提升
 gacha_nahida_events.2 = {
     type = country_event
     title = gacha_nahida_events.2.title
-    desc  = gacha_nahida_events.2.desc
+    desc = gacha_nahida_events.2.desc
     
-
-    immediate = {
-        event_illustration_estate_effect = {
-            foreground = estate_type:clergy_estate
-            background = estate_type:clergy_estate
-        }
-    }
-
-    option = {
-        name = gacha_nahida_events.2.a
-        add_prestige = 10
-    }
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate } }
+    option = { name = gacha_nahida_events.2.a add_adm_power = 10 }
 }
 
-# ==========================================
-# 事件 4：满命 (Max Constellation)
-# ==========================================
+# 4. 满命（C6）："未被篡改的历史"
 gacha_nahida_events.4 = {
     type = country_event
     title = gacha_nahida_events.4.title
-    desc  = gacha_nahida_events.4.desc
+    desc = gacha_nahida_events.4.desc
     
-
-    immediate = {
-        event_illustration_estate_effect = {
-            foreground = estate_type:nobles_estate
-            background = estate_type:nobles_estate
-        }
-    }
-
-    option = {
-        name = gacha_nahida_events.4.a
-        add_prestige = 50
-        add_legitimacy = 20
-    }
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate } }
+    option = { name = gacha_nahida_events.4.a add_adm_power = 100 }
 }
 
-# ==========================================
-# 事件 11：命之座·觉醒 (C2)
-# ==========================================
+# 11. C2："知识的根系"
 gacha_nahida_events.11 = {
     type = country_event
-    title = "gacha_nahida_events.11.title"
-    desc  = "gacha_nahida_events.11.desc"
-    
+    title = gacha_nahida_events.11.title
+    desc = gacha_nahida_events.11.desc
+    option = { name = gacha_nahida_events.11.a add_adm_power = 50 }
+}
 
+# 12. C4："因果的连结"
+gacha_nahida_events.12 = {
+    type = country_event
+    title = gacha_nahida_events.12.title
+    desc = gacha_nahida_events.12.desc
+    option = { name = gacha_nahida_events.12.a add_dip_power = 50 }
+}
+
+# 13. C1："多余的算力"
+gacha_nahida_events.13 = {
+    type = country_event
+    title = gacha_nahida_events.13.title
+    desc = gacha_nahida_events.13.desc
+    option = { name = gacha_nahida_events.13.a }
+}
+
+# 14. C5："虚空的扩容"
+gacha_nahida_events.14 = {
+    type = country_event
+    title = gacha_nahida_events.14.title
+    desc = gacha_nahida_events.14.desc
+    option = { name = gacha_nahida_events.14.a }
+}
+
+# ==============================================================================
+# C3 剧情链：被遗忘者的夜晚
+# ==============================================================================
+
+# 30. 第1幕：开场（图书馆夜话）
+gacha_nahida_events.30 = {
+    type = country_event
+    title = gacha_nahida_c3_title
+    desc = gacha_nahida_c3_scene_1_desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate } }
+    
+    # A. 理性的守护
     option = {
-        name = "gacha_nahida_events.11.a"
-        add_stability = 0.25
+        name = gacha_nahida_c3_scene_1_opt_a
+        set_variable = { name = gacha_nahida_c3_path value = 1 }
+        trigger_event_non_silently = { id = gacha_nahida_events.31 }
+    }
+    # B. 感性的劝慰
+    option = {
+        name = gacha_nahida_c3_scene_1_opt_b
+        set_variable = { name = gacha_nahida_c3_path value = 2 }
+        trigger_event_non_silently = { id = gacha_nahida_events.31 }
+    }
+    # C. 当小孩宠
+    option = {
+        name = gacha_nahida_c3_scene_1_opt_c
+        set_variable = { name = gacha_nahida_c3_path value = 3 }
+        trigger_event_non_silently = { id = gacha_nahida_events.32 }
     }
 }
 
-# ==========================================
-# 事件 12：命之座·超越 (C4)
-# ==========================================
-gacha_nahida_events.12 = {
+# 31. 路径 A/B 展开（深入对话）
+gacha_nahida_events.31 = {
     type = country_event
-    title = "gacha_nahida_events.12.title"
-    desc  = "gacha_nahida_events.12.desc"
+    title = gacha_nahida_c3_title
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { var:gacha_nahida_c3_path = 1 }
+                desc = gacha_nahida_c3_scene_2_desc_a
+            }
+            triggered_desc = {
+                trigger = { var:gacha_nahida_c3_path = 2 }
+                desc = gacha_nahida_c3_scene_2_desc_b
+            }
+        }
+    }
     
-
+    # A1. 帝王气概
     option = {
-        name = "gacha_nahida_events.12.a"
-        add_legitimacy = 5
+        name = gacha_nahida_c3_scene_2_opt_a1
+        set_variable = { name = gacha_nahida_c3_ending value = 1 }
+        trigger_event_non_silently = { id = gacha_nahida_events.33 }
+    }
+    # A2. 深情羁绊
+    option = {
+        name = gacha_nahida_c3_scene_2_opt_a2
+        set_variable = { name = gacha_nahida_c3_ending value = 2 }
+        trigger_event_non_silently = { id = gacha_nahida_events.33 }
+    }
+}
+
+# 32. 路径 C 结局（宠溺 - 无对话直接进结局）
+gacha_nahida_events.32 = {
+    type = country_event
+    title = gacha_nahida_c3_title
+    desc = gacha_nahida_c3_scene_2_desc_c
+    
+    option = {
+        name = gacha_nahida_c3_ending_opt
+        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 15 } }
+        trigger_event_non_silently = { id = gacha_nahida_events.34 }
+    }
+}
+
+# 33. 路径 A - 第3幕：收尾（高好感结局）
+gacha_nahida_events.33 = {
+    type = country_event
+    title = gacha_nahida_c3_title
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { var:gacha_nahida_c3_ending = 1 }
+                desc = gacha_nahida_c3_scene_3_desc_a1
+            }
+            triggered_desc = {
+                trigger = { var:gacha_nahida_c3_ending = 2 }
+                desc = gacha_nahida_c3_scene_3_desc_a2
+            }
+        }
+    }
+    
+    option = {
+        name = gacha_nahida_c3_scene_3_opt
+        trigger_event_non_silently = { id = gacha_nahida_events.34 }
+    }
+}
+
+# 34. 终幕：最初的贤者（高好感）
+gacha_nahida_events.34 = {
+    type = country_event
+    title = gacha_nahida_c3_title
+    desc = gacha_nahida_c3_ending_high
+    
+    option = {
+        name = gacha_nahida_c3_ending_opt_high
+        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+    }
+    
+    after = {
+        clear_saved_scope = gacha_c3_target_char
+        remove_variable = gacha_nahida_c3_path
+        remove_variable = gacha_nahida_c3_ending
     }
 }

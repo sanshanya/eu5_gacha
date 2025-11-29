@@ -40,7 +40,7 @@
 
   # === 祈愿主菜单 (.1) ===
   gacha_events.1.title: "祈愿：异世相遇"
-  gacha_events.1.desc_guaranteed: "当前祈愿已受祝福，下次获得的必定是当期角色！\\n投入资源，祈求命运的回应吧。"
+  gacha_events.1.desc_guaranteed: "当前祈愿已受祝福，下次获得的必定是当期角色！\n投入资源，祈求命运的回应吧。"
   gacha_events.1.desc_not_guaranteed: "投入资源，祈求命运的回应吧。"
   gacha_events.1.a: "奉纳金币 (祈愿)"
   gacha_events.1.a10: "盛大祈愿 (十连)"
@@ -52,43 +52,43 @@
 
   # === 结果：凡铁/蓝光 (.2) ===
   gacha_events.2.title: "祈愿结果：寂静星空"
-  gacha_events.2.desc: "群星缄默，星辉黯淡，似乎并无英灵回应今夜的呼唤，唯有祭坛上冷风掠过。\\n\\n除了徒劳的寂静，什么也没有留下。"
+  gacha_events.2.desc: "群星缄默，星辉黯淡，似乎并无英灵回应今夜的呼唤，唯有祭坛上冷风掠过。\n\n除了徒劳的寂静，什么也没有留下。"
   gacha_events.2.a: "记下此兆"
 
   # === 结果：四星奖励 (.20) ===
   gacha_events.20.title: "祈愿结果：星辰的馈赠"
   gacha_events.20.desc: "虽未有英杰降临，星海却没有辜负你的诚意。散落的星辉凝聚成实质的恩赐，充盈国家的府库。"
-  gacha_events.20.desc_gold: "星光汇成一袋闪亮的金币，或许可以再次诱引命运。\\n\\n获得：240 金币"
-  gacha_events.20.desc_prestige: "星辉化作一纸诏令，你的名讳传遍诸国。\\n\\n获得：8 威望"
-  gacha_events.20.desc_legitimacy: "星光在宫廷回响，巩固民众对王座的信任。\\n\\n获得：8 正统性"
-  gacha_events.20.desc_stability: "星光照耀田野，国土吐纳着安定的呼吸。\\n\\n获得：4 稳定度"
+  gacha_events.20.desc_gold: "星光汇成一袋闪亮的金币，或许可以再次诱引命运。\n\n获得：240 金币"
+  gacha_events.20.desc_prestige: "星辉化作一纸诏令，你的名讳传遍诸国。\n\n获得：8 威望"
+  gacha_events.20.desc_legitimacy: "星光在宫廷回响，巩固民众对王座的信任。\n\n获得：8 正统性"
+  gacha_events.20.desc_stability: "星光照耀田野，国土吐纳着安定的呼吸。\n\n获得：4 稳定度"
   gacha_events.20.a: "收下恩赐"
 
   # === 结果：小保底/歪了 (.3) ===
   gacha_events.3.title: "祈愿结果：小保底"
-  gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是来自稻妻的雷电将军。\\n\\n虽然失去了五五开的赌注，但获得常驻池五星角色也是不错的收获。下次祈愿将必定获得UP角色！"
+  gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是来自稻妻的雷电将军。\n\n虽然失去了五五开的赌注，但获得常驻池五星角色也是不错的收获。下次祈愿将必定获得UP角色！"
   gacha_events.3.a: "既来之，则安之"
 
   # === 结果：满命通用 (.4) ===
   gacha_events.4.title: "命星至臻"
-  gacha_events.4.desc: "这位异界英雄的能力已臻化境。\\n\\n$gacha_text_reward_prestige_overflow$"
+  gacha_events.4.desc: "这位异界英雄的能力已臻化境。\n\n$gacha_text_reward_prestige_overflow$"
   gacha_events.4.a: "物尽其用"
 
   # === 结果：金光演出 (.5) ===
   gacha_events.5.title: "金光乍现！"
-  gacha_events.5.desc: "天空中划过一道耀眼的金色流星，整个祭坛都被神圣的光芒笼罩……\\n\\n这股气息，非比寻常！"
+  gacha_events.5.desc: "天空中划过一道耀眼的金色流星，整个祭坛都被神圣的光芒笼罩……\n\n这股气息，非比寻常！"
   gacha_events.5.a: "揭示命运！"
 
   # === 其他结果 ===
   gacha_events.6.title: "意外之财"
-  gacha_events.6.desc: "虽然没有英灵回应，但你在祭坛角落发现了一些古代遗留的宝藏。\\n\\n获得：500 金币"
+  gacha_events.6.desc: "虽然没有英灵回应，但你在祭坛角落发现了一些古代遗留的宝藏。\n\n获得：500 金币"
   gacha_events.common.a: "收下恩赐"
 
   gacha_events.7.title: "名声大噪"
-  gacha_events.7.desc: "你的虔诚祈愿感动了围观的民众，你的声望得到了提升。\\n\\n获得：100 威望"
+  gacha_events.7.desc: "你的虔诚祈愿感动了围观的民众，你的声望得到了提升。\n\n获得：100 威望"
 
   gacha_events.8.title: "天命所归"
-  gacha_events.8.desc: "虽然没有召唤出异界之人，但这祥瑞之兆巩固了你的统治合法性。\\n\\n获得：20 正统性"
+  gacha_events.8.desc: "虽然没有召唤出异界之人，但这祥瑞之兆巩固了你的统治合法性。\n\n获得：20 正统性"
 
   # ============================================================
   # §Y 星辉兑换系统 (Starlight Exchange System) §!
@@ -100,12 +100,12 @@
 
   # === 星辉获得事件 ===
   gacha_events.30.title: "命星之辉"
-  gacha_events.30.desc: "这位英雄的力量已臻化境，无法再度提升。他们的命星化作一枚闪耀的星辉，期待着新的邂逅。\\n\\n你获得了 Y1 个星辉!！\\n当前星辉总数：!"
+  gacha_events.30.desc: "这位英雄的力量已臻化境，无法再度提升。他们的命星化作一枚闪耀的星辉，期待着新的邂逅。\n\n你获得了 Y1 个星辉!！\n当前星辉总数：!"
   gacha_events.30.a: "收下星辉"
 
   # === 星辉兑换事件 ===
   gacha_starlight_events.1.title: "星辉兑换"
-  gacha_starlight_events.1.desc: "凝聚三枚命星的祝福，你可以选择召唤任意一位五星英雄。\\n\\n当前星辉：!"
+  gacha_starlight_events.1.desc: "凝聚三枚命星的祝福，你可以选择召唤任意一位五星英雄。\n\n当前星辉：!"
   gacha_starlight_events.1.xinhai: "兑换：珊瑚宫心海(-3 星辉)"
   gacha_starlight_events.1.raiden: "兑换：雷电将军(-3 星辉)"
   gacha_starlight_events.1.keqing: "兑换：刻晴(-3 星辉)"
@@ -163,7 +163,7 @@
   desc_gacha_xinhai_c2_trait: "「听到了吗？那是圣土中涌动的潮音。我已将海祇的仪式融入了这片大地。瘟疫会被海水洗净，废墟会在潮汐中重生。只要这声音不停，各阶层的人心便不会干涸。请放心，这片土地正在呼吸。」"
 
   gacha_xinhai_c4_trait: "渊下宫·抗狩龙王"
-  desc_gacha_xinhai_c4_trait: "「我又梦见渊下宫的灯火了……映在水面上，像长出了鳞片。你的舰队在海上排开阵型的时候，我突然就知道该怎么做了。兵法之道，在于庙算于未雨绸缪之际……只是，我有点累了。」\\n\\n「我梦见过深海龙蜥的狩猎……那种在黑暗中潜游的压迫感。现在，我将这种战术赋予您的舰队。它们将如幽灵般迅捷，如礁石般坚固。在这片大海上，没有风浪能损耗您的意志——因为舵盘，在我手中。」"
+  desc_gacha_xinhai_c4_trait: "「我又梦见渊下宫的灯火了……映在水面上，像长出了鳞片。你的舰队在海上排开阵型的时候，我突然就知道该怎么做了。兵法之道，在于庙算于未雨绸缪之际……只是，我有点累了。」\n\n「我梦见过深海龙蜥的狩猎……那种在黑暗中潜游的压迫感。现在，我将这种战术赋予您的舰队。它们将如幽灵般迅捷，如礁石般坚固。在这片大海上，没有风浪能损耗您的意志——因为舵盘，在我手中。」"
 
   gacha_xinhai_c6_trait: "奥罗巴斯·现人神"
   desc_gacha_xinhai_c6_trait: "「曾经，我视『现人神巫女』之位为一种不得不背负的责任。但如今……看着您的背影，我明白了『统治』的真意。不必担忧叛乱与疲惫，我会像奥罗巴斯守护海祇岛一样，用绝对的纪律与温柔，为您守住这万世太平。」"
@@ -179,6 +179,8 @@
   STATIC_MODIFIER_DESC_gacha_xinhai_c2_country_modifier: "海祇的恩泽修复灾厄，抚平阶层情绪。"
   STATIC_MODIFIER_NAME_gacha_xinhai_c4_country_modifier: "海祇姬君·舰阵"
   STATIC_MODIFIER_DESC_gacha_xinhai_c4_country_modifier: "海祇姬君庇护舰队，提升士气、航速与修理效率。"
+  STATIC_MODIFIER_NAME_gacha_xinhai_secret_pact_modifier: "秘密盟约"
+  STATIC_MODIFIER_DESC_gacha_xinhai_secret_pact_modifier: "与现人神巫女达成的秘密协定。在繁重的政务之余，你们拥有共同的避风港。"
 
   # === 命之座 (Constellations) ===
   STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier: "眠龙座·零命"
@@ -193,44 +195,80 @@
 
   # === 事件 (Events) ===
   gacha_xinhai_events.1.title: "现人神巫女·珊瑚宫心海 — 临时战略顾问"
-  gacha_xinhai_events.1.desc: "「我是珊瑚宫心海。虽然早有预感，但被直接召唤到这里还是意外。\\n\\n刚才看了您的疆域图。补给线比海祇岛复杂百倍，列强外交盘根错节。这些行政文书堆成山，我的能量快耗尽了。\\n\\n您用了召唤仪式，想必是遇到了死局。作为军师，我无法对混乱战局坐视不理。我会试着推演局势。\\n\\n但请记住，胜局已定后，务必准许我回房间休息。一定要准许。」"
+  gacha_xinhai_events.1.desc: "「我是珊瑚宫心海。虽然早有预感，但被直接召唤到这里还是意外。\n\n刚才看了您的疆域图。补给线比海祇岛复杂百倍，列强外交盘根错节。这些行政文书堆成山，我的能量快耗尽了。\n\n您用了召唤仪式，想必是遇到了死局。作为军师，我无法对混乱战局坐视不理。我会试着推演局势。\n\n但请记住，胜局已定后，务必准许我回房间休息。」"
   gacha_xinhai_events.1.a: "恭迎军师入朝。"
 
   gacha_xinhai_events.2.title: "锦囊妙计"
-  gacha_xinhai_events.2.desc: "随着祈愿之力的加深，珊瑚宫心海感到了一股熟悉的力量回归。\\n\\n她对兵法的理解愈发精进，仿佛已洞察未来战场的每一处变数。\\n\\n$gacha_text_reward_prestige_small$"
+  gacha_xinhai_events.2.desc: "随着祈愿之力的加深，珊瑚宫心海感到了一股熟悉的力量回归。\n\n她对兵法的理解愈发精进，仿佛已洞察未来战场的每一处变数。\n\n$gacha_text_reward_prestige_small$"
   gacha_xinhai_events.2.a: "深谋远虑，决胜千里。"
 
-  gacha_xinhai_events.4.title: "海染之龙"
-  gacha_xinhai_events.4.desc: "珊瑚宫心海的力量已臻化境。她周身环绕着如同深海般深邃的气息，仿佛古老的水龙王再次降临。\\n\\n「如今的我，已可应对任何风浪。无论是深海的巨兽，亦或是陆上的强敌，皆无法阻挡海祇岛的意志。」\\n\\n她的存在本身，便是三军士气的绝对保障。\\n\\n$gacha_text_reward_prestige_medium$\\n$gacha_text_reward_legitimacy_medium$"
+  gacha_xinhai_events.4.title: "奥罗替身一心"
+  gacha_xinhai_events.4.desc: "「我是珊瑚宫心海。\n\n以前在海祇岛，我总躲在渊下宫推演兵书。只要算尽变数，就能保护大家，维持和平假象。\n\n那天你把我召唤来，面对这个比稻妻庞大百倍的帝国，我其实害怕。害怕庙算出错，害怕陌生目光，害怕辜负期待。\n\n但你从未催促，也从未怀疑。你陪我在深夜的地图桌前看月亮，为我在内阁加了一把椅子。\n\n不知从何时起，我不再想着『打完这一仗就回去睡觉』了。\n\n我看遍这片大陆的日出日落，你的舰队学会像海祇岛鱼群那样呼吸，你的疆土上开满不再枯萎的花。\n\n……谢谢你。谢谢你陪我走这么远。\n\n能不能……再多陪我散散步？以前，大海总能给我带来不同的心境。\n\n而现在……\n**看着你的背影，我就像看到了大海。因为这片海，已经在你的国土里，也在我的心里了。**」\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
   gacha_xinhai_events.4.a: "此乃天助我也！"
 
-  gacha_xinhai_events.11.title: "命之座·觉醒"
-  gacha_xinhai_events.11.desc: "随着命星再度闪耀，心海感到体内的力量涌现出了新的形态。她领悟了「海月之誓」，能够更好地守护您的子民，祛除灾厄。\\n\\n「感觉就像卸下了某种枷锁……现在，我可以更有效地将海祇岛的恩泽播撒到您的国度了。」\\n\\n$gacha_text_reward_stability_small$"
+  gacha_xinhai_events.11.title: "圣土潮音初现"
+  gacha_xinhai_events.11.desc: "「你的土地开始白化了……这比圣土还严重。我以前在海祇岛也见过那样的景象。大海总能给我带来不同的心境，可现在……我得再想想办法，不能让这里也变成沙漠。」\n\n$gacha_text_reward_stability_small$"
   gacha_xinhai_events.11.a: "她的忠诚弥足珍贵。"
 
-  gacha_xinhai_events.12.title: "命之座·超越"
-  gacha_xinhai_events.12.desc: "更深层次的力量被解放了。心海的血脉中似乎蕴含着驾驭海洋的古老权能，她现在能够以「海祇姬君」之名，为您祝福整支舰队。\\n\\n「只要是为了胜利……无论是怎样的力量，我都会为您运用。请下令吧，我的大人。」\\n\\n$gacha_text_reward_legitimacy_small$"
+  gacha_xinhai_events.12.title: "渊下龙王觉醒"
+  gacha_xinhai_events.12.desc: "「我又梦见渊下宫的灯火了……映在水面上，像长出了鳞片。你的舰队在海上排开阵型的时候，我突然就知道该怎么做了。兵法之道，在于庙算于未雨绸缪之际……只是，我有点累了。」\n\n$gacha_text_reward_legitimacy_small$"
   gacha_xinhai_events.12.a: "大海将是我们最锋利的武器！"
 
   gacha_xinhai_events.13.title: "意外多出的位置"
-  gacha_xinhai_events.13.desc: "内阁的图表上，多出了一格空白。\\n\\n「没想到……我的推演让你的内阁多出了一个位置。谢谢你陪我散步这么久，既宝贵又难得的时间。望泷村的晚风吹过来的时候，我总觉得……多一个人商量，战争或许能少死一些人。」"
+  gacha_xinhai_events.13.desc: "「没想到……我的推演让你的内阁多出了一个位置。谢谢你陪我散步这么久，既宝贵又难得的时间。望泷村的晚风吹过来的时候，我总觉得……多一个人商量，战争或许能少死一些人。」"
   gacha_xinhai_events.13.a: "那就多一把椅子吧。"
 
   gacha_xinhai_events.14.title: "意外多出的国策位"
-  gacha_xinhai_events.14.desc: "在你尚未下令之前，政务官已经为你准备好了另一份国策草案。\\n\\n「没想到国策多出了一个位置……我不太擅长应付这么多目光。我明明说过我只是军师而已……不过，弱者要团结，才能反抗。既然来了，我就再陪你走一段吧。」"
+  gacha_xinhai_events.14.desc: "「没想到国策多出了一个位置……我不太擅长应付这么多目光。我明明说过我只是军师而已……不过，弱者要团结，才能反抗。既然来了，我就再陪你走一段吧。」"
   gacha_xinhai_events.14.a: "那就再多想一层吧。"
 
   # === C3 好感事件 (V3) ===
-  gacha_xinhai_c3_title: "月光下的闲聊"
-  gacha_xinhai_c3_desc_intro: "忙完政务的夜晚，你与珊瑚宫心海一同站在露台上。月光铺洒在地图与兵书上，也落在她认真却略带疲惫的侧脸。\\n\\n她抱着兵书，有些局促地与您并肩坐下，目光却总飘向远方的夜空。"
-  gacha_xinhai_c3_desc_path_a: "你提起她的故乡，心海的眼神在月色中渐渐亮起来，她轻声讲起望泷村的珊瑚灯、海风与浪花。当她描绘那些被潮水照亮的夜晚时，你仿佛也能听见远方海面的低语。"
-  gacha_xinhai_c3_desc_path_b: "你什么也不问，只是把披风披在她的肩上，安静地与她一起看月亮。心海的肩膀慢慢放松下来，她低声道谢，又像是在对自己呢喃：原来，在异乡的王座旁，也能找到和海祇岛一样安心的夜晚。"
-  gacha_xinhai_c3_desc_path_c: "你注意到她抱着兵书的手有些发酸，便轻声提议休息。心海先是愣了一下，随即小声承认自己确实有些累了。\\n\\n「有点……我不太擅长和人相处，但兵法之道，在于庙算于未雨绸缪之际。今晚不推演了，就看看月亮吧。」\\n\\n你们把复杂的战局先放到一边，只是在露台上并肩而坐，听风吹过旗帜与树梢。她偶尔会抬头看你一眼，又赶紧移开视线，把脸埋进书本后面。"
-  gacha_xinhai_c3_option_a1: "「看你看得出神……是想起了故乡的月色吗？」"
-  gacha_xinhai_c3_option_b1: "「今晚难得安静，一起坐坐？」"
-  gacha_xinhai_c3_option_c1: "「兵书看得累了？休息会儿。」"
-  gacha_xinhai_c3_option_good: "「听你说故乡，我都想去看看了。」"
-  gacha_xinhai_c3_option_neutral: "「下次再陪你看月亮。」"
+  gacha_xinhai_c3_title: "月光下的战术撤退"
+  
+  # Scene 1
+  gacha_xinhai_c3_scene_1_desc: "案牍上的烛火跳动了一下,最终熄灭在干涸的蜡油中。\n关于赋税调整与边境补给的争论,终于随着墨迹的凝固而暂时平息。你揉了揉发胀的太阳穴,推开通往露台的沉重门扉。\n夜风夹杂着露水的凉意扑面而来。但这庞大帝国的中心,即便在深夜也难以让人彻底放松。风穿过高墙与回廊的呼啸声,听起来就像无数份待批公文的低语。\n你需要片刻的逃离。"
+  gacha_xinhai_c3_scene_1_opt_a: "走上露台"
+  gacha_xinhai_c3_scene_1_opt_b: "跳过剧情"
+
+  # Scene 2
+  gacha_xinhai_c3_scene_2_desc: "平日里无人的角落,今夜却被占据了。\n是珊瑚宫心海。\n她完全没有察觉到你的到来。这位在白天运筹帷幄、以兵法统御万军的「现人神巫女」,此刻正软绵绵地趴在冰凉的栏杆上,像退潮后被遗留在岸边的贝壳。\n她的一只手无意识地在半空中轻轻划动,指尖在月光下拖出一道舒缓的弧线,仿佛在描绘鱼群游过深海的轨迹。\n那是她在战略地图前绝不会展露出的姿态——没有防备,甚至……有一丝茫然。"
+  gacha_xinhai_c3_scene_2_opt_a: "放轻脚步"
+
+  # Scene 3
+  gacha_xinhai_c3_scene_3_desc: "尽管你已经刻意控制了步伐,但靴底碾碎落叶的脆响还是在寂静中格外刺耳。\n心海的肩膀猛地一颤,整个人像受惊的游鱼一般迅速转身,背部紧紧抵住身后的石栏。\n那一瞬间,她眼中的迷离与松弛如潮水般退去,取而代之的是一种近乎本能的、职业性的清醒——如果忽略她嘴角那一点点不仔细看就无法发现的、疑似点心碎屑的白色粉末的话。\n\n心海：「……陛下?这、这么晚了……您是在巡视中枢的防务吗?」\n\n她的声音虽然紧绷,却努力维持着平稳,眼神快速扫过你身后的回廊,确认没有其他随从。\n\n心海：「关于卫戍部队的夜间轮换表,我已经……已经在脑海中复核过一遍了。并无疏漏。」"
+  gacha_xinhai_c3_scene_3_opt_a: "停下脚步"
+
+  # Scene 4
+  gacha_xinhai_c3_scene_4_desc: "她正拼命调动着作为军师的全部理智,试图为你刚才可能听到的任何动静编织一个合乎逻辑的战术解释。\n看着她那副如临大敌的模样,以及那些为了维护「现人神巫女」形象而竖起的、并不牢固的防线,你决定："
+  gacha_xinhai_c3_scene_4_opt_a: "温和配合：「不用紧张,我也只是出来透透气。」"
+  gacha_xinhai_c3_scene_4_opt_b: "幽默拆穿：「防务的事明天再说,你嘴角的点心屑还没擦干净。」"
+
+  # Scene 5
+  gacha_xinhai_c3_scene_5_desc_a: "听到这句毫无责备之意的话,她怔了一下,紧绷的脊背终于一点点软化下来,发出一声微不可闻的叹息。那种凛冽的「军师气场」消散了,变回了原本那个有些安静的少女。"
+  gacha_xinhai_c3_scene_5_desc_b: "她愣了半秒,随即慌乱地背过身去用力擦拭嘴角。再转回来时,脸颊上带着掩饰不住的红晕,最后无奈地苦笑了一下,眼神里反而少了几分拘谨。"
+  gacha_xinhai_c3_scene_5_desc_common: "\n心海：「……让您见笑了。其实,我也并非有意要在这种时候……休息。」\n她有些局促地将碎发挽至耳后,声音低了下去。\n心海：「只是这个世界的运转逻辑……远比海祇岛要庞杂。疆域的广度、信仰的冲突、永远处于赤字边缘的行政资源……」"
+  gacha_xinhai_c3_scene_5_opt_a: "静静倾听"
+
+  # Scene 6
+  gacha_xinhai_c3_scene_6_desc: "心海：「想要维持那个算无遗策的『完美军师』形象,比我想象中更加消耗『能量』。」\n她伸出手,掌心向上,似乎想接住月光,却又什么都抓不住。\n心海：「在故乡,当能量耗尽的时候,我会潜入深海,或者找个没人的溶洞躲起来。海水的压强与封闭的空间,会让我感到安全。」\n心海：「但这庞大的宫廷……虽然宏伟,却四处通透。到处都是眼睛,到处都是窃窃私语。这里很大,却好像……没有一个能让我安静『充电』的死角。」"
+  gacha_xinhai_c3_scene_6_opt_a: "走近她身边"
+
+  # Scene 7
+  gacha_xinhai_c3_scene_7_desc: "夜风吹动她衣摆的轻微声响,在这一刻显得格外清晰。\n看着她略显单薄的背影,你意识到,这位在她的世界里背负着神明职责的少女,此刻需要的不仅仅是休息,而是一种「被允许软弱」的特权。\n在这个充满权谋与视线的陌生宫廷里,你想给她什么?"
+  gacha_xinhai_c3_scene_7_opt_a: "给予承诺：「以后累了就来这里吧。我会下令,这个露台是『最高机密』区域。」"
+  gacha_xinhai_c3_scene_7_opt_b: "分享秘密：「其实我也经常想逃跑。下次想躲起来的时候,带上我一起?」"
+
+  # Scene 8
+  gacha_xinhai_c3_scene_8_desc: "听到你的话,她怔了一下,眼中那一丝最后的防备如同冰雪消融。\n心海：「……这算是什么奇怪的君主敕令呀?」\n虽然嘴上这么说,但她的语气轻快了许多。\n心海：「不过……无论是被列为机密的角落,还是多了一位逃跑的搭档……听起来都不坏。」\n她闭上眼,深吸了一口夜晚清冽的空气,仿佛重新活了过来。\n心海：「真是不可思议。明明只是说了几句话,之前枯竭的能量值……好像已经恢复了 30% 呢。」"
+  gacha_xinhai_c3_scene_8_opt_a: "微笑着看着她"
+
+  # Scene 9
+  gacha_xinhai_c3_scene_9_desc_a: "心海：「谢谢您的温柔,陛下。在这个陌生的世界里,能拥有一个可以稍微喘息、不用时刻紧绷神经的角落,对我来说意义非凡。」\n她重新整理好衣饰,眼神变得清澈而坚定。\n心海：「那么,为了报答这份恩情,关于明天的战略会议,我会拿出更完美的方案——绝不会让您失望。」\n她转身离去,步伐轻快而从容。\n你知道,这只漂泊的游鱼,终于在这个庞大的帝国里找到了属于她的「锚点」。"
+  gacha_xinhai_c3_scene_9_desc_b: "心海：「那我们就说定了?这可是只属于我们两个人的……战术性撤退。」\n她压低了声音,仿佛在策划一场精密的伏击。\n心海：「下次如果您也对冗长的早朝感到厌倦,记得给我信号。身为军师,我会为您制定最完美的『失踪计划』——保证没人能找到我们。」\n她轻笑着离开了露台,像是一条灵活的鱼溶入夜色。\n在这个严肃铁血、充满规矩的帝国机器里,你多了一个可以共享秘密的「共犯」。"
+  gacha_xinhai_c3_scene_9_opt_a: "晚安,心海"
+  gacha_xinhai_c3_scene_9_opt_b: "一言为定"
+
+
 
 
   # ============================================================
@@ -242,14 +280,24 @@
   gacha_last_name_raiden: "雷电"
 
   # === 特质 (Traits) ===
-  gacha_raiden_origin_trait: "御建鸣神主尊"
-  desc_gacha_raiden_origin_trait: "稻妻幕府的最高主宰，以无上的威权许诺臣民「永恒」的殊胜之身。在她的注视下，国家机器如精密钟表般运转，动荡则被雷霆燃尽。\\n\\n「此身即是尘世最为殊胜尊贵之身，应持天下之大权。」"
+  gacha_raiden_origin_trait: "鸣神岛·永恒静土"
+  desc_gacha_raiden_origin_trait: "「所谓的『叛乱』，不过是杂音。只要威光足够耀眼，影子便无处遁形。我会让你的国家像静止的水面一样平稳。安静，是永恒的前提。」"
 
-  gacha_raiden_awakened_trait: "梦想一心"
-  desc_gacha_raiden_awakened_trait: "斩断杂念，只为永恒。那无想的一刀，终将为这个国度带来长久的安宁。\\n\\n效果：\\n行政效率：+5%\\n全局叛乱：-2.00"
+  gacha_raiden_awakened_trait: "无想之一刀"
+  desc_gacha_raiden_awakened_trait: "「这一刀，曾斩杀魔神，如今用来为你开疆拓土，倒也不算辱没。无需战术，无需诡计，只要我的雷光亮起，敌阵便已是灰烬。」"
 
-  gacha_raiden_transcended_trait: "殊胜尊荣"
-  desc_gacha_raiden_transcended_trait: "威光无赦。在雷霆的威光之下，一切阻碍都将化为灰烬。\\n\\n效果：\\n冲击伤害：+15%\\n受到的火力伤害：-10%\\n移动速度：+15%"
+  gacha_raiden_transcended_trait: "天下人之大权"
+  desc_gacha_raiden_transcended_trait: "「权柄不容分割，意志不容违逆。既然让我坐在这个位置，我就不会允许任何『议会』或『阶层』的聒噪。此身即是绝对，此身即是法度。」"
+
+  # 命座进阶 Traits
+  gacha_raiden_c2_trait: "祸津·稻光"
+  desc_gacha_raiden_c2_trait: "「那些被征服的土地还在怀念旧主？可笑。我会用稻光斩断他们对过去的『妄念』。从今往后，他们的历史只有『现在』，他们的未来只有『你』。」"
+
+  gacha_raiden_c4_trait: "梦想·真说"
+  desc_gacha_raiden_c4_trait: "「看着战士们冲锋的样子……我想起了曾经的笹百合与千代。……不，将军不会感伤。我将赐予全军『梦想一心』的加护。只要他们向我献上忠诚，我便许诺他们——必胜。」"
+
+  gacha_raiden_c6_trait: "源流·许愿星"
+  desc_gacha_raiden_c6_trait: "「曾经，我认为『永恒』是凝滞的时间。但看着你一步步建立起这个庞大的帝国，我似乎……看到了另一种可能性。既然凡人的愿望如此耀眼，那我就试着——去注视那个由你开创的未来吧。」"
 
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_raiden_modifier: "鸣神的加护"
@@ -259,35 +307,73 @@
 
   # === 命之座 (Constellations) ===
   STATIC_MODIFIER_NAME_gacha_raiden_c0_modifier: "恶曜影向·零命"
-  STATIC_MODIFIER_NAME_gacha_raiden_c1_modifier: "恶曜卜词"
-  STATIC_MODIFIER_NAME_gacha_raiden_c2_modifier: "斩铁断金"
-  STATIC_MODIFIER_NAME_gacha_raiden_c3_modifier: "真影旧事"
-  STATIC_MODIFIER_NAME_gacha_raiden_c4_modifier: "誓奉常道"
-  STATIC_MODIFIER_NAME_gacha_raiden_c5_modifier: "凶将之降临"
-  STATIC_MODIFIER_NAME_gacha_raiden_c6_modifier: "负愿前行"
-  STATIC_MODIFIER_NAME_gacha_raiden_c6_country_modifier: "梦想一心之界"
-  STATIC_MODIFIER_DESC_gacha_raiden_c6_country_modifier: "以「永恒」之名整饬朝纲，扩增议席与内阁效率，让将军的意志直抵国政每一隅。"
+  STATIC_MODIFIER_NAME_gacha_raiden_c1_modifier: "恶曜之眼"
+  STATIC_MODIFIER_NAME_gacha_raiden_c2_modifier: "祸津稻光"
+  STATIC_MODIFIER_NAME_gacha_raiden_c3_modifier: "浮世的泡影"
+  STATIC_MODIFIER_NAME_gacha_raiden_c4_modifier: "梦想真说"
+  STATIC_MODIFIER_NAME_gacha_raiden_c5_modifier: "统御威权"
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_modifier: "源流许愿"
 
   # === 事件 (Events) ===
-  gacha_raiden_events.1.title: "鸣神以此身许诺"
-  gacha_raiden_events.1.desc: "苍穹被紫雷撕裂，空气中弥漫着令人战栗的静电。一位威严的女性降临王座侧旁，手持薙刀，眼神如深渊般冷冽。\\n\\n「吾乃雷电将军。既然你通过了试炼，吾便许你一诺：此身将化为你的利刃，为你斩断通往『永恒』路上的一切阻碍。」\\n\\n那是凌驾凡俗王权之上的威压，令人不禁俯首。"
+  gacha_raiden_events.1.title: "御建鸣神主尊·雷电将军 —— 降临此世的『永恒』"
+  gacha_raiden_events.1.desc: "「我是雷电将军。\n\n既然你唤醒了我的意识，想必是已做好了背负『永恒』的觉悟。\n\n……不用紧张。我已审视过这片疆域。\n\n战乱频仍，法度松弛，人心的浮动如杂乱的雷鸣。\n\n不过，虽然混乱，却有着某种……令人怀念的坚韧。\n\n既然我已降临，此地便不可再有无谓的牺牲。\n\n我会将『稻妻』的法度带到这里。\n\n如果你跟不上我的步伐，或者被『磨损』所吞没……\n\n我会毫不犹豫地斩下那一刀。\n\n——别让我失望。」"
   gacha_raiden_events.1.a: "为了永恒！"
 
   gacha_raiden_events.2.title: "雷光闪烁"
-  gacha_raiden_events.2.desc: "雷电将军的力量似乎增强了。她手中的刀锋更加锐利，周身的雷光也更加耀眼。\\n\\n「无念，无想。」\\n\\n$gacha_text_reward_prestige_small$"
+  gacha_raiden_events.2.desc: "雷电将军的力量似乎增强了。她手中的刀锋更加锐利，周身的雷光也更加耀眼。\n\n「无念，无想。」"
   gacha_raiden_events.2.a: "威光无赦。"
 
-  gacha_raiden_events.4.title: "永恒之梦"
-  gacha_raiden_events.4.desc: "将军已臻至化境，不再只是统治者，而是「永恒」本身的形象。\\n\\n「此刻的我，可斩尽迷惘与业障。过去与未来的篇章，皆由我亲手铸就。」\\n\\n在雷光庇护下，你的意志即是国家意志，无人敢违。\\n\\n$gacha_text_reward_prestige_medium$\\n$gacha_text_reward_legitimacy_medium$"
-  gacha_raiden_events.4.a: "此即，永恒！"
+  gacha_raiden_events.4.title: "伴君长行"
+  gacha_raiden_events.4.desc: "「我是雷电影。\n\n漫长的岁月里，我将自己封闭在『一心净土』中，任由『将军』执行着永恒的指令。\n\n我见过太多的失去，所以我想留住时间；\n\n我见过太多的磨损，所以我想冻结愿望。\n\n刚来到这里时，我以为这又是一个注定会走向毁灭的凡人国度。\n\n我准备好了斩断一切变数，正如我在稻妻所做的那样。\n\n但是……你不同。\n\n你在战火中守护了弱者，你在权谋中保留了真心。\n\n你让我看到，即使是如朝露般短暂的凡人，也能迸发出比恒星更耀眼的光芒。\n\n『将军』依然会是你的利刃，为你斩碎一切敌人。\n\n而我……\n\n我会收起雷霆，为你煮一壶茶。\n\n不用担心磨损，也不用担心终结。\n\n只要你还在前行，我就以此身许诺——\n\n你的国度，即是永恒。」"
+  gacha_raiden_events.4.a: "此乃天助我也！"
 
-  gacha_raiden_events.11.title: "命之座·觉醒"
-  gacha_raiden_events.11.desc: "「梦想一心」的真意已然浮现。雷电将军领悟了新的力量，她将以更高效的手段治理国家，消除一切不稳定的因素。\\n\\n「杂音已除，现在我们可以专注于更重要的事情了。」\\n\\n$gacha_text_reward_stability_small$"
+  gacha_raiden_events.11.title: "斩断旧梦"
+  gacha_raiden_events.11.desc: "「那些被征服的土地还在怀念旧主？可笑。我会用稻光斩断他们对过去的『妄念』。从今往后，他们的历史只有『现在』，他们的未来只有『你』。」"
   gacha_raiden_events.11.a: "天下太平。"
 
-  gacha_raiden_events.12.title: "命之座·超越"
-  gacha_raiden_events.12.desc: "雷电将军展现出了「殊胜尊荣」的姿态。她在战场上的身姿如同鬼神般令人战栗，任何敌人在她面前都不过是蝼蚁。\\n\\n「此刻，寂灭之时！」\\n\\n$gacha_text_reward_legitimacy_small$"
+  gacha_raiden_events.12.title: "以此身许诺"
+  gacha_raiden_events.12.desc: "「看着战士们冲锋的样子……我想起了曾经的笹百合与千代。……不，将军不会感伤。我将赐予全军『梦想一心』的加护。只要他们向我献上忠诚，我便许诺他们——必胜。」"
   gacha_raiden_events.12.a: "所向披靡！"
+
+  gacha_raiden_events.13.title: "恶曜之眼"
+  gacha_raiden_events.13.desc: "「我观察了你的军备，太慢了。我已在你的兵营上空张开了『恶曜之眼』，它会时刻督促那些懒散的凡人。为了永恒，即使是一瞬间的懈怠也是重罪。」"
+  gacha_raiden_events.13.a: "绝对的效率。"
+
+  gacha_raiden_events.14.title: "统御的威权"
+  gacha_raiden_events.14.desc: "「疆域扩大了，但管理的效率不能降低。我已将部分权能分摊到了行政网络中。虽然凡人的智慧有限，但只要照着我的指令执行，就不会出错。」"
+  gacha_raiden_events.14.a: "铁腕治国。"
+
+  # === C3 好感事件 ===
+  gacha_raiden_c3_title: "雨夜的甜点心"
+  
+  # Scene 1: 开场
+  gacha_raiden_c3_scene_1_desc: "深夜的御书房，窗外雷雨交加。平日里像雕塑一样站在地图前的雷电将军，此刻却坐在窗边，眉头紧锁。\n\n她手里拿着一份……并不是战报，而是一份关于《异世界甜点制作方法》的报告？\n\n听到你的脚步声，她触电般地站起来，把报告藏在身后，眼神恢复了凛冽，但语速明显快了一拍。\n\n雷电将军（影）：「……还没睡吗？我只是……在审查后勤补给的清单。并没有在看什么奇怪的东西。」"
+  gacha_raiden_c3_scene_1_opt_a: "后勤清单里包括『团子牛奶』的配方吗？"
+  gacha_raiden_c3_scene_1_opt_b: "外面的雷声有点吵，是你心情不好吗？"
+  gacha_raiden_c3_scene_1_opt_c: "（默默递上一盘之前准备好的点心）"
+
+  # Ending A (中好感)
+  gacha_raiden_c3_ending_a: "影（愣住，随即叹气，肩膀松了下来）：「……你的眼力，有时候敏锐得让人困扰。……既然被发现了，我也就不隐瞒了。这个世界的糖分补给，似乎很匮乏。」\n\n她默默走回窗边，紫色的眼眸凝视着雨夜，没有再说话。"
+  
+  # Ending B (中好感)
+  gacha_raiden_c3_ending_b: "影（看向窗外）：「不……雷声是『将军』在维持威光。我只是……觉得这雨声，太像那天的稻妻了。让人有点……静不下心。」\n\n她抱着双臂，像是在自我保护。雷雨继续敲打着窗棂。"
+
+  # Scene 2: 路径C展开（第2幕）
+  gacha_raiden_c3_scene_2_desc: "影（咬了一口点心，表情肉眼可见地幸福起来）：「……嗯。甜度适中。虽然比不上三彩团子，但也算……唔，别这么看着我。」"
+  gacha_raiden_c3_scene_2_opt_b1: "看你平时太紧绷了。就算是神，偶尔也要休息一下。"
+  gacha_raiden_c3_scene_2_opt_b2: "如果你喜欢，我可以把这个列入『国家战略储备』。"
+
+  # Scene 3: 收尾（第3幕）- 动态响应
+  gacha_raiden_c3_scene_3_desc_b1: "影（放下点心，神色复杂）：「休息……对我来说是奢侈品。只要我松懈一分，『磨损』就会趁虚而入。我不能……再失去任何东西了。」\n\n她的声音低了下去，紫色的眼眸中闪过一丝疲惫。\n\n影：「但是……如果只是偶尔的话，你愿意陪我吗？就像现在这样……」"
+  gacha_raiden_c3_scene_3_desc_b2: "影（忍不住轻笑）：「胡闹。哪有把甜点当国策的君王？……不过，如果只是作为你私人的一点『特殊开销』，我也许……会默许。」\n\n她的眼神变得柔和，嘴角带着一丝难得的笑意。\n\n影：「真是的……被你这么一说，我都不知道该用『将军』还是『影』的口吻来回应了。」"
+  gacha_raiden_c3_scene_3_opt: "放心吧。在这个国家，你不必独自背负『永恒』。想吃甜点就吃，想看风景就看，天塌下来，我们一起扛。"
+
+  # Ending C (高好感)
+  gacha_raiden_c3_ending_c: "她怔怔地看着你，紫色的眼眸中，那股凌厉的雷光慢慢散去，取而代之的是一种如同平静海面般的温柔。\n\n她轻轻伸出手，似乎想触碰你的脸，但最后只是虚握了一下。\n\n「……一起扛吗？」\n\n「真是狂妄的发言啊，凡人。」\n\n「但是……」\n\n「这份狂妄，我不讨厌。」\n\n（窗外的雷雨，不知何时停了。）"
+
+  gacha_raiden_c3_ending_opt: "送她回房间"
+  gacha_raiden_c3_ending_opt_high: "永远欢迎你，影"
+
 
   # ============================================================
   # Character - 菲谢尔 (Fischl)
@@ -298,14 +384,24 @@
   gacha_last_name_fischl: "幽夜"
 
   # === 特质 (Traits) ===
-  gacha_fischl_origin_trait: "幽夜净土皇女"
-  desc_gacha_fischl_origin_trait: "自称流落此世的「断罪之皇女」，带着名为「奥兹」的夜鸦眷属巡视诸国。她的言辞充满戏剧性隐喻，但那只夜鸦的眼睛能轻易刺穿邻国阴谋。\\n\\n「我即是断罪之皇女菲谢尔，此乃裁断世界森罗万象之崇高眼眸！……奥兹，把那边的文件递给我。」"
+  gacha_fischl_origin_trait: "幽夜的窥视之眼"
+  desc_gacha_fischl_origin_trait: "菲谢尔：「此世的阴影中充满了虫豸的低语。但在本皇女的『断罪之眼』下，邻国的诡计如同白纸般苍白！没有什么能逃过幽夜的凝视！」\n奥兹：「小姐的意思是，我会负责侦查工作。这片大陆的间谍网似乎很薄弱，交给我去刺探情报吧。」"
 
-  gacha_fischl_awakened_trait: "断罪之雷"
-  desc_gacha_fischl_awakened_trait: "皇女的左眼「奥兹」能洞察因果的丝线，降下紫色的雷霆审判一切不义。在战场上，夜鸦的协同攻击将成为敌人的噩梦。\\n\\n效果：\\n将领冲击：+1\\n炮兵战斗力：+10%\\n要塞防御：+10%"
+  gacha_fischl_awakened_trait: "断罪雷影之弓"
+  desc_gacha_fischl_awakened_trait: "菲谢尔：「降下裁决之时已到！令那轰鸣的雷火（指火炮）响彻天际吧！那些愚蠢的敌军，终将在皇女的威光下化为劫灰！」\n奥兹：「小姐觉得您的炮兵方阵很有气势。我会协助校准弹道，减少误伤和损耗。」"
 
-  gacha_fischl_transcended_trait: "永夜幻想"
-  desc_gacha_fischl_transcended_trait: "幻想与现实的界限已然模糊。在这位皇女的领域内，夜色将成为最坚实的庇护，而她编写的命运剧本必将上演。\\n\\n效果：\\n敌对行动花费：-25%\\n全局人力修正：+15%\\n年度正统性：+1.00"
+  gacha_fischl_transcended_trait: "净土的降临者"
+  desc_gacha_fischl_transcended_trait: "菲谢尔：「哪怕身处异邦，皇女的高贵亦无法掩盖。看着吧，此地的臣民终将臣服于幽夜的法则，为我的降临献上赞歌！」\n奥兹：「小姐会努力学习这里的礼仪。不过……她这种自信的气场，似乎意外地很能镇住场面呢。」"
+
+  # 命座进阶 Traits
+  gacha_fischl_c2_trait: "极夜的真视界"
+  desc_gacha_fischl_c2_trait: "菲谢尔：「看啊，那伪善的盟约上缠绕着背叛的黑气！这群凡人的把戏，在本皇女眼中如同小丑的闹剧。」\n奥兹：「小姐发现那个邻国的大使在撒谎。另外，我们在他们的宫廷里安插了眼线……小姐说那是『命运的伏笔』。」"
+
+  gacha_fischl_c4_trait: "皇女的幻梦庭"
+  desc_gacha_fischl_c4_trait: "菲谢尔：「这就是『皇女的幻梦』！现实的边界已然破碎，让敌人在无尽的迷宫中哀嚎，被漆黑的箭雨（火炮）吞噬吧！」\n奥兹：「小姐利用地形布置了伏击圈。在这片战场上，她编写的剧本……似乎真的变成了现实。」"
+
+  gacha_fischl_c6_trait: "永夜之主"
+  desc_gacha_fischl_c6_trait: "菲谢尔：「不必再寻找归途了，奥兹。我看清楚了，这片大地……这片在此刻属于我们的疆域，正是新的『幽夜净土』。而你……（看向玩家）即是与我共赏这永恒黑夜的『祝圣之王』。」\n奥兹：「……小姐这次没有让我翻译。我想，您听懂了。」"
 
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_fischl_modifier: "幽夜的加护"
@@ -314,77 +410,287 @@
   gacha_fischl_modifier_desc: "断罪皇女与其眷属的注视，让宫廷充满了神秘与威严的氛围。"
 
   # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_fischl_c0_modifier: "夜鸦座"
-  STATIC_MODIFIER_NAME_gacha_fischl_c1_modifier: "断罪雷影"
-  STATIC_MODIFIER_NAME_gacha_fischl_c2_modifier: "圣裁鸣雷"
-  STATIC_MODIFIER_NAME_gacha_fischl_c3_modifier: "黄昏的庇佑者"
-  STATIC_MODIFIER_NAME_gacha_fischl_c4_modifier: "皇女的幻梦"
-  STATIC_MODIFIER_NAME_gacha_fischl_c5_modifier: "对世界的诅咒"
-  STATIC_MODIFIER_NAME_gacha_fischl_c6_modifier: "永夜的极光"
-  STATIC_MODIFIER_NAME_gacha_fischl_c6_country_modifier: "幽夜极光摄政"
-  STATIC_MODIFIER_DESC_gacha_fischl_c6_country_modifier: "皇女为现世增设的议席与法案，如同幽夜纯土的律令，让朝堂运作更加高效。"
+  STATIC_MODIFIER_NAME_gacha_fischl_c0_modifier: "幻夜座·零命"
+  STATIC_MODIFIER_NAME_gacha_fischl_c1_modifier: "渡鸦的信使"
+  STATIC_MODIFIER_NAME_gacha_fischl_c2_modifier: "极夜之瞳"
+  STATIC_MODIFIER_NAME_gacha_fischl_c3_modifier: "艾咪的黄昏"
+  STATIC_MODIFIER_NAME_gacha_fischl_c4_modifier: "幻梦侵蚀"
+  STATIC_MODIFIER_NAME_gacha_fischl_c5_modifier: "宿命的仇敌"
+  STATIC_MODIFIER_NAME_gacha_fischl_c6_modifier: "永夜净土"
 
   # === 事件 (Events) ===
-  gacha_fischl_events.1.title: "断罪皇女降临"
-  gacha_fischl_events.1.desc: "伴随着夜鸦振翅，一位金发少女摆出极其夸张的姿势降临大殿。遮蔽左眼的眼罩散发着神秘气息——至少她自己这么认为。\\n\\n菲谢尔：「欢呼吧！本皇女跨越因果的视界，降临于此枯竭之地，赐予尔等幽夜的荣光！」\\n\\n奥兹(叹气)：「小姐的意思是，很高兴见到您，并愿意为您效劳。」\\n\\n交流或许有些独特，但你感觉在这个组合面前，没有秘密能被藏住。"
+  gacha_fischl_events.1.title: "断罪之皇女·菲谢尔 —— 降临此世的（伪）造物主"
+  gacha_fischl_events.1.desc: "「哼，因果的丝线终究还是纠缠在了一起吗？\n\n欢呼吧！本皇女跨越了三千世界的狭间，顺应命运的『召唤』，降临于此荒芜的位面！\n\n这片疆域……嗯，尚算辽阔，勉强能作为『幽夜净土』在现世的行宫。\n\n既然你献上了祭品，我也将赐予你祝圣的荣光。\n\n不管是窥探列强的阴谋，还是降下裁断的雷霆，皆在本皇女的一念之间！\n\n……奥兹，还不快向这位庶民……不，向这位『盟友』致意？」\n\n（一只夜鸦凭空出现，优雅地鞠了一躬）\n\n「初次见面，我是奥兹华尔多·赫芙那梵茵斯。小姐的意思是：小姐很高兴能来到您的国家，虽然这里人生地不熟，但我们会尽力协助您的间谍与军事工作。请多关照。」"
   gacha_fischl_events.1.a: "欢迎您，断罪皇女。"
 
   gacha_fischl_events.2.title: "命运的宣告"
-  gacha_fischl_events.2.desc: "菲谢尔的力量得到了提升，紫色的雷电在她周围跳跃。\\n\\n「命运之轮再度转动！吾之星座于苍穹之上愈发璀璨！」\\n\\n奥兹：「小姐变强了。」"
+  gacha_fischl_events.2.desc: "菲谢尔的力量得到了提升，紫色的雷电在她周围跳跃。\n\n「命运之轮再度转动！吾之星座于苍穹之上愈发璀璨！」\n\n奥兹：「小姐变强了。」"
   gacha_fischl_events.2.a: "星座的力量！"
 
-  gacha_fischl_events.4.title: "永夜的审判"
-  gacha_fischl_events.4.desc: "菲谢尔已经达到了力量的巅峰。紫色的雷光形成了一只巨大的夜鸦虚影。\\n\\n「黄昏终将谢幕，永夜之光照耀寰宇！此刻，吾已掌握审判众生的全部力量！」\\n\\n奥兹：「小姐已经达到了她能力的巅峰。」"
-  gacha_fischl_events.4.a: "断罪皇女无敌！"
+  gacha_fischl_events.4.title: "此处即是幽夜净土"
+  gacha_fischl_events.4.desc: "「我是菲谢尔，断罪之皇女。\n\n曾经，我只能在书本的夹缝和幻想的庭院里，构建那个名为『幽夜净土』的世界。\n\n人们嘲笑我，父母不解我，只有奥兹陪着我。\n\n我以为那只是一个永远不会降临的梦。\n\n直到那天，你把我召唤到了这里。\n\n你没有嘲笑我的语言，反而将统率万军的权杖交到我手中；\n\n你没有质疑我的出身，反而让这片广袤的帝国成为了我真正的花园。\n\n看啊，这连绵的要塞，这臣服的诸国，这漫天的炮火与荣光……\n\n这一切，不正是《菲谢尔皇女夜谭》中终章的景象吗？\n\n谢谢你。\n\n是你将我的『谎言』，变成了坚不可摧的『现实』。\n\n从今往后，我也将守护你的现实。\n\n以断罪之皇女，不，以菲谢尔之名起誓：\n\n此世即净土，而你，便是我唯一的共治者。」"
+  gacha_fischl_events.4.a: "此乃天助我也！"
 
-  gacha_fischl_events.11.title: "命之座·觉醒"
-  gacha_fischl_events.11.desc: "菲谢尔领悟了「圣裁鸣雷」的真意。雷鸣在她的指尖汇聚，如同审判的宣告。\\n\\n「聆听！这是来自幽夜纯土的制裁之音！罪人当受天雷惩戒！」\\n\\n奥兹：「小姐掌握了新的雷电技巧。」"
-  gacha_fischl_events.11.a: "雷霆之怒！"
+  gacha_fischl_events.11.title: "看穿谎言之眼"
+  gacha_fischl_events.11.desc: "菲谢尔：「看啊，那伪善的盟约上缠绕着背叛的黑气！这群凡人的把戏，在本皇女眼中如同小丑的闹剧。」\n奥兹：「小姐发现那个邻国的大使在撒谎。另外，我们在他们的宫廷里安插了眼线……小姐说那是『命运的伏笔』。」"
+  gacha_fischl_events.11.a: "她的洞察力无与伦比。"
 
-  gacha_fischl_events.12.title: "命之座·超越"
-  gacha_fischl_events.12.desc: "菲谢尔彻底解放了「皇女的幻梦」。在她的领域内，幻想与现实的界限被打破，夜鸦的黑翼遮蔽了天空。\\n\\n菲谢尔：「这便是终焉的序曲！因果的丝线已尽在掌握，名为『现实』的剧本将由本皇女重新书写！」\\n\\n奥兹：「小姐现在的力量非常强大，请务必善用。」"
-  gacha_fischl_events.12.a: "幻想成真！"
+  gacha_fischl_events.12.title: "幻想侵蚀现实"
+  gacha_fischl_events.12.desc: "菲谢尔：「这就是『皇女的幻梦』！现实的边界已然破碎，让敌人在无尽的迷宫中哀嚎，被漆黑的箭雨（火炮）吞噬吧！」\n奥兹：「小姐利用地形布置了伏击圈。在这片战场上，她编写的剧本……似乎真的变成了现实。」"
+  gacha_fischl_events.12.a: "战场即是她的舞台！"
 
+  gacha_fischl_events.13.title: "渡鸦的信使"
+  gacha_fischl_events.13.desc: "菲谢尔：「这只漆黑的羽翼，将穿梭于诸国的王庭，带去皇女的敕令与恩典！」\n奥兹：「其实就是我去送信。既然您这里缺人手，我就勉为其难多跑几趟吧。放心，我也懂几门外语。」"
+  gacha_fischl_events.13.a: "奥兹辛苦了。"
 
-# ============================================================
-  # Character - 芙宁娜 (Furina)
+  gacha_fischl_events.14.title: "宿命的仇敌"
+  gacha_fischl_events.14.desc: "菲谢尔：「命运的齿轮已经咬合，新的『逆飞之鸟』出现了！这世间又多了一个值得本皇女亲自裁决的对手！」\n奥兹：「简单来说，小姐觉得那个国家很碍眼。多设一个宿敌，能让您的国民更团结……呃，更有斗志。」"
+  gacha_fischl_events.14.a: "那就让他们见识皇女的威光！"
+
+  # === C3 好感事件 ===
+  gacha_fischl_c3_title: "雨夜的\"御花园\""
+  
+  # Scene 1: 开场
+  gacha_fischl_c3_scene_1_desc: "暴雨倾盆。我经过皇家花园的回廊，看到菲谢尔独自一人缩在长椅上，奥兹不在身边。\n\n她手里捏着一本湿透的童话书，妆容花了一点，看起来不像皇女，像个迷路的小女孩。\n\n听到脚步声，她猛地抬头，慌乱地戴正眼罩，试图摆出高傲的姿势，但声音在发抖。\n\n菲谢尔：「哼……是、是你啊。本皇女只是在……在感应这天之泪的因果……咳咳……」"
+  gacha_fischl_c3_scene_1_opt_a: "下雨了，不回房间吗？奥兹去哪了？"
+  gacha_fischl_c3_scene_1_opt_b: "这就是『断罪之雷』的前兆吗？皇女殿下果然在施法。"
+  gacha_fischl_c3_scene_1_opt_c: "（脱下披风盖住她）别感冒了，艾咪。"
+
+  # Ending A (低好感)
+  gacha_fischl_c3_ending_a: "菲谢尔（眼神躲闪）：「奥兹……去侦查敌情了。皇女不需要伞，这雨水无法侵蚀我高贵的……阿嚏！」\n\n你把她送回了房间。她一直保持着皇女的姿态，但你能看到她紧握着那本湿透的书，没有松开。"
+  
+  # Ending C (低好感)
+  gacha_fischl_c3_ending_c: "菲谢尔（浑身僵硬）：「你……你怎么知道那个名字？！忘掉！快忘掉！我是菲谢尔！……呜……」\n\n她慌乱地跑开了，披风滑落在地上。你捡起披风，听到远处传来压抑的啜泣声。"
+
+  # Scene 2: 路径B展开
+  gacha_fischl_c3_scene_2_desc: "菲谢尔：「……其实，雨有点冷。这个世界的雨，比我想象的要冷。」"
+  gacha_fischl_c3_scene_2_opt_b1: "冷是因为『幽夜』的结界还没张开。来，把手给我。"
+  gacha_fischl_c3_scene_2_opt_b2: "那就回宫殿吧，那里有壁炉。皇女的行宫不该这么寒酸。"
+
+  # Scene 3: 收尾提示
+  gacha_fischl_c3_scene_3_desc: "只要我在，这整个帝国都是你的幽夜净土。没人敢嘲笑你，没人会让你淋雨。"
+  gacha_fischl_c3_scene_3_opt: "继续"
+
+  # Ending B1 (高好感)
+  gacha_fischl_c3_ending_b1: "菲谢尔（看着你的手，犹豫）：「这是……契约的邀请吗？既然你如此诚心……（把冰凉的手放上来）……真的，暖和多了。」\n\n她怔怔地看着你，唯一的左眼中蓄满了泪水，但这次她没有用手遮挡。\n\n她突然扑进你怀里，不再是用那种咏叹调，而是用一个普通女孩颤抖的声音说道：\n\n「……嗯。我不走了。只要你不赶我走……我就一直是你的皇女。永远都是。」\n\n（奥兹在远处的树梢上看着，默默地抖了抖翅膀上的水，没有飞过来打扰。）"
+
+  # Ending B2 (高好感)
+  gacha_fischl_c3_ending_b2: "菲谢尔（小声）：「行宫……你说得对。在这个世界，我还有家……对吧？」\n\n她怔怔地看着你，唯一的左眼中蓄满了泪水，但这次她没有用手遮挡。\n\n她突然扑进你怀里，不再是用那种咏叹调，而是用一个普通女孩颤抖的声音说道：\n\n「……嗯。我不走了。只要你不赶我走……我就一直是你的皇女。永远都是。」\n\n（奥兹在远处的树梢上看着，默默地抖了抖翅膀上的水，没有飞过来打扰。）"
+
+  gacha_fischl_c3_ending_opt: "送她回房间"
+  gacha_fischl_c3_ending_opt_high: "永远欢迎你，我的皇女"
+
+  # ============================================================
+  # Character - 芙宁娜 (Furina) "退役影后的最后一支舞"
   # ============================================================
 
   # === 姓名 ===
   gacha_first_name_furina: "芙宁娜"
   gacha_last_name_furina: "德·枫丹"
 
-  # === 特质 ===
-  gacha_furina_origin_trait: "众水之神"
-  desc_gacha_furina_origin_trait: "她是一切水域的统治者，正义的化身。"
+  # === 特质 (Traits) ===
+  gacha_furina_origin_trait: "欧庇克莱歌剧院"
+  desc_gacha_furina_origin_trait: "「看吧，哪怕我不发一言，只要站在那里，人们的目光就会聚集过来。这就叫『明星效应』。你的国家死气沉沉太久了，需要一点戏剧性的转折来提振民心。交给我吧，我会让你的国民重新学会欢呼。」"
 
-  # === 修正 ===
-  STATIC_MODIFIER_NAME_gacha_furina_modifier: "众水的加护"
+  gacha_furina_awakened_trait: "沙龙成员的下午茶"
+  desc_gacha_furina_awakened_trait: "「乌瑟勋爵，谢贝蕾妲小姐，还有海薇玛夫人……虽然它们只是我不成熟的幻想朋友，但在海上，它们可是很可靠的哦？指挥舰队就像指挥乐队，只要节奏对了，连惊涛骇浪也会跟着起舞。」"
+
+  gacha_furina_transcended_trait: "\"众水之神\"的假面"
+  desc_gacha_furina_transcended_trait: "「虽然我已不再是神，但这副扮演了五百年的架子还在。虚张声势、外交辞令、在列强面前维持尊严……这些我最擅长了。只要我不怯场，就没有人敢轻视这个国家。」"
+
+  # 命座进阶 Traits
+  gacha_furina_c2_trait: "谕示裁定枢机"
+  desc_gacha_furina_c2_trait: "「看啊，人们在欢呼！他们需要的不仅仅是面包，还有『正义』的演出。我稍稍修改了一下你的律法条文，让它们读起来更像诗歌。现在，变革的阻力变小了，因为大家都想看看下一幕会发生什么。」"
+
+  gacha_furina_c4_trait: "万众狂欢之海"
+  desc_gacha_furina_c4_trait: "「现在的海面，就像是我的舞台！在此刻，全世界的灯光都聚焦于你的舰队！不要畏惧风暴，那是高潮前的伴奏！让敌人在我们的狂欢中退场吧，这就叫——压轴好戏！」"
+
+  gacha_furina_c6_trait: "普世欢腾"
+  desc_gacha_furina_c6_trait: "「五百年了……我曾以为『统治』就是无尽的孤独与受难。但在这里，看着你的背影，我发现统治也可以是一场所有人共同参与的盛大舞会。我不做神了，现在的我，只是这片乐土上最自由的……人。」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_furina_modifier: "舞台的呼唤"
   STATIC_MODIFIER_DESC_gacha_furina_modifier: "「世界不过是一场盛大的舞台剧，而我将是永远的主角。」"
+  gacha_furina_modifier: "退役影后"
+  gacha_furina_modifier_desc: "芙宁娜虽已卸下神格，但她的舞台魅力依然在为这个国家带来戏剧性的转机。"
 
-  # === 事件 ===
-  gacha_furina_events.1.title: "众水、众方、众民与众律法的女王"
-  gacha_furina_events.1.desc: "一位身着华丽服饰的少女出现在你的宫廷中，她自称是芙宁娜·德·枫丹。"
-  gacha_furina_events.1.a: "欢迎您的到来，女王陛下。"
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_furina_c0_modifier: "独舞座·零命"
+  STATIC_MODIFIER_NAME_gacha_furina_c1_modifier: "剧团新成员"
+  STATIC_MODIFIER_NAME_gacha_furina_c2_modifier: "正义审判"
+  STATIC_MODIFIER_NAME_gacha_furina_c3_modifier: "后台卸妆"
+  STATIC_MODIFIER_NAME_gacha_furina_c4_modifier: "海洋交响"
+  STATIC_MODIFIER_NAME_gacha_furina_c5_modifier: "万国来朝"
+  STATIC_MODIFIER_NAME_gacha_furina_c6_modifier: "凡人之舞"
 
-  gacha_furina_events.2.title: "命座提升"
-  gacha_furina_events.2.desc: "芙宁娜的力量得到了提升。"
-  gacha_furina_events.2.a: "太好了！"
+  # === 事件 (Events) ===
+  gacha_furina_events.1.title: "永不谢幕的独舞者·芙宁娜 —— 仅仅是……芙宁娜"
+  gacha_furina_events.1.desc: "「咳咳……聚光灯打过来了吗？\n\n我是芙宁娜·德·枫丹。也就是你们口中的……不，那些头衔已经不重要了。\n\n现在的我，只是一个刚刚卸下重担、准备享受通心粉和下午茶的普通人。\n\n……等等，你说什么？\n\n你要我治理这个庞大的帝国？还要在这个充满战乱的陌生世界里重建秩序？\n\n开什么玩笑！我的演出已经结束了！那个『完美的、全知全能的神明』已经谢幕了！\n\n现在的我，既没有神力，也不会处理那些枯燥的公文！\n\n……欸？你说你不需要神明？\n\n你说你只是缺一个能让这沉闷的世道……重新热闹起来的『导演』？\n\n（叹气）真没办法。既然你都把舞台搭好了，如果不登场，岂不是太失礼了？\n\n那就陪你演这最后一出吧。\n\n但说好了——这次的剧本，结局必须是『大团圆』哦！」"
+  gacha_furina_events.1.a: "欢迎回到舞台，芙宁娜。"
 
-  gacha_furina_events.11.title: "命座觉醒"
-  gacha_furina_events.11.desc: "芙宁娜觉醒了新的力量！"
-  gacha_furina_events.11.a: "感受这股力量！"
+  gacha_furina_events.2.title: "戏剧的高潮"
+  gacha_furina_events.2.desc: "芙宁娜的力量得到了提升。她轻笑着说，这就像剧情进入下一幕。\n\n「看吧，故事才刚刚开始！」"
+  gacha_furina_events.2.a: "继续表演吧！"
 
-  gacha_furina_events.12.title: "命座超越"
-  gacha_furina_events.12.desc: "芙宁娜超越了自我！"
-  gacha_furina_events.12.a: "无可匹敌！"
+  gacha_furina_events.4.title: "以凡人之躯"
+  gacha_furina_events.4.desc: "「我是芙宁娜。\n\n你知道吗？在过去的五百年里，我每天早晨醒来最害怕的事，就是照镜子。\n\n镜子里的那个人完美无缺，她是神明，是信仰，是整个枫丹的支柱。\n\n唯独不是『我』。\n\n我扮演着那个角色，独自在聚光灯下跳舞，脚下是刀尖，眼前是预言的洪水。\n\n我以为那场漫长的独角戏，直到我死都不会有人喝彩。\n\n但是，你找到了我。\n\n你把我带到了这个没有预言、没有诅咒的世界。\n\n你给我的剧本里，没有牺牲，没有悲剧，只有还没吃完的蛋糕和明天去哪里的烦恼。\n\n你让我明白，原来不需要扮演神明，仅仅是作为并不完美的芙宁娜，\n\n也有资格站在你的身边，治理这个国家。\n\n谢谢你，我的……首席观众。\n\n这出戏演到这里，我已经分不清哪里是舞台，哪里是现实了。\n\n但我不在乎。\n\n只要你会为我鼓掌，这支舞，我就愿意为你跳到时间的尽头。」"
+  gacha_furina_events.4.a: "这才是真正的芙宁娜！"
 
-  gacha_furina_events.4.title: "满命达成"
-  gacha_furina_events.4.desc: "芙宁娜已经达到了力量的巅峰！"
-  gacha_furina_events.4.a: "不可思议的力量！"
+  gacha_furina_events.11.title: "信仰与律法"
+  gacha_furina_events.11.desc: "「看啊，人们在欢呼！他们需要的不仅仅是面包，还有『正义』的演出。我稍稍修改了一下你的律法条文，让它们读起来更像诗歌。现在，变革的阻力变小了，因为大家都想看看下一幕会发生什么。」"
+  gacha_furina_events.11.a: "正义的舞台已经搭好。"
+
+  gacha_furina_events.12.title: "潮汐的交响"
+  gacha_furina_events.12.desc: "「现在的海面，就像是我的舞台！在此刻，全世界的灯光都聚焦于你的舰队！不要畏惧风暴，那是高潮前的伴奏！让敌人在我们的狂欢中退场吧，这就叫——压轴好戏！」"
+  gacha_furina_events.12.a: "大海为我们欢呼！"
+
+  gacha_furina_events.13.title: "剧团的新成员"
+  gacha_furina_events.13.desc: "「你的宫廷太冷清了，我从枫丹……呃，从我的记忆里找了几个有趣的剧本。多设一个顾问席位吧，毕竟，一场精彩的歌剧怎么能只有主角，没有配角呢？……当然，你才是主角。」"
+  gacha_furina_events.13.a: "增加一个席位。"
+
+  gacha_furina_events.14.title: "万国来朝"
+  gacha_furina_events.14.desc: "「越来越多的国家派来了使节……哼，看来本芙宁娜大人的魅力即便在异世界也无法阻挡。多结交些盟友吧，毕竟在谢幕致辞时，观众越多越好，不是吗？」"
+  gacha_furina_events.14.a: "天下宾服。"
+
+  # === C3 好感事件：无人的观众席 ===
+  gacha_furina_c3_title: "无人的观众席"
+  
+  # Scene 1: 开场（深夜剧院偷吃蛋糕哭泣）
+  gacha_furina_c3_scene_1_desc: "深夜的皇家歌剧院空无一人。我本来只是路过，却听到舞台上传来压抑的抽泣声。\n\n芙宁娜坐在舞台边缘，双腿悬空晃荡。她没有穿那套华丽的礼服，只是一身素净的睡裙。\n\n她手里拿着一块还没吃完的蛋糕，一边吃，一边掉眼泪。\n\n看到我走近，她慌乱地擦脸，试图摆出那副高傲的架子，但声音带着明显的鼻音。\n\n芙宁娜：「咳……这么晚了，庶民……不，你怎么在这里？我、我只是在……练习哭戏！对，哭戏！」"
+  gacha_furina_c3_scene_1_opt_a: "这出戏叫什么名字？《偷吃蛋糕的爱哭鬼》？"
+  gacha_furina_c3_scene_1_opt_b: "（默默坐到她身边）给我留一口吗？"
+  gacha_furina_c3_scene_1_opt_c: "这里没有观众，芙宁娜。你可以不用演了。"
+
+  # Ending A (中好感 - 调侃)
+  gacha_furina_c3_ending_a: "芙宁娜（脸涨红，破涕为笑）：「你！……无礼！这可是枫丹廷限定的甜点！……而且，我才没有哭，是被奶油呛到了！」\n\n她气呼呼地把蛋糕塞进嘴里，背过身去不再看你。但你能看到她的肩膀在轻轻颤抖——不知道是笑还是哭。"
+
+  # Ending C (中好感 - 直击)
+  gacha_furina_c3_ending_c: "芙宁娜（动作僵住，低头）：「……你这个人，真的很不会读空气欸。有时候，演戏是为了不让自己崩溃啊……」\n\n她把蛋糕放在一边，双手抱膝，像个受伤的小动物。你没有再说话，只是静静陪着她。"
+
+  # Scene 2: 路径B展开（陪伴分蛋糕）
+  gacha_furina_c3_scene_2_desc: "芙宁娜（愣住，把蛋糕递过来）：「……只有一口哦。这可是我排队很久才……算了，看在你工作的份上，分你一半。」\n\n她递过蛋糕，然后轻声问：「……甜吗？以前压力大的时候，只要吃一口甜的，就觉得还能再坚持一天。」"
+  gacha_furina_c3_scene_2_opt_b1: "很甜。以后想吃，我让御厨天天给你做。"
+  gacha_furina_c3_scene_2_opt_b2: "还是苦的。因为里面有你的眼泪。"
+
+  # Scene 3: 路径B - 第3幕（B1/B2分支响应）
+  gacha_furina_c3_scene_3_desc_b1: "芙宁娜（摇摇头）：「那样就没有期待感了。而且……现在好像不用那么辛苦地坚持了。」\n\n她抬起头看着你，眼中还有泪痕，但嘴角带着笑意。\n\n芙宁娜：「……有你在，好像每天都值得期待呢。」"
+  gacha_furina_c3_scene_3_desc_b2: "芙宁娜（怔怔地看着你）：「……你的台词功底什么时候这么好了？这可是……犯规的啊。」\n\n她轻笑着擦掉眼泪，把蛋糕分成两半。\n\n芙宁娜：「那就……一起吃苦的那一半吧。」"
+  gacha_furina_c3_scene_3_opt: "以前你是演给所有人看，很累吧。以后，如果不开心，就只演给我一个人看；如果累了，就做回你自己。"
+
+  # Ending B (高好感 - 首席观众)
+  gacha_furina_c3_ending_b: "她沉默了很久，舞台上空荡荡的，只有月光洒在她身上。\n\n她轻轻靠在了你的肩膀上，像一只收起刺的小猫。\n\n「……做回自己，是很无趣的哦？\n\n会任性，会偷懒，还会因为没有好吃的而发脾气……\n\n即使是这样……\n\n你也愿意一直看着我吗？」\n\n（她没等你回答，就闭上了眼睛。）\n\n「那就……说定了。\n\n……我的首席观众。」"
+
+  gacha_furina_c3_ending_opt: "送她回房间"
+  gacha_furina_c3_ending_opt_high: "我会永远为你鼓掌"
+
+
 
   # ============================================================
-  # Character - 胡桃 (Hutao)
+  # Character - 刻晴 (Keqing) "效率、改革、人治"
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_keqing: "刻晴"
+  gacha_last_name_keqing: "玉衡"
+
+  # === 特质 (Traits) ===
+  gacha_keqing_origin_trait: "璃月千帆之繁"
+  desc_gacha_keqing_origin_trait: "「在此地驻足片刻，我仿佛看到了璃月港千帆竞发的景象……不对，这里的基础设施太差了。想要富国，先要修路、通商、整顿市集。把图纸给我，我会让这片土地焕发出黄金般的光泽。」"
+
+  gacha_keqing_awakened_trait: "迅雷天街巡游"
+  desc_gacha_keqing_awakened_trait: "「兵贵神速。在那群臃肿的敌军还在整队时，我的剑锋（雷楔）早已在他们的后方炸响。无论是平叛还是远征，只要速度够快，就没有斩不断的阻碍。出发！」"
+
+  gacha_keqing_transcended_trait: "人治时代的开拓者"
+  desc_gacha_keqing_transcended_trait: "「不要总是指望神迹或天命。历史是由人类的双脚走出来的。如果你敢于打破陈规，我就敢为你制定新的律法。在这个时代，我们要用自己的手，去书写不属于神的未来。」"
+
+  # 命座进阶 Traits
+  gacha_keqing_c2_trait: "黄金的土地"
+  desc_gacha_keqing_c2_trait: "「一砖一瓦，皆是未来的基石。在我的规划下，这座城市的效率已达极致。无论是农田还是工坊，都在以惊人的速度生长。看吧，这片土地正在回应我们的汗水，它将变得寸土寸金。」"
+
+  gacha_keqing_c4_trait: "云来·绝剑"
+  desc_gacha_keqing_c4_trait: "「战场之上，唯快不破。我的剑光就是进军的号角。敌人的阵型在我眼中充满了破绽，我将化作雷霆，在他们反应过来之前，穿梭于万军之中，斩下胜利的果实。」"
+
+  gacha_keqing_c6_trait: "玉衡·治世"
+  desc_gacha_keqing_c6_trait: "「神明的时代已经远去，如今是人治的黎明。我已将所有冗余的陈规旧律斩断，国家机器将在最高的效率下轰鸣运转。只要你我意志坚定，凡人的智慧，亦可超越神迹。」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_keqing_modifier: "玉衡的督导"
+  STATIC_MODIFIER_DESC_gacha_keqing_modifier: "「耽误的时间太多了，我们得把进度赶回来。」"
+  gacha_keqing_modifier: "变革之心"
+  gacha_keqing_modifier_desc: "玉衡星的高效改革正在推动这个国家飞速前进。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_keqing_c0_modifier: "金紫座·零命"
+  STATIC_MODIFIER_NAME_gacha_keqing_c1_modifier: "雷厉风行"
+  STATIC_MODIFIER_NAME_gacha_keqing_c2_modifier: "苛刻的监工"
+  STATIC_MODIFIER_NAME_gacha_keqing_c3_modifier: "登楼"
+  STATIC_MODIFIER_NAME_gacha_keqing_c4_modifier: "调律"
+  STATIC_MODIFIER_NAME_gacha_keqing_c5_modifier: "移灯"
+  STATIC_MODIFIER_NAME_gacha_keqing_c6_modifier: "廉贞"
+
+  # === 事件 (Events) ===
+  gacha_keqing_events.1.title: "璃月七星·玉衡 —— 此刻正是变革之时"
+  gacha_keqing_events.1.desc: "「我是刻晴，璃月七星中的『玉衡』。\n\n既然响应了召唤，我就直说了——如果你觉得现在的国家运转良好，那一定是你的错觉。\n\n刚才我粗略看了一下你们的行政账目和基建规划……\n\n太慢了！效率太低了！\n\n这种陈旧的官僚体系，怎么能应对未来的风暴？\n\n变革的时机已经成熟。\n\n哪怕是神明注视的土地，也终将由人类自己来治理，何况这里并没有岩王帝君。\n\n我会协助你重塑这个国家的秩序。\n\n但请做好心理准备，我的工作节奏可是很快的。\n\n别跟不上我的脚步哦，名为『君主』的搭档。」"
+  gacha_keqing_events.1.a: "那就拜托你了，玉衡星。"
+
+  gacha_keqing_events.2.title: "效率提升"
+  gacha_keqing_events.2.desc: "刻晴对现有的工作流程进行了优化。虽然大家都很累，但效率确实提高了。\n\n「还不够，我们还能更快。」"
+  gacha_keqing_events.2.a: "保持这个节奏！"
+
+  gacha_keqing_events.4.title: "人定胜天"
+  gacha_keqing_events.4.desc: "「我是刻晴，璃月七星的玉衡。\n\n以前在璃月，我总是跑得太快，把身边的人甩在身后。\n\n我也曾担心，在这个陌生的异界，会不会只剩下我一个人在为了所谓的『效率』而徒劳奔波。\n\n但是，你跟上来了。\n\n无论我提出多么苛刻的改革方案，无论我要求多么疯狂的行军速度……\n\n你从未抱怨，从未停歇。\n\n看着这片曾经荒芜的土地如今楼阁林立、商路通达，我突然明白了一件事：\n\n所谓的『盛世』，并不是神明的恩赐，而是两个志同道合的人，在无数个加班的深夜里熬出来的。\n\n……谢谢你。\n\n不仅是为了这个国家，也是为了……一直陪着那个任性的我。\n\n好了，感叹时间结束！\n\n拿上文件，我们去视察下一个省份。\n\n只要和你在一起……\n\n我觉得，我们可以把这个『人治的时代』，延续到时间的尽头。」"
+  gacha_keqing_events.4.a: "走吧，工作还没有结束呢！"
+
+  gacha_keqing_events.11.title: "辉煌的奠基"
+  gacha_keqing_events.11.desc: "「听到了吗？那是锤子敲击石材的声音，是国家心跳的声音。既然要建立盛世，地基就必须打得比磐石更稳。现在的建设速度勉强能让我满意了……但也只是『勉强』哦。」"
+  gacha_keqing_events.11.a: "我们会做得更好。"
+
+  gacha_keqing_events.12.title: "剑光如我"
+  gacha_keqing_events.12.desc: "「现在的我，剑术已无迷惘。战场亦是职场，无论面对多么顽固的敌人，我都会以雷霆之势将其『优化』掉。不用担心侧翼，因为我会同时出现在所有需要我的地方。」"
+  gacha_keqing_events.12.a: "这就是玉衡的速度！"
+
+  gacha_keqing_events.13.title: "寸土寸金"
+  gacha_keqing_events.13.desc: "「我看过了，你们的城市规划浪费了太多空间。只要稍微优化一下布局，就能塞进更多的工坊和市场。你看，像这样……寸土寸金的道理，在任何世界都通用。」"
+  gacha_keqing_events.13.a: "立即执行新规划。"
+
+  gacha_keqing_events.14.title: "求贤若渴"
+  gacha_keqing_events.14.desc: "「想要维持这种高强度的改革，光靠我们两个是不够的。我重新制定了人才选拔的标准，去除了那些繁文缛节。现在，让那些真正有才干的人才，以更合理的价格为我们效力吧。」"
+  gacha_keqing_events.14.a: "唯才是举。"
+
+  # === C3 好感事件：灯火阑珊处的小差 ===
+  gacha_keqing_c3_title: "灯火阑珊处的小差"
+  
+  # Scene 1: 开场（深夜加班肚子叫）
+  gacha_keqing_c3_scene_1_desc: "深夜，御书房的灯火通明。刻晴还在那张堆满地图的桌子前奋笔疾书，眉头紧锁，似乎在计算一项复杂的税收改革。\n\n她已经连续工作了六个小时，连姿势都没变过。\n\n我走近时，听到她肚子发出了一声虽然轻微、但在寂静夜里却异常清晰的……“咕~”。\n\n她手中的笔瞬间停住，僵硬地抬起头，脸颊飞速染红。\n\n刻晴：「那、那个……这是生理现象！我的精神还很亢奋，完全可以再工作三小时！」"
+  gacha_keqing_c3_scene_1_opt_a: "不愧是玉衡星，连肚子叫的声音都这么有效率。"
+  gacha_keqing_c3_scene_1_opt_b: "休息一下吧，机器空转是会磨损的。"
+  gacha_keqing_c3_scene_1_opt_c: "（从身后拿出一盘点心）尝尝这个？虽然不是正宗的……"
+
+  # Ending A (中好感 - 调侃)
+  gacha_keqing_c3_ending_a: "刻晴（羞愤地拍桌子）：「你！……这种时候就不要开玩笑了！忘掉！快给我忘掉！」\n\n她深吸一口气，强行把注意力拉回文件上，但你能看到她的耳根还是红的。"
+
+  # Ending B (中好感 - 理性)
+  gacha_keqing_c3_ending_b: "刻晴（叹气，揉太阳穴）：「道理我都懂。但这项改革明天就要推行，我不放心……再让我核对一遍数据。」\n\n她虽然嘴上这么说，但还是稍微放松了坐姿，显出一丝疲态。"
+
+  # Scene 2: 路径C展开（投食金丝虾球）
+  gacha_keqing_c3_scene_2_desc: "刻晴（鼻子动了动，眼神瞬间软化）：「这个味道……难道是……金丝虾球？」\n\n她尝了一口，眼睛发亮：「虽然面衣的口感稍微厚了一点，虾肉也不如璃月的鲜甜……但是，能在这种地方吃到家乡的味道……」\n\n她放慢了咀嚼的速度，似乎舍不得吃完。"
+  gacha_keqing_c3_scene_2_opt_c1: "看来我的『烹饪改革』初见成效？"
+  gacha_keqing_c3_scene_2_opt_c2: "看你吃得这么开心，我也觉得没那么累了。"
+
+  # Scene 3: 路径C - 第3幕（C1/C2分支响应）
+  gacha_keqing_c3_scene_3_desc_c1: "刻晴（轻笑）：「哼，勉强合格吧。作为奖励……这半个给你吃。这可是玉衡星的特别嘉奖哦。」\n\n她把剩下的一半虾球递到你嘴边，眼神里带着一丝狡黠。"
+  gacha_keqing_c3_scene_3_desc_c2: "刻晴（动作一顿，低头看着盘子）：「……你总是这样。明明你是君主，却还要照顾下属的情绪。……不过，我不讨厌这种感觉。」\n\n她的声音很轻，几乎被窗外的风声盖过。"
+  gacha_keqing_c3_scene_3_opt: "吃饱了吗？那我们约定，这盘虾球吃完后，立刻下班去散步。这是君主的命令。"
+
+  # Ending C (高好感 - 下班约定)
+  gacha_keqing_c3_ending_c: "她擦了擦嘴角，看着空空的盘子，又看了看窗外的月色，长舒一口气。\n\n那种紧绷的“玉衡星”气场消散了，取而代之的是邻家少女般的轻松。\n\n「既然是『命令』……那我也只能遵从了。\n\n不过，只有今晚哦。\n\n还有……\n\n下次，换我做给你吃。虽然我不擅长烹饪……但我会像对待政务一样，认真练习的。」"
+
+  gacha_keqing_c3_ending_opt: "送她回房间"
+  gacha_keqing_c3_ending_opt_high: "一言为定，我的玉衡"
+
+
+  # ============================================================
+  # Character - 胡桃 (Hutao) "解构严肃"
   # ============================================================
 
   # === 姓名 ===
@@ -392,14 +698,24 @@
   gacha_last_name_hutao: "往生堂"
 
   # === 特质 (Traits) ===
-  gacha_hutao_origin_trait: "往生堂主"
-  desc_gacha_hutao_origin_trait: "往生堂第七十七代堂主，行走于阴阳两界的奇妙少女。她以独特方式诠释死亡，让生者无憾，死者安息，使灾后民心得以抚慰。\\n\\n「呀，哈哈，吓到你了吧？」\\n\\n「放心嘛，死亡也只是另一场盛大典礼。我也可以帮你把活人事儿理顺哦。」"
+  gacha_hutao_origin_trait: "往生堂业务拓展"
+  desc_gacha_hutao_origin_trait: "「您国家的人好像很怕死？这可不行，越怕越容易乱。生老病死是自然规律，像呼吸一样自然。让我来帮您宣传一下『往生』的理念吧，大家心里踏实了，日子才能过得安稳嘛。」"
 
-  gacha_hutao_awakened_trait: "血梅香"
-  desc_gacha_hutao_awakened_trait: "领悟了「最不安神」的真意，胡桃的力量得到了进一步的升华。她的火焰变得更加炽烈，如同盛开在冬日的血色梅花。\\n\\n效果：\\n顾问能力：+2\\n思潮传播速度：+15%\\n革命抵抗：+0.05"
+  gacha_hutao_awakened_trait: "赤团开道"
+  desc_gacha_hutao_awakened_trait: "「打仗我不在行？哎呀，您可别小看我。只有见过最多生死的人，才知道怎么最快地送敌人上路。放心，不管是敌是友，只要倒下了，往生堂都会公平地给他们留个位置。」"
 
-  gacha_hutao_transcended_trait: "安神秘传"
-  desc_gacha_hutao_transcended_trait: "掌握了往生堂最高秘传「花好月圆」，胡桃已经可以自如地游走于生死两界。她的存在本身，便是对死亡的最好诠释。\\n\\n效果：\\n稳定度提升速度：+30%\\n阶层忠诚度均衡速度：+20%\\n君主寿命：+5年"
+  gacha_hutao_transcended_trait: "幽蝶的引路人"
+  desc_gacha_hutao_transcended_trait: "「这就让我坐上王座啦？嘿嘿，也好。在我的治下，阴阳有序，生死两安。活着的时候热热闹闹，走了以后体体面面。这难道不是最完美的盛世吗？」"
+
+  # 命座进阶 Traits
+  gacha_hutao_c2_trait: "边界·安魂曲"
+  desc_gacha_hutao_c2_trait: "「阴阳有序，万物生息。我已在这片国土的四方立下了界碑。亡者安息于地下，化作春泥；生者无畏于战火，生生不息。听，那是灵魂归乡的歌谣，也是国家强盛的脉搏。」"
+
+  gacha_hutao_c4_trait: "赤团·蝶火燎原"
+  desc_gacha_hutao_c4_trait: "「既然言语无法劝退恶鬼，那就用火来净化吧！我的蝴蝶会飞过战场，每一朵火焰绽放，都是为了送敌人前往彼岸。别眨眼，这可是名为『毁灭』的盛大葬仪！」"
+
+  gacha_hutao_c6_trait: "幽冥之主·轮回"
+  desc_gacha_hutao_c6_trait: "「坐在这个位置上，我看得到更多的生离死别。但正因如此，生命才显得可贵，不是吗？无需畏惧终结，因为我是守门人。只要我在，这国家的命数……便还没到尽头。尽情地闹腾吧，陛下！」"
 
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_hutao_modifier: "蝶火的加护"
@@ -416,102 +732,164 @@
   STATIC_MODIFIER_NAME_gacha_hutao_c5_modifier: "红尘客栈"
   STATIC_MODIFIER_NAME_gacha_hutao_c6_modifier: "幽蝶殊途"
   STATIC_MODIFIER_NAME_gacha_hutao_c6_country_modifier: "蝶引政坛"
-  STATIC_MODIFIER_DESC_gacha_hutao_c6_country_modifier: "胡桃把生死哲学带进朝堂，拓展席位、凝聚忠诚，让决策更为灵动。"
+  STATIC_MODIFIER_DESC_gacha_hutao_c6_country_modifier: "国事如葬礼般精密，稳定度消耗大幅降低，叛乱之声沉寂。"
+  STATIC_MODIFIER_NAME_gacha_hutao_country_modifier: "往生堂业务拓展"
+  STATIC_MODIFIER_DESC_gacha_hutao_country_modifier: "稳定度投资所需降低，病疫侵扰亦难近身。"
+  STATIC_MODIFIER_NAME_gacha_hutao_c2_country_modifier: "边界的安魂曲"
+  STATIC_MODIFIER_DESC_gacha_hutao_c2_country_modifier: "灵柩之外亦需供奉：稳度投资更少，军队恢复更快。"
+  STATIC_MODIFIER_NAME_gacha_hutao_c1_country_modifier: "往生堂账房"
+  STATIC_MODIFIER_DESC_gacha_hutao_c1_country_modifier: "与阴阳两界打交道的经验，让顾问成本压到最低。"
+  STATIC_MODIFIER_NAME_gacha_hutao_c5_country_modifier: "引路灯"
+  STATIC_MODIFIER_DESC_gacha_hutao_c5_country_modifier: "驱邪辟祟的火光，同样照亮传教士的脚步。"
+  # 雷电将军 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_raiden_country_modifier: "鸣神岛·永恒静土"
+  STATIC_MODIFIER_DESC_gacha_raiden_country_modifier: "雷霆敕令下的安定，让厌战渐息，正统更稳。"
+  STATIC_MODIFIER_NAME_gacha_raiden_c1_country_modifier: "八重神子的账簿"
+  STATIC_MODIFIER_DESC_gacha_raiden_c1_country_modifier: "政务效率提升，军政内阁运转更顺畅。"
+  STATIC_MODIFIER_NAME_gacha_raiden_c2_country_modifier: "祸津·稻光"
+  STATIC_MODIFIER_DESC_gacha_raiden_c2_country_modifier: "雷鸣预示的肃杀，让战争拖累与建造阻力一同降低。"
+  STATIC_MODIFIER_NAME_gacha_raiden_c5_country_modifier: "天下人之大权"
+  STATIC_MODIFIER_DESC_gacha_raiden_c5_country_modifier: "律令如雷贯耳，行政体系运转更高效。"
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_country_modifier: "源流·许愿星"
+  STATIC_MODIFIER_DESC_gacha_raiden_c6_country_modifier: "天命所归，威望、立法、止战之力同步提升。"
+  # 刻晴 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_keqing_country_modifier: "璃月千帆之繁"
+  STATIC_MODIFIER_DESC_gacha_keqing_country_modifier: "工部效率与城市成长齐升，玉衡监工寸土必争。"
+  STATIC_MODIFIER_NAME_gacha_keqing_c1_country_modifier: "工部专案"
+  STATIC_MODIFIER_DESC_gacha_keqing_c1_country_modifier: "流程优化，施工更快。"
+  STATIC_MODIFIER_NAME_gacha_keqing_c2_country_modifier: "黄金的土地"
+  STATIC_MODIFIER_DESC_gacha_keqing_c2_country_modifier: "基建狂魔模式，全域施工与发展提速，产出同步提升。"
+  STATIC_MODIFIER_NAME_gacha_keqing_c5_country_modifier: "玉衡秘阁"
+  STATIC_MODIFIER_DESC_gacha_keqing_c5_country_modifier: "精打细算的官僚体系，顾问成本进一步压缩。"
+  STATIC_MODIFIER_NAME_gacha_keqing_c6_country_modifier: "玉衡治世"
+  STATIC_MODIFIER_DESC_gacha_keqing_c6_country_modifier: "理政与兵事并举，科研加速、政务高效、厌战更低。"
+  # 芙宁娜 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_furina_country_modifier: "欧庇克莱歌剧院"
+  STATIC_MODIFIER_DESC_gacha_furina_country_modifier: "帷幕升起，威望与正统每月稳步积累。"
+  STATIC_MODIFIER_NAME_gacha_furina_c1_country_modifier: "沙龙成员的账本"
+  STATIC_MODIFIER_DESC_gacha_furina_c1_country_modifier: "社交与演出的名气，降低顾问聘用的花费。"
+  STATIC_MODIFIER_NAME_gacha_furina_c2_country_modifier: "谕示·裁定枢机"
+  STATIC_MODIFIER_DESC_gacha_furina_c2_country_modifier: "权威剧本加速立法进度，威望与正统双倍累积。"
+  STATIC_MODIFIER_NAME_gacha_furina_c5_country_modifier: "万国来朝"
+  STATIC_MODIFIER_DESC_gacha_furina_c5_country_modifier: "外交排场严谨，维系关系的成本显著下降。"
+  STATIC_MODIFIER_NAME_gacha_furina_c6_country_modifier: "普世欢腾"
+  STATIC_MODIFIER_DESC_gacha_furina_c6_country_modifier: "水神谢幕，声望与镇国之力余韵不绝。"
+  # 菲谢尔 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_fischl_country_modifier: "幽夜的窥视"
+  STATIC_MODIFIER_DESC_gacha_fischl_country_modifier: "奥兹振翅，间谍网扩张更快，外交官数量增加。"
+  STATIC_MODIFIER_NAME_gacha_fischl_c1_country_modifier: "断罪之眼"
+  STATIC_MODIFIER_DESC_gacha_fischl_c1_country_modifier: "增派情报官，外交触角再度延伸。"
+  STATIC_MODIFIER_NAME_gacha_fischl_c2_country_modifier: "极夜的真视界"
+  STATIC_MODIFIER_DESC_gacha_fischl_c2_country_modifier: "深夜监听，情报与内阁效率同步提升。"
+  STATIC_MODIFIER_NAME_gacha_fischl_c5_country_modifier: "宿敌猎手"
+  STATIC_MODIFIER_DESC_gacha_fischl_c5_country_modifier: "与宿敌周旋愈发得心应手，威信因此提升。"
+  STATIC_MODIFIER_NAME_gacha_fischl_c6_country_modifier: "永夜之主"
+  STATIC_MODIFIER_DESC_gacha_fischl_c6_country_modifier: "永夜庇佑，厌战渐消，声望每月提升。"
+  # 可莉 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_klee_country_modifier: "四叶草的幸运"
+  STATIC_MODIFIER_DESC_gacha_klee_country_modifier: "军心恢复更快，声望同步增加。"
+  STATIC_MODIFIER_NAME_gacha_klee_c2_country_modifier: "破破弹片领域"
+  STATIC_MODIFIER_DESC_gacha_klee_c2_country_modifier: "攻城效率与士气提升，敌方堡垒如纸糊。"
+  STATIC_MODIFIER_NAME_gacha_klee_c5_country_modifier: "轰轰火花"
+  STATIC_MODIFIER_DESC_gacha_klee_c5_country_modifier: "炮兵威力强化，为爆炸达人助威。"
+  STATIC_MODIFIER_NAME_gacha_klee_c6_country_modifier: "火花无限"
+  STATIC_MODIFIER_DESC_gacha_klee_c6_country_modifier: "攻城神速，后勤施工提速，炮声不绝。"
+  # 纳西妲 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_nahida_country_modifier: "净善宫的笼中鸟"
+  STATIC_MODIFIER_DESC_gacha_nahida_country_modifier: "思潮传播更快，科研效率稳步提升。"
+  STATIC_MODIFIER_NAME_gacha_nahida_c2_country_modifier: "千朵玫瑰的早晨"
+  STATIC_MODIFIER_DESC_gacha_nahida_c2_country_modifier: "知识的光芒照亮全境，机构成长与科研加速。"
+  STATIC_MODIFIER_NAME_gacha_nahida_c5_country_modifier: "蕴种之式"
+  STATIC_MODIFIER_DESC_gacha_nahida_c5_country_modifier: "高效内阁与积累的学识，让政务运转如风。"
+  STATIC_MODIFIER_NAME_gacha_nahida_c6_country_modifier: "智慧议厅"
+  STATIC_MODIFIER_DESC_gacha_nahida_c6_country_modifier: "科研跃进，内阁效率与顾问成本全面优化。"
+
 
   # === 事件 (Events) ===
-  gacha_hutao_events.1.title: "蝶舞秋庭"
-  gacha_hutao_events.1.desc: "一位古灵精怪的少女不知何时倚在王座旁，把玩着护摩之杖。她的眼里闪着梅花般的光，笑容里藏着看透生死的狡黠。\\n\\n「呀！吓到了吗？我是往生堂堂主胡桃。看你这一脸操劳的样子……放心，还没到我接单的时候呢！不过，帮你打理国家大事，顺便推销一下业务，也是可以的哟。」\\n\\n她跳脱的语气中却带来奇异的安宁，蝶火环绕，让人心头一静。"
-  gacha_hutao_events.1.a: "有趣的客人。"
+  gacha_hutao_events.1.title: "往生堂第七十七代堂主·胡桃 —— 您的（大客户）专属丧葬顾问"
+  gacha_hutao_events.1.desc: "「哎呀呀？本来以为这次跨界业务拓展又要迷路了，没想到直接落地到了客户……啊不，君主的面前！\n\n初次见面，我是胡桃，璃月往生堂的堂主。\n\n我看您这儿……啧啧，煞气很重呀。\n\n边境战火连天，宫廷暗流涌动，这可是大生意……呃不对，是大危机的前兆！\n\n虽然我平时只负责送人最后一程，但如果不把活着的人安顿好，死后可是会变成很难缠的客户呢。\n\n怎么样？要不要聘请我做您的特别顾问？\n\n现在签约，以后您的国葬我给打八折！\n\n——开玩笑的啦，别摆出那么严肃的表情嘛！」"
+  gacha_hutao_events.1.a: "欢迎，胡堂主。"
 
-  gacha_hutao_events.2.title: "命火燃烧"
-  gacha_hutao_events.2.desc: "胡桃的力量得到了进一步的提升，周身环绕着幽幽的蝶火。\\n\\n「嘿嘿，感觉到了吗？这就是往生堂的力量！」\\n\\n$gacha_text_reward_prestige_small$"
-  gacha_hutao_events.2.a: "继续燃烧吧！"
+  gacha_hutao_events.2.title: "业务升级"
+  gacha_hutao_events.2.desc: "胡桃的业务范围扩大了，现在连敌人的身后事也一并承包了。\n\n「放心，往生堂的服务绝对专业！」"
+  gacha_hutao_events.2.a: "这也能算业务？"
 
-  gacha_hutao_events.4.title: "蝶引来生"
-  gacha_hutao_events.4.desc: "胡桃已经达到了力量的巅峰。她轻笑着说，现在的她可以自如地游走于生死两界之间。\\n\\n「生死轮转，如梦如幻。不过呢，活着的时候还是要好好享受生命的美好呀！」\\n\\n无数蝴蝶围绕着她翩翩起舞，每一只都承载着逝者的祝福。\\n\\n$gacha_text_reward_prestige_medium$\\n$gacha_text_reward_legitimacy_medium$"
-  gacha_hutao_events.4.a: "这就是往生堂的力量！"
+  gacha_hutao_events.4.title: "生死界碑"
+  gacha_hutao_events.4.desc: "「哟，大客户！……啊不，陛下。\n\n怎么又一个人坐在这儿发呆？是在担心边境的战事，还是在想百年之后谁来继承这偌大的基业？\n\n嘻嘻，在凡人眼里，这些确实是天大的烦恼。\n\n但我告诉您哦，我在往生堂看过太多了。\n\n无论是不可一世的将军，还是富可敌国的商贾，最后都只是一捧灰，装在一样大小的盒子里。\n\n所以呀，别太执着于『永恒』那种虚无缥缈的东西。\n\n尽情地燃烧吧，像那只火蝴蝶一样！\n\n把您的名字刻在历史的石碑上，把您的意志烧进这片土地里。\n\n至于剩下的……\n\n那些阴影里的鬼魅，那些未竟的遗憾，还有终将到来的告别……\n\n**全都交给我。**\n\n我是胡桃，往生堂第七十七代堂主。\n\n**只要我还站在您的身后，这阴阳两界的规矩，就乱不了。**\n\n好啦，发呆结束！走，我们去御花园吓唬一下那个新来的大臣！」"
+  gacha_hutao_events.4.a: "有你在，我就放心了。"
 
-  gacha_hutao_events.11.title: "命之座·觉醒"
-  gacha_hutao_events.11.desc: "胡桃领悟了「最不安神」的真意，她的火焰变得更加炽烈。\\n\\n「生与死的界限，本来就不该那么清晰。现在的我，更懂得如何平衡两界的力量了。」\\n\\n$gacha_text_reward_stability_small$"
-  gacha_hutao_events.11.a: "燃烧吧，蝴蝶！"
+  gacha_hutao_events.11.title: "不安的亡魂"
+  gacha_hutao_events.11.desc: "「最近战场上的风声不太对劲……有太多不想走的灵魂在哭呢。没办法，看来得举办一场大型法事了。别担心，交给我吧。如果不把逝者安抚好，生者的路也是走不远的。」"
+  gacha_hutao_events.11.a: "安息吧。"
 
-  gacha_hutao_events.12.title: "命之座·超越"
-  gacha_hutao_events.12.desc: "胡桃展现出了「花好月圆」的姿态，她已经完全掌握了往生之力。\\n\\n「花开花落，月圆月缺，万物皆有其时。掌握了这个道理，就能理解生死的真谛了。」\\n\\n蝶火在她周围形成了一个完美的圆环，象征着生命的循环往复。\\n\\n$gacha_text_reward_legitimacy_small$"
-  gacha_hutao_events.12.a: "生生不息！"
+  gacha_hutao_events.12.title: "业火净罪"
+  gacha_hutao_events.12.desc: "「有时候，只有猛烈的火才能烧尽腐朽的业障。既然敌人执意破坏阴阳的平衡，那就让赤团的蝴蝶送他们一程吧。在那边排好队哦，往生堂不收插队的鬼！」"
+  gacha_hutao_events.12.a: "净化一切！"
 
-  # ============================================================
-  # Character - 刻晴 (Keqing)
-  # ============================================================
+  gacha_hutao_events.13.title: "往生堂大酬宾"
+  gacha_hutao_events.13.desc: "「我看您的内阁大臣们个个印堂发黑，肯定是加班太累了！所以我给他们每人发了一张『买一送一』的优惠券……哎？他们怎么跑得比兔子还快？真是不懂行，这可是堂主的关怀呀！」"
+  gacha_hutao_events.13.a: "这关怀有点沉重……"
 
-  # === 姓名 ===
-  gacha_first_name_keqing: "刻晴"
-  gacha_last_name_keqing: "璃月"
+  gacha_hutao_events.14.title: "生死观普及"
+  gacha_hutao_events.14.desc: "「我发现只要把我的诗印在传单上发出去，大家好像就没那么怕打仗了？『生如夏花，死如秋叶』……嗯，看来我也是个做宣传的天才嘛！要不要把这首诗刻在城门上？」"
+  gacha_hutao_events.14.a: "很有哲理。"
 
-  # === 特质 (Traits) ===
-  gacha_keqing_origin_trait: "玉衡星"
-  desc_gacha_keqing_origin_trait: "璃月七星之玉衡，坚定的变革者与实干家。她对因循守旧的官僚主义深恶痛绝，主张以雷霆手段提升行政效率。在她眼中，人治终将取代神治。\\n\\n「变革的时机已经成熟。如果旧的制度阻碍了发展，那就由我来打破它。」"
+  # === C3 好感事件：月下捉迷藏 ===
+  gacha_hutao_c3_title: "月下捉迷藏"
+  
+  # Scene 1: 开场（御花园捉迷藏）
+  gacha_hutao_c3_scene_1_desc: "深夜的御花园静悄悄的。我刚想穿过回廊，突然感觉脖子后面凉飕飕的。\n\n一只冰凉的手拍在我的左肩，但我回头却空无一人。\n\n「嘿嘿……猜猜我是谁？」\n\n那个古灵精怪的声音从右边的树上传来。胡桃倒挂在树枝上，荡来荡去，梅花瞳在月光下闪着狡黠的光。"
+  gacha_hutao_c3_scene_1_opt_a: "往生堂的业务都做到皇宫大内来了？"
+  gacha_hutao_c3_scene_1_opt_b: "哇！鬼啊！！"
+  gacha_hutao_c3_scene_1_opt_c: "快下来，小心摔着。"
 
-  gacha_keqing_awakened_trait: "斫断愚昧"
-  desc_gacha_keqing_awakened_trait: "既然身处乱世，就需要更强的力量来守护国家。刻晴深知这个道理，因此不断磨练自己的剑术与领导能力。\\n\\n效果：\\n人力恢复速度：+20%\\n招募时间：-25%\\n步兵战斗力：+10%"
+  # Scene 2: 路径A/B展开（深入对话）
+  gacha_hutao_c3_scene_2_desc_a: "胡桃（轻巧落地，拍手）：「哎呀，被发现了！我看这皇宫阴气太重，正想贴两张符呢。不过既然您在这儿，阳气这就补足啦！」\n\n她凑近看了看你的脸，突然变得正经起来。\n\n胡桃：「今晚月色真好，适合吟诗，也适合……谈谈心。陛下，您每天管这么多人，不累吗？」"
+  gacha_hutao_c3_scene_2_desc_b: "胡桃（笑得前仰后合）：「哈哈哈哈！陛下您的反应太经典了！值得奖励一张满减券！看来我的吓人技术在异世界也还没生疏嘛。」\n\n她擦了擦笑出来的眼泪，从树上跳下来。\n\n胡桃：「今晚月色真好，适合吟诗，也适合……谈谈心。陛下，您每天管这么多人，不累吗？」"
+  gacha_hutao_c3_scene_2_opt_a1: "累啊。所以正想找个地方，把自己埋了算了。"
+  gacha_hutao_c3_scene_2_opt_b1: "有你在，累的时候也能笑出来。"
 
-  gacha_keqing_transcended_trait: "天街巡游"
-  desc_gacha_keqing_transcended_trait: "从天衡山巅到无妄坡底，刻晴的身影如同紫色的闪电划破天际。无论是在战场还是在政务上，她都能以最快的速度完成任务。\\n\\n效果：\\n冲击伤害：+15%\\n移动速度：+15%\\n围城能力：+20%"
+  # Ending C (低好感 - 老父亲)
+  gacha_hutao_c3_ending_c: "胡桃（撇撇嘴，翻身落地）：「切——没劲。您怎么跟钟离客卿一样，老气横秋的。这样可是会未老先衰的哦？」\n\n她摆摆手，一溜烟跑没影了，只留下一串银铃般的笑声。"
 
-  # === 修正 (Modifiers) ===
-  STATIC_MODIFIER_NAME_gacha_keqing_modifier: "雷光的加护"
-  STATIC_MODIFIER_DESC_gacha_keqing_modifier: "「所谓神明，不过是比普通人更强的生命而已。我既然有了神之眼，就意味着我拥有了能够媲美『神』的可能性。」"
-  gacha_keqing_modifier: "玉衡之志"
-  gacha_keqing_modifier_desc: "刻晴的实干精神正在感染整个国家，人们开始相信自己的力量。"
+  # Scene 3: 路径A/B - 第3幕（A1/B1分支响应）
+  gacha_hutao_c3_scene_3_desc_a1: "胡桃（眼睛放光，凑近）：「哦？这业务我熟啊！喜欢什么样的风水？靠山的还是面海的？……嘻嘻，开玩笑的。看您这么累，我给您念首打油诗解解闷吧？」"
+  gacha_hutao_c3_scene_3_desc_b1: "胡桃（愣了一下，背着手转过身）：「哎哟……这算是调戏堂主吗？虽然我不讨厌这种直率……但我的出场费可是很贵的哦？得用一首好诗来抵！」"
+  gacha_hutao_c3_scene_3_opt: "这是……给我的？"
 
-  # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_keqing_c0_modifier: "紫薇座·零命"
-  STATIC_MODIFIER_NAME_gacha_keqing_c1_modifier: "雷厉"
-  STATIC_MODIFIER_NAME_gacha_keqing_c2_modifier: "苛征"
-  STATIC_MODIFIER_NAME_gacha_keqing_c3_modifier: "璇玑"
-  STATIC_MODIFIER_NAME_gacha_keqing_c4_modifier: "调停"
-  STATIC_MODIFIER_NAME_gacha_keqing_c5_modifier: "贯彻"
-  STATIC_MODIFIER_NAME_gacha_keqing_c6_modifier: "廉贞"
-  STATIC_MODIFIER_NAME_gacha_keqing_c6_country_modifier: "玉衡治世之席"
-  STATIC_MODIFIER_DESC_gacha_keqing_c6_country_modifier: "刻晴重组冗余的官僚机构，把「实干」刻入律法。内阁的决策如雷电般迅捷，不再容忍拖沓。"
+  # Ending High (高好感 - 护身符)
+  gacha_hutao_c3_ending_high: "胡桃：「好啦，不闹了。其实我今晚来，是看您御书房的灯一直亮着。」\n\n她收起了嬉皮笑脸，从袖子里掏出一朵还没干枯的梅花，递到你面前。\n\n「这是刚才在墙角捡的，开得正好，落了可惜。\n\n花开花落，自有定数。\n\n您也是，别把自己逼太紧了。\n\n如果累了，就来找我。\n\n我不谈国事，不聊战争。\n\n**我只会给您讲讲鬼故事，带您看看月亮，然后……向您保证，明天的太阳照常升起。**\n\n收下吧，这可是堂主的『护身符』哟！」"
 
-  # === 事件 (Events) ===
-  gacha_keqing_events.1.title: "雷光闪耀"
-  gacha_keqing_events.1.desc: "紫色雷楔划破长空，一位干练的女性瞬息落在殿中。她环视四周，仿佛在瞬间就评估出朝局弊端。\\n\\n「璃月七星·刻晴。听闻贵国正值用人之际，我特来助力。但我先说明：我这里没有神迹，只有效率和实干。如果准备好迎接变革，我们就立即开始。」\\n\\n她的话语锋利如剑，毫不拖泥带水。"
-  gacha_keqing_events.1.a: "此乃吾国之幸！"
-
-  gacha_keqing_events.2.title: "紫电流转"
-  gacha_keqing_events.2.desc: "刻晴的力量得到了进一步的提升。她的剑术更加精湛，雷元素在她的刀刃上跳跃，仿佛要将一切敌人斩断。\\n\\n「力量的提升，是为了更好地守护这个国家。我会用这份力量，为您开辟更广阔的未来。」\\n\\n$gacha_text_reward_prestige_small$"
-  gacha_keqing_events.2.a: "继续前进！"
-
-  gacha_keqing_events.4.title: "璇玑无双"
-  gacha_keqing_events.4.desc: "刻晴已经达到了力量的巅峰。她周身环绕着紫色的雷光，每一次挥剑都能劈开山峦。\\n\\n「现在的我，已经可以为这个国家斩断一切阻碍。无论是外敌还是内患，都将在我的剑下灰飞烟灭。」\\n\\n她的存在本身，便是国家最强大的保障。\\n\\n$gacha_text_reward_prestige_medium$\\n$gacha_text_reward_legitimacy_medium$"
-  gacha_keqing_events.4.a: "天下无敌！"
-
-  gacha_keqing_events.11.title: "命之座·觉醒"
-  gacha_keqing_events.11.desc: "随着命星的闪耀，刻晴领悟了「斫断愚昧」的真意。她的剑术更加凌厉，能够更快地调集军队，击溃敌人。\\n\\n「只有不断磨练自己，才能在这个世界上立足。现在，我已经准备好迎接任何挑战了。」\\n\\n$gacha_text_reward_stability_small$"
-  gacha_keqing_events.11.a: "所向披靡！"
-
-  gacha_keqing_events.12.title: "命之座·超越"
-  gacha_keqing_events.12.desc: "刻晴展现出了「天街巡游」的姿态。她的身影如同闪电般在战场上穿梭，无人能够捕捉到她的踪迹。\\n\\n「速度，是胜利的关键。无论是在战场还是在政务上，我都不会让任何人等待。」\\n\\n$gacha_text_reward_legitimacy_small$"
-  gacha_keqing_events.12.a: "快如闪电！"
+  gacha_hutao_c3_ending_opt: "送她回房间"
+  gacha_hutao_c3_ending_opt_high: "谢谢你，胡堂主"
 
   # ============================================================
-  # Character - 可莉 (Klee)
+  # Character - 可莉 (Klee) "天真无邪的战争机器"
   # ============================================================
 
   # === 姓名 ===
   gacha_first_name_klee: "可莉"
-  gacha_last_name_klee: "蒙德"
+  gacha_last_name_klee: "火花骑士"
 
   # === 特质 (Traits) ===
-  gacha_klee_origin_trait: "逃跑的太阳"
-  desc_gacha_klee_origin_trait: "西风骑士团的「火花骑士」，拥有与年龄不符的毁灭性火力。对她来说，炸鱼与攻城没有本质区别——都是快乐的爆炸。请务必注意灾后重建的预算。\\n\\n「只要把看不顺眼的东西全部炸飞，大家就都安全啦！这就叫……防御工事？对吧？」"
+  gacha_klee_origin_trait: "四叶草的幸运祝祷"
+  desc_gacha_klee_origin_trait: "「嘿嘿，只要看着这个四叶草，运气就会变好哦！士兵叔叔们看到可莉都很开心的样子，虽然……我不小心把城门的门闩弄坏了，但大家笑得更开心了，应该没问题吧？」"
 
-  gacha_klee_awakened_trait: "蹦蹦炸弹"
-  desc_gacha_klee_awakened_trait: "可莉制作的炸弹不仅威力巨大，还会分裂出无数诡雷。这种无差别的火力覆盖能瞬间瓦解敌军的阵型。\\n\\n效果：\\n陆军火力伤害：+10%\\n冲击伤害：+5%\\n敌军损耗：+10%"
+  gacha_klee_awakened_trait: "特级炸鱼大师"
+  desc_gacha_klee_awakened_trait: "「那座城堡看起来好结实，就像蒙德城外的大石头一样！能不能让可莉丢一个蹦蹦进去？就一个！我保证，里面的坏蛋……呃，里面的鱼都会翻肚皮浮上来的！」"
 
-  gacha_klee_transcended_trait: "轰轰火花"
-  desc_gacha_klee_transcended_trait: "全功率全开！幸运与破坏力的完美结合。她所经之处常化为焦土，但对敢于阻挡帝国的敌人而言，这便是绝对毁灭。\\n\\n效果：\\n训练度：+5%\\n炮兵火力：+15%\\n省份荒废度月度增长：+0.05(破坏力过于惊人)"
+  gacha_klee_transcended_trait: "逃跑的太阳"
+  desc_gacha_klee_transcended_trait: "「虽然不太懂当国王要做什么，但只要把如果不听话的坏人都炸飞，大家就能开开心心地过羽球节了吧？大家都会陪可莉玩的，对吧？不对吗？」"
+
+  # 命座进阶 Traits
+  gacha_klee_c2_trait: "破破·弹片领域"
+  desc_gacha_klee_c2_trait: "「欸？那些城墙怎么自己倒了？肯定是因为它们也想和可莉一起玩吧！看呐，我们的士兵叔叔们笑得多开心，只要跟着可莉，前面的障碍物都会『砰』的一下消失不见哦！这可是**幸运**的魔法！」"
+
+  gacha_klee_c4_trait: "一触即发·之火"
+  desc_gacha_klee_c4_trait: "「嘿嘿，这是阿贝多哥哥教我的新配方！只要一点点火花，就能让整座城堡变成大烟花！敌人在里面躲猫猫也没用哦，因为**爆炸**是不分躲在哪里的！这就是火花骑士的**攻坚**艺术！」"
+
+  gacha_klee_c6_trait: "火花无限·之梦"
+  desc_gacha_klee_c6_trait: "「听好啦！从今天起，这个国家的所有坏蛋都要小心了！不管你们躲在多厚的墙后面，可莉都会把你们找出来炸飞！虽然地可能会变得黑黑的……但那是**胜利**的颜色嘛！来吧，把世界变成我们的**游乐场**！」"
 
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_klee_modifier: "火花的加护"
@@ -520,54 +898,97 @@
   gacha_klee_modifier_desc: "可莉快乐的笑声伴随着远处的爆炸声，极大地鼓舞了前线士兵的破坏欲。"
 
   # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_klee_c0_modifier: "四叶草座"
-  STATIC_MODIFIER_NAME_gacha_klee_c1_modifier: "蹦蹦炸弹"
+  STATIC_MODIFIER_NAME_gacha_klee_c0_modifier: "四叶草座·零命"
+  STATIC_MODIFIER_NAME_gacha_klee_c1_modifier: "连锁反应"
   STATIC_MODIFIER_NAME_gacha_klee_c2_modifier: "破破弹片"
-  STATIC_MODIFIER_NAME_gacha_klee_c3_modifier: "全力冲刺"
-  STATIC_MODIFIER_NAME_gacha_klee_c4_modifier: "砰砰礼物"
-  STATIC_MODIFIER_NAME_gacha_klee_c5_modifier: "火焰抽击"
-  STATIC_MODIFIER_NAME_gacha_klee_c6_modifier: "到处都是宝藏"
-  STATIC_MODIFIER_NAME_gacha_klee_c6_country_modifier: "火花作战议程"
-  STATIC_MODIFIER_DESC_gacha_klee_c6_country_modifier: "可莉的火花点燃了决策室，新增的席位与高效内阁让每次作战准备都像节日烟花般迅速。"
+  STATIC_MODIFIER_NAME_gacha_klee_c3_modifier: "可莉特调"
+  STATIC_MODIFIER_NAME_gacha_klee_c4_modifier: "一触即发"
+  STATIC_MODIFIER_NAME_gacha_klee_c5_modifier: "轰天雷"
+  STATIC_MODIFIER_NAME_gacha_klee_c6_modifier: "火力全开"
 
   # === 事件 (Events) ===
-  gacha_klee_events.1.title: "火花骑士报到！"
-  gacha_klee_events.1.desc: "一个背着红色书包的小女孩蹦蹦跳跳闯进了严肃的议会厅，卫兵还没反应过来，她就掏出了一枚还在冒烟的炸弹。\\n\\n「哒哒哒！可莉来啦~！」她把炸弹当礼物举高，「我是火花骑士可莉！琴团长说我要出来'历练'……总之，只要是坏人，或者看起来很坚固的城墙，交给可莉就对啦！」\\n\\n看着她纯真的笑容和手里的危险品，你不禁为敌国城防感到一丝同情。"
-  gacha_klee_events.1.a: "欢迎你，可莉！"
+  gacha_klee_events.1.title: "西风骑士团·火花骑士·可莉 —— 您的（高危）吉祥物"
+  gacha_klee_events.1.desc: "「哒哒哒~！可莉登场！\n\n咦？这里不是禁闭室，也不是骑士团的总部……\n\n哇，好大的地图！这些红色的旗帜是坏人吗？那些画着城墙的方块是用来炸鱼的石头吗？\n\n我是火花骑士可莉！虽然琴团长总说我太调皮，但我可是很厉害的哦！\n\n只要是这种轰隆隆的东西，或者是那种硬邦邦的墙壁，交给可莉就对啦！\n\n那个……作为交换，能不能不要没收我的蹦蹦炸弹？\n\n我会很听话的！大概……每天只炸一次？\n\n还有还有，这里有好吃的嘟嘟莲吗？」"
+  gacha_klee_events.1.a: "欢迎，可莉！"
 
   gacha_klee_events.2.title: "更大的爆炸！"
-  gacha_klee_events.2.desc: "可莉的力量得到了提升，她兴奋地跳了起来。\\n\\n「哇~可莉变强了！这样就能做出更大的炸弹了！嘻嘻，到时候一定要炸好多好多鱼！」"
+  gacha_klee_events.2.desc: "可莉的力量得到了提升，她兴奋地跳了起来。\n\n「哇~可莉变强了！这样就能做出更大的炸弹了！嘻嘻，到时候一定要炸好多好多鱼！」"
   gacha_klee_events.2.a: "爆炸就是艺术！"
 
-  gacha_klee_events.4.title: "最强的火花骑士"
-  gacha_klee_events.4.desc: "可莉已经达到了力量的巅峰。红色的火焰在她周围跳跃，每一朵火花都蕴含着惊人的力量。\\n\\n「可莉现在超级厉害了！不过...还是不能在城里随便炸东西。琴团长说了，要做个乖孩子~但是在外面炸坏蛋没问题对吧？」\\n\\n她歪着头，一脸天真地问道。"
-  gacha_klee_events.4.a: "当然可以！"
+  gacha_klee_events.4.title: "以火花之名"
+  gacha_klee_events.4.desc: "「我是火花骑士可莉。\n\n最开始来到这里的时候，我其实有一点点害怕。\n\n因为这里没有琴团长的唠叨，没有阿贝多哥哥的画笔，也没有凯亚哥哥帮我写检讨书。\n\n我怕我不小心炸坏了东西，你会像陌生人一样赶我走。\n\n但是，你没有。\n\n每次我把城墙炸出缺口，你都会摸摸我的头说『干得漂亮』。\n\n每次我把敌人的阵地变成焦土，你都会站在我身前，挡住那些指责的视线。\n\n嘿嘿，这种感觉，就像是在家一样安心。\n\n现在，这片大大的疆域，就是可莉新的家啦！\n\n不管是多厚的城墙，还是多坏的敌人，\n\n只要是为了保护你，为了保护我们的家，\n\n可莉都会把它们通通炸飞！\n\n这是火花骑士的承诺哦！\n\n……那个，所以，今天的禁闭可以免掉吗？」"
+  gacha_klee_events.4.a: "当然可以，我的小骑士。"
 
-  gacha_klee_events.11.title: "命之座·觉醒"
-  gacha_klee_events.11.desc: "可莉领悟了「破破弹片」的真意。她的炸弹威力变得更加强大。\\n\\n「嘿嘿，可莉的新炸弹超级厉害的！一个炸弹能炸出好多小炸弹，砰砰砰！」"
-  gacha_klee_events.11.a: "连锁爆炸！"
+  gacha_klee_events.11.title: "甚至不需要动手"
+  gacha_klee_events.11.desc: "「为什么那些敌人的城墙自己就塌了？唔……可能是因为可莉刚才在那边埋了几个『宝藏』吧？嘿嘿，这就是琴团长说的『不战而屈人……之兵』吗？可莉是不是很聪明？」"
+  gacha_klee_events.11.a: "太聪明了！"
 
-  gacha_klee_events.12.title: "命之座·超越"
-  gacha_klee_events.12.desc: "可莉展现出了「砰砰礼物」的姿态。她能够将火花的力量发挥到极致。\\n\\n「这是可莉给大家的礼物哦~虽然是炸弹，但可莉是认真准备的！砰！」"
-  gacha_klee_events.12.a: "爆炸的礼物！"
+  gacha_klee_events.12.title: "艺术就是爆炸！"
+  gacha_klee_events.12.desc: "「全弹发射！哒哒哒——！看呐，那座要塞像烟花一样炸开啦！好漂亮！虽然土地变得黑漆漆的有点可惜，但这样我们就赢了对吧？你会夸奖可莉吗？」"
+  gacha_klee_events.12.a: "做得好！"
+
+  gacha_klee_events.13.title: "“新型”烟花"
+  gacha_klee_events.13.desc: "「看！这是可莉用这边的火药改良的新配方！虽然声音大了一点点，烟雾多了一点点，但是……你看，那些大炮现在是不是跑得更快了？这是可莉给你的礼物哦！」"
+  gacha_klee_events.13.a: "谢谢你的礼物！"
+
+  gacha_klee_events.14.title: "嘟嘟可轰天雷"
+  gacha_klee_events.14.desc: "「这是嘟嘟可的好朋友，超级——无敌——大炸弹！我把它装在车上了，专门送给你！有了它，就没有炸不开的门！出发，全速前进！」"
+  gacha_klee_events.14.a: "全速前进！"
+
+  # === C3 好感事件：未遂的生存守则 ===
+  gacha_klee_c3_title: "未遂的生存守则"
+  
+  # Scene 1: 开场（深夜埋炸弹）
+  gacha_klee_c3_scene_1_desc: "深夜，皇宫花园的一角传来可疑的挖掘声。\n\n我提着灯走过去，发现可莉正撅着屁股，试图把一个还在冒火星的巨大炸弹埋进皇家花坛里。\n\n听到脚步声，她吓得一激灵，炸弹骨碌碌滚到我脚边。\n\n她立刻立正站好，双手背在身后，低着头，头上的呆毛无精打采地垂下来。\n\n可莉：「呜……被发现了。可莉、可莉只是想帮花松松土……」"
+  gacha_klee_c3_scene_1_opt_a: "（严肃）可莉，看着我的眼睛。这是松土吗？"
+  gacha_klee_c3_scene_1_opt_b: "（蹲下，捡起炸弹）引信还没拆呢，很危险的。"
+  gacha_klee_c3_scene_1_opt_c: "（叹气，把她抱起来）脸上都蹭上泥了，小花猫。"
+
+  # Scene 2: 路径A/B展开（深入对话）
+  gacha_klee_c3_scene_2_desc_a: "可莉（眼泪在眼眶里打转）：「呜……对不起！这是新做的炸弹，没地方放了……琴团长说过，不能在城里埋炸弹，可莉忘记了……」"
+  gacha_klee_c3_scene_2_desc_b: "可莉（惊讶地抬头）：「欸？您不生气吗？我还以为……还以为又要去禁闭室了……」\n\n可莉：「我……我其实很怕给您添麻烦。这里的大家都好严肃，只有您会陪可莉玩。」\n\n可莉：「如果我也像其他骑士那样乖乖的，您会不会更喜欢我一点？」"
+  gacha_klee_c3_scene_2_desc_c: "可莉（脸红扑扑的，把脸埋在你肩膀上）：「因为……我想给您一个惊喜嘛。只要埋在这里，如果坏人从后门进来，砰的一声！就飞上天了！」"
+  
+  gacha_klee_c3_scene_2_opt_b1: "不需要变乖。火花骑士如果不可爱了，那还是可莉吗？"
+  gacha_klee_c3_scene_2_opt_b2: "不用改。只要答应我，炸东西前先告诉我，好吗？"
+  gacha_klee_c3_ending_opt: "好了，回家吧。"
+
+  # Scene 3: 路径B - 第3幕（B1/B2分支响应）
+  gacha_klee_c3_scene_3_desc_b1: "可莉（眼睛亮闪闪）：「真的吗？那……那我可以继续研究更大威力的炸弹吗？」"
+  gacha_klee_c3_scene_3_desc_b2: "可莉（拼命点头）：「嗯！嗯！可莉记住了！这是我们两个人的『生存守则』！」"
+  gacha_klee_c3_scene_3_opt: "炸弹没收，回家睡觉。"
+
+  # Ending High (高好感 - 回家)
+  gacha_klee_c3_ending_high: "她破涕为笑，紧紧拉住你的手，步子又变得蹦蹦跳跳起来。\n\n「好耶！我要听打败恶龙的故事！还有还有……」\n\n她回过头，对着那个未完成的土坑做了个鬼脸。\n\n「虽然炸弹没埋成，但可莉找到了比宝藏更重要的东西呢！」"
+  gacha_klee_c3_ending_opt_high: "晚安，可莉。"
 
   # ============================================================
-  # Character - 纳西妲 (Nahida)
+  # Character - 纳西妲 (Nahida) "被删除的时间线备份"
   # ============================================================
 
   # === 姓名 ===
   gacha_first_name_nahida: "纳西妲"
-  gacha_last_name_nahida: "须弥"
+  gacha_last_name_nahida: "布耶尔"
 
   # === 特质 (Traits) ===
-  gacha_nahida_origin_trait: "智慧女神"
-  desc_gacha_nahida_origin_trait: "须弥的神明，布耶尔，意识与世界树相连。虽身居净善宫，她知晓万物的运行逻辑。作为顾问，她提供远超时代的知识体系，能极大促进科研与文化。\\n\\n「知识是通往未来的阶梯，而我，愿做那个扶梯的人。」"
+  gacha_nahida_origin_trait: "净善宫的笼中鸟"
+  desc_gacha_nahida_origin_trait: "「我曾经被关在一个名为净善宫的笼子里，看着外面的人因为无知而受苦。你的国家……似乎也因为**思潮**的闭塞而停滞不前。让我来为你打开窗户吧，知识不该被垄断。」"
 
-  gacha_nahida_awakened_trait: "梦境编织"
-  desc_gacha_nahida_awakened_trait: "纳西妲能够进入并安抚人们的梦境，消除恐惧与迷茫。在她的引导下，民众的思想空前统一，动荡与不安烟消云散。\\n\\n效果：\\n国家动乱度：-2.00\\n思潮传播速度：+20%\\n宗教统一度：+25%"
+  gacha_nahida_awakened_trait: "摩耶之梦的解析者"
+  desc_gacha_nahida_awakened_trait: "「这就是战争吗？虽然我不擅长战斗，但在我眼中，那座要塞的结构就像积木一样简单。只要找到那个关键的『节点』……看，这就是它的**弱点**。不需要流血，只需要一点小小的崩塌。」"
 
-  gacha_nahida_transcended_trait: "世界树守护者"
-  desc_gacha_nahida_transcended_trait: "连接世界树的意识，洞悉过去与未来的真相。她所指引的道路绝不会出错，国家将在最高效的治理下迈向繁荣。\\n\\n效果：\\n行政效率：+5%\\n月度自治度下降：-0.10\\n最大行政容量：+20%"
+  gacha_nahida_transcended_trait: "小吉祥草王"
+  desc_gacha_nahida_transcended_trait: "「治理国家就像照料花圃。如果任由**行政**的杂草疯长，花朵就会枯萎。我会帮你梳理这个庞大帝国的脉络……只是，别指望我像那个『伪神』一样去控制人心哦。」"
+
+  # 命座进阶 Traits
+  gacha_nahida_c2_trait: "千朵玫瑰·早晨"
+  desc_gacha_nahida_c2_trait: "「我将这个国家的每一个角落都连接在了一起。知识不再是学者的特权，而是像阳光一样洒满大地的恩赐。看着吧，当蒙昧被驱散，**思潮**将如千朵玫瑰般绽放。你的国民，会比任何人都更早迎接黎明。」"
+
+  gacha_nahida_c4_trait: "蕴种印·锁死"
+  desc_gacha_nahida_c4_trait: "「只要找到了结构上的『死穴』，再坚固的城墙也不过是沙做的城堡。我已经计算出了敌军防线的一万种崩塌方式。接下来，只需要轻轻推一下……看，**围城**结束了。这就是智慧的力量。」"
+
+  gacha_nahida_c6_trait: "智慧主·布耶尔"
+  desc_gacha_nahida_c6_trait: "「在这里，我不再是被囚禁的神，也不再是需要被抹去的历史。我是布耶尔，是引导这个伟大帝国迈向**全知**的领航者。让我们把所有的**科研**瓶颈都突破吧，我要让这个文明的火光，照亮世界树都触及不到的远方。」"
 
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_nahida_modifier: "净善的加护"
@@ -576,34 +997,66 @@
   gacha_nahida_modifier_desc: "智慧之神的眷顾使得这个国家的科研与思辨氛围空前浓厚。"
 
   # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_nahida_c0_modifier: "须弥座"
+  STATIC_MODIFIER_NAME_gacha_nahida_c0_modifier: "须弥座·零命"
   STATIC_MODIFIER_NAME_gacha_nahida_c1_modifier: "心景幻成"
   STATIC_MODIFIER_NAME_gacha_nahida_c2_modifier: "正觉善见"
   STATIC_MODIFIER_NAME_gacha_nahida_c3_modifier: "智慧主的苦行"
   STATIC_MODIFIER_NAME_gacha_nahida_c4_modifier: "比量破愚"
   STATIC_MODIFIER_NAME_gacha_nahida_c5_modifier: "蕴种之式"
   STATIC_MODIFIER_NAME_gacha_nahida_c6_modifier: "大梦觉悟"
-  STATIC_MODIFIER_NAME_gacha_nahida_c6_country_modifier: "智慧议厅"
-  STATIC_MODIFIER_DESC_gacha_nahida_c6_country_modifier: "纳西妲为学者与官员共议开辟新席位，让制度与改革在更大的议厅内发芽结果。"
-
   # === 事件 (Events) ===
-  gacha_nahida_events.1.title: "草之智慧"
-  gacha_nahida_events.1.desc: "殿内并未响起惊雷或异象，一位白发绿瞳的小神明只是静静站在那里，仿佛她一直都在。她的眼神清澈如林间朝露，却深邃如夜空。\\n\\n「初次见面，我是纳西妲。世界树告诉我，你正在为国家的未来而迷茫。虽然我的身体不大，但也许……我的智慧能为你解开那些缠绕的死结。要不要一起做个关于好梦的实验呢？」\\n\\n她的声音温柔理性，抚平了朝堂上的焦躁。"
-  gacha_nahida_events.1.a: "欢迎您，智慧之神。"
+  gacha_nahida_events.1.title: "布耶尔·纳西妲 —— 被世界遗忘的『备份』"
+  gacha_nahida_events.1.desc: "“初次见面，我是纳西妲，须弥的草神。\n\n……稍微有点奇怪。在我的记录里，并没有关于这个世界的任何数据。\n\n而且，这里没有虚空终端，也没有世界树的根系。\n\n但我却……松了一口气。\n\n因为在这里，那些被『抹除』的记忆还在我的脑海里回响。\n\n那个制造神明的人偶，那棵正在燃烧的树，还有……那个我绝对不能遗忘的名字（大慈树王）。\n\n既然命运将我这个本该消失的『备份』保存到了这里，想必是有理由的吧。\n\n这就当做是一次漫长的『梦境』实验好了。\n\n我会用我的智慧，帮你解析这个世界的底层逻辑。\n\n作为交换……请你，做我唯一的『记录者』，好吗？”"
+  gacha_nahida_events.1.a: "欢迎，智慧之神。"
 
   gacha_nahida_events.2.title: "智慧增长"
-  gacha_nahida_events.2.desc: "纳西妲的力量得到了提升，翠绿色的草元素在她周围流转。\\n\\n「看，世界树赐予了我新的力量。这样的话，我就能更好地帮助大家了~」"
+  gacha_nahida_events.2.desc: "纳西妲的力量得到了提升，翠绿色的草元素在她周围流转。\n\n「看，世界树赐予了我新的力量。这样的话，我就能更好地帮助大家了~」"
   gacha_nahida_events.2.a: "知识的力量！"
 
-  gacha_nahida_events.4.title: "大梦觉悟"
-  gacha_nahida_events.4.desc: "纳西妲已经达到了力量的巅峰。她周身环绕着璀璨的绿色光芒，整个世界仿佛都在她的智慧之下。\\n\\n「这就是完全觉醒的力量啊...现在，我可以真正守护所有人的梦想了。谢谢你一直以来的信任，让我们一起创造一个美好的未来吧~」"
-  gacha_nahida_events.4.a: "智慧照耀世界！"
+  gacha_nahida_events.4.title: "未被篡改的历史"
+  gacha_nahida_events.4.desc: "「我是纳西妲，智慧的主人布耶尔。\n\n告诉你一个秘密吧。\n\n在那个遥远的提瓦特，应该还有一个『纳西妲』正在治理须弥。\n\n她可能比我更快乐，更轻松。\n\n因为她忘记了那个为了拯救世界而牺牲的伟大神明，也忘记了曾经有一个叫做『散兵』的人偶试图成神。\n\n世界树修改了她的记忆，让她以为自己一直都是完美的神。\n\n……有时候，我其实很羡慕她。\n\n但更多时候，我庆幸自己来到了这里。\n\n庆幸被你召唤的是『这个我』。\n\n因为这份痛苦的记忆，这份关于牺牲、背叛和救赎的真相，如果连我也忘记了……\n\n那这世界上，就真的没有人记得『她』存在过了。\n\n谢谢你，愿意接纳这个并不完美、背负着旧日残渣的我。\n\n在这里，我们可以书写一段**不需要被修改**的历史吗？\n\n一段不需要任何人牺牲，也能通向Happy Ending的历史。\n\n我会用我全部的智慧，为你运算出那个未来。」"
+  gacha_nahida_events.4.a: "我们一起书写。"
 
-  gacha_nahida_events.11.title: "命之座·觉醒"
-  gacha_nahida_events.11.desc: "纳西妲领悟了「正觉善见」的权能。她能透过现象看到本质，洞察人心深处的渴望与恐惧。\\n\\n「每个人都是一颗星，只要读懂他们的轨迹，就没有解不开的误会。治理国家也是如此，要听懂风的声音。」"
-  gacha_nahida_events.11.a: "洞察一切！"
+  gacha_nahida_events.11.title: "知识的根系"
+  gacha_nahida_events.11.desc: "「看啊，**思潮**正在像根系一样蔓延。在原本的世界，人们因为追求『禁忌知识』而疯狂。但在这里，我们要让智慧成为每个人都能触碰的阳光。不用担心副作用，我会一直看着的。」"
+  gacha_nahida_events.11.a: "传播智慧！"
 
-  gacha_nahida_events.12.title: "命之座·超越"
-  gacha_nahida_events.12.desc: "纳西妲展现出了「比量破愚」的姿态。她的智慧已经能够消除人们心中的迷惘与困惑。\\n\\n「智慧不是用来炫耀的，而是用来帮助别人的。让我们一起驱散无知的黑暗，让知识的光芒照亮每一个人~」"
-  gacha_nahida_events.12.a: "智慧之光！"
+  gacha_nahida_events.12.title: "因果的连结"
+  gacha_nahida_events.12.desc: "「只要将敌人全部『蕴种印』标记，他们的动向就尽在掌握。不论是隐秘的补给线，还是城墙的裂缝，在智慧之神面前都无所遁形。这就是……以智慧**围城**的方式。」"
+  gacha_nahida_events.12.a: "洞察一切！"
+
+  gacha_nahida_events.13.title: "多余的算力"
+  gacha_nahida_events.13.desc: "「虽然这里没有虚空，但我依然保留了处理海量数据的习惯。既然你的学者们还在为那几个课题争吵，我就顺手帮你把**科研**方案优化了一下。多出来的时间……能陪我讲讲这个世界的童话吗？」"
+  gacha_nahida_events.13.a: "当然可以。"
+
+  gacha_nahida_events.14.title: "虚空的扩容"
+  gacha_nahida_events.14.desc: "「国家的疆域扩大了，**行政**的负担也变重了呢。不过没关系，我已经重新编译了官僚体系的逻辑。现在，哪怕是再遥远的边疆，也能听见智慧的声音。」"
+  gacha_nahida_events.14.a: "高效治理！"
+
+  # === C3 好感事件：被遗忘者的夜晚 ===
+  gacha_nahida_c3_title: "被遗忘者的夜晚"
+  
+  # Scene 1: 开场（图书馆夜话）
+  gacha_nahida_c3_scene_1_desc: "深夜的皇家图书馆。纳西妲坐在高高的书堆上，双脚悬空轻轻晃动。\n\n她没有看书，而是闭着眼睛，似乎在连接那个已经不存在的“虚空”。\n\n听到你的脚步声，她睁开眼，绿色的瞳孔里有一丝罕见的迷茫。\n\n纳西妲：「……我在尝试检索关于『树王』的数据。但是，无论我怎么回忆，那些细节都在变得模糊。在这个世界，连我的记忆也会慢慢风化吗？」"
+  gacha_nahida_c3_scene_1_opt_a: "别怕，我会帮你把它们写下来，写进史书里。"
+  gacha_nahida_c3_scene_1_opt_b: "如果太痛苦的话，忘记也没关系。我们创造新的记忆就好。"
+  gacha_nahida_c3_scene_1_opt_c: "（递过去一颗糖）思考太多会长不高的，吃点甜的吧。"
+
+  # Scene 2: 路径A/B展开（深入对话）
+  gacha_nahida_c3_scene_2_desc_a: "纳西妲（微微睁大眼）：「写进这个世界的史书吗？……这是个好主意。哪怕是异世界的文字，只要刻在石头上，就不会被世界树删除了吧。」\n\n纳西妲：「但是，如果有一天你也消失了，或者这个世界也重启了，这些记录还有意义吗？」"
+  gacha_nahida_c3_scene_2_desc_b: "纳西妲（摇摇头，眼神坚定）：「不……不能忘记。如果连痛苦都忘记了，那我也就不完整了。不过……创造新的记忆，这个提议我不讨厌。」\n\n纳西妲：「但是，如果有一天你也消失了，或者这个世界也重启了，这些记录还有意义吗？」"
+  gacha_nahida_c3_scene_2_desc_c: "纳西妲（鼓起脸颊）：「我可是五百岁了！……不过，枣椰蜜糖的味道，确实能缓解大脑过载。啊……张嘴。」"
+  
+  gacha_nahida_c3_scene_2_opt_a1: "只要文明还在，历史就会延续。这就是我建立这个帝国的意义。"
+  gacha_nahida_c3_scene_2_opt_a2: "至少在此刻，我记得。我是你唯一的『备份』。"
+  gacha_nahida_c3_ending_opt: "早点休息吧。"
+
+  # Scene 3: 路径A - 第3幕（A1/A2分支响应）
+  gacha_nahida_c3_scene_3_desc_a1: "纳西妲（露出欣赏的笑）：「很有气势的回答呢。你是想做这个世界的『大慈树王』吗？呵呵，那我可要更努力地辅佐你了。」"
+  gacha_nahida_c3_scene_3_desc_a2: "纳西妲（怔住，跳下书堆）：「唯一的……备份。是啊，只要有一个人记得，『存在』就是真实的。那么，请保护好你的大脑哦，那里面现在装着神明的珍宝。」"
+  gacha_nahida_c3_scene_3_opt: "夜深了，该休息了。"
+
+  # Ending High (高好感 - 最初的贤者)
+  gacha_nahida_c3_ending_high: "她伸出小手，牵住了你的一根手指。\n\n「嗯。\n\n以前在净善宫，我只能在梦里看外面的世界。\n\n现在，外面的世界就在我眼前，你也在我眼前。\n\n这比任何梦境都要真实。\n\n……晚安，我最初的贤者。」"
+  gacha_nahida_c3_ending_opt_high: "晚安，纳西妲。"
 

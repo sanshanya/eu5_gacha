@@ -15,7 +15,7 @@
       base = 0
       modifier = {
         add = 255
-        has_trait = gacha_klee_origin_trait
+        has_character_modifier = gacha_klee_modifier
       }
     }
   }

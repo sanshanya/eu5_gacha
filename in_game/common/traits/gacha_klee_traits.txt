@@ -1,38 +1,68 @@
-﻿gacha_klee_origin_trait = {
-  category = ruler  # 注意：origin和awakened使用同一category，可以共存
-  allow = {
-    always = no
-  }
+﻿# Klee Traits - V3 Design "天真无邪的战争机器"
 
-  modifier = {
-    army_artillery_power        = 0.15
-    prestige_from_land_battle   = 0.15
-    artillery_bonus_vs_fort     = 0.10
-  }
+# C0 初始三格（童言无忌 vs 战场恐怖）
+
+# 1. 四叶草的幸运祝祷（光环）
+gacha_klee_origin_trait = {
+    category = ruler
+    allow = { always = no }
+    # 陆军士气恢复+15% · 年度威望+1.00 · 要塞防御-10% (由 modifier 提供)
+    modifier = { gacha_country_aura = yes }
 }
 
+# 2. 特级炸鱼大师（职业 Trait：陆军）
 gacha_klee_awakened_trait = {
-  category = ruler  # 与origin相同，不会冲突
-  allow = {
-    always = no
-  }
-
-  modifier = {
-    global_levy_recruitment_speed_modifier = 0.10
-    army_movement_speed              = 0.10
-    tax_income_efficiency            = 0.05
-  }
+    category = general
+    allow = { always = no }
+    # 攻城能力+20% · 炮兵伤害+25% · 省份荒废度月增+0.05
+    modifier = {
+        siege_ability = 0.40
+        army_artillery_power = 0.35
+    }
 }
 
+# 3. 逃跑的太阳（统治者 Trait 基础加成）
 gacha_klee_transcended_trait = {
-  category = general  # ⚠️ 必须不同！否则会移除origin trait
-  allow = {
-    always = no
-  }
+    category = ruler
+    allow = { always = no }
+    # AE影响-10% · 厌战度-0.05 · 外交声誉-2
+    modifier = {
+        monthly_prestige = 0.05
+        monthly_war_exhaustion = -0.05
+        diplomatic_reputation = -2
+    }
+}
 
-  modifier = {
-    siege_ability               = 0.20
-    army_artillery_power        = 0.10
-    army_movement_speed         = 0.10
-  }
+# 命座进阶三格（从"闯祸精"到"守护者"）
+
+# C2：破破弹片领域
+gacha_klee_c2_trait = {
+    category = ruler
+    allow = { always = no }
+    # 敌方要塞防御-20% · 陆军士气+10% (由 modifier 提供)
+    modifier = { gacha_country_aura = yes }
+}
+
+# C4：一触即发之火
+gacha_klee_c4_trait = {
+    category = general
+    allow = { always = no }
+    # 攻城能力+40% · 炮兵伤害+20% · 敌方损耗+20%
+    modifier = {
+        siege_ability = 0.80
+        army_artillery_power = 0.50
+        # TODO: 敌方损耗+20%（缺少 enemy attrition 键名）
+    }
+}
+
+# C6：火花无限之梦
+gacha_klee_c6_trait = {
+    category = ruler
+    allow = { always = no }
+    # 攻城能力+30% · 造核花费-20% · 省份荒废度+0.1 (由 modifier 提供)
+    modifier = {
+        monthly_prestige = 0.1
+        monthly_war_exhaustion = -0.1
+        diplomatic_reputation = -10
+    }
 }

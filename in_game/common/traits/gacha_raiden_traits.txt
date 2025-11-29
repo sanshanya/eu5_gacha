@@ -1,31 +1,67 @@
-﻿# Generated Traits for raiden
+﻿# Raiden Traits - V3 Design (照搬心海/菲谢尔结构)
+
+# C0 初始三格（角色面板三格）
+
+# 1. 鸣神岛·永恒静土（光环）
 gacha_raiden_origin_trait = {
     category = ruler
     allow = { always = no }
-    modifier = {
-        global_manpower_modifier = 0.25   # 稻妻军政一体的征兵网络
-        land_morale_modifier = 0.3       # 雷霆镇国的气势
-        discipline = 0.20                # 御前刀阵的严格操典
-        monthly_legitimacy = 0.08         # 以「永恒」正名的权威
-    }
+    # 战争厌倦度 -0.05/月 · 正统性 +0.08/月
+    modifier = { gacha_country_aura = yes }
 }
 
+# 2. 无想之一刀（职业 Trait：陆军）
 gacha_raiden_awakened_trait = {
-    category = ruler
-    allow = { always = no }
-    modifier = {
-        legislative_efficiency = 0.05
-        stability_cost = -0.10
-        global_estate_satisfaction_recovery = 0.15
-    }
-}
-
-gacha_raiden_transcended_trait = {
     category = general
     allow = { always = no }
+    # 纪律+5% · 战场先手+15%
     modifier = {
-        army_movement_speed = 0.25
-        land_morale_modifier = 0.05
-        army_infantry_power = 0.20
+        discipline = 0.10
+        army_initiative = 0.25
+    }
+}
+
+# 3. 天下人之大权（统治者 Trait 基础加成）
+gacha_raiden_transcended_trait = {
+    category = ruler
+    allow = { always = no }
+    # 内政效率+30% · 战争厌倦度 -0.05/月
+    modifier = {
+        legislative_efficiency = 0.30
+        monthly_war_exhaustion = -0.05
+    }
+}
+
+# 命座进阶三格（随命座等级解锁）
+
+# C2：祸津·稻光
+gacha_raiden_c2_trait = {
+    category = ruler
+    allow = { always = no }
+    # 战争厌倦度 -0.10/月 · 建造时间 -10%
+    modifier = { gacha_country_aura = yes }
+}
+
+# C4：梦想·真说
+gacha_raiden_c4_trait = {
+    category = general
+    allow = { always = no }
+    # 纪律+10% · 先手+20% · 士气恢复+2%
+    modifier = {
+        discipline = 0.20
+        army_initiative = 0.50
+        land_morale_recovery = 0.1
+    }
+}
+
+# C6：源流·许愿星
+gacha_raiden_c6_trait = {
+    category = ruler
+    allow = { always = no }
+    # 立法效率+15% · 威望+0.5/月 · 战争厌倦度 -0.10/月
+    modifier = {
+        legislative_efficiency = 0.45
+        legislative_efficiency = 0.40
+        monthly_war_exhaustion = -0.10
     }
 }

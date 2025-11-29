@@ -1,59 +1,58 @@
 ﻿gacha_apply_constellation_stats_effect = {
-    if = { limit = { NOT = { has_variable = gacha_total_rolls_count } }  set_variable = { name = gacha_total_rolls_count value = 0 } }
-    # 1. 清理旧修正
-    remove_character_modifier = gacha_$who$_c0_modifier
-    remove_character_modifier = gacha_$who$_c1_modifier
-    remove_character_modifier = gacha_$who$_c2_modifier
-    remove_character_modifier = gacha_$who$_c3_modifier
-    remove_character_modifier = gacha_$who$_c4_modifier
-    remove_character_modifier = gacha_$who$_c5_modifier
-    remove_character_modifier = gacha_$who$_c6_modifier
-    remove_country_modifier   = gacha_$who$_c6_country_modifier
+    # Safety Init
+    if = { limit = { NOT = { has_variable = gacha_constellation_lvl } }  set_variable = { name = gacha_constellation_lvl value = 0 } }
 
-    # 2. 应用新修正 (使用 var: 写法)
+    # --------------------------------------------------------------------------
+    # Delta Modifier Logic
+    # --------------------------------------------------------------------------
+    
+    # Level 0: Add C0
     if = {
         limit = { var:gacha_constellation_lvl = 0 }
         add_character_modifier = { modifier = gacha_$who$_c0_modifier mode = add_and_extend years = -1 }
     }
+
+    # Level 1: Remove C0, Add C1
     else_if = {
         limit = { var:gacha_constellation_lvl = 1 }
+        remove_character_modifier = gacha_$who$_c0_modifier
         add_character_modifier = { modifier = gacha_$who$_c1_modifier mode = add_and_extend years = -1 }
     }
+
+    # Level 2: Remove C1, Add C2
     else_if = {
         limit = { var:gacha_constellation_lvl = 2 }
+        remove_character_modifier = gacha_$who$_c1_modifier
         add_character_modifier = { modifier = gacha_$who$_c2_modifier mode = add_and_extend years = -1 }
     }
+
+    # Level 3: Remove C2, Add C3
     else_if = {
         limit = { var:gacha_constellation_lvl = 3 }
+        remove_character_modifier = gacha_$who$_c2_modifier
         add_character_modifier = { modifier = gacha_$who$_c3_modifier mode = add_and_extend years = -1 }
     }
+
+    # Level 4: Remove C3, Add C4
     else_if = {
         limit = { var:gacha_constellation_lvl = 4 }
+        remove_character_modifier = gacha_$who$_c3_modifier
         add_character_modifier = { modifier = gacha_$who$_c4_modifier mode = add_and_extend years = -1 }
     }
+
+    # Level 5: Remove C4, Add C5
     else_if = {
         limit = { var:gacha_constellation_lvl = 5 }
+        remove_character_modifier = gacha_$who$_c4_modifier
         add_character_modifier = { modifier = gacha_$who$_c5_modifier mode = add_and_extend years = -1 }
     }
+
+    # Level 6+: Remove C5, Add C6
     else_if = {
         limit = { var:gacha_constellation_lvl >= 6 }
+        remove_character_modifier = gacha_$who$_c5_modifier
         add_character_modifier = { modifier = gacha_$who$_c6_modifier mode = add_and_extend years = -1 }
     }
-    if = {
-        limit = { var:gacha_constellation_lvl >= 6 }
-        root = {
-            add_country_modifier = { modifier = gacha_$who$_c6_country_modifier days = -1 }
-        }
-    }
-
-    # 3. 根据命座等级，添加额外的特性（完全泛型）
-    # add_trait 不会重复添加，所以这样写是安全的
-    if = {
-        limit = { var:gacha_constellation_lvl >= 2 }
-        add_trait = trait:gacha_$who$_awakened_trait
-    }
-    if = {
-        limit = { var:gacha_constellation_lvl >= 4 }
-        add_trait = trait:gacha_$who$_transcended_trait
-    }
 }
+
+

@@ -3,7 +3,7 @@
 # 抽卡系统 V3 数据层：熵值与概率公式、池子索引等
 # ---------------------------------------------------
 # 说明：
-# - 所有公式仅依赖  与其他 script_value
+# - 所有公式仅依赖 var: 与其他 script_value
 # - 仅负责数学计算，不做任何状态修改
 # - 对“未初始化变量”做容错处理（当作 0）
 # ===================================================
@@ -58,7 +58,7 @@ gacha_calc_5star_prob_sv = {
     if = {
         limit = {
             has_variable = gacha_pity_5star_count
-            gacha_pity_5star_count >= 73
+            var:gacha_pity_5star_count >= 73
         }
         add = {
             value = var:gacha_pity_5star_count
@@ -71,7 +71,7 @@ gacha_calc_5star_prob_sv = {
     if = {
         limit = {
             has_variable = gacha_pity_5star_count
-            gacha_pity_5star_count >= 89
+            var:gacha_pity_5star_count >= 89
         }
         value = 10001
     }
@@ -88,7 +88,7 @@ gacha_calc_4star_prob_sv = {
     if = {
         limit = {
             has_variable = gacha_pity_4star_count
-            gacha_pity_4star_count >= 8
+            var:gacha_pity_4star_count >= 8
         }
         add = {
             value = var:gacha_pity_4star_count
