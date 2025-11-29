@@ -1,39 +1,58 @@
-﻿gacha_klee_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_core = yes
-  gacha_fire_godeye = yes
+﻿# Generated Modifiers for klee (V3) "天真无邪的战争机器"
+
+# 角色标识：可莉本体
+gacha_klee_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    gacha_fire_godeye = yes
 }
 
-gacha_klee_c0_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 0
-}
-gacha_klee_c1_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 1
-}
-gacha_klee_c2_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 2
-}
-gacha_klee_c3_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 3
-}
-gacha_klee_c4_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 4
-}
-gacha_klee_c5_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 5
-}
-gacha_klee_c6_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 6
+# 命之座等级展示（0-6）
+gacha_klee_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_klee_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_klee_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_klee_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_klee_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_klee_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_klee_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（陆军士气恢复+15%, 年度威望+1.00, 要塞防御-10%）
+gacha_klee_country_modifier = {
+    game_data = { category = country decaying = no }
+    siege_ability = 0.20
+    land_morale_recovery = 0.02
+    monthly_prestige = 0.08
 }
 
+# C2 光环升级（敌方要塞防御-20% -> Siege Ability +20%, 陆军士气+10%）
+gacha_klee_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    siege_ability = 0.40
+    land_morale = 0.10
+    land_morale_recovery = 0.08
+    monthly_prestige = 0.08
+    # monthly_devastation = 0.05
+}
+
+# C1 专属机制：炮兵花费 -10%
+gacha_klee_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    army_artillery_build_cost_modifier = -0.10
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_klee_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：炮兵战斗力 +10% (配合免费炮兵)
+gacha_klee_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    army_artillery_power = 0.10
+    # TODO: 免费炮兵团（无直接 modifier，可用事件/效果后续实现）
+}
+
+# C6 国家级机制（攻城能力+30%, 造核花费-20%, 省份荒废度+0.1）
 gacha_klee_c6_country_modifier = {
-  game_data = { category = country decaying = no }
-  government_size = 1
+    game_data = { category = country decaying = no }
 }

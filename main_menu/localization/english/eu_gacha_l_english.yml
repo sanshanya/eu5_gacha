@@ -191,14 +191,31 @@
   gacha_xinhai_events.12.a: "The sea will be our sharpest blade!"
 
   # === C3 Affinity Event (V3) ===
-  gacha_xinhai_c3_title: "Moonlit Conversation"
-  gacha_xinhai_c3_desc_intro: "On a night when court business finally relents, you and Sangonomiya Kokomi stand upon the terrace. Moonlight spills over maps and war manuals alike, and over the strategist who tries to hide her weariness behind a calm smile.\n\nShe clutches her codex a little tighter as she sits beside you, eyes drifting more to the night sky than to the pages in her hands."
-  gacha_xinhai_c3_desc_path_a: "You ask her to speak of Watatsumi.\n\nHer gaze brightens in the silver light as she describes coral lanterns in Bourou Village, tides glimmering with scattered stars, and children chasing shoals under a crescent moon. As she speaks, you can almost hear the distant hush of waves against her island's shores."
-  gacha_xinhai_c3_desc_path_b: "You say nothing at all, simply setting a cloak over her shoulders and sharing the silence.\n\nKokomi's posture slowly relaxes. In a quiet voice she admits that, somehow, this foreign palace feels a little like home—at least on nights when someone is willing to watch the moon with her."
-  gacha_xinhai_c3_option_a1: "\"Tell me more about your home.\""
-  gacha_xinhai_c3_option_b1: "\"For tonight, let's just sit here.\""
-  gacha_xinhai_c3_option_good: "\"Next time, we'll watch the moon again.\""
-  gacha_xinhai_c3_option_neutral: "\"Get some rest—tomorrow brings more work.\""
+  gacha_xinhai_c3_title: "Tactical Retreat in Moonlight"
+  gacha_xinhai_c3_scene_1_desc: "A candle over tax ledgers gutters out; arguments on levies and frontier supply finally fall silent. Your temples throb as you push open the heavy door to the terrace.\n\nThe night breeze is cool with dew, yet at the heart of empire it is hard to truly relax. Wind scours walls and corridors, whispering like countless unsigned decrees.\n\nYou need a momentary escape."
+  gacha_xinhai_c3_scene_1_opt_a: "Step onto the terrace"
+  gacha_xinhai_c3_scene_1_opt_b: "Skip the scene"
+  gacha_xinhai_c3_scene_2_desc: "The usually empty corner is occupied tonight.\n\nIt is Sangonomiya Kokomi.\n\nShe hasn't noticed you. The Divine Priestess who commands armies by day now lies slack against the cold railing like a seashell left by the tide.\n\nOne hand traces slow arcs in the moonlight, as if sketching fish in a deep sea. A posture you'd never see before a map—unguarded, even a little dazed."
+  gacha_xinhai_c3_scene_2_opt_a: "Walk softly"
+  gacha_xinhai_c3_scene_3_desc: "Even with care, a leaf crunches underfoot. Kokomi jolts like a startled fish, back pressed to stone.\n\nIn an instant the haze drains from her eyes, replaced by the reflexive alertness of a strategist—if you ignore a dusting of crumbs at the corner of her mouth.\n\nKokomi: \"...Your Majesty? S-such a late hour... on patrol?\"\n\nHer voice is taut but steady. Her gaze darts past you to confirm no attendants follow.\n\nKokomi: \"I've already... mentally reviewed the night rotation of the garrison. No oversights.\""
+  gacha_xinhai_c3_scene_3_opt_a: "Stop where you are"
+  gacha_xinhai_c3_scene_4_desc: "She is marshaling every ounce of reason to spin a tactical excuse for whatever you might have heard. Seeing her on high alert, trying to prop up the image of the Divine Priestess, you decide:"
+  gacha_xinhai_c3_scene_4_opt_a: "Set your cloak around her shoulders"
+  gacha_xinhai_c3_scene_4_opt_b: "Pat the railing beside you"
+  gacha_xinhai_c3_scene_5_desc_a: "She flinches at the touch, then a different calm overtakes her. \"...Thank you, Your Majesty.\" \n\nHer shoulders loosen; the mask of perfection cracks."
+  gacha_xinhai_c3_scene_5_desc_b: "She hesitates, then takes the unspoken invitation and sits. \"...Yes, understood.\" \n\nShe places her codex aside, folding her hands to keep them from fidgeting."
+  gacha_xinhai_c3_scene_6_desc: "For a while, neither of you speaks. The moon washes her features pale, and for once she looks not like a general, but a young woman far from home, soaking in a fragile peace."
+  gacha_xinhai_c3_scene_6_opt_a: "Break the silence"
+  gacha_xinhai_c3_scene_6_opt_b: "Let the silence linger"
+  gacha_xinhai_c3_scene_7_desc_a: "Kokomi: \"...When I was small, I'd sneak to the cliffs of Watatsumi. Coral lanterns lit Bourou Village; tides shimmered with starlight. Children chased shoals under a crescent moon.\"\n\nHer eyes drift to some distant sea only she can see."
+  gacha_xinhai_c3_scene_7_desc_b: "Kokomi (quiet): \"...Thank you. It's strange—this foreign palace almost feels like home on nights like this. Or maybe, anywhere can feel like home if someone will just watch the moon with me.\""
+  gacha_xinhai_c3_scene_7_opt_a: "\"Tell me more about your island.\""
+  gacha_xinhai_c3_scene_7_opt_b: "\"Then let's just watch, together.\""
+  gacha_xinhai_c3_scene_8_desc: "Her fingers tap her codex, the only sign of lingering vigilance.\n\nKokomi: \"I'll have the rotation for the inner guard finalized by dawn. And... I'll reduce your night workload. Fatigue... causes mistakes.\"\n\nShe tries to sound official, but the last line is too soft to be mere protocol."
+  gacha_xinhai_c3_scene_8_opt_a: "\"Good night, Strategist.\""
+  gacha_xinhai_c3_scene_8_opt_b: "\"See you on the next moonlit night.\""
+  gacha_xinhai_c3_ending_a: "She rises, posture once more impeccable. \"Rest well, Your Majesty.\" \n\nYet as she leaves, her steps are lighter, as if the weight of a tide briefly eased."
+  gacha_xinhai_c3_ending_b: "She lingers a heartbeat longer. \"...Next time, bring the maps. We'll chart the constellations together.\" \n\nFor the first time, the commander of Watatsumi lets herself lean on someone else's shoulder—if only for a moment."
 
   # ============================================================
   # §Y Character - Raiden Shogun §!
@@ -253,8 +270,28 @@
   gacha_raiden_events.11.a: "Peace under heaven."
 
   gacha_raiden_events.12.title: "Constellation · Transcendence"
-  gacha_raiden_events.12.desc: "The Raiden Shogun displays the stance of \"Shogun's Excellency.\" On the battlefield she is like a demon god; all enemies before her are but ants.\n\n\"This moment is one of annihilation!\"\n\n$gacha_text_reward_legitimacy_small$"
-  gacha_raiden_events.12.a: "Invincible!"
+gacha_raiden_events.12.desc: "The Raiden Shogun displays the stance of \"Shogun's Excellency.\" On the battlefield she is like a demon god; all enemies before her are but ants.\n\n\"This moment is one of annihilation!\"\n\n$gacha_text_reward_legitimacy_small$"
+gacha_raiden_events.12.a: "Invincible!"
+
+# === C3 Relationship Chain ===
+gacha_raiden_c3_title: "Midnight Pastries"
+
+gacha_raiden_c3_scene_1_desc: "It is a thunderous midnight. The Raiden Shogun, usually a statue before the map, now sits by the window, brow furrowed.\n\nIn her hands—not a battle report, but a dossier titled “Otherworldly Pastry Recipes”?\n\nAt your footsteps she jolts, hides the report, and regains her stern gaze—though her pace quickens just a beat.\n\nRaiden Shogun (Ei): \"...Still awake? I was merely reviewing logistics. Certainly not reading anything strange.\""
+gacha_raiden_c3_scene_1_opt_a: "Do logistics lists include the recipe for Dango Milk?"
+gacha_raiden_c3_scene_1_opt_b: "The thunder outside is loud. Bad mood?"
+gacha_raiden_c3_scene_1_opt_c: "(Silently offer a plate of pastries you prepared.)"
+
+gacha_raiden_c3_ending_a: "Ei (freezes, then sighs, shoulders relaxing): \"...Your insight is sometimes troublesome. Since you saw it, I won't hide. This world’s sugar supply seems... lacking.\"\n\nShe returns to the window, violet eyes on the rain, saying no more."
+
+gacha_raiden_c3_ending_b: "Ei (looks out the window): \"No... the thunder is the ‘Shogun’ maintaining awe. I just... feel this rain is too much like that day in Inazuma. It makes it hard to be still.\" She folds her arms as if shielding herself. The storm taps at the panes."
+
+gacha_raiden_c3_scene_2_desc: "Ei (takes a bite, visibly delighted): \"...Mm. Sweetness is just right. Not quite tri-color dango, but... hmm, don't look at me like that.\""
+gacha_raiden_c3_scene_2_opt_b1: "You're too tense. Even a god needs rest."
+gacha_raiden_c3_scene_2_opt_b2: "If you like it, I can list this as a ‘national strategic reserve’."
+
+gacha_raiden_c3_scene_3_desc_b1: "Ei (puts the pastry down, voice low): \"Rest... is a luxury. The moment I slacken, ‘wear’ slips in. I cannot... lose anything else.\"\n\nTiredness flashes in her violet eyes.\n\nEi: \"But... if only occasionally, would you stay with me? Like this...\""
+gacha_raiden_c3_scene_3_desc_b2: "Ei (chuckles): \"Nonsense. What ruler calls sweets national policy? ...But if it's just your private ‘special expense,’ I might... allow it.\" Her gaze softens, a rare smile on her lips.\n\nEi: \"Honestly... with you saying that, I don't even know whether to answer as ‘Shogun’ or ‘Ei.’\""
+gacha_raiden_c3_scene_3_opt: "Don't worry. In this country, you need not bear ‘Eternity’ alone. Eat when you want, look at the view when you want—if the sky falls, we'll shoulder it together."
 
   # ============================================================
   # §Y Character - Furina §!
@@ -286,8 +323,30 @@
   gacha_furina_events.11.a: "Feel the strength!"
 
   gacha_furina_events.12.title: "Constellation Transcended"
-  gacha_furina_events.12.desc: "Furina surpasses herself!"
-  gacha_furina_events.12.a: "Unrivaled!"
+gacha_furina_events.12.desc: "Furina surpasses herself!"
+gacha_furina_events.12.a: "Unrivaled!"
+
+gacha_furina_c3_title: "An Empty Audience"
+gacha_furina_c3_scene_1_desc: "The royal opera house lies empty at midnight. You were only passing by when muffled sobs echo from the stage.\n\nFurina sits on the edge of the boards, legs dangling. No splendid gown—just a plain nightdress.\n\nA half-eaten slice of cake in hand, she nibbles and cries.\n\nSeeing you approach, she hurriedly wipes her face and tries to summon her haughty pose, but her voice is plainly nasal.\n\nFurina: \"Ahem... out so late, common—no, why are you here? I-I was just... practicing a crying scene! Yes, a crying scene!\""
+gacha_furina_c3_scene_1_opt_a: "What's it called? \"The Cake-Stealing Crybaby\"?"
+gacha_furina_c3_scene_1_opt_b: "(Sit beside her.) Save me a bite?"
+gacha_furina_c3_scene_1_opt_c: "There are no audiences here, Furina. You don't have to act."
+
+gacha_furina_c3_ending_a: "Furina (face reddens, half laughing through tears): \"You! ...How rude! This is a Fontaine limited dessert! ...And I'm not crying, the cream just choked me!\"\n\nShe stuffs the cake in her mouth and turns away, but her shoulders tremble—you can't tell if it's laughter or tears."
+
+gacha_furina_c3_ending_c: "Furina (freezes, lowers her head): \"...You really can't read the room. Sometimes acting is so you don't fall apart.\"\n\nShe sets the cake aside, hugs her knees like a wounded kitten. You say nothing, simply stay."
+
+gacha_furina_c3_scene_2_desc: "Furina (startled, offers the cake): \"...Only one bite. I queued forever for this—fine, half, for the sake of your work.\"\n\nShe hands it over, then asks softly: \"...Is it sweet? When pressure got bad, one sweet bite made me feel I could hold on another day.\""
+gacha_furina_c3_scene_2_opt_b1: "Very sweet. If you want more, I'll have the royal chefs make it daily."
+gacha_furina_c3_scene_2_opt_b2: "Still bitter—your tears are in it."
+
+gacha_furina_c3_scene_3_desc_b1: "Furina (shakes her head): \"Then there's no anticipation. And... maybe I don't need to grit my teeth that hard anymore.\"\n\nShe looks up at you, tear tracks still there, but smiling.\n\nFurina: \"...With you here, every day feels worth looking forward to.\""
+gacha_furina_c3_scene_3_desc_b2: "Furina (stares at you, dazed): \"...Since when were your lines this good? That's... cheating.\"\n\nShe laughs, wipes her eyes, and splits the cake in two.\n\nFurina: \"Then... let's eat the bitter half together.\""
+gacha_furina_c3_scene_3_opt: "You used to perform for everyone—exhausting. From now on, if you're unhappy, perform for me alone; if you're tired, just be yourself."
+
+gacha_furina_c3_ending_b: "She stays silent a long while. The stage is empty save for moonlight.\n\nShe gently leans on your shoulder like a cat putting away its claws.\n\n\"...Being myself is boring, you know?\n\nI'll be willful, I'll slack, I'll throw a tantrum if there's no good cake...\n\nEven so...\n\nWill you keep watching me?\"\n\n(She closes her eyes before you can answer.)\n\n\"Then... it's settled.\n\n...My first audience.\""
+gacha_furina_c3_ending_opt: "Walk her back"
+gacha_furina_c3_ending_opt_high: "I'll applaud you forever"
 
   gacha_furina_events.4.title: "Max Constellations"
   gacha_furina_events.4.desc: "Furina has reached the peak of her strength!"
@@ -402,8 +461,29 @@
   gacha_hutao_events.11.a: "Burn, butterflies!"
 
   gacha_hutao_events.12.title: "Constellation · Transcendence"
-  gacha_hutao_events.12.desc: "Hu Tao displays the form of \"Spirit Soother\" and fully commands the power of passing on.\n\n\"Flowers bloom and fade, the moon waxes and wanes—everything has its time. Grasp that, and you understand the truth of life and death.\"\n\nButterfly flames form a perfect ring around her, symbolizing life's endless cycle.\n\n$gacha_text_reward_legitimacy_small$"
-  gacha_hutao_events.12.a: "Life without end!"
+gacha_hutao_events.12.desc: "Hu Tao displays the form of \"Spirit Soother\" and fully commands the power of passing on.\n\n\"Flowers bloom and fade, the moon waxes and wanes—everything has its time. Grasp that, and you understand the truth of life and death.\"\n\nButterfly flames form a perfect ring around her, symbolizing life's endless cycle.\n\n$gacha_text_reward_legitimacy_small$"
+gacha_hutao_events.12.a: "Life without end!"
+
+gacha_hutao_c3_title: "Hide and Seek Under the Moon"
+gacha_hutao_c3_scene_1_desc: "The imperial garden is silent at midnight. Just as you step through the corridor, a chill brushes your neck.\n\nA cold hand taps your left shoulder—but when you turn, no one is there.\n\n\"Hehe... guess who?\"\n\nThat impish voice drifts from a nearby tree. Hu Tao hangs upside down from a branch, swinging like a bat, plum blossom pupils glinting with mischief in the moonlight."
+gacha_hutao_c3_scene_1_opt_a: "Has the funeral parlor expanded into the palace?"
+gacha_hutao_c3_scene_1_opt_b: "Aah! A ghost!!"
+gacha_hutao_c3_scene_1_opt_c: "Get down—careful you don't fall."
+
+gacha_hutao_c3_scene_2_desc_a: "Hu Tao (drops lightly, claps): \"Oops, caught! I thought the palace was too gloomy, was going to slap on some talismans. But since you're here, the yang energy's topped up!\"\n\nShe peers at your face, then turns oddly serious.\n\nHu Tao: \"The moon's nice tonight—good for poetry, and... heart-to-hearts. Your Majesty, managing so many people every day—isn't it tiring?\""
+gacha_hutao_c3_scene_2_desc_b: "Hu Tao (laughing herself breathless): \"Hahaha! Your reaction is priceless! Worth a coupon! Seems my scare skills haven't rusted in this world.\" \n\nShe wipes away tears of laughter and hops down.\n\nHu Tao: \"The moon's nice tonight—good for poetry, and... heart-to-hearts. Your Majesty, managing so many people every day—isn't it tiring?\""
+gacha_hutao_c3_scene_2_opt_a1: "Tiring, yeah. I was thinking of digging a hole and burying myself."
+gacha_hutao_c3_scene_2_opt_b1: "With you around, even exhaustion makes me laugh."
+
+gacha_hutao_c3_ending_c: "Hu Tao (pouts, flips down): \"Tch—boring. You're like Zhongli, all stiff and ancient. You'll age faster that way!\"\n\nShe waves you off and dashes away, leaving only a string of silver-bell laughter."
+
+gacha_hutao_c3_scene_3_desc_a1: "Hu Tao (eyes light up, leans in): \"Oh? That business I'm good at! Want a nice view of mountains or the sea?... Hehe, kidding. Seeing you this tired, let me recite a little ditty to ease the mood.\""
+gacha_hutao_c3_scene_3_desc_b1: "Hu Tao (blinks, turns with hands behind her back): \"Oho... is that flirting with the Director? I don't mind frankness... but my appearance fee is pricey, you know. It'll cost you a good poem!\""
+gacha_hutao_c3_scene_3_opt: "This is... for me?"
+
+gacha_hutao_c3_ending_high: "Hu Tao: \"Alright, enough teasing. I came because your study light was still on.\"\n\nShe puts away her grin, draws a fresh plum blossom from her sleeve, and holds it out to you.\n\n\"Found it by the wall—too pretty to waste.\n\nFlowers bloom and fall in their time.\n\nSo do you. Don't push yourself so hard.\n\nIf you're tired, come find me.\n\nI won't talk policy. I won't talk war.\n\nI'll just tell you ghost stories, show you the moon, and... promise you the sun still rises tomorrow.\"\n\n\"Take it—it's a Director's talisman.\""
+gacha_hutao_c3_ending_opt: "Walk her back"
+gacha_hutao_c3_ending_opt_high: "Thank you, Director Hu"
 
   # ============================================================
   # §Y Notification Text §!
@@ -507,6 +587,66 @@
   STATIC_MODIFIER_NAME_gacha_nahida_c6_modifier: "The Fruit of Reason's Culmination"
   STATIC_MODIFIER_NAME_gacha_nahida_c6_country_modifier: "Hall of Wisdom"
   STATIC_MODIFIER_DESC_gacha_nahida_c6_country_modifier: "Nahida opens new seats for scholars and officials, letting reforms and policy sprout in a larger hall."
+  # Raiden - Country Modifiers
+  STATIC_MODIFIER_NAME_gacha_raiden_country_modifier: "Eternal Decree of Inazuma"
+  STATIC_MODIFIER_DESC_gacha_raiden_country_modifier: "War weariness ebbs under thunder's mandate; legitimacy firms up each month."
+  STATIC_MODIFIER_NAME_gacha_raiden_c1_country_modifier: "Yae's Ledger"
+  STATIC_MODIFIER_DESC_gacha_raiden_c1_country_modifier: "Administrative circuits hum smoother; the cabinet runs with shrine-maiden precision."
+  STATIC_MODIFIER_NAME_gacha_raiden_c2_country_modifier: "Musou no Hitotachi"
+  STATIC_MODIFIER_DESC_gacha_raiden_c2_country_modifier: "A stroke of lightning trims both war weariness and construction drag."
+  STATIC_MODIFIER_NAME_gacha_raiden_c5_country_modifier: "Authority of Eternity"
+  STATIC_MODIFIER_DESC_gacha_raiden_c5_country_modifier: "Imperial command resonates; governance grows more efficient."
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_country_modifier: "Wishing Star of Origins"
+  STATIC_MODIFIER_DESC_gacha_raiden_c6_country_modifier: "Fate bows to the Shogun—prestige, legislation, and respite from war all rise together."
+  # Keqing - Country Modifiers
+  STATIC_MODIFIER_NAME_gacha_keqing_country_modifier: "Myriad Sails of Liyue"
+  STATIC_MODIFIER_DESC_gacha_keqing_country_modifier: "Engineering teams surge; urban growth quickens under the Yuheng's gaze."
+  STATIC_MODIFIER_NAME_gacha_keqing_c1_country_modifier: "Engineering Sprint"
+  STATIC_MODIFIER_DESC_gacha_keqing_c1_country_modifier: "Process refinement shaves precious time off every build."
+  STATIC_MODIFIER_NAME_gacha_keqing_c2_country_modifier: "Land of Gold"
+  STATIC_MODIFIER_DESC_gacha_keqing_c2_country_modifier: "Infrastructure goes full throttle—faster builds, faster development, richer output."
+  STATIC_MODIFIER_NAME_gacha_keqing_c5_country_modifier: "Yuheng Secretariat"
+  STATIC_MODIFIER_DESC_gacha_keqing_c5_country_modifier: "Lean bureaucracy and sharp ledgers squeeze advisor costs ever lower."
+  STATIC_MODIFIER_NAME_gacha_keqing_c6_country_modifier: "Yuheng Governance"
+  STATIC_MODIFIER_DESC_gacha_keqing_c6_country_modifier: "Civil and military in tandem: research speeds up, administration tightens, war fatigue falls."
+  # Furina - Country Modifiers
+  STATIC_MODIFIER_NAME_gacha_furina_country_modifier: "Opera Epiclese"
+  STATIC_MODIFIER_DESC_gacha_furina_country_modifier: "Curtains rise—prestige and legitimacy accrue month by month."
+  STATIC_MODIFIER_NAME_gacha_furina_c1_country_modifier: "Salon Ledger"
+  STATIC_MODIFIER_DESC_gacha_furina_c1_country_modifier: "Stage fame and salon gossip trim the cost of hiring advisors."
+  STATIC_MODIFIER_NAME_gacha_furina_c2_country_modifier: "Oratrice Judicatoire"
+  STATIC_MODIFIER_DESC_gacha_furina_c2_country_modifier: "The script of authority quickens legislation; prestige and legitimacy double their pace."
+  STATIC_MODIFIER_NAME_gacha_furina_c5_country_modifier: "All Nations Gather"
+  STATIC_MODIFIER_DESC_gacha_furina_c5_country_modifier: "Diplomatic pomp in order—maintenance of relations costs far less."
+  STATIC_MODIFIER_NAME_gacha_furina_c6_country_modifier: "Universal Jubilee"
+  STATIC_MODIFIER_DESC_gacha_furina_c6_country_modifier: "The Water Archon's farewell lingers; monthly renown and national resolve keep rising."
+  # Fischl - Country Modifiers
+  STATIC_MODIFIER_NAME_gacha_fischl_country_modifier: "Gaze of the Immernachtreich"
+  STATIC_MODIFIER_DESC_gacha_fischl_country_modifier: "Oz scouts ahead; spy networks grow faster and more envoys take wing."
+  STATIC_MODIFIER_NAME_gacha_fischl_c1_country_modifier: "Eye of Condemnation"
+  STATIC_MODIFIER_DESC_gacha_fischl_c1_country_modifier: "More agents fan out—diplomatic reach extends further."
+  STATIC_MODIFIER_NAME_gacha_fischl_c2_country_modifier: "Night's True Sight"
+  STATIC_MODIFIER_DESC_gacha_fischl_c2_country_modifier: "Midnight wiretaps tighten intel; cabinet efficiency ticks upward."
+  STATIC_MODIFIER_NAME_gacha_fischl_c5_country_modifier: "Nemesis Hunter"
+  STATIC_MODIFIER_DESC_gacha_fischl_c5_country_modifier: "Dueling rivals is second nature—power projection rises."
+  STATIC_MODIFIER_NAME_gacha_fischl_c6_country_modifier: "Sovereign of Evernight"
+  STATIC_MODIFIER_DESC_gacha_fischl_c6_country_modifier: "Evernight's blessing eases war fatigue and adds a steady trickle of prestige."
+  # Klee - Country Modifiers
+  STATIC_MODIFIER_NAME_gacha_klee_country_modifier: "Clover's Luck"
+  STATIC_MODIFIER_DESC_gacha_klee_country_modifier: "Troops rally faster; prestige builds alongside."
+  STATIC_MODIFIER_NAME_gacha_klee_c2_country_modifier: "Kaboom Shrapnel Field"
+  STATIC_MODIFIER_DESC_gacha_klee_c2_country_modifier: "Siege crews and morale both boom—enemy forts feel like paper."
+  STATIC_MODIFIER_NAME_gacha_klee_c5_country_modifier: "Boom-Boom Sparks"
+  STATIC_MODIFIER_DESC_gacha_klee_c5_country_modifier: "Artillery drills sharpen—guns hit harder."
+  STATIC_MODIFIER_NAME_gacha_klee_c6_country_modifier: "Infinite Sparks"
+  STATIC_MODIFIER_DESC_gacha_klee_c6_country_modifier: "Sieges blaze ahead, construction speeds up, the barrage never stops."
+  # Nahida - Country Modifiers
+  STATIC_MODIFIER_NAME_gacha_nahida_country_modifier: "Caged Bird of the Sanctuary"
+  STATIC_MODIFIER_DESC_gacha_nahida_country_modifier: "Thought spreads like roots; research hums steadily upward."
+  STATIC_MODIFIER_NAME_gacha_nahida_c2_country_modifier: "Morning of a Thousand Roses"
+  STATIC_MODIFIER_DESC_gacha_nahida_c2_country_modifier: "Knowledge lights the realm—institutions grow and research accelerates."
+  STATIC_MODIFIER_NAME_gacha_nahida_c5_country_modifier: "Stored Wisdom Array"
+  STATIC_MODIFIER_DESC_gacha_nahida_c5_country_modifier: "A tuned cabinet and pooled lore make governance glide."
 
   # === Events ===
   gacha_nahida_events.1.title: "Wisdom of Grass"
@@ -528,6 +668,27 @@
   gacha_nahida_events.12.title: "Constellation · Transcendence"
   gacha_nahida_events.12.desc: "Nahida shows the stance of \"The Stem of Manifest Inference.\" Her wisdom dispels people's confusion and doubt.\n\n\"Wisdom isn't for show; it's to help others. Let's banish ignorance together and let the light of knowledge shine on everyone~\""
   gacha_nahida_events.12.a: "Light of wisdom!"
+
+  gacha_nahida_c3_title: "Night of the Forgotten"
+  gacha_nahida_c3_scene_1_desc: "Royal library, deep night. Nahida sits atop a tall stack of books, legs swinging.\n\nShe isn't reading—eyes closed, as if tapping a \"void\" that no longer exists.\n\nAt your footsteps she opens her eyes; rare confusion flickers in green pupils.\n\nNahida: \"...I'm trying to retrieve data on the Greater Lord Rukkhadevata. No matter how I recall, the details blur. In this world, will even my memories erode away?\""
+  gacha_nahida_c3_scene_1_opt_a: "Don't worry; I'll write them down—in this world's history."
+  gacha_nahida_c3_scene_1_opt_b: "If it's too painful, it's okay to forget. We'll make new memories."
+  gacha_nahida_c3_scene_1_opt_c: "(Offer her a candy.) Overthinking stunts growth—have something sweet."
+
+  gacha_nahida_c3_scene_2_desc_a: "Nahida (eyes widen slightly): \"Inscribed into this world's history? ...A good idea. Even if it's in another script, carved in stone the World Tree can't delete it.\"\n\nNahida: \"But if one day you vanish too, or this world resets, do those records still matter?\""
+  gacha_nahida_c3_scene_2_desc_b: "Nahida (shakes her head, eyes firm): \"No... I mustn't forget. If even pain is forgotten, I'm incomplete. But... making new memories, I don't dislike that.\"\n\nNahida: \"But if one day you vanish too, or this world resets, do those records still matter?\""
+  gacha_nahida_c3_scene_2_desc_c: "Nahida (puffs her cheeks): \"I'm five hundred! ...But yes, date candies do ease brain overload. Ah... open up.\""
+
+  gacha_nahida_c3_scene_2_opt_a1: "As long as civilization endures, history continues. That's why I built this empire."
+  gacha_nahida_c3_scene_2_opt_a2: "At least right now, I remember. I'm your only 'backup.'"
+  gacha_nahida_c3_ending_opt: "Rest early."
+
+  gacha_nahida_c3_scene_3_desc_a1: "Nahida (smiles appreciatively): \"Quite the declaration. Do you mean to be this world's Greater Lord? Then I'd better work harder to aid you.\""
+  gacha_nahida_c3_scene_3_desc_a2: "Nahida (startled, hops down): \"Only... backup. Yes—if even one person remembers, that existence is real. Then protect your brain well; it now holds a god's treasure.\""
+  gacha_nahida_c3_scene_3_opt: "It's late. Time to rest."
+
+  gacha_nahida_c3_ending_high: "She reaches out her small hand, hooks your finger.\n\n\"Mm.\n\nIn the Sanctuary of Surasthana, I could only see the world in dreams.\n\nNow the world is before my eyes, and so are you.\n\nMore real than any dream.\n\n...Good night, my first sage.\""
+  gacha_nahida_c3_ending_opt_high: "Good night, Nahida."
 
   # ============================================================
   # # Character - Klee

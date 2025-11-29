@@ -1,40 +1,54 @@
-﻿# Generated Modifiers for furina
+﻿# Generated Modifiers for furina (V3) "退役影后"
+
+# 角色标识：芙宁娜本体
 gacha_furina_modifier = {
     game_data = { category = character decaying = no }
     gacha_core = yes
     gacha_water_godeye = yes
 }
 
-gacha_furina_c0_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 0
-}
-gacha_furina_c1_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 1
-}
-gacha_furina_c2_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 2
-}
-gacha_furina_c3_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 3
-}
-gacha_furina_c4_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 4
-}
-gacha_furina_c5_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 5
-}
-gacha_furina_c6_modifier = {
-    game_data = { category = character decaying = no }
-    gacha_constellation_level = 6
+# 命之座等级展示（0-6）
+gacha_furina_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_furina_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_furina_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_furina_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_furina_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_furina_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_furina_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（威望+1.00/年, 正统性+1.00/年）
+gacha_furina_country_modifier = {
+    game_data = { category = country decaying = no }
+    monthly_prestige = 0.08
+    monthly_legitimacy = 0.08
 }
 
+# C2 光环升级（威望+2.00/年, 正统性+2.00/年, 改革速度+20%）
+gacha_furina_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    monthly_prestige = 0.16
+    monthly_legitimacy = 0.16
+    legislative_efficiency = 0.25
+}
+
+# C1 专属机制：顾问 +1
+gacha_furina_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    hire_advisor_cost_modifier = -0.10
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_furina_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：外交关系 +2
+gacha_furina_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    diplomatic_upkeep_modifier = -0.20
+}
+
+# C6 国家级机制
 gacha_furina_c6_country_modifier = {
     game_data = { category = country decaying = no }
-    government_size = 1
 }

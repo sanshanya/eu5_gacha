@@ -1,39 +1,55 @@
-﻿gacha_fischl_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_core = yes
-  gacha_electro_godeye = yes
+﻿# Generated Modifiers for fischl (V3)
+
+# 角色标识：菲谢尔本体
+gacha_fischl_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    gacha_electro_godeye = yes
 }
 
-gacha_fischl_c0_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 0
-}
-gacha_fischl_c1_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 1
-}
-gacha_fischl_c2_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 2
-}
-gacha_fischl_c3_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 3
-}
-gacha_fischl_c4_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 4
-}
-gacha_fischl_c5_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 5
-}
-gacha_fischl_c6_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 6
+# 命之座等级展示（0-6）
+gacha_fischl_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_fischl_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_fischl_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_fischl_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_fischl_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_fischl_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_fischl_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（间谍网+40%, 外交关系+1）
+gacha_fischl_country_modifier = {
+    game_data = { category = country decaying = no }
+    spy_network_construction = 0.40
+    max_diplomats = 1
 }
 
+# C2 光环升级（间谍网+80%, 反间谍+40%, 外交关系+2）
+gacha_fischl_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    spy_network_construction = 0.80
+    max_diplomats = 2
+    country_cabinet_efficiency = 0.10
+}
+
+
+# C1 专属机制：外交官 +1
+gacha_fischl_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    max_diplomats = 1
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_fischl_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：宿敌位 +1
+gacha_fischl_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    power_projection = 5
+}
+
+# C6 国家级机制
 gacha_fischl_c6_country_modifier = {
-  game_data = { category = country decaying = no }
-  government_size = 1
+    game_data = { category = country decaying = no }
 }

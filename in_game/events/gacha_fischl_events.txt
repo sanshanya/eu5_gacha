@@ -1,97 +1,182 @@
 ﻿namespace = gacha_fischl_events
 
-# ==========================================
-# 事件 1：初次见面 (First Meeting)
-# ==========================================
+# 1. 初见
 gacha_fischl_events.1 = {
     type = country_event
     title = gacha_fischl_events.1.title
-    desc  = gacha_fischl_events.1.desc
+    desc = gacha_fischl_events.1.desc
     
-
-    immediate = {
-        event_illustration_estate_effect = {
-            foreground = estate_type:nobles_estate
-            background = estate_type:nobles_estate
-        }
-    }
-
-    option = {
-        name = gacha_fischl_events.1.a
-        historical_option = yes
-    }
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate } }
+    option = { name = gacha_fischl_events.1.a historical_option = yes }
 }
 
-# ==========================================
-# 事件 2：通用命座提升 (Constellation Up)
-# ==========================================
+# 2. 提升
 gacha_fischl_events.2 = {
     type = country_event
     title = gacha_fischl_events.2.title
-    desc  = gacha_fischl_events.2.desc
+    desc = gacha_fischl_events.2.desc
     
-
-    immediate = {
-        event_illustration_estate_effect = {
-            foreground = estate_type:clergy_estate
-            background = estate_type:clergy_estate
-        }
-    }
-
-    option = {
-        name = gacha_fischl_events.2.a
-        add_prestige = 10
-    }
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_fischl_events.2.a add_prestige = 10 }
 }
 
-# ==========================================
-# 事件 4：满命 (Max Constellation)
-# ==========================================
+# 4. 满命（C6）
 gacha_fischl_events.4 = {
     type = country_event
     title = gacha_fischl_events.4.title
-    desc  = gacha_fischl_events.4.desc
+    desc = gacha_fischl_events.4.desc
     
-
-    immediate = {
-        event_illustration_estate_effect = {
-            foreground = estate_type:nobles_estate
-            background = estate_type:nobles_estate
-        }
-    }
-
-    option = {
-        name = gacha_fischl_events.4.a
-        add_prestige = 50
-        add_legitimacy = 20
-    }
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate } }
+    option = { name = gacha_fischl_events.4.a add_prestige = 50 add_legitimacy = 20 }
 }
 
-# ==========================================
-# 事件 11：命之座·觉醒 (C2)
-# ==========================================
+# 11. C2 觉醒
 gacha_fischl_events.11 = {
     type = country_event
-    title = "gacha_fischl_events.11.title"
-    desc  = "gacha_fischl_events.11.desc"
-    
+    title = gacha_fischl_events.11.title
+    desc = gacha_fischl_events.11.desc
+    option = { name = gacha_fischl_events.11.a add_stability = 0.25 }
+}
 
+# 12. C4 超越
+gacha_fischl_events.12 = {
+    type = country_event
+    title = gacha_fischl_events.12.title
+    desc = gacha_fischl_events.12.desc
+    option = { name = gacha_fischl_events.12.a add_legitimacy = 5 }
+}
+
+# 13. C1 渡鸦的信使
+gacha_fischl_events.13 = {
+    type = country_event
+    title = gacha_fischl_events.13.title
+    desc = gacha_fischl_events.13.desc
+    option = { name = gacha_fischl_events.13.a }
+}
+
+# 14. C5 宿命的仇敌
+gacha_fischl_events.14 = {
+    type = country_event
+    title = gacha_fischl_events.14.title
+    desc = gacha_fischl_events.14.desc
+    option = { name = gacha_fischl_events.14.a }
+}
+
+# ==============================================================================
+# C3 剧情链：雨夜的"御花园"
+# ==============================================================================
+
+# 30. 开场：雨中的菲谢尔
+gacha_fischl_events.30 = {
+    type = country_event
+    title = gacha_fischl_c3_title
+    desc = gacha_fischl_c3_scene_1_desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate } }
+    
+    # A. 普通关心
     option = {
-        name = "gacha_fischl_events.11.a"
-        add_stability = 0.25
+        name = gacha_fischl_c3_scene_1_opt_a
+        set_variable = { name = gacha_fischl_c3_path value = 1 }
+        trigger_event_non_silently = { id = gacha_fischl_events.31 }
+    }
+    # B. 配合演出（推荐路线）
+    option = {
+        name = gacha_fischl_c3_scene_1_opt_b
+        set_variable = { name = gacha_fischl_c3_path value = 2 }
+        trigger_event_non_silently = { id = gacha_fischl_events.32 }
+    }
+    # C. 直击真名
+    option = {
+        name = gacha_fischl_c3_scene_1_opt_c
+        set_variable = { name = gacha_fischl_c3_path value = 3 }
+        trigger_event_non_silently = { id = gacha_fischl_events.31 }
     }
 }
 
-# ==========================================
-# 事件 12：命之座·超越 (C4)
-# ==========================================
-gacha_fischl_events.12 = {
+# 31. 路径 A/C 结局（低好感）
+gacha_fischl_events.31 = {
     type = country_event
-    title = "gacha_fischl_events.12.title"
-    desc  = "gacha_fischl_events.12.desc"
-
+    title = gacha_fischl_c3_title
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { var:gacha_fischl_c3_path = 1 }
+                desc = gacha_fischl_c3_ending_a
+            }
+            triggered_desc = {
+                trigger = { var:gacha_fischl_c3_path = 3 }
+                desc = gacha_fischl_c3_ending_c
+            }
+        }
+    }
     option = {
-        name = "gacha_fischl_events.12.a"
-        add_legitimacy = 5
+        name = gacha_fischl_c3_ending_opt
+        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 5 } }
+    }
+    after = {
+        clear_saved_scope = gacha_c3_target_char
+        remove_variable = gacha_fischl_c3_path
+    }
+}
+
+# 32. 路径 B-1：第2轮（配合演出展开）
+gacha_fischl_events.32 = {
+    type = country_event
+    title = gacha_fischl_c3_title
+    desc = gacha_fischl_c3_scene_2_desc
+    
+    # B1. 撩拨
+    option = {
+        name = gacha_fischl_c3_scene_2_opt_b1
+        set_variable = { name = gacha_fischl_c3_ending value = 1 }
+        trigger_event_non_silently = { id = gacha_fischl_events.33 }
+    }
+    # B2. 宠溺
+    option = {
+        name = gacha_fischl_c3_scene_2_opt_b2
+        set_variable = { name = gacha_fischl_c3_ending value = 2 }
+        trigger_event_non_silently = { id = gacha_fischl_events.33 }
+    }
+}
+
+# 33. 路径 B-2：第3轮（收尾 - 高好感）
+gacha_fischl_events.33 = {
+    type = country_event
+    title = gacha_fischl_c3_title
+    desc = gacha_fischl_c3_scene_3_desc
+    
+    option = {
+        name = gacha_fischl_c3_scene_3_opt
+        trigger_event_non_silently = { id = gacha_fischl_events.34 }
+    }
+}
+
+# 34. 路径 B-3：结局（动态文本）
+gacha_fischl_events.34 = {
+    type = country_event
+    title = gacha_fischl_c3_title
+    
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { var:gacha_fischl_c3_ending = 1 }
+                desc = gacha_fischl_c3_ending_b1
+            }
+            triggered_desc = {
+                trigger = { var:gacha_fischl_c3_ending = 2 }
+                desc = gacha_fischl_c3_ending_b2
+            }
+        }
+    }
+    
+    option = {
+        name = gacha_fischl_c3_ending_opt_high
+        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
+    }
+    
+    after = {
+        clear_saved_scope = gacha_c3_target_char
+        remove_variable = gacha_fischl_c3_path
+        remove_variable = gacha_fischl_c3_ending
     }
 }

@@ -15,7 +15,10 @@ gacha_events.1 = {
     desc = {
         first_valid = {
             triggered_desc = {
-                trigger = { var:gacha_is_guaranteed_bool = 1 }
+                trigger = { 
+                    has_variable = gacha_is_guaranteed_bool
+                    var:gacha_is_guaranteed_bool = 1 
+                }
                 desc = gacha_events.1.desc_guaranteed
             }
             triggered_desc = {
@@ -89,7 +92,7 @@ gacha_events.1 = {
           gacha_resolve_5star_and_save_scope = yes   # 保险
 
           # 触发展示事件，由事件自身的 immediate 块抓取 Scope 快照
-          trigger_event_non_silently = { id = gacha_events.5 }
+          # trigger_event_non_silently = { id = gacha_events.5 }
       }
     }
 
@@ -101,6 +104,7 @@ gacha_events.1 = {
         
         # 前置条件：至少有3个星辉
         trigger = {
+            has_variable = gacha_starlight
             var:gacha_starlight >= 3
         }
         
@@ -146,11 +150,11 @@ gacha_events.5 = {
 
     # 【Scope Snapshot】
     # 在事件触发瞬间，将当前的 gacha_last_pulled_char 锁定为本窗口专用的 target
-    immediate = {
-        scope:gacha_last_pulled_char = {
-            save_scope_as = gacha_event_target_char
-        }
-    }
+    # immediate = {
+    #     scope:gacha_last_pulled_char = {
+    #         save_scope_as = gacha_event_target_char
+    #     }
+    # }
 
     # V3 Rev 4.7：依赖引擎的隐式立绘绑定，不显式写 character = scope:xxx
 
@@ -160,10 +164,10 @@ gacha_events.5 = {
     }
 
     # 【Cleanup】窗口关闭后清理 Scope，避免泄漏
-    after = {
-        clear_saved_scope = gacha_event_target_char
-        clear_saved_scope = gacha_last_pulled_char
-    }
+    # after = {
+    #     clear_saved_scope = gacha_event_target_char
+    #     clear_saved_scope = gacha_last_pulled_char
+    # }
 }
 
 # ==========================================

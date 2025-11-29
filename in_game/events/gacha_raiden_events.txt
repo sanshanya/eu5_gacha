@@ -20,7 +20,7 @@ gacha_raiden_events.2 = {
     option = { name = gacha_raiden_events.2.a add_prestige = 10 }
 }
 
-# 4. 满命
+# 4. 满命（C6）
 gacha_raiden_events.4 = {
     type = country_event
     title = gacha_raiden_events.4.title
@@ -30,20 +30,153 @@ gacha_raiden_events.4 = {
     option = { name = gacha_raiden_events.4.a add_prestige = 50 add_legitimacy = 20 }
 }
 
-# 11. 觉醒 (C2)
+# 11. C2 觉醒
 gacha_raiden_events.11 = {
     type = country_event
     title = gacha_raiden_events.11.title
     desc = gacha_raiden_events.11.desc
-
     option = { name = gacha_raiden_events.11.a add_stability = 0.25 }
 }
 
-# 12. 超越 (C4)
+# 12. C4 超越
 gacha_raiden_events.12 = {
     type = country_event
     title = gacha_raiden_events.12.title
     desc = gacha_raiden_events.12.desc
-
     option = { name = gacha_raiden_events.12.a add_legitimacy = 5 }
+}
+
+# 13. C1 恶曜之眼
+gacha_raiden_events.13 = {
+    type = country_event
+    title = gacha_raiden_events.13.title
+    desc = gacha_raiden_events.13.desc
+    option = { name = gacha_raiden_events.13.a }
+}
+
+# 14. C5 统御的威权
+gacha_raiden_events.14 = {
+    type = country_event
+    title = gacha_raiden_events.14.title
+    desc = gacha_raiden_events.14.desc
+    option = { name = gacha_raiden_events.14.a }
+}
+
+# ==============================================================================
+# C3 剧情链：雨夜的甜点心
+# ==============================================================================
+
+# 30. 开场：撞见"影"
+gacha_raiden_events.30 = {
+    type = country_event
+    title = gacha_raiden_c3_title
+    desc = gacha_raiden_c3_scene_1_desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate } }
+    
+    # A. 幽默看穿
+    option = {
+        name = gacha_raiden_c3_scene_1_opt_a
+        set_variable = { name = gacha_raiden_c3_path value = 1 }
+        trigger_event_non_silently = { id = gacha_raiden_events.31 }
+    }
+    # B. 关心神性
+    option = {
+        name = gacha_raiden_c3_scene_1_opt_b
+        set_variable = { name = gacha_raiden_c3_path value = 2 }
+        trigger_event_non_silently = { id = gacha_raiden_events.31 }
+    }
+    # C. 投喂行动（推荐路线）
+    option = {
+        name = gacha_raiden_c3_scene_1_opt_c
+        set_variable = { name = gacha_raiden_c3_path value = 3 }
+        trigger_event_non_silently = { id = gacha_raiden_events.32 }
+    }
+}
+
+# 31. 路径 A/B 结局（中好感）
+gacha_raiden_events.31 = {
+    type = country_event
+    title = gacha_raiden_c3_title
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { var:gacha_raiden_c3_path = 1 }
+                desc = gacha_raiden_c3_ending_a
+            }
+            triggered_desc = {
+                trigger = { var:gacha_raiden_c3_path = 2 }
+                desc = gacha_raiden_c3_ending_b
+            }
+        }
+    }
+    option = {
+        name = gacha_raiden_c3_ending_opt
+        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
+    }
+    after = {
+        clear_saved_scope = gacha_c3_target_char
+        remove_variable = gacha_raiden_c3_path
+    }
+}
+
+# 32. 路径 C-1：第2轮（投喂展开）
+gacha_raiden_events.32 = {
+    type = country_event
+    title = gacha_raiden_c3_title
+    desc = gacha_raiden_c3_scene_2_desc
+    
+    # B1. 温柔劝慰
+    option = {
+        name = gacha_raiden_c3_scene_2_opt_b1
+        set_variable = { name = gacha_raiden_c3_ending value = 1 }
+        trigger_event_non_silently = { id = gacha_raiden_events.33 }
+    }
+    # B2. 宠溺昏君
+    option = {
+        name = gacha_raiden_c3_scene_2_opt_b2
+        set_variable = { name = gacha_raiden_c3_ending value = 2 }
+        trigger_event_non_silently = { id = gacha_raiden_events.33 }
+    }
+}
+
+# 33. 路径 C-2：第3轮（收尾 - 高好感）
+gacha_raiden_events.33 = {
+    type = country_event
+    title = gacha_raiden_c3_title
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { var:gacha_raiden_c3_ending = 1 }
+                desc = gacha_raiden_c3_scene_3_desc_b1
+            }
+            triggered_desc = {
+                trigger = { var:gacha_raiden_c3_ending = 2 }
+                desc = gacha_raiden_c3_scene_3_desc_b2
+            }
+        }
+    }
+    
+    option = {
+        name = gacha_raiden_c3_scene_3_opt
+        trigger_event_non_silently = { id = gacha_raiden_events.34 }
+    }
+}
+
+# 34. 路径 C-3：结局（动态文本）
+gacha_raiden_events.34 = {
+    type = country_event
+    title = gacha_raiden_c3_title
+    
+    desc = gacha_raiden_c3_ending_c
+    
+    option = {
+        name = gacha_raiden_c3_ending_opt_high
+        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+    }
+    
+    after = {
+        clear_saved_scope = gacha_c3_target_char
+        remove_variable = gacha_raiden_c3_path
+        remove_variable = gacha_raiden_c3_ending
+    }
 }

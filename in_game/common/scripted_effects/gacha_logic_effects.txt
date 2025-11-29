@@ -54,7 +54,11 @@ gacha_execute_single_roll_silent = {
                 local_var:gacha_calc_entropy_val < local_var:gacha_threshold_4star_val
                 AND = {
                     local_var:gacha_calc_block_idx_val = 0
-                    var:gacha_block_pity_met_bool = 0
+                    # Safety check: treat unset as 0 (not met)
+                    OR = {
+                        NOT = { has_variable = gacha_block_pity_met_bool }
+                        var:gacha_block_pity_met_bool = 0
+                    }
                 }
             }
         }
@@ -108,7 +112,10 @@ gacha_resolve_5star_and_save_scope = {
     # 2. 判定逻辑
     if = {
         # 情况 A: 大保底生效
-        limit = { var:gacha_is_guaranteed_bool = 1 }
+        limit = { 
+            has_variable = gacha_is_guaranteed_bool
+            var:gacha_is_guaranteed_bool = 1 
+        }
         set_local_variable = { name = gacha_is_up_bool_val value = 1 }
         set_variable = { name = gacha_is_guaranteed_bool value = 0 } # 消耗保底
     }
@@ -179,7 +186,7 @@ gacha_wrapper_ten_pull = {
         if = {
             # 5 星：角色展示
             limit = { local_var:gacha_calc_tier_idx = 2 }
-            trigger_event_non_silently = gacha_events.5
+            # trigger_event_non_silently = gacha_events.5
         }
         else_if = {
             # 4 星：根据索引分流到不同静态文本
@@ -206,7 +213,7 @@ gacha_wrapper_single_pull = {
     if = {
         # 5 星：角色展示
         limit = { local_var:gacha_calc_tier_idx = 2 }
-        trigger_event_non_silently = gacha_events.5
+        # trigger_event_non_silently = gacha_events.5
     }
     else_if = {
         # 4 星：保持与十连一致的分流

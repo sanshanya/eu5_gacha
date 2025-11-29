@@ -1,39 +1,54 @@
-﻿gacha_nahida_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_core = yes
-  gacha_grass_godeye = yes
+﻿# Generated Modifiers for nahida (V3) "被删除的时间线备份"
+
+# 角色标识：纳西妲本体
+gacha_nahida_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    gacha_grass_godeye = yes
 }
 
-gacha_nahida_c0_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 0
-}
-gacha_nahida_c1_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 1
-}
-gacha_nahida_c2_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 2
-}
-gacha_nahida_c3_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 3
-}
-gacha_nahida_c4_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 4
-}
-gacha_nahida_c5_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 5
-}
-gacha_nahida_c6_modifier = {
-  game_data = { category = character decaying = no }
-  gacha_constellation_level = 6
+# 命之座等级展示（0-6）
+gacha_nahida_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_nahida_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_nahida_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_nahida_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_nahida_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_nahida_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_nahida_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（思潮传播+20%, 理念花费-5%）
+gacha_nahida_country_modifier = {
+    game_data = { category = country decaying = no }
+    global_institution_growth_modifier = 0.25
+    research_speed_modifier = 0.10
 }
 
+# C2 光环升级（思潮传播+40%, 理念花费-10%, 接纳思潮花费-20%）
+gacha_nahida_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    global_institution_growth_modifier = 0.50
+    research_speed_modifier = 0.20
+}
+
+# C1 专属机制：科研槽+1 (Proxy: Tech Cost -10%)
+gacha_nahida_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    research_speed_modifier = 0.10
+    # TODO: 科研槽+1（未找到 num_of_research_slots 键，待确认）
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_nahida_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：行政容量 +200
+gacha_nahida_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    country_cabinet_efficiency = 0.10
+}
+
+# C6 国家级机制（科研速度+15%, 全点数花费-10%, 顾问花费-20%）
 gacha_nahida_c6_country_modifier = {
-  game_data = { category = country decaying = no }
-  government_size = 1
+    game_data = { category = country decaying = no }
 }

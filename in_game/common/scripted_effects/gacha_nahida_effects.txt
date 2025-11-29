@@ -1,111 +1,235 @@
-﻿gacha_create_nahida_effect = {
-  # ==========================================
-  # 分支 A：已拥有 -> 命之座升级 (Duplicate)
-  # ==========================================
-  if = {
-    limit = { has_global_variable = gacha_nahida_is_summoned }
+﻿# ==============================================================================
+# Nahida Character Logic - V3 Architecture "被删除的时间线备份"
+# ==============================================================================
 
-    random_in_global_list = {
-      variable = gacha_obtained_characters
-      limit = { has_character_modifier = gacha_nahida_modifier }
-      save_scope_as = existing_char
-    }
-
+# ------------------------------------------------------------------------------
+# 1. Main Entry Point
+# ------------------------------------------------------------------------------
+gacha_create_nahida_effect = {
+    # === A. Duplicate Logic (Upgrade) ===
     if = {
-      limit = { scope:existing_char ?= { employer = root } }
-      # 将当前角色保存为最近抽到的角色，供 V3 UI 使用
-      scope:existing_char ?= { save_scope_as = gacha_last_pulled_char }
-      # 满命溢出：转化为星辉
-      if = {
-        limit = { scope:existing_char ?= { var:gacha_constellation_lvl >= 6 } }
-        scope:existing_char ?= {
-          root = {
-            change_variable = { name = gacha_starlight add = 1 }
-            trigger_event_non_silently = { id = gacha_events.30 }
-          }
-        }
-      }
-      else = {
-        # --- 先处理角色数值变化 ---
-        scope:existing_char ?= {
-          change_variable = { name = gacha_constellation_lvl add = 1 }
-          gacha_apply_constellation_stats_effect = { who = nahida }
+        limit = { has_global_variable = gacha_nahida_is_summoned }
+        
+        random_in_global_list = {
+            variable = gacha_obtained_characters
+            limit = { has_character_modifier = gacha_nahida_modifier }
+            save_scope_as = existing_char
         }
 
-        # --- 然后在root作用域下，根据【新的】命座等级触发对应的事件 ---
         if = {
-          limit = { scope:existing_char ?= { var:gacha_constellation_lvl >= 6 } }
-          scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_nahida_events.4 } } }
-        }
-        else_if = {
-          limit = { scope:existing_char ?= { var:gacha_constellation_lvl = 4 } }
-          scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_nahida_events.12 } } }
-        }
-        else_if = {
-          limit = { scope:existing_char ?= { var:gacha_constellation_lvl = 2 } }
-          scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_nahida_events.11 } } }
+            limit = { exists = scope:existing_char }
+            
+            scope:existing_char = {
+                # Ensure employer is root
+                if = {
+                    limit = { NOT = { employer = root } }
+                    move_country = root
+                }
+
+                # Save scope for UI
+                save_scope_as = gacha_last_pulled_char
+
+                # Check for C6 overflow
+                if = {
+                    limit = { 
+                        has_variable = gacha_constellation_lvl
+                        var:gacha_constellation_lvl >= 6 
+                    }
+                    # Overflow: Starlight
+                    root = {
+                        change_variable = { name = gacha_starlight add = 1 }
+                        trigger_event_non_silently = { id = gacha_events.30 }
+                    }
+                }
+                else = {
+                    # Normal Upgrade
+                    # 1. Increment Level
+                    if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+                    change_variable = { name = gacha_constellation_lvl add = 1 }
+
+                    # 2. Apply Stats & Modifiers (Delta Logic)
+                    gacha_apply_constellation_stats_effect = { who = nahida }
+                    gacha_nahida_apply_country_modifiers = yes
+                    gacha_nahida_update_traits = yes
+
+                    # 3. Trigger Event
+                    gacha_nahida_trigger_event = yes
+                }
+            }
+            clear_saved_scope = existing_char
         }
         else = {
-          scope:existing_char ?= { root = { trigger_event_non_silently = { id = gacha_nahida_events.2 } } }
+            # Error fallback: Owned but not found? Refund.
+            add_gold = 160
         }
-      }
-
-      clear_saved_scope = existing_char
     }
+
+    # === B. New Creation Logic ===
     else = {
-      # 归属权冲突：是别人的角色，但仍保存 Scope 供展示使用
-      scope:existing_char ?= { save_scope_as = gacha_last_pulled_char }
-      # 归属权冲突：是别人的角色
-      # 检查是否满命，如果满命给予星辉
-      if = {
-        limit = { scope:existing_char ?= { var:gacha_constellation_lvl >= 6 } }
-        # 满命溢出：给予1星辉 (明确在root作用域)
-        root = {
-          change_variable = { name = gacha_starlight add = 1 }
-          # 触发星辉获得提示
-          trigger_event_non_silently = { id = gacha_events.30 }
+        create_character = {
+            first_name = gacha_first_name_nahida
+            last_name = gacha_last_name_nahida
+            female = yes
+            age = 500
+            culture = culture:lorrain
+            religion = religion:catholic
+            birth_location = location:la_mothe_en_bassigny
+            estate = estate_type:crown_estate
+            adm = { 95 100 }
+            dip = { 90 100 }
+            mil = { 40 60 }
+            create_in_limbo = yes
+            save_scope_as = new_char
         }
-      }
-      else = {
-        # 未满命，给予普通补偿
-        add_gold = 100
-        add_prestige = 50
-      }
-      
-      clear_saved_scope = existing_char
-    }
-  }
+        
+        if = {
+            limit = { exists = scope:new_char }
+            scope:new_char = {
+                # 1. Register & Init
+                gacha_register_new_character = { who = nahida }
+                set_variable = { name = gacha_constellation_lvl value = 0 }
 
-  # ==========================================
-  # 分支 B：未拥有 -> 首次创建 (New)
-  # ==========================================
-  else = {
-    create_character = {
-      first_name = gacha_first_name_nahida
-      last_name  = gacha_last_name_nahida
-      female     = yes
-      age        = 500
-      culture = culture:lorrain
-      religion = religion:catholic
-      birth_location = location:la_mothe_en_bassigny
-      estate = estate_type:crown_estate
-      adm = { 90 100 }
-      dip = { 85 95 }
-      mil = { 60 75 }
-      create_in_limbo = yes
-      save_scope_as = gacha_nahida_new_char
-    }
-    scope:gacha_nahida_new_char = {
-      gacha_register_new_character = { who = nahida }
-    }
-    set_global_variable = { name = gacha_nahida_is_summoned value = 1 }
+                # 2. Apply Initial State (Level 0)
+                gacha_nahida_update_traits = yes
+                gacha_nahida_apply_country_modifiers = yes
 
-    scope:gacha_nahida_new_char = {
-      root = {
-        trigger_event_non_silently = { id = gacha_nahida_events.1 }
-      }
+                # 3. Trigger Intro Event
+                root = { trigger_event_non_silently = { id = gacha_nahida_events.1 } }
+            }
+        }
+        
+        set_global_variable = { name = gacha_nahida_is_summoned value = 1 }
+        clear_saved_scope = new_char
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 2. Trait Management Helper (Delta Logic)
+# ------------------------------------------------------------------------------
+gacha_nahida_update_traits = {
+    # Safety Init
+    if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+
+    # Level 0 (Init): Awakened + Transcended
+    if = {
+        limit = { var:gacha_constellation_lvl = 0 }
+        add_trait = trait:gacha_nahida_awakened_trait
+        add_trait = trait:gacha_nahida_transcended_trait
     }
     
-    clear_saved_scope = gacha_nahida_new_char
-  }
+    # Level 1: Add Origin
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 1 }
+        add_trait = trait:gacha_nahida_origin_trait
+    }
+
+    # Level 2: Remove Origin, Add C2
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 2 }
+        remove_trait = trait:gacha_nahida_origin_trait
+        add_trait = trait:gacha_nahida_c2_trait
+    }
+
+    # Level 4: Remove Awakened, Add C4
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 4 }
+        remove_trait = trait:gacha_nahida_awakened_trait
+        add_trait = trait:gacha_nahida_c4_trait
+    }
+
+    # Level 6: Remove Transcended, Add C6
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 6 }
+        remove_trait = trait:gacha_nahida_transcended_trait
+        add_trait = trait:gacha_nahida_c6_trait
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 3. Event Trigger Helper
+# ------------------------------------------------------------------------------
+gacha_nahida_trigger_event = {
+    if = {
+        limit = { NOT = { has_variable = gacha_constellation_lvl } }
+        # Should not happen, but safe fallback
+    }
+    else = {
+        if = {
+            limit = { var:gacha_constellation_lvl >= 6 }
+            root = { trigger_event_non_silently = { id = gacha_nahida_events.4 } }
+        }
+        else_if = {
+            limit = { var:gacha_constellation_lvl = 5 }
+            root = { trigger_event_non_silently = { id = gacha_nahida_events.14 } }
+        }
+        else_if = {
+            limit = { var:gacha_constellation_lvl = 4 }
+            root = { trigger_event_non_silently = { id = gacha_nahida_events.12 } }
+        }
+        else_if = {
+            limit = { var:gacha_constellation_lvl = 3 }
+            # C3 Special: Save scope for relationship event
+            save_scope_as = gacha_c3_target_char
+            root = { trigger_event_non_silently = { id = gacha_nahida_events.30 } }
+        }
+        else_if = {
+            limit = { var:gacha_constellation_lvl = 2 }
+            root = { trigger_event_non_silently = { id = gacha_nahida_events.11 } }
+        }
+        else_if = {
+            limit = { var:gacha_constellation_lvl = 1 }
+            root = { trigger_event_non_silently = { id = gacha_nahida_events.13 } }
+        }
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 4. Country Modifier Helper (Delta Logic)
+# ------------------------------------------------------------------------------
+gacha_nahida_apply_country_modifiers = {
+    if = {
+        limit = { exists = this }
+        
+        # Safety Init
+        if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+
+        # Level 0 (Init): Base Modifier
+        if = {
+            limit = { var:gacha_constellation_lvl = 0 }
+            root = { add_country_modifier = { modifier = gacha_nahida_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # Level 1: Add C1 (Tech Cost -10%)
+        else_if = {
+            limit = { var:gacha_constellation_lvl = 1 }
+            root = { add_country_modifier = { modifier = gacha_nahida_c1_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # Level 2: Remove Base, Add C2
+        else_if = {
+            limit = { var:gacha_constellation_lvl = 2 }
+            root = { 
+                remove_country_modifier = gacha_nahida_country_modifier
+                add_country_modifier = { modifier = gacha_nahida_c2_country_modifier years = -1 mode = add_and_extend } 
+            }
+        }
+
+        # Level 4: Add C4 (占位)
+        else_if = {
+            limit = { var:gacha_constellation_lvl = 4 }
+            root = { add_country_modifier = { modifier = gacha_nahida_c4_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # Level 5: Add C5 (Gov Cap +200)
+        else_if = {
+            limit = { var:gacha_constellation_lvl = 5 }
+            root = { add_country_modifier = { modifier = gacha_nahida_c5_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # Level 6: Add C6 (Tech Cost -15%, All Power -10%, Advisor Cost -20%)
+        else_if = {
+            limit = { var:gacha_constellation_lvl = 6 }
+            root = { add_country_modifier = { modifier = gacha_nahida_c6_country_modifier years = -1 mode = add_and_extend } }
+        }
+    }
 }

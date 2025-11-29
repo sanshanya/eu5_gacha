@@ -1,31 +1,69 @@
-﻿# Generated Traits for furina
+﻿# Furina Traits - V3 Design "退役影后的最后一支舞"
+
+# C0 初始三格（戏如人生，人生如戏）
+
+# 1. 欧庇克莱歌剧院（光环）
 gacha_furina_origin_trait = {
     category = ruler
     allow = { always = no }
+    # 威望/正统性月度提升（由国家修正提供）
+    modifier = { gacha_country_aura = yes }
+}
+
+# 2. 沙龙成员的下午茶（职业 Trait：海军）
+gacha_furina_awakened_trait = {
+    category = admiral
+    allow = { always = no }
+    # 海军士气+15% · 海军耐久+10%
     modifier = {
-        tax_income_efficiency = 0.10      # 法庭戏剧带来的税收威望
-        trade_efficiency      = 0.10      # 枫丹商路的信誉
-        diplomatic_reputation = 1
-        monthly_prestige      = 0.25
+        naval_morale_modifier = 0.25
+        naval_damage_taken = -0.20
     }
 }
 
-gacha_furina_awakened_trait = {
+# 3. "众水之神"的假面（统治者 Trait 基础加成）
+gacha_furina_transcended_trait = {
     category = ruler
     allow = { always = no }
+    # 外交声誉+2 · 改善关系+20%
     modifier = {
-        legislative_efficiency            = 0.05
-        global_estate_target_satisfaction = 0.05
-        global_estate_satisfaction_recovery = 0.10
+        diplomatic_reputation = 2
+        improve_relation_impact = 0.25
     }
 }
 
-gacha_furina_transcended_trait = {
-    category = general
+# 命座进阶三格（从"面具"到"真心"）
+
+# C2：谕示裁定枢机
+gacha_furina_c2_trait = {
+    category = ruler
     allow = { always = no }
+    # 威望+2.00/年 · 正统性+2.00/年 · 改革速度+20% (由 modifier 提供)
+    modifier = { gacha_country_aura = yes }
+}
+
+# C4：万众狂欢之海
+gacha_furina_c4_trait = {
+    category = admiral
+    allow = { always = no }
+    # 海军士气+30% · 海军耐久+20% · 交战宽度+10%
     modifier = {
-        naval_morale_modifier = 0.20
-        navy_movement_speed   = 0.10
-        navy_repair_cost      = -0.25
+        naval_morale_modifier = 0.45
+        naval_damage_taken = -0.35
+        navy_initiative = 0.20
+    }
+}
+
+# C6：普世欢腾
+gacha_furina_c6_trait = {
+    category = ruler
+    allow = { always = no }
+    # 全局动乱-3 · 行政容量+20% · 行政效率+5%
+    modifier = {
+        diplomatic_reputation = 4
+        improve_relation_impact = 0.50
+        monthly_war_exhaustion = -0.10
+        monthly_prestige = 0.10
+        monthly_legitimacy = 0.16
     }
 }
