@@ -59,8 +59,10 @@ gacha_create_xinhai_effect = {
             clear_saved_scope = existing_char
         }
         else = {
-            # Error fallback: Owned but not found? Refund.
-            add_gold = 160
+            # Error fallback: Owned but not found (Dead/Dismissed)? 
+            # Treat as new summon to ensure player gets the character.
+            set_global_variable = { name = gacha_xinhai_is_summoned value = 0 }
+            gacha_create_xinhai_effect = yes
         }
     }
 
