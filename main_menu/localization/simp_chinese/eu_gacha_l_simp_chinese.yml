@@ -18,6 +18,31 @@
   gacha_events_interaction: "祭典：相遇之缘"
   gacha_events_interaction_desc: "[actor.GetName]将设立祭坛，以此世的财帛，感召彼方星海的英灵与智者。"
 
+  # === 自定义阶层：天外之人 ===
+  gacha_estate: "天外之人"
+  gacha_otherworldly_estate: "天外之人"
+  gacha_estate_desc: "这些来自异界的访客拥有常人无法理解的力量和知识。虽然他们不直接参与世俗的税收，但他们的存在本身就能极大地提升国家的威望。"
+  gacha_estate_recognition: "异界认可"
+  gacha_estate_recognition_desc: "正式承认天外之人的特殊地位，给予他们应有的尊重。"
+
+  # 特权
+  gacha_in_administration: "星辉共治"
+  gacha_in_administration_desc: "允许天外之人进入内阁，参与最高政务决策。"
+  gacha_command_positions: "星辉统帅"
+  gacha_command_positions_desc: "允许天外之人担任陆海军指挥官，发挥异界战术。"
+
+  # 交互：授予特权
+  gacha_estate_privileges_interaction: "授予天外之人特权"
+  gacha_estate_privileges_interaction_desc: "立即为天外之人解锁内阁与军职特权，并施加天外之人国家修正。"
+  gacha_estate_privileges_interaction_concept: "授予天外之人特权"
+  gacha_estate_privileges_interaction_desc_specific: "为天外之人阶层解锁关键特权。"
+
+  STATIC_MODIFIER_NAME_gacha_estate_integration_modifier: "天外之人特权"
+  STATIC_MODIFIER_DESC_gacha_estate_integration_modifier: "天外之人获准进入内阁与军职，并以高满意度参与国家事务。"
+
+  AUTO_MODIFIER_NAME_gacha_estate_access: "天外之人特权"
+  AUTO_MODIFIER_DESC_gacha_estate_access: "天外之人获准进入内阁与军职，并享有基础阶层满意度。"
+
   # === 核心修饰符 (Core Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_core_modifier: "祈愿的加护"
   STATIC_MODIFIER_DESC_gacha_core_modifier: "祈愿的加护"
@@ -1059,4 +1084,3 @@
   # Ending High (高好感 - 最初的贤者)
   gacha_nahida_c3_ending_high: "她伸出小手，牵住了你的一根手指。\n\n「嗯。\n\n以前在净善宫，我只能在梦里看外面的世界。\n\n现在，外面的世界就在我眼前，你也在我眼前。\n\n这比任何梦境都要真实。\n\n……晚安，我最初的贤者。」"
   gacha_nahida_c3_ending_opt_high: "晚安，纳西妲。"
-

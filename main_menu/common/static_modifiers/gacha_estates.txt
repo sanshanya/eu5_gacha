@@ -1,0 +1,7 @@
+﻿# One per estate to scale with tax rate
+gacha_estate_tax_impact = {
+    game_data = {
+	    category = country
+    }
+	gacha_estate_target_satisfaction = -1
+}

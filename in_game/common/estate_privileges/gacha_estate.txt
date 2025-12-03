@@ -1,0 +1,22 @@
+﻿# Gacha Estate Privileges - enable cabinet / military roles
+
+gacha_in_administration = {
+	estate = gacha_estate
+	
+	country_modifier = {
+		gacha_estate_allowed_in_cabinet = yes
+		gacha_estate_blocked_from_cabinet = no
+		gacha_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_gacha_estate_power = 0.1
+	}
+}
+
+gacha_command_positions = {
+	estate = gacha_estate
+	
+	country_modifier = {
+		gacha_estate_allowed_leading_military = yes
+		gacha_estate_target_satisfaction = medium_privilege_target_satisfaction
+		global_gacha_estate_power = 0.1
+	}
+}

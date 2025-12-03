@@ -25,3 +25,58 @@ gacha_country_aura = {
 gacha_constellation_level= {
   positive = "gfx/interface/icons/modifier_types/gacha_constellation.dds"
 }
+
+gacha_estate_target_satisfaction = {
+  positive = "gfx/interface/icons/modifier_types/gacha_estate_target_satisfaction.dds"
+}
+
+gacha_estate_allowed_in_cabinet = {
+  positive = "gfx/interface/icons/modifier_types/gacha_estate_allowed_in_cabinet.dds"
+}
+
+gacha_estate_allowed_leading_military = {
+  positive = "gfx/interface/icons/modifier_types/gacha_estate_allowed_leading_military.dds"
+}
+
+gacha_estate_blocked_from_cabinet = {
+  positive = "gfx/interface/icons/modifier_types/gacha_estate_allowed_in_cabinet.dds"
+}
+
+global_gacha_estate_power = {
+  positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds"
+}
+
+# Placeholder icons for stub types
+gacha_estate_satisfaction = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_power = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+monthly_gacha_estate_rebel_growth = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_satisfaction_recovery = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_satisfaction_decay = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_max_tax = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_min_tax = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_levy_size = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+local_gacha_estate_power = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_cannot_marry = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_can_participate_in_parliament = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_blocked_from_parliament = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_agenda_impact = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_allowed_to_build_roads = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_estate_blocked_from_leading_military = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+local_gacha_desired_pop_scaled = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+local_gacha_desired_pop = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+global_gacha_desired_pop = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+global_gacha_desired_pop_scaled = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+global_gacha_city_desired_pop_scaled = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+global_gacha_city_desired_pop = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+global_gacha_rural_desired_pop_scaled = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+global_gacha_rural_desired_pop = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+global_gacha_migration_allowed = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+local_gacha_migration_allowed = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+local_gacha_max_literacy = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+global_gacha_max_literacy = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+global_gacha_assimilation_blocked = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+local_gacha_assimilation_blocked = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+global_gacha_conversion_blocked = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+local_gacha_conversion_blocked = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+local_gacha_food_consumption = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+global_gacha_food_consumption = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }

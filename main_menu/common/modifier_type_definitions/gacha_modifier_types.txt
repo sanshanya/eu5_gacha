@@ -60,3 +60,64 @@ gacha_constellation_level = {
   }
 }
 
+gacha_estate_target_satisfaction = {
+  color = neutral
+  percent = yes
+  game_data = { category = country }
+}
+
+gacha_estate_allowed_in_cabinet = {
+  boolean = yes
+  game_data = { category = country }
+}
+
+gacha_estate_allowed_leading_military = {
+  boolean = yes
+  game_data = { category = country }
+}
+
+gacha_estate_blocked_from_cabinet = {
+  boolean = yes
+  game_data = { category = country }
+}
+
+global_gacha_estate_power = {
+  color = neutral
+  percent = yes
+  game_data = { category = country }
+}
+
+# Placeholder types to silence estate/pop references (non-functional)
+gacha_estate_satisfaction = { percent = yes game_data = { category = country } }
+gacha_estate_power = { percent = yes game_data = { category = country } }
+gacha_estate_blocked_from_leading_military = { boolean = yes game_data = { category = country } }
+monthly_gacha_estate_rebel_growth = { percent = yes game_data = { category = country } }
+gacha_estate_satisfaction_recovery = { percent = yes game_data = { category = country } }
+gacha_estate_satisfaction_decay = { percent = yes game_data = { category = country } }
+gacha_estate_max_tax = { percent = yes game_data = { category = country } }
+gacha_estate_min_tax = { percent = yes game_data = { category = country } }
+gacha_estate_levy_size = { percent = yes game_data = { category = country } }
+local_gacha_estate_power = { percent = yes game_data = { category = location } }
+gacha_estate_cannot_marry = { boolean = yes game_data = { category = country } }
+gacha_estate_can_participate_in_parliament = { boolean = yes game_data = { category = country } }
+gacha_estate_blocked_from_parliament = { boolean = yes game_data = { category = country } }
+gacha_estate_agenda_impact = { percent = yes game_data = { category = country } }
+gacha_estate_allowed_to_build_roads = { boolean = yes game_data = { category = country } }
+local_gacha_desired_pop_scaled = { percent = yes game_data = { category = location } }
+local_gacha_desired_pop = { percent = yes game_data = { category = location } }
+global_gacha_desired_pop = { percent = yes game_data = { category = country } }
+global_gacha_desired_pop_scaled = { percent = yes game_data = { category = country } }
+global_gacha_city_desired_pop_scaled = { percent = yes game_data = { category = country } }
+global_gacha_city_desired_pop = { percent = yes game_data = { category = country } }
+global_gacha_rural_desired_pop_scaled = { percent = yes game_data = { category = country } }
+global_gacha_rural_desired_pop = { percent = yes game_data = { category = country } }
+global_gacha_migration_allowed = { boolean = yes game_data = { category = country } }
+local_gacha_migration_allowed = { boolean = yes game_data = { category = location } }
+local_gacha_max_literacy = { percent = yes game_data = { category = location } }
+global_gacha_max_literacy = { percent = yes game_data = { category = country } }
+global_gacha_assimilation_blocked = { boolean = yes game_data = { category = country } }
+local_gacha_assimilation_blocked = { boolean = yes game_data = { category = location } }
+global_gacha_conversion_blocked = { boolean = yes game_data = { category = country } }
+local_gacha_conversion_blocked = { boolean = yes game_data = { category = location } }
+local_gacha_food_consumption = { percent = yes game_data = { category = location } }
+global_gacha_food_consumption = { percent = yes game_data = { category = country } }

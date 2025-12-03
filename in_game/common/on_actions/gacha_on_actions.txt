@@ -5,6 +5,21 @@
             every_country = {
                 limit = { is_ai = no }
                 gacha_ensure_state_initialized = yes
+                add_country_modifier = { modifier = gacha_estate_integration_modifier years = -1 mode = add_and_extend }
+                # 默认解锁天外之人可入内阁/领兵的特权，避免被阻挡
+                add_estate_privilege = { estate = estate_type:gacha_estate privilege = estate_privilege:gacha_in_administration }
+                add_estate_privilege = { estate = estate_type:gacha_estate privilege = estate_privilege:gacha_command_positions }
+            }
+        }
+    }
+    on_game_loaded = {
+        effect = {
+            every_country = {
+                limit = { is_ai = no }
+                gacha_ensure_state_initialized = yes
+                add_country_modifier = { modifier = gacha_estate_integration_modifier years = -1 mode = add_and_extend }
+                add_estate_privilege = { estate = estate_type:gacha_estate privilege = estate_privilege:gacha_in_administration }
+                add_estate_privilege = { estate = estate_type:gacha_estate privilege = estate_privilege:gacha_command_positions }
             }
         }
     }

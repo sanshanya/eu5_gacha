@@ -1,0 +1,10 @@
+﻿gacha_estate = {
+    color = { 147 112 219 } # Medium Purple
+    power_per_pop = 0.05
+    tax_per_pop = 0
+    rival = 0
+    alliance = 0
+
+    bank = no
+    characters_have_dynasty = sometimes
+}

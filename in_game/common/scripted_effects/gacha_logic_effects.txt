@@ -151,6 +151,12 @@ gacha_resolve_5star_and_save_scope = {
         else_if = { limit = { local_var:gacha_standard_5_idx = 5 } gacha_create_nahida_effect = yes }
         else = { gacha_create_fischl_effect = yes } # Index 6-7 归并到菲谢尔
     }
+
+    # 补丁：无论新抽还是重复抽，统一确保归入自定义阶层
+    if = {
+        limit = { exists = scope:gacha_last_pulled_char }
+        scope:gacha_last_pulled_char = { gacha_assign_to_gacha_estate = yes }
+    }
 }
 
 # ------------------------------------------------------------

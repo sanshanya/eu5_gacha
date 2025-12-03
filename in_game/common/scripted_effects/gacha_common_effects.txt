@@ -85,17 +85,27 @@ gacha_register_new_character = {
     # 刷新数值 (调用命座计算脚本)
     gacha_apply_constellation_stats_effect = { who = $who$ }
 
-    #  临时方案：分配到王权阶层 (Crown Estate)
-    # 自定义 gacha_guild_estate 遇到技术问题，从长计议
-    # change_character_estate = estate_type:crown_estate
-
     # === D. 身份确立 (Citizenship) & Scope 绑定 ===
-    # 关键步骤：在名字和特质和阶层确定后，再移动到国家，否则会发生奇怪的事情
+    # 关键步骤：在名字和特质确定后，移动到国家
     move_country = root
+
+    # 统一把抽卡角色归入自定义阶层
+    gacha_assign_to_gacha_estate = yes
 
     # 【V3 契约】保存当前角色 Scope，供 UI 事件使用
     # 注意：不要在角色 wrapper 中清理该 Scope，由展示事件的 after 块负责清理
     save_scope_as = gacha_last_pulled_char
+}
+
+# ------------------------------------------------------------------------------ 
+# Helper: 将角色归入自定义阶层
+# 作用：避免角色落在默认贵族等阶层，保障 pop/estate 映射正确
+# ------------------------------------------------------------------------------ 
+gacha_assign_to_gacha_estate = {
+    if = {
+        limit = { exists = this }
+        change_character_estate = estate_type:gacha_estate
+    }
 }
 
 # ------------------------------------------------------------------------------

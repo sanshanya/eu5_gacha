@@ -18,3 +18,13 @@ gacha_former_ruler_modifier = {
   force_allow_as_leader       = yes
   ignore_gender_block_cabinet = yes
 }
+
+# 让天外之人阶层融入政务/军队的国家级开关
+gacha_estate_integration_modifier = {
+  game_data = { category = country decaying = no }
+  gacha_estate_allowed_in_cabinet = yes
+  gacha_estate_allowed_leading_military = yes
+  gacha_estate_target_satisfaction = medium_permanent_target_satisfaction
+  gacha_estate_blocked_from_cabinet = no
+  global_gacha_estate_power = 5.0
+}

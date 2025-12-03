@@ -1,0 +1,15 @@
+﻿gacha = {
+	color = { 147 112 219 } # Medium Purple
+	
+	# Gacha characters are unique - they don't promote, grow, or migrate
+	# promote_to = (none)
+	
+	pop_food_consumption = 0.5
+	grow = no
+	assimilation_conversion_factor = 0.0
+	migration_factor = 0.0
+	city_graphics = 0.01
+
+	# CRITICAL: Estate mapping
+	gacha_estate = { }
+}

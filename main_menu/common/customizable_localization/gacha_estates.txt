@@ -1,0 +1,8 @@
+﻿gacha_estate = {
+	type = country
+
+	text = {
+		localization_key = gacha_otherworldly_estate
+		fallback = yes
+	}
+}
