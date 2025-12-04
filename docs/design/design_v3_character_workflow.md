@@ -1,15 +1,15 @@
 ﻿# V3 Character Design Workflow
 
-**Version**: 1.0  
-**Last Updated**: 2025-11-25  
-**Status**: 🚧 Design Document (未实装)  
+**Version**: 1.1  
+**Last Updated**: 2025-12-04  
+**Status**: 🟢 Production (8角色已实装)  
 **Purpose**: 定义V3角色从设计文档到EU5代码的标准转换流程
 
 > [!IMPORTANT]
 > **真相来源**: 语法优先以`script_docs`与base game代码为准；本文档只展示在本项目中已跑通的用法。如遇版本更新导致行为变化，以最新的`script_docs`输出为准。
 
 > [!NOTE]
-> 本文档基于现有V2角色实现(心海/雷电)验证，所有代码示例均已在游戏中测试通过。
+> 本文档基于8位V3角色实现(心海/雷电/刻晴/芙宁娜/胡桃/可莉/纳西妲/菲谢尔)验证，所有代码示例均已在游戏中测试通过。详见 [spec_character_roster.md](../spec/spec_character_roster.md)。
 
 ---
 

@@ -1,8 +1,13 @@
 ﻿# Engine Truth: Basics & Verified Behaviors
 
-- **Version**: 1.0
-- **Last Verified**: 2025-11-25
+- **Version**: 1.1
+- **Last Verified**: 2025-12-04
 - **Purpose**: 聚合官方 Wiki 结论与项目组实测的引擎行为，作为底层事实依据。
+- **Official Source**: [Tinto Talks #85 - Modding](https://forum.paradoxplaza.com/forum/developer-diary/tinto-talks-85-22nd-of-october-modding.1864004/)
+
+> [!IMPORTANT]
+> **Jomini Framework**: EU5 使用与 CK3、Vic3、I:R 共享的 Jomini 脚本框架。
+> 可参考这些游戏的Modding文档，但需注意EU5的特定实现差异。
 
 ---
 

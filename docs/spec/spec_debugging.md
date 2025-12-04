@@ -1,7 +1,8 @@
 ﻿# Debugging & Troubleshooting
 
 > **Purpose**: 调试工具、常见问题与解决方案  
-> **Target Audience**: 所有开发者
+> **Target Audience**: 所有开发者  
+> **Official Source**: [Tinto Talks #85 - Modding](https://forum.paradoxplaza.com/forum/developer-diary/tinto-talks-85-22nd-of-october-modding.1864004/)
 
 ---
 
@@ -18,6 +19,30 @@
 - ✅ 热重载修改的文件(无需重启游戏)
 - ✅ 显示 error.log 行数统计按钮
 - ✅ 启用游戏内dev工具
+
+---
+
+## 1.1 File Watchers (官方特性)
+
+> [!TIP]
+> **官方确认**: EU5 内置 **File Watcher** 功能，修改Mod文件后游戏可**即时刷新**！
+
+**工作流程**:
+1. 在编辑器中修改脚本文件
+2. 保存文件 (Ctrl+S)
+3. 在游戏中触发相关内容
+4. 立即看到变化 - **无需重启游戏**
+
+**适用范围**:
+- ✅ Events
+- ✅ Scripted Effects
+- ✅ Triggers
+- ✅ Localization
+- ⚠️ 部分文件仍需完全重启 (on_actions等)
+
+**最佳实践**:
+- 启用 `-debug_mode` 获得最佳热重载体验
+- 使用 `reload <file>` 手动强制刷新特定文件
 
 ---
 

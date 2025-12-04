@@ -1,7 +1,8 @@
 ﻿# Gacha System Specification (抽卡系统规范)
 
-> **Verified**: 2025-11-25 | Game v1.0.0  
-> **Purpose**: 定义抽卡系统的核心机制、概率模型与实现规范
+> **Verified**: 2025-12-04 | V3.0.0  
+> **Purpose**: 定义抽卡系统的核心机制、概率模型与实现规范  
+> **Characters**: 8位角色已实装 (详见 [spec_character_roster.md](spec_character_roster.md))
 
 ---
 
@@ -9,14 +10,30 @@
 
 ### File Locations
 
-| 文件 | 路径 | 说明 |
+| 类别 | 文件 | 说明 |
 |:---|:---|:---|
-| **抽卡入口** | `in_game/common/character_interactions/gacha_wish_interaction.txt` | 玩家可观交互 |
-| **概率计算** | `in_game/common/script_values/gacha_eu_values.txt` | 动态阈值、RNG公式 |
-| **核心逻辑** | `in_game/common/scripted_effects/gacha_logic_effects.txt` | 单次抽卡、十连Silent内核 |
-| **角色池** | `in_game/common/scripted_effects/gacha_logic_effects.txt` | 多角色池选择逻辑 |
-| **Event UI** | `in_game/events/gacha_events.txt` | 抽卡界面与结果展示 |
-| **角色Effects** | `in_game/common/scripted_effects/gacha_xinhai_effects.txt` | 角色专属Wrapper |
+| **抽卡入口** | `character_interactions/gacha_wish_interaction.txt` | 单抽/十连交互 |
+| **概率计算** | `script_values/gacha_eu_values.txt` | 阈值、RNG公式 |
+| **核心逻辑** | `scripted_effects/gacha_logic_effects.txt` | Silent内核、池选择 |
+| **公共效果** | `scripted_effects/gacha_common_effects.txt` | 初始化、注册、Estate分配 |
+| **角色效果** | `scripted_effects/gacha_{char}_effects.txt` | 8角色专属Wrapper |
+| **角色事件** | `events/gacha_{char}_events.txt` | 8角色故事链 |
+| **主事件** | `events/gacha_events.txt` | 抽卡UI、结果展示 |
+| **星辉事件** | `events/gacha_starlight_events.txt` | 星辉兑换系统 |
+
+### Character Pool (角色池)
+
+**UP池** (50%概率):
+- 心海 (xinhai) - Index 0
+
+**常驻池** (50%概率 / 歪了):
+- 雷电 (raiden) - Index 1
+- 刻晴 (keqing) - Index 2
+- 芙宁娜 (furina) - Index 3
+- 胡桃 (hutao) - Index 4
+- 可莉 (klee) - Index 5
+- 纳西妲 (nahida) - Index 6
+- 菲谢尔 (fischl) - Index 7
 
 ### Key Data Structures
 
