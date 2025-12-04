@@ -1,0 +1,3 @@
+colors = {
+    map_gacha = rgb { 186 148 255 }
+}

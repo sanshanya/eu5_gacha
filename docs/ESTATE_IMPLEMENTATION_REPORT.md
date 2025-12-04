@@ -137,3 +137,32 @@
     }
   }
   ```
+
+## 8. 天外之人阶层/文化实现清单
+
+> 自查用：已做/未做，一眼看缺口。
+
+- **文化定义**
+  - `in_game/common/cultures/gacha_culture.txt`：语言、颜色(`map_gacha`)、所属组。
+  - 颜色：`in_game/common/named_colors/gacha_colors.txt`、`main_menu/common/named_colors/gacha_colors.txt` 定义 `colors = { map_gacha = ... }`。
+  - 本地化：`gacha_culture` / `gacha_culture_adj`（中/英已补，其他语言未补）。
+
+- **阶层定义**
+  - `in_game/common/estates/gacha_estate.txt`：基础属性，颜色对齐 `map_gacha`。
+  - `in_game/common/estate_privileges/gacha_estate.txt`：基础特权（内阁/军职放行）。
+  - 本地化：`gacha_estate`、`gacha_estate_desc`、特权/修正名（中/英已补；其他语言未补）。
+  - 修正类型/图标：`main_menu/common/modifier_type_definitions/gacha_modifier_types.txt`、`main_menu/common/modifier_icons/gacha_modifier_icons.txt`（占位需确认 UI 是否缺图）。
+
+- **角色/流程绑定**
+  - 角色创建/升级：`gacha_register_new_character` & 各 `gacha_*_effects.txt` 设定 culture/religion + `gacha_estate`。
+  - 退位/回归阶层：`gacha_assign_to_gacha_estate` 强制文化/宗教/阶层。
+  - 人口生成：首次创建时在首都添加 gacha pop（size=0.001）；重复抽取不再加人。
+
+- **周边接入（待选）**
+  - 议会议题、法案、建筑、事件等扩展：未做。
+  - 自定义 estate 的 `customizable_localization`：未做独立文件，可补。
+  - 更多特权/AI 权重：当前仅两项基础特权，无额外事件。
+
+- **已知未覆盖**
+  - 其他语言本地化。
+  - 图标/修正占位是否完整需检查实际 UI 是否有缺失警告。

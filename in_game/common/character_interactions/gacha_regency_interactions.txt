@@ -42,7 +42,11 @@
       scope:gacha_old_ruler = {
         remove_character_modifier = gacha_temp_regent_modifier
         remove_character_modifier = gacha_former_ruler_modifier
-        change_character_estate = estate_type:crown_estate
+        # 非天外之人保持在王权阶层，天外之人后续会被送回自定义阶层
+        if = {
+          limit = { NOT = { has_character_modifier = gacha_core_modifier } }
+          change_character_estate = estate_type:crown_estate
+        }
       }
 
       # 3. 切换统治者到目标角色
@@ -53,6 +57,11 @@
       # 4. 给旧统治者打“前任统治者”修正
       scope:gacha_old_ruler = {
         add_character_modifier = { modifier = gacha_former_ruler_modifier years = -1 mode = add_and_extend }
+        # 如果旧统治者是天外之人，退位后送回天外之人阶层
+        if = {
+          limit = { has_character_modifier = gacha_core_modifier }
+          change_character_estate = estate_type:gacha_estate
+        }
       }
 
       # 5. 给新统治者打“代政中”修正，并放入王权阶层

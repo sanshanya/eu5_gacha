@@ -43,7 +43,10 @@ gacha_hutao_events.12 = {
     type = country_event
     title = gacha_hutao_events.12.title
     desc = gacha_hutao_events.12.desc
-    option = { name = gacha_hutao_events.12.a add_mil_power = 50 }
+    option = {
+        name = gacha_hutao_events.12.a
+        if = { limit = { exists = scope:gacha_last_pulled_char } scope:gacha_last_pulled_char = { add_mil = 50 } }
+    }
 }
 
 # 13. C1："往生堂大酬宾"

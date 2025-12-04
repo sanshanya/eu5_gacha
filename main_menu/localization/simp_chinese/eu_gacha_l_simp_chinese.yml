@@ -24,6 +24,8 @@
   gacha_estate_desc: "这些来自异界的访客拥有常人无法理解的力量和知识。虽然他们不直接参与世俗的税收，但他们的存在本身就能极大地提升国家的威望。"
   gacha_estate_recognition: "异界认可"
   gacha_estate_recognition_desc: "正式承认天外之人的特殊地位，给予他们应有的尊重。"
+  gacha_culture: "天外之人"
+  gacha_culture_adj: "异世"
 
   # 特权
   gacha_in_administration: "星辉共治"

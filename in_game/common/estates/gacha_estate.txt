@@ -1,5 +1,5 @@
 ﻿gacha_estate = {
-    color = { 147 112 219 } # Medium Purple
+    color = map_gacha # align with custom culture color
     power_per_pop = 0.05
     tax_per_pop = 0
     rival = 0

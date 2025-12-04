@@ -17,7 +17,10 @@ gacha_nahida_events.2 = {
     desc = gacha_nahida_events.2.desc
     
     immediate = { event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate } }
-    option = { name = gacha_nahida_events.2.a add_adm_power = 10 }
+    option = {
+        name = gacha_nahida_events.2.a
+        if = { limit = { exists = scope:gacha_last_pulled_char } scope:gacha_last_pulled_char = { add_adm = 10 } }
+    }
 }
 
 # 4. 满命（C6）："未被篡改的历史"
@@ -27,7 +30,10 @@ gacha_nahida_events.4 = {
     desc = gacha_nahida_events.4.desc
     
     immediate = { event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate } }
-    option = { name = gacha_nahida_events.4.a add_adm_power = 100 }
+    option = {
+        name = gacha_nahida_events.4.a
+        if = { limit = { exists = scope:gacha_last_pulled_char } scope:gacha_last_pulled_char = { add_adm = 100 } }
+    }
 }
 
 # 11. C2："知识的根系"
@@ -35,7 +41,10 @@ gacha_nahida_events.11 = {
     type = country_event
     title = gacha_nahida_events.11.title
     desc = gacha_nahida_events.11.desc
-    option = { name = gacha_nahida_events.11.a add_adm_power = 50 }
+    option = {
+        name = gacha_nahida_events.11.a
+        if = { limit = { exists = scope:gacha_last_pulled_char } scope:gacha_last_pulled_char = { add_adm = 50 } }
+    }
 }
 
 # 12. C4："因果的连结"
@@ -43,7 +52,10 @@ gacha_nahida_events.12 = {
     type = country_event
     title = gacha_nahida_events.12.title
     desc = gacha_nahida_events.12.desc
-    option = { name = gacha_nahida_events.12.a add_dip_power = 50 }
+    option = {
+        name = gacha_nahida_events.12.a
+        if = { limit = { exists = scope:gacha_last_pulled_char } scope:gacha_last_pulled_char = { add_dip = 50 } }
+    }
 }
 
 # 13. C1："多余的算力"

@@ -64,6 +64,23 @@ gacha_register_new_character = {
     add_trait = trait:gacha_$who$_origin_trait
     
     # === C. 系统管理 (System) ===
+    # 统一文化与宗教，以自定义文化/宗教标识天外之人
+    change_character_culture = culture:gacha_culture
+    change_character_religion = religion:sanjiao
+
+    # 新角色首次抵达：在首都添加少量天外之人 Pop (约一人)
+    root = {
+        random_owned_location = {
+            limit = { is_capital = yes }
+            add_pop = {
+                type = pop_type:gacha
+                size = 0.001
+                culture = culture:gacha_culture
+                religion = religion:sanjiao
+            }
+        }
+    }
+
     # 加入全局管理列表，方便后续遍历查找
     add_to_global_variable_list = {
         name   = gacha_obtained_characters
@@ -104,6 +121,9 @@ gacha_register_new_character = {
 gacha_assign_to_gacha_estate = {
     if = {
         limit = { exists = this }
+        # 确保天外之人身份信息完备
+        change_character_culture = culture:gacha_culture
+        change_character_religion = religion:sanjiao
         change_character_estate = estate_type:gacha_estate
     }
 }

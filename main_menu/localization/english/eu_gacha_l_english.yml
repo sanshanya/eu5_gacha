@@ -17,6 +17,21 @@
   # === Interaction Buttons ===
   gacha_events_interaction: "Conduct Rite: Otherworldly Descent"
   gacha_events_interaction_desc: "[actor.GetName] shall raise an altar and, with this world's silver, beckon heroes and sages from beyond the stars."
+  gacha_culture: "Otherworlders"
+  gacha_culture_adj: "Otherworldly"
+  gacha_estate: "Otherworldly Estate"
+  gacha_otherworldly_estate: "Otherworldly Estate"
+  gacha_estate_desc: "These visitors from beyond wield knowledge and power mortal courts barely grasp. They do not tithe like common estates, yet their mere presence bolsters your realm’s prestige."
+  gacha_estate_recognition: "Otherworldly Recognition"
+  gacha_estate_recognition_desc: "Formally acknowledge the special standing of the Otherworldly Estate and grant them due respect."
+  gacha_in_administration: "Starlight Council"
+  gacha_in_administration_desc: "Permit the Otherworldly Estate to sit in cabinet and steer the machinery of state."
+  gacha_command_positions: "Starlight Command"
+  gacha_command_positions_desc: "Permit the Otherworldly Estate to lead armies and fleets, applying their alien tactics."
+  STATIC_MODIFIER_NAME_gacha_estate_integration_modifier: "Otherworldly Privileges"
+  STATIC_MODIFIER_DESC_gacha_estate_integration_modifier: "The Otherworldly Estate is allowed into cabinet and command, with high satisfaction."
+  AUTO_MODIFIER_NAME_gacha_estate_access: "Otherworldly Privileges"
+  AUTO_MODIFIER_DESC_gacha_estate_access: "The Otherworldly Estate is allowed into cabinet and command and enjoys baseline satisfaction."
 
   # === Core Modifiers ===
   STATIC_MODIFIER_NAME_gacha_core_modifier: "Blessing of Wishes"

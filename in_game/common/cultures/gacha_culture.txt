@@ -1,0 +1,18 @@
+﻿# Gacha (Otherworld) Culture
+
+gacha_culture = {
+	# 默认使用汉语体系，靠自定义组隔离
+	language = wu_language
+
+	color = map_gacha
+
+	tags = { east_asian_gfx }
+
+	opinions = {
+	}
+	culture_groups = {
+		gacha_group
+		chinese_group
+		confucian_group
+	}
+}

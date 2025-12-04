@@ -81,8 +81,9 @@ gacha_xinhai_events.30 = {
         name = gacha_xinhai_c3_scene_1_opt_b
         # 跳过剧情，直接结束
         scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
-        after = { clear_saved_scope = gacha_c3_target_char }
     }
+
+    after = { clear_saved_scope = gacha_c3_target_char }
 }
 
 # 31. 第2幕：搁浅的游鱼
