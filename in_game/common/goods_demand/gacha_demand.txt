@@ -1,1 +1,4 @@
-﻿gacha_demand = { }
+﻿gacha_demand = {
+  hidden = yes
+  category = pop_needs
+}
