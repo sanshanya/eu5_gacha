@@ -1,0 +1,25 @@
+﻿l_simp_chinese:
+  # §Y 星辉兑换系统 (Starlight Exchange System) §!
+  # ============================================================
+
+  # === 星辉变量 ===
+  gacha_starlight: "星辉"
+  gacha_starlight_desc: "满命角色的祝福结晶，可用于兑换5星角色。3个星辉可以兑换任意5星角色。"
+
+  # === 星辉获得事件 ===
+  gacha_events.30.title: "命星之辉"
+  gacha_events.30.desc: "这位英雄的力量已臻化境，无法再度提升。他们的命星化作一枚闪耀的星辉，期待着新的邂逅。\n\n你获得了 1 个星辉！\n当前星辉总数：#bold;color_yellow [ROOT.ScriptValue('gacha_starlight_display_sv')|0]#!"
+  gacha_events.30.a: "收下星辉"
+
+  # === 星辉兑换事件 ===
+  gacha_starlight_events.1.title: "星辉兑换"
+  gacha_starlight_events.1.desc: "凝聚三枚命星的祝福，你可以选择召唤任意一位五星英雄。\n\n当前星辉：#bold;color_yellow [ROOT.ScriptValue('gacha_starlight_display_sv')|0]#!"
+  gacha_starlight_events.1.xinhai: "兑换：珊瑚宫心海(-3 星辉)"
+  gacha_starlight_events.1.raiden: "兑换：雷电将军(-3 星辉)"
+  gacha_starlight_events.1.keqing: "兑换：刻晴(-3 星辉)"
+  gacha_starlight_events.1.furina: "兑换：芙宁娜(-3 星辉)"
+  gacha_starlight_events.1.hutao: "兑换：胡桃(-3 星辉)"
+  gacha_starlight_events.1.fischl: "兑换：菲谢尔(-3 星辉)"
+  gacha_starlight_events.1.klee: "兑换：可莉(-3 星辉)"
+  gacha_starlight_events.1.nahida: "兑换：纳西妲(-3 星辉)"
+  gacha_starlight_events.1.cancel: "稍后再看"

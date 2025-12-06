@@ -1,0 +1,136 @@
+﻿l_english:
+  # ============================================================
+  # Character - Fischl
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_fischl: "Fischl"
+  gacha_last_name_fischl: "Immernacht"
+
+  # === Traits ===
+  gacha_fischl_origin_trait: "Gaze of the Evernight"
+  desc_gacha_fischl_origin_trait: "Fischl: “The shadows of this world crawl with the whispers of vile vermin. Yet beneath the ‘Eye of Judgment’ of this Prinzessin, the schemes of neighboring realms are as pale as parchment! Naught may escape the gaze of the Evernight!”\nOz: “My lady means that I shall be responsible for reconnaissance. The spy network on this continent seems rather thin—do allow me to expand it.”"
+
+  gacha_fischl_awakened_trait: "Bow of Thundering Judgment"
+  desc_gacha_fischl_awakened_trait: "Fischl: “The hour of reckoning is nigh! Let that thunderous blaze (by which I refer to your artillery) resound across the heavens! Those foolish enemy hosts shall, beneath the radiance of the Prinzessin, be reduced to naught but ash!”\nOz: “My lady finds your artillery formations most impressive. I shall assist in adjusting their trajectories to reduce friendly casualties and waste.”"
+
+  gacha_fischl_transcended_trait: "Descender of the Evernight Realm"
+  desc_gacha_fischl_transcended_trait: "Fischl: “Even in a foreign land, the nobility of this Prinzessin cannot be concealed. Mark my words—these subjects shall one day bow to the laws of the Evernight and sing hymns to my descent!”\nOz: “My lady will strive to learn the etiquette of your court. That said… this kind of unshakable confidence does, surprisingly, keep everyone nicely in line.”"
+
+  gacha_fischl_c2_trait: "True Sight of the Evernight"
+  desc_gacha_fischl_c2_trait: "Fischl: “Behold, that hypocritical pact is shrouded in the black miasma of betrayal! These mortals’ little tricks are, in the eyes of this Prinzessin, no more than a clown’s farce.”\nOz: “My lady has discovered that the ambassador from that neighboring country is lying. We have also placed informants in their court… Her Highness refers to that as a ‘foreshadowing of fate.’”"
+
+  gacha_fischl_c4_trait: "Prinzessin’s Dreaming Court"
+  desc_gacha_fischl_c4_trait: "Fischl: “This is the ‘Phantasm of the Prinzessin’! The borders of reality have been broken—let the enemy howl in an endless maze and be devoured by a pitch-black rain of arrows (namely, your artillery)!”\nOz: “My lady has used the terrain to arrange a ring of ambushes. On this battlefield, the script she wrote… truly seems to have become reality.”"
+
+  gacha_fischl_c6_trait: "Sovereign of the Evernight"
+  desc_gacha_fischl_c6_trait: "Fischl: “Seek not the way home, Oz. I see it clearly now—this land… this domain which, in this very moment, belongs to us, is the new ‘Evernight Pure Land.’ And you… (she looks toward you) are the ‘Consecrated King’ who shall share this eternal night with me.”\nOz: “…My lady has no need of a translation this time. I believe you understood her perfectly well.”"
+
+  # === Static Modifiers & Auras ===
+  STATIC_MODIFIER_NAME_gacha_fischl_modifier: "Blessing of the Evernight"
+  STATIC_MODIFIER_DESC_gacha_fischl_modifier: "“Sing, my retainers! At the very end of this world, offer up your hymns to the noble Prinzessin!”"
+
+  gacha_fischl_modifier: "Rites of the Prinzessin"
+  gacha_fischl_modifier_desc: "The gaze of the Prinzessin der Verurteilung and her familiar fills the court with an air of mystery and awe."
+
+  STATIC_MODIFIER_NAME_gacha_fischl_c0_modifier: "Seat of Phantasmal Night · Base"
+  STATIC_MODIFIER_NAME_gacha_fischl_c1_modifier: "Raven-Borne Courier"
+  STATIC_MODIFIER_NAME_gacha_fischl_c2_modifier: "Eye of the Polar Night"
+  STATIC_MODIFIER_NAME_gacha_fischl_c3_modifier: "Tales of the Prinzessin"
+  STATIC_MODIFIER_NAME_gacha_fischl_c4_modifier: "Dreams Devour Reality"
+  STATIC_MODIFIER_NAME_gacha_fischl_c5_modifier: "Fated Nemesis"
+  STATIC_MODIFIER_NAME_gacha_fischl_c6_modifier: "Evernight Pure Land"
+
+  STATIC_MODIFIER_NAME_gacha_fischl_blessed_pact_modifier: "Blessed Pact"
+  STATIC_MODIFIER_DESC_gacha_fischl_blessed_pact_modifier: "A new chapter co-authored by the Prinzessin and the Consecrated King; dark wings and roaring guns now point in the same direction."
+
+  STATIC_MODIFIER_NAME_gacha_fischl_shelter_modifier: "Shelter from the Storm"
+  STATIC_MODIFIER_DESC_gacha_fischl_shelter_modifier: "The warmth beneath that shared umbrella scatters both long night and driving rain; reality itself becomes the firmest refuge."
+
+  STATIC_MODIFIER_NAME_gacha_fischl_country_modifier: "Gaze of the Evernight"
+  STATIC_MODIFIER_DESC_gacha_fischl_country_modifier: "Oz spreads his wings; the spy network expands more quickly, and the number of diplomats increases."
+
+  STATIC_MODIFIER_NAME_gacha_fischl_c1_country_modifier: "Eye of Judgment"
+  STATIC_MODIFIER_DESC_gacha_fischl_c1_country_modifier: "More intelligence officers are dispatched, and your diplomatic feelers reach even further."
+
+  STATIC_MODIFIER_NAME_gacha_fischl_c2_country_modifier: "True Sight of the Evernight"
+  STATIC_MODIFIER_DESC_gacha_fischl_c2_country_modifier: "Midnight listening posts keep pace with the cabinet; intelligence-gathering and government efficiency rise together."
+
+  STATIC_MODIFIER_NAME_gacha_fischl_c5_country_modifier: "Nemesis Hunter"
+  STATIC_MODIFIER_DESC_gacha_fischl_c5_country_modifier: "You grow ever more adept at fencing with your sworn foe, and your prestige rises accordingly."
+
+  STATIC_MODIFIER_NAME_gacha_fischl_c6_country_modifier: "Sovereign of the Evernight"
+  STATIC_MODIFIER_DESC_gacha_fischl_c6_country_modifier: "Blessed by the Evernight, war exhaustion slowly fades, and your prestige increases month by month."
+
+  # === Trait Loss Descriptions ===
+  gacha_fischl_origin_trait_die_desc: "Loses the “Gaze of the Evernight” starting bonus."
+  gacha_fischl_awakened_trait_die_desc: "Loses the “Bow of Thundering Judgment” profession bonus."
+  gacha_fischl_transcended_trait_die_desc: "Loses the “Descender of the Evernight Realm” ruler bonus."
+  gacha_fischl_c2_trait_die_desc: "Loses Fischl’s C2 ascension bonus."
+  gacha_fischl_c4_trait_die_desc: "Loses Fischl’s C4 ascension bonus."
+  gacha_fischl_c6_trait_die_desc: "Loses Fischl’s C6 final ascension bonus."
+
+  # === Events ===
+  gacha_fischl_events.1.title: "Prinzessin der Verurteilung Fischl — (Pseudo) Creator of This World"
+  gacha_fischl_events.1.desc: "“Hmph, so the threads of causality have chosen to tangle once more?\n\nRejoice! This Prinzessin has crossed the rifts between three thousand worlds, obeying the ‘summoning’ of fate to descend upon this barren plane!\n\nThis domain… hm. Its span is barely adequate, yet it shall suffice as the Evernight Pure Land’s palace in the mortal realm.\n\nSince thou hast offered up tribute, I shall in turn bestow upon thee the hallowed radiance of my benediction.\n\nWhether spying upon the conspiracies of great powers or calling down thunderous judgment, all lies within but a single thought of this Prinzessin!\n\n…Oz, why dost thou yet tarry? Quickly, pay respect to this commoner—no, to this ‘ally.’”\n\n(A jet-black night raven appears from thin air and bows with perfect grace.)\n\n“Ozvaldo Hrafnavins at your service. My lady means to say: she is delighted to have arrived in your country. Though we are strangers to this land, we shall do our utmost to assist with your intelligence and military affairs. We look forward to working with you.”"
+  gacha_fischl_events.1.a: "Welcome, Prinzessin of Judgment."
+
+  gacha_fischl_events.2.title: "Proclamation of Fate"
+  gacha_fischl_events.2.desc: "Fischl’s power surges; purple lightning dances around her.\n\n“Once more the wheel of destiny turns! My constellation burns ever brighter upon the vault of heaven!”\n\nOz: “My lady has grown stronger.”"
+  gacha_fischl_events.2.a: "Power of the stars!"
+
+  gacha_fischl_events.4.title: "Here Lies the Evernight Pure Land"
+  gacha_fischl_events.4.desc: "“I am Fischl, Prinzessin der Verurteilung.\n\nOnce, I could only build that world called the ‘Evernight Pure Land’ in the cracks between book pages, in the gardens of my imagination.\n\nPeople mocked me. My parents could not understand me. Only Oz stayed by my side.\n\nI thought it was a dream that would never, ever descend into reality.\n\nUntil the day you summoned me here.\n\nYou did not laugh at my words. Instead, you placed in my hand the scepter that commands ten thousand troops.\n\nYou did not question my birth. Instead, you made this vast empire into my true garden.\n\nLook—the chain of fortresses, the vassal realms that bend the knee, the heavens alight with artillery and glory…\n\nIs this not the very scene of the final chapter of the “Tales of the Prinzessin”?\n\nThank you.\n\nYou are the one who turned my ‘lie’ into an unbreakable ‘reality.’\n\nFrom this day forth, I shall guard your reality as well.\n\nBy the name of the Prinzessin der Verurteilung—no, by the name of Fischl—I swear:\n\nThis world is the Pure Land, and you are my one and only co-ruler.”"
+  gacha_fischl_events.4.a: "Truly, this must be heaven’s favor!"
+
+  gacha_fischl_events.11.title: "Eye That Sees Through Lies"
+  gacha_fischl_events.11.desc: "Fischl: “Behold, that hypocritical treaty is wreathed in the black miasma of betrayal! These mortals’ little theatrics are, in the eyes of this Prinzessin, no more than a clown’s farce.”\nOz: “My lady has discovered that the ambassador from that neighboring country is lying. We have also planted informants in their court… Her Highness calls that a ‘foreshadowing of fate.’”"
+  gacha_fischl_events.11.a: "Her insight is peerless."
+
+  gacha_fischl_events.12.title: "Dreams Devour Reality"
+  gacha_fischl_events.12.desc: "Fischl: “Behold! This is the ‘Dream of the Prinzessin’! The borders of reality have already shattered—let the enemy wail within an endless labyrinth and be swallowed by a pitch-black rain of arrows (that is to say, artillery)!”\nOz: “My lady has used the terrain to arrange a ring of ambushes. On this battlefield, the script she wrote… truly seems to have become reality.”"
+  gacha_fischl_events.12.a: "The battlefield is her stage!"
+
+  gacha_fischl_events.13.title: "Raven-Borne Messenger"
+  gacha_fischl_events.13.desc: "Fischl: “These obsidian wings shall soar through the royal courts of all nations, bearing the decrees and graces of the Prinzessin!”\nOz: “In simpler terms, I will be delivering your letters. Since you’re short on staff, I shall reluctantly make a few more trips. Rest assured, I am fluent in several foreign tongues.”"
+  gacha_fischl_events.13.a: "Thank you for your hard work, Oz."
+
+  gacha_fischl_events.14.title: "Fated Nemesis"
+  gacha_fischl_events.14.desc: "Fischl: “The gears of destiny have locked into place—a new ‘Rebellious Bird’ has arisen! This world has birthed another foe worthy of my personal judgment!”\nOz: “To put it plainly, my lady finds that country an eyesore. Establishing a new rival should make your people more united… or, ah, more motivated to fight.”"
+  gacha_fischl_events.14.a: "Then let them behold the radiance of the Prinzessin!"
+
+  # === C3 Story: Tales of the Prinzessin in the Rain ===
+  gacha_fischl_c3_title: "Tales of the Prinzessin in the Rain"
+
+  gacha_fischl_c3_scene_1_desc: "Rain drums against the palace dome in a dull, rolling roar.\n\nAt the entrance to the colonnade, Oz crouches on a stone pillar, feathers drenched and ruffled.\n\nOz: “…Ah, it’s you. If you would rather not have tomorrow’s diplomatic address turn into a long string of sneezes… please, go talk to her.”"
+  gacha_fischl_c3_scene_1_opt_a: "Look toward the depths of the gallery"
+  gacha_fischl_c3_scene_1_opt_skip: "Skip story"
+
+  gacha_fischl_c3_scene_2_desc: "At the far end of the corridor, Fischl stands at the edge of the curtain of rain, both hands raised toward the sky. Water runs down from her fingertips; her clothes are soaked through.\n\nFischl: “—By the darkness of this world I sever the tears of yonder realm! Begone, thou frenzied spirits of the elements!”\n\nA peal of thunder drowns out her voice, and the rain only grows heavier. Yet she stubbornly keeps her arms raised, her posture warping slightly in the cold wind."
+  gacha_fischl_c3_scene_2_opt_a: "Step closer: the rain shows no sign of stopping."
+
+  gacha_fischl_c3_scene_3_desc: "Your footsteps startle her. She whirls around; wet bangs cling to her forehead, and her eyepatch has slipped slightly askew.\n\nFischl straightens her back and folds her arms across her chest, trying to hide the soaked collar of her dress.\n\nFischl: “Who goes there?! …Hmph, so it is my ally in this world. Hast thou come to witness my ‘Rite of Judgment’? Stand back—achoo!!”"
+  gacha_fischl_c3_scene_3_opt_a: "Stop where you are: so this is the ‘rite of judgment’?"
+
+  gacha_fischl_c3_scene_4_desc: "Clearly, the so-called ‘rite’ has failed; all you see before you is a shivering, rain-drenched girl. You decide what to do."
+  gacha_fischl_c3_scene_4_opt_a: "Play along: “The flow of causality has been blocked. Shall I lend you some ‘mana’?”"
+  gacha_fischl_c3_scene_4_opt_b: "Open the umbrella: “This might work better than magic right now.”"
+
+  gacha_fischl_c3_scene_5_desc_a: "Fischl’s eyes go wide. “...Mana? Thou canst comprehend this exalted formula?”\n\nOz: “My lady, this ally does not seem inclined to mock your failure. Since we now have magical ‘support,’ perhaps we might… retreat in good order?”"
+  gacha_fischl_c3_scene_5_desc_b: "Fischl huffs, mouth stubborn. “Hmph… such a primitive device for avoiding rain. As if a Prinzessin would ever need such a—” Yet her body honestly shuffles a little closer beneath the umbrella.\n\nOz: “My lady, if not for yourself, then please accept this umbrella for my sake.”"
+  gacha_fischl_c3_scene_5_desc_common: "Fischl scolds Oz, but her voice is hoarse.\n\n“...It is not that the rite has failed. It is just that… this sky does not know me. I can no longer see the threads of fate… I have no idea when this rain will end.”"
+  gacha_fischl_c3_scene_5_opt_a: "Watch her quietly: she’s lost her way."
+
+  gacha_fischl_c3_scene_6_desc: "In the pounding rain, all her so-called ‘star charts’ and ‘causalities’ have fallen silent. What she needs now is a reason to stay."
+  gacha_fischl_c3_scene_6_opt_a: "Give meaning: “If the stars have changed, then we’ll rewrite them. This will be your new ‘Evernight Pure Land.’”"
+  gacha_fischl_c3_scene_6_opt_b: "Softly call her true name: “The rain will stop, Amy. Until then, I’ll be the one holding the umbrella.”"
+
+  gacha_fischl_c3_scene_7_desc_a: "Fischl snaps her head up; a fanatic light flares in her eyes, the chill blown away by the thrill of being acknowledged.\n\nOz folds his wings and retreats into the shadows."
+  gacha_fischl_c3_scene_7_desc_b: "At the sound of her real name, she jolts, cheeks instantly flushing red as she flails for composure.\n\nOz quietly withdraws, leaving her a pocket of silence."
+  gacha_fischl_c3_scene_7_opt_a: "Hold out your hand: “Come on.”"
+
+  gacha_fischl_c3_scene_8_desc_a: "Fischl straightens her eyepatch, plants one hand on her hip, and takes your hand; her presence seems to light up the rainy night.\n\n“Very well! Since thou art willing to offer up this domain, then I, the Prinzessin, shall bestow upon thee the title of ‘Consecrated King’!”\nOz: “As you command, my lady. But let us change into dry clothes first, or the Consecrated King will catch a cold.”\nFischl: “S–so noisy! …And also… thank you for believing in me.”"
+  gacha_fischl_c3_scene_8_opt_a: "As you command, Your Highness."
+
+  gacha_fischl_c3_scene_8_desc_b: "She does not argue with that name. Instead she ducks her head, grabbing the hem of your clothes—the handle of your umbrella—with ears burning red.\n\n“...You are not allowed to use that name so casually! It is…”\nOz: “My lady wishes to say: she is very happy. And that she would like to return to the palace for something warm to eat.”\nFischl: “Oz!!!”"
+  gacha_fischl_c3_scene_8_opt_b: "Come on, let’s go home."

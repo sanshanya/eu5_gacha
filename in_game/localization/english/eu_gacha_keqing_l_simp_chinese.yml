@@ -1,0 +1,141 @@
+﻿l_english:
+  # ============================================================
+  # Character - Keqing "Efficiency, Reform, Human Rule"
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_keqing: "Keqing"
+  gacha_last_name_keqing: "Yuheng"
+
+  # === Traits ===
+  gacha_keqing_origin_trait: "Thousand Sails of Liyue"
+  desc_gacha_keqing_origin_trait: "“Standing here for just a moment, I almost thought I was looking at Liyue Harbor with its thousand sails racing to depart… No, the infrastructure here is far too poor. If you want a prosperous nation, you start with roads, trade routes, and marketplaces. Hand me the plans. I’ll make this land shine with a golden glow.”"
+
+  gacha_keqing_awakened_trait: "Lightning Patrol of the Heavenly Streets"
+  desc_gacha_keqing_awakened_trait: "“In war, speed is everything. While that bloated enemy host is still fumbling into formation, my blade – the Lightning Stiletto – has already detonated in their rear ranks. Whether it’s quelling rebels or marching on distant fronts, so long as we move fast enough, there is no obstacle we cannot cut through. Move out!”"
+
+  gacha_keqing_transcended_trait: "Pioneer of the Age of Human Rule"
+  desc_gacha_keqing_transcended_trait: "“Stop pinning your hopes on miracles or divine mandates. History is walked out by human feet. If you dare to break with old conventions, I’ll dare to draft you a new code of law. In this era, we will use our own hands to write a future that no longer belongs to the gods.”"
+
+  # Constellation Traits
+  gacha_keqing_c2_trait: "Land of Gold"
+  desc_gacha_keqing_c2_trait: "“Every brick and every tile is a cornerstone of the future. Under my planning, this city’s efficiency has reached its limits. Fields and workshops alike are growing at a staggering pace. Look—the land itself is answering our sweat. Soon, every inch of it will be worth its weight in gold.”"
+
+  gacha_keqing_c4_trait: "Cloudborne · Peerless Blade"
+  desc_gacha_keqing_c4_trait: "“On the battlefield, swiftness shatters all. My sword-light is the signal to advance. Enemy formations are riddled with flaws in my eyes. I’ll become thunder itself, weaving through ten thousand troops before they can react, and reap the fruit of victory.”"
+
+  gacha_keqing_c6_trait: "Yuheng · Ordered Realm"
+  desc_gacha_keqing_c6_trait: "“The age of the gods has already passed; this is the dawn of human rule. I’ve cut away every redundant, outdated law. The state machine will roar forward at maximum efficiency. So long as you and I keep our resolve, mortal wisdom can surpass miracles.”"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_keqing_modifier: "Yuheng’s Oversight"
+  STATIC_MODIFIER_DESC_gacha_keqing_modifier: "“We’ve wasted far too much time already. We’re going to make up that progress.”"
+
+  gacha_keqing_modifier: "Heart of Reform"
+  gacha_keqing_modifier_desc: "The Yuheng’s high-efficiency reforms are driving this country rapidly forward."
+
+  # === Constellation Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_keqing_c0_modifier: "Golden Violet Seat · Base"
+  STATIC_MODIFIER_NAME_gacha_keqing_c1_modifier: "Lightning at Full Pace"
+  STATIC_MODIFIER_NAME_gacha_keqing_c2_modifier: "Exacting Overseer"
+  STATIC_MODIFIER_NAME_gacha_keqing_c3_modifier: "Ascent to the Tower"
+  STATIC_MODIFIER_NAME_gacha_keqing_c4_modifier: "Harmonized Scales"
+  STATIC_MODIFIER_NAME_gacha_keqing_c5_modifier: "Shifting Lanterns"
+  STATIC_MODIFIER_NAME_gacha_keqing_c6_modifier: "Lianzhen Star"
+
+  STATIC_MODIFIER_NAME_gacha_keqing_aid_modifier: "Yuheng’s Assistance"
+  STATIC_MODIFIER_DESC_gacha_keqing_aid_modifier: "Reformers fighting side by side, each the other’s scabbard; both administration and infrastructure advance at their perfect tempo."
+
+  STATIC_MODIFIER_NAME_gacha_keqing_gentle_expectation_modifier: "A Maiden’s Quiet Hopes"
+  STATIC_MODIFIER_DESC_gacha_keqing_gentle_expectation_modifier: "That night’s shared snack and promise turned into a gentle driving force, adding a touch of hearthfire to both prestige and production."
+
+  STATIC_MODIFIER_NAME_gacha_keqing_country_modifier: "Thousand Sails of Liyue"
+  STATIC_MODIFIER_DESC_gacha_keqing_country_modifier: "The Ministry of Works and urban growth rise together; under the Yuheng’s supervision, every inch of land is fiercely contested."
+
+  STATIC_MODIFIER_NAME_gacha_keqing_c1_country_modifier: "Ministry of Works Special Project"
+  STATIC_MODIFIER_DESC_gacha_keqing_c1_country_modifier: "Streamlined procedures make construction faster."
+
+  STATIC_MODIFIER_NAME_gacha_keqing_c2_country_modifier: "Land of Gold"
+  STATIC_MODIFIER_DESC_gacha_keqing_c2_country_modifier: "Full-on “infrastructure maniac” mode: projects and development accelerate across the realm, with outputs rising in step."
+
+  STATIC_MODIFIER_NAME_gacha_keqing_c5_country_modifier: "Yuheng’s Secretariat"
+  STATIC_MODIFIER_DESC_gacha_keqing_c5_country_modifier: "A meticulously calculated bureaucracy further trims the cost of advisors."
+
+  STATIC_MODIFIER_NAME_gacha_keqing_c6_country_modifier: "Yuheng’s Ordered Era"
+  STATIC_MODIFIER_DESC_gacha_keqing_c6_country_modifier: "Civil governance and the art of war advance hand in hand: research accelerates, administration grows more efficient, and war exhaustion falls."
+
+  # === Trait Loss ===
+  gacha_keqing_origin_trait_die_desc: "Loses the “Thousand Sails of Liyue” starting bonus."
+  gacha_keqing_awakened_trait_die_desc: "Loses the “Yuheng Star · Works Supervisor” profession bonus."
+  gacha_keqing_transcended_trait_die_desc: "Loses the “Reformer of Governance” ruler bonus."
+  gacha_keqing_c2_trait_die_desc: "Loses Keqing’s C2 ascension bonus."
+  gacha_keqing_c4_trait_die_desc: "Loses Keqing’s C4 ascension bonus."
+  gacha_keqing_c6_trait_die_desc: "Loses Keqing’s C6 final ascension bonus."
+
+  # === Events ===
+  gacha_keqing_events.1.title: "Yuheng of the Liyue Qixing — The Time for Reform Is Now"
+  gacha_keqing_events.1.desc: "“I am Keqing, the Yuheng of the Liyue Qixing.\n\nSince I answered your summons, I’ll speak plainly—if you think your state is running well right now, you’re definitely mistaken.\n\nI just skimmed your administrative accounts and infrastructure plans…\n\nFar too slow. Far too inefficient.\n\nHow can a fossilized bureaucracy like this possibly weather the storms to come?\n\nThe time for reform has already arrived.\n\nEven lands under the gaze of a god must ultimately be governed by human hands—let alone a place where even Rex Lapis is absent.\n\nI’ll help you reshape this country’s order.\n\nBut you’d better be prepared—my working pace is very fast.\n\nDon’t fall behind, all right… partner, who bears the title of ‘sovereign’.”"
+  gacha_keqing_events.1.a: "Then I’ll be counting on you, Yuheng."
+
+  gacha_keqing_events.2.title: "Efficiency Increased"
+  gacha_keqing_events.2.desc: "Keqing has optimized the existing workflows. Everyone is exhausted, but efficiency really has gone up.\n\n“Not enough. We can go even faster.”"
+  gacha_keqing_events.2.a: "Keep this tempo!"
+
+  gacha_keqing_events.4.title: "Man Triumphs Over Heaven"
+  gacha_keqing_events.4.desc: "“I am Keqing, the Yuheng of the Liyue Qixing.\n\nBack in Liyue, I was always running too fast, leaving everyone else behind.\n\nI worried that, in this strange world, I’d be left alone—chasing ‘efficiency’ by myself until it all turned into meaningless busywork.\n\nBut you kept up.\n\nNo matter how exacting the reforms I proposed, no matter how insane the marching speeds I demanded…\n\nyou never complained, never stopped.\n\nLooking at this land that once lay barren now filled with pavilions and bustling trade routes, I suddenly understood something:\n\nA so-called ‘golden age’ isn’t a gift from the gods. It’s something two like-minded people boil out of countless late nights of overtime.\n\n…Thank you.\n\nNot just for this country, but for… staying with the stubborn me, all this time.\n\nAll right, sentimentality time is over.\n\nTake the files—we’re going to inspect the next province.\n\nSo long as I’m with you…\n\nI believe this ‘age of human rule’ can last until the very end of time.”"
+  gacha_keqing_events.4.a: "Come on, the work isn’t done yet!"
+
+  gacha_keqing_events.11.title: "Glorious Foundations"
+  gacha_keqing_events.11.desc: "“Hear that? That’s the sound of hammers striking stone—that’s the heartbeat of a nation. If we mean to build a golden era, the foundations must be laid more firmly than bedrock. The current pace of construction barely satisfies me… and I do mean ‘barely.’”"
+  gacha_keqing_events.11.a: "We’ll do even better."
+
+  gacha_keqing_events.12.title: "Sword-Light as Myself"
+  gacha_keqing_events.12.desc: "“Right now, there’s no hesitation left in my sword. The battlefield is just another workplace. No matter how stubborn the enemy, I’ll ‘optimize’ them with thunderous speed. Don’t worry about the flanks—I’ll be everywhere I’m needed, all at once.”"
+  gacha_keqing_events.12.a: "This is the Yuheng’s speed!"
+
+  gacha_keqing_events.13.title: "Every Inch a Treasure"
+  gacha_keqing_events.13.desc: "“I’ve reviewed your city plans. You’re wasting far too much space. With just a bit of optimization, you can fit in many more workshops and markets. Look—like this… the principle that ‘every inch of land is worth its weight in gold’ holds true in any world.”"
+  gacha_keqing_events.13.a: "Implement the new layout at once."
+
+  gacha_keqing_events.14.title: "Thirsting for Talent"
+  gacha_keqing_events.14.desc: "“To sustain reforms at this intensity, the two of us alone are not enough. I’ve rewritten your recruitment standards and stripped away the useless formalities. Now let those truly capable serve us—at a more reasonable price.”"
+  gacha_keqing_events.14.a: "Let merit speak."
+
+  # === C3 Story: A Little Break Beyond the Lamplight ===
+  gacha_keqing_c3_title: "A Little Break Beyond the Lamplight"
+
+  gacha_keqing_c3_scene_1_desc: "Night has deepened; the palace has sunk into dreams. Only the light in the imperial study still burns.\n\nThis is Keqing’s third consecutive all-nighter. She’s trying to single-handedly shore up trade routes, mines, and ledgers.\n\nIn your hand is a fresh late-night meal from the imperial kitchens, its warmth seeping through the wooden box into your palm."
+  gacha_keqing_c3_scene_1_opt_a: "Push the door open: it’s time to make her stop."
+  gacha_keqing_c3_scene_1_opt_skip: "Skip this scene."
+
+  gacha_keqing_c3_scene_2_desc: "Keqing is hunched over the desk, writing at high speed. Scrolls and maps are piled high.\n\nKeqing: “...Cut this riverworks budget down another ten percent… the old nobles’ accounts are suspicious… convene the Ministry of Revenue again tomorrow. Also, have the craftsmen redo these blueprints… hm?”\n\nHer pen stops; her sharp instincts have caught the change in the air."
+  gacha_keqing_c3_scene_2_opt_a: "Approach the desk: “It’s me.”"
+
+  gacha_keqing_c3_scene_3_desc: "She whirls around. When she sees it’s you, her sternness instantly melts into surprise as she hurriedly tries to straighten her rumpled sleeves.\n\nIn the awkward silence, a loud “gurgle~” from her stomach shatters the solemn mood. The face usually etched with ‘severity’ and ‘reform’ flushes with embarrassed red."
+  gacha_keqing_c3_scene_3_opt_a: "Hold back a laugh: even the Yuheng is still flesh and blood."
+
+  gacha_keqing_c3_scene_4_desc: "Keqing turns her face away, planting both hands on the desk to reclaim her aura.\n\nKeqing: “That’s a normal reaction! I still have plenty of energy. These dossiers have to be finished tonight!”\n\nFaced with someone this harsh on herself, you decide to…"
+  gacha_keqing_c3_scene_4_opt_a: "Advise her like a swordsman: “Too much rigidity leads to breakage. Even the finest blade needs to return to the scabbard to keep its edge.”"
+  gacha_keqing_c3_scene_4_opt_b: "Gently tempt her: “(You open the box.) Whatever the paperwork says, even it has to yield before Golden-Thread Shrimp Balls.”"
+
+  gacha_keqing_c3_scene_5_desc_a: "Keqing freezes, her shoulders slumping.\n\nKeqing: “...Return to the scabbard to keep the edge…? You’re right. If a blade chips, it won’t be able to carve a path through great upheavals. I’ve been too impatient.”\n\nShe sets down her brush; there’s a new, quiet relief in her eyes at being understood."
+  gacha_keqing_c3_scene_5_desc_b: "The fragrance wafts up; Keqing’s mental defenses collapse.\n\nKeqing: “Bringing this out now to test me… that’s playing dirty…”\n\nHer gaze softens, and her body honestly leans toward the food box."
+  gacha_keqing_c3_scene_5_desc_common: "She sits, gazing at the snacks, eyes gentle.\n\nKeqing: “Back in Liyue, I often forgot to eat while rushing progress. It always felt like there wasn’t enough time, like I had to run the fastest if I wanted to change the world and keep people from relying on the gods.”"
+  gacha_keqing_c3_scene_5_opt_a: "Hand her the chopsticks: “You’ll need the strength to keep running.”"
+
+  gacha_keqing_c3_scene_6_desc: "Keqing picks up a shrimp ball and takes a small bite, commenting with her mouth but eating at a steady pace.\n\nAfter finishing the first one, her left hand subconsciously reaches for the paperwork—then stops.\n\nShe looks at the chopsticks, then at your eyes, and slowly pulls her hand back, folding it properly on her lap instead.\n\nKeqing: “...Thank you. This is probably the most ‘luxurious’ break I’ve had since coming here.”"
+  gacha_keqing_c3_scene_6_opt_a: "Watch her eat: “Slow down. No one’s going to steal it from you.”"
+
+  gacha_keqing_c3_scene_7_desc_a: "Keqing gazes out into the night, her expression relaxed.\n\nKeqing: “Your Majesty, I’m glad it was you I met in this world. You don’t treat me like a freak, and you’re not afraid of how radical I can be. You understand my urgency, and you understand my exhaustion. With you at my side, the age of human rule will definitely come.”\n\nShe turns back, eyes clear and resolute—the recognition of a ‘comrade.’"
+  gacha_keqing_c3_scene_7_desc_b: "Keqing lowers her head, fingers tracing the handle of the now-empty food box.\n\nKeqing: “You’re always like this—a majestic ruler who still remembers these tiny little things. In front of you, I can’t keep that tense façade up.”\n\nKeqing: “Next time… could you teach me how to make this? I want to cook it for you myself.”"
+  gacha_keqing_c3_scene_7_opt_a: "Make a promise here."
+
+  gacha_keqing_c3_scene_8_desc_a: "Dawn is approaching. Keqing rises and straightens her robes, a faint smile at her lips.\n\nKeqing: “Break’s over. Dawn is coming. After this little ‘return to the scabbard,’ I feel like there’s nothing I can’t cut through now.”"
+  gacha_keqing_c3_scene_8_desc_b: "Dawn is approaching. Keqing props her chin on her hand and looks at you, her gaze soft.\n\nKeqing: “Time went by so fast. We didn’t even do any ‘proper work,’ just had a midnight snack… but with your gesture, the new day doesn’t feel quite so anxious anymore.”"
+  gacha_keqing_c3_scene_8_opt_a: "Get ready to head out…"
+
+  gacha_keqing_c3_scene_9_desc_a: "Later, Keqing stands before the strategic map, pointing at the provinces with renewed vigor.\n\nKeqing: “I’ll propose a new plan at court today. So long as we work together, there’s no old rule we can’t break. Come on, partner—let’s build an age of prosperity!”"
+  gacha_keqing_c3_scene_9_opt_a: "Let’s go!"
+
+  gacha_keqing_c3_scene_9_desc_b: "Keqing walks you to the door, fingers still hooked through the handle of the empty food box.\n\nKeqing: “If you don’t mind… could you bring some again tomorrow night? In exchange, I’ll finish two hours early… and then we can go walk the city. I heard the night market sells paper lanterns that glow… just like the Xiao Lanterns back home. I want to go see them with you—not to talk about state affairs, just to look.”\n\nMoonlight flows down along the eaves, shining in her expectant gaze brighter than any grand blueprint."
+  gacha_keqing_c3_scene_9_opt_b: "It’s a promise."

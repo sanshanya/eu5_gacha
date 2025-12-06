@@ -1,0 +1,142 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 可莉 (Klee) "天真无邪的战争机器"
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_klee: "可莉"
+  gacha_last_name_klee: "火花骑士"
+
+  # === 特质 (Traits) ===
+  gacha_klee_origin_trait: "四叶草的幸运祝祷"
+  desc_gacha_klee_origin_trait: "「嘿嘿，只要看着这个四叶草，运气就会变好哦！士兵叔叔们看到可莉都很开心的样子，虽然……我不小心把城门的门闩弄坏了，但大家笑得更开心了，应该没问题吧？」"
+
+  gacha_klee_awakened_trait: "特级炸鱼大师"
+  desc_gacha_klee_awakened_trait: "「那座城堡看起来好结实，就像蒙德城外的大石头一样！能不能让可莉丢一个蹦蹦进去？就一个！我保证，里面的坏蛋……呃，里面的鱼都会翻肚皮浮上来的！」"
+
+  gacha_klee_transcended_trait: "逃跑的太阳"
+  desc_gacha_klee_transcended_trait: "「虽然不太懂当国王要做什么，但只要把如果不听话的坏人都炸飞，大家就能开开心心地过羽球节了吧？大家都会陪可莉玩的，对吧？不对吗？」"
+
+  # 命座进阶 Traits
+  gacha_klee_c2_trait: "破破·弹片领域"
+  desc_gacha_klee_c2_trait: "「欸？那些城墙怎么自己倒了？肯定是因为它们也想和可莉一起玩吧！看呐，我们的士兵叔叔们笑得多开心，只要跟着可莉，前面的障碍物都会『砰』的一下消失不见哦！这可是幸运的魔法！」"
+
+  gacha_klee_c4_trait: "一触即发·之火"
+  desc_gacha_klee_c4_trait: "「嘿嘿，这是阿贝多哥哥教我的新配方！只要一点点火花，就能让整座城堡变成大烟花！敌人在里面躲猫猫也没用哦，因为爆炸是不分躲在哪里的！这就是火花骑士的攻坚艺术！」"
+
+  gacha_klee_c6_trait: "火花无限·之梦"
+  desc_gacha_klee_c6_trait: "「听好啦！从今天起，这个国家的所有坏蛋都要小心了！不管你们躲在多厚的墙后面，可莉都会把你们找出来炸飞！虽然地可能会变得黑黑的……但那是胜利的颜色嘛！来吧，把世界变成我们的游乐场！」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_klee_modifier: "火花的加护"
+  STATIC_MODIFIER_DESC_gacha_klee_modifier: "「红色的是蹦蹦，蓝色的是...诶？这里没有蓝色的吗？那就全部炸飞吧！」"
+  gacha_klee_modifier: "爆破之乐"
+  gacha_klee_modifier_desc: "可莉快乐的笑声伴随着远处的爆炸声，极大地鼓舞了前线士兵的破坏欲。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_klee_c0_modifier: "四叶草座·零命"
+  STATIC_MODIFIER_NAME_gacha_klee_c1_modifier: "连锁反应"
+  STATIC_MODIFIER_NAME_gacha_klee_c2_modifier: "破破弹片"
+  STATIC_MODIFIER_NAME_gacha_klee_c3_modifier: "可莉特调"
+  STATIC_MODIFIER_NAME_gacha_klee_c4_modifier: "一触即发"
+  STATIC_MODIFIER_NAME_gacha_klee_c5_modifier: "轰天雷"
+  STATIC_MODIFIER_NAME_gacha_klee_c6_modifier: "火力全开"
+
+  # 可莉 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_klee_country_modifier: "四叶草的幸运"
+  STATIC_MODIFIER_DESC_gacha_klee_country_modifier: "军心恢复更快，声望同步增加。"
+  STATIC_MODIFIER_NAME_gacha_klee_c2_country_modifier: "破破弹片领域"
+  STATIC_MODIFIER_DESC_gacha_klee_c2_country_modifier: "攻城效率与士气提升，敌方堡垒如纸糊。"
+  STATIC_MODIFIER_NAME_gacha_klee_c1_country_modifier: "炮兵训练日"
+  STATIC_MODIFIER_DESC_gacha_klee_c1_country_modifier: "军火库的账单因可莉的改良而精简，炮兵建造成本显著下降。"
+  STATIC_MODIFIER_NAME_gacha_klee_c5_country_modifier: "轰轰火花"
+  STATIC_MODIFIER_DESC_gacha_klee_c5_country_modifier: "炮兵威力强化，为爆炸达人助威。"
+  STATIC_MODIFIER_NAME_gacha_klee_c6_country_modifier: "火花无限"
+  STATIC_MODIFIER_DESC_gacha_klee_c6_country_modifier: "攻城神速，后勤施工提速，炮声不绝。"
+  STATIC_MODIFIER_NAME_gacha_klee_holy_gardener_modifier: "神圣园丁"
+  STATIC_MODIFIER_DESC_gacha_klee_holy_gardener_modifier: "以火为犁，攻城与施工齐头并进，烈焰开辟新生之土。"
+  STATIC_MODIFIER_NAME_gacha_klee_scorched_guardian_modifier: "焦土守护者"
+  STATIC_MODIFIER_DESC_gacha_klee_scorched_guardian_modifier: "灰烬中孕育复苏，厌战渐消，士气恢复，废墟也会再次开花。"
+
+  gacha_klee_origin_trait_die_desc: "失去“火花骑士”初始加成。"
+  gacha_klee_awakened_trait_die_desc: "失去“爆破学徒”的职业加成。"
+  gacha_klee_transcended_trait_die_desc: "失去“嘟嘟可守护人”的统治者加成。"
+  gacha_klee_c2_trait_die_desc: "失去可莉 C2 进阶加成。"
+  gacha_klee_c4_trait_die_desc: "失去可莉 C4 进阶加成。"
+  gacha_klee_c6_trait_die_desc: "失去可莉 C6 终阶加成。"
+
+  # === 事件 (Events) ===
+  gacha_klee_events.1.title: "西风骑士团·火花骑士·可莉 —— 您的（高危）吉祥物"
+  gacha_klee_events.1.desc: "「哒哒哒~！可莉登场！\n\n咦？这里不是禁闭室，也不是骑士团的总部……\n\n哇，好大的地图！这些红色的旗帜是坏人吗？那些画着城墙的方块是用来炸鱼的石头吗？\n\n我是火花骑士可莉！虽然琴团长总说我太调皮，但我可是很厉害的哦！\n\n只要是这种轰隆隆的东西，或者是那种硬邦邦的墙壁，交给可莉就对啦！\n\n那个……作为交换，能不能不要没收我的蹦蹦炸弹？\n\n我会很听话的！大概……每天只炸一次？\n\n还有还有，这里有好吃的嘟嘟莲吗？」"
+  gacha_klee_events.1.a: "欢迎，可莉！"
+
+  gacha_klee_events.2.title: "更大的爆炸！"
+  gacha_klee_events.2.desc: "可莉的力量得到了提升，她兴奋地跳了起来。\n\n「哇~可莉变强了！这样就能做出更大的炸弹了！嘻嘻，到时候一定要炸好多好多鱼！」"
+  gacha_klee_events.2.a: "爆炸就是艺术！"
+
+  gacha_klee_events.4.title: "以火花之名"
+  gacha_klee_events.4.desc: "「我是火花骑士可莉。\n\n最开始来到这里的时候，我其实有一点点害怕。\n\n因为这里没有琴团长的唠叨，没有阿贝多哥哥的画笔，也没有凯亚哥哥帮我写检讨书。\n\n我怕我不小心炸坏了东西，你会像陌生人一样赶我走。\n\n但是，你没有。\n\n每次我把城墙炸出缺口，你都会摸摸我的头说『干得漂亮』。\n\n每次我把敌人的阵地变成焦土，你都会站在我身前，挡住那些指责的视线。\n\n嘿嘿，这种感觉，就像是在家一样安心。\n\n现在，这片大大的疆域，就是可莉新的家啦！\n\n不管是多厚的城墙，还是多坏的敌人，\n\n只要是为了保护你，为了保护我们的家，\n\n可莉都会把它们通通炸飞！\n\n这是火花骑士的承诺哦！\n\n……那个，所以，今天的禁闭可以免掉吗？」"
+  gacha_klee_events.4.a: "当然可以，我的小骑士。"
+
+  gacha_klee_events.11.title: "甚至不需要动手"
+  gacha_klee_events.11.desc: "「为什么那些敌人的城墙自己就塌了？唔……可能是因为可莉刚才在那边埋了几个『宝藏』吧？嘿嘿，这就是琴团长说的『不战而屈人……之兵』吗？可莉是不是很聪明？」"
+  gacha_klee_events.11.a: "太聪明了！"
+
+  gacha_klee_events.12.title: "艺术就是爆炸！"
+  gacha_klee_events.12.desc: "「全弹发射！哒哒哒——！看呐，那座要塞像烟花一样炸开啦！好漂亮！虽然土地变得黑漆漆的有点可惜，但这样我们就赢了对吧？你会夸奖可莉吗？」"
+  gacha_klee_events.12.a: "做得好！"
+
+  gacha_klee_events.13.title: "“新型”烟花"
+  gacha_klee_events.13.desc: "「看！这是可莉用这边的火药改良的新配方！虽然声音大了一点点，烟雾多了一点点，但是……你看，那些大炮现在是不是跑得更快了？这是可莉给你的礼物哦！」"
+  gacha_klee_events.13.a: "谢谢你的礼物！"
+
+  gacha_klee_events.14.title: "嘟嘟可轰天雷"
+  gacha_klee_events.14.desc: "「这是嘟嘟可的好朋友，超级——无敌——大炸弹！我把它装在车上了，专门送给你！有了它，就没有炸不开的门！出发，全速前进！」"
+  gacha_klee_events.14.a: "全速前进！"
+
+  # === C3 剧情链：焦土上的园丁 ===
+  gacha_klee_c3_title: "焦土上的园丁"
+  
+  # Scene 1
+  gacha_klee_c3_scene_1_desc: "漫长的围城战终于结束了。这是为了帝国统一大业必须付出的代价。\n\n你行走在刚刚被征服的土地上，空气中弥漫着刺鼻的焦糊味。脚下的每一寸土地都记录着“荒废度”的飙升，以及随之而来的行政力惩罚。\n\n这是一场必要的毁灭，但身为统治者，望着满目疮痍，你依然感到一丝沉重。\n\n直到你在那个巨大的弹坑中心，看到了一抹鲜艳得格格不入的红色。"
+  gacha_klee_c3_scene_1_opt_a: "走近那个身影。"
+  gacha_klee_c3_scene_1_opt_skip: "跳过剧情"
+
+  # Scene 2
+  gacha_klee_c3_scene_2_desc: "是可莉。那座阻挡了大军三个月的要塞，就是被她的火花最终瓦解的。\n\n此刻，这位让敌军闻风丧胆的“移动天灾”，正专注于脚下的焦土。\n\n她没有在庆祝胜利，也没有在寻找战利品。她的动作轻柔得像是在照顾刚出生的嘟嘟可，与周围肃杀的战场氛围形成了令人战栗的反差。"
+  gacha_klee_c3_scene_2_opt_a: "静静观察。"
+
+  # Scene 3
+  gacha_klee_c3_scene_3_desc: "可莉转过身，手里捧着一朵不知从哪里找来的、花瓣边缘有些枯黄的小野花。她的脸上沾着黑灰，但眼神清澈得可怕。\n\n可莉：「……啊，是来没收炸弹的吗？」\n\n她下意识地护住了身后的土坑，但随即又摇了摇头，松开了手。\n\n可莉：「不对，这里已经没有炸弹了。炸弹都已经变成烟花，飞到天上去了。」\n\n她指了指身后的焦土，那里刚刚被她埋进了一颗种子。\n\n可莉：「我在种花哦。琴团长说过，烧过的地方，明年的草会长得特别高。」"
+  gacha_klee_c3_scene_3_opt_a: "蹲下身：原来是在种花啊。"
+
+  # Scene 4（分歧点）
+  gacha_klee_c3_scene_4_desc: "可莉环视着周围的废墟，眼神中没有一丝恐惧，只有一种纯粹的、令人不安的期待。\n\n可莉：「这里以前房子太多了，把阳光都挡住了。大家挤在黑漆漆的巷子里，一点都不开心。」\n\n可莉：「现在好了！房子都没有了，阳光可以照到每一寸土地上！」\n\n她用那双无邪的眼睛看着你，说出了最残酷的真理：\n可莉：「只有把旧的东西全部炸飞，新的东西才有地方长出来呀。对吧？」"
+  gacha_klee_c3_scene_4_opt_a: "是的。腐朽的秩序需要被火净化。"
+  gacha_klee_c3_scene_4_opt_b: "但那些被炸飞的旧东西，也曾是谁的家。"
+
+  # Scene 5
+  gacha_klee_c3_scene_5_desc_a: "她开心地笑了，仿佛找到了知音。"
+  gacha_klee_c3_scene_5_desc_b: "她困惑地皱起眉，然后认真地反驳。"
+  gacha_klee_c3_scene_5_desc_common: "可莉：「可是……如果不炸掉的话，它们就会一直烂在那里哦？就像不流动的湖水会变臭。」\n\n可莉：「妈妈以前给我讲过一个故事。她说：在很久很久以前，有一片很大很大的森林……」\n\n可莉：「森林里的老树长得太高太密了，把太阳全部遮住，小树苗一个都长不出来。」\n\n可莉：「后来有一天，一道闪电劈下来——『轰隆』！——整片森林都烧起来了！第二年春天，黑黑的灰烬里长出了好多好多新芽！」\n\n她像是在背诵圣典一样，一字一句地复述着那句对孩子来说过于深奥的话：\n可莉：「妈妈说：『文明就像是一片过于茂密的森林。当古树遮蔽了所有的阳光，唯有烈火的暴虐，才能唤醒沉睡在腐殖质下的新芽。』」\n\n可莉：「虽然可莉不懂什么是『腐殖质』……但妈妈的意思一定是：坏掉的东西，就是还没有被炸过的养分！」\n\n可莉：「只要用火花『轰』的一下把它们变成灰，它们就能变成新房子的地基，变成花朵的肥料！这就是『新生的前奏』！」"
+  gacha_klee_c3_scene_5_opt_a: "『新生的前奏』？与我们的伟大目标相比，这确实只是前奏。"
+
+  # Scene 6
+  gacha_klee_c3_scene_6_desc: "你看着她。\n\n在她眼中，那一座座被炸毁的要塞、被烧毁的图书馆，不过是阻挡光照的『老树』。那些在废墟中哀嚎的旧贵族，不过是抓紧泥土、等待被转化为『腐殖质』的枯根。\n\n在这个孩子的逻辑里，战争并不是政治的延续，而是生命力的延续。僵化的帝国需要呼吸，而她的火花，就是打破硬壳的锤子。爆炸，是为了更猛烈的生长。"
+  gacha_klee_c3_scene_6_opt_a: "看着她的眼睛：她比任何人都懂得“发展”的代价。"
+
+  # Scene 7（锁定）
+  gacha_klee_c3_scene_7_desc_a: "可莉：「你会怪我吗？把这里变得光秃秃的。」\n\n她有些忐忑地看着你，双手绞在一起。\n\n可莉：「但是只要等一等，真的只要等一等，这里会变得比以前更漂亮的！」"
+  gacha_klee_c3_scene_7_desc_b: "可莉：「你会怪我吗？把这里变得光秃秃的。」\n\n她有些忐忑地看着你，双手绞在一起。\n\n可莉：「但是只要等一等，真的只要等一等，这里会变得比以前更漂亮的！」"
+  gacha_klee_c3_scene_7_opt_a: "你是对的。我们不是在制造废墟，我们是在为未来耕地。"
+  gacha_klee_c3_scene_7_opt_b: "花会开的。在那之前，我会守护这片土地——连同它的伤疤一起。"
+
+  # Scene 8
+  gacha_klee_c3_scene_8_desc: "听到你的回答，可莉眼中的忐忑消失了。\n\n可莉：「嗯！耕地！可莉是全提瓦特……不，是全世界最厉害的园丁！」\n\n她站起身，张开双臂，仿佛要拥抱这片满目疮痍的大地。\n\n可莉：「只要我们一直走下去，把那些挡路的墙壁、坏掉的房子统统炸飞……」\n\n可莉：「总有一天，整个世界都会连成一片大大的花园！大家都可以自由地跑来跑去！」"
+  gacha_klee_c3_scene_8_opt_a: "牵起她的手：走吧，我们还有很多地要耕。"
+
+  # Scene 9
+  gacha_klee_c3_scene_9_desc_a: "你与可莉并肩站在废墟之上，眺望远方未征服的领土。她的书包里露出了更多炸弹的一角。\n\n你握住了她沾满黑灰的小手。\n\n你：「是的。为了那个大花园，我们需要更多的火花。」\n\n可莉用力地点头，背包里的蹦蹦炸弹似乎也在共鸣。\n\n可莉：「交给我吧！哪里有腐烂的味道，可莉就去哪里放烟花！」\n\n凡阻挡帝国发展者，皆为杂草。"
+  gacha_klee_c3_scene_9_desc_b: "你蹲下身，与那朵焦土上的小花平视，可莉在旁边为你擦去脸上的灰尘。\n\n你承认了战争的必要性，但也决定不让这份残酷侵蚀她的心。\n\n你：「这朵花很美。但记住，放火之后，一定要记得播种。」\n\n可莉似懂非懂地看着你，然后露出了灿烂的笑。\n\n可莉：「虽然不太明白……但只要和你在一起，就算是黑漆漆的焦土，我也觉得很温暖！」\n\n"
+  gacha_klee_c3_scene_9_opt_a_new: "一切为了新生。"
+  gacha_klee_c3_scene_9_opt_b: "回家吧，可莉。"

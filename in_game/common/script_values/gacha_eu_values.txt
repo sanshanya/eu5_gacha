@@ -176,3 +176,42 @@ gacha_calc_4star_idx_sv = {
 
     modulo = gacha_pool_size_4star_sv
 }
+
+# ---------------------------------------------------
+# 7. 星辉显示容错（未初始化时返回 0）
+# ---------------------------------------------------
+gacha_starlight_display_sv = {
+    value = 0
+
+    if = {
+        limit = { has_variable = gacha_starlight }
+        add = var:gacha_starlight
+    }
+}
+
+# ---------------------------------------------------
+# 8. 本地化用数值常量（避免文本与脚本脱节）
+# ---------------------------------------------------
+# 奖励通用片段
+gacha_reward_prestige_small_sv = { value = 10 }
+gacha_reward_prestige_medium_sv = { value = 50 }
+gacha_reward_legitimacy_small_sv = { value = 5 }
+gacha_reward_legitimacy_medium_sv = { value = 20 }
+gacha_reward_stability_small_sv = { value = 0.25 }
+gacha_refund_gold_small_sv = { value = 1 }
+
+# 祈愿消耗
+gacha_single_pull_cost_sv = { value = 16 }
+gacha_ten_pull_cost_sv = { value = 160 }
+gacha_starlight_exchange_cost_sv = { value = 3 }
+
+# 四星奖励事件（20-24）
+gacha_reward_gold_4star_sv = { value = 240 }
+gacha_reward_prestige_4star_sv = { value = 8 }
+gacha_reward_legitimacy_4star_sv = { value = 8 }
+gacha_reward_stability_4star_sv = { value = 4 }
+
+# 其他小奖
+gacha_reward_gold_windfall_sv = { value = 500 }
+gacha_reward_prestige_fame_sv = { value = 100 }
+gacha_reward_legitimacy_omen_sv = { value = 20 }

@@ -1,0 +1,25 @@
+﻿l_english:
+  # §Y Starlight Exchange System §!
+  # ============================================================
+
+  # === Starlight Variable ===
+  gacha_starlight: "Starlight"
+  gacha_starlight_desc: "A crystallized blessing from a fully ascended hero, used to redeem 5-star heroes. Any three Starlight can be traded for a 5-star hero of your choice."
+
+  # === Starlight Gain Event ===
+  gacha_events.30.title: "Radiance of the Fated Star"
+  gacha_events.30.desc: "This hero has reached the absolute peak of their strength; their constellation can grow no further. Their fated star condenses into a shard of shimmering Starlight, awaiting a new destined bearer.\n\nCurrent Starlight: #color_yellow [ROOT.ScriptValue('gacha_starlight_display_sv')|0]#!"
+  gacha_events.30.a: "Claim the Starlight"
+
+  # === Starlight Exchange Event ===
+  gacha_starlight_events.1.title: "Starlight Exchange"
+  gacha_starlight_events.1.desc: "By gathering the blessings of three fated stars, you may summon any 5-star hero you desire.\n\nCurrent Starlight: #color_yellow [ROOT.ScriptValue('gacha_starlight_display_sv')|0]#!"
+  gacha_starlight_events.1.xinhai: "Redeem: Sangonomiya Kokomi (-3 Starlight)"
+  gacha_starlight_events.1.raiden: "Redeem: Raiden Shogun (-3 Starlight)"
+  gacha_starlight_events.1.keqing: "Redeem: Keqing (-3 Starlight)"
+  gacha_starlight_events.1.furina: "Redeem: Furina (-3 Starlight)"
+  gacha_starlight_events.1.hutao: "Redeem: Hu Tao (-3 Starlight)"
+  gacha_starlight_events.1.fischl: "Redeem: Fischl (-3 Starlight)"
+  gacha_starlight_events.1.klee: "Redeem: Klee (-3 Starlight)"
+  gacha_starlight_events.1.nahida: "Redeem: Nahida (-3 Starlight)"
+  gacha_starlight_events.1.cancel: "Decide later"

@@ -6,7 +6,8 @@
 
 > [!IMPORTANT]
 > **Golden Rule**: All player-facing text MUST use localization keys. No hardcoded text in scripts.
-> **Encoding**: All `.yml` files MUST be **UTF-8 with BOM**.
+> **Encoding**: All `.yml` files MUST be **UTF-8 with BOM** (matches EU5 wiki).
+> **Scope Case**: Use uppercase scopes in data functions (e.g., `ROOT.ScriptValue('foo')`, `ROOT.GetVariable('bar')`) to match engine expectations from the official wiki.
 
 ---
 
@@ -47,20 +48,20 @@ Use Bracket Notation `[...]` for dynamic data.
 
 #### A. Numerical Variables
 To display a number stored in a variable:
-- **Syntax**: `[Scope.GetVariable('var_name')|format]`
-- **Example**: `[Root.GetVariable('gacha_starlight')|0]`
+- **Syntax**: `[SCOPE.GetVariable('var_name')|format]` or `[SCOPE.Var('var_name').GetValue|format]`
+- **Example**: `[ROOT.GetVariable('gacha_starlight')|0]`
 
 #### B. Flag Variables (Localization Keys)
 To display a localization key stored in a variable (e.g., `set_variable = { name = title value = flag:king_title }`):
-- **Syntax**: `[Scope.Var('var_name').GetFlagName]`
-- **Example**: `[Root.Var('title').GetFlagName]` -> Displays "King"
+- **Syntax**: `[SCOPE.Var('var_name').GetFlagName]`
+- **Example**: `[ROOT.Var('title').GetFlagName]` -> Displays "King"
 - **Note**: This is used for dynamic text replacement (e.g., changing titles based on gender/culture).
 
 ### 3.2 Script Value Display (Calculated Values)
 To display a calculated `script_value` (defined in `common/script_values`):
-- **Syntax**: `[Scope.ScriptValue('value_name')|format]`
-- **Example**: `[Root.ScriptValue('gacha_pity_calculation')|0]`
-- **Description**: `[Scope.GetScriptValueDesc('value_name')]` (Displays the localized description of the value)
+- **Syntax**: `[SCOPE.ScriptValue('value_name')|format]`
+- **Example**: `[ROOT.ScriptValue('gacha_pity_calculation')|0]`
+- **Description**: `[SCOPE.GetScriptValueDesc('value_name')]` (Displays the localized description of the value)
 
 ### 3.3 Common Data Functions
 - **Names**: `[Root.GetName]`, `[Scope.GetCharacter.GetFirstName]`
@@ -78,12 +79,9 @@ To display a calculated `script_value` (defined in `common/script_values`):
 - **Icons**: `@icon_name!` (e.g., `@trigger_yes!`, `@adm!`, likely defined in `.gfx` or `.gui`)
 
 #### C. Standard Colors (Legacy/Common)
-While custom colors are defined via `#`, the `§` codes are very common in Paradox games and might still be used or aliased:
-- `§Y` (Yellow): Highlights, important values
-- `§R` (Red): Negative effects, costs
-- `§G` (Green): Positive effects, gains
-- `§B` (Blue): Special Gacha mechanics / Starlight
-- `§!`: End color
+Prefer `#color_*` / `#bold` formatting from the official EU5 wiki. Legacy `§` codes are still accepted but avoid introducing new ones.
+- Examples: `#color_yellow Text#!`, `#bold Bolded#!`, `#bold;color_yellow Text#!`.
+- Legacy (avoid new): `§Y` (Yellow), `§R` (Red), `§G` (Green), `§B` (Blue), `§!` (End).
 
 ---
 

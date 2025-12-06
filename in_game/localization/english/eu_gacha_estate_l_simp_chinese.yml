@@ -1,0 +1,89 @@
+﻿l_english:
+  # === Custom Estate: Otherworlders ===
+  gacha_estate: "Otherworlders"
+  gacha_otherworldly_estate: "Otherworlders"
+  gacha_estate_desc: "These visitors from beyond this world wield power and knowledge no commoner can fathom. They take no part in mundane taxation, yet their very presence greatly enhances the nation’s prestige."
+  gacha_estate_recognition: "Recognize Otherworlders"
+  gacha_estate_recognition_desc: "Formally acknowledges the special status of the Otherworlders and grants them the respect they are due."
+  gacha_culture: "Otherworlders"
+  gacha_culture_adj: "Otherworldly"
+
+  # Privileges
+  gacha_in_administration: "Starlit Co-Rule"
+  gacha_in_administration_desc: "Allows Otherworlders to enter the cabinet and take part in the highest affairs of state."
+  gacha_command_positions: "Starlit Commanders"
+  gacha_command_positions_desc: "Allows Otherworlders to serve as army and navy commanders, bringing otherworldly tactics to the field."
+
+  gacha_estate_privileges_interaction: "Grant Otherworlder Privileges"
+  gacha_estate_privileges_interaction_desc: "Immediately unlocks cabinet and command privileges for the Otherworlders and applies the national Otherworlder modifier."
+  gacha_estate_privileges_interaction_concept: "Grant Otherworlder Privileges"
+  gacha_estate_privileges_interaction_desc_specific: "Unlocks key privileges for the Otherworlder estate."
+
+  STATIC_MODIFIER_NAME_gacha_estate_integration_modifier: "Otherworlder Privileges"
+  STATIC_MODIFIER_DESC_gacha_estate_integration_modifier: "The Otherworlders are admitted to cabinet and command posts, and take part in the running of the realm with high satisfaction."
+
+  AUTO_MODIFIER_NAME_gacha_estate_access: "Otherworlder Privileges"
+  AUTO_MODIFIER_DESC_gacha_estate_access: "The Otherworlders are admitted to cabinet and command posts, and enjoy a basic level of estate satisfaction."
+
+  MODIFIER_TYPE_NAME_gacha_estate_target_satisfaction: "Wish Estate Target Satisfaction"
+  MODIFIER_TYPE_DESC_gacha_estate_target_satisfaction: "Affects the desired satisfaction level of the specified wish estate."
+
+  MODIFIER_TYPE_NAME_gacha_estate_allowed_in_cabinet: "Wish Estate Allowed in Cabinet"
+  MODIFIER_TYPE_DESC_gacha_estate_allowed_in_cabinet: "Allows this wish estate to participate in the cabinet."
+
+  MODIFIER_TYPE_NAME_gacha_estate_allowed_leading_military: "Wish Estate Allowed to Lead Armies"
+  MODIFIER_TYPE_DESC_gacha_estate_allowed_leading_military: "Allows this wish estate to hold military command."
+
+  MODIFIER_TYPE_NAME_gacha_estate_blocked_from_cabinet: "Wish Estate Barred from Cabinet"
+  MODIFIER_TYPE_DESC_gacha_estate_blocked_from_cabinet: "Prevents this wish estate from participating in the cabinet."
+
+  MODIFIER_TYPE_NAME_global_gacha_estate_power: "Global Wish Estate Power"
+  MODIFIER_TYPE_DESC_global_gacha_estate_power: "Adjusts the power of wish estates across the realm."
+
+  MODIFIER_TYPE_NAME_gacha_estate_satisfaction: "Wish Estate Satisfaction"
+  MODIFIER_TYPE_DESC_gacha_estate_satisfaction: "The current satisfaction level of this wish estate."
+
+  MODIFIER_TYPE_NAME_gacha_estate_power: "Wish Estate Power"
+  MODIFIER_TYPE_DESC_gacha_estate_power: "The local or national power of this wish estate."
+
+  MODIFIER_TYPE_NAME_gacha_estate_blocked_from_leading_military: "Wish Estate Barred from Command"
+  MODIFIER_TYPE_DESC_gacha_estate_blocked_from_leading_military: "Prevents this wish estate from holding military command."
+
+  MODIFIER_TYPE_NAME_monthly_gacha_estate_rebel_growth: "Monthly Wish Estate Rebel Growth"
+  MODIFIER_TYPE_DESC_monthly_gacha_estate_rebel_growth: "Affects the growth rate of rebellions related to the wish estates."
+
+  MODIFIER_TYPE_NAME_gacha_estate_satisfaction_recovery: "Wish Estate Satisfaction Recovery"
+  MODIFIER_TYPE_DESC_gacha_estate_satisfaction_recovery: "Increases the recovery speed of wish estate satisfaction."
+
+  MODIFIER_TYPE_NAME_gacha_estate_satisfaction_decay: "Wish Estate Satisfaction Decay"
+  MODIFIER_TYPE_DESC_gacha_estate_satisfaction_decay: "Reduces the rate at which wish estate satisfaction is lost."
+
+  MODIFIER_TYPE_NAME_gacha_estate_max_tax: "Wish Estate Maximum Tax"
+  MODIFIER_TYPE_DESC_gacha_estate_max_tax: "The maximum tax rate this wish estate can bear."
+
+  MODIFIER_TYPE_NAME_gacha_estate_min_tax: "Wish Estate Minimum Tax"
+  MODIFIER_TYPE_DESC_gacha_estate_min_tax: "The minimum tax rate this wish estate can bear."
+
+  MODIFIER_TYPE_NAME_gacha_estate_levy_size: "Wish Estate Levy Size"
+  MODIFIER_TYPE_DESC_gacha_estate_levy_size: "Adjusts the size of levies raised from the wish estates."
+
+  MODIFIER_TYPE_NAME_local_gacha_estate_power: "Local Wish Estate Power"
+  MODIFIER_TYPE_DESC_local_gacha_estate_power: "Adjusts the influence of wish estates in this province."
+
+  MODIFIER_TYPE_NAME_gacha_estate_cannot_marry: "Wish Estate Marriage Ban"
+  MODIFIER_TYPE_DESC_gacha_estate_cannot_marry: "Restricts the marriage rights of the wish estates."
+
+  MODIFIER_TYPE_NAME_gacha_estate_can_participate_in_parliament: "Wish Estate Allowed in Parliament"
+  MODIFIER_TYPE_DESC_gacha_estate_can_participate_in_parliament: "Allows wish estates to participate in parliament."
+
+  MODIFIER_TYPE_NAME_gacha_estate_blocked_from_parliament: "Wish Estate Barred from Parliament"
+  MODIFIER_TYPE_DESC_gacha_estate_blocked_from_parliament: "Prevents wish estates from participating in parliament."
+
+  MODIFIER_TYPE_NAME_gacha_estate_agenda_impact: "Wish Estate Agenda Impact"
+  MODIFIER_TYPE_DESC_gacha_estate_agenda_impact: "Adjusts the impact of wish estate agendas on the realm."
+
+  MODIFIER_TYPE_NAME_gacha_estate_allowed_to_build_roads: "Wish Estate Allowed to Build Roads"
+  MODIFIER_TYPE_DESC_gacha_estate_allowed_to_build_roads: "Allows wish estates to construct roads locally."
+
+  gacha_estate_satisfaction: "Wish Estate Satisfaction"
+  gacha_estate_power: "Wish Estate Power"

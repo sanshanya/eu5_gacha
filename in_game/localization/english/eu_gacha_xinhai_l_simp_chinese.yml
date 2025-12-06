@@ -1,0 +1,137 @@
+﻿l_english:
+  # ============================================================
+  # Character - Sangonomiya Kokomi
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_xinhai: "Kokomi"
+  gacha_last_name_xinhai: "Sangonomiya"
+
+  # === Traits ===
+  gacha_xinhai_origin_trait: "Coral Lanterns of Watatsumi"
+  desc_gacha_xinhai_origin_trait: "“Your land is sick… just like when the Sacred Soil once turned pale. Whenever the coral lanterns of Bourou Village are lit, I always feel as if everything will be all right. Maybe… I can bring that feeling here too.”"
+
+  gacha_xinhai_awakened_trait: "Bourou Village’s Young Strategist"
+  desc_gacha_xinhai_awakened_trait: "“Running battle drills in the sea breeze of Bourou Village, it always feels like the enemy will just be washed away by the waves… Your battlefield is far larger than I ever imagined. I’ll try doing the calculations this once, but just this once—after the fighting is over, please let me go back to my room and sleep.”"
+
+  gacha_xinhai_transcended_trait: "Seat of the Divine Priestess"
+  desc_gacha_xinhai_transcended_trait: "“You’ve seated me in such a conspicuous place, but I’m not used to being worshiped by all. Rather than ruling, I’d rather hold rites like the Festival of Spirits, so that people’s hearts may be calmed. When hearts are at peace, the embers of rebellion die out on their own.”"
+
+  gacha_xinhai_c2_trait: "Byakuyakoku: Tides of the Sacred Soil"
+  desc_gacha_xinhai_c2_trait: "“Do you hear it? That is the tide surging beneath the Sacred Soil. I’ve woven Watatsumi’s rites into this land. Plagues will be washed clean by the sea, ruins reborn upon the tide. So long as that sound does not cease, the hearts of every stratum will not run dry. Rest assured—this land is breathing.”"
+
+  gacha_xinhai_c4_trait: "Enkanomiya: Defying the Dragon-Lord"
+  desc_gacha_xinhai_c4_trait: "“I dreamed once more of the lights of Enkanomiya… reflected on the water, as if they had grown shimmering scales. When your fleets spread out into formation upon the open sea, I suddenly knew exactly what to do. The art of war lies in calculations made before the rain falls… it’s just that I am a little tired.”\n\n“I’ve dreamed of the dragon-blooded beasts hunting in the deep… that suffocating pressure of something prowling in the dark. Now, I’ve given that very tactic to your fleets. They will be as swift as specters and as steadfast as reefs. On these seas, no storm can wear down your will—for the rudder is in my hands.”"
+
+  gacha_xinhai_c6_trait: "Orobashi, Incarnate Deity"
+  desc_gacha_xinhai_c6_trait: "“Once, I saw the position of ‘Divine Priestess’ as a burden I had no choice but to shoulder. But now… watching your back, I finally understand what ‘rule’ truly means. You need not fear rebellion or exhaustion. Just as Orobashi guarded Watatsumi Island, I will guard an era of peace for you—with absolute discipline, and with equal gentleness.”"
+
+  # === Static Modifiers & Auras ===
+  STATIC_MODIFIER_NAME_gacha_xinhai_modifier: "Watatsumi’s Blessing"
+  STATIC_MODIFIER_DESC_gacha_xinhai_modifier: "“Protect everything on Watatsumi Island, and let everyone here live happily ever after.”"
+
+  STATIC_MODIFIER_NAME_gacha_xinhai_country_modifier: "Watatsumi Statecraft"
+  STATIC_MODIFIER_DESC_gacha_xinhai_country_modifier: "Kokomi’s strategic layout strengthens cabinet operations and the realm’s cultural influence."
+
+  gacha_xinhai_modifier: "Will of Watatsumi"
+  gacha_xinhai_modifier_desc: "Sangonomiya Kokomi’s deployments bring the country steady administration and reliable logistics."
+
+  STATIC_MODIFIER_NAME_gacha_xinhai_c2_country_modifier: "Nereid’s Ascension: Realm"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c2_country_modifier: "Watatsumi’s grace heals calamities and soothes the hearts of every class."
+
+  STATIC_MODIFIER_NAME_gacha_xinhai_c4_country_modifier: "Watatsumi’s Princess: Fleet Formation"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c4_country_modifier: "The Princess of Watatsumi shelters the fleets, bolstering morale, speed, and repair efficiency."
+
+  STATIC_MODIFIER_NAME_gacha_xinhai_c5_country_modifier: "Deepsea Statecraft Archive"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c5_country_modifier: "Reserves an extra national policy slot, making it easier to implement more comprehensive governing plans."
+
+  STATIC_MODIFIER_NAME_gacha_xinhai_c1_modifier: "Cleave the Currents"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c2_modifier: "Waves and Clouds Aflame"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c3_modifier: "Moonlit Tideship"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c4_modifier: "Moon Over a Thousand Streams"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c5_modifier: "All Rivers to the Sea"
+  STATIC_MODIFIER_NAME_gacha_xinhai_c6_modifier: "Coral of One Heart"
+
+  STATIC_MODIFIER_NAME_gacha_xinhai_c6_country_modifier: "Tome of Hidden Stratagems"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c6_country_modifier: "Kokomi’s logistical system expands the space of central governance, and the extra seat makes decisions flow like the tides."
+
+  # === Trait Loss Descriptions ===
+  gacha_xinhai_origin_trait_die_desc: "Loses the “Watatsumi Priestess” starting bonus."
+  gacha_xinhai_awakened_trait_die_desc: "Loses the “Deep-Sea Strategist” profession bonus."
+  gacha_xinhai_transcended_trait_die_desc: "Loses the “Divine Priestess Regent” ruler bonus."
+  gacha_xinhai_c2_trait_die_desc: "Loses Kokomi’s C2 ascension bonus."
+  gacha_xinhai_c4_trait_die_desc: "Loses Kokomi’s C4 ascension bonus."
+  gacha_xinhai_c6_trait_die_desc: "Loses Kokomi’s C6 final ascension bonus."
+
+  # === Events ===
+  gacha_xinhai_events.1.title: "Divine Priestess Sangonomiya Kokomi — Temporary Strategic Advisor"
+  gacha_xinhai_events.1.desc: "“I am Sangonomiya Kokomi. I had a feeling something like this might happen, but being summoned here directly is still a surprise.\n\nI’ve just finished reviewing your maps. Your supply lines are a hundred times more complex than Watatsumi’s, and the diplomacy between the great powers is hopelessly entangled. All these administrative documents piled up like mountains… my energy is already close to running out.\n\nIf you’ve resorted to a summoning ritual, you must have reached a deadlock. As a strategist, I can’t simply ignore a battlefield in chaos. I’ll try to deduce a path forward.\n\nBut please remember—once the victory is secured, you must allow me to return to my room and rest.”"
+  gacha_xinhai_events.1.a: "Welcome the strategist to court."
+
+  gacha_xinhai_events.2.title: "Brilliant Stratagem"
+  gacha_xinhai_events.2.desc: "As the power of wishes deepens, Sangonomiya Kokomi feels a familiar strength returning to her.\n\nHer grasp of strategy grows ever more refined, as though she can already see every shift on the battlefields yet to come.\n\n$gacha_text_reward_prestige_small$"
+  gacha_xinhai_events.2.a: "Win from a thousand miles away."
+
+  gacha_xinhai_events.4.title: "Orobashi’s Proxy, One Heart"
+  gacha_xinhai_events.4.desc: "“I am Sangonomiya Kokomi.\n\nBack on Watatsumi Island, I always hid away in Enkanomiya, poring over military texts. So long as every variable was accounted for, I could protect everyone and maintain the illusion of peace.\n\nWhen you summoned me here that day, to face an empire a hundred times vaster than Inazuma, I was afraid—afraid of miscalculating, afraid of unfamiliar gazes, afraid of failing expectations.\n\nBut you never rushed me, nor did you doubt me. You stayed with me, watching the moon from the map table at midnight, and even added an extra chair for me in the cabinet.\n\nAt some point, I stopped thinking ‘I’ll just finish this one battle, then go back and sleep.’\n\nI’ve watched dawn and dusk sweep across this continent. Your fleets have learned to breathe like the shoals of Watatsumi, and flowers that never wither now cover your lands.\n\n…Thank you. Thank you for walking this far with me.\n\nWould you… walk with me a little longer? The sea has always given me different answers.\n\nAnd now… when I look at your back, it feels like I’m looking at the ocean itself. Because that sea now lies within your lands, and within my heart as well.”\n\n$gacha_text_reward_prestige_medium$\n$gacha_text_reward_legitimacy_medium$"
+  gacha_xinhai_events.4.a: "This must be heaven’s favor."
+
+  gacha_xinhai_events.11.title: "First Murmur of the Sacred Soil"
+  gacha_xinhai_events.11.desc: "“Your land is starting to pale… it’s even worse than the Sacred Soil once was. I’ve seen scenes like this on Watatsumi Island before. The sea has always given me different states of mind, but now… I need to think of something, or this place will become a desert as well.”\n\n$gacha_text_reward_stability_small$"
+  gacha_xinhai_events.11.a: "Let the tides steady the realm."
+
+  gacha_xinhai_events.12.title: "Awakening of the Abyssal Dragon-Lord"
+  gacha_xinhai_events.12.desc: "“I dreamed once more of the lights of Enkanomiya… reflected on the surface of the water like they’d grown scales. When your fleets spread out in formation upon the sea, I suddenly knew exactly what to do. The way of war lies in calculations made before the rain falls… it’s just that I’m a little tired.”\n\n$gacha_text_reward_legitimacy_small$"
+  gacha_xinhai_events.12.a: "Trust in the deep-sea stratagems."
+
+  gacha_xinhai_events.13.title: "An Extra Seat, Unexpected"
+  gacha_xinhai_events.13.desc: "“I didn’t expect… my deductions would win you an extra chair in the cabinet. Thank you for walking with me for so long—time this precious and this rare. Whenever the evening wind from Bourou Village blows past, I always feel that… with one more person to discuss things with, perhaps each war might claim a few fewer lives.”"
+  gacha_xinhai_events.13.a: "Then we’ll just add another chair."
+
+  gacha_xinhai_events.14.title: "An Unexpected Extra Policy Slot"
+  gacha_xinhai_events.14.desc: "“I never thought… we’d somehow gain an extra national policy slot. I’m not very good with this many eyes on me. I did say I’m only a strategist, after all… But the weak must stand together if they wish to resist. Since I’m here, I’ll walk this road with you a little longer.”"
+  gacha_xinhai_events.14.a: "Then we’ll think one layer deeper."
+
+  # === C3 Route – Night Terrace Scenes ===
+  # Scene 1
+  gacha_xinhai_c3_scene_1_desc: "The candle on the document-laden desk flickers once before finally dying in the dried-up wax.\nThe argument over tax adjustments and border supplies at last quiets as the ink on the decrees dries. You rub your throbbing temples and push open the heavy door leading to the terrace.\nThe night wind, tinged with dewy chill, washes over you. Yet even in the heart of this vast empire, night offers no true respite. The wind howling through high walls and galleries sounds like the whispers of countless petitions still awaiting your seal.\nYou need a moment of escape."
+  gacha_xinhai_c3_scene_1_opt_a: "Step onto the terrace."
+  gacha_xinhai_c3_scene_1_opt_b: "Skip this scene."
+
+  # Scene 2
+  gacha_xinhai_c3_scene_2_desc: "A corner that is usually empty has been quietly occupied tonight.\nIt is Sangonomiya Kokomi.\nShe hasn’t noticed your arrival at all. The “Divine Priestess” who commands armies with cool-headed strategy by day is now lying limply against the cold railing, like a shell left behind on the shore after the tide recedes.\nOne of her hands absentmindedly traces gentle arcs in the air, her fingertips cutting a slow curve in the moonlight, as if sketching the path of a school of fish swimming through the deep sea.\nIt’s a pose she would never show before a strategy map—unguarded, and even… a little lost."
+  gacha_xinhai_c3_scene_2_opt_a: "Tread lightly."
+
+  # Scene 3
+  gacha_xinhai_c3_scene_3_desc: "Even though you deliberately soften your steps, the crisp crunch of your boot on a fallen leaf still sounds piercingly loud in the quiet.\nKokomi startles; her shoulders jolt, and she spins around like a frightened fish, pressing her back tightly against the stone rail.\nIn that instant, the haze and softness in her eyes recede like the tide, replaced by an almost instinctive professional alertness—if one overlooks the faint trace of pastry crumbs at the corner of her mouth, barely visible unless you look very closely.\n\nKokomi: “...Your Majesty? S–so late at night… Are you inspecting the capital’s defenses?”\n\nHer voice is tense but trying hard to remain steady. Her gaze flicks quickly along the corridor behind you, confirming that no other attendants are present.\n\nKokomi: “As for the night rotation schedule of the garrison, I’ve already… already run through it once in my head. There are no gaps.”"
+  gacha_xinhai_c3_scene_3_opt_a: "Stop where you are."
+
+  # Scene 4
+  gacha_xinhai_c3_scene_4_desc: "She’s desperately mustering all her strategist’s composure, trying to spin a tactically sound explanation for whatever sounds you might have heard just now.\nWatching her treat this like a crisis, and seeing the flimsy defenses she’s raised to protect the image of the “Divine Priestess,” you decide to…"
+  gacha_xinhai_c3_scene_4_opt_a: "Gently play along: “No need to be nervous. I just came out here to get some air.”"
+  gacha_xinhai_c3_scene_4_opt_b: "Tease her a little: “We can talk defenses tomorrow. You still haven’t wiped the pastry crumbs from your lips.”"
+
+  # Scene 5
+  gacha_xinhai_c3_scene_5_desc_a: "Hearing your words, with not a hint of blame in them, she freezes for a moment. The tension in her back slowly melts, and she lets out the faintest sigh. The sharp “strategist’s aura” dissipates, and she becomes once more the quiet young girl she truly is."
+  gacha_xinhai_c3_scene_5_desc_b: "She goes blank for half a second, then hurriedly turns her back to you, rubbing at the corner of her mouth with frantic vigor. When she turns around again, her cheeks are dusted with a blush she can’t quite hide. In the end she gives a helpless little smile, and there is far less stiffness in her eyes."
+  gacha_xinhai_c3_scene_5_desc_common: "\nKokomi: “...Forgive me. I didn’t exactly mean to be… resting at a time like this.”\nShe tucks a loose strand of hair behind her ear, looking a bit flustered, her voice dropping.\nKokomi: “It’s just that the logic by which this world operates is far more complex than Watatsumi Island. The span of your territory, the clash of faiths, the administrative resources that are forever on the brink of deficit…”"
+  gacha_xinhai_c3_scene_5_opt_a: "Listen in silence."
+
+  # Scene 6
+  gacha_xinhai_c3_scene_6_desc: "Kokomi: “Keeping up that ‘flawless strategist’ persona takes more ‘energy’ than I expected.”\nShe stretches out her hand, palm up, as if to catch the moonlight, yet managing to grasp nothing at all.\nKokomi: “Back home, when my energy runs out, I dive into the deep sea or find an empty cave to hide in. The pressure of the water and the closed space make me feel safe.”\nKokomi: “But this vast palace… magnificent as it is, everything is open. There are eyes everywhere, whispers everywhere. It’s so large, and yet… there doesn’t seem to be a single dead angle where I can quietly ‘recharge’.”"
+  gacha_xinhai_c3_scene_6_opt_a: "Step closer to her."
+
+  # Scene 7
+  gacha_xinhai_c3_scene_7_desc: "The faint rustle of her clothes in the night breeze sounds unusually clear in this moment.\nLooking at her somewhat slender back, you realize that the girl who bears a god’s duty in her own world needs more than rest right now—she needs the rare privilege of being allowed to be weak.\nIn this unfamiliar court, full of schemes and watching eyes, what do you want to give her?"
+  gacha_xinhai_c3_scene_7_opt_a: "Promise her: “Whenever you’re tired, come here. I’ll decree this terrace a ‘top secret’ zone.”"
+  gacha_xinhai_c3_scene_7_opt_b: "Share a secret: “Honestly, I often want to run away too. Next time you want to hide… take me with you?”"
+
+  # Scene 8
+  gacha_xinhai_c3_scene_8_desc: "Hearing your words, she pauses, and the last trace of guardedness in her eyes melts away like snow.\nKokomi: “Is this… some kind of strange royal decree?”\nShe says so, but her tone is already much lighter.\nKokomi: “Still… whether it’s a corner marked as classified, or a new partner in running away… both sound rather nice.”\nShe closes her eyes and takes a deep breath of the clear night air, as though she’s come back to life.\nKokomi: “It’s incredible. We’ve only exchanged a few words, but the energy I’d completely run out of… feels like it’s already recovered by thirty percent.”"
+  gacha_xinhai_c3_scene_8_opt_a: "Watch her with a smile."
+
+  # Scene 9
+  gacha_xinhai_c3_scene_9_desc_a: "Kokomi: “Thank you for your kindness, Your Majesty. In this unfamiliar world, having a corner where I can catch my breath and not be on edge all the time… means more to me than I can say.”\nShe straightens her clothes once more, her gaze turning clear and resolute.\nKokomi: “Then, to repay this favor, I’ll bring an even more perfect plan to tomorrow’s strategy meeting—I won’t let you down.”\nShe turns to leave, her steps light and unhurried.\nThis drifting little fish has found a proper ‘anchor’ in the vastness of your empire."
+  gacha_xinhai_c3_scene_9_desc_b: "Kokomi: “So it’s decided then? This will be our very own… tactical retreat.”\nShe lowers her voice as if plotting a meticulous ambush.\nKokomi: “If you ever grow tired of those overly long morning courts, remember to give me a signal. As your strategist, I’ll prepare the perfect ‘disappearance plan’—no one will be able to find us.”\nShe leaves the terrace with a soft laugh, like a nimble fish slipping into the night.\nWithin this iron-blooded, rule-bound imperial machine, you now have a ‘partner in crime’ with whom you can share your secrets."
+  gacha_xinhai_c3_scene_9_opt_a: "Good night, Kokomi."
+  gacha_xinhai_c3_scene_9_opt_b: "It’s a promise."

@@ -1,0 +1,144 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 雷电将军 (Raiden Shogun)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_raiden: "将军"
+  gacha_last_name_raiden: "雷电"
+
+  # === 特质 (Traits) ===
+  gacha_raiden_origin_trait: "鸣神岛·永恒静土"
+  desc_gacha_raiden_origin_trait: "「所谓的『叛乱』，不过是杂音。只要威光足够耀眼，影子便无处遁形。我会让你的国家像静止的水面一样平稳。安静，是永恒的前提。」"
+
+  gacha_raiden_awakened_trait: "无想之一刀"
+  desc_gacha_raiden_awakened_trait: "「这一刀，曾斩杀魔神，如今用来为你开疆拓土，倒也不算辱没。无需战术，无需诡计，只要我的雷光亮起，敌阵便已是灰烬。」"
+
+  gacha_raiden_transcended_trait: "天下人之大权"
+  desc_gacha_raiden_transcended_trait: "「权柄不容分割，意志不容违逆。既然让我坐在这个位置，我就不会允许任何『议会』或『阶层』的聒噪。此身即是绝对，此身即是法度。」"
+
+  # 命座进阶 Traits
+  gacha_raiden_c2_trait: "祸津·稻光"
+  desc_gacha_raiden_c2_trait: "「那些被征服的土地还在怀念旧主？可笑。我会用稻光斩断他们对过去的『妄念』。从今往后，他们的历史只有『现在』，他们的未来只有『你』。」"
+
+  gacha_raiden_c4_trait: "梦想·真说"
+  desc_gacha_raiden_c4_trait: "「看着战士们冲锋的样子……我想起了曾经的笹百合与千代。……不，将军不会感伤。我将赐予全军『梦想一心』的加护。只要他们向我献上忠诚，我便许诺他们——必胜。」"
+
+  gacha_raiden_c6_trait: "源流·许愿"
+  desc_gacha_raiden_c6_trait: "「曾经，我认为『永恒』是凝滞的时间。但看着你一步步建立起这个庞大的帝国，我似乎……看到了另一种可能性。既然凡人的愿望如此耀眼，那我就试着——去注视那个由你开创的未来吧。」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_raiden_modifier: "鸣神的加护"
+  STATIC_MODIFIER_DESC_gacha_raiden_modifier: "「浮世景色百千年依旧，人之在世却如白露与泡影。」"
+  gacha_raiden_modifier: "永恒之诺"
+  gacha_raiden_modifier_desc: "雷电将军的威光正在庇护着这个国家，确保其向着永恒迈进。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_raiden_c0_modifier: "恶曜影向·零命"
+  STATIC_MODIFIER_NAME_gacha_raiden_c1_modifier: "恶曜卜词"
+  STATIC_MODIFIER_NAME_gacha_raiden_c2_modifier: "斩铁断金"
+  STATIC_MODIFIER_NAME_gacha_raiden_c3_modifier: "真影旧事"
+  STATIC_MODIFIER_NAME_gacha_raiden_c4_modifier: "誓奉常道"
+  STATIC_MODIFIER_NAME_gacha_raiden_c5_modifier: "凶将显形"
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_modifier: "负愿前行"
+  STATIC_MODIFIER_NAME_gacha_raiden_reader_modifier: "影的书友"
+  STATIC_MODIFIER_DESC_gacha_raiden_reader_modifier: "你献上的异界典籍点燃了雷霆的好奇，知识与正统性在讨论中共振。"
+  STATIC_MODIFIER_NAME_gacha_raiden_favor_modifier: "影的垂青"
+  STATIC_MODIFIER_DESC_gacha_raiden_favor_modifier: "那杯甘味令神明放松，她特许你的后勤改良，威望与建设也随之提速。"
+
+  # 雷电将军 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_raiden_country_modifier: "鸣神岛·永恒静土"
+  STATIC_MODIFIER_DESC_gacha_raiden_country_modifier: "雷霆敕令下的安定，让厌战渐息，正统更稳。"
+  STATIC_MODIFIER_NAME_gacha_raiden_c1_country_modifier: "八重神子的账簿"
+  STATIC_MODIFIER_DESC_gacha_raiden_c1_country_modifier: "政务效率提升，军政内阁运转更顺畅。"
+  STATIC_MODIFIER_NAME_gacha_raiden_c2_country_modifier: "祸津·稻光"
+  STATIC_MODIFIER_DESC_gacha_raiden_c2_country_modifier: "雷鸣预示的肃杀，让战争拖累与建造阻力一同降低。"
+  STATIC_MODIFIER_NAME_gacha_raiden_c5_country_modifier: "天下人之大权"
+  STATIC_MODIFIER_DESC_gacha_raiden_c5_country_modifier: "律令如雷贯耳，行政体系运转更高效。"
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_country_modifier: "源流·许愿"
+  STATIC_MODIFIER_DESC_gacha_raiden_c6_country_modifier: "天命所归，威望、立法、止战之力同步提升。"
+
+  gacha_raiden_origin_trait_die_desc: "失去“影之武库”初始加成。"
+  gacha_raiden_awakened_trait_die_desc: "失去“雷霆将军”的职业加成。"
+  gacha_raiden_transcended_trait_die_desc: "失去“永恒的秩序”统治者加成。"
+  gacha_raiden_c2_trait_die_desc: "失去雷电将军 C2 进阶加成。"
+  gacha_raiden_c4_trait_die_desc: "失去雷电将军 C4 进阶加成。"
+  gacha_raiden_c6_trait_die_desc: "失去雷电将军 C6 终阶加成。"
+
+  # === 事件 (Events) ===
+  gacha_raiden_events.1.title: "御建鸣神主尊·雷电将军 —— 降临此世的『永恒』"
+  gacha_raiden_events.1.desc: "「我是雷电将军。\n\n既然你唤醒了我的意识，想必是已做好了背负『永恒』的觉悟。\n\n……不用紧张。我已审视过这片疆域。\n\n战乱频仍，法度松弛，人心的浮动如杂乱的雷鸣。\n\n不过，虽然混乱，却有着某种……令人怀念的坚韧。\n\n既然我已降临，此地便不可再有无谓的牺牲。\n\n我会将『稻妻』的法度带到这里。\n\n如果你跟不上我的步伐，或者被『磨损』所吞没……\n\n我会毫不犹豫地斩下那一刀。\n\n——别让我失望。」"
+  gacha_raiden_events.1.a: "为了永恒！"
+
+  gacha_raiden_events.2.title: "雷光闪烁"
+  gacha_raiden_events.2.desc: "雷电将军的力量似乎增强了。她手中的刀锋更加锐利，周身的雷光也更加耀眼。\n\n「无念，无想。」"
+  gacha_raiden_events.2.a: "威光无赦。"
+
+  gacha_raiden_events.4.title: "伴君长行"
+  gacha_raiden_events.4.desc: "「我是雷电影。\n\n漫长的岁月里，我将自己封闭在『一心净土』中，任由『将军』执行着永恒的指令。\n\n我见过太多的失去，所以我想留住时间；\n\n我见过太多的磨损，所以我想冻结愿望。\n\n刚来到这里时，我以为这又是一个注定会走向毁灭的凡人国度。\n\n我准备好了斩断一切变数，正如我在稻妻所做的那样。\n\n但是……你不同。\n\n你在战火中守护了弱者，你在权谋中保留了真心。\n\n你让我看到，即使是如朝露般短暂的凡人，也能迸发出比恒星更耀眼的光芒。\n\n『将军』依然会是你的利刃，为你斩碎一切敌人。\n\n而我……\n\n我会收起雷霆，为你煮一壶茶。\n\n不用担心磨损，也不用担心终结。\n\n只要你还在前行，我就以此身许诺——\n\n你的国度，即是永恒。」"
+  gacha_raiden_events.4.a: "此乃天助我也！"
+
+  gacha_raiden_events.11.title: "斩断旧梦"
+  gacha_raiden_events.11.desc: "「那些被征服的土地还在怀念旧主？可笑。我会用稻光斩断他们对过去的『妄念』。从今往后，他们的历史只有『现在』，他们的未来只有『你』。」"
+  gacha_raiden_events.11.a: "天下太平。"
+
+  gacha_raiden_events.12.title: "以此身许诺"
+  gacha_raiden_events.12.desc: "「看着战士们冲锋的样子……我想起了曾经的笹百合与千代。……不，将军不会感伤。我将赐予全军『梦想一心』的加护。只要他们向我献上忠诚，我便许诺他们——必胜。」"
+  gacha_raiden_events.12.a: "所向披靡！"
+
+  gacha_raiden_events.13.title: "恶曜之眼"
+  gacha_raiden_events.13.desc: "「我观察了你的军备，太慢了。我已在你的兵营上空张开了『恶曜之眼』，它会时刻督促那些懒散的凡人。为了永恒，即使是一瞬间的懈怠也是重罪。」"
+  gacha_raiden_events.13.a: "绝对的效率。"
+
+  gacha_raiden_events.14.title: "统御的威权"
+  gacha_raiden_events.14.desc: "「疆域扩大了，但管理的效率不能降低。我已将部分权能分摊到了行政网络中。虽然凡人的智慧有限，但只要照着我的指令执行，就不会出错。」"
+  gacha_raiden_events.14.a: "铁腕治国。"
+
+  # === C3 好感事件：雷雨夜的「后勤審查」 ===
+  gacha_raiden_c3_title: "雷雨夜的「后勤审查」"
+  
+  # Scene 1：神威
+  gacha_raiden_c3_scene_1_desc: "紫色电弧在御书房外墙跳动，空气中满是臭氧。侍从们远远避开，只剩你顶着静电推开沉重大门。雷暴并非天灾，而是高位威压外溢。"
+  gacha_raiden_c3_scene_1_opt_a: "进入御书房：觐见殊胜之身。"
+  gacha_raiden_c3_scene_1_opt_skip: "跳过剧情"
+
+  # Scene 2：静止的时间
+  gacha_raiden_c3_scene_2_desc: "将军悬浮离地半尺，雷光环绕，背对着雨夜。\n\n她的声音直接在脑海响起：\n\n「此世的雷元素……杂乱无章。不仅无序，而且微弱。」\n\n桌案上堆着被推开的兵书、账本、奏折。"
+  gacha_raiden_c3_scene_2_opt_a: "低头行礼：将军深夜至此，有何神谕？"
+
+  # Scene 3：永恒的磨损
+  gacha_raiden_c3_scene_3_desc: "她缓缓转身，手指虚点那堆文件。\n\n「我阅览了你们呈上的所谓『消遣之物』。史书、兵法、哲学……尽是陈词滥调。若长久凝视这死水，连我也会被名为『无趣』的锈迹侵蚀。」\n\n「凡人君主，你的国度难道没有一点……具备『变数』价值的事物吗？」"
+  gacha_raiden_c3_scene_3_opt_a: "沉思：变数……"
+
+  # Scene 4：博弈（锁路线）
+  gacha_raiden_c3_scene_4_desc: "神明的质询面前，常规贡品无意义。你命侍从呈上特殊贡品，待人退去后推到影的面前。"
+  gacha_raiden_c3_scene_4_opt_a: "呈上小说：「民间异国读物，荒诞却记录凡人最大胆的狂想。」"
+  gacha_raiden_c3_scene_4_opt_b: "呈上甜点：「御膳房千次试制的甘味，只求一瞬满足。」"
+
+  # Scene 5：审视
+  gacha_raiden_c3_scene_5_desc_a: "影漫不经心读出冗长标题：「《转生异世界的我也要成为大公》？僭越。」\n\n她翻到第一页，眼神渐聚焦：「主角放弃神明加护，以凡人逆转因果？狂妄，倒也是观察样本。」"
+  gacha_raiden_c3_scene_5_desc_b: "她看着淋糖团子：「牛乳与糯米的调和？卖相或逊稻妻，但这股气息，与行军干粮不同。」\n\n她优雅却不迟疑地拿起一串。"
+  gacha_raiden_c3_scene_5_desc_common: "惊雷炸响，她连眼皮都不抬，注意力全落在手中的新意上。"
+  gacha_raiden_c3_scene_5_opt_a: "静立一旁。"
+
+  # Scene 6：静止
+  gacha_raiden_c3_scene_6_desc_a: "她坐下，雷场收敛。她捧书，眉头时舒时蹙，如同审阅一份重要战报。\n\n「……尚可。这股新意，让时间稍有实感。」"
+  gacha_raiden_c3_scene_6_desc_b: "她坐下，雷场收敛。她小口吃着团子，神情专注，宛如在进行精密的元素提纯。\n\n「……尚可。这股新意，让时间稍有实感。」"
+  gacha_raiden_c3_scene_6_desc_common: "\n\n她坐下，雷场收敛。"
+  gacha_raiden_c3_scene_6_opt_a: "等待。"
+
+  # Scene 7：裁断
+  gacha_raiden_c3_scene_7_desc_a: "「文辞粗浅，逻辑有漏洞，但『打破命运』的意志并非全无道理。凡人的狂想，偶尔也能触及真理边缘。」\n\n「此类记录异界『变数』的典籍，直接送来。我特许你呈报。」"
+  gacha_raiden_c3_scene_7_desc_b: "「口感绵软，甜度适中，能平复精神波动，利于冥想稳定。作为军需补给，合格。」\n\n「若有助于『精神安定』的物资，不必等我审查——唯有你可呈上。」"
+  gacha_raiden_c3_scene_7_opt_a: "低头致意：谨遵。"
+
+  # Scene 8：雨停了
+  gacha_raiden_c3_scene_8_desc: "窗外雨止，月光洒在铠甲上。她整理衣袖，影的柔和退去，将军接管。\n\n「休憩已过。乏味已缓解，各司其职吧。」"
+  gacha_raiden_c3_scene_8_opt_a: "退后一步：恭送将军。"
+
+  # Scene 9：结局
+  gacha_raiden_c3_scene_9_desc_a: "影手里仍握着那本小说。\n\n「此书，暂且征用。关于主角第五章的抉择，明日早朝后，你可来书房。我有些许异议，欲与你一辩。」"
+  gacha_raiden_c3_scene_9_opt_a: "遵命，将军。"
+
+  gacha_raiden_c3_scene_9_desc_b: "影走到门口，微侧目看桌上空食盒。\n\n「方才那种团子，若能将糯米与牛乳彻底融合，制成可饮用的流质，或更高效摄入。这是『最高优先级』的后勤改良指令。」"
+  gacha_raiden_c3_scene_9_opt_b: "谨遵神谕。"

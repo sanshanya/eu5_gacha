@@ -1,0 +1,176 @@
+﻿l_english:
+  gacha_text_reward_prestige_small: "Your renown now spreads among neighboring realms.(@prestige!#color_yellow [ROOT.ScriptValue('gacha_reward_prestige_small_sv')|0]#!)"
+  gacha_text_reward_prestige_medium: "This miracle has sent your fame soaring to the heavens.(@prestige!#color_yellow [ROOT.ScriptValue('gacha_reward_prestige_medium_sv')|0]#!)"
+  gacha_text_reward_legitimacy_small: "The people place greater faith in your rule.(@legitimacy!#color_yellow [ROOT.ScriptValue('gacha_reward_legitimacy_small_sv')|0]#!)"
+  gacha_text_reward_legitimacy_medium: "Your crown’s legitimacy is now sanctified by the divine.(@legitimacy!#color_yellow [ROOT.ScriptValue('gacha_reward_legitimacy_medium_sv')|0]#!)"
+  gacha_text_reward_stability_small: "Auspicious omens steady the realm’s order.(@stability!#color_yellow [ROOT.ScriptValue('gacha_reward_stability_small_sv')|2]#!)"
+  gacha_text_reward_prestige_overflow: "Surging starlight condenses into the nation’s glory. (Excess is converted into Prestige.)"
+  gacha_text_reward_gold_refund: "On the altar lie only worn arms and leftover supplies, appraised and added back to the treasury. (Refunds @gold!#color_yellow [ROOT.ScriptValue('gacha_refund_gold_small_sv')|0]#!)"
+
+  gacha_events_interaction: "Festival: Fated Encounter"
+  gacha_events_interaction_desc: "[actor.GetName] proposes to raise a sacred altar, offering this world’s wealth to beckon heroes and savants from the distant sea of stars."
+
+  STATIC_MODIFIER_NAME_gacha_core_modifier: "Blessing of the Wish"
+  STATIC_MODIFIER_DESC_gacha_core_modifier: "Blessing of the Wish"
+
+  MODIFIER_TYPE_NAME_gacha_core: "Traveler from Another World"
+  MODIFIER_TYPE_DESC_gacha_core: "「Traveler from Another World」"
+
+  MODIFIER_TYPE_NAME_gacha_country_aura: "National Resonance"
+  MODIFIER_TYPE_DESC_gacha_country_aura: "This character grants the country a permanent national policy bonus."
+
+  gacha_delegate_regency_interaction: "Starlit Co-Regency"
+  gacha_delegate_regency_interaction_concept: "Starlit Co-Regency"
+  gacha_delegate_regency_interaction_desc_specific: "Make this character the realm’s nominal regent, sharing the burdens of rule and fate with you. The former ruler withdraws behind the scenes, yet keeps influence in both council and command."
+  gacha_delegate_regency_select: "Choose the Co-Ruling Star"
+
+  STATIC_MODIFIER_NAME_gacha_temp_regent_modifier: "Acting Regent"
+  STATIC_MODIFIER_DESC_gacha_temp_regent_modifier: "Under the witness of starlight, this figure temporarily bears the crown, ruling the realm alongside the sovereign behind the veil."
+
+  STATIC_MODIFIER_NAME_gacha_former_ruler_modifier: "Former Ruler"
+  STATIC_MODIFIER_DESC_gacha_former_ruler_modifier: "Has yielded the throne and stepped into the shadows, yet keeps their seat in council and their rank in the armies, guarding the realm in another guise."
+
+  gacha_events.1.title: "Wish: Meeting Beyond Worlds"
+  gacha_events.1.desc_guaranteed: "This wish is blessed: your next gain is guaranteed to be the featured character!\\nCommit your resources, and ask fate for an answer."
+  gacha_events.1.desc_not_guaranteed: "Commit your resources, and ask fate for an answer."
+  gacha_events.1.a: "Offer gold (Single Wish): @gold!#color_yellow [ROOT.ScriptValue('gacha_single_pull_cost_sv')|0]#!"
+  gacha_events.1.a10: "Grand Offering (Tenfold Wish): @gold!#color_yellow [ROOT.ScriptValue('gacha_ten_pull_cost_sv')|0]#!"
+  gacha_events.1.starlight_exchange: "Starlight Exchange (requires #color_yellow [ROOT.ScriptValue('gacha_starlight_exchange_cost_sv')|0]#! Starlight)"
+  gacha_free_first_roll: "First Wish Free (Newcomer’s Boon)"
+  gacha_events.1.b: "Watch and wait"
+  gacha_events.1.single_lack: "Offering insufficient"
+  gacha_not_enough_gold_tt: "The treasury lies bare; no tribute can be raised for the wish."
+
+  gacha_events.2.title: "Wish Result: Silent Firmament"
+  gacha_events.2.desc: "The stars fall silent and their light grows dim. No spirit answers tonight’s call; only a cold wind sweeps across the altar.\\n\\nNothing remains but fruitless silence."
+  gacha_events.2.a: "Mark this omen"
+
+  gacha_events.20.title: "Wish Result: Gift of the Stars"
+  gacha_events.20.desc_gold: "Starlight gathers into a pouch of gleaming coins—perhaps enough to tempt fate once more.\\n\\nGain: @gold!#color_yellow [ROOT.ScriptValue('gacha_reward_gold_4star_sv')|0]#!"
+  gacha_events.20.desc_prestige: "Starlight becomes an imperial decree, bearing your name across the realms.\\n\\nGain: @prestige!#color_yellow [ROOT.ScriptValue('gacha_reward_prestige_4star_sv')|0]#!"
+  gacha_events.20.desc_legitimacy: "Starshine echoes through the court, shoring up the people’s faith in the throne.\\n\\nGain: @legitimacy!#color_yellow [ROOT.ScriptValue('gacha_reward_legitimacy_4star_sv')|0]#!"
+  gacha_events.20.desc_stability: "Starlight bathes the fields; the land itself breathes in quiet stability.\\n\\nGain: @stability!#color_yellow [ROOT.ScriptValue('gacha_reward_stability_4star_sv')|0]#!"
+  gacha_events.20.a: "Accept the gift"
+
+  gacha_events.3.title: "Wish Result: Soft Pity"
+  gacha_events.3.desc: "A golden light bursts forth! Yet the figure stepping from the star-gate is not the strategist you longed for, but the Raiden Shogun of Inazuma.\\n\\nYou’ve lost the fifty–fifty this time, but a standard-banner five-star general is still a fine prize. Your next wish is guaranteed to bring the featured character!"
+  gacha_events.3.a: "We’ll make the most of it"
+
+  gacha_events.4.title: "Constellation Perfected"
+  gacha_events.4.desc: "This hero from another world has reached the peak of their power.\\n\\n$gacha_text_reward_prestige_overflow$"
+  gacha_events.4.a: "Nothing goes to waste"
+
+  gacha_events.5.title: "A Golden Gleam!"
+  gacha_events.5.desc: "A brilliant golden meteor streaks across the sky, drenching the altar in sacred light...\\n\\nThis presence is anything but ordinary!"
+  gacha_events.5.a: "Unveil fate!"
+
+  gacha_events.6.title: "Unexpected Windfall"
+  gacha_events.6.desc: "No spirit answers your call, but in a shadowed corner of the altar you uncover treasure from ages past.\\n\\nGain: @gold!#color_yellow [ROOT.ScriptValue('gacha_reward_gold_windfall_sv')|0]#!"
+
+  gacha_events.common.a: "Accept the gift"
+
+  gacha_events.7.title: "Fame Resounds"
+  gacha_events.7.desc: "Your devout rites move the watching crowd; your renown grows accordingly.\\n\\nGain: @prestige!#color_yellow [ROOT.ScriptValue('gacha_reward_prestige_fame_sv')|0]#!"
+
+  gacha_events.8.title: "Mandate Bestowed"
+  gacha_events.8.desc: "No outsider answers the call, yet the auspicious omen strengthens the legitimacy of your rule.\\n\\nGain: @legitimacy!#color_yellow [ROOT.ScriptValue('gacha_reward_legitimacy_omen_sv')|0]#!"
+
+  MODIFIER_TYPE_NAME_gacha_constellation_level: "Constellation Level"
+  MODIFIER_TYPE_DESC_gacha_constellation_level: "「When the longing of mortals swells enough to stir the stars, a gaze from on high descends and condenses into this noble sigil, guiding elemental power and bearing witness to fate.」"
+
+  MODIFIER_TYPE_NAME_gacha_electro_godeye: "Electro Vision"
+  MODIFIER_TYPE_DESC_gacha_electro_godeye: "A lightning mark from Inazuma, signifying the favor of the Electro element."
+
+  MODIFIER_TYPE_NAME_gacha_water_godeye: "Hydro Vision"
+  MODIFIER_TYPE_DESC_gacha_water_godeye: "A blessing from the god of water, emblem of flow and healing."
+
+  MODIFIER_TYPE_NAME_gacha_fire_godeye: "Pyro Vision"
+  MODIFIER_TYPE_DESC_gacha_fire_godeye: "A brand from the god of fire, symbol of passion and flame."
+
+  MODIFIER_TYPE_NAME_gacha_grass_godeye: "Dendro Vision"
+  MODIFIER_TYPE_DESC_gacha_grass_godeye: "An insight born of verdant power, where knowledge and life both take root."
+
+  gacha_new_character_title: "Wish Answered!"
+  gacha_new_character_desc: "A 5-star courtier has joined your service."
+
+  gacha_constellation_up_title: "Constellation Shines"
+  gacha_constellation_up_desc: "Constellation level increased!"
+
+  gacha_max_constellation_title: "Constellation Perfected"
+  gacha_max_constellation_desc: "They have reached their perfect state!"
+
+  gacha_already_owned_title: "Duplicate Wish"
+  gacha_already_owned_desc: "This courtier already serves another realm; the wish converts into resource compensation."
+
+  MODIFIER_TYPE_NAME_local_gacha_desired_pop_scaled: "Local Wish Target Population (Multiplier)"
+  MODIFIER_TYPE_DESC_local_gacha_desired_pop_scaled: "Adjusts the province’s desired wish population by a multiplier."
+
+  MODIFIER_TYPE_NAME_local_gacha_desired_pop: "Local Wish Target Population"
+  MODIFIER_TYPE_DESC_local_gacha_desired_pop: "Adjusts the province’s desired wish population."
+
+  MODIFIER_TYPE_NAME_global_gacha_desired_pop: "Global Wish Target Population"
+  MODIFIER_TYPE_DESC_global_gacha_desired_pop: "Adjusts the realm-wide desired wish population."
+
+  MODIFIER_TYPE_NAME_global_gacha_desired_pop_scaled: "Global Wish Target Population (Multiplier)"
+  MODIFIER_TYPE_DESC_global_gacha_desired_pop_scaled: "Adjusts the realm-wide desired wish population by a multiplier."
+
+  MODIFIER_TYPE_NAME_global_gacha_city_desired_pop_scaled: "Global City Wish Target Population (Multiplier)"
+  MODIFIER_TYPE_DESC_global_gacha_city_desired_pop_scaled: "Adjusts the desired urban wish population by a multiplier."
+
+  MODIFIER_TYPE_NAME_global_gacha_city_desired_pop: "Global City Wish Target Population"
+  MODIFIER_TYPE_DESC_global_gacha_city_desired_pop: "Adjusts the desired urban wish population."
+
+  MODIFIER_TYPE_NAME_global_gacha_rural_desired_pop_scaled: "Global Rural Wish Target Population (Multiplier)"
+  MODIFIER_TYPE_DESC_global_gacha_rural_desired_pop_scaled: "Adjusts the desired rural wish population by a multiplier."
+
+  MODIFIER_TYPE_NAME_global_gacha_rural_desired_pop: "Global Rural Wish Target Population"
+  MODIFIER_TYPE_DESC_global_gacha_rural_desired_pop: "Adjusts the desired rural wish population."
+
+  MODIFIER_TYPE_NAME_global_gacha_migration_allowed: "Global Wish Migration Rights"
+  MODIFIER_TYPE_DESC_global_gacha_migration_allowed: "Controls migration rights for wish populations across the realm."
+
+  MODIFIER_TYPE_NAME_local_gacha_migration_allowed: "Local Wish Migration Rights"
+  MODIFIER_TYPE_DESC_local_gacha_migration_allowed: "Controls migration rights for wish populations in this province."
+
+  MODIFIER_TYPE_NAME_local_gacha_max_literacy: "Local Wish Literacy Cap"
+  MODIFIER_TYPE_DESC_local_gacha_max_literacy: "Sets the literacy cap for the province’s wish population."
+
+  MODIFIER_TYPE_NAME_global_gacha_max_literacy: "Global Wish Literacy Cap"
+  MODIFIER_TYPE_DESC_global_gacha_max_literacy: "Sets the literacy cap for wish populations across the realm."
+
+  MODIFIER_TYPE_NAME_global_gacha_assimilation_blocked: "Global Wish Assimilation Blocked"
+  MODIFIER_TYPE_DESC_global_gacha_assimilation_blocked: "Prevents wish populations from assimilating anywhere in the realm."
+
+  MODIFIER_TYPE_NAME_local_gacha_assimilation_blocked: "Local Wish Assimilation Blocked"
+  MODIFIER_TYPE_DESC_local_gacha_assimilation_blocked: "Prevents wish populations from assimilating in this province."
+
+  MODIFIER_TYPE_NAME_global_gacha_conversion_blocked: "Global Wish Conversion Blocked"
+  MODIFIER_TYPE_DESC_global_gacha_conversion_blocked: "Prevents wish populations from converting religion across the realm."
+
+  MODIFIER_TYPE_NAME_local_gacha_conversion_blocked: "Local Wish Conversion Blocked"
+  MODIFIER_TYPE_DESC_local_gacha_conversion_blocked: "Prevents wish populations from converting religion in this province."
+
+  MODIFIER_TYPE_NAME_local_gacha_food_consumption: "Local Wish Food Consumption"
+  MODIFIER_TYPE_DESC_local_gacha_food_consumption: "Adjusts food consumption for the province’s wish population."
+
+  MODIFIER_TYPE_NAME_global_gacha_food_consumption: "Global Wish Food Consumption"
+  MODIFIER_TYPE_DESC_global_gacha_food_consumption: "Adjusts food consumption for wish populations across the realm."
+
+  gacha_group: "Wish Culture Group"
+  gacha_group_desc: "The dedicated culture group for wish characters."
+
+  gacha_select_title: "Select Wish Target"
+
+  gacha_delegate_regency_interaction_desc: "Appoint as Regent: temporarily entrust state affairs to a wish character."
+  gacha_delegate_regency_interaction_past: "Has served as regent"
+  gacha_delegate_regency_interaction_act: "Appoint as Regent"
+  gacha_delegate_regency_interaction_act_past: "Regency concluded"
+
+  gacha_events_interaction_desc_specific: "Trigger a wish event interaction."
+  gacha_events_interaction_past: "Wish event already triggered"
+  gacha_events_interaction_act: "Trigger wish event"
+  gacha_events_interaction_act_past: "Wish event resolved"
+
+  gacha_core_trait: "Wish Core"
+  desc_gacha_core_trait: "A core marker binding this country to its wish character."
+  gacha_core_trait_die_desc: "The wish core marker is lost."

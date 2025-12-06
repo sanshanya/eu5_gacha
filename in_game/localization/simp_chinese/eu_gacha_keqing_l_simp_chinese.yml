@@ -1,0 +1,143 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 刻晴 (Keqing) "效率、改革、人治"
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_keqing: "刻晴"
+  gacha_last_name_keqing: "玉衡"
+
+  # === 特质 (Traits) ===
+  gacha_keqing_origin_trait: "璃月千帆之繁"
+  desc_gacha_keqing_origin_trait: "「在此地驻足片刻，我仿佛看到了璃月港千帆竞发的景象……不对，这里的基础设施太差了。想要富国，先要修路、通商、整顿市集。把图纸给我，我会让这片土地焕发出黄金般的光泽。」"
+
+  gacha_keqing_awakened_trait: "迅雷天街巡游"
+  desc_gacha_keqing_awakened_trait: "「兵贵神速。在那群臃肿的敌军还在整队时，我的剑锋（雷楔）早已在他们的后方炸响。无论是平叛还是远征，只要速度够快，就没有斩不断的阻碍。出发！」"
+
+  gacha_keqing_transcended_trait: "人治时代的开拓者"
+  desc_gacha_keqing_transcended_trait: "「不要总是指望神迹或天命。历史是由人类的双脚走出来的。如果你敢于打破陈规，我就敢为你制定新的律法。在这个时代，我们要用自己的手，去书写不属于神的未来。」"
+
+  # 命座进阶 Traits
+  gacha_keqing_c2_trait: "黄金的土地"
+  desc_gacha_keqing_c2_trait: "「一砖一瓦，皆是未来的基石。在我的规划下，这座城市的效率已达极致。无论是农田还是工坊，都在以惊人的速度生长。看吧，这片土地正在回应我们的汗水，它将变得寸土寸金。」"
+
+  gacha_keqing_c4_trait: "云来·绝剑"
+  desc_gacha_keqing_c4_trait: "「战场之上，唯快不破。我的剑光就是进军的号角。敌人的阵型在我眼中充满了破绽，我将化作雷霆，在他们反应过来之前，穿梭于万军之中，斩下胜利的果实。」"
+
+  gacha_keqing_c6_trait: "玉衡·治世"
+  desc_gacha_keqing_c6_trait: "「神明的时代已经远去，如今是人治的黎明。我已将所有冗余的陈规旧律斩断，国家机器将在最高的效率下轰鸣运转。只要你我意志坚定，凡人的智慧，亦可超越神迹。」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_keqing_modifier: "玉衡的督导"
+  STATIC_MODIFIER_DESC_gacha_keqing_modifier: "「耽误的时间太多了，我们得把进度赶回来。」"
+  gacha_keqing_modifier: "变革之心"
+  gacha_keqing_modifier_desc: "玉衡星的高效改革正在推动这个国家飞速前进。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_keqing_c0_modifier: "金紫座·零命"
+  STATIC_MODIFIER_NAME_gacha_keqing_c1_modifier: "雷厉风行"
+  STATIC_MODIFIER_NAME_gacha_keqing_c2_modifier: "苛刻的监工"
+  STATIC_MODIFIER_NAME_gacha_keqing_c3_modifier: "登楼"
+  STATIC_MODIFIER_NAME_gacha_keqing_c4_modifier: "调律"
+  STATIC_MODIFIER_NAME_gacha_keqing_c5_modifier: "移灯"
+  STATIC_MODIFIER_NAME_gacha_keqing_c6_modifier: "廉贞"
+  STATIC_MODIFIER_NAME_gacha_keqing_aid_modifier: "玉衡的辅佐"
+  STATIC_MODIFIER_DESC_gacha_keqing_aid_modifier: "并肩的改革者互为剑鞘，政务效率与基建推进都找到最佳节奏。"
+  STATIC_MODIFIER_NAME_gacha_keqing_gentle_expectation_modifier: "少女的期许"
+  STATIC_MODIFIER_DESC_gacha_keqing_gentle_expectation_modifier: "那一晚的夜宵与约定，化作温柔的动力，声望与产出都添了一抹烟火气。"
+
+  # 刻晴 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_keqing_country_modifier: "璃月千帆之繁"
+  STATIC_MODIFIER_DESC_gacha_keqing_country_modifier: "工部效率与城市成长齐升，玉衡监工寸土必争。"
+  STATIC_MODIFIER_NAME_gacha_keqing_c1_country_modifier: "工部专案"
+  STATIC_MODIFIER_DESC_gacha_keqing_c1_country_modifier: "流程优化，施工更快。"
+  STATIC_MODIFIER_NAME_gacha_keqing_c2_country_modifier: "黄金的土地"
+  STATIC_MODIFIER_DESC_gacha_keqing_c2_country_modifier: "基建狂魔模式，全域施工与发展提速，产出同步提升。"
+  STATIC_MODIFIER_NAME_gacha_keqing_c5_country_modifier: "玉衡秘阁"
+  STATIC_MODIFIER_DESC_gacha_keqing_c5_country_modifier: "精打细算的官僚体系，顾问成本进一步压缩。"
+  STATIC_MODIFIER_NAME_gacha_keqing_c6_country_modifier: "玉衡治世"
+  STATIC_MODIFIER_DESC_gacha_keqing_c6_country_modifier: "理政与兵事并举，科研加速、政务高效、厌战更低。"
+
+  gacha_keqing_origin_trait_die_desc: "失去“璃月千帆”初始加成。"
+  gacha_keqing_awakened_trait_die_desc: "失去“玉衡星·工部监修”的职业加成。"
+  gacha_keqing_transcended_trait_die_desc: "失去“理政者”的统治者加成。"
+  gacha_keqing_c2_trait_die_desc: "失去刻晴 C2 进阶加成。"
+  gacha_keqing_c4_trait_die_desc: "失去刻晴 C4 进阶加成。"
+  gacha_keqing_c6_trait_die_desc: "失去刻晴 C6 终阶加成。"
+
+  # === 事件 (Events) ===
+  gacha_keqing_events.1.title: "璃月七星·玉衡 —— 此刻正是变革之时"
+  gacha_keqing_events.1.desc: "「我是刻晴，璃月七星中的『玉衡』。\n\n既然响应了召唤，我就直说了——如果你觉得现在的国家运转良好，那一定是你的错觉。\n\n刚才我粗略看了一下你们的行政账目和基建规划……\n\n太慢了！效率太低了！\n\n这种陈旧的官僚体系，怎么能应对未来的风暴？\n\n变革的时机已经成熟。\n\n哪怕是神明注视的土地，也终将由人类自己来治理，何况这里并没有岩王帝君。\n\n我会协助你重塑这个国家的秩序。\n\n但请做好心理准备，我的工作节奏可是很快的。\n\n别跟不上我的脚步哦，名为『君主』的搭档。」"
+  gacha_keqing_events.1.a: "那就拜托你了，玉衡星。"
+
+  gacha_keqing_events.2.title: "效率提升"
+  gacha_keqing_events.2.desc: "刻晴对现有的工作流程进行了优化。虽然大家都很累，但效率确实提高了。\n\n「还不够，我们还能更快。」"
+  gacha_keqing_events.2.a: "保持这个节奏！"
+
+  gacha_keqing_events.4.title: "人定胜天"
+  gacha_keqing_events.4.desc: "「我是刻晴，璃月七星的玉衡。\n\n以前在璃月，我总是跑得太快，把身边的人甩在身后。\n\n我也曾担心，在这个陌生的异界，会不会只剩下我一个人在为了所谓的『效率』而徒劳奔波。\n\n但是，你跟上来了。\n\n无论我提出多么苛刻的改革方案，无论我要求多么疯狂的行军速度……\n\n你从未抱怨，从未停歇。\n\n看着这片曾经荒芜的土地如今楼阁林立、商路通达，我突然明白了一件事：\n\n所谓的『盛世』，并不是神明的恩赐，而是两个志同道合的人，在无数个加班的深夜里熬出来的。\n\n……谢谢你。\n\n不仅是为了这个国家，也是为了……一直陪着那个任性的我。\n\n好了，感叹时间结束！\n\n拿上文件，我们去视察下一个省份。\n\n只要和你在一起……\n\n我觉得，我们可以把这个『人治的时代』，延续到时间的尽头。」"
+  gacha_keqing_events.4.a: "走吧，工作还没有结束呢！"
+
+  gacha_keqing_events.11.title: "辉煌的奠基"
+  gacha_keqing_events.11.desc: "「听到了吗？那是锤子敲击石材的声音，是国家心跳的声音。既然要建立盛世，地基就必须打得比磐石更稳。现在的建设速度勉强能让我满意了……但也只是『勉强』哦。」"
+  gacha_keqing_events.11.a: "我们会做得更好。"
+
+  gacha_keqing_events.12.title: "剑光如我"
+  gacha_keqing_events.12.desc: "「现在的我，剑术已无迷惘。战场亦是职场，无论面对多么顽固的敌人，我都会以雷霆之势将其『优化』掉。不用担心侧翼，因为我会同时出现在所有需要我的地方。」"
+  gacha_keqing_events.12.a: "这就是玉衡的速度！"
+
+  gacha_keqing_events.13.title: "寸土寸金"
+  gacha_keqing_events.13.desc: "「我看过了，你们的城市规划浪费了太多空间。只要稍微优化一下布局，就能塞进更多的工坊和市场。你看，像这样……寸土寸金的道理，在任何世界都通用。」"
+  gacha_keqing_events.13.a: "立即执行新规划。"
+
+  gacha_keqing_events.14.title: "求贤若渴"
+  gacha_keqing_events.14.desc: "「想要维持这种高强度的改革，光靠我们两个是不够的。我重新制定了人才选拔的标准，去除了那些繁文缛节。现在，让那些真正有才干的人才，以更合理的价格为我们效力吧。」"
+  gacha_keqing_events.14.a: "唯才是举。"
+
+  # === C3 好感事件：灯火阑珊处的「小差」 ===
+  gacha_keqing_c3_title: "灯火阑珊处的「小差」"
+  
+  # Scene 1：不灭的灯火
+  gacha_keqing_c3_scene_1_desc: "夜色已深，皇宫沉入梦乡，唯独御书房的灯火还亮着。\n\n这是刻晴连续通宵的第三晚。她要凭一己之力把商路、矿山、账目重新夯实。\n\n你手里提着御膳房刚做好的夜宵，热气透过木盒传到掌心。"
+  gacha_keqing_c3_scene_1_opt_a: "推开门：该让她停下来了。"
+  gacha_keqing_c3_scene_1_opt_skip: "跳过剧情"
+  
+  # Scene 2：玉衡的背影
+  gacha_keqing_c3_scene_2_desc: "刻晴伏案疾书，桌上堆满卷轴和地图。\n\n刻晴：「……这条河道的预算再压低一成……旧贵族的账目有问题……明天召集户部重议。还有，让工匠们把图纸……嗯？」\n\n敏锐的她察觉到气息变化，笔锋一顿。"
+  gacha_keqing_c3_scene_2_opt_a: "走近书桌：是我。"
+  
+  # Scene 3：雷楔的停滞
+  gacha_keqing_c3_scene_3_desc: "她猛地转身，看清是你后，严肃瞬间化成惊讶，试图整理凌乱的衣袖。\n\n尴尬的沉默里，一声“咕~”打破肃穆。那张写满“严厉”“变革”的脸庞染上“窘迫”的红晕。"
+  gacha_keqing_c3_scene_3_opt_a: "忍住笑意：玉衡星也是凡人之躯。"
+  
+  # Scene 4：博弈（锁路线）
+  gacha_keqing_c3_scene_4_desc: "刻晴别过脸，双手抵着桌面想找回气场。\n\n刻晴：「这是正常反应！精力还很充沛，这些卷宗今晚必须处理完！」\n\n面对对自己苛刻到极点的她，你决定："
+  gacha_keqing_c3_scene_4_opt_a: "剑道劝说：「过刚易折。最好的剑，也需要回鞘养锋。」"
+  gacha_keqing_c3_scene_4_opt_b: "温情投食：「（打开食盒）什么公文卷宗，在金丝虾球面前都要让路。」"
+  
+  # Scene 5：入鞘
+  gacha_keqing_c3_scene_5_desc_a: "刻晴愣住，肩膀垮下。\n\n刻晴：「……回鞘养锋？……您说得对。若剑刃崩了口，便无法在大变局中开路。是我太急躁了。」\n\n她放下笔，眼神多了一份被理解的释然。"
+  gacha_keqing_c3_scene_5_desc_b: "刻晴闻香，心理防线崩塌。\n\n刻晴：「这时候拿这个来考验我……真是犯规……」\n\n眼神软化，身体诚实地向食盒探去。"
+  gacha_keqing_c3_scene_5_desc_common: "她坐着，看着点心，眼神柔和。\n\n刻晴：「其实在璃月赶进度，也常忘记吃饭。总觉得时间不够，用跑得最快来改变世界、让人们不再依赖神明。」"
+  gacha_keqing_c3_scene_5_opt_a: "递给她筷子：你也得有力气跑。"
+  
+  # Scene 6：习惯性动作
+  gacha_keqing_c3_scene_6_desc: "刻晴夹起虾球轻咬一口，嘴上品评，吃得却不慢。\n\n吃完第一个，她左手下意识去摸公文，又停住。\n\n她看了看筷子，再看你的眼神，慢慢把手缩回，规矩地放在膝上。\n\n刻晴：「……谢谢。这大概是我来到这里后，最『奢侈』的一次休息了。」"
+  gacha_keqing_c3_scene_6_opt_a: "看着她吃：慢点吃，没人和你抢。"
+  
+  # Scene 7：心声（锁定路线）
+  gacha_keqing_c3_scene_7_desc_a: "刻晴望向夜色，神情放松。\n\n刻晴：「陛下，我庆幸在这个世界遇到的是您。您不把我当异类，也不怕我的激进。你懂我的急切，也懂我的疲惫。有您并肩，人治时代终会到来。」\n\n她转身，眼神坚定明亮，对“同志”的认可。"
+  gacha_keqing_c3_scene_7_desc_b: "刻晴低头摩挲空食盒的提手。\n\n刻晴：「您总是这样，威严的君主，却记得这些微不足道的小事。在您面前，那副紧绷的架子端不住了。」\n\n刻晴：「下次……能不能教我做这个？我想亲手做给您吃。」"
+  gacha_keqing_c3_scene_7_opt_a: "在此约定。"
+  
+  # Scene 8：黎明
+  gacha_keqing_c3_scene_8_desc_a: "天色微亮。刻晴站起整理衣冠，嘴角带笑。\n\n刻晴：「休息结束。黎明要来了。有了这场『回鞘』，现在的我，感觉无坚不摧。」"
+  gacha_keqing_c3_scene_8_desc_b: "天色微亮。刻晴撑着下巴看着你，眼神温柔。\n\n刻晴：「时间过得真快。明明没做正事，只是吃了顿夜宵……但有您的心意，新的日子也没那么焦虑了。」"
+  gacha_keqing_c3_scene_8_opt_a: "准备离开……"
+  
+  # Scene 9：结局
+  gacha_keqing_c3_scene_9_desc_a: "刻晴站在战略地图前，意气风发指向省份。\n\n刻晴：「今天朝会我会提新方案。只要我们联手，就没有旧陈规破不了。走吧，搭档，去开创盛世！」"
+  gacha_keqing_c3_scene_9_opt_a: "出发！"
+  
+  gacha_keqing_c3_scene_9_desc_b: "刻晴送你到门口，手指仍勾着空食盒。\n\n刻晴：「如果您不嫌弃，明晚还能带点来吗？作为交换，我提前两个小时做完……然后去城里逛逛？听说夜市卖会发光的纸灯笼……像故乡的霄灯。我想和您一起去看看，不谈公事，只是看看。」\n\n月光顺屋檐流下，在她期待的目光里，比宏伟蓝图更闪亮。"
+  gacha_keqing_c3_scene_9_opt_b: "一言为定。"

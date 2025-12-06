@@ -1,0 +1,140 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 胡桃 (Hutao) "解构严肃"
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_hutao: "胡桃"
+  gacha_last_name_hutao: "往生堂"
+
+  # === 特质 (Traits) ===
+  gacha_hutao_origin_trait: "往生堂业务拓展"
+  desc_gacha_hutao_origin_trait: "「您国家的人好像很怕死？这可不行，越怕越容易乱。生老病死是自然规律，像呼吸一样自然。让我来帮您宣传一下『往生』的理念吧，大家心里踏实了，日子才能过得安稳嘛。」"
+
+  gacha_hutao_awakened_trait: "赤团开道"
+  desc_gacha_hutao_awakened_trait: "「打仗我不在行？哎呀，您可别小看我。只有见过最多生死的人，才知道怎么最快地送敌人上路。放心，不管是敌是友，只要倒下了，往生堂都会公平地给他们留个位置。」"
+
+  gacha_hutao_transcended_trait: "幽蝶的引路人"
+  desc_gacha_hutao_transcended_trait: "「这就让我坐上王座啦？嘿嘿，也好。在我的治下，阴阳有序，生死两安。活着的时候热热闹闹，走了以后体体面面。这难道不是最完美的盛世吗？」"
+
+  # 命座进阶 Traits
+  gacha_hutao_c2_trait: "边界·安魂曲"
+  desc_gacha_hutao_c2_trait: "「阴阳有序，万物生息。我已在这片国土的四方立下了界碑。亡者安息于地下，化作春泥；生者无畏于战火，生生不息。听，那是灵魂归乡的歌谣，也是国家强盛的脉搏。」"
+
+  gacha_hutao_c4_trait: "赤团·蝶火燎原"
+  desc_gacha_hutao_c4_trait: "「既然言语无法劝退恶鬼，那就用火来净化吧！我的蝴蝶会飞过战场，每一朵火焰绽放，都是为了送敌人前往彼岸。别眨眼，这可是名为『毁灭』的盛大葬仪！」"
+
+  gacha_hutao_c6_trait: "幽冥之主·轮回"
+  desc_gacha_hutao_c6_trait: "「坐在这个位置上，我看得到更多的生离死别。但正因如此，生命才显得可贵，不是吗？无需畏惧终结，因为我是守门人。只要我在，这国家的命数……便还没到尽头。尽情地闹腾吧，陛下！」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_hutao_modifier: "蝶火的加护"
+  STATIC_MODIFIER_DESC_gacha_hutao_modifier: "「生与死，只不过是不同的状态。就像蝴蝶破茧而出，只是换了一个活法罢了。」"
+  gacha_hutao_modifier: "往生之力"
+  gacha_hutao_modifier_desc: "胡桃对生死的独特理解，让这个国家的人民更加从容面对命运的轮回。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_hutao_c0_modifier: "彼岸座·零命"
+  STATIC_MODIFIER_NAME_gacha_hutao_c1_modifier: "赤转蝶舞"
+  STATIC_MODIFIER_NAME_gacha_hutao_c2_modifier: "最不安神"
+  STATIC_MODIFIER_NAME_gacha_hutao_c3_modifier: "临别在世"
+  STATIC_MODIFIER_NAME_gacha_hutao_c4_modifier: "花好月圆"
+  STATIC_MODIFIER_NAME_gacha_hutao_c5_modifier: "红尘客栈"
+  STATIC_MODIFIER_NAME_gacha_hutao_c6_modifier: "幽蝶殊途"
+  STATIC_MODIFIER_NAME_gacha_hutao_gravestone_modifier: "生死界碑"
+  STATIC_MODIFIER_DESC_gacha_hutao_gravestone_modifier: "堂主的承诺像界碑一样立在阴阳之间，替你收束遗憾、平静后路。"
+  STATIC_MODIFIER_NAME_gacha_hutao_midnight_carnival_modifier: "月下狂欢"
+  STATIC_MODIFIER_DESC_gacha_hutao_midnight_carnival_modifier: "那一夜的放纵点燃了久违的少年气，你的威望与士气都染上了月光的火花。"
+  STATIC_MODIFIER_NAME_gacha_hutao_c6_country_modifier: "蝶引政坛"
+  STATIC_MODIFIER_DESC_gacha_hutao_c6_country_modifier: "国事如葬礼般精密，稳定度消耗大幅降低，叛乱之声沉寂。"
+  STATIC_MODIFIER_NAME_gacha_hutao_country_modifier: "往生堂业务拓展"
+  STATIC_MODIFIER_DESC_gacha_hutao_country_modifier: "稳定度投资所需降低，病疫侵扰亦难近身。"
+  STATIC_MODIFIER_NAME_gacha_hutao_c2_country_modifier: "边界的安魂曲"
+  STATIC_MODIFIER_DESC_gacha_hutao_c2_country_modifier: "灵柩之外亦需供奉：稳度投资更少，军队恢复更快。"
+  STATIC_MODIFIER_NAME_gacha_hutao_c1_country_modifier: "往生堂账房"
+  STATIC_MODIFIER_DESC_gacha_hutao_c1_country_modifier: "与阴阳两界打交道的经验，让顾问成本压到最低。"
+  STATIC_MODIFIER_NAME_gacha_hutao_c5_country_modifier: "引路灯"
+  STATIC_MODIFIER_DESC_gacha_hutao_c5_country_modifier: "驱邪辟祟的火光，同样照亮传教士的脚步。"
+
+  gacha_hutao_origin_trait_die_desc: "失去“往生堂业务拓展”的初始加成。"
+  gacha_hutao_awakened_trait_die_desc: "失去“夜游人”的职业加成。"
+  gacha_hutao_transcended_trait_die_desc: "失去“冥界引路人”的统治者加成。"
+  gacha_hutao_c2_trait_die_desc: "失去胡桃 C2 进阶加成。"
+  gacha_hutao_c4_trait_die_desc: "失去胡桃 C4 进阶加成。"
+  gacha_hutao_c6_trait_die_desc: "失去胡桃 C6 终阶加成。"
+
+  # === 事件 (Events) ===
+  gacha_hutao_events.1.title: "往生堂第七十七代堂主·胡桃 —— 您的（大客户）专属丧葬顾问"
+  gacha_hutao_events.1.desc: "「哎呀呀？本来以为这次跨界业务拓展又要迷路了，没想到直接落地到了客户……啊不，君主的面前！\n\n初次见面，我是胡桃，璃月往生堂的堂主。\n\n我看您这儿……啧啧，煞气很重呀。\n\n边境战火连天，宫廷暗流涌动，这可是大生意……呃不对，是大危机的前兆！\n\n虽然我平时只负责送人最后一程，但如果不把活着的人安顿好，死后可是会变成很难缠的客户呢。\n\n怎么样？要不要聘请我做您的特别顾问？\n\n现在签约，以后您的国葬我给打八折！\n\n——开玩笑的啦，别摆出那么严肃的表情嘛！」"
+  gacha_hutao_events.1.a: "欢迎，胡堂主。"
+
+  gacha_hutao_events.2.title: "业务升级"
+  gacha_hutao_events.2.desc: "胡桃的业务范围扩大了，现在连敌人的身后事也一并承包了。\n\n「放心，往生堂的服务绝对专业！」"
+  gacha_hutao_events.2.a: "这也能算业务？"
+
+  gacha_hutao_events.4.title: "生死界碑"
+  gacha_hutao_events.4.desc: "「哟，大客户！……啊不，陛下。\n\n怎么又一个人坐在这儿发呆？是在担心边境的战事，还是在想百年之后谁来继承这偌大的基业？\n\n嘻嘻，在凡人眼里，这些确实是天大的烦恼。\n\n但我告诉您哦，我在往生堂看过太多了。\n\n无论是不可一世的将军，还是富可敌国的商贾，最后都只是一捧灰，装在一样大小的盒子里。\n\n所以呀，别太执着于『永恒』那种虚无缥缈的东西。\n\n尽情地燃烧吧，像那只火蝴蝶一样！\n\n把您的名字刻在历史的石碑上，把您的意志烧进这片土地里。\n\n至于剩下的……\n\n那些阴影里的鬼魅，那些未竟的遗憾，还有终将到来的告别……\n\n全都交给我。\n\n我是胡桃，往生堂第七十七代堂主。\n\n只要我还站在您的身后，这阴阳两界的规矩，就乱不了。\n\n好啦，发呆结束！走，我们去御花园吓唬一下那个新来的大臣！」"
+  gacha_hutao_events.4.a: "有你在，我就放心了。"
+
+  gacha_hutao_events.11.title: "不安的亡魂"
+  gacha_hutao_events.11.desc: "「最近战场上的风声不太对劲……有太多不想走的灵魂在哭呢。没办法，看来得举办一场大型法事了。别担心，交给我吧。如果不把逝者安抚好，生者的路也是走不远的。」"
+  gacha_hutao_events.11.a: "安息吧。"
+
+  gacha_hutao_events.12.title: "业火净罪"
+  gacha_hutao_events.12.desc: "「有时候，只有猛烈的火才能烧尽腐朽的业障。既然敌人执意破坏阴阳的平衡，那就让赤团的蝴蝶送他们一程吧。在那边排好队哦，往生堂不收插队的鬼！」"
+  gacha_hutao_events.12.a: "净化一切！"
+
+  gacha_hutao_events.13.title: "往生堂大酬宾"
+  gacha_hutao_events.13.desc: "「我看您的内阁大臣们个个印堂发黑，肯定是加班太累了！所以我给他们每人发了一张『买一送一』的优惠券……哎？他们怎么跑得比兔子还快？真是不懂行，这可是堂主的关怀呀！」"
+  gacha_hutao_events.13.a: "这关怀有点沉重……"
+
+  gacha_hutao_events.14.title: "生死观普及"
+  gacha_hutao_events.14.desc: "「我发现只要把我的诗印在传单上发出去，大家好像就没那么怕打仗了？『生如夏花，死如秋叶』……嗯，看来我也是个做宣传的天才嘛！要不要把这首诗刻在城门上？」"
+  gacha_hutao_events.14.a: "很有哲理。"
+
+  # === C3 剧情链：巷弄里的打油诗 ===
+  gacha_hutao_c3_title: "巷弄里的打油诗"
+  
+  # Scene 1：背后的凉意
+  gacha_hutao_c3_scene_1_desc: "处理完继承人与联姻的文件，你独自走在回寝宫路上。\n\n经过那棵传说吊死过前朝大臣的老槐树时，脖颈一阵凉意爬上来，像被某种非人之物盯着。\n\n风声里仿佛有人低声吟唱。"
+  gacha_hutao_c3_scene_1_opt_a: "猛地回头：谁在那里？！"
+  gacha_hutao_c3_scene_1_opt_skip: "跳过剧情"
+
+  # Scene 2：幽灵？
+  gacha_hutao_c3_scene_2_desc: "身后空无一人，只有一只白色小幽灵在视野边缘一闪而过。\n\n正疑惑时，头顶传来衣料摩擦声。\n\n？？？：「嘻嘻……大客户，您的警惕性退步了哦？」"
+  gacha_hutao_c3_scene_2_opt_a: "抬头看树：这个声音是……"
+
+  # Scene 3：倒挂的堂主
+  gacha_hutao_c3_scene_3_desc: "胡桃倒挂在树枝上，像只蝙蝠，梅花瞳在夜色中闪着诡秘的光，手里捏着那只试图逃跑的小幽灵。\n\n胡桃：「哟！晚上好呀！宫里阴气太重，我来义务大扫除。刚才那一下『透心凉』，提神吧？」"
+  gacha_hutao_c3_scene_3_opt_a: "扶额叹气：快下来，成何体统。"
+
+  # Scene 4：博弈（锁定路线）
+  gacha_hutao_c3_scene_4_desc: "她翻身落地，围着你转圈打量，像在审视病人。\n\n胡桃：「别板着脸嘛！在这死气沉沉的皇宫里，要是连我也正经起来，这儿可就真成『棺材瓤子』了！」"
+  gacha_hutao_c3_scene_4_opt_a: "配合表演：「哇！有鬼啊！！（夸张后退）」"
+  gacha_hutao_c3_scene_4_opt_b: "反向质问：「半夜装神弄鬼，这是往生堂的推销？」"
+
+  # Scene 5：打油诗
+  gacha_hutao_c3_scene_5_desc_a: "胡桃笑弯了腰：「哈哈！陛下演技比说书人还生动！」\n\n她眼神闪过了然：「能保持幽默感的人，平时一定把自己逼很紧吧？戴面具的人最会演戏。」"
+  gacha_hutao_c3_scene_5_desc_b: "胡桃一本正经摇手指：「误会！这是市场调研！」\n\n她眼神带怜悯：「连玩笑都要谈手段……您这根弦太紧了，会断的哦。」"
+  gacha_hutao_c3_scene_5_desc_common: "笑过后，她坐上朱红栏杆晃腿，对月念道：\n\n「高墙锁深院，公文堆成山。生时累如狗，死后谁买单？」\n胡桃：「啧，好湿好湿！」"
+  gacha_hutao_c3_scene_5_opt_a: "苦笑：话糙理不糙。"
+
+  # Scene 6：生死的辩证
+  gacha_hutao_c3_scene_6_desc: "胡桃侧头认真了些：「您每天操心这么多，还要担心几百年后的史书……不累吗？」\n她隔空点了点你紧皱的眉头。\n「在我老家，只有没活明白就死掉的『客户』才一直皱眉。您还没进棺材呢，怎么先染上死气了？」"
+  gacha_hutao_c3_scene_6_opt_a: "沉默。"
+
+  # Scene 7：看穿（反转锁定）
+  gacha_hutao_c3_scene_7_desc_a: "胡桃叹气收起嬉笑：「刚才陪我演戏时，你在想气氛别僵吧？你总照顾所有人的情绪，安排退路，唯独忘了自己。你怕你倒下后，一切崩塌，对吧？」"
+  gacha_hutao_c3_scene_7_desc_b: "胡桃摇头：「质问我的时候，你在想明早早朝不能浪费时间吧？你把一切当任务、当表格。若明天是末日，你还要在表格上打钩吗？」"
+  gacha_hutao_c3_scene_7_opt_a: "注视着她：她看穿了。"
+
+  # Scene 8：梅花
+  gacha_hutao_c3_scene_8_desc: "她从袖子里掏出一枝红梅递来。\n\n胡桃：「梅花为什么在最冷时开？因为只有万物凋零时，生命燃烧的样子才最动人。就像您一样。」"
+  gacha_hutao_c3_scene_8_opt_a: "接过梅花。"
+
+  # Scene 9：结局 A/B
+  gacha_hutao_c3_scene_9_desc_a: "胡桃帽子按在胸前，庄重又温柔，身后仿佛有幽蝶飞舞。\n\n「既然你放不下，那本堂主就给你承诺：放心去烧、去征服、去犯错。烧剩的灰烬、阴影里的遗憾、你最担心的身后事——我替你打扫。只要我在，阴阳规矩就乱不了！」"
+  gacha_hutao_c3_scene_9_opt_a: "谢谢你，堂主。"
+
+  gacha_hutao_c3_scene_9_desc_b: "胡桃拉着你向御花园深处跑，裙摆飞扬。\n\n「大道理讲完了！现在是治疗时间！别管奏折了，月色这么好，不拿来捉迷藏是浪费生命！」\n「抓紧哦！枯井旁有条密道通御膳房……去偷点心吃！」\n她的笑声点燃了久违的少年气。"
+  gacha_hutao_c3_scene_9_opt_b: "舍命陪君子！"

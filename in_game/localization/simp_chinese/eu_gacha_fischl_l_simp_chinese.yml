@@ -1,0 +1,139 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 菲谢尔 (Fischl)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_fischl: "菲谢尔"
+  gacha_last_name_fischl: "幽夜"
+
+  # === 特质 (Traits) ===
+  gacha_fischl_origin_trait: "幽夜的窥视"
+  desc_gacha_fischl_origin_trait: "菲谢尔：「此世的阴影中充满了虫豸的低语。但在本皇女的『断罪之眼』下，邻国的诡计如同白纸般苍白！没有什么能逃过幽夜的凝视！」\n奥兹：「小姐的意思是，我会负责侦查工作。这片大陆的间谍网似乎很薄弱，交给我去刺探情报吧。」"
+
+  gacha_fischl_awakened_trait: "断罪雷影之弓"
+  desc_gacha_fischl_awakened_trait: "菲谢尔：「降下裁决之时已到！令那轰鸣的雷火（指火炮）响彻天际吧！那些愚蠢的敌军，终将在皇女的威光下化为劫灰！」\n奥兹：「小姐觉得您的炮兵方阵很有气势。我会协助校准弹道，减少误伤和损耗。」"
+
+  gacha_fischl_transcended_trait: "净土的降临者"
+  desc_gacha_fischl_transcended_trait: "菲谢尔：「哪怕身处异邦，皇女的高贵亦无法掩盖。看着吧，此地的臣民终将臣服于幽夜的法则，为我的降临献上赞歌！」\n奥兹：「小姐会努力学习这里的礼仪。不过……她这种自信的气场，似乎意外地很能镇住场面呢。」"
+
+  # 命座进阶 Traits
+  gacha_fischl_c2_trait: "极夜的真视界"
+  desc_gacha_fischl_c2_trait: "菲谢尔：「看啊，那伪善的盟约上缠绕着背叛的黑气！这群凡人的把戏，在本皇女眼中如同小丑的闹剧。」\n奥兹：「小姐发现那个邻国的大使在撒谎。另外，我们在他们的宫廷里安插了眼线……小姐说那是『命运的伏笔』。」"
+
+  gacha_fischl_c4_trait: "皇女的幻梦庭"
+  desc_gacha_fischl_c4_trait: "菲谢尔：「这就是『皇女的幻梦』！现实的边界已然破碎，让敌人在无尽的迷宫中哀嚎，被漆黑的箭雨（火炮）吞噬吧！」\n奥兹：「小姐利用地形布置了伏击圈。在这片战场上，她编写的剧本……似乎真的变成了现实。」"
+
+  gacha_fischl_c6_trait: "永夜之主"
+  desc_gacha_fischl_c6_trait: "菲谢尔：「不必再寻找归途了，奥兹。我看清楚了，这片大地……这片在此刻属于我们的疆域，正是新的『幽夜净土』。而你……（看向玩家）即是与我共赏这永恒黑夜的『祝圣之王』。」\n奥兹：「……小姐这次没有让我翻译。我想，您听懂了。」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_fischl_modifier: "幽夜的加护"
+  STATIC_MODIFIER_DESC_gacha_fischl_modifier: "「欢唱吧，我的眷属！在此世的尽头，为高贵的皇女献上祝词！」"
+  gacha_fischl_modifier: "皇女之仪"
+  gacha_fischl_modifier_desc: "断罪皇女与其眷属的注视，让宫廷充满了神秘与威严的氛围。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_fischl_c0_modifier: "幻夜座·零命"
+  STATIC_MODIFIER_NAME_gacha_fischl_c1_modifier: "渡鸦的信使"
+  STATIC_MODIFIER_NAME_gacha_fischl_c2_modifier: "极夜之瞳"
+  STATIC_MODIFIER_NAME_gacha_fischl_c3_modifier: "皇女夜谭"
+  STATIC_MODIFIER_NAME_gacha_fischl_c4_modifier: "幻梦侵蚀"
+  STATIC_MODIFIER_NAME_gacha_fischl_c5_modifier: "宿命的仇敌"
+  STATIC_MODIFIER_NAME_gacha_fischl_c6_modifier: "永夜净土"
+  STATIC_MODIFIER_NAME_gacha_fischl_blessed_pact_modifier: "祝圣之盟"
+  STATIC_MODIFIER_DESC_gacha_fischl_blessed_pact_modifier: "皇女与祝圣之王共书的新篇章，暗羽与炮火同向。"
+  STATIC_MODIFIER_NAME_gacha_fischl_shelter_modifier: "避雨之所"
+  STATIC_MODIFIER_DESC_gacha_fischl_shelter_modifier: "那把伞下的温暖驱散了长夜与暴雨，现实本身成为最坚实的庇护。"
+
+  # 菲谢尔 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_fischl_country_modifier: "幽夜的窥视"
+  STATIC_MODIFIER_DESC_gacha_fischl_country_modifier: "奥兹振翅，间谍网扩张更快，外交官数量增加。"
+  STATIC_MODIFIER_NAME_gacha_fischl_c1_country_modifier: "断罪之眼"
+  STATIC_MODIFIER_DESC_gacha_fischl_c1_country_modifier: "增派情报官，外交触角再度延伸。"
+  STATIC_MODIFIER_NAME_gacha_fischl_c2_country_modifier: "极夜的真视界"
+  STATIC_MODIFIER_DESC_gacha_fischl_c2_country_modifier: "深夜监听，情报与内阁效率同步提升。"
+  STATIC_MODIFIER_NAME_gacha_fischl_c5_country_modifier: "宿敌猎手"
+  STATIC_MODIFIER_DESC_gacha_fischl_c5_country_modifier: "与宿敌周旋愈发得心应手，威信因此提升。"
+  STATIC_MODIFIER_NAME_gacha_fischl_c6_country_modifier: "永夜之主"
+  STATIC_MODIFIER_DESC_gacha_fischl_c6_country_modifier: "永夜庇佑，厌战渐消，声望每月提升。"
+
+  gacha_fischl_origin_trait_die_desc: "失去“幽夜窥视之眼”初始加成。"
+  gacha_fischl_awakened_trait_die_desc: "失去“断罪雷影之弓”职业加成。"
+  gacha_fischl_transcended_trait_die_desc: "失去“净土的降临者”统治者加成。"
+  gacha_fischl_c2_trait_die_desc: "失去菲谢尔 C2 进阶加成。"
+  gacha_fischl_c4_trait_die_desc: "失去菲谢尔 C4 进阶加成。"
+  gacha_fischl_c6_trait_die_desc: "失去菲谢尔 C6 终阶加成。"
+
+  # === 事件 (Events) ===
+  gacha_fischl_events.1.title: "断罪之皇女·菲谢尔 —— 降临此世的（伪）造物主"
+  gacha_fischl_events.1.desc: "「哼，因果的丝线终究还是纠缠在了一起吗？\n\n欢呼吧！本皇女跨越了三千世界的狭间，顺应命运的『召唤』，降临于此荒芜的位面！\n\n这片疆域……嗯，尚算辽阔，勉强能作为『幽夜净土』在现世的行宫。\n\n既然你献上了祭品，我也将赐予你祝圣的荣光。\n\n不管是窥探列强的阴谋，还是降下裁断的雷霆，皆在本皇女的一念之间！\n\n……奥兹，还不快向这位庶民……不，向这位『盟友』致意？」\n\n（一只夜鸦凭空出现，优雅地鞠了一躬）\n\n「初次见面，我是奥兹华尔多·赫芙那梵茵斯。小姐的意思是：小姐很高兴能来到您的国家，虽然这里人生地不熟，但我们会尽力协助您的间谍与军事工作。请多关照。」"
+  gacha_fischl_events.1.a: "欢迎您，断罪皇女。"
+
+  gacha_fischl_events.2.title: "命运的宣告"
+  gacha_fischl_events.2.desc: "菲谢尔的力量得到了提升，紫色的雷电在她周围跳跃。\n\n「命运之轮再度转动！吾之星座于苍穹之上愈发璀璨！」\n\n奥兹：「小姐变强了。」"
+  gacha_fischl_events.2.a: "星座的力量！"
+
+  gacha_fischl_events.4.title: "此处即是幽夜净土"
+  gacha_fischl_events.4.desc: "「我是菲谢尔，断罪之皇女。\n\n曾经，我只能在书本的夹缝和幻想的庭院里，构建那个名为『幽夜净土』的世界。\n\n人们嘲笑我，父母不解我，只有奥兹陪着我。\n\n我以为那只是一个永远不会降临的梦。\n\n直到那天，你把我召唤到了这里。\n\n你没有嘲笑我的语言，反而将统率万军的权杖交到我手中；\n\n你没有质疑我的出身，反而让这片广袤的帝国成为了我真正的花园。\n\n看啊，这连绵的要塞，这臣服的诸国，这漫天的炮火与荣光……\n\n这一切，不正是《菲谢尔皇女夜谭》中终章的景象吗？\n\n谢谢你。\n\n是你将我的『谎言』，变成了坚不可摧的『现实』。\n\n从今往后，我也将守护你的现实。\n\n以断罪之皇女，不，以菲谢尔之名起誓：\n\n此世即净土，而你，便是我唯一的共治者。」"
+  gacha_fischl_events.4.a: "此乃天助我也！"
+
+  gacha_fischl_events.11.title: "看穿谎言之眼"
+  gacha_fischl_events.11.desc: "菲谢尔：「看啊，那伪善的盟约上缠绕着背叛的黑气！这群凡人的把戏，在本皇女眼中如同小丑的闹剧。」\n奥兹：「小姐发现那个邻国的大使在撒谎。另外，我们在他们的宫廷里安插了眼线……小姐说那是『命运的伏笔』。」"
+  gacha_fischl_events.11.a: "她的洞察力无与伦比。"
+
+  gacha_fischl_events.12.title: "幻想侵蚀现实"
+  gacha_fischl_events.12.desc: "菲谢尔：「这就是『皇女的幻梦』！现实的边界已然破碎，让敌人在无尽的迷宫中哀嚎，被漆黑的箭雨（火炮）吞噬吧！」\n奥兹：「小姐利用地形布置了伏击圈。在这片战场上，她编写的剧本……似乎真的变成了现实。」"
+  gacha_fischl_events.12.a: "战场即是她的舞台！"
+
+  gacha_fischl_events.13.title: "渡鸦的信使"
+  gacha_fischl_events.13.desc: "菲谢尔：「这只漆黑的羽翼，将穿梭于诸国的王庭，带去皇女的敕令与恩典！」\n奥兹：「其实就是我去送信。既然您这里缺人手，我就勉为其难多跑几趟吧。放心，我也懂几门外语。」"
+  gacha_fischl_events.13.a: "奥兹辛苦了。"
+
+  gacha_fischl_events.14.title: "宿命的仇敌"
+  gacha_fischl_events.14.desc: "菲谢尔：「命运的齿轮已经咬合，新的『逆飞之鸟』出现了！这世间又多了一个值得本皇女亲自裁决的对手！」\n奥兹：「简单来说，小姐觉得那个国家很碍眼。多设一个宿敌，能让您的国民更团结……呃，更有斗志。」"
+  gacha_fischl_events.14.a: "那就让他们见识皇女的威光！"
+
+  # === C3 好感事件：雨夜的《皇女夜谭》 ===
+  gacha_fischl_c3_title: "雨夜的《皇女夜谭》"
+  
+  # Scene 1：雨中的黑影
+  gacha_fischl_c3_scene_1_desc: "暴雨敲打着皇宫穹顶，发出沉闷轰鸣。\n\n回廊入口，浑身湿透的夜鸦奥兹正蹲在石柱上，羽毛凌乱。\n\n奥兹：「……啊，是您。如果您不想让明天的外交辞令变成一连串的喷嚏声……还是请您去劝劝她吧。」"
+  gacha_fischl_c3_scene_1_opt_a: "看向回廊深处"
+  gacha_fischl_c3_scene_1_opt_skip: "跳过剧情"
+
+  # Scene 2：失效的仪式
+  gacha_fischl_c3_scene_2_desc: "回廊尽头，菲谢尔站在雨幕边缘，双手高举向天，雨水顺着指尖流下，衣摆彻底湿透。\n\n菲谢尔：「——以此世之暗，断绝彼方之泪！退散吧，狂乱的元素之灵！」\n\n轰隆——雷声盖过了她的声音，雨势更大。她仍倔强地举着手，姿势在寒风中微微变形。"
+  gacha_fischl_c3_scene_2_opt_a: "走近几步：雨并没有停。"
+
+  # Scene 3：狼狈的皇女
+  gacha_fischl_c3_scene_3_desc: "脚步声惊动了她。她猛地回头，湿漉漉的刘海贴在额头，眼罩略微歪斜。\n\n菲谢尔挺直脊背、双手抱胸，试图遮挡湿透的衣领。\n\n菲谢尔：「谁？！……哼，原来是此世的盟友。你是来见证本皇女的『断罪仪式』的吗？再退后——阿嚏！！」"
+  gacha_fischl_c3_scene_3_opt_a: "停下脚步：这就是『断罪』的仪式？"
+
+  # Scene 4：抉择（锁定路线）
+  gacha_fischl_c3_scene_4_desc: "所谓“仪式”显然失败了，眼前只是个浑身湿透、瑟瑟发抖的女孩。你决定怎么做。"
+  gacha_fischl_c3_scene_4_opt_a: "配合演出：「因果被阻断了。需要我注入『魔力』吗？」"
+  gacha_fischl_c3_scene_4_opt_b: "撑开伞：「比起魔法，这把伞也许更管用。」"
+
+  # Scene 5：动摇（分支描述）
+  gacha_fischl_c3_scene_5_desc_a: "菲谢尔瞪大眼：「……魔力？你看得懂这高深的术式？」\n\n奥兹：「小姐，这位盟友似乎并不打算嘲笑您的失败。既然有了魔力支援，或许我们可以……战略性撤退？」"
+  gacha_fischl_c3_scene_5_desc_b: "菲谢尔嘴硬：「哼……原始的避雨工具。本皇女怎么可能需要这种……」但身体诚实地向伞挪了一步。\n\n奥兹：「小姐，就算为了我，请您接受这把伞吧。」"
+  gacha_fischl_c3_scene_5_desc_common: "菲谢尔呵斥奥兹，声音却沙哑。\n\n「……并不是仪式失效了。只是……这片天空不认识我。我看不到命运的丝线了……我不知道这场雨什么时候会停。」"
+  gacha_fischl_c3_scene_5_opt_a: "注视着她：她迷路了。"
+
+  # Scene 6：契约（按路线展示选项）
+  gacha_fischl_c3_scene_6_desc: "暴雨中，她所谓的“星象”和“因果”都沉默了。此刻需要一个留下的理由。"
+  gacha_fischl_c3_scene_6_opt_a: "赋予意义：「既然星象变了，那就重新书写。这里就是你的新『幽夜净土』。」"
+  gacha_fischl_c3_scene_6_opt_b: "轻唤真名：「雨会停的，艾咪。在那之前，我会一直为你撑伞。」"
+
+  # Scene 7：回应
+  gacha_fischl_c3_scene_7_desc_a: "菲谢尔猛地抬头，眼中燃起狂热的光亮，被认可后的兴奋驱散了寒意。\n\n奥兹收起翅膀后退一步，隐入阴影。"
+  gacha_fischl_c3_scene_7_desc_b: "听到真名，她浑身一震，脸颊瞬间涨红，手足无措。\n\n奥兹悄然退开，留给她一片安静。"
+  gacha_fischl_c3_scene_7_opt_a: "伸出手：来吧。"
+
+  # Scene 8：结局 A/B
+  gacha_fischl_c3_scene_8_desc_a: "菲谢尔重新戴正眼罩，单手叉腰握住你的手，气场点亮了雨夜。\n\n「好！既然你愿意献上这片疆域，那本皇女便赐予你『祝圣之王』的称号！」\n奥兹：「遵命，小姐。不过先去换身干衣服，否则『祝圣之王』会感冒。」\n菲谢尔：「啰、啰嗦！……还有……谢谢你相信我。」\n"
+  gacha_fischl_c3_scene_8_opt_a: "遵命，皇女殿下"
+
+  gacha_fischl_c3_scene_8_desc_b: "她没有反驳那个名字，低下头抓住你的衣角/伞柄，脸红到耳根。\n\n「……不许随便叫那个名字！那是……」\n奥兹：「小姐的意思是：她很高兴。以及，她想回宫殿吃点热的了。」\n菲谢尔：「奥兹！！！」"
+  gacha_fischl_c3_scene_8_opt_b: "走吧，回家"
