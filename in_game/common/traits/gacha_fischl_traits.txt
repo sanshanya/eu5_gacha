@@ -64,6 +64,6 @@ gacha_fischl_c6_trait = {
         monthly_legitimacy = 0.16
         monthly_prestige = 0.16
         monthly_war_exhaustion = -0.10
-        global_hostile_attrition = 2.0
+        global_hostile_attrition = 0.20
     }
 }

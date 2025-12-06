@@ -31,10 +31,11 @@ gacha_furina_c2_country_modifier = {
     legislative_efficiency = 0.25
 }
 
-# C1 专属机制：顾问 +1
+# C1 专属机制：外交官+1，艺术家席位+2
 gacha_furina_c1_country_modifier = {
     game_data = { category = country decaying = no }
     max_diplomats = 1
+    num_possible_artists = 2
 }
 
 # C4 国家级占位（主要属性在 Trait 中）
@@ -56,15 +57,11 @@ gacha_furina_c6_country_modifier = {
 # C3 结局奖励：首席共演者
 gacha_furina_co_star_modifier = {
     game_data = { category = country decaying = no }
-    monthly_prestige = 0.08
-    diplomatic_reputation = 1
-    improve_relation_impact = 0.10
+    num_possible_artists = 1
 }
 
 # C3 结局奖励：凡人的誓约
 gacha_furina_mortal_oath_modifier = {
     game_data = { category = country decaying = no }
-    monthly_legitimacy = 0.08
-    stability_cost = -0.05
-    monthly_war_exhaustion = -0.02
+    max_diplomats = 1
 }

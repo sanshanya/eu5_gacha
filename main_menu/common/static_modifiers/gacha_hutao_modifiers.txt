@@ -57,11 +57,8 @@ gacha_hutao_c6_country_modifier = {
 gacha_hutao_gravestone_modifier = {
     game_data = { category = country decaying = no }
     stability_cost = -0.05
-    monthly_war_exhaustion = -0.05
 }
 
 gacha_hutao_midnight_carnival_modifier = {
     game_data = { category = country decaying = no }
-    monthly_prestige = 0.05
-    land_morale = 0.05
 }

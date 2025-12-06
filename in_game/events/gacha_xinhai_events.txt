@@ -80,7 +80,10 @@ gacha_xinhai_events.30 = {
     option = {
         name = gacha_xinhai_c3_scene_1_opt_b
         # 跳过剧情，直接结束
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
+        if = {
+            limit = { exists = scope:gacha_c3_target_char }
+            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
+        }
     }
 
     after = { clear_saved_scope = gacha_c3_target_char }
@@ -231,7 +234,11 @@ gacha_xinhai_events.38 = {
             var:gacha_c3_ending = 1
         }
         name = gacha_xinhai_c3_scene_9_opt_a
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
+        if = {
+            limit = { exists = scope:gacha_c3_target_char }
+            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
+        }
+        add_country_modifier = { modifier = gacha_xinhai_rest_modifier years = -1 mode = add_and_extend }
     }
     
     # 结局 B
@@ -241,7 +248,10 @@ gacha_xinhai_events.38 = {
             var:gacha_c3_ending = 2
         }
         name = gacha_xinhai_c3_scene_9_opt_b
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
+        if = {
+            limit = { exists = scope:gacha_c3_target_char }
+            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
+        }
         add_country_modifier = { modifier = gacha_xinhai_secret_pact_modifier years = -1 }
     }
 

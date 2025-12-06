@@ -57,12 +57,10 @@ gacha_fischl_c6_country_modifier = {
 # C3 结局奖励
 gacha_fischl_blessed_pact_modifier = {
     game_data = { category = country decaying = no }
-    spy_network_construction = 0.20
-    army_artillery_power = 0.10
+    army_artillery_power = 0.05
 }
 
 gacha_fischl_shelter_modifier = {
     game_data = { category = country decaying = no }
-    monthly_war_exhaustion = -0.05
-    land_morale_recovery = 0.05
+    spy_network_construction = 0.10
 }

@@ -56,12 +56,8 @@ gacha_raiden_c6_country_modifier = {
 # C3 结局奖励
 gacha_raiden_reader_modifier = {
     game_data = { category = country decaying = no }
-    research_speed_modifier = 0.05
-    monthly_legitimacy = 0.05
 }
 
 gacha_raiden_favor_modifier = {
     game_data = { category = country decaying = no }
-    monthly_prestige = 0.05
-    global_construction_speed = 0.05
 }

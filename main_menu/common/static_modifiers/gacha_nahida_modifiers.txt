@@ -55,14 +55,9 @@ gacha_nahida_c6_country_modifier = {
 # C3 结局奖励
 gacha_nahida_omniscient_aid_modifier = {
     game_data = { category = country decaying = no }
-    research_speed_modifier = 0.10
-    country_cabinet_efficiency = 0.10
-    global_institution_growth_modifier = 0.10
+    research_speed_modifier = 0.05
 }
 
 gacha_nahida_stellar_bond_modifier = {
     game_data = { category = country decaying = no }
-    advisor_cost = -0.10
-    stability_cost = -0.05
-    global_institution_growth_modifier = 0.05
 }

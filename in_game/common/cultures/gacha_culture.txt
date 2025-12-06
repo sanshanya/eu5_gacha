@@ -2,7 +2,7 @@
 
 gacha_culture = {
 	# 默认使用汉语体系，靠自定义组隔离
-	language = wu_language
+	language = classical_chinese_language
 
 	color = map_gacha
 

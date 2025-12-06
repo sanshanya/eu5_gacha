@@ -58,14 +58,10 @@ gacha_klee_c6_country_modifier = {
 # C3 结局奖励
 gacha_klee_holy_gardener_modifier = {
     game_data = { category = country decaying = no }
-    siege_ability = 0.15
-    artillery_bonus_vs_fort = 0.10
-    global_construction_speed = 0.10
+    global_construction_speed = 0.05
 }
 
 gacha_klee_scorched_guardian_modifier = {
     game_data = { category = country decaying = no }
-    global_devastation_recovery = 0.30
-    monthly_war_exhaustion = -0.05
-    land_morale_recovery = 0.05
+    global_devastation_recovery = 0.20
 }

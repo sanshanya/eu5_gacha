@@ -4,8 +4,8 @@
     tax_per_pop = 0
     rival = 0
     alliance = 0
-
-    bank = no
+		revolt_court_language = common_language
+    bank = yes
     # Avoid auto-creating dynasties for gacha characters to prevent naming anomalies
-    characters_have_dynasty = no
+    characters_have_dynasty = never
 }

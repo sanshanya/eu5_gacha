@@ -26,10 +26,12 @@ gacha_furina_awakened_trait = {
 gacha_furina_transcended_trait = {
     category = ruler
     allow = { always = no }
-    # 外交声誉+2 · 改善关系+20%
+    # 艺术家起始几率/质量，改善关系提升
     modifier = {
-        diplomatic_reputation = 5
+        artist_monthly_start_chance = 0.15
         improve_relation_impact = 0.25
+        skill_of_new_artists = 0.20
+        global_monthly_art_start_chance = 0.15
     }
 }
 
@@ -59,10 +61,13 @@ gacha_furina_c4_trait = {
 gacha_furina_c6_trait = {
     category = ruler
     allow = { always = no }
-    # 全局动乱-3 · 行政容量+20% · 行政效率+5%
+    # 普世欢腾：外交声誉/改善关系与艺术繁荣
     modifier = {
         diplomatic_reputation = 10
         improve_relation_impact = 0.50
+        artist_monthly_start_chance = 0.30
+        skill_of_new_artists = 0.40
+        global_monthly_art_start_chance = 0.30
         monthly_prestige = 0.16
         monthly_legitimacy = 0.16
     }
