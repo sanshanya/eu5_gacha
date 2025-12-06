@@ -48,9 +48,9 @@ gacha_fischl_c4_trait = {
     allow = { always = no }
     # 炮兵伤害 +30% · 攻城效率 +20% · 陆军损耗 -20% · 敌军损耗 +10%
     modifier = {
-        army_artillery_power = 0.40
-        siege_ability = 0.40
-        land_unit_attrition = -0.30
+        army_artillery_power = 0.50
+        siege_ability = 0.20
+        land_unit_attrition = -0.40
         global_hostile_attrition = 0.10
     }
 }
@@ -63,6 +63,7 @@ gacha_fischl_c6_trait = {
     modifier = {
         monthly_legitimacy = 0.16
         monthly_prestige = 0.16
-        monthly_war_exhaustion = -0.05
+        monthly_war_exhaustion = -0.10
+        global_hostile_attrition = 2.0
     }
 }

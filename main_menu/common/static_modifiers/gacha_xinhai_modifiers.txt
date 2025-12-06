@@ -21,9 +21,8 @@ gacha_xinhai_c6_modifier = { game_data = { category = character decaying = no } 
 gacha_xinhai_country_modifier = {
     game_data = { category = country decaying = no }
     global_disease_resistance      = 0.20
-    global_devastation_recovery    = 0.06
-    global_estate_satisfaction_recovery = 0.02
-    monthly_war_exhaustion         = -0.03
+    global_devastation_recovery    = 0.40
+    global_estate_satisfaction_recovery = 0.05
 }
 
 # C2 光环升级 · 白夜国 · 圣土潮音
@@ -31,10 +30,8 @@ gacha_xinhai_country_modifier = {
 gacha_xinhai_c2_country_modifier = {
     game_data = { category = country decaying = no }
     global_disease_resistance           = 0.40
-    global_devastation_recovery         = 0.12
-    global_estate_satisfaction_recovery = 0.04
-    monthly_war_exhaustion              = -0.06
-    # TODO: estate loyalty change +0.04 (未找到对应键，确认后补充)
+    global_devastation_recovery         = 0.80
+    global_estate_satisfaction_recovery = 0.10
 }
 
 # C4 职业升级 · 渊下宫 · 抗狩龙王

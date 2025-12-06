@@ -19,25 +19,22 @@ gacha_klee_c6_modifier = { game_data = { category = character decaying = no } ga
 # C0 基础光环（陆军士气恢复+15%, 年度威望+1.00, 要塞防御-10%）
 gacha_klee_country_modifier = {
     game_data = { category = country decaying = no }
-    siege_ability = 0.20
-    land_morale_recovery = 0.02
-    monthly_prestige = 0.08
+    siege_ability = 0.15
+    land_morale_recovery = 0.05
 }
 
 # C2 光环升级（敌方要塞防御-20% -> Siege Ability +20%, 陆军士气+10%）
 gacha_klee_c2_country_modifier = {
     game_data = { category = country decaying = no }
-    siege_ability = 0.40
+    siege_ability = 0.30
     land_morale = 0.10
-    land_morale_recovery = 0.08
-    monthly_prestige = 0.08
-    # monthly_devastation = 0.05
+    land_morale_recovery = 0.10
 }
 
 # C1 专属机制：炮兵花费 -10%
 gacha_klee_c1_country_modifier = {
     game_data = { category = country decaying = no }
-    army_artillery_build_cost_modifier = -0.10
+    army_artillery_build_cost_modifier = -0.25
 }
 
 # C4 国家级占位（主要属性在 Trait 中）
@@ -49,10 +46,26 @@ gacha_klee_c4_country_modifier = {
 gacha_klee_c5_country_modifier = {
     game_data = { category = country decaying = no }
     army_artillery_power = 0.10
+    num_possible_rivals = 1
     # TODO: 免费炮兵团（无直接 modifier，可用事件/效果后续实现）
 }
 
 # C6 国家级机制（攻城能力+30%, 造核花费-20%, 省份荒废度+0.1）
 gacha_klee_c6_country_modifier = {
     game_data = { category = country decaying = no }
+}
+
+# C3 结局奖励
+gacha_klee_holy_gardener_modifier = {
+    game_data = { category = country decaying = no }
+    siege_ability = 0.15
+    artillery_bonus_vs_fort = 0.10
+    global_construction_speed = 0.10
+}
+
+gacha_klee_scorched_guardian_modifier = {
+    game_data = { category = country decaying = no }
+    global_devastation_recovery = 0.30
+    monthly_war_exhaustion = -0.05
+    land_morale_recovery = 0.05
 }

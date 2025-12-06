@@ -18,6 +18,7 @@ gacha_klee_awakened_trait = {
     modifier = {
         siege_ability = 0.40
         army_artillery_power = 0.35
+				artillery_bonus_vs_fort =0.40
     }
 }
 
@@ -27,9 +28,9 @@ gacha_klee_transcended_trait = {
     allow = { always = no }
     # AE影响-10% · 厌战度-0.05 · 外交声誉-2
     modifier = {
-        monthly_prestige = 0.05
-        monthly_war_exhaustion = -0.05
-        diplomatic_reputation = -2
+        monthly_prestige = 0.50
+        monthly_war_exhaustion = -0.50
+        diplomatic_reputation = -10
     }
 }
 
@@ -50,8 +51,8 @@ gacha_klee_c4_trait = {
     # 攻城能力+40% · 炮兵伤害+20% · 敌方损耗+20%
     modifier = {
         siege_ability = 0.80
-        army_artillery_power = 0.50
-        # TODO: 敌方损耗+20%（缺少 enemy attrition 键名）
+        army_artillery_power = 0.70
+        artillery_bonus_vs_fort = 0.80
     }
 }
 
@@ -62,7 +63,7 @@ gacha_klee_c6_trait = {
     # 攻城能力+30% · 造核花费-20% · 省份荒废度+0.1 (由 modifier 提供)
     modifier = {
         monthly_prestige = 0.1
-        monthly_war_exhaustion = -0.1
-        diplomatic_reputation = -10
+        monthly_war_exhaustion = -5
+        diplomatic_reputation = -66
     }
 }

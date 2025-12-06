@@ -63,117 +63,187 @@ gacha_furina_events.14 = {
 }
 
 # ==============================================================================
-# C3 剧情链：无人的观众席（3幕结构）
+# C3 剧情链：无人的安可曲（9幕结构）
 # ==============================================================================
 
-# 30. 第1幕：开场（深夜剧院偷吃蛋糕哭泣）
+# 30. 第1幕：散场之后
 gacha_furina_events.30 = {
     type = country_event
     title = gacha_furina_c3_title
     desc = gacha_furina_c3_scene_1_desc
     immediate = { event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate } }
     
-    # A. 调侃/轻松
     option = {
         name = gacha_furina_c3_scene_1_opt_a
-        set_variable = { name = gacha_furina_c3_path value = 1 }
         trigger_event_non_silently = { id = gacha_furina_events.31 }
     }
-    # B. 陪伴/分担（推荐路线）
+    # 跳过剧情，直接给予少量好感
     option = {
-        name = gacha_furina_c3_scene_1_opt_b
-        set_variable = { name = gacha_furina_c3_path value = 2 }
-        trigger_event_non_silently = { id = gacha_furina_events.32 }
-    }
-    # C. 直击灵魂
-    option = {
-        name = gacha_furina_c3_scene_1_opt_c
-        set_variable = { name = gacha_furina_c3_path value = 3 }
-        trigger_event_non_silently = { id = gacha_furina_events.31 }
+        name = gacha_furina_c3_scene_1_opt_skip
+        hidden_effect = {
+            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
+            clear_saved_scope = gacha_c3_target_char
+        }
     }
 }
 
-# 31. 路径 A/C 结局（中好感）
+# 31. 第2幕：独角戏的后台
 gacha_furina_events.31 = {
     type = country_event
     title = gacha_furina_c3_title
-    desc = {
-        first_valid = {
-            triggered_desc = {
-                trigger = { var:gacha_furina_c3_path = 1 }
-                desc = gacha_furina_c3_ending_a
-            }
-            triggered_desc = {
-                trigger = { var:gacha_furina_c3_path = 3 }
-                desc = gacha_furina_c3_ending_c
-            }
-        }
-    }
+    desc = gacha_furina_c3_scene_2_desc
     option = {
-        name = gacha_furina_c3_ending_opt
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
-    }
-    after = {
-        clear_saved_scope = gacha_c3_target_char
-        remove_variable = gacha_furina_c3_path
+        name = gacha_furina_c3_scene_2_opt_a
+        trigger_event_non_silently = { id = gacha_furina_events.32 }
     }
 }
 
-# 32. 路径 B - 第2幕：陪伴分蛋糕
+# 32. 第3幕：应激反应
 gacha_furina_events.32 = {
     type = country_event
     title = gacha_furina_c3_title
-    desc = gacha_furina_c3_scene_2_desc
-    
-    # B1. 宠溺
+    desc = gacha_furina_c3_scene_3_desc
     option = {
-        name = gacha_furina_c3_scene_2_opt_b1
-        set_variable = { name = gacha_furina_c3_ending value = 1 }
-        trigger_event_non_silently = { id = gacha_furina_events.33 }
-    }
-    # B2. 文艺/深情
-    option = {
-        name = gacha_furina_c3_scene_2_opt_b2
-        set_variable = { name = gacha_furina_c3_ending value = 2 }
+        name = gacha_furina_c3_scene_3_opt_a
         trigger_event_non_silently = { id = gacha_furina_events.33 }
     }
 }
 
-# 33. 路径 B - 第3幕：收尾（影响最终结局）
+# 33. 第4幕：即兴演出（分支）
 gacha_furina_events.33 = {
     type = country_event
     title = gacha_furina_c3_title
-    desc = {
-        first_valid = {
-            triggered_desc = {
-                trigger = { var:gacha_furina_c3_ending = 1 }
-                desc = gacha_furina_c3_scene_3_desc_b1
-            }
-            triggered_desc = {
-                trigger = { var:gacha_furina_c3_ending = 2 }
-                desc = gacha_furina_c3_scene_3_desc_b2
-            }
-        }
-    }
+    desc = gacha_furina_c3_scene_4_desc
     
     option = {
-        name = gacha_furina_c3_scene_3_opt
+        name = gacha_furina_c3_scene_4_opt_a
+        set_variable = { name = gacha_furina_c3_path value = 1 }
+        trigger_event_non_silently = { id = gacha_furina_events.34 }
+    }
+    option = {
+        name = gacha_furina_c3_scene_4_opt_b
+        set_variable = { name = gacha_furina_c3_path value = 2 }
         trigger_event_non_silently = { id = gacha_furina_events.34 }
     }
 }
 
-# 34. 路径 B - 终幕：首席观众（高好感结局）
+# 34. 第5幕：面具滑落
 gacha_furina_events.34 = {
     type = country_event
     title = gacha_furina_c3_title
     
-    desc = gacha_furina_c3_ending_b
-    
-    option = {
-        name = gacha_furina_c3_ending_opt_high
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { var:gacha_furina_c3_path = 1 }
+                desc = gacha_furina_c3_scene_5_desc_a
+            }
+            triggered_desc = {
+                trigger = { var:gacha_furina_c3_path = 2 }
+                desc = gacha_furina_c3_scene_5_desc_b
+            }
+        }
+        desc = gacha_furina_c3_scene_5_desc_common
     }
     
+    option = {
+        name = gacha_furina_c3_scene_5_opt_a
+        trigger_event_non_silently = { id = gacha_furina_events.35 }
+    }
+}
+
+# 35. 第6幕：谢幕后的迷茫
+gacha_furina_events.35 = {
+    type = country_event
+    title = gacha_furina_c3_title
+    desc = gacha_furina_c3_scene_6_desc
+    option = {
+        name = gacha_furina_c3_scene_6_opt_a
+        trigger_event_non_silently = { id = gacha_furina_events.36 }
+    }
+}
+
+# 36. 第7幕：新的剧本（分支）
+gacha_furina_events.36 = {
+    type = country_event
+    title = gacha_furina_c3_title
+    desc = gacha_furina_c3_scene_7_desc
+    
+    option = {
+        name = gacha_furina_c3_scene_7_opt_a
+        set_variable = { name = gacha_furina_c3_ending value = 1 }
+        trigger_event_non_silently = { id = gacha_furina_events.37 }
+    }
+    option = {
+        name = gacha_furina_c3_scene_7_opt_b
+        set_variable = { name = gacha_furina_c3_ending value = 2 }
+        trigger_event_non_silently = { id = gacha_furina_events.37 }
+    }
+}
+
+# 37. 第8幕：安可
+gacha_furina_events.37 = {
+    type = country_event
+    title = gacha_furina_c3_title
+    desc = gacha_furina_c3_scene_8_desc
+    option = {
+        name = gacha_furina_c3_scene_8_opt_a
+        trigger_event_non_silently = { id = gacha_furina_events.38 }
+    }
+}
+
+# 38. 第9幕：结局
+gacha_furina_events.38 = {
+    type = country_event
+    title = gacha_furina_c3_title
+
+    immediate = {
+        # Safety: ensure ending variable exists before any checks
+        if = {
+            limit = { NOT = { has_variable = gacha_furina_c3_ending } }
+            set_variable = { name = gacha_furina_c3_ending value = 0 }
+        }
+    }
+    
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_furina_c3_ending
+                    var:gacha_furina_c3_ending = 1
+                }
+                desc = gacha_furina_c3_scene_9_desc_a
+            }
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_furina_c3_ending
+                    var:gacha_furina_c3_ending = 2
+                }
+                desc = gacha_furina_c3_scene_9_desc_b
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            has_variable = gacha_furina_c3_ending
+            var:gacha_furina_c3_ending = 1
+        }
+        name = gacha_furina_c3_scene_9_opt_a
+        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+        add_country_modifier = { modifier = gacha_furina_co_star_modifier years = -1 mode = add_and_extend }
+    }
+    
+    option = {
+        trigger = {
+            has_variable = gacha_furina_c3_ending
+            var:gacha_furina_c3_ending = 2
+        }
+        name = gacha_furina_c3_scene_9_opt_b
+        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+        add_country_modifier = { modifier = gacha_furina_mortal_oath_modifier years = -1 mode = add_and_extend }
+    }
+
     after = {
         clear_saved_scope = gacha_c3_target_char
         remove_variable = gacha_furina_c3_path

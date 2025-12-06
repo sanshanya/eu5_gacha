@@ -16,8 +16,8 @@ gacha_keqing_awakened_trait = {
     allow = { always = no }
     # 陆军移动速度+20% · 训练度+5%
     modifier = {
-        army_movement_speed = 0.25
-        discipline = 0.1
+        army_movement_speed = 0.30
+        discipline = 0.05
     }
 }
 
@@ -28,7 +28,7 @@ gacha_keqing_transcended_trait = {
     # 理念花费-10% · 行政容量+10%
     modifier = {
         research_speed_modifier = 0.10
-        country_cabinet_efficiency = 0.10
+        country_cabinet_efficiency = 0.20
     }
 }
 
@@ -48,9 +48,8 @@ gacha_keqing_c4_trait = {
     allow = { always = no }
     # 移动速度+30% · 冲击伤害+15% · 增援速度+20%
     modifier = {
-        army_movement_speed = 0.45
-        army_initiative = 0.35
-        discipline = 0.2
+        army_movement_speed = 0.60
+        discipline = 0.10
         regiment_reinforcement_speed = 0.20
     }
 }
@@ -63,5 +62,6 @@ gacha_keqing_c6_trait = {
     modifier = {
         research_speed_modifier = 0.20
         country_cabinet_efficiency = 0.20
+        global_construction_speed = 0.15
     }
 }

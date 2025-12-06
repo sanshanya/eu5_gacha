@@ -14,10 +14,11 @@ gacha_furina_origin_trait = {
 gacha_furina_awakened_trait = {
     category = admiral
     allow = { always = no }
-    # 海军士气+15% · 海军耐久+10%
+    # 海军士气+20% · 速度+20% · 耐久+10%
     modifier = {
-        naval_morale_modifier = 0.25
-        naval_damage_taken = -0.20
+        naval_morale_modifier = 0.20
+        navy_movement_speed = 0.20
+        naval_damage_taken = -0.10
     }
 }
 
@@ -27,7 +28,7 @@ gacha_furina_transcended_trait = {
     allow = { always = no }
     # 外交声誉+2 · 改善关系+20%
     modifier = {
-        diplomatic_reputation = 2
+        diplomatic_reputation = 5
         improve_relation_impact = 0.25
     }
 }
@@ -48,9 +49,9 @@ gacha_furina_c4_trait = {
     allow = { always = no }
     # 海军士气+30% · 海军耐久+20% · 交战宽度+10%
     modifier = {
-        naval_morale_modifier = 0.45
-        naval_damage_taken = -0.35
-        navy_initiative = 0.20
+        naval_morale_modifier = 0.40
+        naval_damage_taken = -0.20
+        navy_movement_speed = 0.40
     }
 }
 
@@ -60,10 +61,9 @@ gacha_furina_c6_trait = {
     allow = { always = no }
     # 全局动乱-3 · 行政容量+20% · 行政效率+5%
     modifier = {
-        diplomatic_reputation = 4
+        diplomatic_reputation = 10
         improve_relation_impact = 0.50
-        monthly_war_exhaustion = -0.10
-        monthly_prestige = 0.10
+        monthly_prestige = 0.16
         monthly_legitimacy = 0.16
     }
 }

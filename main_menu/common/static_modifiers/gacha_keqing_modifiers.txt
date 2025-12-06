@@ -19,17 +19,16 @@ gacha_keqing_c6_modifier = { game_data = { category = character decaying = no } 
 # C0 基础光环（建造时间-15%, 发展度花费-10%）
 gacha_keqing_country_modifier = {
     game_data = { category = country decaying = no }
-    global_construction_speed = 0.15
-    global_monthly_development = 0.05
-    global_production_efficiency = 0.10
+    global_construction_speed = 0.10
+    global_monthly_food_modifier = 0.10
 }
 
 # C2 光环升级（建造时间-30%, 发展度花费-20%, 商品产出+10%）
 gacha_keqing_c2_country_modifier = {
     game_data = { category = country decaying = no }
-    global_construction_speed = 0.30
-    global_monthly_development = 0.10
-    global_production_efficiency = 0.20
+    global_construction_speed = 0.20
+    global_monthly_food_modifier = 0.20
+    global_production_efficiency = 0.05
 }
 
 # C1 专属机制：建筑槽 +1
@@ -46,11 +45,23 @@ gacha_keqing_c4_country_modifier = {
 # C5 专属机制：顾问花费 -25%
 gacha_keqing_c5_country_modifier = {
     game_data = { category = country decaying = no }
-    hire_advisor_cost_modifier = -0.25
-    # TODO: 顾问能力+1（缺少明确键，待查）
+    global_build_buildings_cost = -0.20
 }
 
 # C6 国家级机制（行政效率+10%, 全点数花费-10%, 最大绝对主义+10）
 gacha_keqing_c6_country_modifier = {
     game_data = { category = country decaying = no }
+}
+
+# C3 结局奖励
+gacha_keqing_aid_modifier = {
+    game_data = { category = country decaying = no }
+    global_construction_speed = 0.05
+    country_cabinet_efficiency = 0.05
+}
+
+gacha_keqing_gentle_expectation_modifier = {
+    game_data = { category = country decaying = no }
+    monthly_prestige = 0.05
+    global_production_efficiency = 0.05
 }

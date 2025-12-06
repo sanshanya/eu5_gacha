@@ -31,7 +31,7 @@ gacha_xinhai_transcended_trait = {
     # 全局叛乱 -0.10 · 战争耗损 -0.10 · 纪律 +0.10 内阁0.25
     modifier = {
         monthly_war_exhaustion = -0.10
-        legislative_efficiency = 0.25
+        legislative_efficiency = 0.35
         discipline           = 0.10
     }
 }
@@ -55,7 +55,8 @@ gacha_xinhai_c4_trait = {
         naval_morale_modifier = 0.40
         navy_movement_speed   = 0.40
         navy_repair_cost      = -0.40
-        naval_damage_taken    = -0.20
+        naval_damage_taken    = -0.10
+        naval_morale_damage   = 0.10
     }
 }
 
@@ -66,7 +67,7 @@ gacha_xinhai_c6_trait = {
     # 叛乱 -0.20 · 战争耗损 -0.20 · 纪律 +0.20
     modifier = {
         monthly_war_exhaustion = -0.20
-        legislative_efficiency = 0.50
+        legislative_efficiency = 0.70
         discipline           = 0.20
     }
 }

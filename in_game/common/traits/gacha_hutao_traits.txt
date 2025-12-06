@@ -16,8 +16,8 @@ gacha_hutao_awakened_trait = {
     allow = { always = no }
     # 陆军士气+10% · 敌军伤亡+10%
     modifier = {
-        land_morale_modifier = 0.20
-        army_initiative = 0.10
+        land_morale_modifier = 0.15
+        army_losses_in_war_cost_modifier = -0.15
     }
 }
 
@@ -49,7 +49,8 @@ gacha_hutao_c4_trait = {
     # 陆军士气+20% · 冲击伤害+20% · 火伤+10%
     modifier = {
         land_morale_modifier = 0.30
-        army_initiative = 0.30
+        army_losses_in_war_cost_modifier = -0.30
+        army_reinforce_cost = -0.10
     }
 }
 
@@ -61,5 +62,6 @@ gacha_hutao_c6_trait = {
     modifier = {
         monthly_prestige = 0.16
         monthly_legitimacy = 0.16
+        global_life_expectancy = 8
     }
 }

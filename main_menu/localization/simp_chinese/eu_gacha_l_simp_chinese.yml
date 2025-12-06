@@ -340,6 +340,10 @@
   STATIC_MODIFIER_NAME_gacha_raiden_c4_modifier: "梦想真说"
   STATIC_MODIFIER_NAME_gacha_raiden_c5_modifier: "统御威权"
   STATIC_MODIFIER_NAME_gacha_raiden_c6_modifier: "源流许愿"
+  STATIC_MODIFIER_NAME_gacha_raiden_reader_modifier: "影的书友"
+  STATIC_MODIFIER_DESC_gacha_raiden_reader_modifier: "你献上的异界典籍点燃了雷霆的好奇，知识与正统性在讨论中共振。"
+  STATIC_MODIFIER_NAME_gacha_raiden_favor_modifier: "影的垂青"
+  STATIC_MODIFIER_DESC_gacha_raiden_favor_modifier: "那杯甘味令神明放松，她特许你的后勤改良，威望与建设也随之提速。"
 
   # === 事件 (Events) ===
   gacha_raiden_events.1.title: "御建鸣神主尊·雷电将军 —— 降临此世的『永恒』"
@@ -370,36 +374,54 @@
   gacha_raiden_events.14.desc: "「疆域扩大了，但管理的效率不能降低。我已将部分权能分摊到了行政网络中。虽然凡人的智慧有限，但只要照着我的指令执行，就不会出错。」"
   gacha_raiden_events.14.a: "铁腕治国。"
 
-  # === C3 好感事件 ===
-  gacha_raiden_c3_title: "雨夜的甜点心"
+  # === C3 好感事件：雷雨夜的「后勤審查」 ===
+  gacha_raiden_c3_title: "雷雨夜的「后勤审查」"
   
-  # Scene 1: 开场
-  gacha_raiden_c3_scene_1_desc: "深夜的御书房，窗外雷雨交加。平日里像雕塑一样站在地图前的雷电将军，此刻却坐在窗边，眉头紧锁。\n\n她手里拿着一份……并不是战报，而是一份关于《异世界甜点制作方法》的报告？\n\n听到你的脚步声，她触电般地站起来，把报告藏在身后，眼神恢复了凛冽，但语速明显快了一拍。\n\n雷电将军（影）：「……还没睡吗？我只是……在审查后勤补给的清单。并没有在看什么奇怪的东西。」"
-  gacha_raiden_c3_scene_1_opt_a: "后勤清单里包括『团子牛奶』的配方吗？"
-  gacha_raiden_c3_scene_1_opt_b: "外面的雷声有点吵，是你心情不好吗？"
-  gacha_raiden_c3_scene_1_opt_c: "（默默递上一盘之前准备好的点心）"
+  # Scene 1：神威
+  gacha_raiden_c3_scene_1_desc: "紫色电弧在御书房外墙跳动，空气中满是臭氧。侍从们远远避开，只剩你顶着静电推开沉重大门。雷暴并非天灾，而是高位威压外溢。"
+  gacha_raiden_c3_scene_1_opt_a: "进入御书房：觐见殊胜之身。"
+  gacha_raiden_c3_scene_1_opt_skip: "跳过剧情（+少量好感）"
 
-  # Ending A (中好感)
-  gacha_raiden_c3_ending_a: "影（愣住，随即叹气，肩膀松了下来）：「……你的眼力，有时候敏锐得让人困扰。……既然被发现了，我也就不隐瞒了。这个世界的糖分补给，似乎很匮乏。」\n\n她默默走回窗边，紫色的眼眸凝视着雨夜，没有再说话。"
-  
-  # Ending B (中好感)
-  gacha_raiden_c3_ending_b: "影（看向窗外）：「不……雷声是『将军』在维持威光。我只是……觉得这雨声，太像那天的稻妻了。让人有点……静不下心。」\n\n她抱着双臂，像是在自我保护。雷雨继续敲打着窗棂。"
+  # Scene 2：静止的时间
+  gacha_raiden_c3_scene_2_desc: "将军悬浮离地半尺，雷光环绕，背对着雨夜。\n\n她的声音直接在脑海响起：\n\n「此世的雷元素……杂乱无章。不仅无序，而且微弱。」\n\n桌案上堆着被推开的兵书、账本、奏折。"
+  gacha_raiden_c3_scene_2_opt_a: "低头行礼：将军深夜至此，有何神谕？"
 
-  # Scene 2: 路径C展开（第2幕）
-  gacha_raiden_c3_scene_2_desc: "影（咬了一口点心，表情肉眼可见地幸福起来）：「……嗯。甜度适中。虽然比不上三彩团子，但也算……唔，别这么看着我。」"
-  gacha_raiden_c3_scene_2_opt_b1: "看你平时太紧绷了。就算是神，偶尔也要休息一下。"
-  gacha_raiden_c3_scene_2_opt_b2: "如果你喜欢，我可以把这个列入『国家战略储备』。"
+  # Scene 3：永恒的磨损
+  gacha_raiden_c3_scene_3_desc: "她缓缓转身，手指虚点那堆文件。\n\n「我阅览了你们呈上的所谓『消遣之物』。史书、兵法、哲学……尽是陈词滥调。若长久凝视这死水，连我也会被名为『无趣』的锈迹侵蚀。」\n\n「凡人君主，你的国度难道没有一点……具备『变数』价值的事物吗？」"
+  gacha_raiden_c3_scene_3_opt_a: "沉思：变数……"
 
-  # Scene 3: 收尾（第3幕）- 动态响应
-  gacha_raiden_c3_scene_3_desc_b1: "影（放下点心，神色复杂）：「休息……对我来说是奢侈品。只要我松懈一分，『磨损』就会趁虚而入。我不能……再失去任何东西了。」\n\n她的声音低了下去，紫色的眼眸中闪过一丝疲惫。\n\n影：「但是……如果只是偶尔的话，你愿意陪我吗？就像现在这样……」"
-  gacha_raiden_c3_scene_3_desc_b2: "影（忍不住轻笑）：「胡闹。哪有把甜点当国策的君王？……不过，如果只是作为你私人的一点『特殊开销』，我也许……会默许。」\n\n她的眼神变得柔和，嘴角带着一丝难得的笑意。\n\n影：「真是的……被你这么一说，我都不知道该用『将军』还是『影』的口吻来回应了。」"
-  gacha_raiden_c3_scene_3_opt: "放心吧。在这个国家，你不必独自背负『永恒』。想吃甜点就吃，想看风景就看，天塌下来，我们一起扛。"
+  # Scene 4：博弈（锁路线）
+  gacha_raiden_c3_scene_4_desc: "神明的质询面前，常规贡品无意义。你命侍从呈上特殊贡品，待人退去后推到影的面前。"
+  gacha_raiden_c3_scene_4_opt_a: "呈上小说：「民间异国读物，荒诞却记录凡人最大胆的狂想。」"
+  gacha_raiden_c3_scene_4_opt_b: "呈上甜点：「御膳房千次试制的甘味，只求一瞬满足。」"
 
-  # Ending C (高好感)
-  gacha_raiden_c3_ending_c: "她怔怔地看着你，紫色的眼眸中，那股凌厉的雷光慢慢散去，取而代之的是一种如同平静海面般的温柔。\n\n她轻轻伸出手，似乎想触碰你的脸，但最后只是虚握了一下。\n\n「……一起扛吗？」\n\n「真是狂妄的发言啊，凡人。」\n\n「但是……」\n\n「这份狂妄，我不讨厌。」\n\n（窗外的雷雨，不知何时停了。）"
+  # Scene 5：审视
+  gacha_raiden_c3_scene_5_desc_a: "影漫不经心读出冗长标题：「《转生异世界的我也要成为大公》？僭越。」\n\n她翻到第一页，眼神渐聚焦：「主角放弃神明加护，以凡人逆转因果？狂妄，倒也是观察样本。」"
+  gacha_raiden_c3_scene_5_desc_b: "她看着淋糖团子：「牛乳与糯米的调和？卖相或逊稻妻，但这股气息，与行军干粮不同。」\n\n她优雅却不迟疑地拿起一串。"
+  gacha_raiden_c3_scene_5_desc_common: "惊雷炸响，她连眼皮都不抬，注意力全落在手中的新意上。"
+  gacha_raiden_c3_scene_5_opt_a: "静立一旁。"
 
-  gacha_raiden_c3_ending_opt: "送她回房间"
-  gacha_raiden_c3_ending_opt_high: "永远欢迎你，影"
+  # Scene 6：静止
+  gacha_raiden_c3_scene_6_desc_a: "她坐下，雷场收敛。她捧书，眉头时舒时蹙，如同审阅一份重要战报。\n\n「……尚可。这股新意，让时间稍有实感。」"
+  gacha_raiden_c3_scene_6_desc_b: "她坐下，雷场收敛。她小口吃着团子，神情专注，宛如在进行精密的元素提纯。\n\n「……尚可。这股新意，让时间稍有实感。」"
+  gacha_raiden_c3_scene_6_desc_common: "\n\n她坐下，雷场收敛。"
+  gacha_raiden_c3_scene_6_opt_a: "等待。"
+
+  # Scene 7：裁断
+  gacha_raiden_c3_scene_7_desc_a: "「文辞粗浅，逻辑有漏洞，但『打破命运』的意志并非全无道理。凡人的狂想，偶尔也能触及真理边缘。」\n\n「此类记录异界『变数』的典籍，直接送来。我特许你呈报。」"
+  gacha_raiden_c3_scene_7_desc_b: "「口感绵软，甜度适中，能平复精神波动，利于冥想稳定。作为军需补给，合格。」\n\n「若有助于『精神安定』的物资，不必等我审查——唯有你可呈上。」"
+  gacha_raiden_c3_scene_7_opt_a: "低头致意：谨遵。"
+
+  # Scene 8：雨停了
+  gacha_raiden_c3_scene_8_desc: "窗外雨止，月光洒在铠甲上。她整理衣袖，影的柔和退去，将军接管。\n\n「休憩已过。乏味已缓解，各司其职吧。」"
+  gacha_raiden_c3_scene_8_opt_a: "退后一步：恭送将军。"
+
+  # Scene 9：结局
+  gacha_raiden_c3_scene_9_desc_a: "影手里仍握着那本小说。\n\n「此书，暂且征用。关于主角第五章的抉择，明日早朝后，你可来书房。我有些许异议，欲与你一辩。」"
+  gacha_raiden_c3_scene_9_opt_a: "遵命，将军。（获得【影的书友】）"
+
+  gacha_raiden_c3_scene_9_desc_b: "影走到门口，微侧目看桌上空食盒。\n\n「方才那种团子，若能将糯米与牛乳彻底融合，制成可饮用的流质，或更高效摄入。这是『最高优先级』的后勤改良指令。」"
+  gacha_raiden_c3_scene_9_opt_b: "谨遵神谕。（获得【影的垂青】）"
 
 
   # ============================================================
@@ -440,10 +462,14 @@
   STATIC_MODIFIER_NAME_gacha_fischl_c0_modifier: "幻夜座·零命"
   STATIC_MODIFIER_NAME_gacha_fischl_c1_modifier: "渡鸦的信使"
   STATIC_MODIFIER_NAME_gacha_fischl_c2_modifier: "极夜之瞳"
-  STATIC_MODIFIER_NAME_gacha_fischl_c3_modifier: "艾咪的黄昏"
+  STATIC_MODIFIER_NAME_gacha_fischl_c3_modifier: "皇女夜谭"
   STATIC_MODIFIER_NAME_gacha_fischl_c4_modifier: "幻梦侵蚀"
   STATIC_MODIFIER_NAME_gacha_fischl_c5_modifier: "宿命的仇敌"
   STATIC_MODIFIER_NAME_gacha_fischl_c6_modifier: "永夜净土"
+  STATIC_MODIFIER_NAME_gacha_fischl_blessed_pact_modifier: "祝圣之盟"
+  STATIC_MODIFIER_DESC_gacha_fischl_blessed_pact_modifier: "皇女与祝圣之王共书的新篇章，暗羽与炮火同向。"
+  STATIC_MODIFIER_NAME_gacha_fischl_shelter_modifier: "避雨之所"
+  STATIC_MODIFIER_DESC_gacha_fischl_shelter_modifier: "那把伞下的温暖驱散了长夜与暴雨，现实本身成为最坚实的庇护。"
 
   # === 事件 (Events) ===
   gacha_fischl_events.1.title: "断罪之皇女·菲谢尔 —— 降临此世的（伪）造物主"
@@ -474,38 +500,49 @@
   gacha_fischl_events.14.desc: "菲谢尔：「命运的齿轮已经咬合，新的『逆飞之鸟』出现了！这世间又多了一个值得本皇女亲自裁决的对手！」\n奥兹：「简单来说，小姐觉得那个国家很碍眼。多设一个宿敌，能让您的国民更团结……呃，更有斗志。」"
   gacha_fischl_events.14.a: "那就让他们见识皇女的威光！"
 
-  # === C3 好感事件 ===
-  gacha_fischl_c3_title: "雨夜的\"御花园\""
+  # === C3 好感事件：雨夜的《皇女夜谭》 ===
+  gacha_fischl_c3_title: "雨夜的《皇女夜谭》"
   
-  # Scene 1: 开场
-  gacha_fischl_c3_scene_1_desc: "暴雨倾盆。我经过皇家花园的回廊，看到菲谢尔独自一人缩在长椅上，奥兹不在身边。\n\n她手里捏着一本湿透的童话书，妆容花了一点，看起来不像皇女，像个迷路的小女孩。\n\n听到脚步声，她猛地抬头，慌乱地戴正眼罩，试图摆出高傲的姿势，但声音在发抖。\n\n菲谢尔：「哼……是、是你啊。本皇女只是在……在感应这天之泪的因果……咳咳……」"
-  gacha_fischl_c3_scene_1_opt_a: "下雨了，不回房间吗？奥兹去哪了？"
-  gacha_fischl_c3_scene_1_opt_b: "这就是『断罪之雷』的前兆吗？皇女殿下果然在施法。"
-  gacha_fischl_c3_scene_1_opt_c: "（脱下披风盖住她）别感冒了，艾咪。"
+  # Scene 1：雨中的黑影
+  gacha_fischl_c3_scene_1_desc: "暴雨敲打着皇宫穹顶，发出沉闷轰鸣。\n\n回廊入口，浑身湿透的夜鸦奥兹正蹲在石柱上，羽毛凌乱。\n\n奥兹：「……啊，是您。如果您不想让明天的外交辞令变成一连串的喷嚏声……还是请您去劝劝她吧。」"
+  gacha_fischl_c3_scene_1_opt_a: "看向回廊深处"
+  gacha_fischl_c3_scene_1_opt_skip: "跳过剧情（+少量好感）"
 
-  # Ending A (低好感)
-  gacha_fischl_c3_ending_a: "菲谢尔（眼神躲闪）：「奥兹……去侦查敌情了。皇女不需要伞，这雨水无法侵蚀我高贵的……阿嚏！」\n\n你把她送回了房间。她一直保持着皇女的姿态，但你能看到她紧握着那本湿透的书，没有松开。"
-  
-  # Ending C (低好感)
-  gacha_fischl_c3_ending_c: "菲谢尔（浑身僵硬）：「你……你怎么知道那个名字？！忘掉！快忘掉！我是菲谢尔！……呜……」\n\n她慌乱地跑开了，披风滑落在地上。你捡起披风，听到远处传来压抑的啜泣声。"
+  # Scene 2：失效的仪式
+  gacha_fischl_c3_scene_2_desc: "回廊尽头，菲谢尔站在雨幕边缘，双手高举向天，雨水顺着指尖流下，衣摆彻底湿透。\n\n菲谢尔：「——以此世之暗，断绝彼方之泪！退散吧，狂乱的元素之灵！」\n\n轰隆——雷声盖过了她的声音，雨势更大。她仍倔强地举着手，姿势在寒风中微微变形。"
+  gacha_fischl_c3_scene_2_opt_a: "走近几步：雨并没有停。"
 
-  # Scene 2: 路径B展开
-  gacha_fischl_c3_scene_2_desc: "菲谢尔：「……其实，雨有点冷。这个世界的雨，比我想象的要冷。」"
-  gacha_fischl_c3_scene_2_opt_b1: "冷是因为『幽夜』的结界还没张开。来，把手给我。"
-  gacha_fischl_c3_scene_2_opt_b2: "那就回宫殿吧，那里有壁炉。皇女的行宫不该这么寒酸。"
+  # Scene 3：狼狈的皇女
+  gacha_fischl_c3_scene_3_desc: "脚步声惊动了她。她猛地回头，湿漉漉的刘海贴在额头，眼罩略微歪斜。\n\n菲谢尔挺直脊背、双手抱胸，试图遮挡湿透的衣领。\n\n菲谢尔：「谁？！……哼，原来是此世的盟友。你是来见证本皇女的『断罪仪式』的吗？再退后——阿嚏！！」"
+  gacha_fischl_c3_scene_3_opt_a: "停下脚步：这就是『断罪』的仪式？"
 
-  # Scene 3: 收尾提示
-  gacha_fischl_c3_scene_3_desc: "只要我在，这整个帝国都是你的幽夜净土。没人敢嘲笑你，没人会让你淋雨。"
-  gacha_fischl_c3_scene_3_opt: "继续"
+  # Scene 4：抉择（锁定路线）
+  gacha_fischl_c3_scene_4_desc: "所谓“仪式”显然失败了，眼前只是个浑身湿透、瑟瑟发抖的女孩。你决定怎么做。"
+  gacha_fischl_c3_scene_4_opt_a: "配合演出：「因果被阻断了。需要我注入『魔力』吗？」"
+  gacha_fischl_c3_scene_4_opt_b: "撑开伞：「比起魔法，这把伞也许更管用。」"
 
-  # Ending B1 (高好感)
-  gacha_fischl_c3_ending_b1: "菲谢尔（看着你的手，犹豫）：「这是……契约的邀请吗？既然你如此诚心……（把冰凉的手放上来）……真的，暖和多了。」\n\n她怔怔地看着你，唯一的左眼中蓄满了泪水，但这次她没有用手遮挡。\n\n她突然扑进你怀里，不再是用那种咏叹调，而是用一个普通女孩颤抖的声音说道：\n\n「……嗯。我不走了。只要你不赶我走……我就一直是你的皇女。永远都是。」\n\n（奥兹在远处的树梢上看着，默默地抖了抖翅膀上的水，没有飞过来打扰。）"
+  # Scene 5：动摇（分支描述）
+  gacha_fischl_c3_scene_5_desc_a: "菲谢尔瞪大眼：「……魔力？你看得懂这高深的术式？」\n\n奥兹：「小姐，这位盟友似乎并不打算嘲笑您的失败。既然有了魔力支援，或许我们可以……战略性撤退？」"
+  gacha_fischl_c3_scene_5_desc_b: "菲谢尔嘴硬：「哼……原始的避雨工具。本皇女怎么可能需要这种……」但身体诚实地向伞挪了一步。\n\n奥兹：「小姐，就算为了我，请您接受这把伞吧。」"
+  gacha_fischl_c3_scene_5_desc_common: "菲谢尔呵斥奥兹，声音却沙哑。\n\n「……并不是仪式失效了。只是……这片天空不认识我。我看不到命运的丝线了……我不知道这场雨什么时候会停。」"
+  gacha_fischl_c3_scene_5_opt_a: "注视着她：她迷路了。"
 
-  # Ending B2 (高好感)
-  gacha_fischl_c3_ending_b2: "菲谢尔（小声）：「行宫……你说得对。在这个世界，我还有家……对吧？」\n\n她怔怔地看着你，唯一的左眼中蓄满了泪水，但这次她没有用手遮挡。\n\n她突然扑进你怀里，不再是用那种咏叹调，而是用一个普通女孩颤抖的声音说道：\n\n「……嗯。我不走了。只要你不赶我走……我就一直是你的皇女。永远都是。」\n\n（奥兹在远处的树梢上看着，默默地抖了抖翅膀上的水，没有飞过来打扰。）"
+  # Scene 6：契约（按路线展示选项）
+  gacha_fischl_c3_scene_6_desc: "暴雨中，她所谓的“星象”和“因果”都沉默了。此刻需要一个留下的理由。"
+  gacha_fischl_c3_scene_6_opt_a: "赋予意义：「既然星象变了，那就重新书写。这里就是你的新『幽夜净土』。」"
+  gacha_fischl_c3_scene_6_opt_b: "轻唤真名：「雨会停的，艾咪。在那之前，我会一直为你撑伞。」"
 
-  gacha_fischl_c3_ending_opt: "送她回房间"
-  gacha_fischl_c3_ending_opt_high: "永远欢迎你，我的皇女"
+  # Scene 7：回应
+  gacha_fischl_c3_scene_7_desc_a: "菲谢尔猛地抬头，眼中燃起狂热的光亮，被认可后的兴奋驱散了寒意。\n\n奥兹收起翅膀后退一步，隐入阴影。"
+  gacha_fischl_c3_scene_7_desc_b: "听到真名，她浑身一震，脸颊瞬间涨红，手足无措。\n\n奥兹悄然退开，留给她一片安静。"
+  gacha_fischl_c3_scene_7_opt_a: "伸出手：来吧。"
+
+  # Scene 8：结局 A/B
+  gacha_fischl_c3_scene_8_desc_a: "菲谢尔重新戴正眼罩，单手叉腰握住你的手，气场点亮了雨夜。\n\n「好！既然你愿意献上这片疆域，那本皇女便赐予你『祝圣之王』的称号！」\n奥兹：「遵命，小姐。不过先去换身干衣服，否则『祝圣之王』会感冒。」\n菲谢尔：「啰、啰嗦！……还有……谢谢你相信我。」"
+  gacha_fischl_c3_scene_8_opt_a: "遵命，皇女殿下（获得【祝圣之盟】）"
+
+  gacha_fischl_c3_scene_8_desc_b: "她没有反驳那个名字，低下头抓住你的衣角/伞柄，脸红到耳根。\n\n「……不许随便叫那个名字！那是……」\n奥兹：「小姐的意思是：她很高兴。以及，她想回宫殿吃点热的了。」\n菲谢尔：「奥兹！！！」"
+  gacha_fischl_c3_scene_8_opt_b: "走吧，回家（获得【避雨之所】）"
 
   # ============================================================
   # Character - 芙宁娜 (Furina) "退役影后的最后一支舞"
@@ -549,6 +586,10 @@
   STATIC_MODIFIER_NAME_gacha_furina_c4_modifier: "海洋交响"
   STATIC_MODIFIER_NAME_gacha_furina_c5_modifier: "万国来朝"
   STATIC_MODIFIER_NAME_gacha_furina_c6_modifier: "凡人之舞"
+  STATIC_MODIFIER_NAME_gacha_furina_co_star_modifier: "首席共演者"
+  STATIC_MODIFIER_DESC_gacha_furina_co_star_modifier: "你与芙宁娜共同执笔的新剧本开幕，外交声望与掌声一同回荡在宫廷。"
+  STATIC_MODIFIER_NAME_gacha_furina_mortal_oath_modifier: "凡人的誓约"
+  STATIC_MODIFIER_DESC_gacha_furina_mortal_oath_modifier: "卸下面具的誓约在夜色中达成，你的统治获得了朴素而稳固的信任。"
 
   # === 事件 (Events) ===
   gacha_furina_events.1.title: "永不谢幕的独舞者·芙宁娜 —— 仅仅是……芙宁娜"
@@ -579,36 +620,42 @@
   gacha_furina_events.14.desc: "「越来越多的国家派来了使节……哼，看来本芙宁娜大人的魅力即便在异世界也无法阻挡。多结交些盟友吧，毕竟在谢幕致辞时，观众越多越好，不是吗？」"
   gacha_furina_events.14.a: "天下宾服。"
 
-  # === C3 好感事件：无人的观众席 ===
-  gacha_furina_c3_title: "无人的观众席"
-  
-  # Scene 1: 开场（深夜剧院偷吃蛋糕哭泣）
-  gacha_furina_c3_scene_1_desc: "深夜的皇家歌剧院空无一人。我本来只是路过，却听到舞台上传来压抑的抽泣声。\n\n芙宁娜坐在舞台边缘，双腿悬空晃荡。她没有穿那套华丽的礼服，只是一身素净的睡裙。\n\n她手里拿着一块还没吃完的蛋糕，一边吃，一边掉眼泪。\n\n看到我走近，她慌乱地擦脸，试图摆出那副高傲的架子，但声音带着明显的鼻音。\n\n芙宁娜：「咳……这么晚了，庶民……不，你怎么在这里？我、我只是在……练习哭戏！对，哭戏！」"
-  gacha_furina_c3_scene_1_opt_a: "这出戏叫什么名字？《偷吃蛋糕的爱哭鬼》？"
-  gacha_furina_c3_scene_1_opt_b: "（默默坐到她身边）给我留一口吗？"
-  gacha_furina_c3_scene_1_opt_c: "这里没有观众，芙宁娜。你可以不用演了。"
+  # === C3 好感事件：无人的安可曲 ===
+  gacha_furina_c3_title: "无人的安可曲"
+  gacha_furina_c3_scene_1_desc: "为了庆祝外交盟约的缔结，宫廷举办了一场盛大的晚宴。此刻喧嚣散去，宾客尽欢而散。\n\n你路过空荡的主舞台，听见银质餐具碰撞瓷盘的轻响，伴着几声压抑的叹息。\n\n帷幕低垂，吊灯熄了一半，只有月光透过高窗洒在舞台上，显得空旷而寂寥。"
+  gacha_furina_c3_scene_1_opt_a: "循声望去"
+  gacha_furina_c3_scene_1_opt_skip: "跳过剧情（+少量好感）"
 
-  # Ending A (中好感 - 调侃)
-  gacha_furina_c3_ending_a: "芙宁娜（脸涨红，破涕为笑）：「你！……无礼！这可是枫丹廷限定的甜点！……而且，我才没有哭，是被奶油呛到了！」\n\n她气呼呼地把蛋糕塞进嘴里，背过身去不再看你。但你能看到她的肩膀在轻轻颤抖——不知道是笑还是哭。"
+  gacha_furina_c3_scene_2_desc: "聚光灯照不到的阴影里，芙宁娜踢掉高跟鞋，披着单薄的披肩坐在台阶上。\n\n她端着一块只剩一半的蛋糕，小口吃着，低声自语，复盘着今天的“演出”。\n\n芙宁娜：「……呼。今天的致辞……应该没有破绽吧？那个邻国的大使盯着我看的时候，我差点以为他发现了什么……」"
+  gacha_furina_c3_scene_2_opt_a: "靠近舞台"
 
-  # Ending C (中好感 - 直击)
-  gacha_furina_c3_ending_c: "芙宁娜（动作僵住，低头）：「……你这个人，真的很不会读空气欸。有时候，演戏是为了不让自己崩溃啊……」\n\n她把蛋糕放在一边，双手抱膝，像个受伤的小动物。你没有再说话，只是静静陪着她。"
+  gacha_furina_c3_scene_3_desc: "你的脚步声在剧院里回响，她像只受惊的猫猛地转身。\n\n叉子掉在盘子上，她努力抬起下巴摆出架子，嘴角还沾着奶油。\n\n芙宁娜：「谁？！……啊，是、是陛下？！咳！我只是在……审判这块蛋糕的味道！」"
+  gacha_furina_c3_scene_3_opt_a: "停下脚步：对一块蛋糕进行审判？"
 
-  # Scene 2: 路径B展开（陪伴分蛋糕）
-  gacha_furina_c3_scene_2_desc: "芙宁娜（愣住，把蛋糕递过来）：「……只有一口哦。这可是我排队很久才……算了，看在你工作的份上，分你一半。」\n\n她递过蛋糕，然后轻声问：「……甜吗？以前压力大的时候，只要吃一口甜的，就觉得还能再坚持一天。」"
-  gacha_furina_c3_scene_2_opt_b1: "很甜。以后想吃，我让御厨天天给你做。"
-  gacha_furina_c3_scene_2_opt_b2: "还是苦的。因为里面有你的眼泪。"
+  gacha_furina_c3_scene_4_desc: "她的防线薄得像纸，脸颊发红却还想维持“从容”。你决定如何接招。"
+  gacha_furina_c3_scene_4_opt_a: "配合演出：「对于这块蛋糕的罪行，大法官有何判决？」"
+  gacha_furina_c3_scene_4_opt_b: "温柔拆穿：「这里没有观众，芙宁娜。你不需要解释夜宵。」"
 
-  # Scene 3: 路径B - 第3幕（B1/B2分支响应）
-  gacha_furina_c3_scene_3_desc_b1: "芙宁娜（摇摇头）：「那样就没有期待感了。而且……现在好像不用那么辛苦地坚持了。」\n\n她抬起头看着你，眼中还有泪痕，但嘴角带着笑意。\n\n芙宁娜：「……有你在，好像每天都值得期待呢。」"
-  gacha_furina_c3_scene_3_desc_b2: "芙宁娜（怔怔地看着你）：「……你的台词功底什么时候这么好了？这可是……犯规的啊。」\n\n她轻笑着擦掉眼泪，把蛋糕分成两半。\n\n芙宁娜：「那就……一起吃苦的那一半吧。」"
-  gacha_furina_c3_scene_3_opt: "以前你是演给所有人看，很累吧。以后，如果不开心，就只演给我一个人看；如果累了，就做回你自己。"
+  gacha_furina_c3_scene_5_desc_a: "她愣了一下，随即“噗嗤”笑出声，用叉子指着蛋糕，语气恢复了那点傲娇的自信。\n\n芙宁娜：「哼……算你识相！本席宣判——这块蛋糕甜得过分，诱惑本大人在深夜进食，罪大恶极！必须立即执行『死刑』——也就是把它吃掉！」"
+  gacha_furina_c3_scene_5_desc_b: "她的动作彻底僵住，叉子在空中微颤，慢慢放下架子，低声喃喃。\n\n芙宁娜：「……非要说得这么直白吗？有时候，演戏是为了不让自己崩溃啊……」"
+  gacha_furina_c3_scene_5_desc_common: "她低头看着半块蛋糕，轻叹。\n\n芙宁娜：「刚才的庆功晚宴上，我一口都没吃。我怕一松懈，就露馅……就让他们发现，现在的我，其实什么都不是。」"
+  gacha_furina_c3_scene_5_opt_a: "坐到她身边：辛苦了。"
 
-  # Ending B (高好感 - 首席观众)
-  gacha_furina_c3_ending_b: "她沉默了很久，舞台上空荡荡的，只有月光洒在她身上。\n\n她轻轻靠在了你的肩膀上，像一只收起刺的小猫。\n\n「……做回自己，是很无趣的哦？\n\n会任性，会偷懒，还会因为没有好吃的而发脾气……\n\n即使是这样……\n\n你也愿意一直看着我吗？」\n\n（她没等你回答，就闭上了眼睛。）\n\n「那就……说定了。\n\n……我的首席观众。」"
+  gacha_furina_c3_scene_6_desc: "她侧头看你，眼神黯淡。\n\n芙宁娜：「在这个世界，明明没有预言了，也没有必须扮演的角色了。」\n芙宁娜：「可是灯光一亮，我还是会下意识戴上面具。」\n\n她抬眼，紫色异瞳里闪着五百年孤独的痕迹。\n\n芙宁娜：「如果我不演那个大明星……如果我只是会偷吃、会怯场、会犯蠢的芙宁娜……您还会需要我吗？」"
+  gacha_furina_c3_scene_6_opt_a: "直视她的眼睛"
 
-  gacha_furina_c3_ending_opt: "送她回房间"
-  gacha_furina_c3_ending_opt_high: "我会永远为你鼓掌"
+  gacha_furina_c3_scene_7_desc: "漫长的扮演让她忘了如何做自己。她害怕卸妆后失去所有的爱与关注。\n\n你作为她唯一的“首席观众”，伸出手，给出答案。"
+  gacha_furina_c3_scene_7_opt_a: "发出邀约：「把这当成一场永不谢幕的新剧目，我做你的首席共演者。」"
+  gacha_furina_c3_scene_7_opt_b: "给予肯定：「我不需要虚假的神明，只要此刻与你一起吃蛋糕的你。」"
+
+  gacha_furina_c3_scene_8_desc: "她先是怔住，随即眼角泛起释然的泪光，露出少女般清脆的笑声。\n\n芙宁娜：「……这种台词，比歌剧里还要犯规。」\n她把“罪大恶极”的蛋糕分给你一半，递到你嘴边。"
+  gacha_furina_c3_scene_8_opt_a: "张口接过：味道很甜。"
+
+  gacha_furina_c3_scene_9_desc_a: "芙宁娜站起身，向你伸出手，邀请在无人舞台上共舞。\n\n芙宁娜：「好吧！既然您诚心邀请，那本芙宁娜就勉为其难地继续闪耀吧！」\n芙宁娜：「这次，剧本由我们一起写。没有悲剧，没有牺牲，只有欢呼与掌声！」"
+  gacha_furina_c3_scene_9_opt_a: "大幕拉开（获得【首席共演者】）"
+
+  gacha_furina_c3_scene_9_desc_b: "芙宁娜靠在你肩上，闭眼满足地低声重复：「仅仅是芙宁娜，就够了吗？」\n\n芙宁娜：「不想再演了，不想再彩排明天的表情。我只想这样待着，什么都不想。」\n芙宁娜：「您可不许反悔哦……我的首席观众。」"
+  gacha_furina_c3_scene_9_opt_b: "永不反悔（获得【凡人的誓约】）"
 
 
 
@@ -654,6 +701,10 @@
   STATIC_MODIFIER_NAME_gacha_keqing_c4_modifier: "调律"
   STATIC_MODIFIER_NAME_gacha_keqing_c5_modifier: "移灯"
   STATIC_MODIFIER_NAME_gacha_keqing_c6_modifier: "廉贞"
+  STATIC_MODIFIER_NAME_gacha_keqing_aid_modifier: "玉衡的辅佐"
+  STATIC_MODIFIER_DESC_gacha_keqing_aid_modifier: "并肩的改革者互为剑鞘，政务效率与基建推进都找到最佳节奏。"
+  STATIC_MODIFIER_NAME_gacha_keqing_gentle_expectation_modifier: "少女的期许"
+  STATIC_MODIFIER_DESC_gacha_keqing_gentle_expectation_modifier: "那一晚的夜宵与约定，化作温柔的动力，声望与产出都添了一抹烟火气。"
 
   # === 事件 (Events) ===
   gacha_keqing_events.1.title: "璃月七星·玉衡 —— 此刻正是变革之时"
@@ -684,36 +735,53 @@
   gacha_keqing_events.14.desc: "「想要维持这种高强度的改革，光靠我们两个是不够的。我重新制定了人才选拔的标准，去除了那些繁文缛节。现在，让那些真正有才干的人才，以更合理的价格为我们效力吧。」"
   gacha_keqing_events.14.a: "唯才是举。"
 
-  # === C3 好感事件：灯火阑珊处的小差 ===
-  gacha_keqing_c3_title: "灯火阑珊处的小差"
+  # === C3 好感事件：灯火阑珊处的「小差」 ===
+  gacha_keqing_c3_title: "灯火阑珊处的「小差」"
   
-  # Scene 1: 开场（深夜加班肚子叫）
-  gacha_keqing_c3_scene_1_desc: "深夜，御书房的灯火通明。刻晴还在那张堆满地图的桌子前奋笔疾书，眉头紧锁，似乎在计算一项复杂的税收改革。\n\n她已经连续工作了六个小时，连姿势都没变过。\n\n我走近时，听到她肚子发出了一声虽然轻微、但在寂静夜里却异常清晰的……“咕~”。\n\n她手中的笔瞬间停住，僵硬地抬起头，脸颊飞速染红。\n\n刻晴：「那、那个……这是生理现象！我的精神还很亢奋，完全可以再工作三小时！」"
-  gacha_keqing_c3_scene_1_opt_a: "不愧是玉衡星，连肚子叫的声音都这么有效率。"
-  gacha_keqing_c3_scene_1_opt_b: "休息一下吧，机器空转是会磨损的。"
-  gacha_keqing_c3_scene_1_opt_c: "（从身后拿出一盘点心）尝尝这个？虽然不是正宗的……"
-
-  # Ending A (中好感 - 调侃)
-  gacha_keqing_c3_ending_a: "刻晴（羞愤地拍桌子）：「你！……这种时候就不要开玩笑了！忘掉！快给我忘掉！」\n\n她深吸一口气，强行把注意力拉回文件上，但你能看到她的耳根还是红的。"
-
-  # Ending B (中好感 - 理性)
-  gacha_keqing_c3_ending_b: "刻晴（叹气，揉太阳穴）：「道理我都懂。但这项改革明天就要推行，我不放心……再让我核对一遍数据。」\n\n她虽然嘴上这么说，但还是稍微放松了坐姿，显出一丝疲态。"
-
-  # Scene 2: 路径C展开（投食金丝虾球）
-  gacha_keqing_c3_scene_2_desc: "刻晴（鼻子动了动，眼神瞬间软化）：「这个味道……难道是……金丝虾球？」\n\n她尝了一口，眼睛发亮：「虽然面衣的口感稍微厚了一点，虾肉也不如璃月的鲜甜……但是，能在这种地方吃到家乡的味道……」\n\n她放慢了咀嚼的速度，似乎舍不得吃完。"
-  gacha_keqing_c3_scene_2_opt_c1: "看来我的『烹饪改革』初见成效？"
-  gacha_keqing_c3_scene_2_opt_c2: "看你吃得这么开心，我也觉得没那么累了。"
-
-  # Scene 3: 路径C - 第3幕（C1/C2分支响应）
-  gacha_keqing_c3_scene_3_desc_c1: "刻晴（轻笑）：「哼，勉强合格吧。作为奖励……这半个给你吃。这可是玉衡星的特别嘉奖哦。」\n\n她把剩下的一半虾球递到你嘴边，眼神里带着一丝狡黠。"
-  gacha_keqing_c3_scene_3_desc_c2: "刻晴（动作一顿，低头看着盘子）：「……你总是这样。明明你是君主，却还要照顾下属的情绪。……不过，我不讨厌这种感觉。」\n\n她的声音很轻，几乎被窗外的风声盖过。"
-  gacha_keqing_c3_scene_3_opt: "吃饱了吗？那我们约定，这盘虾球吃完后，立刻下班去散步。这是君主的命令。"
-
-  # Ending C (高好感 - 下班约定)
-  gacha_keqing_c3_ending_c: "她擦了擦嘴角，看着空空的盘子，又看了看窗外的月色，长舒一口气。\n\n那种紧绷的“玉衡星”气场消散了，取而代之的是邻家少女般的轻松。\n\n「既然是『命令』……那我也只能遵从了。\n\n不过，只有今晚哦。\n\n还有……\n\n下次，换我做给你吃。虽然我不擅长烹饪……但我会像对待政务一样，认真练习的。」"
-
-  gacha_keqing_c3_ending_opt: "送她回房间"
-  gacha_keqing_c3_ending_opt_high: "一言为定，我的玉衡"
+  # Scene 1：不灭的灯火
+  gacha_keqing_c3_scene_1_desc: "夜色已深，皇宫沉入梦乡，唯独御书房的灯火还亮着。\n\n这是刻晴连续通宵的第三晚。她要凭一己之力把商路、矿山、账目重新夯实。\n\n你手里提着御膳房刚做好的夜宵，热气透过木盒传到掌心。"
+  gacha_keqing_c3_scene_1_opt_a: "推开门：该让她停下来了。"
+  gacha_keqing_c3_scene_1_opt_skip: "跳过剧情（+少量好感）"
+  
+  # Scene 2：玉衡的背影
+  gacha_keqing_c3_scene_2_desc: "刻晴伏案疾书，桌上堆满卷轴和地图。\n\n刻晴：「……这条河道的预算再压低一成……旧贵族的账目有问题……明天召集户部重议。还有，让工匠们把图纸……嗯？」\n\n敏锐的她察觉到气息变化，笔锋一顿。"
+  gacha_keqing_c3_scene_2_opt_a: "走近书桌：是我。"
+  
+  # Scene 3：雷楔的停滞
+  gacha_keqing_c3_scene_3_desc: "她猛地转身，看清是你后，严肃瞬间化成惊讶，试图整理凌乱的衣袖。\n\n尴尬的沉默里，一声“咕~”打破肃穆。那张写满“严厉”“变革”的脸庞染上“窘迫”的红晕。"
+  gacha_keqing_c3_scene_3_opt_a: "忍住笑意：玉衡星也是凡人之躯。"
+  
+  # Scene 4：博弈（锁路线）
+  gacha_keqing_c3_scene_4_desc: "刻晴别过脸，双手抵着桌面想找回气场。\n\n刻晴：「这是正常反应！精力还很充沛，这些卷宗今晚必须处理完！」\n\n面对对自己苛刻到极点的她，你决定："
+  gacha_keqing_c3_scene_4_opt_a: "剑道劝说：「过刚易折。最好的剑，也需要回鞘养锋。」"
+  gacha_keqing_c3_scene_4_opt_b: "温情投食：「（打开食盒）什么公文卷宗，在金丝虾球面前都要让路。」"
+  
+  # Scene 5：入鞘
+  gacha_keqing_c3_scene_5_desc_a: "刻晴愣住，肩膀垮下。\n\n刻晴：「……回鞘养锋？……您说得对。若剑刃崩了口，便无法在大变局中开路。是我太急躁了。」\n\n她放下笔，眼神多了一份被理解的释然。"
+  gacha_keqing_c3_scene_5_desc_b: "刻晴闻香，心理防线崩塌。\n\n刻晴：「这时候拿这个来考验我……真是犯规……」\n\n眼神软化，身体诚实地向食盒探去。"
+  gacha_keqing_c3_scene_5_desc_common: "她坐着，看着点心，眼神柔和。\n\n刻晴：「其实在璃月赶进度，也常忘记吃饭。总觉得时间不够，用跑得最快来改变世界、让人们不再依赖神明。」"
+  gacha_keqing_c3_scene_5_opt_a: "递给她筷子：你也得有力气跑。"
+  
+  # Scene 6：习惯性动作
+  gacha_keqing_c3_scene_6_desc: "刻晴夹起虾球轻咬一口，嘴上品评，吃得却不慢。\n\n吃完第一个，她左手下意识去摸公文，又停住。\n\n她看了看筷子，再看你的眼神，慢慢把手缩回，规矩地放在膝上。\n\n刻晴：「……谢谢。这大概是我来到这里后，最『奢侈』的一次休息了。」"
+  gacha_keqing_c3_scene_6_opt_a: "看着她吃：慢点吃，没人和你抢。"
+  
+  # Scene 7：心声（锁定路线）
+  gacha_keqing_c3_scene_7_desc_a: "刻晴望向夜色，神情放松。\n\n刻晴：「陛下，我庆幸在这个世界遇到的是您。您不把我当异类，也不怕我的激进。你懂我的急切，也懂我的疲惫。有您并肩，人治时代终会到来。」\n\n她转身，眼神坚定明亮，对“同志”的认可。"
+  gacha_keqing_c3_scene_7_desc_b: "刻晴低头摩挲空食盒的提手。\n\n刻晴：「您总是这样，威严的君主，却记得这些微不足道的小事。在您面前，那副紧绷的架子端不住了。」\n\n刻晴：「下次……能不能教我做这个？我想亲手做给您吃。」"
+  gacha_keqing_c3_scene_7_opt_a: "在此约定。"
+  
+  # Scene 8：黎明
+  gacha_keqing_c3_scene_8_desc_a: "天色微亮。刻晴站起整理衣冠，嘴角带笑。\n\n刻晴：「休息结束。黎明要来了。有了这场『回鞘』，现在的我，感觉无坚不摧。」"
+  gacha_keqing_c3_scene_8_desc_b: "天色微亮。刻晴撑着下巴看着你，眼神温柔。\n\n刻晴：「时间过得真快。明明没做正事，只是吃了顿夜宵……但有您的心意，新的日子也没那么焦虑了。」"
+  gacha_keqing_c3_scene_8_opt_a: "准备离开……"
+  
+  # Scene 9：结局
+  gacha_keqing_c3_scene_9_desc_a: "刻晴站在战略地图前，意气风发指向省份。\n\n刻晴：「今天朝会我会提新方案。只要我们联手，就没有旧陈规破不了。走吧，搭档，去开创盛世！」"
+  gacha_keqing_c3_scene_9_opt_a: "出发！（获得【玉衡的辅佐】）"
+  
+  gacha_keqing_c3_scene_9_desc_b: "刻晴送你到门口，手指仍勾着空食盒。\n\n刻晴：「如果您不嫌弃，明晚还能带点来吗？作为交换，我提前两个小时做完……然后去城里逛逛？听说夜市卖会发光的纸灯笼……像故乡的霄灯。我想和您一起去看看，不谈公事，只是看看。」\n\n月光顺屋檐流下，在她期待的目光里，比宏伟蓝图更闪亮。"
+  gacha_keqing_c3_scene_9_opt_b: "一言为定。（获得【少女的期许】）"
 
 
   # ============================================================
@@ -758,6 +826,10 @@
   STATIC_MODIFIER_NAME_gacha_hutao_c4_modifier: "花好月圆"
   STATIC_MODIFIER_NAME_gacha_hutao_c5_modifier: "红尘客栈"
   STATIC_MODIFIER_NAME_gacha_hutao_c6_modifier: "幽蝶殊途"
+  STATIC_MODIFIER_NAME_gacha_hutao_gravestone_modifier: "生死界碑"
+  STATIC_MODIFIER_DESC_gacha_hutao_gravestone_modifier: "堂主的承诺像界碑一样立在阴阳之间，替你收束遗憾、平静后路。"
+  STATIC_MODIFIER_NAME_gacha_hutao_midnight_carnival_modifier: "月下狂欢"
+  STATIC_MODIFIER_DESC_gacha_hutao_midnight_carnival_modifier: "那一夜的放纵点燃了久违的少年气，你的威望与士气都染上了月光的火花。"
   STATIC_MODIFIER_NAME_gacha_hutao_c6_country_modifier: "蝶引政坛"
   STATIC_MODIFIER_DESC_gacha_hutao_c6_country_modifier: "国事如葬礼般精密，稳定度消耗大幅降低，叛乱之声沉寂。"
   STATIC_MODIFIER_NAME_gacha_hutao_country_modifier: "往生堂业务拓展"
@@ -821,6 +893,10 @@
   STATIC_MODIFIER_DESC_gacha_klee_c5_country_modifier: "炮兵威力强化，为爆炸达人助威。"
   STATIC_MODIFIER_NAME_gacha_klee_c6_country_modifier: "火花无限"
   STATIC_MODIFIER_DESC_gacha_klee_c6_country_modifier: "攻城神速，后勤施工提速，炮声不绝。"
+  STATIC_MODIFIER_NAME_gacha_klee_holy_gardener_modifier: "神圣园丁"
+  STATIC_MODIFIER_DESC_gacha_klee_holy_gardener_modifier: "以火为犁，攻城与施工齐头并进，烈焰开辟新生之土。"
+  STATIC_MODIFIER_NAME_gacha_klee_scorched_guardian_modifier: "焦土守护者"
+  STATIC_MODIFIER_DESC_gacha_klee_scorched_guardian_modifier: "灰烬中孕育复苏，厌战渐消，士气恢复，废墟也会再次开花。"
   # 纳西妲 - 国家修正
   STATIC_MODIFIER_NAME_gacha_nahida_country_modifier: "净善宫的笼中鸟"
   STATIC_MODIFIER_DESC_gacha_nahida_country_modifier: "思潮传播更快，科研效率稳步提升。"
@@ -830,6 +906,10 @@
   STATIC_MODIFIER_DESC_gacha_nahida_c5_country_modifier: "高效内阁与积累的学识，让政务运转如风。"
   STATIC_MODIFIER_NAME_gacha_nahida_c6_country_modifier: "智慧议厅"
   STATIC_MODIFIER_DESC_gacha_nahida_c6_country_modifier: "科研跃进，内阁效率与顾问成本全面优化。"
+  STATIC_MODIFIER_NAME_gacha_nahida_omniscient_aid_modifier: "全知者的辅佐"
+  STATIC_MODIFIER_DESC_gacha_nahida_omniscient_aid_modifier: "智慧引擎加速国家运转，科研、机构扩张与内阁效率同步提升。"
+  STATIC_MODIFIER_NAME_gacha_nahida_stellar_bond_modifier: "跨越星海的羁绊"
+  STATIC_MODIFIER_DESC_gacha_nahida_stellar_bond_modifier: "跨维度的温柔相伴，顾问成本与稳定支出双降，新思潮也更易发芽。"
 
 
   # === 事件 (Events) ===
@@ -861,34 +941,52 @@
   gacha_hutao_events.14.desc: "「我发现只要把我的诗印在传单上发出去，大家好像就没那么怕打仗了？『生如夏花，死如秋叶』……嗯，看来我也是个做宣传的天才嘛！要不要把这首诗刻在城门上？」"
   gacha_hutao_events.14.a: "很有哲理。"
 
-  # === C3 好感事件：月下捉迷藏 ===
-  gacha_hutao_c3_title: "月下捉迷藏"
+  # === C3 剧情链：巷弄里的打油诗 ===
+  gacha_hutao_c3_title: "巷弄里的打油诗"
   
-  # Scene 1: 开场（御花园捉迷藏）
-  gacha_hutao_c3_scene_1_desc: "深夜的御花园静悄悄的。我刚想穿过回廊，突然感觉脖子后面凉飕飕的。\n\n一只冰凉的手拍在我的左肩，但我回头却空无一人。\n\n「嘿嘿……猜猜我是谁？」\n\n那个古灵精怪的声音从右边的树上传来。胡桃倒挂在树枝上，荡来荡去，梅花瞳在月光下闪着狡黠的光。"
-  gacha_hutao_c3_scene_1_opt_a: "往生堂的业务都做到皇宫大内来了？"
-  gacha_hutao_c3_scene_1_opt_b: "哇！鬼啊！！"
-  gacha_hutao_c3_scene_1_opt_c: "快下来，小心摔着。"
+  # Scene 1：背后的凉意
+  gacha_hutao_c3_scene_1_desc: "处理完继承人与联姻的文件，你独自走在回寝宫路上。\n\n经过那棵传说吊死过前朝大臣的老槐树时，脖颈一阵凉意爬上来，像被某种非人之物盯着。\n\n风声里仿佛有人低声吟唱。"
+  gacha_hutao_c3_scene_1_opt_a: "猛地回头：谁在那里？！"
+  gacha_hutao_c3_scene_1_opt_skip: "跳过剧情（+少量好感）"
 
-  # Scene 2: 路径A/B展开（深入对话）
-  gacha_hutao_c3_scene_2_desc_a: "胡桃（轻巧落地，拍手）：「哎呀，被发现了！我看这皇宫阴气太重，正想贴两张符呢。不过既然您在这儿，阳气这就补足啦！」\n\n她凑近看了看你的脸，突然变得正经起来。\n\n胡桃：「今晚月色真好，适合吟诗，也适合……谈谈心。陛下，您每天管这么多人，不累吗？」"
-  gacha_hutao_c3_scene_2_desc_b: "胡桃（笑得前仰后合）：「哈哈哈哈！陛下您的反应太经典了！值得奖励一张满减券！看来我的吓人技术在异世界也还没生疏嘛。」\n\n她擦了擦笑出来的眼泪，从树上跳下来。\n\n胡桃：「今晚月色真好，适合吟诗，也适合……谈谈心。陛下，您每天管这么多人，不累吗？」"
-  gacha_hutao_c3_scene_2_opt_a1: "累啊。所以正想找个地方，把自己埋了算了。"
-  gacha_hutao_c3_scene_2_opt_b1: "有你在，累的时候也能笑出来。"
+  # Scene 2：幽灵？
+  gacha_hutao_c3_scene_2_desc: "身后空无一人，只有一只白色小幽灵在视野边缘一闪而过。\n\n正疑惑时，头顶传来衣料摩擦声。\n\n？？？：「嘻嘻……大客户，您的警惕性退步了哦？」"
+  gacha_hutao_c3_scene_2_opt_a: "抬头看树：这个声音是……"
 
-  # Ending C (低好感 - 老父亲)
-  gacha_hutao_c3_ending_c: "胡桃（撇撇嘴，翻身落地）：「切——没劲。您怎么跟钟离客卿一样，老气横秋的。这样可是会未老先衰的哦？」\n\n她摆摆手，一溜烟跑没影了，只留下一串银铃般的笑声。"
+  # Scene 3：倒挂的堂主
+  gacha_hutao_c3_scene_3_desc: "胡桃倒挂在树枝上，像只蝙蝠，梅花瞳在夜色中闪着诡秘的光，手里捏着那只试图逃跑的小幽灵。\n\n胡桃：「哟！晚上好呀！宫里阴气太重，我来义务大扫除。刚才那一下『透心凉』，提神吧？」"
+  gacha_hutao_c3_scene_3_opt_a: "扶额叹气：快下来，成何体统。"
 
-  # Scene 3: 路径A/B - 第3幕（A1/B1分支响应）
-  gacha_hutao_c3_scene_3_desc_a1: "胡桃（眼睛放光，凑近）：「哦？这业务我熟啊！喜欢什么样的风水？靠山的还是面海的？……嘻嘻，开玩笑的。看您这么累，我给您念首打油诗解解闷吧？」"
-  gacha_hutao_c3_scene_3_desc_b1: "胡桃（愣了一下，背着手转过身）：「哎哟……这算是调戏堂主吗？虽然我不讨厌这种直率……但我的出场费可是很贵的哦？得用一首好诗来抵！」"
-  gacha_hutao_c3_scene_3_opt: "这是……给我的？"
+  # Scene 4：博弈（锁定路线）
+  gacha_hutao_c3_scene_4_desc: "她翻身落地，围着你转圈打量，像在审视病人。\n\n胡桃：「别板着脸嘛！在这死气沉沉的皇宫里，要是连我也正经起来，这儿可就真成『棺材瓤子』了！」"
+  gacha_hutao_c3_scene_4_opt_a: "配合表演：「哇！有鬼啊！！（夸张后退）」"
+  gacha_hutao_c3_scene_4_opt_b: "反向质问：「半夜装神弄鬼，这是往生堂的推销？」"
 
-  # Ending High (高好感 - 护身符)
-  gacha_hutao_c3_ending_high: "胡桃：「好啦，不闹了。其实我今晚来，是看您御书房的灯一直亮着。」\n\n她收起了嬉皮笑脸，从袖子里掏出一朵还没干枯的梅花，递到你面前。\n\n「这是刚才在墙角捡的，开得正好，落了可惜。\n\n花开花落，自有定数。\n\n您也是，别把自己逼太紧了。\n\n如果累了，就来找我。\n\n我不谈国事，不聊战争。\n\n**我只会给您讲讲鬼故事，带您看看月亮，然后……向您保证，明天的太阳照常升起。**\n\n收下吧，这可是堂主的『护身符』哟！」"
+  # Scene 5：打油诗
+  gacha_hutao_c3_scene_5_desc_a: "胡桃笑弯了腰：「哈哈！陛下演技比说书人还生动！」\n\n她眼神闪过了然：「能保持幽默感的人，平时一定把自己逼很紧吧？戴面具的人最会演戏。」"
+  gacha_hutao_c3_scene_5_desc_b: "胡桃一本正经摇手指：「误会！这是市场调研！」\n\n她眼神带怜悯：「连玩笑都要谈手段……您这根弦太紧了，会断的哦。」"
+  gacha_hutao_c3_scene_5_desc_common: "笑过后，她坐上朱红栏杆晃腿，对月念道：\n\n「高墙锁深院，公文堆成山。生时累如狗，死后谁买单？」\n胡桃：「啧，好湿好湿！」"
+  gacha_hutao_c3_scene_5_opt_a: "苦笑：话糙理不糙。"
 
-  gacha_hutao_c3_ending_opt: "送她回房间"
-  gacha_hutao_c3_ending_opt_high: "谢谢你，胡堂主"
+  # Scene 6：生死的辩证
+  gacha_hutao_c3_scene_6_desc: "胡桃侧头认真了些：「您每天操心这么多，还要担心几百年后的史书……不累吗？」\n她隔空点了点你紧皱的眉头。\n「在我老家，只有没活明白就死掉的『客户』才一直皱眉。您还没进棺材呢，怎么先染上死气了？」"
+  gacha_hutao_c3_scene_6_opt_a: "沉默。"
+
+  # Scene 7：看穿（反转锁定）
+  gacha_hutao_c3_scene_7_desc_a: "胡桃叹气收起嬉笑：「刚才陪我演戏时，你在想气氛别僵吧？你总照顾所有人的情绪，安排退路，唯独忘了自己。你怕你倒下后，一切崩塌，对吧？」"
+  gacha_hutao_c3_scene_7_desc_b: "胡桃摇头：「质问我的时候，你在想明早早朝不能浪费时间吧？你把一切当任务、当表格。若明天是末日，你还要在表格上打钩吗？」"
+  gacha_hutao_c3_scene_7_opt_a: "注视着她：她看穿了。"
+
+  # Scene 8：梅花
+  gacha_hutao_c3_scene_8_desc: "她从袖子里掏出一枝红梅递来。\n\n胡桃：「梅花为什么在最冷时开？因为只有万物凋零时，生命燃烧的样子才最动人。就像您一样。」"
+  gacha_hutao_c3_scene_8_opt_a: "接过梅花。"
+
+  # Scene 9：结局 A/B
+  gacha_hutao_c3_scene_9_desc_a: "胡桃帽子按在胸前，庄重又温柔，身后仿佛有幽蝶飞舞。\n\n「既然你放不下，那本堂主就给你承诺：放心去烧、去征服、去犯错。烧剩的灰烬、阴影里的遗憾、你最担心的身后事——我替你打扫。只要我在，阴阳规矩就乱不了！」"
+  gacha_hutao_c3_scene_9_opt_a: "谢谢你，堂主。（获得【生死界碑】）"
+
+  gacha_hutao_c3_scene_9_desc_b: "胡桃拉着你向御花园深处跑，裙摆飞扬。\n\n「大道理讲完了！现在是治疗时间！别管奏折了，月色这么好，不拿来捉迷藏是浪费生命！」\n「抓紧哦！枯井旁有条密道通御膳房……去偷点心吃！」\n她的笑声点燃了久违的少年气。"
+  gacha_hutao_c3_scene_9_opt_b: "舍命陪君子！（获得【月下狂欢】）"
 
   # ============================================================
   # Character - 可莉 (Klee) "天真无邪的战争机器"
@@ -962,32 +1060,52 @@
   gacha_klee_events.14.desc: "「这是嘟嘟可的好朋友，超级——无敌——大炸弹！我把它装在车上了，专门送给你！有了它，就没有炸不开的门！出发，全速前进！」"
   gacha_klee_events.14.a: "全速前进！"
 
-  # === C3 好感事件：未遂的生存守则 ===
-  gacha_klee_c3_title: "未遂的生存守则"
+  # === C3 剧情链：焦土上的园丁 ===
+  gacha_klee_c3_title: "焦土上的园丁"
   
-  # Scene 1: 开场（深夜埋炸弹）
-  gacha_klee_c3_scene_1_desc: "深夜，皇宫花园的一角传来可疑的挖掘声。\n\n我提着灯走过去，发现可莉正撅着屁股，试图把一个还在冒火星的巨大炸弹埋进皇家花坛里。\n\n听到脚步声，她吓得一激灵，炸弹骨碌碌滚到我脚边。\n\n她立刻立正站好，双手背在身后，低着头，头上的呆毛无精打采地垂下来。\n\n可莉：「呜……被发现了。可莉、可莉只是想帮花松松土……」"
-  gacha_klee_c3_scene_1_opt_a: "（严肃）可莉，看着我的眼睛。这是松土吗？"
-  gacha_klee_c3_scene_1_opt_b: "（蹲下，捡起炸弹）引信还没拆呢，很危险的。"
-  gacha_klee_c3_scene_1_opt_c: "（叹气，把她抱起来）脸上都蹭上泥了，小花猫。"
+  # Scene 1
+  gacha_klee_c3_scene_1_desc: "漫长的围城战终于结束了。这是为了帝国统一大业必须付出的代价。\n\n你行走在刚刚被征服的土地上，空气中弥漫着刺鼻的焦糊味。脚下的每一寸土地都记录着“荒废度”的飙升，以及随之而来的行政力惩罚。\n\n这是一场必要的毁灭，但身为统治者，望着满目疮痍，你依然感到一丝沉重。\n\n直到你在那个巨大的弹坑中心，看到了一抹鲜艳得格格不入的红色。"
+  gacha_klee_c3_scene_1_opt_a: "走近那个身影。"
+  gacha_klee_c3_scene_1_opt_skip: "跳过剧情（可莉好感+10）"
 
-  # Scene 2: 路径A/B展开（深入对话）
-  gacha_klee_c3_scene_2_desc_a: "可莉（眼泪在眼眶里打转）：「呜……对不起！这是新做的炸弹，没地方放了……琴团长说过，不能在城里埋炸弹，可莉忘记了……」"
-  gacha_klee_c3_scene_2_desc_b: "可莉（惊讶地抬头）：「欸？您不生气吗？我还以为……还以为又要去禁闭室了……」\n\n可莉：「我……我其实很怕给您添麻烦。这里的大家都好严肃，只有您会陪可莉玩。」\n\n可莉：「如果我也像其他骑士那样乖乖的，您会不会更喜欢我一点？」"
-  gacha_klee_c3_scene_2_desc_c: "可莉（脸红扑扑的，把脸埋在你肩膀上）：「因为……我想给您一个惊喜嘛。只要埋在这里，如果坏人从后门进来，砰的一声！就飞上天了！」"
-  
-  gacha_klee_c3_scene_2_opt_b1: "不需要变乖。火花骑士如果不可爱了，那还是可莉吗？"
-  gacha_klee_c3_scene_2_opt_b2: "不用改。只要答应我，炸东西前先告诉我，好吗？"
-  gacha_klee_c3_ending_opt: "好了，回家吧。"
+  # Scene 2
+  gacha_klee_c3_scene_2_desc: "是可莉。那座阻挡了大军三个月的要塞，就是被她的火花最终瓦解的。\n\n此刻，这位让敌军闻风丧胆的“移动天灾”，正专注于脚下的焦土。\n\n她没有在庆祝胜利，也没有在寻找战利品。她的动作轻柔得像是在照顾刚出生的嘟嘟可，与周围肃杀的战场氛围形成了令人战栗的反差。"
+  gacha_klee_c3_scene_2_opt_a: "静静观察。"
 
-  # Scene 3: 路径B - 第3幕（B1/B2分支响应）
-  gacha_klee_c3_scene_3_desc_b1: "可莉（眼睛亮闪闪）：「真的吗？那……那我可以继续研究更大威力的炸弹吗？」"
-  gacha_klee_c3_scene_3_desc_b2: "可莉（拼命点头）：「嗯！嗯！可莉记住了！这是我们两个人的『生存守则』！」"
-  gacha_klee_c3_scene_3_opt: "炸弹没收，回家睡觉。"
+  # Scene 3
+  gacha_klee_c3_scene_3_desc: "可莉转过身，手里捧着一朵不知从哪里找来的、花瓣边缘有些枯黄的小野花。她的脸上沾着黑灰，但眼神清澈得可怕。\n\n可莉：「……啊，是来没收炸弹的吗？」\n\n她下意识地护住了身后的土坑，但随即又摇了摇头，松开了手。\n\n可莉：「不对，这里已经没有炸弹了。炸弹都已经变成烟花，飞到天上去了。」\n\n她指了指身后的焦土，那里刚刚被她埋进了一颗种子。\n\n可莉：「我在种花哦。琴团长说过，烧过的地方，明年的草会长得特别高。」"
+  gacha_klee_c3_scene_3_opt_a: "蹲下身：原来是在种花啊。"
 
-  # Ending High (高好感 - 回家)
-  gacha_klee_c3_ending_high: "她破涕为笑，紧紧拉住你的手，步子又变得蹦蹦跳跳起来。\n\n「好耶！我要听打败恶龙的故事！还有还有……」\n\n她回过头，对着那个未完成的土坑做了个鬼脸。\n\n「虽然炸弹没埋成，但可莉找到了比宝藏更重要的东西呢！」"
-  gacha_klee_c3_ending_opt_high: "晚安，可莉。"
+  # Scene 4（分歧点）
+  gacha_klee_c3_scene_4_desc: "可莉环视着周围的废墟，眼神中没有一丝恐惧，只有一种纯粹的、令人不安的期待。\n\n可莉：「这里以前房子太多了，把阳光都挡住了。大家挤在黑漆漆的巷子里，一点都不开心。」\n\n可莉：「现在好了！房子都没有了，阳光可以照到每一寸土地上！」\n\n她用那双无邪的眼睛看着你，说出了最残酷的真理：\n可莉：「只有把旧的东西全部炸飞，新的东西才有地方长出来呀。对吧？」"
+  gacha_klee_c3_scene_4_opt_a: "是的。腐朽的秩序需要被火净化。"
+  gacha_klee_c3_scene_4_opt_b: "但那些被炸飞的旧东西，也曾是谁的家。"
+
+  # Scene 5
+  gacha_klee_c3_scene_5_desc_a: "她开心地笑了，仿佛找到了知音。"
+  gacha_klee_c3_scene_5_desc_b: "她困惑地皱起眉，然后认真地反驳。"
+  gacha_klee_c3_scene_5_desc_common: "可莉：「可是……如果不炸掉的话，它们就会一直烂在那里哦？就像不流动的湖水会变臭。」\n\n可莉：「妈妈以前给我讲过一个故事。她说：在很久很久以前，有一片很大很大的森林……」\n\n可莉：「森林里的老树长得太高太密了，把太阳全部遮住，小树苗一个都长不出来。」\n\n可莉：「后来有一天，一道闪电劈下来——『轰隆』！——整片森林都烧起来了！第二年春天，黑黑的灰烬里长出了好多好多新芽！」\n\n她像是在背诵圣典一样，一字一句地复述着那句对孩子来说过于深奥的话：\n可莉：「妈妈说：『文明就像是一片过于茂密的森林。当古树遮蔽了所有的阳光，唯有烈火的暴虐，才能唤醒沉睡在腐殖质下的新芽。』」\n\n可莉：「虽然可莉不懂什么是『腐殖质』……但妈妈的意思一定是：坏掉的东西，就是还没有被炸过的养分！」\n\n可莉：「只要用火花『轰』的一下把它们变成灰，它们就能变成新房子的地基，变成花朵的肥料！这就是『新生的前奏』！」"
+  gacha_klee_c3_scene_5_opt_a: "新生的前奏？与我们的目标相比，这只是前奏。"
+
+  # Scene 6
+  gacha_klee_c3_scene_6_desc: "你看着她。\n\n在她眼中，那一座座被炸毁的要塞、被烧毁的图书馆，不过是阻挡光照的『老树』。那些在废墟中哀嚎的旧贵族，不过是抓紧泥土、等待被转化为『腐殖质』的枯根。\n\n在这个孩子的逻辑里，战争并不是政治的延续，而是生命力的延续。僵化的帝国需要呼吸，而她的火花，就是打破硬壳的锤子。爆炸，是为了更猛烈的生长。"
+  gacha_klee_c3_scene_6_opt_a: "看着她的眼睛：她比任何人都懂得“发展”的代价。"
+
+  # Scene 7（锁定）
+  gacha_klee_c3_scene_7_desc_a: "可莉：「你会怪我吗？把这里变得光秃秃的。」\n\n她有些忐忑地看着你，双手绞在一起。\n\n可莉：「但是只要等一等，真的只要等一等，这里会变得比以前更漂亮的！」"
+  gacha_klee_c3_scene_7_desc_b: "可莉：「你会怪我吗？把这里变得光秃秃的。」\n\n她有些忐忑地看着你，双手绞在一起。\n\n可莉：「但是只要等一等，真的只要等一等，这里会变得比以前更漂亮的！」"
+  gacha_klee_c3_scene_7_opt_a: "你是对的。我们不是在制造废墟，我们是在为未来耕地。"
+  gacha_klee_c3_scene_7_opt_b: "花会开的。在那之前，我会守护这片土地——连同它的伤疤一起。"
+
+  # Scene 8
+  gacha_klee_c3_scene_8_desc: "听到你的回答，可莉眼中的忐忑消失了。\n\n可莉：「嗯！耕地！可莉是全提瓦特……不，是全世界最厉害的园丁！」\n\n她站起身，张开双臂，仿佛要拥抱这片满目疮痍的大地。\n\n可莉：「只要我们一直走下去，把那些挡路的墙壁、坏掉的房子统统炸飞……」\n\n可莉：「总有一天，整个世界都会连成一片大大的花园！大家都可以自由地跑来跑去！」"
+  gacha_klee_c3_scene_8_opt_a: "牵起她的手：走吧，我们还有很多地要耕。"
+
+  # Scene 9
+  gacha_klee_c3_scene_9_desc_a: "你与可莉并肩站在废墟之上，眺望远方未征服的领土。她的书包里露出了更多炸弹的一角。\n\n你握住了她沾满黑灰的小手。\n\n你：「是的。为了那个大花园，我们需要更多的火花。」\n\n可莉用力地点头，背包里的蹦蹦炸弹似乎也在共鸣。\n\n可莉：「交给我吧！哪里有腐烂的味道，可莉就去哪里放烟花！」\n\n凡阻挡帝国发展者，皆为杂草。"
+  gacha_klee_c3_scene_9_desc_b: "你蹲下身，与那朵焦土上的小花平视，可莉在旁边为你擦去脸上的灰尘。\n\n你承认了战争的必要性，但也决定不让这份残酷侵蚀她的心。\n\n你：「这朵花很美。但记住，放火之后，一定要记得播种。」\n\n可莉似懂非懂地看着你，然后露出了灿烂的笑。\n\n可莉：「虽然不太明白……但只要和你在一起，就算是黑漆漆的焦土，我也觉得很温暖！」\n\n"
+  gacha_klee_c3_scene_9_opt_a: "一切为了新生。"
+  gacha_klee_c3_scene_9_opt_b: "回家吧，可莉。"
 
   # ============================================================
   # Character - 纳西妲 (Nahida) "被删除的时间线备份"
@@ -1060,29 +1178,48 @@
   gacha_nahida_events.14.desc: "「国家的疆域扩大了，**行政**的负担也变重了呢。不过没关系，我已经重新编译了官僚体系的逻辑。现在，哪怕是再遥远的边疆，也能听见智慧的声音。」"
   gacha_nahida_events.14.a: "高效治理！"
 
-  # === C3 好感事件：被遗忘者的夜晚 ===
-  gacha_nahida_c3_title: "被遗忘者的夜晚"
+  # === C3 剧情链：温室外的阳光 ===
+  gacha_nahida_c3_title: "温室外的阳光"
   
-  # Scene 1: 开场（图书馆夜话）
-  gacha_nahida_c3_scene_1_desc: "深夜的皇家图书馆。纳西妲坐在高高的书堆上，双脚悬空轻轻晃动。\n\n她没有看书，而是闭着眼睛，似乎在连接那个已经不存在的“虚空”。\n\n听到你的脚步声，她睁开眼，绿色的瞳孔里有一丝罕见的迷茫。\n\n纳西妲：「……我在尝试检索关于『树王』的数据。但是，无论我怎么回忆，那些细节都在变得模糊。在这个世界，连我的记忆也会慢慢风化吗？」"
-  gacha_nahida_c3_scene_1_opt_a: "别怕，我会帮你把它们写下来，写进史书里。"
-  gacha_nahida_c3_scene_1_opt_b: "如果太痛苦的话，忘记也没关系。我们创造新的记忆就好。"
-  gacha_nahida_c3_scene_1_opt_c: "（递过去一颗糖）思考太多会长不高的，吃点甜的吧。"
+  # Scene 1
+  gacha_nahida_c3_scene_1_desc: "纳西妲：「……逻辑不通。」\n\n深夜的皇家图书馆。纳西妲跪坐在地毯上，周围散落着历代君主的起居注和外交卷宗。烛火摇曳，她的影子投射在书架上。\n\n她抬眼看向你，手指依然在泛黄的羊皮纸上滑动，像是在解一道无解的算术题。\n\n纳西妲：「根据这三百年的史料记载，这个国家的『惯性』是扩张与掠夺。历代君主的决策模型，都严格遵循着地缘政治的贪婪算法。」\n\n纳西妲：「但是，自从您接手以来，这个模型……崩塌了。」"
+  gacha_nahida_c3_scene_1_opt_a: "静静听着。"
+  gacha_nahida_c3_scene_1_opt_skip: "跳过剧情（纳西妲好感+10）"
 
-  # Scene 2: 路径A/B展开（深入对话）
-  gacha_nahida_c3_scene_2_desc_a: "纳西妲（微微睁大眼）：「写进这个世界的史书吗？……这是个好主意。哪怕是异世界的文字，只要刻在石头上，就不会被世界树删除了吧。」\n\n纳西妲：「但是，如果有一天你也消失了，或者这个世界也重启了，这些记录还有意义吗？」"
-  gacha_nahida_c3_scene_2_desc_b: "纳西妲（摇摇头，眼神坚定）：「不……不能忘记。如果连痛苦都忘记了，那我也就不完整了。不过……创造新的记忆，这个提议我不讨厌。」\n\n纳西妲：「但是，如果有一天你也消失了，或者这个世界也重启了，这些记录还有意义吗？」"
-  gacha_nahida_c3_scene_2_desc_c: "纳西妲（鼓起脸颊）：「我可是五百岁了！……不过，枣椰蜜糖的味道，确实能缓解大脑过载。啊……张嘴。」"
-  
-  gacha_nahida_c3_scene_2_opt_a1: "只要文明还在，历史就会延续。这就是我建立这个帝国的意义。"
-  gacha_nahida_c3_scene_2_opt_a2: "至少在此刻，我记得。我是你唯一的『备份』。"
-  gacha_nahida_c3_ending_opt: "早点休息吧。"
+  # Scene 2
+  gacha_nahida_c3_scene_2_desc: "她站起身，拿起一份你刚刚批复的法令，眼神透着早已看穿一切的通透。\n\n纳西妲：「这种决策风格，不属于这具身体，也不属于这段历史。」\n\n纳西妲：「这就好像……有一个来自更高维度的『观测者』，在名为『历史』的棋盘外，落下了一枚本不该存在的棋子。」\n\n纳西妲：「这股意志不属于尤罗巴，不属于这个时代。它理智、仁慈，却又带着一种……俯瞰般的游离感。」"
+  gacha_nahida_c3_scene_2_opt_a: "不置可否。"
 
-  # Scene 3: 路径A - 第3幕（A1/A2分支响应）
-  gacha_nahida_c3_scene_3_desc_a1: "纳西妲（露出欣赏的笑）：「很有气势的回答呢。你是想做这个世界的『大慈树王』吗？呵呵，那我可要更努力地辅佐你了。」"
-  gacha_nahida_c3_scene_3_desc_a2: "纳西妲（怔住，跳下书堆）：「唯一的……备份。是啊，只要有一个人记得，『存在』就是真实的。那么，请保护好你的大脑哦，那里面现在装着神明的珍宝。」"
-  gacha_nahida_c3_scene_3_opt: "夜深了，该休息了。"
+  # Scene 3
+  gacha_nahida_c3_scene_3_desc: "纳西妲指着窗台上的一盆修剪整齐的盆景。\n\n纳西妲：「陛下，这就好比这株盆景。」\n\n纳西妲：「它的根系被花盆限制，它的枝叶被园丁修剪，它本该长成既定的样子。」\n\n纳西妲：「但是，如果有一束光，透过温室的玻璃，执意要照在一个奇怪的角度……」\n\n纳西妲：「那么植物就会违背园丁的剪刀，拼命向着那束光生长，长成完全不同的模样。」\n\n纳西妲：「您……就是那束光吗？」"
+  gacha_nahida_c3_scene_3_opt_a: "沉默。"
 
-  # Ending High (高好感 - 最初的贤者)
-  gacha_nahida_c3_ending_high: "她伸出小手，牵住了你的一根手指。\n\n「嗯。\n\n以前在净善宫，我只能在梦里看外面的世界。\n\n现在，外面的世界就在我眼前，你也在我眼前。\n\n这比任何梦境都要真实。\n\n……晚安，我最初的贤者。」"
-  gacha_nahida_c3_ending_opt_high: "晚安，纳西妲。"
+  # Scene 4（身份分支）
+  gacha_nahida_c3_scene_4_desc: "她的表情没有审视，只有纯粹的好奇和一丝隐约的期待。\n\n在这个由数据构成的温室里，她敏锐地捕捉到了你作为“降临者”的异常。"
+  gacha_nahida_c3_scene_4_opt_a: "我确实来自温室之外。我来这里，是为了改变这盆花的形状。"
+  gacha_nahida_c3_scene_4_opt_b: "朕只是做了身为君主该做的事。你多虑了。"
+
+  # Scene 5
+  gacha_nahida_c3_scene_5_desc_a: "纳西妲轻轻按住胸口，露出了一个释然的笑容。\n\n纳西妲：「果然……我的推导没有错。您不仅是光，还是那位手持剪刀的『新园丁』。」"
+  gacha_nahida_c3_scene_5_desc_b: "纳西妲轻轻按住胸口，露出释然的笑容。\n\n纳西妲：「呵呵，您真的很擅长隐藏呢。但是……逻辑可以伪造，温度是无法伪造的。」"
+  gacha_nahida_c3_scene_5_desc_common: "纳西妲：「虽然没有虚空终端的数据支持，但这种感觉……这种被『光』偏爱的温暖，我并不陌生。」\n\n纳西妲：「在很久以前，在另一个世界……我也曾被这样的一束光照亮过。」\n\n纳西妲：「那束光并不属于提瓦特，它来自星海之外，却唯独为了那只笼中的小鸟而停留。」"
+  gacha_nahida_c3_scene_5_opt_a: "笼中的小鸟……那是很久以前的事了。"
+
+  # Scene 6
+  gacha_nahida_c3_scene_6_desc: "纳西妲闭上眼，仿佛在回味一段珍贵的记忆。\n\n纳西妲：「我曾以为那是一场梦，梦醒了，光就消失了，我又变回了那个被遗忘的神。」\n\n纳西妲：「但现在看来……也许并不是光消失了，而是光换了一个照耀的方式。」\n\n纳西妲：「您不再是那个金发的旅行者，您变成了这个国家的意志，变成了这些决策背后的思考……」\n\n纳西妲：「但这种『灵魂的频率』，我是不会认错的。」"
+  gacha_nahida_c3_scene_6_opt_a: "伸出手：无论形态如何，我都在这里。"
+
+  # Scene 7（关系分支）
+  gacha_nahida_c3_scene_7_desc: "纳西妲向你伸出手，掌心向上，像是在邀请，又像是在确认。\n\n纳西妲：「既然您找到了我，甚至把我从那个已经不需要我的世界『备份』到了这里……」\n\n纳西妲：「那么，对于您来说，现在的我究竟是什么呢？」\n\n纳西妲：「是一个好用的智能核心？还是……一个想在任何世界都再次遇见的故人？」"
+  gacha_nahida_c3_scene_7_opt_a: "你是我的外置大脑，我们一起解开这个世界的谜题。"
+  gacha_nahida_c3_scene_7_opt_b: "你是我想在任何世界都再次遇见的人。"
+
+  # Scene 8
+  gacha_nahida_c3_scene_8_desc: "纳西妲握住了你的手。绿色的草元素光点在图书馆内微微浮现，与空气中的尘埃共舞。\n\n纳西妲：「……这就足够了。」\n\n纳西妲：「哪怕世界树的记录被篡改，哪怕躯壳和身份都发生了改变……」\n\n纳西妲：「只要这种灵魂层面的『纠缠』还在，我就能确定自己的坐标。」\n\n纳西妲：「这里不是异乡，只要有那束光在……这里就是新的净善宫。」"
+  gacha_nahida_c3_scene_8_opt_a: "这一次，没有笼子了。"
+
+  # Scene 9
+  gacha_nahida_c3_scene_9_desc_a: "纳西妲重新拿起羽毛笔，眼神锐利而自信，背景仿佛浮现数据流光效。\n\n纳西妲：「既然如此，那我们就开始工作吧，最初的贤者。」\n\n纳西妲：「我已经解析了这个世界的『底层逻辑』。虽然比虚空终端的算法简陋，但充满了随机的混沌美。」\n\n纳西妲：「行政容量的阈值、过度扩张的惩罚、外交关系的权重……我已经为您计算出了最优解。」\n\n纳西妲：「让我们来重写这段历史的『数据』吧。这一次，我们不会犯错。」"
+  gacha_nahida_c3_scene_9_desc_b: "纳西妲对你露出了最甜美的笑容，窗外初升的朝阳洒在她的发梢。\n\n纳西妲：「在这里，我不再害怕闭上眼睛。因为我知道，睁开眼的时候，你还会在。」\n\n纳西妲：「花车不再颠簸了。因为无论去往哪个世界，无论变成什么样子……」\n\n纳西妲：「那束光……那位贤者，永远不会把纳西妲一个人丢在黑暗里。」\n\n纳西妲向你伸出小指，仿佛在缔结一个跨越维度的契约。\n\n纳西妲：「晚安……还有，早安。我的……最初的贤者。」"
+  gacha_nahida_c3_scene_9_opt_a: "我们开始吧，布耶尔。"
+  gacha_nahida_c3_scene_9_opt_b: "早安，纳西妲。"

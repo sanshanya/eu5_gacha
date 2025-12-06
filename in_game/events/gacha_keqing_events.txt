@@ -63,120 +63,237 @@ gacha_keqing_events.14 = {
 }
 
 # ==============================================================================
-# C3 剧情链：灯火阑珊处的小差（金丝虾球）
+# C3 剧情链：灯火阑珊处的「小差」
 # ==============================================================================
 
-# 30. 第1幕：开场（深夜加班肚子叫）
+# 30. 第1幕：不灭的灯火（含跳过）
 gacha_keqing_events.30 = {
     type = country_event
     title = gacha_keqing_c3_title
     desc = gacha_keqing_c3_scene_1_desc
     immediate = { event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate } }
     
-    # A. 调侃
     option = {
         name = gacha_keqing_c3_scene_1_opt_a
-        set_variable = { name = gacha_keqing_c3_path value = 1 }
         trigger_event_non_silently = { id = gacha_keqing_events.31 }
     }
-    # B. 理性劝说
     option = {
-        name = gacha_keqing_c3_scene_1_opt_b
-        set_variable = { name = gacha_keqing_c3_path value = 2 }
-        trigger_event_non_silently = { id = gacha_keqing_events.31 }
+        name = gacha_keqing_c3_scene_1_opt_skip
+        hidden_effect = {
+            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
+            clear_saved_scope = gacha_c3_target_char
+        }
     }
-    # C. 投食（推荐路线）
+}
+
+# 31. 第2幕：玉衡的背影
+gacha_keqing_events.31 = {
+    type = country_event
+    title = gacha_keqing_c3_title
+    desc = gacha_keqing_c3_scene_2_desc
     option = {
-        name = gacha_keqing_c3_scene_1_opt_c
-        set_variable = { name = gacha_keqing_c3_path value = 3 }
+        name = gacha_keqing_c3_scene_2_opt_a
         trigger_event_non_silently = { id = gacha_keqing_events.32 }
     }
 }
 
-# 31. 路径 A/B 结局（中好感）
-gacha_keqing_events.31 = {
-    type = country_event
-    title = gacha_keqing_c3_title
-    desc = {
-        first_valid = {
-            triggered_desc = {
-                trigger = { var:gacha_keqing_c3_path = 1 }
-                desc = gacha_keqing_c3_ending_a
-            }
-            triggered_desc = {
-                trigger = { var:gacha_keqing_c3_path = 2 }
-                desc = gacha_keqing_c3_ending_b
-            }
-        }
-    }
-    option = {
-        name = gacha_keqing_c3_ending_opt
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
-    }
-    after = {
-        clear_saved_scope = gacha_c3_target_char
-        remove_variable = gacha_keqing_c3_path
-    }
-}
-
-# 32. 路径 C - 第2幕：品尝虾球
+# 32. 第3幕：雷楔的停滞
 gacha_keqing_events.32 = {
     type = country_event
     title = gacha_keqing_c3_title
-    desc = gacha_keqing_c3_scene_2_desc
-    
-    # C1. 邀功
+    desc = gacha_keqing_c3_scene_3_desc
     option = {
-        name = gacha_keqing_c3_scene_2_opt_c1
-        set_variable = { name = gacha_keqing_c3_ending value = 1 }
-        trigger_event_non_silently = { id = gacha_keqing_events.33 }
-    }
-    # C2. 温情
-    option = {
-        name = gacha_keqing_c3_scene_2_opt_c2
-        set_variable = { name = gacha_keqing_c3_ending value = 2 }
+        name = gacha_keqing_c3_scene_3_opt_a
         trigger_event_non_silently = { id = gacha_keqing_events.33 }
     }
 }
 
-# 33. 路径 C - 第3幕：收尾（影响最终结局）
+# 33. 第4幕：博弈（锁路线）
 gacha_keqing_events.33 = {
     type = country_event
     title = gacha_keqing_c3_title
-    desc = {
-        first_valid = {
-            triggered_desc = {
-                trigger = { var:gacha_keqing_c3_ending = 1 }
-                desc = gacha_keqing_c3_scene_3_desc_c1
-            }
-            triggered_desc = {
-                trigger = { var:gacha_keqing_c3_ending = 2 }
-                desc = gacha_keqing_c3_scene_3_desc_c2
-            }
-        }
-    }
+    desc = gacha_keqing_c3_scene_4_desc
     
     option = {
-        name = gacha_keqing_c3_scene_3_opt
+        name = gacha_keqing_c3_scene_4_opt_a
+        set_variable = { name = gacha_keqing_c3_path value = 1 } # 剑道·知己
+        trigger_event_non_silently = { id = gacha_keqing_events.34 }
+    }
+    option = {
+        name = gacha_keqing_c3_scene_4_opt_b
+        set_variable = { name = gacha_keqing_c3_path value = 2 } # 投食·家人
         trigger_event_non_silently = { id = gacha_keqing_events.34 }
     }
 }
 
-# 34. 路径 C - 终幕：下班约定（高好感结局）
+# 34. 第5幕：入鞘
 gacha_keqing_events.34 = {
     type = country_event
     title = gacha_keqing_c3_title
-    
-    desc = gacha_keqing_c3_ending_c
-    
-    option = {
-        name = gacha_keqing_c3_ending_opt_high
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+    immediate = {
+        if = {
+            limit = { NOT = { has_variable = gacha_keqing_c3_path } }
+            set_variable = { name = gacha_keqing_c3_path value = 0 }
+        }
     }
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_keqing_c3_path
+                    var:gacha_keqing_c3_path = 1
+                }
+                desc = gacha_keqing_c3_scene_5_desc_a
+            }
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_keqing_c3_path
+                    var:gacha_keqing_c3_path = 2
+                }
+                desc = gacha_keqing_c3_scene_5_desc_b
+            }
+        }
+        desc = gacha_keqing_c3_scene_5_desc_common
+    }
+    option = {
+        name = gacha_keqing_c3_scene_5_opt_a
+        trigger_event_non_silently = { id = gacha_keqing_events.35 }
+    }
+}
+
+# 35. 第6幕：习惯性动作
+gacha_keqing_events.35 = {
+    type = country_event
+    title = gacha_keqing_c3_title
+    desc = gacha_keqing_c3_scene_6_desc
+    option = {
+        name = gacha_keqing_c3_scene_6_opt_a
+        trigger_event_non_silently = { id = gacha_keqing_events.36 }
+    }
+}
+
+# 36. 第7幕：心声（锁定路线）
+gacha_keqing_events.36 = {
+    type = country_event
+    title = gacha_keqing_c3_title
+    immediate = {
+        if = {
+            limit = { NOT = { has_variable = gacha_keqing_c3_path } }
+            set_variable = { name = gacha_keqing_c3_path value = 0 }
+        }
+    }
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_keqing_c3_path
+                    var:gacha_keqing_c3_path = 1
+                }
+                desc = gacha_keqing_c3_scene_7_desc_a
+            }
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_keqing_c3_path
+                    var:gacha_keqing_c3_path = 2
+                }
+                desc = gacha_keqing_c3_scene_7_desc_b
+            }
+        }
+    }
+    option = {
+        name = gacha_keqing_c3_scene_7_opt_a
+        trigger_event_non_silently = { id = gacha_keqing_events.37 }
+    }
+}
+
+# 37. 第8幕：黎明
+gacha_keqing_events.37 = {
+    type = country_event
+    title = gacha_keqing_c3_title
+    immediate = {
+        if = {
+            limit = { NOT = { has_variable = gacha_keqing_c3_path } }
+            set_variable = { name = gacha_keqing_c3_path value = 0 }
+        }
+    }
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_keqing_c3_path
+                    var:gacha_keqing_c3_path = 1
+                }
+                desc = gacha_keqing_c3_scene_8_desc_a
+            }
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_keqing_c3_path
+                    var:gacha_keqing_c3_path = 2
+                }
+                desc = gacha_keqing_c3_scene_8_desc_b
+            }
+        }
+    }
+    option = {
+        name = gacha_keqing_c3_scene_8_opt_a
+        trigger_event_non_silently = { id = gacha_keqing_events.38 }
+    }
+}
+
+# 38. 第9幕：结局
+gacha_keqing_events.38 = {
+    type = country_event
+    title = gacha_keqing_c3_title
     
+    immediate = {
+        if = {
+            limit = { NOT = { has_variable = gacha_keqing_c3_path } }
+            set_variable = { name = gacha_keqing_c3_path value = 0 }
+        }
+    }
+
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_keqing_c3_path
+                    var:gacha_keqing_c3_path = 1
+                }
+                desc = gacha_keqing_c3_scene_9_desc_a
+            }
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_keqing_c3_path
+                    var:gacha_keqing_c3_path = 2
+                }
+                desc = gacha_keqing_c3_scene_9_desc_b
+            }
+        }
+    }
+
+    # 知己线：玉衡的辅佐
+    option = {
+        trigger = {
+            has_variable = gacha_keqing_c3_path
+            var:gacha_keqing_c3_path = 1
+        }
+        name = gacha_keqing_c3_scene_9_opt_a
+        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+        add_country_modifier = { modifier = gacha_keqing_aid_modifier years = -1 mode = add_and_extend }
+    }
+    # 家人线：少女的期许
+    option = {
+        trigger = {
+            has_variable = gacha_keqing_c3_path
+            var:gacha_keqing_c3_path = 2
+        }
+        name = gacha_keqing_c3_scene_9_opt_b
+        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+        add_country_modifier = { modifier = gacha_keqing_gentle_expectation_modifier years = -1 mode = add_and_extend }
+    }
+
     after = {
         clear_saved_scope = gacha_c3_target_char
         remove_variable = gacha_keqing_c3_path
-        remove_variable = gacha_keqing_c3_ending
     }
 }

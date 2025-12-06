@@ -6,5 +6,6 @@
     alliance = 0
 
     bank = no
-    characters_have_dynasty = sometimes
+    # Avoid auto-creating dynasties for gacha characters to prevent naming anomalies
+    characters_have_dynasty = no
 }

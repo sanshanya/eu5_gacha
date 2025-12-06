@@ -19,22 +19,22 @@ gacha_raiden_c6_modifier = { game_data = { category = character decaying = no } 
 # C0 基础光环（叛乱-2.00, 正统性+1.00/年）
 gacha_raiden_country_modifier = {
     game_data = { category = country decaying = no }
-    monthly_war_exhaustion = -0.05
+    monthly_war_exhaustion = -0.08
     monthly_legitimacy = 0.08
 }
 
 # C2 光环升级（叛乱-4.00, 分离主义-10年, 造核-10%）
 gacha_raiden_c2_country_modifier = {
     game_data = { category = country decaying = no }
-    monthly_war_exhaustion = -0.10
+    monthly_war_exhaustion = -0.16
     monthly_legitimacy = 0.16
-    global_construction_speed = 0.30
+    global_construction_speed = 0.10
 }
 
 # C1 专属机制：军事点 +1/月
 gacha_raiden_c1_country_modifier = {
     game_data = { category = country decaying = no }
-    country_cabinet_efficiency = 0.05
+    government_size = 1
 }
 
 # C4 国家级占位（主要属性在 Trait 中）
@@ -45,10 +45,23 @@ gacha_raiden_c4_country_modifier = {
 # C5 专属机制：行政容量 +20%
 gacha_raiden_c5_country_modifier = {
     game_data = { category = country decaying = no }
-    country_cabinet_efficiency = 0.10
+    government_reform_slots = 1
 }
 
 # C6 国家级机制
 gacha_raiden_c6_country_modifier = {
     game_data = { category = country decaying = no }
+}
+
+# C3 结局奖励
+gacha_raiden_reader_modifier = {
+    game_data = { category = country decaying = no }
+    research_speed_modifier = 0.05
+    monthly_legitimacy = 0.05
+}
+
+gacha_raiden_favor_modifier = {
+    game_data = { category = country decaying = no }
+    monthly_prestige = 0.05
+    global_construction_speed = 0.05
 }

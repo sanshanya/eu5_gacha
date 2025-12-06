@@ -33,8 +33,7 @@ gacha_nahida_c2_country_modifier = {
 # C1 专属机制：科研槽+1 (Proxy: Tech Cost -10%)
 gacha_nahida_c1_country_modifier = {
     game_data = { category = country decaying = no }
-    research_speed_modifier = 0.10
-    # TODO: 科研槽+1（未找到 num_of_research_slots 键，待确认）
+    government_size = 1
 }
 
 # C4 国家级占位（主要属性在 Trait 中）
@@ -51,4 +50,19 @@ gacha_nahida_c5_country_modifier = {
 # C6 国家级机制（科研速度+15%, 全点数花费-10%, 顾问花费-20%）
 gacha_nahida_c6_country_modifier = {
     game_data = { category = country decaying = no }
+}
+
+# C3 结局奖励
+gacha_nahida_omniscient_aid_modifier = {
+    game_data = { category = country decaying = no }
+    research_speed_modifier = 0.10
+    country_cabinet_efficiency = 0.10
+    global_institution_growth_modifier = 0.10
+}
+
+gacha_nahida_stellar_bond_modifier = {
+    game_data = { category = country decaying = no }
+    advisor_cost = -0.10
+    stability_cost = -0.05
+    global_institution_growth_modifier = 0.05
 }

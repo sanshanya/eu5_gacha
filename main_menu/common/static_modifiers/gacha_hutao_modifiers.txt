@@ -20,14 +20,14 @@ gacha_hutao_c6_modifier = { game_data = { category = character decaying = no } g
 gacha_hutao_country_modifier = {
     game_data = { category = country decaying = no }
     stability_cost = -0.10
-    global_disease_resistance = 0.20
+    global_disease_resistance = 0.10
 }
 
 # C2 光环升级（稳定度花费-20%, 疾病抗性+40%, 人力恢复+10%）
 gacha_hutao_c2_country_modifier = {
     game_data = { category = country decaying = no }
     stability_cost = -0.20
-    global_disease_resistance = 0.40
+    global_disease_resistance = 0.20
     global_manpower_modifier = 0.10
 }
 
@@ -45,10 +45,23 @@ gacha_hutao_c4_country_modifier = {
 # C5 专属机制：传教力量 +2%
 gacha_hutao_c5_country_modifier = {
     game_data = { category = country decaying = no }
-    building_missionary_effort_modifier = 0.02
+    building_missionary_effort_modifier = 0.01
 }
 
 # C6 国家级机制（稳定度花费-40%, 叛乱-2, 君主寿命+20%）
 gacha_hutao_c6_country_modifier = {
     game_data = { category = country decaying = no }
+}
+
+# C3 结局奖励
+gacha_hutao_gravestone_modifier = {
+    game_data = { category = country decaying = no }
+    stability_cost = -0.05
+    monthly_war_exhaustion = -0.05
+}
+
+gacha_hutao_midnight_carnival_modifier = {
+    game_data = { category = country decaying = no }
+    monthly_prestige = 0.05
+    land_morale = 0.05
 }

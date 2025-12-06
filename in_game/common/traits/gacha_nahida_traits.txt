@@ -27,7 +27,7 @@ gacha_nahida_transcended_trait = {
     # 科研速度+5% · 行政容量+10%
     modifier = {
         research_speed_modifier = 0.20
-        country_cabinet_efficiency = 0.20
+        country_cabinet_efficiency = 0.10
     }
 }
 
@@ -48,7 +48,6 @@ gacha_nahida_c4_trait = {
     # 围城能力+40% · 敌军损耗+1% · 炮兵伤害+10%
     modifier = {
         siege_ability = 0.60
-        army_initiative = 0.20
         army_artillery_power = 0.20
     }
 }

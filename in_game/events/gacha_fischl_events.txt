@@ -63,117 +63,193 @@ gacha_fischl_events.14 = {
 }
 
 # ==============================================================================
-# C3 剧情链：雨夜的"御花园"
+# C3 剧情链：雨夜的《皇女夜谭》
 # ==============================================================================
 
-# 30. 开场：雨中的菲谢尔
+# 30. 第1幕：雨中的黑影（含跳过）
 gacha_fischl_events.30 = {
     type = country_event
     title = gacha_fischl_c3_title
     desc = gacha_fischl_c3_scene_1_desc
     immediate = { event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate } }
     
-    # A. 普通关心
     option = {
         name = gacha_fischl_c3_scene_1_opt_a
-        set_variable = { name = gacha_fischl_c3_path value = 1 }
         trigger_event_non_silently = { id = gacha_fischl_events.31 }
     }
-    # B. 配合演出（推荐路线）
     option = {
-        name = gacha_fischl_c3_scene_1_opt_b
-        set_variable = { name = gacha_fischl_c3_path value = 2 }
-        trigger_event_non_silently = { id = gacha_fischl_events.32 }
-    }
-    # C. 直击真名
-    option = {
-        name = gacha_fischl_c3_scene_1_opt_c
-        set_variable = { name = gacha_fischl_c3_path value = 3 }
-        trigger_event_non_silently = { id = gacha_fischl_events.31 }
+        name = gacha_fischl_c3_scene_1_opt_skip
+        hidden_effect = {
+            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
+            clear_saved_scope = gacha_c3_target_char
+        }
     }
 }
 
-# 31. 路径 A/C 结局（低好感）
+# 31. 第2幕：失效的仪式
 gacha_fischl_events.31 = {
+    type = country_event
+    title = gacha_fischl_c3_title
+    desc = gacha_fischl_c3_scene_2_desc
+    option = {
+        name = gacha_fischl_c3_scene_2_opt_a
+        trigger_event_non_silently = { id = gacha_fischl_events.32 }
+    }
+}
+
+# 32. 第3幕：狼狈的皇女
+gacha_fischl_events.32 = {
+    type = country_event
+    title = gacha_fischl_c3_title
+    desc = gacha_fischl_c3_scene_3_desc
+    option = {
+        name = gacha_fischl_c3_scene_3_opt_a
+        trigger_event_non_silently = { id = gacha_fischl_events.33 }
+    }
+}
+
+# 33. 第4幕：抉择（锁定路线）
+gacha_fischl_events.33 = {
+    type = country_event
+    title = gacha_fischl_c3_title
+    desc = gacha_fischl_c3_scene_4_desc
+    
+    # A. 共演路线
+    option = {
+        name = gacha_fischl_c3_scene_4_opt_a
+        set_variable = { name = gacha_fischl_c3_path value = 1 }
+        trigger_event_non_silently = { id = gacha_fischl_events.34 }
+    }
+    # B. 守护路线
+    option = {
+        name = gacha_fischl_c3_scene_4_opt_b
+        set_variable = { name = gacha_fischl_c3_path value = 2 }
+        trigger_event_non_silently = { id = gacha_fischl_events.34 }
+    }
+}
+
+# 34. 第5幕：动摇
+gacha_fischl_events.34 = {
     type = country_event
     title = gacha_fischl_c3_title
     desc = {
         first_valid = {
             triggered_desc = {
                 trigger = { var:gacha_fischl_c3_path = 1 }
-                desc = gacha_fischl_c3_ending_a
+                desc = gacha_fischl_c3_scene_5_desc_a
             }
             triggered_desc = {
-                trigger = { var:gacha_fischl_c3_path = 3 }
-                desc = gacha_fischl_c3_ending_c
+                trigger = { var:gacha_fischl_c3_path = 2 }
+                desc = gacha_fischl_c3_scene_5_desc_b
+            }
+        }
+        desc = gacha_fischl_c3_scene_5_desc_common
+    }
+    option = {
+        name = gacha_fischl_c3_scene_5_opt_a
+        trigger_event_non_silently = { id = gacha_fischl_events.35 }
+    }
+}
+
+# 35. 第6幕：契约
+gacha_fischl_events.35 = {
+    type = country_event
+    title = gacha_fischl_c3_title
+    desc = gacha_fischl_c3_scene_6_desc
+    
+    option = {
+        trigger = { var:gacha_fischl_c3_path = 1 }
+        name = gacha_fischl_c3_scene_6_opt_a
+        set_variable = { name = gacha_fischl_c3_ending value = 1 }
+        trigger_event_non_silently = { id = gacha_fischl_events.36 }
+    }
+    option = {
+        trigger = { var:gacha_fischl_c3_path = 2 }
+        name = gacha_fischl_c3_scene_6_opt_b
+        set_variable = { name = gacha_fischl_c3_ending value = 2 }
+        trigger_event_non_silently = { id = gacha_fischl_events.36 }
+    }
+}
+
+# 36. 第7幕：回应
+gacha_fischl_events.36 = {
+    type = country_event
+    title = gacha_fischl_c3_title
+    
+    immediate = {
+        if = {
+            limit = { NOT = { has_variable = gacha_fischl_c3_ending } }
+            set_variable = { name = gacha_fischl_c3_ending value = 0 }
+        }
+    }
+
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_fischl_c3_ending
+                    var:gacha_fischl_c3_ending = 1
+                }
+                desc = gacha_fischl_c3_scene_7_desc_a
+            }
+            triggered_desc = {
+                trigger = {
+                    has_variable = gacha_fischl_c3_ending
+                    var:gacha_fischl_c3_ending = 2
+                }
+                desc = gacha_fischl_c3_scene_7_desc_b
             }
         }
     }
     option = {
-        name = gacha_fischl_c3_ending_opt
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 5 } }
-    }
-    after = {
-        clear_saved_scope = gacha_c3_target_char
-        remove_variable = gacha_fischl_c3_path
+        name = gacha_fischl_c3_scene_7_opt_a
+        trigger_event_non_silently = { id = gacha_fischl_events.37 }
     }
 }
 
-# 32. 路径 B-1：第2轮（配合演出展开）
-gacha_fischl_events.32 = {
-    type = country_event
-    title = gacha_fischl_c3_title
-    desc = gacha_fischl_c3_scene_2_desc
-    
-    # B1. 撩拨
-    option = {
-        name = gacha_fischl_c3_scene_2_opt_b1
-        set_variable = { name = gacha_fischl_c3_ending value = 1 }
-        trigger_event_non_silently = { id = gacha_fischl_events.33 }
-    }
-    # B2. 宠溺
-    option = {
-        name = gacha_fischl_c3_scene_2_opt_b2
-        set_variable = { name = gacha_fischl_c3_ending value = 2 }
-        trigger_event_non_silently = { id = gacha_fischl_events.33 }
-    }
-}
-
-# 33. 路径 B-2：第3轮（收尾 - 高好感）
-gacha_fischl_events.33 = {
-    type = country_event
-    title = gacha_fischl_c3_title
-    desc = gacha_fischl_c3_scene_3_desc
-    
-    option = {
-        name = gacha_fischl_c3_scene_3_opt
-        trigger_event_non_silently = { id = gacha_fischl_events.34 }
-    }
-}
-
-# 34. 路径 B-3：结局（动态文本）
-gacha_fischl_events.34 = {
+# 37. 第8幕：结局
+gacha_fischl_events.37 = {
     type = country_event
     title = gacha_fischl_c3_title
     
     desc = {
         first_valid = {
             triggered_desc = {
-                trigger = { var:gacha_fischl_c3_ending = 1 }
-                desc = gacha_fischl_c3_ending_b1
+                trigger = {
+                    has_variable = gacha_fischl_c3_ending
+                    var:gacha_fischl_c3_ending = 1
+                }
+                desc = gacha_fischl_c3_scene_8_desc_a
             }
             triggered_desc = {
-                trigger = { var:gacha_fischl_c3_ending = 2 }
-                desc = gacha_fischl_c3_ending_b2
+                trigger = {
+                    has_variable = gacha_fischl_c3_ending
+                    var:gacha_fischl_c3_ending = 2
+                }
+                desc = gacha_fischl_c3_scene_8_desc_b
             }
         }
     }
-    
+
     option = {
-        name = gacha_fischl_c3_ending_opt_high
+        trigger = {
+            has_variable = gacha_fischl_c3_ending
+            var:gacha_fischl_c3_ending = 1
+        }
+        name = gacha_fischl_c3_scene_8_opt_a
         scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
+        add_country_modifier = { modifier = gacha_fischl_blessed_pact_modifier years = -1 mode = add_and_extend }
     }
-    
+    option = {
+        trigger = {
+            has_variable = gacha_fischl_c3_ending
+            var:gacha_fischl_c3_ending = 2
+        }
+        name = gacha_fischl_c3_scene_8_opt_b
+        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
+        add_country_modifier = { modifier = gacha_fischl_shelter_modifier years = -1 mode = add_and_extend }
+    }
+
     after = {
         clear_saved_scope = gacha_c3_target_char
         remove_variable = gacha_fischl_c3_path

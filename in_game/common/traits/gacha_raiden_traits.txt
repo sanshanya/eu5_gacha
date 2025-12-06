@@ -27,8 +27,8 @@ gacha_raiden_transcended_trait = {
     allow = { always = no }
     # 内政效率+30% · 战争厌倦度 -0.05/月
     modifier = {
-        legislative_efficiency = 0.30
-        monthly_war_exhaustion = -0.05
+        legislative_efficiency = 0.35
+        monthly_war_exhaustion = -0.50
     }
 }
 
@@ -60,8 +60,8 @@ gacha_raiden_c6_trait = {
     allow = { always = no }
     # 立法效率+15% · 威望+0.5/月 · 战争厌倦度 -0.10/月
     modifier = {
-        legislative_efficiency = 0.45
-        legislative_efficiency = 0.40
-        monthly_war_exhaustion = -0.10
+        legislative_efficiency = 0.50
+        monthly_war_exhaustion = -1
+        global_max_control = 0.10
     }
 }
