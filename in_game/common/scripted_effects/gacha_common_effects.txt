@@ -106,8 +106,8 @@ gacha_register_new_character = {
     # 关键步骤：在名字和特质确定后，移动到国家
     move_country = root
 
-    # 统一把抽卡角色归入自定义阶层
-    gacha_assign_to_gacha_estate = yes
+    # # 统一把抽卡角色归入自定义阶层
+    # gacha_assign_to_gacha_estate = yes
 
     # 【V3 契约】保存当前角色 Scope，供 UI 事件使用
     # 注意：不要在角色 wrapper 中清理该 Scope，由展示事件的 after 块负责清理
