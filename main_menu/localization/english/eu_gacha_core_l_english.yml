@@ -1,0 +1,25 @@
+﻿l_english:
+  # === Core Modifier Types ===
+  MODIFIER_TYPE_NAME_gacha_core: "Traveler from Beyond"
+  MODIFIER_TYPE_DESC_gacha_core: "“A traveler from another world.”"
+  MODIFIER_TYPE_NAME_gacha_country_aura: "Policy Resonance"
+  MODIFIER_TYPE_DESC_gacha_country_aura: "This character grants a permanent policy-like aura to the country."
+
+  # === Constellation Levels ===
+  MODIFIER_TYPE_NAME_gacha_constellation_level: "Constellation Level"
+  MODIFIER_TYPE_DESC_gacha_constellation_level: "“When mortal desire shakes the stars, a sacred sigil descends to guide elemental power and bear witness to fate.”"
+
+  # === Vision Types ===
+  MODIFIER_TYPE_NAME_gacha_electro_godeye: "Electro Vision"
+  MODIFIER_TYPE_DESC_gacha_electro_godeye: "A mark from the Electro Archon, symbolizing lightning's recognition."
+  MODIFIER_TYPE_NAME_gacha_water_godeye: "Hydro Vision"
+  MODIFIER_TYPE_DESC_gacha_water_godeye: "A blessing from the Hydro Archon, symbolizing flow and healing."
+  MODIFIER_TYPE_NAME_gacha_fire_godeye: "Pyro Vision"
+  MODIFIER_TYPE_DESC_gacha_fire_godeye: "A sigil from the Pyro Archon, symbolizing passion and flame."
+  MODIFIER_TYPE_NAME_gacha_grass_godeye: "Dendro Vision"
+  MODIFIER_TYPE_DESC_gacha_grass_godeye: "Insight of the Dendro element, where knowledge and life sprout."
+
+  # === Misc missing keys ===
+  MOD_BACKEND_NOT_AVAILABLE_STEAM: "Steam backend not available"
+  MODIFIER_TYPE_NAME_levy_recovery_modifier: "Levy Recovery"
+  MODIFIER_TYPE_DESC_levy_recovery_modifier: "Improves levy reinforcement speed."
