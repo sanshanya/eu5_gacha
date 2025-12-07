@@ -35,7 +35,7 @@ gacha_keqing_events.11 = {
     type = country_event
     title = gacha_keqing_events.11.title
     desc = gacha_keqing_events.11.desc
-    option = { name = gacha_keqing_events.11.a add_stability = 0.25 }
+    option = { name = gacha_keqing_events.11.a add_stability = 8 }
 }
 
 # 12. C4："剑光如我"
@@ -80,8 +80,11 @@ gacha_keqing_events.30 = {
     option = {
         name = gacha_keqing_c3_scene_1_opt_skip
         hidden_effect = {
-            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
-            clear_saved_scope = gacha_c3_target_char
+            if = {
+                limit = { exists = scope:gacha_c3_target_char }
+                scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
+                clear_saved_scope = gacha_c3_target_char
+            }
         }
     }
 }
@@ -278,7 +281,10 @@ gacha_keqing_events.38 = {
             var:gacha_keqing_c3_path = 1
         }
         name = gacha_keqing_c3_scene_9_opt_a
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+        if = {
+            limit = { exists = scope:gacha_c3_target_char }
+            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+        }
         add_country_modifier = { modifier = gacha_keqing_aid_modifier years = -1 mode = add_and_extend }
     }
     # 家人线：少女的期许
@@ -288,7 +294,10 @@ gacha_keqing_events.38 = {
             var:gacha_keqing_c3_path = 2
         }
         name = gacha_keqing_c3_scene_9_opt_b
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+        if = {
+            limit = { exists = scope:gacha_c3_target_char }
+            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 25 } }
+        }
         add_country_modifier = { modifier = gacha_keqing_gentle_expectation_modifier years = -1 mode = add_and_extend }
     }
 

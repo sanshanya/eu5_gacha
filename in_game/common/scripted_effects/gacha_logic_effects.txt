@@ -172,7 +172,7 @@ gacha_resolve_4star_logic = {
     if = { limit = { local_var:gacha_4star_idx_val = 0 } add_gold = 240 }
     else_if = { limit = { local_var:gacha_4star_idx_val = 1 } add_prestige = 8 }
     else_if = { limit = { local_var:gacha_4star_idx_val = 2 } add_legitimacy = 8 }
-    else = { add_stability = 0.25 }
+    else = { add_stability = 4 }
 }
 
 # ------------------------------------------------------------

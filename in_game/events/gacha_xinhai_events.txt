@@ -35,7 +35,7 @@ gacha_xinhai_events.11 = {
     type = country_event
     title = gacha_xinhai_events.11.title
     desc = gacha_xinhai_events.11.desc
-    option = { name = gacha_xinhai_events.11.a add_stability = 0.25 }
+    option = { name = gacha_xinhai_events.11.a add_stability = 8 }
 }
 
 # 12. 超越 (C4)
@@ -120,13 +120,13 @@ gacha_xinhai_events.33 = {
     # A. 温和配合
     option = {
         name = gacha_xinhai_c3_scene_4_opt_a
-        set_variable = { name = gacha_c3_path value = 1 } # 1 = Gentle
+        set_variable = { name = gacha_xinhai_c3_path value = 1 } # 1 = Gentle
         trigger_event_non_silently = { id = gacha_xinhai_events.34 }
     }
     # B. 幽默拆穿
     option = {
         name = gacha_xinhai_c3_scene_4_opt_b
-        set_variable = { name = gacha_c3_path value = 2 } # 2 = Humor
+        set_variable = { name = gacha_xinhai_c3_path value = 2 } # 2 = Humor
         trigger_event_non_silently = { id = gacha_xinhai_events.34 }
     }
 }
@@ -135,14 +135,28 @@ gacha_xinhai_events.33 = {
 gacha_xinhai_events.34 = {
     type = country_event
     title = gacha_xinhai_c3_title
+    
+    immediate = {
+        # 保底：路径变量未设置时初始化为 0，防止比较时报未设变量
+        if = {
+            limit = { NOT = { has_variable = gacha_xinhai_c3_path } }
+            set_variable = { name = gacha_xinhai_c3_path value = 0 }
+        }
+    }
     desc = {
         first_valid = {
             triggered_desc = {
-                trigger = { var:gacha_c3_path = 1 }
+                trigger = {
+                    has_variable = gacha_xinhai_c3_path
+                    var:gacha_xinhai_c3_path = 1
+                }
                 desc = gacha_xinhai_c3_scene_5_desc_a
             }
             triggered_desc = {
-                trigger = { var:gacha_c3_path = 2 }
+                trigger = {
+                    has_variable = gacha_xinhai_c3_path
+                    var:gacha_xinhai_c3_path = 2
+                }
                 desc = gacha_xinhai_c3_scene_5_desc_b
             }
         }
@@ -174,13 +188,13 @@ gacha_xinhai_events.36 = {
     # A. 给予承诺 (结局 A)
     option = {
         name = gacha_xinhai_c3_scene_7_opt_a
-        set_variable = { name = gacha_c3_ending value = 1 }
+        set_variable = { name = gacha_xinhai_c3_ending value = 1 }
         trigger_event_non_silently = { id = gacha_xinhai_events.37 }
     }
     # B. 分享秘密 (结局 B)
     option = {
         name = gacha_xinhai_c3_scene_7_opt_b
-        set_variable = { name = gacha_c3_ending value = 2 }
+        set_variable = { name = gacha_xinhai_c3_ending value = 2 }
         trigger_event_non_silently = { id = gacha_xinhai_events.37 }
     }
 }
@@ -203,8 +217,8 @@ gacha_xinhai_events.38 = {
 
     immediate = {
         if = {
-            limit = { NOT = { has_variable = gacha_c3_ending } }
-            set_variable = { name = gacha_c3_ending value = 0 }
+            limit = { NOT = { has_variable = gacha_xinhai_c3_ending } }
+            set_variable = { name = gacha_xinhai_c3_ending value = 0 }
         }
     }
     
@@ -212,15 +226,15 @@ gacha_xinhai_events.38 = {
         first_valid = {
             triggered_desc = {
                 trigger = {
-                    has_variable = gacha_c3_ending
-                    var:gacha_c3_ending = 1
+                    has_variable = gacha_xinhai_c3_ending
+                    var:gacha_xinhai_c3_ending = 1
                 }
                 desc = gacha_xinhai_c3_scene_9_desc_a
             }
             triggered_desc = {
                 trigger = {
-                    has_variable = gacha_c3_ending
-                    var:gacha_c3_ending = 2
+                    has_variable = gacha_xinhai_c3_ending
+                    var:gacha_xinhai_c3_ending = 2
                 }
                 desc = gacha_xinhai_c3_scene_9_desc_b
             }
@@ -230,8 +244,8 @@ gacha_xinhai_events.38 = {
     # 结局 A
     option = {
         trigger = {
-            has_variable = gacha_c3_ending
-            var:gacha_c3_ending = 1
+            has_variable = gacha_xinhai_c3_ending
+            var:gacha_xinhai_c3_ending = 1
         }
         name = gacha_xinhai_c3_scene_9_opt_a
         if = {
@@ -244,8 +258,8 @@ gacha_xinhai_events.38 = {
     # 结局 B
     option = {
         trigger = {
-            has_variable = gacha_c3_ending
-            var:gacha_c3_ending = 2
+            has_variable = gacha_xinhai_c3_ending
+            var:gacha_xinhai_c3_ending = 2
         }
         name = gacha_xinhai_c3_scene_9_opt_b
         if = {
@@ -257,7 +271,7 @@ gacha_xinhai_events.38 = {
 
     after = {
         clear_saved_scope = gacha_c3_target_char
-        remove_variable = gacha_c3_path
-        remove_variable = gacha_c3_ending
+        remove_variable = gacha_xinhai_c3_path
+        remove_variable = gacha_xinhai_c3_ending
     }
 }

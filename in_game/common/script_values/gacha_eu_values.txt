@@ -197,7 +197,7 @@ gacha_reward_prestige_small_sv = { value = 10 }
 gacha_reward_prestige_medium_sv = { value = 50 }
 gacha_reward_legitimacy_small_sv = { value = 5 }
 gacha_reward_legitimacy_medium_sv = { value = 20 }
-gacha_reward_stability_small_sv = { value = 0.25 }
+gacha_reward_stability_small_sv = { value = 8 }
 gacha_refund_gold_small_sv = { value = 1 }
 
 # 祈愿消耗

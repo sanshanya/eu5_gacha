@@ -35,7 +35,7 @@ gacha_fischl_events.11 = {
     type = country_event
     title = gacha_fischl_events.11.title
     desc = gacha_fischl_events.11.desc
-    option = { name = gacha_fischl_events.11.a add_stability = 0.25 }
+    option = { name = gacha_fischl_events.11.a add_stability = 8 }
 }
 
 # 12. C4 超越
@@ -80,8 +80,11 @@ gacha_fischl_events.30 = {
     option = {
         name = gacha_fischl_c3_scene_1_opt_skip
         hidden_effect = {
-            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
-            clear_saved_scope = gacha_c3_target_char
+            if = {
+                limit = { exists = scope:gacha_c3_target_char }
+                scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 10 } }
+                clear_saved_scope = gacha_c3_target_char
+            }
         }
     }
 }
@@ -132,14 +135,28 @@ gacha_fischl_events.33 = {
 gacha_fischl_events.34 = {
     type = country_event
     title = gacha_fischl_c3_title
+    
+    immediate = {
+        # 保底：如果路线变量不存在，初始化为 0，避免未设变量报错
+        if = {
+            limit = { NOT = { has_variable = gacha_fischl_c3_path } }
+            set_variable = { name = gacha_fischl_c3_path value = 0 }
+        }
+    }
     desc = {
         first_valid = {
             triggered_desc = {
-                trigger = { var:gacha_fischl_c3_path = 1 }
+                trigger = {
+                    has_variable = gacha_fischl_c3_path
+                    var:gacha_fischl_c3_path = 1
+                }
                 desc = gacha_fischl_c3_scene_5_desc_a
             }
             triggered_desc = {
-                trigger = { var:gacha_fischl_c3_path = 2 }
+                trigger = {
+                    has_variable = gacha_fischl_c3_path
+                    var:gacha_fischl_c3_path = 2
+                }
                 desc = gacha_fischl_c3_scene_5_desc_b
             }
         }
@@ -157,14 +174,27 @@ gacha_fischl_events.35 = {
     title = gacha_fischl_c3_title
     desc = gacha_fischl_c3_scene_6_desc
     
+    immediate = {
+        # 保底：如果路线变量不存在，初始化为 0，避免未设变量报错
+        if = {
+            limit = { NOT = { has_variable = gacha_fischl_c3_path } }
+            set_variable = { name = gacha_fischl_c3_path value = 0 }
+        }
+    }
     option = {
-        trigger = { var:gacha_fischl_c3_path = 1 }
+        trigger = {
+            has_variable = gacha_fischl_c3_path
+            var:gacha_fischl_c3_path = 1
+        }
         name = gacha_fischl_c3_scene_6_opt_a
         set_variable = { name = gacha_fischl_c3_ending value = 1 }
         trigger_event_non_silently = { id = gacha_fischl_events.36 }
     }
     option = {
-        trigger = { var:gacha_fischl_c3_path = 2 }
+        trigger = {
+            has_variable = gacha_fischl_c3_path
+            var:gacha_fischl_c3_path = 2
+        }
         name = gacha_fischl_c3_scene_6_opt_b
         set_variable = { name = gacha_fischl_c3_ending value = 2 }
         trigger_event_non_silently = { id = gacha_fischl_events.36 }
@@ -212,6 +242,14 @@ gacha_fischl_events.37 = {
     type = country_event
     title = gacha_fischl_c3_title
     
+    immediate = {
+        # 保底：结局变量缺失时默认归 0，避免比较报错
+        if = {
+            limit = { NOT = { has_variable = gacha_fischl_c3_ending } }
+            set_variable = { name = gacha_fischl_c3_ending value = 0 }
+        }
+    }
+    
     desc = {
         first_valid = {
             triggered_desc = {
@@ -237,7 +275,10 @@ gacha_fischl_events.37 = {
             var:gacha_fischl_c3_ending = 1
         }
         name = gacha_fischl_c3_scene_8_opt_a
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
+        if = {
+            limit = { exists = scope:gacha_c3_target_char }
+            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
+        }
         add_country_modifier = { modifier = gacha_fischl_blessed_pact_modifier years = -1 mode = add_and_extend }
     }
     option = {
@@ -246,7 +287,10 @@ gacha_fischl_events.37 = {
             var:gacha_fischl_c3_ending = 2
         }
         name = gacha_fischl_c3_scene_8_opt_b
-        scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
+        if = {
+            limit = { exists = scope:gacha_c3_target_char }
+            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
+        }
         add_country_modifier = { modifier = gacha_fischl_shelter_modifier years = -1 mode = add_and_extend }
     }
 
