@@ -71,8 +71,9 @@ gacha_xinhai_events.30 = {
     type = country_event
     title = gacha_xinhai_c3_title
     desc = gacha_xinhai_c3_scene_1_desc
-    immediate = { event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate } }
-    
+    # immediate = { event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate } }
+		hide_portraits = yes
+    image = "gfx/event_pictures/gacha_xinhai_c3_1.dds"
     option = {
         name = gacha_xinhai_c3_scene_1_opt_a
         trigger_event_non_silently = { id = gacha_xinhai_events.31 }
@@ -94,6 +95,8 @@ gacha_xinhai_events.31 = {
     type = country_event
     title = gacha_xinhai_c3_title
     desc = gacha_xinhai_c3_scene_2_desc
+    hide_portraits = yes
+    image = "gfx/event_pictures/gacha_xinhai_c3_2_start.dds"
     option = {
         name = gacha_xinhai_c3_scene_2_opt_a
         trigger_event_non_silently = { id = gacha_xinhai_events.32 }
@@ -105,6 +108,8 @@ gacha_xinhai_events.32 = {
     type = country_event
     title = gacha_xinhai_c3_title
     desc = gacha_xinhai_c3_scene_3_desc
+		hide_portraits = yes
+		image = "gfx/event_pictures/gacha_xinhai_c3_2_shock.dds"
     option = {
         name = gacha_xinhai_c3_scene_3_opt_a
         trigger_event_non_silently = { id = gacha_xinhai_events.33 }
@@ -116,7 +121,8 @@ gacha_xinhai_events.33 = {
     type = country_event
     title = gacha_xinhai_c3_title
     desc = gacha_xinhai_c3_scene_4_desc
-    
+		hide_portraits = yes
+    image = "gfx/event_pictures/gacha_xinhai_c3_talk.dds"
     # A. 温和配合
     option = {
         name = gacha_xinhai_c3_scene_4_opt_a
@@ -135,7 +141,8 @@ gacha_xinhai_events.33 = {
 gacha_xinhai_events.34 = {
     type = country_event
     title = gacha_xinhai_c3_title
-    
+    hide_portraits = no
+    image = "gfx/event_pictures/gacha_xinhai_c3_talk.dds"
     immediate = {
         # 保底：路径变量未设置时初始化为 0，防止比较时报未设变量
         if = {
@@ -173,6 +180,8 @@ gacha_xinhai_events.35 = {
     type = country_event
     title = gacha_xinhai_c3_title
     desc = gacha_xinhai_c3_scene_6_desc
+		hide_portraits = no
+    image = "gfx/event_pictures/gacha_xinhai_c3_talk.dds"
     option = {
         name = gacha_xinhai_c3_scene_6_opt_a
         trigger_event_non_silently = { id = gacha_xinhai_events.36 }
@@ -184,7 +193,8 @@ gacha_xinhai_events.36 = {
     type = country_event
     title = gacha_xinhai_c3_title
     desc = gacha_xinhai_c3_scene_7_desc
-    
+    hide_portraits = yes
+    image = "gfx/event_pictures/gacha_xinhai_c3_shy_1.dds"
     # A. 给予承诺 (结局 A)
     option = {
         name = gacha_xinhai_c3_scene_7_opt_a
@@ -204,68 +214,59 @@ gacha_xinhai_events.37 = {
     type = country_event
     title = gacha_xinhai_c3_title
     desc = gacha_xinhai_c3_scene_8_desc
+		hide_portraits = yes
+    image = "gfx/event_pictures/gacha_xinhai_c3_shy_2.dds"
     option = {
         name = gacha_xinhai_c3_scene_8_opt_a
-        trigger_event_non_silently = { id = gacha_xinhai_events.38 }
-    }
-}
-
-# 38. 第9幕：结局 (动态文本)
-gacha_xinhai_events.38 = {
-    type = country_event
-    title = gacha_xinhai_c3_title
-
-    immediate = {
-        if = {
-            limit = { NOT = { has_variable = gacha_xinhai_c3_ending } }
-            set_variable = { name = gacha_xinhai_c3_ending value = 0 }
-        }
-    }
-    
-    desc = {
-        first_valid = {
-            triggered_desc = {
-                trigger = {
-                    has_variable = gacha_xinhai_c3_ending
-                    var:gacha_xinhai_c3_ending = 1
-                }
-                desc = gacha_xinhai_c3_scene_9_desc_a
-            }
-            triggered_desc = {
-                trigger = {
+        hidden_effect = {
+            if = {
+                limit = {
                     has_variable = gacha_xinhai_c3_ending
                     var:gacha_xinhai_c3_ending = 2
                 }
-                desc = gacha_xinhai_c3_scene_9_desc_b
+                trigger_event_non_silently = { id = gacha_xinhai_events.39 }
+            }
+            else = {
+                trigger_event_non_silently = { id = gacha_xinhai_events.38 }
             }
         }
     }
+}
 
-    # 结局 A
+# 38. 第9幕：结局 A
+gacha_xinhai_events.38 = {
+    type = country_event
+    title = gacha_xinhai_c3_title
+    hide_portraits = yes
+    image = "gfx/event_pictures/gacha_xinhai_c3_end_a.dds"
+
+    desc = gacha_xinhai_c3_scene_9_desc_a
+
     option = {
-        trigger = {
-            has_variable = gacha_xinhai_c3_ending
-            var:gacha_xinhai_c3_ending = 1
-        }
         name = gacha_xinhai_c3_scene_9_opt_a
-        if = {
-            limit = { exists = scope:gacha_c3_target_char }
-            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
-        }
+        if = { limit = { exists = scope:gacha_c3_target_char } scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } } }
         add_country_modifier = { modifier = gacha_xinhai_rest_modifier years = -1 mode = add_and_extend }
     }
-    
-    # 结局 B
+
+    after = {
+        clear_saved_scope = gacha_c3_target_char
+        remove_variable = gacha_xinhai_c3_path
+        remove_variable = gacha_xinhai_c3_ending
+    }
+}
+
+# 39. 第9幕：结局 B
+gacha_xinhai_events.39 = {
+    type = country_event
+    title = gacha_xinhai_c3_title
+    hide_portraits = yes
+    image = "gfx/event_pictures/gacha_xinhai_c3_end_b.dds"
+
+    desc = gacha_xinhai_c3_scene_9_desc_b
+
     option = {
-        trigger = {
-            has_variable = gacha_xinhai_c3_ending
-            var:gacha_xinhai_c3_ending = 2
-        }
         name = gacha_xinhai_c3_scene_9_opt_b
-        if = {
-            limit = { exists = scope:gacha_c3_target_char }
-            scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } }
-        }
+        if = { limit = { exists = scope:gacha_c3_target_char } scope:gacha_c3_target_char = { change_variable = { name = gacha_affinity_level add = 20 } } }
         add_country_modifier = { modifier = gacha_xinhai_secret_pact_modifier years = -1 }
     }
 
