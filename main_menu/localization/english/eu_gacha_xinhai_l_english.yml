@@ -109,7 +109,7 @@
   # Scene 1
   gacha_xinhai_c3_scene_1_desc: "#ZG The candle flame on the pile of documents flickers once, then finally dies in the dried wax.\nThe arguments over tax adjustments and frontier supplies have at last fallen silent as the ink dries. You rub at your throbbing temples and push open the heavy door leading out to the terrace.\nThe night wind, cool with dew, rushes against your face. Yet at the heart of this vast empire, it is hard to fully relax, even at this hour. The wind howling through high walls and corridors sounds like the whispering of countless petitions still awaiting your seal.#!\nYou need a brief escape.\nGo and get some air."
   gacha_xinhai_c3_scene_1_opt_a: "Step out onto the terrace."
-  gacha_xinhai_c3_scene_1_opt_b: "Skip the scene and go straight to bed tonight."
+  gacha_xinhai_c3_scene_1_opt_b: "go straight to bed tonight.#ZG 『Skip the scene』#!"
 
   # Scene 2
   gacha_xinhai_c3_scene_2_desc: "#ZG A corner that is usually deserted has, tonight, been occupied.#!\nIt is #bold;color_yellow Sangonomiya Kokomi#!.\n#ZG She has not noticed your arrival at all. The ‘Divine Priestess’ who commands the armies with flawless plans by day is now draped bonelessly over the cold stone railing, like a shell left behind on the shore after the tide retreats.#!\nOne hand traces lazy shapes in the air, her fingertips drawing a slow arc in the moonlight, as if sketching the trail of fish swimming through the deep.\n#ZG It is a side of her you have never seen before—unguarded, with a hint of daze about it...#!"
