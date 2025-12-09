@@ -75,9 +75,13 @@
   gacha_xinhai_c6_trait_die_desc: "Loses Kokomi’s C6 final ascension bonus."
 
   # === Events ===
-  gacha_xinhai_events.1.title: "Divine Priestess Sangonomiya Kokomi — Temporary Strategic Advisor"
-  gacha_xinhai_events.1.desc: "“I am Sangonomiya Kokomi. Though I had a feeling something like this might happen, being summoned directly here is still a surprise.\n\nI glanced over your map of the realm earlier. Your supply lines are a hundred times more complex than those of Watatsumi Island, and great powers entangle themselves in endless diplomacy. These administrative documents are piled like mountains—my energy is nearly spent just looking at them.\n\nIf you resorted to a summoning ritual, you must be facing a deadlock. As a strategist, I can’t simply sit by and watch a war descend into chaos. I’ll try to simulate the situation for you.\n\nBut please remember: once the victory is secured, you must allow me to retreat to my room and rest.”"
-  gacha_xinhai_events.1.a: "We welcome our strategist to court."
+  gacha_xinhai_events.1.title: "Divine Priestess Sangonomiya Kokomi — Arrival"
+  gacha_xinhai_events.1.desc: "A tide of pale light wells up at the heart of the summoning circle. Golden scripture glimmers in the air as Kokomi steps through a curtain of water, her hem and the drifting mist rising together as if Enkanomiya itself has folded into your palace.\n\nShe lifts her gaze to you—already reading the war to come, yet holding her words, awaiting your greeting."
+  gacha_xinhai_events.1.a: "Step forward and hear her reply."
+
+  gacha_xinhai_events.10.title: "Divine Priestess Sangonomiya Kokomi — Temporary Strategic Advisor"
+  gacha_xinhai_events.10.desc: "“I am Sangonomiya Kokomi. Though I had a feeling something like this might happen, being summoned directly here is still a surprise.\n\nI glanced over your map of the realm earlier. Your supply lines are a hundred times more complex than those of Watatsumi Island, and great powers entangle themselves in endless diplomacy. These administrative documents are piled like mountains—my energy is nearly spent just looking at them.\n\nIf you resorted to a summoning ritual, you must be facing a deadlock. As a strategist, I can’t simply sit by and watch a war descend into chaos. I’ll try to simulate the situation for you.\n\nBut please remember: once the victory is secured, you must allow me to retreat to my room and rest.”"
+  gacha_xinhai_events.10.a: "We welcome our strategist to court."
 
   gacha_xinhai_events.2.title: "Stratagems in a Silk Pouch"
   gacha_xinhai_events.2.desc: "As the power of your wishes deepens, Sangonomiya Kokomi feels a familiar strength returning.\n\nHer grasp of the art of war grows keener, as if she can already see every variable on the battlefield.\n\n$gacha_text_reward_prestige_small$"

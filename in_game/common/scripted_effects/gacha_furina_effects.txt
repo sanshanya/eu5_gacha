@@ -186,7 +186,27 @@ gacha_furina_trigger_event = {
 }
 
 # ------------------------------------------------------------------------------
-# 4. Country Modifier Helper (Delta Logic)
+# 4. Debug Helper: Replay Intro (Two-Stage Arrival)
+# ------------------------------------------------------------------------------
+gacha_furina_debug_replay_intro = {
+    random_in_global_list = {
+        variable = gacha_obtained_characters
+        limit = { has_character_modifier = gacha_furina_modifier }
+        save_scope_as = furina_char
+    }
+
+    if = {
+        limit = { exists = scope:furina_char }
+        scope:furina_char = {
+            root = { trigger_event_non_silently = { id = gacha_furina_events.1 } }
+        }
+    }
+
+    clear_saved_scope = furina_char
+}
+
+# ------------------------------------------------------------------------------
+# 5. Country Modifier Helper (Delta Logic)
 # ------------------------------------------------------------------------------
 gacha_furina_apply_country_modifiers = {
     if = {

@@ -71,9 +71,13 @@
   gacha_furina_c6_trait_die_desc: "Loses Furina’s C6 final ascension bonus."
 
   # === Events ===
-  gacha_furina_events.1.title: "The Soloist Who Never Bows · Furina — Just… Furina"
-  gacha_furina_events.1.desc: "“A-hem… Has the spotlight found me yet?\n\nI am Furina de Fontaine. Also known as… well, those titles don’t matter anymore.\n\nRight now I’m just an ordinary woman who’s finally put down a burden and is ready to enjoy some macaroni and afternoon tea.\n\n…Wait, what did you just say?\n\nYou want me to govern this vast empire?\n\nAnd rebuild order in this war-torn, utterly unfamiliar world?\n\nAre you serious?! My performance is over! That ‘perfect, all-knowing, all-powerful god’ has already taken her final bow!\n\n…You really won’t take no for an answer, will you?\n\nFine. Then treat this as a brand-new play.\n\nNo prophecies, no divine trial, no script written in advance.\n\nOnly a retired diva, and a country that insists on dragging her back on stage.”"
-  gacha_furina_events.1.a: "Welcome back to the stage, Furina."
+  gacha_furina_events.1.title: "The Soloist Who Never Bows · Furina — Curtain Rises Again"
+  gacha_furina_events.1.desc: "The theater drapes stir in a windless hall; a string prelude blooms from nowhere. A lone cool spotlight pins the empty stage—then waterlight and a formal gown whirl into being, as if the Opéra Epiclese had been conjured in this foreign court.\n\nFurina raises a finger to her lips in a playful “shh,” mischief sparking in her eyes, waiting for your reply."
+  gacha_furina_events.1.a: "Step into the light and answer her entrance."
+
+  gacha_furina_events.10.title: "The Soloist Who Never Bows · Furina — Just… Furina"
+  gacha_furina_events.10.desc: "“A-hem… Has the spotlight found me yet?\n\nI am Furina de Fontaine. Also known as… well, those titles don’t matter anymore.\n\nRight now I’m just an ordinary woman who’s finally put down a burden and is ready to enjoy some macaroni and afternoon tea.\n\n…Wait, what did you just say?\n\nYou want me to govern this vast empire?\n\nAnd rebuild order in this war-torn, utterly unfamiliar world?\n\nAre you serious?! My performance is over! That ‘perfect, all-knowing, all-powerful god’ has already taken her final bow!\n\n…You really won’t take no for an answer, will you?\n\nFine. Then treat this as a brand-new play.\n\nNo prophecies, no divine trial, no script written in advance.\n\nOnly a retired diva, and a country that insists on dragging her back on stage.”"
+  gacha_furina_events.10.a: "Welcome back to the stage, Furina."
 
   gacha_furina_events.2.title: "The Drama’s Climax"
   gacha_furina_events.2.desc: "Furina’s power has grown. She lets out a light laugh, as if she were merely turning a page in the program.\n\n“See? The story’s only just getting started!”"

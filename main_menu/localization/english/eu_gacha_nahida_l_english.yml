@@ -74,9 +74,13 @@
   gacha_nahida_c6_trait_die_desc: "Loses Nahida’s C6 final ascension bonus."
 
   # === Events ===
-  gacha_nahida_events.1.title: "Buer Nahida — The 'Backup' Forgotten by the World"
-  gacha_nahida_events.1.desc: "“Nice to meet you. I’m Nahida, the Dendro Archon of Sumeru.\n\n...This is a little strange. In all my records, there is no data at all about this world.\n\nThere is no Akasha Terminal here, nor any roots of Irminsul.\n\nAnd yet... I can finally breathe easier.\n\nBecause here, those ‘erased’ memories are still echoing in my mind.\n\nThat puppet built to house a god, that tree burning itself away, and... that name I must never forget—Greater Lord Rukkhadevata.\n\nSince fate has preserved me—this ‘backup’ that was supposed to vanish—here of all places, there must be a reason.\n\nLet’s treat this as one long ‘dream’ experiment.\n\nI’ll use my wisdom to help you analyze the underlying logic of this world.\n\nIn exchange... would you become my one and only ‘recorder’?”"
-  gacha_nahida_events.1.a: "Welcome, God of Wisdom."
+  gacha_nahida_events.1.title: "Buer Nahida — First Ping from the Backup"
+  gacha_nahida_events.1.desc: "In the empty court, a faint green pathway of light takes shape. It coalesces into a young girl, as if she were downloading a missing memory. She blinks, curiosity shining as she scans this unfamiliar data environment.\n\nNahida lifts her hand gently, inviting you closer. She waits for your reply, like waiting for a new ‘record’ to start."
+  gacha_nahida_events.1.a: "Step forward and listen."
+
+  gacha_nahida_events.10.title: "Buer Nahida — The 'Backup' Forgotten by the World"
+  gacha_nahida_events.10.desc: "“Nice to meet you. I’m Nahida, the Dendro Archon of Sumeru.\n\n...This is a little strange. In all my records, there is no data at all about this world.\n\nThere is no Akasha Terminal here, nor any roots of Irminsul.\n\nAnd yet... I can finally breathe easier.\n\nBecause here, those ‘erased’ memories are still echoing in my mind.\n\nThat puppet built to house a god, that tree burning itself away, and... that name I must never forget—Greater Lord Rukkhadevata.\n\nSince fate has preserved me—this ‘backup’ that was supposed to vanish—here of all places, there must be a reason.\n\nLet’s treat this as one long ‘dream’ experiment.\n\nI’ll use my wisdom to help you analyze the underlying logic of this world.\n\nIn exchange... would you become my one and only ‘recorder’?”"
+  gacha_nahida_events.10.a: "Welcome, God of Wisdom."
 
   gacha_nahida_events.2.title: "Growth of Wisdom"
   gacha_nahida_events.2.desc: "Nahida’s power has increased, soft green Dendro light circling around her.\n\n“Look, the world tree has granted me new strength. With this, I can help everyone even more~”"
