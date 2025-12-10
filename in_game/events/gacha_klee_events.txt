@@ -5,9 +5,22 @@ gacha_klee_events.1 = {
     type = country_event
     title = gacha_klee_events.1.title
     desc = gacha_klee_events.1.desc
-    
-    immediate = { event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate } }
-    option = { name = gacha_klee_events.1.a historical_option = yes }
+    hide_portraits = yes
+    image = "gfx/event_pictures/gacha_klee_intro_special.dds"
+    option = {
+        name = gacha_klee_events.1.a
+        trigger_event_non_silently = { id = gacha_klee_events.10 }
+    }
+}
+
+# 1-2. 初见第二幕（原登场对白）
+gacha_klee_events.10 = {
+    type = country_event
+    title = gacha_klee_events.10.title
+    desc = gacha_klee_events.10.desc
+    hide_portraits = yes
+    image = "gfx/event_pictures/gacha_klee_intro_special2.dds"
+    option = { name = gacha_klee_events.10.a historical_option = yes }
 }
 
 # 2. 提升

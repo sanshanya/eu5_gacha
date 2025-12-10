@@ -1,4 +1,11 @@
 ﻿l_english:
+  # Reward text aliases (duplicated here for tooling)
+  gacha_text_reward_prestige_small: "Your renown now spreads among neighboring realms.(@prestige!#color_yellow [ROOT.ScriptValue('gacha_reward_prestige_small_sv')|0]#!)"
+  gacha_text_reward_prestige_medium: "This miracle has sent your fame soaring to the heavens.(@prestige!#color_yellow [ROOT.ScriptValue('gacha_reward_prestige_medium_sv')|0]#!)"
+  gacha_text_reward_legitimacy_small: "The people place greater faith in your rule.(@legitimacy!#color_yellow [ROOT.ScriptValue('gacha_reward_legitimacy_small_sv')|0]#!)"
+  gacha_text_reward_legitimacy_medium: "Your crown’s legitimacy is now sanctified by the divine.(@legitimacy!#color_yellow [ROOT.ScriptValue('gacha_reward_legitimacy_medium_sv')|0]#!)"
+  gacha_text_reward_stability_small: "Your realm steadies; turmoil ebbs.(@stability!#color_yellow [ROOT.ScriptValue('gacha_reward_stability_small_sv')|0]#!)"
+
   # ============================================================
   # Character - Sangonomiya Kokomi
   # ============================================================
@@ -9,16 +16,16 @@
 
   # === Traits ===
   gacha_xinhai_origin_trait: "Coral Lanterns of Watatsumi"
-  desc_gacha_xinhai_origin_trait: "“Your homeland is sick... just like the time the sacred soil turned pale. Whenever the coral lanterns of Bourou Village are lit, I always feel as if everything will be all right in the end.\n\nPerhaps... I can bring that feeling here as well.”"
+  desc_gacha_xinhai_origin_trait: "“Your homeland is sick... just like when the sacred soil turned pale.\n\nWhenever the coral lanterns of Bourou Village are lit, I always feel as if everything will be all right in the end.\n\nPerhaps... I can bring that feeling here as well.”"
 
   gacha_xinhai_awakened_trait: "Young Tactician of Bourou Village"
-  desc_gacha_xinhai_awakened_trait: "“Running through battle manuals in the sea breeze of Bourou Village, it always feels as if the waves would wash the enemy away for me...\n\nBut your battlefield is much larger than I imagined. I’ll try my hand at the divinations this once— it’s just that, once the war is over, I’d very much like to go back to sleep.”"
+  desc_gacha_xinhai_awakened_trait: "“Running through battle manuals in the sea breeze of Bourou Village, it always feels as if the waves would wash the enemy away for me...\n\nBut your battlefield is much larger than I imagined. I’ll try my hand at the temple calculations this once— it’s just that, once the war is over, I’d very much like to go back to sleep.”"
 
   gacha_xinhai_transcended_trait: "Seat of the Divine Priestess"
   desc_gacha_xinhai_transcended_trait: "“You’ve asked me to sit in such a prominent place, but I’m not used to being worshiped by all.\n\nRather than ‘rule’ in the strict sense, I’d rather be like during the old rites back on Watatsumi—bringing peace to people’s hearts.\n\nWhen hearts are calm, the sparks of rebellion die out on their own.”"
 
   # Constellation Traits
-  gacha_xinhai_c2_trait: "Byakuyakoku · Sacred Tides"
+  gacha_xinhai_c2_trait: "Byakuyakoku · Tides of the Sacred Soil"
   desc_gacha_xinhai_c2_trait: "“Do you hear it? That is the tide surging beneath the sacred soil.\n\nI’ve woven Watatsumi’s rites into this land. Plagues will be washed clean by the sea, and ruins will be reborn on the tides.\n\nSo long as that sound does not cease, the hearts of every estate will not dry out.\n\nRest easy—this land is breathing.”"
 
   gacha_xinhai_c4_trait: "Enkanomiya · Dragon-Hunt Tactics"
@@ -75,12 +82,12 @@
   gacha_xinhai_c6_trait_die_desc: "Loses Kokomi’s C6 final ascension bonus."
 
   # === Events ===
-  gacha_xinhai_events.1.title: "Divine Priestess Sangonomiya Kokomi — Arrival"
-  gacha_xinhai_events.1.desc: "A tide of pale light wells up at the heart of the summoning circle. Golden scripture glimmers in the air as Kokomi steps through a curtain of water, her hem and the drifting mist rising together as if Enkanomiya itself has folded into your palace.\n\nShe lifts her gaze to you—already reading the war to come, yet holding her words, awaiting your greeting."
-  gacha_xinhai_events.1.a: "Step forward and hear her reply."
+  gacha_xinhai_events.1.title: "Divine Priestess Sangonomiya Kokomi — Descent"
+  gacha_xinhai_events.1.desc: "#ZG At the center of the wishing circle, golden script flows along the carved lines.\nThe stacked maps of the realm, the crests of great powers, and the tangled documents of state all dissolve into shards of light, gently drawn into a clear bubble rising from the circle’s heart.\nA girl is curled up inside the bubble.#!\nLong pink hair spills over her knees, the hem of her pale blue dress swaying with the currents.\nHer chin rests in both hands, lashes lowered, the faintest smile on her lips, as if she were sunk in a dream she has no wish to wake from.\n#ZG With a soft pop, the bubble bursts.#!"
+  gacha_xinhai_events.1.a: "Step forward to take a closer look."
 
   gacha_xinhai_events.10.title: "Divine Priestess Sangonomiya Kokomi — Temporary Strategic Advisor"
-  gacha_xinhai_events.10.desc: "“I am Sangonomiya Kokomi. Though I had a feeling something like this might happen, being summoned directly here is still a surprise.\n\nI glanced over your map of the realm earlier. Your supply lines are a hundred times more complex than those of Watatsumi Island, and great powers entangle themselves in endless diplomacy. These administrative documents are piled like mountains—my energy is nearly spent just looking at them.\n\nIf you resorted to a summoning ritual, you must be facing a deadlock. As a strategist, I can’t simply sit by and watch a war descend into chaos. I’ll try to simulate the situation for you.\n\nBut please remember: once the victory is secured, you must allow me to retreat to my room and rest.”"
+  gacha_xinhai_events.10.desc: "#ZG The girl opens her eyes and steps lightly down on the ripples, alighting in the center of the circle. Her skirts and the white mist billow together as a small water-born familiar darts past her shoulder, sketching a flowing arc in the air.#!\n“I am Sangonomiya Kokomi.”\n“So the ‘cross-world secondment’ contract recorded in that ancient tome... it seems to have taken effect.”\n“The situation I just saw reflected in the water screen— I understand it now. Your supply lines are shattered, and your diplomatic ties are a hundred times more tangled than anything around Watatsumi. This truly is a deadlock that could crush a ruler.”\n“But since the contract has been signed, I cannot, as a strategist, simply stand by and watch this chaos. I will calculate a ‘path to victory’ for you.”\n“Just remember: once the battle is won, you must allow me to return to my room and rest.”"
   gacha_xinhai_events.10.a: "We welcome our strategist to court."
 
   gacha_xinhai_events.2.title: "Stratagems in a Silk Pouch"
@@ -113,7 +120,7 @@
   # Scene 1
   gacha_xinhai_c3_scene_1_desc: "#ZG The candle flame on the pile of documents flickers once, then finally dies in the dried wax.\nThe arguments over tax adjustments and frontier supplies have at last fallen silent as the ink dries. You rub at your throbbing temples and push open the heavy door leading out to the terrace.\nThe night wind, cool with dew, rushes against your face. Yet at the heart of this vast empire, it is hard to fully relax, even at this hour. The wind howling through high walls and corridors sounds like the whispering of countless petitions still awaiting your seal.#!\nYou need a brief escape.\nGo and get some air."
   gacha_xinhai_c3_scene_1_opt_a: "Step out onto the terrace."
-  gacha_xinhai_c3_scene_1_opt_b: "go straight to bed tonight.#ZG 『Skip the scene』#!"
+  gacha_xinhai_c3_scene_1_opt_b: "Turn in for the night #ZG 『Skip story』#!"
 
   # Scene 2
   gacha_xinhai_c3_scene_2_desc: "#ZG A corner that is usually deserted has, tonight, been occupied.#!\nIt is #bold;color_yellow Sangonomiya Kokomi#!.\n#ZG She has not noticed your arrival at all. The ‘Divine Priestess’ who commands the armies with flawless plans by day is now draped bonelessly over the cold stone railing, like a shell left behind on the shore after the tide retreats.#!\nOne hand traces lazy shapes in the air, her fingertips drawing a slow arc in the moonlight, as if sketching the trail of fish swimming through the deep.\n#ZG It is a side of her you have never seen before—unguarded, with a hint of daze about it...#!"
@@ -144,7 +151,7 @@
   gacha_xinhai_c3_scene_7_opt_b: "Honestly, I often want to run away too. Next time you feel like hiding... take me with you."
 
   # Scene 8
-  gacha_xinhai_c3_scene_8_desc: "#ZG At your words, she blinks in surprise. The last trace of wariness fades from her eyes, and her expression finally relaxes.#!\nKokomi: “...What a strange kind of royal decree, Your Majesty.”\n#ZG Her tone might say that, but her voice is much lighter than before.#!\nKokomi: “Still... whether it’s a corner placed under seal, or having an extra partner in retreat... both sound rather nice.”\n#ZG She closes her eyes and takes in a deep breath of the cool night air, as if surfacing from the lightless depths.#!\nKokomi: “It’s strange. After just a few words with you, it feels like the energy I’d spent has... mostly come back already.”\n#ZG You smile as you watch her.#!"
+  gacha_xinhai_c3_scene_8_desc: "#ZG She blinks in surprise. The last trace of wariness fades from her eyes, and her expression finally relaxes.#!\nKokomi: “...What a strange kind of royal decree, Your Majesty.”\n#ZG Her tone might say that, but her voice is much lighter than before.#!\nKokomi: “Still... whether it’s a corner placed under seal, or having an extra partner in retreat... both sound rather nice.”\n#ZG She closes her eyes and takes in a deep breath of the cool night air, as if surfacing from the lightless depths.#!\nKokomi: “It’s strange. After just a few words with you, it feels like the energy gauge that had hit rock bottom has... mostly filled back up again.”\n#ZG You smile as you watch her.#!"
   gacha_xinhai_c3_scene_8_opt_a: "I’m glad to hear it."
 
   # Scene 9

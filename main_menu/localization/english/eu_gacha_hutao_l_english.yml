@@ -73,9 +73,13 @@
   gacha_hutao_c6_trait_die_desc: "Loses Hu Tao’s C6 final ascension bonus."
 
   # === Events ===
-  gacha_hutao_events.1.title: "77th Director of the Wangsheng Funeral Parlor Hu Tao — Your Exclusive (VIP) Funeral Consultant"
-  gacha_hutao_events.1.desc: "“Ayaya? I thought this cross-world ‘business expansion’ would end with me getting lost again, but I actually landed right in the audience hall of a big client this time~\n\nSooo, how about hiring me as your special consultant? I can handle everything from state funerals to everyday offerings!\n\nSign the contract now, and I’ll give you a twenty-percent discount on your own state funeral someday!\n\n—Kidding, kidding, don’t make such a serious face.”"
-  gacha_hutao_events.1.a: "Welcome, Director Hu."
+  gacha_hutao_events.1.title: "77th Director of the Wangsheng Funeral Parlor Hu Tao — Business Delivered to Your Door"
+  gacha_hutao_events.1.desc: "The palace doors swing open; Hu Tao skips in backward with a paper parasol bouncing on her shoulder. She scans the hall like a shopkeeper eyeing a promising customer, then waves as if to reel you closer.\n\n“Ahem, the Director has arrived—looks like a fresh… cooperation opportunity just walked in on its own!”\n\nShe raises a finger in a playful ‘shh,’ waiting for your opening line."
+  gacha_hutao_events.1.a: "Nod and let her begin."
+
+  gacha_hutao_events.10.title: "77th Director of the Wangsheng Funeral Parlor Hu Tao — Your Exclusive (VIP) Funeral Consultant"
+  gacha_hutao_events.10.desc: "“Ayaya? I thought this cross-world ‘business expansion’ would end with me getting lost again, but I actually landed right in the audience hall of a big client this time~\n\nSooo, how about hiring me as your special consultant? I can handle everything from state funerals to everyday offerings!\n\nSign the contract now, and I’ll give you a twenty-percent discount on your own state funeral someday!\n\n—Kidding, kidding, don’t make such a serious face.”"
+  gacha_hutao_events.10.a: "Welcome, Director Hu."
 
   gacha_hutao_events.2.title: "Business Upgrade"
   gacha_hutao_events.2.desc: "Hu Tao’s scope of business has expanded; now even the enemy’s affairs in the afterlife are fully covered.\n\n“Relax, the Wangsheng Funeral Parlor’s service is absolutely professional!”"

@@ -106,7 +106,27 @@ gacha_create_fischl_effect = {
 }
 
 # ------------------------------------------------------------------------------
-# 2. Trait Management Helper (Delta Logic)
+# 2. Debug Helper: Replay Intro (Two-Stage Arrival) [DISABLED FOR TEST]
+# ------------------------------------------------------------------------------
+# gacha_fischl_debug_replay_intro = {
+#     random_in_global_list = {
+#         variable = gacha_obtained_characters
+#         limit = { has_character_modifier = gacha_fischl_modifier }
+#         save_scope_as = fischl_char
+#     }
+#
+#     if = {
+#         limit = { exists = scope:fischl_char }
+#         scope:fischl_char = {
+#             root = { trigger_event_non_silently = { id = gacha_fischl_events.1 } }
+#         }
+#     }
+#
+#     clear_saved_scope = fischl_char
+# }
+
+# ------------------------------------------------------------------------------
+# 3. Trait Management Helper (Delta Logic)
 # ------------------------------------------------------------------------------
 gacha_fischl_update_traits = {
     # Safety Init

@@ -8,7 +8,7 @@
   gacha_text_reward_gold_refund: "On the altar lie only worn arms and leftover supplies, appraised and added back to the treasury. (Refunds @gold!#color_yellow [ROOT.ScriptValue('gacha_refund_gold_small_sv')|0]#!)"
 
   gacha_events_interaction: "Festival: Fated Encounter"
-  gacha_events_interaction_desc: "[actor.GetName] proposes to raise a sacred altar, offering this world’s wealth to beckon heroes and savants from the distant sea of stars."
+  gacha_events_interaction_desc: "Raise a sacred altar, offering this world’s wealth to beckon heroes and savants from the distant sea of stars."
 
   STATIC_MODIFIER_NAME_gacha_core_modifier: "Blessing of the Wish"
   STATIC_MODIFIER_DESC_gacha_core_modifier: "Blessing of the Wish"

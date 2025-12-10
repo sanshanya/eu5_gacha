@@ -106,24 +106,24 @@ gacha_create_nahida_effect = {
 }
 
 # ------------------------------------------------------------------------------
-# 2. Debug Helper: Replay Intro (Two-Stage Arrival)
+# 2. Debug Helper: Replay Intro (Two-Stage Arrival) [DISABLED FOR TEST]
 # ------------------------------------------------------------------------------
-gacha_nahida_debug_replay_intro = {
-    random_in_global_list = {
-        variable = gacha_obtained_characters
-        limit = { has_character_modifier = gacha_nahida_modifier }
-        save_scope_as = nahida_char
-    }
-
-    if = {
-        limit = { exists = scope:nahida_char }
-        scope:nahida_char = {
-            root = { trigger_event_non_silently = { id = gacha_nahida_events.1 } }
-        }
-    }
-
-    clear_saved_scope = nahida_char
-}
+# gacha_nahida_debug_replay_intro = {
+#     random_in_global_list = {
+#         variable = gacha_obtained_characters
+#         limit = { has_character_modifier = gacha_nahida_modifier }
+#         save_scope_as = nahida_char
+#     }
+#
+#     if = {
+#         limit = { exists = scope:nahida_char }
+#         scope:nahida_char = {
+#             root = { trigger_event_non_silently = { id = gacha_nahida_events.1 } }
+#         }
+#     }
+#
+#     clear_saved_scope = nahida_char
+# }
 
 # ------------------------------------------------------------------------------
 # 3. Trait Management Helper (Delta Logic)

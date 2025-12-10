@@ -74,9 +74,13 @@
   gacha_klee_c6_trait_die_desc: "Loses Klee’s C6 final ascension bonus."
 
   # === Events ===
-  gacha_klee_events.1.title: "Knights of Favonius · Spark Knight Klee — Your (Highly Hazardous) Mascot"
-  gacha_klee_events.1.desc: "“Dah-dah-dah~! Klee’s here!\n\nHuh? This isn’t the confinement room, or the Knights’ headquarters…\n\nWaaah, what a big map! Are all those red flags the bad guys? Are those little blocks with walls drawn on them the rocks we use for blasting fish?\n\nI’m the Spark Knight Klee! Captain Jean always says I’m too naughty, but I’m super strong, you know!\n\nAnything that goes boom-boom, or any hard, hard walls—just leave them to Klee!\n\nUm… in exchange, could you *not* confiscate my Jumpy Dumpties?\n\nI’ll be really good! Probably… only one explosion a day?\n\nOh, oh, and do you have yummy Calla Lilies here too?”"
-  gacha_klee_events.1.a: "Welcome, Klee!"
+  gacha_klee_events.1.title: "Knights of Favonius · Spark Knight Klee — Boom-Boom Entrance"
+  gacha_klee_events.1.desc: "A harmless puff of pink smoke pops outside the palace window—then a red-and-white bundle tumbles in atop Dodoco. Klee squints around for a ‘commander,’ spots you, and brandishes a Jumpy Dumpty like a business card, grinning ear to ear.\n\nShe’s waiting for your response before she shows off her ‘explosive résumé.’"
+  gacha_klee_events.1.a: "Ask her to set the bomb down and speak."
+
+  gacha_klee_events.10.title: "Knights of Favonius · Spark Knight Klee — Your (Highly Hazardous) Mascot"
+  gacha_klee_events.10.desc: "“Dah-dah-dah~! Klee’s here!\n\nHuh? This isn’t the confinement room, or the Knights’ headquarters…\n\nWaaah, what a big map! Are all those red flags the bad guys? Are those little blocks with walls drawn on them the rocks we use for blasting fish?\n\nI’m the Spark Knight Klee! Captain Jean always says I’m too naughty, but I’m super strong, you know!\n\nAnything that goes boom-boom, or any hard, hard walls—just leave them to Klee!\n\nUm… in exchange, could you *not* confiscate my Jumpy Dumpties?\n\nI’ll be really good! Probably… only one explosion a day?\n\nOh, oh, and do you have yummy Calla Lilies here too?”"
+  gacha_klee_events.10.a: "Welcome, Klee!"
 
   gacha_klee_events.2.title: "Even Bigger Booms!"
   gacha_klee_events.2.desc: "Klee’s power has grown, and she jumps up in delight.\n\n“Waaah~ Klee got stronger! Now I can make even bigger bombs! Hehe, then I can blast *sooo* many fish!”"

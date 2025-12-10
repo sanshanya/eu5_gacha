@@ -73,9 +73,13 @@
   gacha_keqing_c6_trait_die_desc: "Loses Keqing’s C6 final ascension bonus."
 
   # === Events ===
-  gacha_keqing_events.1.title: "Yuheng of the Liyue Qixing — The Time for Reform Is Now"
-  gacha_keqing_events.1.desc: "“I am Keqing, the Yuheng of the Liyue Qixing.\n\nSince I answered your summons, I’ll speak plainly—if you think your state is running well right now, you’re definitely mistaken.\n\nI just skimmed your administrative accounts and infrastructure plans…\n\nFar too slow. Far too inefficient.\n\nHow can a fossilized bureaucracy like this possibly weather the storms to come?\n\nThe time for reform has already arrived.\n\nEven lands under the gaze of a god must ultimately be governed by human hands—let alone a place where even Rex Lapis is absent.\n\nI’ll help you reshape this country’s order.\n\nBut you’d better be prepared—my working pace is very fast.\n\nDon’t fall behind, all right… partner, who bears the title of ‘sovereign’.”"
-  gacha_keqing_events.1.a: "Then I’ll be counting on you, Yuheng."
+  gacha_keqing_events.1.title: "Yuheng of the Liyue Qixing — Efficiency Knocks"
+  gacha_keqing_events.1.desc: "A brisk triple-knock echoes; Keqing strides in already holding a stack of freshly drafted plans. Her gaze sweeps the hall, landing on you as if she were appraising a future partner’s execution speed.\n\n“I’ll ask just once: are you ready to accelerate?”\n\nShe waits for your reply before flipping to the next page."
+  gacha_keqing_events.1.a: "Raise a hand: let’s begin."
+
+  gacha_keqing_events.10.title: "Yuheng of the Liyue Qixing — The Time for Reform Is Now"
+  gacha_keqing_events.10.desc: "“I am Keqing, the Yuheng of the Liyue Qixing.\n\nSince I answered your summons, I’ll speak plainly—if you think your state is running well right now, you’re definitely mistaken.\n\nI just skimmed your administrative accounts and infrastructure plans…\n\nFar too slow. Far too inefficient.\n\nHow can a fossilized bureaucracy like this possibly weather the storms to come?\n\nThe time for reform has already arrived.\n\nEven lands under the gaze of a god must ultimately be governed by human hands—let alone a place where even Rex Lapis is absent.\n\nI’ll help you reshape this country’s order.\n\nBut you’d better be prepared—my working pace is very fast.\n\nDon’t fall behind, all right… partner, who bears the title of ‘sovereign’.”"
+  gacha_keqing_events.10.a: "Then I’ll be counting on you, Yuheng."
 
   gacha_keqing_events.2.title: "Efficiency Increased"
   gacha_keqing_events.2.desc: "Keqing has optimized the existing workflows. Everyone is exhausted, but efficiency really has gone up.\n\n“Not enough. We can go even faster.”"

@@ -74,9 +74,13 @@
   gacha_raiden_c6_trait_die_desc: "Loses the Raiden Shogun C6 final ascension bonus."
 
   # === Events ===
-  gacha_raiden_events.1.title: "Almighty Narukami Ogosho Raiden Shogun — 'Eternity' Descends"
-  gacha_raiden_events.1.desc: "I am the Raiden Shogun.\n\nSince you have awakened my consciousness, you must already be prepared to bear 'eternity' upon your shoulders.\n\nThere is no need to be nervous. I have already examined these lands.\n\nWar is frequent, laws are slack, and the hearts of the people waver like disordered thunder.\n\nYet amidst the chaos there is also a certain... resilience that stirs old memories.\n\nNow that I have descended, there shall be no more meaningless sacrifice here.\n\nI will bring Inazuma's laws to this realm.\n\nIf you cannot keep pace with me, or if you are swallowed by 'erosion'...\n\nthen I will cut you down without hesitation.\n\nDo not disappoint me."
-  gacha_raiden_events.1.a: "For eternity!"
+  gacha_raiden_events.1.title: "Almighty Narukami Ogosho Raiden Shogun — Footfalls Before the Thunder"
+  gacha_raiden_events.1.desc: "Violet light leaks through the palace windows, thunder murmurs low. Blade in hand, the Shogun steps into the hall, her footfalls keeping time with the storm until even the air feels taut. She does not speak first—her silence alone demands your answer."
+  gacha_raiden_events.1.a: "Meet her gaze: ready for lightning."
+
+  gacha_raiden_events.10.title: "Almighty Narukami Ogosho Raiden Shogun — 'Eternity' Descends"
+  gacha_raiden_events.10.desc: "I am the Raiden Shogun.\n\nSince you have awakened my consciousness, you must already be prepared to bear 'eternity' upon your shoulders.\n\nThere is no need to be nervous. I have already examined these lands.\n\nWar is frequent, laws are slack, and the hearts of the people waver like disordered thunder.\n\nYet amidst the chaos there is also a certain... resilience that stirs old memories.\n\nNow that I have descended, there shall be no more meaningless sacrifice here.\n\nI will bring Inazuma's laws to this realm.\n\nIf you cannot keep pace with me, or if you are swallowed by 'erosion'...\n\nthen I will cut you down without hesitation.\n\nDo not disappoint me."
+  gacha_raiden_events.10.a: "For eternity!"
 
   gacha_raiden_events.2.title: "Flashes of Thunderlight"
   gacha_raiden_events.2.desc: "The Raiden Shogun's power seems to have grown. The edge of her blade is keener, and the lightning around her shines ever more brilliantly.\n\n'No thought. No vacillation.'"
