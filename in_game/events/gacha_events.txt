@@ -97,15 +97,24 @@ gacha_events.1 = {
       }
       
       hidden_effect = {
-          # 标记已使用
-          gacha_ensure_state_initialized = yes
+          # [FIX] 立即标记已使用 - 必须在所有其他逻辑之前执行
           set_variable = { name = gacha_used_free_first value = yes }
-
-          # 使用 V3 解析逻辑：直接生成 5 星角色并保存 Scope
-          gacha_resolve_5star_and_save_scope = yes   # 保险
-
-          # 触发展示事件，由事件自身的 immediate 块抓取 Scope 快照
-          # trigger_event_non_silently = { id = gacha_events.5 }
+          
+          # 双重检查：防止竞态条件下多次执行
+          # 如果已有5星角色记录，说明已经抽过了
+          if = {
+              limit = {
+                  OR = {
+                      NOT = { has_variable = gacha_total_rolls_count }
+                      var:gacha_total_rolls_count = 0
+                  }
+              }
+              
+              gacha_ensure_state_initialized = yes
+              
+              # 使用 V3 解析逻辑：直接生成 5 星角色并保存 Scope
+              gacha_resolve_5star_and_save_scope = yes
+          }
       }
     }
 
@@ -132,6 +141,11 @@ gacha_events.1 = {
     # ==========================================
     option = {
         name = gacha_events.1.b
+    }
+
+    # [FIX] 事件结束时释放锁，允许再次触发
+    after = {
+        remove_variable = gacha_event_lock
     }
 }
 

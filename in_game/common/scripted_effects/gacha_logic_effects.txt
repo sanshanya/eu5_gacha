@@ -286,6 +286,12 @@ gacha_wrapper_hundred_pull = {
     # 统计用变量 (用于汇总弹窗)
     set_variable = { name = gacha_batch_4star_count value = 0 }
     set_variable = { name = gacha_batch_5star_count value = 0 }
+    
+    # 四星资源细分统计
+    set_variable = { name = gacha_batch_gold_count value = 0 }
+    set_variable = { name = gacha_batch_prestige_count value = 0 }
+    set_variable = { name = gacha_batch_legitimacy_count value = 0 }
+    set_variable = { name = gacha_batch_stability_count value = 0 }
 
     # 2. 循环抽卡（事件正常触发，不静默）
     while = {
@@ -302,6 +308,12 @@ gacha_wrapper_hundred_pull = {
         else_if = {
             limit = { local_var:gacha_calc_tier_idx = 1 }
             change_variable = { name = gacha_batch_4star_count add = 1 }
+            
+            # 四星资源细分统计 (累加实际资源值)
+            if = { limit = { local_var:gacha_4star_idx_val = 0 } change_variable = { name = gacha_batch_gold_count add = 240 } }
+            else_if = { limit = { local_var:gacha_4star_idx_val = 1 } change_variable = { name = gacha_batch_prestige_count add = 8 } }
+            else_if = { limit = { local_var:gacha_4star_idx_val = 2 } change_variable = { name = gacha_batch_legitimacy_count add = 8 } }
+            else = { change_variable = { name = gacha_batch_stability_count add = 4 } }
         }
 
         change_local_variable = { name = gacha_loop_idx add = 1 }

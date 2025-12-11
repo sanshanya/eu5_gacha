@@ -21,6 +21,7 @@ gacha_ensure_state_initialized = {
     # --- 状态旗标 (_bool) ---
     if = { limit = { NOT = { has_variable = gacha_is_guaranteed_bool } }  set_variable = { name = gacha_is_guaranteed_bool value = 0 } }
     if = { limit = { NOT = { has_variable = gacha_block_pity_met_bool } } set_variable = { name = gacha_block_pity_met_bool value = 0 } }
+    if = { limit = { NOT = { has_variable = gacha_is_suppress_events_bool } } set_variable = { name = gacha_is_suppress_events_bool value = 0 } }
 
     # --- 轮换索引 (_idx) ---
     if = { limit = { NOT = { has_global_variable = gacha_current_up_idx } } set_global_variable = { name = gacha_current_up_idx value = 0 } } # 默认 0 (心海)

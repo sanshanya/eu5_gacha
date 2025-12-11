@@ -79,8 +79,8 @@
 
   # === 结果：百连汇总 (.100) ===
   gacha_events.100.title: "孤注一掷：星辰的回响"
-  gacha_events.100.desc: "百次祈愿已毕。祭坛上堆满了星辰的馈赠：\n\n#color_yellow [ROOT.GetVariable('gacha_batch_4star_count')|0]#! 份星辰恩赐 (四星资源)\n#color_yellow [ROOT.GetVariable('gacha_batch_5star_count')|0]#! 位天选之人 (五星角色)\n\n现在，是时候揭示那些最耀眼的名字了……"
-  gacha_events.100.a: "见证奇迹"
+  gacha_events.100.desc: "百次祈愿已毕。祭坛上堆满了星辰的馈赠：\n\n#bold 五星角色#!：#color_yellow [ROOT.Var('gacha_batch_5star_count').GetValue|0]#! 位\n\n#bold 四星资源#!：#color_yellow [ROOT.Var('gacha_batch_4star_count').GetValue|0]#! 份\n   @gold!  +[ROOT.Var('gacha_batch_gold_count').GetValue|0]\n  @prestige! +[ROOT.Var('gacha_batch_prestige_count').GetValue|0]\n  @legitimacy! +[ROOT.Var('gacha_batch_legitimacy_count').GetValue|0]\n  @stability! +[ROOT.Var('gacha_batch_stability_count').GetValue|0]"
+  gacha_events.100.a: "收下馈赠"
   gacha_events.1.a100: "孤注一掷 (百连) ： @gold!#color_yellow [ROOT.ScriptValue('gacha_hundred_pull_cost_sv')|0]#!"
 
   # === 其他结果 ===

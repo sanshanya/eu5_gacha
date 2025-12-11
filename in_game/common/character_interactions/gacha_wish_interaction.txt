@@ -13,9 +13,11 @@
   }
 
   # === 谁能点 ===
-  # 这里始终允许，因为没钱的判断我们放在事件菜单里了
+  # [FIX] 添加事件锁机制，防止快速点击触发多个事件实例
   allow = {
-    always = yes
+    scope:actor = {
+      NOT = { has_variable = gacha_event_lock }
+    }
   }
   select_trigger = {
     looking_for_a = character
@@ -31,6 +33,9 @@
   # === 效果 ===
   effect = {
     scope:actor = {
+      # [FIX] 立即设置事件锁，防止重复触发
+      set_variable = { name = gacha_event_lock value = yes }
+      
       # [V3] 打开菜单前先进行懒加载初始化，确保所有抽卡变量已就绪
       gacha_ensure_state_initialized = yes
 
@@ -41,3 +46,4 @@
 
   ai_will_do = { value = 0 }
 }
+
