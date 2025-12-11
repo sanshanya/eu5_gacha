@@ -4,153 +4,152 @@
   # ============================================================
 
   # === Name ===
-  gacha_first_name_raiden: "Raiden"
-  gacha_last_name_raiden: "Shogun"
+  gacha_first_name_raiden: "Shogun"
+  gacha_last_name_raiden: "Raiden"
 
   # === Traits ===
-  gacha_raiden_origin_trait: "Narukami Island: Eternal Stillness"
-  desc_gacha_raiden_origin_trait: "So-called 'rebellion' is nothing more than noise. As long as my radiance shines bright enough, shadows will have nowhere to hide. I shall make your nation as calm as a motionless lake. Quietude is the precondition for 'eternity'."
+  gacha_raiden_origin_trait: "Narukami Island · Still Land of Eternity"
+  desc_gacha_raiden_origin_trait: "“So-called ‘rebellion’ is nothing but noise.\n\nSo long as my radiance shines bright enough, shadows will have nowhere to hide.\n\nI shall make your realm as smooth and unruffled as still water.\n\nSilence is the prerequisite for eternity.”"
 
-  gacha_raiden_awakened_trait: "Secret Art: Musou no Hitotachi"
-  desc_gacha_raiden_awakened_trait: "This blade once felled gods. To use it now to open new lands for you is hardly a disgrace. No need for tactics, no need for schemes—once my lightning flashes, the enemy ranks are already ash."
+  gacha_raiden_awakened_trait: "Musou no Hitotachi"
+  desc_gacha_raiden_awakened_trait: "“This blade once felled gods.\n\nTo wield it now to carve out new lands for you is no dishonor.\n\nNo need for tactics, no need for schemes—once my lightning flashes, the enemy lines are already ash.”"
 
-  gacha_raiden_transcended_trait: "Supreme Authority Over All"
-  desc_gacha_raiden_transcended_trait: "Authority is not to be divided, and my will is not to be defied. Since I have been seated here, I will not permit any 'council' or 'estate' to prattle. This body is the absolute. This body is the law."
+  gacha_raiden_transcended_trait: "Supreme Authority of All Mortals"
+  desc_gacha_raiden_transcended_trait: "“Power brooks no division. Will brooks no defiance.\n\nSince you have seated me here, I will permit no ‘assemblies’ or ‘estates’ to prattle.\n\nThis body is the absolute. This body is the law.”"
 
   # Constellation Traits
-  gacha_raiden_c2_trait: "Calamity: Engulfing Lightning"
-  desc_gacha_raiden_c2_trait: "Those conquered lands still yearn for their former lords? Ridiculous. I will cut down their delusions about the past with Engulfing Lightning. From now on, their history holds only the 'present', and their future holds only 'you'."
+  gacha_raiden_c2_trait: "Calamity · Thunderbolt"
+  desc_gacha_raiden_c2_trait: "“Those conquered lands still pine for their former lords? Ridiculous.\n\nI shall cut down their delusional yearning for the past with a single thunderbolt.\n\nFrom now on, their history is only ‘the present,’ and their future is only ‘you.’”"
 
-  gacha_raiden_c4_trait: "Dreams: True Edict"
-  desc_gacha_raiden_c4_trait: "Watching the warriors charge... I am reminded of Sasayuri and Chiyo from days long past. No—this Shogun will not grow sentimental. I shall grant the whole army the blessing of 'Musou Isshin'. So long as they offer me their loyalty, I promise them one thing—victory."
+  gacha_raiden_c4_trait: "Dreams · True Decree"
+  desc_gacha_raiden_c4_trait: "“Watching the warriors charge... I recall the lilies and Chiyo of days long gone.\n\n...No. The Shogun shall not indulge in sentiment.\n\nI shall grant the whole army the blessing of ‘one heart united in dreams.’\n\nSo long as they offer me their loyalty, I shall promise them—victory.”"
 
-  gacha_raiden_c6_trait: "Source of Wishes"
-  desc_gacha_raiden_c6_trait: "Once, I believed 'eternity' to be time forever frozen. Yet watching you build this vast empire step by step, I have begun to glimpse another possibility. Since mortal wishes can shine so brilliantly, then I shall try—just this once—to gaze upon the future you carve out."
+  gacha_raiden_c6_trait: "Origin · Wishbearer"
+  desc_gacha_raiden_c6_trait: "“Once, I believed ‘eternity’ to be time held perfectly still.\n\nYet watching you raise this vast empire step by steady step, I have begun to glimpse another possibility.\n\nIf mortal wishes can shine so brilliantly... then I shall try, at least, to bear witness to the future you will forge.”"
 
   # === Modifiers ===
-  STATIC_MODIFIER_NAME_gacha_raiden_modifier: "Narukami's Blessing"
-  STATIC_MODIFIER_DESC_gacha_raiden_modifier: "The sights of this fleeting world may endure for centuries, yet human life is but white dew and a bubble upon the water."
+  STATIC_MODIFIER_NAME_gacha_raiden_modifier: "Narukami’s Blessing"
+  STATIC_MODIFIER_DESC_gacha_raiden_modifier: "“The scenery of this fleeting world remains the same for hundreds of years, yet human life is but dew on the grass, bubbles upon the stream.”"
 
-  gacha_raiden_modifier: "Pledge of Eternity"
-  gacha_raiden_modifier_desc: "The Raiden Shogun's radiance shelters this nation, driving it steadily toward eternity."
+  gacha_raiden_modifier: "Oath of Eternity"
+  gacha_raiden_modifier_desc: "The Raiden Shogun’s radiance shelters this nation, ensuring it marches ever onward toward eternity."
 
   # === Constellations ===
-  STATIC_MODIFIER_NAME_gacha_raiden_c0_modifier: "Shadow of Calamity · Base"
-  STATIC_MODIFIER_NAME_gacha_raiden_c1_modifier: "Ominous Divination"
-  STATIC_MODIFIER_NAME_gacha_raiden_c2_modifier: "Steelbreaker"
-  STATIC_MODIFIER_NAME_gacha_raiden_c3_modifier: "Bygone Shadows"
+  STATIC_MODIFIER_NAME_gacha_raiden_c0_modifier: "Baleful Shadowfall · Base"
+  STATIC_MODIFIER_NAME_gacha_raiden_c1_modifier: "Baleful Augury"
+  STATIC_MODIFIER_NAME_gacha_raiden_c2_modifier: "Calamity · Thunderbolt"
+  STATIC_MODIFIER_NAME_gacha_raiden_c3_modifier: "True Shadows of Bygone Days"
   STATIC_MODIFIER_NAME_gacha_raiden_c4_modifier: "Pledge to the Unchanging Way"
-  STATIC_MODIFIER_NAME_gacha_raiden_c5_modifier: "Manifest Shogun"
-  STATIC_MODIFIER_NAME_gacha_raiden_c6_modifier: "Bearer of Wishes"
+  STATIC_MODIFIER_NAME_gacha_raiden_c5_modifier: "Baleful General Manifests"
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_modifier: "Bearing Wishes Forward"
 
-  STATIC_MODIFIER_NAME_gacha_raiden_reader_modifier: "Shadow's Reader"
-  STATIC_MODIFIER_DESC_gacha_raiden_reader_modifier: "The otherworldly tome you presented sparked the thunder god's curiosity; knowledge and legitimacy now resonate together in your discussions."
+  STATIC_MODIFIER_NAME_gacha_raiden_reader_modifier: "Ei’s Reading Companion"
+  STATIC_MODIFIER_DESC_gacha_raiden_reader_modifier: "The off-world tomes you’ve offered have stoked thunder’s curiosity; knowledge and legitimacy now resonate in your debates."
 
-  STATIC_MODIFIER_NAME_gacha_raiden_favor_modifier: "Shadow's Favor"
-  STATIC_MODIFIER_DESC_gacha_raiden_favor_modifier: "That cup of sweetness put the god at ease. She has given your logistical reforms her personal approval, and both prestige and construction have sped up in response."
+  STATIC_MODIFIER_NAME_gacha_raiden_favor_modifier: "Ei’s Favor"
+  STATIC_MODIFIER_DESC_gacha_raiden_favor_modifier: "That cup of sweetness eased the god’s guard; she grants you leeway to refine logistics, speeding both prestige and construction."
 
   # Raiden Shogun - Country Modifiers
-  STATIC_MODIFIER_NAME_gacha_raiden_country_modifier: "Narukami Island: Eternal Stillness"
-  STATIC_MODIFIER_DESC_gacha_raiden_country_modifier: "Stability under thunder's decree lets war-weariness subside and legitimacy grow firmer."
+  STATIC_MODIFIER_NAME_gacha_raiden_country_modifier: "Narukami Island · Still Land of Eternity"
+  STATIC_MODIFIER_DESC_gacha_raiden_country_modifier: "Stability under thunder’s decree lets war exhaustion ebb and legitimacy grow firm."
 
-  STATIC_MODIFIER_NAME_gacha_raiden_c1_country_modifier: "Yae Miko's Ledger"
-  STATIC_MODIFIER_DESC_gacha_raiden_c1_country_modifier: "Administrative efficiency rises, and the civil–military cabinet runs more smoothly under the Guuji's books."
+  STATIC_MODIFIER_NAME_gacha_raiden_c1_country_modifier: "Yae Miko’s Ledgers"
+  STATIC_MODIFIER_DESC_gacha_raiden_c1_country_modifier: "Administrative efficiency rises, and the civil-military cabinet runs more smoothly."
 
-  STATIC_MODIFIER_NAME_gacha_raiden_c2_country_modifier: "Calamity: Engulfing Lightning"
-  STATIC_MODIFIER_DESC_gacha_raiden_c2_country_modifier: "The chill of thunder's killing intent lowers both the burden of war and the resistance to new construction."
+  STATIC_MODIFIER_NAME_gacha_raiden_c2_country_modifier: "Calamity · Thunderbolt"
+  STATIC_MODIFIER_DESC_gacha_raiden_c2_country_modifier: "The killing intent heralded by thunder lessens both the drag of war and the friction of construction."
 
-  STATIC_MODIFIER_NAME_gacha_raiden_c5_country_modifier: "Supreme Authority Over All"
-  STATIC_MODIFIER_DESC_gacha_raiden_c5_country_modifier: "Decrees crash like thunder in the ears; the administrative machine runs with ever greater efficiency."
+  STATIC_MODIFIER_NAME_gacha_raiden_c5_country_modifier: "Supreme Authority of the Realm"
+  STATIC_MODIFIER_DESC_gacha_raiden_c5_country_modifier: "Laws crash down like thunder; the administrative apparatus works with ruthless efficiency."
 
-  STATIC_MODIFIER_NAME_gacha_raiden_c6_country_modifier: "Source of Wishes"
-  STATIC_MODIFIER_DESC_gacha_raiden_c6_country_modifier: "Destiny aligns with the mandate; prestige, lawmaking, and the power to end wars all rise in concert."
+  STATIC_MODIFIER_NAME_gacha_raiden_c6_country_modifier: "Origin · Wishbearer"
+  STATIC_MODIFIER_DESC_gacha_raiden_c6_country_modifier: "Heaven’s mandate made manifest—prestige, lawmaking, and the power to end wars all rise together."
 
-  # Trait Loss
-  gacha_raiden_origin_trait_die_desc: "Loses the 'Shadow's Arsenal' starting bonus."
-  gacha_raiden_awakened_trait_die_desc: "Loses the 'Shogun of Thunder' profession bonus."
-  gacha_raiden_transcended_trait_die_desc: "Loses the 'Eternal Order' ruler bonus."
-  gacha_raiden_c2_trait_die_desc: "Loses the Raiden Shogun C2 ascension bonus."
-  gacha_raiden_c4_trait_die_desc: "Loses the Raiden Shogun C4 ascension bonus."
-  gacha_raiden_c6_trait_die_desc: "Loses the Raiden Shogun C6 final ascension bonus."
+  gacha_raiden_origin_trait_die_desc: "Loses the 'Armory of Shadows' starting bonus."
+  gacha_raiden_awakened_trait_die_desc: "Loses the 'Thunder Shogun' profession bonus."
+  gacha_raiden_transcended_trait_die_desc: "Loses the 'Order of Eternity' ruler bonus."
+  gacha_raiden_c2_trait_die_desc: "Loses the Raiden Shogun’s C2 ascension bonus."
+  gacha_raiden_c4_trait_die_desc: "Loses the Raiden Shogun’s C4 ascension bonus."
+  gacha_raiden_c6_trait_die_desc: "Loses the Raiden Shogun’s C6 final ascension bonus."
 
   # === Events ===
-  gacha_raiden_events.1.title: "Almighty Narukami Ogosho Raiden Shogun — Footfalls Before the Thunder"
-  gacha_raiden_events.1.desc: "Violet light leaks through the palace windows, thunder murmurs low. Blade in hand, the Shogun steps into the hall, her footfalls keeping time with the storm until even the air feels taut. She does not speak first—her silence alone demands your answer."
-  gacha_raiden_events.1.a: "Meet her gaze: ready for lightning."
+  gacha_raiden_events.1.title: "Almighty Narukami Ogosho Raiden Shogun — “Thunder’s Peal”"
+  gacha_raiden_events.1.desc: "#ZG No wind stirs at the center of the wishing circle; even the motes of dust in the air are forced to stillness.\nAs the golden script crosses into the heart of the array, it twists at once into a shrill violet radiance.\nThere are no cluttered trinkets, no mundane debris—only a few crimson sakura petals, frozen in mid-air by an absolute power, neither falling nor fading.\nWithin this forcibly carved pocket of stagnant time, a great sphere of light hangs suspended.#!\nA violet-haired woman floats cross-legged within the lightning, eyes closed.\nArcs of electricity coil about her in suffocating silence, her expression cold as ice, like a finely wrought doll that long ago surpassed life and death, sunk in endless meditation.\n#ZG In the air there is only\nsilence\nand the slow, deep beat of a heart.#!"
+  gacha_raiden_events.1.a: "......"
 
-  gacha_raiden_events.10.title: "Almighty Narukami Ogosho Raiden Shogun — 'Eternity' Descends"
-  gacha_raiden_events.10.desc: "I am the Raiden Shogun.\n\nSince you have awakened my consciousness, you must already be prepared to bear 'eternity' upon your shoulders.\n\nThere is no need to be nervous. I have already examined these lands.\n\nWar is frequent, laws are slack, and the hearts of the people waver like disordered thunder.\n\nYet amidst the chaos there is also a certain... resilience that stirs old memories.\n\nNow that I have descended, there shall be no more meaningless sacrifice here.\n\nI will bring Inazuma's laws to this realm.\n\nIf you cannot keep pace with me, or if you are swallowed by 'erosion'...\n\nthen I will cut you down without hesitation.\n\nDo not disappoint me."
+  gacha_raiden_events.10.title: "Almighty Narukami Ogosho Raiden Shogun — “Eternity”"
+  gacha_raiden_events.10.desc: "#ZG A single lance of lightning cleaves the light sphere neatly in two from within.\nThe woman opens her eyes. There is no confusion in those pupils—only lightning.#!\n“I am the Raiden Shogun.”#ZG \nHer voice is not loud, yet it echoes, as if it were resounding directly within your mind.#!\n“This body has descended upon this fleeting world by a pact with ‘Eternity.’”\n“Endless strife, decrees that change with each dawn. Your realm is rife with needless ‘noise.’”\n“Since you have awakened me, it can only mean you yearn for unchanging law.”\n“Very well. I shall sweep aside all that stands in the way of ‘Eternity’—be it an enemy host abroad, or deluded fancies at home.”\n#ZG She turns, presenting you her back as she calmly wipes down her blade.#!\n“If you cannot keep pace with me, or if you are swallowed by so-called ‘wear and tear’...”\n“I shall cut you down without hesitation.”\n“—Do not disappoint me.”"
   gacha_raiden_events.10.a: "For eternity!"
 
-  gacha_raiden_events.2.title: "Flashes of Thunderlight"
-  gacha_raiden_events.2.desc: "The Raiden Shogun's power seems to have grown. The edge of her blade is keener, and the lightning around her shines ever more brilliantly.\n\n'No thought. No vacillation.'"
+  gacha_raiden_events.2.title: "Lightning Flashes"
+  gacha_raiden_events.2.desc: "The Raiden Shogun’s power seems to have grown. The edge of her blade is keener than before, the lightning around her all the more dazzling.\n\n“Empty thought. Empty desire.”"
   gacha_raiden_events.2.a: "Radiance without mercy."
 
-  gacha_raiden_events.4.title: "Walking Beside Your Eternity"
-  gacha_raiden_events.4.desc: "I am Ei.\n\nFor long years, I sealed myself away within the Plane of Euthymia, leaving the 'Shogun' to carry out eternity's decrees.\n\nI had witnessed too many losses, and so I sought to hold time still.\n\nI had seen too much erosion, and so I wished to freeze all desire.\n\nWhen I first arrived here, I thought this would be yet another mortal nation fated for destruction.\n\nI was prepared to cut down every 'variable', just as I once did in Inazuma.\n\nBut... you are different.\n\nYou protect the weak amid the flames of war; you preserve sincerity amidst schemes and intrigue.\n\nYou have shown me that even mortals, fleeting as morning dew, can blaze with light brighter than the stars.\n\nThe 'Shogun' will remain your blade, cleaving apart all who stand against you.\n\nAs for me...\n\nI will sheath the thunder and brew you a pot of tea.\n\nYou need not fear erosion, nor the end.\n\nSo long as you keep moving forward, I shall, with this body, make you a promise—\n\nyour realm shall be eternity."
-  gacha_raiden_events.4.a: "Truly, heaven smiles on us!"
+  gacha_raiden_events.4.title: "To Walk Beside the Sovereign"
+  gacha_raiden_events.4.desc: "“I am Raiden Ei.\n\nAcross long ages, I sealed myself within the ‘Plane of Euthymia,’ letting the ‘Shogun’ carry out the decrees of eternity in my place.\n\nI have witnessed too much loss—so I sought to bind time.\n\nI have witnessed too much erosion—so I sought to freeze all wishes.\n\nWhen I first arrived here, I thought this was simply another mortal nation doomed to destruction.\n\nI was prepared to sever every variable, just as I once did in Inazuma.\n\nBut... you are different.\n\nYou shielded the weak in the midst of war. You kept a true heart amid the games of power.\n\nYou have shown me that even mortals as fleeting as morning dew can burn brighter than the stars.\n\n‘The Shogun’ shall remain your blade, shattering all your enemies in a single stroke.\n\nAs for me...\n\nI shall set the thunder aside, and brew a pot of tea for you.\n\nDo not fear erosion. Do not fear the end.\n\nSo long as you continue forward, I shall, with this body, make this vow—\n\nYour realm shall be eternity.”"
+  gacha_raiden_events.4.a: "Surely, this is Heaven’s favor!"
 
-  gacha_raiden_events.11.title: "Severing the Old Dream"
-  gacha_raiden_events.11.desc: "Those conquered lands still cling to dreams of their former lords? Laughable. I will sever their delusions about the past with Engulfing Lightning. From this day forward, their history holds only the present, and their future holds only you."
+  gacha_raiden_events.11.title: "Severing Old Dreams"
+  gacha_raiden_events.11.desc: "“Those conquered lands still pine for their former lords? Ridiculous.\n\nI shall cut down their delusional yearning for the past with a single thunderbolt.\n\nFrom now on, their history is only ‘the present,’ and their future is only ‘you.’”"
   gacha_raiden_events.11.a: "Peace under heaven."
 
-  gacha_raiden_events.12.title: "With This Body, I Promise"
-  gacha_raiden_events.12.desc: "Watching the warriors charge... I am reminded of Sasayuri and Chiyo of days gone by. No—the Shogun will not grow sentimental. I shall grant the whole army the blessing of 'Musou Isshin'. So long as they offer me their loyalty, I promise them one thing—victory."
-  gacha_raiden_events.12.a: "Unstoppable!"
+  gacha_raiden_events.12.title: "With This Body, I Swear"
+  gacha_raiden_events.12.desc: "“Watching the warriors charge... I recall the lilies and Chiyo of days long gone.\n\n...No. The Shogun shall not indulge in sentiment.\n\nI shall grant the whole army the blessing of ‘one heart united in dreams.’\n\nSo long as they offer me their loyalty, I shall promise them—victory.”"
+  gacha_raiden_events.12.a: "Invincible on all fronts!"
 
-  gacha_raiden_events.13.title: "Eye of Ominous Judgment"
-  gacha_raiden_events.13.desc: "I have inspected your armaments—they are too slow. I have opened an 'Ominous Eye' above your barracks; it will keep constant watch over those idle mortals. For the sake of eternity, even a moment's negligence is a grave sin."
+  gacha_raiden_events.13.title: "Ominous Eye"
+  gacha_raiden_events.13.desc: "“I have inspected your military. Far too slow.\n\nI have already unfurled the ‘Ominous Eye’ above your encampments. It will watch those indolent mortals at all times.\n\nFor the sake of eternity, even a single instant of negligence is a grave crime.”"
   gacha_raiden_events.13.a: "Absolute efficiency."
 
-  gacha_raiden_events.14.title: "Authority of Rule"
-  gacha_raiden_events.14.desc: "Your borders have expanded, but the efficiency of governance must not fall. I have distributed a portion of my authority into the administrative network. Mortal wisdom is limited, but so long as they follow my directives, they will not go astray."
+  gacha_raiden_events.14.title: "Authority to Rule"
+  gacha_raiden_events.14.desc: "“Your dominion has grown, but efficiency of governance must not fall.\n\nI have distributed a portion of my authority throughout your administrative network.\n\nMortal wisdom is limited—but so long as they follow my directives to the letter, they will not err.”"
   gacha_raiden_events.14.a: "Rule with an iron hand."
 
-  # === C3 Event: Night of Thunder, 'Logistics Inspection' ===
-  gacha_raiden_c3_title: "Thunderstorm Night: 'Logistics Inspection'"
-
-  # Scene 1: Divine Awe
-  gacha_raiden_c3_scene_1_desc: "Purple arcs of lightning crawl across the outer wall of the imperial study, and the air is thick with ozone. Attendants keep well away; only you push open the heavy doors against the static. This thunderstorm is no natural calamity—it is overflowing pressure from a higher will."
-  gacha_raiden_c3_scene_1_opt_a: "Enter the study: pay audience to the exalted one."
+  # === C3 Affection Event: “Logistics Inspection” on a Stormy Night ===
+  gacha_raiden_c3_title: "“Logistics Inspection” on a Stormy Night"
+  
+  # Scene 1: Divine Presence
+  gacha_raiden_c3_scene_1_desc: "Violet arcs of lightning crawl along the outer walls of the imperial study, the air thick with ozone. Attendants keep a wide berth; only you brave the prickling static to push open the heavy door.\n\nThis thunderstorm is no act of nature, but the overflow of pressure from on high."
+  gacha_raiden_c3_scene_1_opt_a: "Enter the imperial study: audience with that peerless presence."
   gacha_raiden_c3_scene_1_opt_skip: "Skip story"
 
-  # Scene 2: Time at Rest
-  gacha_raiden_c3_scene_2_desc: "The Shogun floats half a foot above the floor, lightning coiling around her as she faces the rainy night.\n\nHer voice resounds directly in your mind:\n\n'The Electro of this world... is disordered and weak. Not only is it without structure; it is feeble.'\n\nThe desk is piled with war manuals, ledgers, and memorials that have been pushed aside."
-  gacha_raiden_c3_scene_2_opt_a: "Bow your head: ask what decree brings the Shogun here at this hour."
+  # Scene 2: Time Held Still
+  gacha_raiden_c3_scene_2_desc: "The Shogun hovers half a span above the floor, lightning circling her as she faces the storm-dark night beyond the window.\n\nHer voice sounds directly within your mind:\n\n“Electro in this world is... disordered.\n\nChaotic in structure, and feeble besides.”\n\nOn the desk lie battle manuals, ledgers, and memorials, all pushed aside."
+  gacha_raiden_c3_scene_2_opt_a: "Bow your head: “Your Excellency, what decree brings you here so late?”"
 
   # Scene 3: Erosion of Eternity
-  gacha_raiden_c3_scene_3_desc: "She slowly turns and gestures lightly toward that heap of papers.\n\n'I have reviewed the so-called diversions you have presented. Histories, military treatises, philosophy... nothing but worn-out clichés. Stare at this stagnant water long enough, and even I will be corroded by something called boredom.'\n\n'Mortal sovereign, does your realm truly have nothing at all that can be considered a variable worthy of note?'"
-  gacha_raiden_c3_scene_3_opt_a: "Ponder: a 'variable'..."
+  gacha_raiden_c3_scene_3_desc: "She turns slowly, pointing with one finger at the scattered documents.\n\n“I have perused the so-called ‘pastimes’ you had them present. Histories, art of war, philosophy... all lifeless repetition.\n\nStare at this stagnant water long enough, and even I will be corroded by a rust named ‘tedium.’”\n\n“Mortal sovereign, is there truly nothing in your realm... that carries the worth of a ‘variable’?”"
+  gacha_raiden_c3_scene_3_opt_a: "Fall silent in thought: a variable..."
 
-  # Scene 4: A Game of Offerings (Route Lock)
-  gacha_raiden_c3_scene_4_desc: "Before a god's questioning, ordinary tribute is meaningless. You order the attendants to bring forth a special offering, then wait until they have withdrawn before sliding it before Ei."
-  gacha_raiden_c3_scene_4_opt_a: "Present a novel: 'A popular foreign tale, absurd on the surface, yet recording mortals' boldest flights of fancy.'"
-  gacha_raiden_c3_scene_4_opt_b: "Present a dessert: 'A sweet the imperial kitchens have tested a thousand times over, all for a single instant of satisfaction.'"
+  # Scene 4: A Different Kind of Tribute (route lock)
+  gacha_raiden_c3_scene_4_desc: "Before a god’s questioning, customary tributes are meaningless.\n\nAt your command, the attendants bring in a different sort of offering. Once the room is clear, you place it before Ei."
+  gacha_raiden_c3_scene_4_opt_a: "Present a novel: “A popular work from distant lands—absurd on the surface, but filled with mortals’ boldest wild ideas.”"
+  gacha_raiden_c3_scene_4_opt_b: "Present sweets: “A confection perfected in the kitchens after a thousand trials, all for a single moment of satisfaction.”"
 
-  # Scene 5: Scrutiny
-  gacha_raiden_c3_scene_5_desc_a: "Ei lazily reads out the overlong title: 'So, Even in Another World, I Must Become a Grand Duke? Presumptuous.'\n\nShe flips open the first page; her gaze gradually sharpens. 'The protagonist abandons divine protection and uses mortal hands to overturn causality? Arrogant... but an interesting sample to observe.'"
-  gacha_raiden_c3_scene_5_desc_b: "She studies the syrup-glazed dango. 'Milk blended with glutinous rice? Its appearance may be inferior to Inazuman confections, but this aura is unlike standard field rations.'\n\nWith elegant yet unhesitating motions, she picks up a skewer."
-  gacha_raiden_c3_scene_5_desc_common: "Thunder crashes outside, yet she does not so much as blink; all her attention is fixed on the novelty in her hands."
+  # Scene 5: Appraisal
+  gacha_raiden_c3_scene_5_desc_a: "Ei reads the overly long title without much interest. “Reborn in Another World, I Shall Become a Grand Duke as Well? Presumptuous.”\n\nShe flips open to the first page, her gaze gradually sharpening. “The protagonist abandons divine favor to overturn fate with mortal hands alone?\n\nArrogant... yet a usable sample for observation.”"
+  gacha_raiden_c3_scene_5_desc_b: "She regards the syrup-glazed dumplings. “Milk and glutinous rice in concert? Its appearance is inferior to those of Inazuma, perhaps, but the scent differs from ordinary field rations.”\n\nShe lifts a skewer—graceful, yet without the slightest hesitation."
+  gacha_raiden_c3_scene_5_desc_common: "A crash of thunder shakes the rafters. She does not so much as blink, all her attention fixed upon this small spark of novelty."
   gacha_raiden_c3_scene_5_opt_a: "Stand quietly at her side."
 
   # Scene 6: Stillness
-  gacha_raiden_c3_scene_6_desc_a: "She sits; the lightning field around her recedes. Cradling the book, her brows knit and smooth in turn, as if she were reviewing an important war report.\n\n'...Acceptable. This trace of novelty makes time feel slightly more real.'"
-  gacha_raiden_c3_scene_6_desc_b: "She sits; the lightning field around her recedes. Taking small bites of the dango, she looks utterly focused, as though performing a delicate elemental refinement.\n\n'...Acceptable. This trace of novelty makes time feel slightly more real.'"
-  gacha_raiden_c3_scene_6_desc_common: "\n\nShe sits down; the field of lightning withdraws."
-  gacha_raiden_c3_scene_6_opt_a: "Wait."
+  gacha_raiden_c3_scene_6_desc_a: "She takes a seat, the electric field around her receding. Cradling the book, her brows relax and furrow by turns, as though she were reviewing a critical battle report.\n\n“...Acceptable. This thread of novelty lets time possess the faintest sense of weight.”"
+  gacha_raiden_c3_scene_6_desc_b: "She takes a seat, the electric field around her receding. She eats the dumplings in small, measured bites, her expression utterly focused, as if engaged in a precise elemental refinement.\n\n“...Acceptable. This thread of novelty lets time possess the faintest sense of weight.”"
+  gacha_raiden_c3_scene_6_desc_common: "\n\nShe sits, and the thunderfield ebbs away."
+  gacha_raiden_c3_scene_6_opt_a: "Wait in silence."
 
   # Scene 7: Judgment
-  gacha_raiden_c3_scene_7_desc_a: "'The prose is crude, and its logic riddled with holes—but the will to break fate is not entirely without merit. Mortal fantasies do, on occasion, brush against the edge of truth.'\n\n'From now on, send me any such works that record otherworldly variables directly. You have my leave to submit them.'"
-  gacha_raiden_c3_scene_7_desc_b: "'Soft texture, moderate sweetness—calms fluctuations of the mind and aids in stabilizing meditation. As military supplies, it is acceptable.'\n\n'If there are any materials that assist with mental composure, you need not wait for my review—only you are permitted to present them.'"
-  gacha_raiden_c3_scene_7_opt_a: "Bow deeply: 'As you command.'"
+  gacha_raiden_c3_scene_7_desc_a: "“The prose is crude, the logic flawed—but this will to ‘break fate’ is not without merit.\n\nOn occasion, mortals’ wildest fantasies may brush against the edge of truth.”\n\n“Bring any such tomes that record ‘variables’ from other worlds straight to me. I grant you leave to submit them.”"
+  gacha_raiden_c3_scene_7_desc_b: "“The texture is soft, the sweetness measured. It calms the mind and steadies the spirit—of use in maintaining a meditative state.\n\nAs military supplies, it passes.”\n\n“If there are materials that aid ‘stability of mind,’ they need not await my prior inspection—only you may present them.”"
+  gacha_raiden_c3_scene_7_opt_a: "Bow your head: “As you command.”"
 
-  # Scene 8: The Rain Stops
-  gacha_raiden_c3_scene_8_desc: "Outside, the rain has stopped, and moonlight spills across lacquered armor. She smooths her sleeves; the softness belonging to Ei recedes, and the Shogun takes over.\n\n'Rest is over. Tedium has been alleviated. Let all return to their posts.'"
-  gacha_raiden_c3_scene_8_opt_a: "Step back: respectfully see the Shogun off."
+  # Scene 8: The Rain Lets Up
+  gacha_raiden_c3_scene_8_desc: "Outside, the rain has stopped, and moonlight spills across the armor stands.\n\nShe straightens her sleeves; the softness of Ei recedes, and the Shogun takes command once more.\n\n“Rest is concluded. Tedium abated.\n\nLet all return to their duties.”"
+  gacha_raiden_c3_scene_8_opt_a: "Step back: “We respectfully see the Shogun off.”"
 
   # Scene 9: Endings
-  gacha_raiden_c3_scene_9_desc_a: "Ei still holds the novel in her hand.\n\n'This book will be requisitioned for now. As for the protagonist's choice in chapter five—after morning court tomorrow, you may come to the study. I have several objections and wish to debate them with you.'"
-  gacha_raiden_c3_scene_9_opt_a: "As you wish, Shogun."
+  gacha_raiden_c3_scene_9_desc_a: "Ei still holds the novel in one hand.\n\n“This volume will be requisitioned for now.\n\nAs for the protagonist’s choice in the fifth chapter—come to the study after morning court tomorrow.\n\nI take issue with it, and would debate the matter with you.”"
+  gacha_raiden_c3_scene_9_opt_a: "“As you wish, Shogun.”"
 
-  gacha_raiden_c3_scene_9_desc_b: "At the doorway, Ei glances sideways at the empty food box on the table.\n\n'As for that type of dango from earlier—if glutinous rice and milk could be fully fused into a drinkable liquid, intake efficiency would likely improve. This is a top-priority directive for logistical improvement.'"
-  gacha_raiden_c3_scene_9_opt_b: "Reverently accept the divine decree."
+  gacha_raiden_c3_scene_9_desc_b: "Ei pauses at the doorway, her gaze drifting toward the now-empty food box upon the desk.\n\n“That variety of dumpling from earlier—if the glutinous rice and milk can be fully blended into a drinkable form, intake would be more efficient.\n\nThis is a logistics improvement directive of ‘highest priority.’”"
+  gacha_raiden_c3_scene_9_opt_b: "“I shall carry out your will.”"

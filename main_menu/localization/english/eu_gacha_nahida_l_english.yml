@@ -9,145 +9,144 @@
 
   # === Traits ===
   gacha_nahida_origin_trait: "Caged Bird of the Sanctuary"
-  desc_gacha_nahida_origin_trait: "“I was once locked inside a cage called the Sanctuary of Surasthana, watching the people outside suffer for lack of knowledge. Your country... seems to have stalled as well, because new ideas cannot circulate. Let me open a window for you. Knowledge should never belong only to the few.”"
+  desc_gacha_nahida_origin_trait: "“I was once locked in a place called the Sanctuary of Surasthana, watching people outside suffer in ignorance.\n\nYour nation... also seems to have grown stagnant under a closed, stifled flow of ideas.\n\nLet me open a window for you. Knowledge was never meant to be monopolized.”"
 
-  gacha_nahida_awakened_trait: "Interpreter of Maya's Dream"
-  desc_gacha_nahida_awakened_trait: "“So this is war? I’m not very good at fighting, but to me that fortress looks as simple as a stack of blocks. As long as we find the critical ‘node’... look, that’s its weak point. No rivers of blood are needed—only a small, well-timed collapse.”"
+  gacha_nahida_awakened_trait: "Interpreter of Maya’s Dream"
+  desc_gacha_nahida_awakened_trait: "“So this is war?\n\nI may not be good at fighting, but to me that fortress’ structure looks as simple as a stack of blocks.\n\nAll we have to do is find the critical ‘node’ and... there, that’s its weak point.\n\nNo rivers of blood are needed—just a small, well-placed collapse.”"
 
   gacha_nahida_transcended_trait: "Lesser Lord Kusanali"
-  desc_gacha_nahida_transcended_trait: "“Governing a nation is like tending a garden. If you let the weeds of administration grow wild, the flowers are bound to wither. I’ll help you comb through the tangled roots of this great empire... just don’t expect me to become another ‘false god’ who tries to control people’s hearts.”"
+  desc_gacha_nahida_transcended_trait: "“Governing a nation is like tending a garden.\n\nIf you let the weeds of bureaucracy run wild, the flowers will wither.\n\nI’ll help you comb through the tangled roots of this vast empire... but don’t expect me to control people’s hearts like that ‘false god’ did.”"
 
   # Constellation Traits
   gacha_nahida_c2_trait: "Morning of a Thousand Roses"
-  desc_gacha_nahida_c2_trait: "“I’ve linked every corner of this country together. Knowledge is no longer a privilege of scholars, but a blessing that falls across the land like sunlight. Just watch—once ignorance is pushed back, currents of thought will bloom like a thousand roses. Your people will be the first to greet the dawn.”"
+  desc_gacha_nahida_c2_trait: "“I’ve linked every corner of this country together.\n\nKnowledge is no longer a privilege for scholars alone, but a blessing that falls over the land like sunlight.\n\nJust watch—once ignorance is driven away, schools of thought will bloom like a thousand roses.\n\nYour people will be the first to greet the dawn.”"
 
   gacha_nahida_c4_trait: "Skandha Mark · Lockdown"
-  desc_gacha_nahida_c4_trait: "“Once you find the structural ‘dead point’, even the strongest walls are nothing more than castles of sand. I’ve already calculated ten thousand ways for the enemy’s defensive line to collapse. All that’s left is a gentle push... look, the siege is over. That is the power of wisdom.”"
+  desc_gacha_nahida_c4_trait: "“Once you find the structural ‘death point,’ even the strongest walls are nothing but castles of sand.\n\nI’ve already calculated ten thousand ways for the enemy’s defensive line to collapse.\n\nAll that’s left... is a gentle push.\n\nSee? The siege is over.\n\nThat is the power of wisdom.”"
 
-  gacha_nahida_c6_trait: "Lord of Wisdom, Buer"
-  desc_gacha_nahida_c6_trait: "“Here, I am no longer a god in chains, nor a piece of history that must be erased. I am Buer, the guide who will lead this great empire toward true omniscience. Let’s break through every bottleneck in research. I want this civilization’s firelight to reach places even the branches of the world tree cannot touch.”"
+  gacha_nahida_c6_trait: "Lord of Wisdom · Buer"
+  desc_gacha_nahida_c6_trait: "“Here, I am no longer a god in chains, nor a piece of history that must be erased.\n\nI am Buer, the one who will guide this great empire toward true understanding.\n\nLet’s break through every research bottleneck.\n\nI want this civilization’s flame to light up places even Irminsul’s branches can’t reach.”"
 
   # === Modifiers ===
-  STATIC_MODIFIER_NAME_gacha_nahida_modifier: "Sanctuary’s Blessing"
-  STATIC_MODIFIER_DESC_gacha_nahida_modifier: "“The mind is the master of the body, and wisdom is nourishment for the mind. Let me water this land, just a little.”"
+  STATIC_MODIFIER_NAME_gacha_nahida_modifier: "Blessing of Pure Goodness"
+  STATIC_MODIFIER_DESC_gacha_nahida_modifier: "“The mind is master of the body, and wisdom is the mind’s nourishment.\n\nAllow me to water this land, just a little.”"
 
   gacha_nahida_modifier: "Light of Wisdom"
-  gacha_nahida_modifier_desc: "The God of Wisdom’s favor has made research and intellectual debate flourish as never before in this country."
+  gacha_nahida_modifier_desc: "Under the God of Wisdom’s gaze, research and critical thought flourish as never before."
 
   # === Constellations ===
   STATIC_MODIFIER_NAME_gacha_nahida_c0_modifier: "Sumeru Seat · Base"
-  STATIC_MODIFIER_NAME_gacha_nahida_c1_modifier: "Heartscape Manifest"
-  STATIC_MODIFIER_NAME_gacha_nahida_c2_modifier: "Right Insight"
-  STATIC_MODIFIER_NAME_gacha_nahida_c3_modifier: "Ascetic Lord of Wisdom"
-  STATIC_MODIFIER_NAME_gacha_nahida_c4_modifier: "Reason Shatters Ignorance"
-  STATIC_MODIFIER_NAME_gacha_nahida_c5_modifier: "Rite of Stored Seeds"
+  STATIC_MODIFIER_NAME_gacha_nahida_c1_modifier: "Heart’s Scene, Made Real"
+  STATIC_MODIFIER_NAME_gacha_nahida_c2_modifier: "Right Insight, Clear Vision"
+  STATIC_MODIFIER_NAME_gacha_nahida_c3_modifier: "The Wisdom Lord’s Austerities"
+  STATIC_MODIFIER_NAME_gacha_nahida_c4_modifier: "Measured Reason, Broken Folly"
+  STATIC_MODIFIER_NAME_gacha_nahida_c5_modifier: "Rite of Skandha Seeds"
   STATIC_MODIFIER_NAME_gacha_nahida_c6_modifier: "Awakening from the Great Dream"
 
-  # Nahida - Country Modifiers
+  # Nahida – Country Modifiers
   STATIC_MODIFIER_NAME_gacha_nahida_country_modifier: "Caged Bird of the Sanctuary"
-  STATIC_MODIFIER_DESC_gacha_nahida_country_modifier: "Currents of thought spread more quickly, and research efficiency steadily increases."
+  STATIC_MODIFIER_DESC_gacha_nahida_country_modifier: "Currents of thought spread faster, and research efficiency steadily rises."
 
-  STATIC_MODIFIER_NAME_gacha_nahida_c1_country_modifier: "First Branches Unfurled"
-  STATIC_MODIFIER_DESC_gacha_nahida_c1_country_modifier: "An extra seat in government is set aside for the God of Wisdom, letting scientific policy and day-to-day governance advance in parallel."
+  STATIC_MODIFIER_NAME_gacha_nahida_c1_country_modifier: "First Budding Branches"
+  STATIC_MODIFIER_DESC_gacha_nahida_c1_country_modifier: "An extra seat is reserved in government for the God of Wisdom, allowing research-focused decisions to advance in parallel."
 
   STATIC_MODIFIER_NAME_gacha_nahida_c2_country_modifier: "Morning of a Thousand Roses"
-  STATIC_MODIFIER_DESC_gacha_nahida_c2_country_modifier: "The light of knowledge illuminates the whole realm; institutions grow faster and research speeds up."
+  STATIC_MODIFIER_DESC_gacha_nahida_c2_country_modifier: "The light of knowledge shines across the realm, hastening institutional growth and research."
 
-  STATIC_MODIFIER_NAME_gacha_nahida_c5_country_modifier: "Rite of Stored Seeds"
-  STATIC_MODIFIER_DESC_gacha_nahida_c5_country_modifier: "A streamlined cabinet and accumulated learning let the machinery of state run like the wind."
+  STATIC_MODIFIER_NAME_gacha_nahida_c5_country_modifier: "Rite of Skandha Seeds"
+  STATIC_MODIFIER_DESC_gacha_nahida_c5_country_modifier: "An efficient cabinet and accumulated learning let government affairs run as swiftly as the wind."
 
   STATIC_MODIFIER_NAME_gacha_nahida_c6_country_modifier: "Hall of Wisdom"
-  STATIC_MODIFIER_DESC_gacha_nahida_c6_country_modifier: "Scientific progress leaps ahead, cabinet efficiency improves, and advisor costs fall across the board."
+  STATIC_MODIFIER_DESC_gacha_nahida_c6_country_modifier: "Research surges forward, cabinet work becomes smoother, and advisor costs are reduced across the board."
 
   STATIC_MODIFIER_NAME_gacha_nahida_omniscient_aid_modifier: "Aid of the Omniscient"
-  STATIC_MODIFIER_DESC_gacha_nahida_omniscient_aid_modifier: "A wisdom engine accelerates the nation’s operations; research, institutional expansion, and cabinet efficiency all rise together."
+  STATIC_MODIFIER_DESC_gacha_nahida_omniscient_aid_modifier: "A wisdom engine driving the state forward—research, institutional expansion, and cabinet efficiency all rise in tandem."
 
   STATIC_MODIFIER_NAME_gacha_nahida_stellar_bond_modifier: "Bond Across the Stars"
-  STATIC_MODIFIER_DESC_gacha_nahida_stellar_bond_modifier: "Gentle companionship that crosses worlds lowers advisor costs and stability expenses, and new ideas more easily take root."
+  STATIC_MODIFIER_DESC_gacha_nahida_stellar_bond_modifier: "A gentle bond that crosses dimensions: advisor and stability costs fall, and new schools of thought find easier soil in which to sprout."
 
-  # === Trait Loss ===
-  gacha_nahida_origin_trait_die_desc: "Loses the 'Sanctuary Backup' starting bonus."
-  gacha_nahida_awakened_trait_die_desc: "Loses the 'Dreamwalker' profession bonus."
-  gacha_nahida_transcended_trait_die_desc: "Loses the 'Greenhouse of Wisdom' ruler bonus."
+  gacha_nahida_origin_trait_die_desc: "Loses the ‘Backup of the Sanctuary’ starting bonus."
+  gacha_nahida_awakened_trait_die_desc: "Loses the ‘Walker in Dreams’ profession bonus."
+  gacha_nahida_transcended_trait_die_desc: "Loses the ‘Greenhouse of Wisdom’ ruler bonus."
   gacha_nahida_c2_trait_die_desc: "Loses Nahida’s C2 ascension bonus."
   gacha_nahida_c4_trait_die_desc: "Loses Nahida’s C4 ascension bonus."
   gacha_nahida_c6_trait_die_desc: "Loses Nahida’s C6 final ascension bonus."
 
   # === Events ===
-  gacha_nahida_events.1.title: "Buer Nahida — First Ping from the Backup"
-  gacha_nahida_events.1.desc: "In the empty court, a faint green pathway of light takes shape. It coalesces into a young girl, as if she were downloading a missing memory. She blinks, curiosity shining as she scans this unfamiliar data environment.\n\nNahida lifts her hand gently, inviting you closer. She waits for your reply, like waiting for a new ‘record’ to start."
-  gacha_nahida_events.1.a: "Step forward and listen."
+  gacha_nahida_events.1.title: "Buer Nahida — The Green Seed"
+  gacha_nahida_events.1.desc: "#ZG At the center of the wishing circle, golden script flows along the carved lines.\nYellowed pages, broken stone rubbings, and faded scraps of picture books whirl above the circle’s heart, then are gently swallowed by a pale green orb rising from the central groove.\nInside the orb, emerald symbols and letters drift about like fireflies.#!\nA small figure is curled up within. Snow-white short hair falls over her shoulders, a simple dress ripples in the flow of light, and a pale green cloak fans out behind her.\nHer eyes are closed, both arms wrapped tightly around a glowing green sphere.\n#ZG With the faintest, glass-like crack, the orb quietly shatters into a sky full of motes.#!\nThe girl opens her eyes and alights softly in the circle’s center, her white dress and the green glow flaring up together.\nThe orb is gone—yet in her palm, there now rests a flower you have never seen before.\n"
+  gacha_nahida_events.1.a: "Step forward to take a closer look."
 
-  gacha_nahida_events.10.title: "Buer Nahida — The 'Backup' Forgotten by the World"
-  gacha_nahida_events.10.desc: "“Nice to meet you. I’m Nahida, the Dendro Archon of Sumeru.\n\n...This is a little strange. In all my records, there is no data at all about this world.\n\nThere is no Akasha Terminal here, nor any roots of Irminsul.\n\nAnd yet... I can finally breathe easier.\n\nBecause here, those ‘erased’ memories are still echoing in my mind.\n\nThat puppet built to house a god, that tree burning itself away, and... that name I must never forget—Greater Lord Rukkhadevata.\n\nSince fate has preserved me—this ‘backup’ that was supposed to vanish—here of all places, there must be a reason.\n\nLet’s treat this as one long ‘dream’ experiment.\n\nI’ll use my wisdom to help you analyze the underlying logic of this world.\n\nIn exchange... would you become my one and only ‘recorder’?”"
-  gacha_nahida_events.10.a: "Welcome, God of Wisdom."
+  gacha_nahida_events.10.title: "Buer Nahida — Forgotten ‘Backup’ of the World"
+  gacha_nahida_events.10.desc: "“...Scan complete. This is neither the Akasha Terminal, nor the roots of Irminsul.”\n“Nice to meet you. I’m Nahida—once a god of Sumeru... or rather, an ‘old version’ that Irminsul was supposed to delete.”\n“On another, much larger ‘tree,’ the branch that belonged to me was snapped off in an instant. At that moment, a tiny leaf was gathered up by your wish... and that little leaf is what became me as I am now.”\n“I’ve already parsed most of the data reflected in the light curtain just now. Gaps in knowledge, blocked-off currents of thought, reforms that never quite begin... I’m very familiar with these problems.”\n#ZG She looks down at the flower in her hand, then raises her eyes to you.#!\n“Since fate has preserved me—this backup that was meant to disappear—and brought me here, there must be a reason.”\n“I’ll use my wisdom to help you analyze this world’s underlying logic.”\n“In exchange—please take me to see the people of this world. I want to see with my own eyes what kind of blossoms their wisdom will bear.”"
+  gacha_nahida_events.10.a: "Welcome, god from afar."
 
   gacha_nahida_events.2.title: "Growth of Wisdom"
-  gacha_nahida_events.2.desc: "Nahida’s power has increased, soft green Dendro light circling around her.\n\n“Look, the world tree has granted me new strength. With this, I can help everyone even more~”"
+  gacha_nahida_events.2.desc: "Nahida’s power has grown. Verdant Dendro light circles gently around her.\n\n“Look, Irminsul has granted me new strength. With this, I can help everyone even more~”"
   gacha_nahida_events.2.a: "The power of knowledge!"
 
-  gacha_nahida_events.4.title: "History Unaltered"
-  gacha_nahida_events.4.desc: "“I am Nahida—Buer, Lord of Wisdom.\n\nLet me tell you a secret.\n\nIn the distant world of Teyvat, there is probably another ‘Nahida’ still governing Sumeru.\n\nShe might be happier than I am, and her burden lighter.\n\nBecause she has forgotten the great god who sacrificed herself to save the world, and has forgotten that there was once a puppet called ‘the Balladeer’ who sought to become a god.\n\nIrminsul rewrote her memories and led her to believe that she had always been a perfect Archon.\n\n...Sometimes, I envy her.\n\nBut more often, I’m grateful that I came here.\n\nGrateful that the ‘me’ you summoned... is this one.\n\nBecause if even I were to forget these painful memories—this truth about sacrifice, betrayal, and salvation—\n\nthen there would truly be no one left in any world who remembers that ‘she’ once existed.\n\nThank you, for accepting this imperfect me, still bearing the residue of bygone days.\n\nHere, shall we write a history that doesn’t need to be edited by anyone?\n\nA history that can reach a happy ending without anyone having to be sacrificed.\n\nI’ll use all my wisdom to calculate that future for you.”"
+  gacha_nahida_events.4.title: "History Unrevised"
+  gacha_nahida_events.4.desc: "“I am Nahida—Buer, the master of wisdom.\n\nLet me tell you a secret.\n\nIn that distant world of Teyvat, there should still be another ‘Nahida’ governing Sumeru.\n\nShe is probably happier than I am, and more at ease.\n\nBecause she has forgotten the great god who sacrificed herself to save the world, and she has also forgotten that there was once a puppet called ‘Scaramouche’ who tried to become a god.\n\nIrminsul rewrote her memories, making her believe she had always been a flawless god.\n\n...Sometimes, I’m actually a little envious of her.\n\nBut more often, I’m glad that I came here instead.\n\nGlad that the one you summoned... was this version of me.\n\nBecause this painful memory—these truths about sacrifice, betrayal, and redemption—if even I were to forget them...\n\nThen there really would be no one left in all the worlds who remembered that ‘she’ once existed.\n\nThank you, for accepting this imperfect me, who still carries fragments of bygone days.\n\nHere, could we write a history that never needs to be revised?\n\nA history that can still reach a Happy Ending, without anyone having to be sacrificed.\n\nI’ll use all my wisdom to calculate that future for you.”"
   gacha_nahida_events.4.a: "We’ll write it together."
 
   gacha_nahida_events.11.title: "Roots of Knowledge"
-  gacha_nahida_events.11.desc: "“Look, currents of thought are spreading like roots. In my original world, people went mad in their pursuit of ‘forbidden knowledge.’ But here, we’ll make wisdom into sunlight that everyone can touch. Don’t worry about side effects—I’ll be watching over it.”"
+  gacha_nahida_events.11.desc: "“Look—the currents of thought are spreading like roots.\n\nIn the world I came from, people went mad in pursuit of ‘forbidden knowledge.’\n\nBut here, we’ll make wisdom into sunlight that everyone can touch.\n\nDon’t worry about side effects. I’ll be watching over it all the way.”"
   gacha_nahida_events.11.a: "Spread wisdom!"
 
-  gacha_nahida_events.12.title: "Chains of Causality"
-  gacha_nahida_events.12.desc: "“Once every enemy is marked with a ‘Skandha Seed,’ their movements are entirely within our grasp. Hidden supply lines, cracks in the walls—before the God of Wisdom, nothing can hide. This is... what it means to lay siege with knowledge.”"
+  gacha_nahida_events.12.title: "Ties of Causality"
+  gacha_nahida_events.12.desc: "“Once every enemy is marked with a Skandha Seed, their movements fall neatly into my hands.\n\nHidden supply lines, cracks in city walls—none of them can escape the God of Wisdom’s notice.\n\nThis is what it means to lay siege with insight instead of iron.”"
   gacha_nahida_events.12.a: "See through everything!"
 
-  gacha_nahida_events.13.title: "Spare Processing Power"
-  gacha_nahida_events.13.desc: "“Even without an Akasha system, I still keep the habit of processing large amounts of data. Since your scholars are still arguing over a few topics, I went ahead and optimized the research plans for you.\n\nAs for the time we saved... could you tell me some of this world’s fairy tales?”"
+  gacha_nahida_events.13.title: "Surplus Processing Power"
+  gacha_nahida_events.13.desc: "“Even without the Akasha, I still haven’t lost the habit of handling vast amounts of data.\n\nSince your scholars are still arguing over those few projects, I went ahead and optimized their research plans for you.\n\nThe extra time you’ve gained... could you spend some of it telling me the fairy tales of this world?”"
   gacha_nahida_events.13.a: "Of course."
 
-  gacha_nahida_events.14.title: "Expanding the 'Akasha'"
-  gacha_nahida_events.14.desc: "“As the borders of the state expand, the burden of administration grows heavier. But it’s all right—I’ve recompiled the logic of your bureaucracy. Now, even the most distant frontier can hear the voice of wisdom.”"
+  gacha_nahida_events.14.title: "Expanded ‘Void’"
+  gacha_nahida_events.14.desc: "“Your borders have grown, and with them the burden of administration.\n\nBut it’s all right—I’ve already recompiled the logic of your bureaucratic system.\n\nNow, even the furthest frontier will be able to hear the voice of wisdom.”"
   gacha_nahida_events.14.a: "Efficient governance!"
 
-  # === C3 Story Chain: Sunlight Beyond the Greenhouse ===
-  gacha_nahida_c3_title: "Sunlight Beyond the Greenhouse"
-
+  # === C3 Story Chain: Sunshine Outside the Greenhouse ===
+  gacha_nahida_c3_title: "Sunshine Outside the Greenhouse"
+  
   # Scene 1
-  gacha_nahida_c3_scene_1_desc: "Nahida: “...The logic doesn’t hold.”\n\nIt is late at night in the royal library. Nahida kneels on the carpet, surrounded by the private journals and diplomatic papers of past monarchs. Candlelight flickers; her shadow stretches across the bookshelves.\n\nShe does not look up. Her fingertip keeps sliding over the yellowed parchment, as if she were solving an impossible equation.\n\nNahida: “According to three hundred years of historical records, this country’s ‘inertia’ is expansion and plunder. The decision models of its rulers have all strictly followed a greedy algorithm of geopolitics.”\n\nShe stops her hand and turns, her green eyes quietly meeting yours.\n\nNahida: “But since you took over, that model... has collapsed.”"
+  gacha_nahida_c3_scene_1_desc: "Nahida: “...This is illogical.”\n\nIt is late at night in the royal library. Nahida is kneeling on the carpet, surrounded by the daily records and diplomatic files of generations of monarchs. Candlelight flickers, casting her shadow up along the shelves.\n\nShe does not look up. Her fingers continue to glide over the yellowed parchment, as if she were working through an unsolvable equation.\n\nNahida: “According to these three hundred years of records, this country’s ‘inertia’ has always been expansion and plunder. The decision-making model of its rulers has, generation after generation, faithfully followed the greedy algorithm of geopolitics.”\n\nShe stops, turning her head. Her green eyes rest quietly on you.\n\nNahida: “But ever since you took over, that model... has collapsed.”"
   gacha_nahida_c3_scene_1_opt_a: "Listen in silence."
   gacha_nahida_c3_scene_1_opt_skip: "Skip story"
 
   # Scene 2
-  gacha_nahida_c3_scene_2_desc: "She rises and picks up a decree you just approved, her gaze clear and incisive.\n\nNahida: “This decision-making style does not belong to this body, nor to this stretch of history.”\n\nNahida: “It is as if there were an ‘observer’ from a higher dimension, dropping a piece onto the board of ‘history’—a piece that was never meant to exist there.”\n\nShe takes a step closer, her eyes seeming to look past you, toward something that is not present in the room.\n\nNahida: “This will... feels like it seeped out from the blank margins of a history book. It is rational and kind, and yet strangely detached, as if viewing everything from above.”\n\nNahida: “To put it simply— you don’t look like a ruler this world was ever supposed to have.”"
+  gacha_nahida_c3_scene_2_desc: "She rises to her feet and picks up a decree you just approved. Her gaze is clear, as if she’s already seen through it all.\n\nNahida: “This style of decision-making doesn’t belong to this body, nor to this point in history.”\n\nNahida: “It’s as if... a ‘Watcher’ from a higher dimension were standing outside the board called ‘History’ and had just placed a piece that was never meant to be played.”\n\nShe takes a step closer, her eyes shifting to a spot just behind you.\n\nNahida: “This will... feels as though it’s seeping in from the blank margins of the history books. Rational, and kind—but also tinged with a sort of detached, bird’s-eye distance.”\n\nNahida: “To put it simply—you don’t look like a ruler this world was supposed to have.”"
   gacha_nahida_c3_scene_2_opt_a: "Say nothing."
 
   # Scene 3
-  gacha_nahida_c3_scene_3_desc: "Nahida points to a carefully trimmed bonsai on the windowsill.\n\nNahida: “Your Majesty, this country is like this potted tree.”\n\nNahida: “Its roots are confined by the pot, its branches pruned by the gardener. It was meant to grow into a predetermined shape.”\n\nNahida: “But if a ray of light were to shine through the glass of the greenhouse at a strange angle...”\n\nNahida: “The plant would defy the gardener’s shears and strain with all its might toward that light, growing into something completely different.”\n\nNahida: “Are you that ray of light? Will you lead everything toward a worse ending... or a better one? I’m still observing.”"
-  gacha_nahida_c3_scene_3_opt_a: "Stay silent."
+  gacha_nahida_c3_scene_3_desc: "Nahida points to a well-trimmed bonsai on the windowsill.\n\nNahida: “Your Majesty, this bonsai is a good analogy.”\n\nNahida: “Its roots are confined by the pot, its branches pruned back by the gardener—it was meant to grow into a predetermined shape.”\n\nNahida: “But if a ray of light were to insist on shining through the greenhouse glass at a strange angle...”\n\nNahida: “Then the plant would defy the gardener’s shears and strain toward that light, growing into a completely different shape.”\n\nNahida: “Are you... that ray of light? Will you drive everything toward a worse ending, or a better one? I’m still observing.”"
+  gacha_nahida_c3_scene_3_opt_a: "Remain silent."
 
   # Scene 4 (Identity Branch)
-  gacha_nahida_c3_scene_4_desc: "There is no judgment in Nahida’s expression—only pure curiosity, and a faint hint of expectation.\n\nShe seems to be waiting for an answer.\n\nFaced with this metaphor, you decide:"
-  gacha_nahida_c3_scene_4_opt_a: "Remain silent, and give a slight nod."
-  gacha_nahida_c3_scene_4_opt_b: "“I have merely done what a ruler must. You’re overthinking it.”"
+  gacha_nahida_c3_scene_4_desc: "There is no judgment in Nahida’s expression—only pure curiosity, and a faint trace of expectation.\n\nShe seems to be waiting for an answer.\n\nFaced with this metaphor, you decide:"
+  gacha_nahida_c3_scene_4_opt_a: "Stay silent, but give a slight nod."
+  gacha_nahida_c3_scene_4_opt_b: "“I... have merely done what a sovereign must. You’re overthinking this.”"
 
   # Scene 5
-  gacha_nahida_c3_scene_5_desc_a: "Nahida presses a hand lightly to her chest, a relieved smile appearing on her face.\n\nNahida: “...So you’re not denying it.”"
-  gacha_nahida_c3_scene_5_desc_b: "Nahida presses a hand lightly to her chest, a relieved smile appearing on her face.\n\nNahida: “I see... Well, it’s true that rulers often make choices no one expects.”"
-  gacha_nahida_c3_scene_5_desc_common: "Nahida’s palm rests lightly over her heart, as if sensing some distant echo.\n\nNahida: “Even without data from an Akasha system... this feeling is very familiar to me.”\n\nShe falls silent for a moment, as though recalling something far away."
-  gacha_nahida_c3_scene_5_opt_a: "Wait for her to continue..."
+  gacha_nahida_c3_scene_5_desc_a: "Nahida gently presses a hand to her chest. A relieved smile blooms on her face.\n\nNahida: “...So you aren’t going to deny it.”"
+  gacha_nahida_c3_scene_5_desc_b: "Nahida gently presses a hand to her chest. A small, relieved smile blooms on her lips.\n\nNahida: “Is that so... I suppose it’s perfectly normal for a sovereign to make decisions others don’t expect.”"
+  gacha_nahida_c3_scene_5_desc_common: "Her palm still rests lightly over her heart, as if feeling some distant echo.\n\nNahida: “I may not have the Akasha’s data to back me up, but... this feeling is not unfamiliar to me.”\n\nShe falls quiet for a moment, as if recalling something long ago."
+  gacha_nahida_c3_scene_5_opt_a: "Wait for her to go on..."
 
   # Scene 6
-  gacha_nahida_c3_scene_6_desc: "Nahida closes her eyes; her voice turns gentle, like a bedtime story.\n\nNahida: “...Let me tell you a story.”\n\nNahida: “Once, there was a little bird locked inside a cage. The cage was so large it could hold the reflection of the entire sky, but the bird had never truly flown outside.”\n\nNahida: “One day, a ray of light shone through the cracks of the cage. That light did not belong to this sky—it came from very, very far away.”\n\nNahida: “The light stayed with the bird for a time. It showed the bird the world beyond the bars and helped it solve many puzzles.”\n\nNahida: “Then, the light left. The bird thought it had all been a dream.”\n\nShe opens her eyes and looks at you.\n\nNahida: “But if, one day, that bird were to feel the same warmth again in a completely unfamiliar world... Do you think it should believe this is the same ray of light? Or just another similar dream?”"
-  gacha_nahida_c3_scene_6_opt_a: "If the warmth is the same, then it’s the same light."
+  gacha_nahida_c3_scene_6_desc: "Nahida closes her eyes. When she speaks again, her voice has softened, like she’s telling a bedtime story.\n\nNahida: “...Let me tell you a story.”\n\nNahida: “Once upon a time, there was a little bird kept inside a cage. The cage was large—so large it could hold the reflection of the whole sky—but the bird itself had never truly flown beyond it.”\n\nNahida: “One day, a ray of light slipped through a crack in the cage. That light did not belong to that sky. It came from very, very far away.”\n\nNahida: “The light stayed with the bird for a while. It taught the bird about the world beyond the cage and helped it unravel many riddles.”\n\nNahida: “Then, one day, the light was gone. The bird thought it must have been nothing but a dream.”\n\nShe opens her eyes, looking straight at you.\n\nNahida: “But if, one day, that little bird were to find itself in a completely unfamiliar world... and feel that same warmth again... Do you think the bird should believe it’s the very same ray of light? Or just another similar dream?”"
+  gacha_nahida_c3_scene_6_opt_a: "“If the warmth is the same, then it’s the same ray of light.”"
 
   # Scene 7 (Relationship Branch)
-  gacha_nahida_c3_scene_7_desc: "Nahida reaches a hand out to you, palm up—half invitation, half confirmation.\n\nNahida: “...If you understood that story, then please allow me to ask one more question.”\n\nNahida: “To that ray of light... what is the bird now?”\n\nShe pauses for a beat, then smiles softly.\n\nNahida: “Still, the fact that you were willing to listen means one thing— to you, I’m more than a ‘tool’, aren’t I? At the very least, you’re willing to treat me as someone worth talking to.”"
-  gacha_nahida_c3_scene_7_opt_a: "“You’re my external brain. Let’s solve this world’s mysteries together.”"
+  gacha_nahida_c3_scene_7_desc: "Nahida reaches out a hand to you, palm up—half invitation, half confirmation.\n\nNahida: “...If you understood that story, then please allow me one question.”\n\nNahida: “To that ray of light... what is the little bird, now?”\n\nShe pauses, then lets a small smile curl her lips.\n\nNahida: “But the fact that you’re willing to listen to my stories at all at least means this much—you don’t see me as just a tool, do you? At the very least, you’re willing to treat me as someone worth talking to.”"
+  gacha_nahida_c3_scene_7_opt_a: "“You’re my external brain. We’ll solve this world’s riddles together.”"
   gacha_nahida_c3_scene_7_opt_b: "“You’re someone I’d want to meet again, in any world.”"
 
   # Scene 8
-  gacha_nahida_c3_scene_8_desc: "Nahida clasps your hand. Green Dendro motes rise into the air of the library, dancing with the dust motes.\n\nNahida: “...So you did understand that story.”\n\nNahida: “That little bird waited for a very, very long time, until it almost forgot what that light even looked like. But now, it doesn’t have to wait anymore.”\n\nShe pauses, her smile growing even softer.\n\nNahida: “Maybe it’s just a story. Maybe the bird simply missed the light so much that it mistook every warmth for its shadow.”\n\nNahida: “But even if it’s an illusion, this warmth is real. Thank you for listening to my story.”\n\nNahida: “This is not Teyvat, and there is no Sanctuary of Surasthana here. But as long as that light is with me... this place is my home.”"
-  gacha_nahida_c3_scene_8_opt_a: "This time, there will be no cage."
+  gacha_nahida_c3_scene_8_desc: "Nahida takes your hand in hers. Tiny Dendro motes begin to glow in the library, drifting among the particles of dust.\n\nNahida: “...So you did understand that story.”\n\nNahida: “That little bird waited for a very, very long time—so long that she almost forgot what that ray of light looked like. But now, she doesn’t have to wait anymore.”\n\nShe stops and smiles, even more gently than before.\n\nNahida: “Maybe it’s just a story. Maybe the bird just missed that light so much that she began to see it in every bit of warmth.”\n\nNahida: “But even if it is just a mistake, the warmth itself is still real. Thank you... for listening to my story.”\n\nNahida: “This isn’t Teyvat, and there is no Sanctuary of Surasthana here. But as long as that light is here—this place will be my home.”"
+  gacha_nahida_c3_scene_8_opt_a: "“This time, there’ll be no cage.”"
 
   # Scene 9
-  gacha_nahida_c3_scene_9_desc_a: "Nahida picks up her quill again, her eyes sharp and confident; behind her, it’s as if streams of data were flowing through the air.\n\nNahida: “In that case, let’s get to work.”\n\nNahida: “The story is over. Now it’s time for calculations. I’ll keep observing...”\n\nNahida: “The underlying logic of this world is cruder than the Akasha’s, but it has a kind of beautiful, chaotic randomness. I’ve already found the optimal solutions for you.”\n\nNahida: “Let’s prune this bonsai into whatever shape you desire. This time, the gardeners are us.”"
-  gacha_nahida_c3_scene_9_desc_b: "Nahida looks at you with eyes shining with tears, yet utterly at peace. Behind her, the rising sun seems to overlap with the phantom of a world tree.\n\nNahida: “That story... actually has one more ending.”\n\nNahida: “The little bird realized the forest was sick. To heal the forest, she chose to snap off her own withered branches and let herself turn to ash, scattered on the wind.”\n\nNahida: “Her final wish was: ‘Let the forest forget me completely, so that the new shoots may grow without any burden.’”\n\nShe lifts her head; your face is reflected in her green eyes, as if you were the only witness in the world.\n\nNahida: “According to the script, the world really did forget her. The new birds were meant to live their lives knowing nothing at all.”\n\nNahida: “But... even a god of wisdom cannot fully predict fate.”\n\nShe hooks out her little finger toward you, her voice soft:\n\nNahida: “Thank you... for listening to my rambling here.”\n\nNahida: “No matter what, in this world, you are... my very first sage.”\n\nNahida: “Good night... and good morning, my first sage.”"
+  gacha_nahida_c3_scene_9_desc_a: "Nahida picks up her quill once more, her gaze sharp and confident. For a moment, it’s as if streams of data are flowing behind her.\n\nNahida: “In that case... let’s get to work.”\n\nNahida: “The story is over. What comes next is all calculation. I’ll go on observing...”\n\nNahida: “This world’s underlying logic is much cruder than the Akasha, but it has a beautiful kind of random chaos to it. I’ve already found you the optimal solution.”\n\nNahida: “Let’s prune this bonsai into the shape you want. This time, we’ll be the gardeners.”"
+  gacha_nahida_c3_scene_9_desc_b: "Nahida looks at you with a smile that is wet with tears and yet full of relief. Behind her, the rising sun seems to blur into the phantom of a great tree.\n\nNahida: “That story... actually has another ending.”\n\nNahida: “The little bird realized that the forest was sick. To heal it, she chose to snap off her own withered branches, willingly turning herself into ash and letting the wind scatter her.”\n\nNahida: “Her last wish was this: ‘Let the forest forget me completely, so that the new shoots can grow without any chains.’”\n\nShe raises her head. Your face is reflected in her green eyes, as if you were the only witness in all the world.\n\nNahida: “According to the script, the world really did forget her. The fledglings that came after were meant to live on in ignorance.”\n\nNahida: “But... even a god of wisdom cannot predict every twist of fate.”\n\nShe hooks out her little finger toward you, her voice as soft as a whisper.\n\nNahida: “Thank you... for listening to me ramble here.”\n\nNahida: “Whatever happens, in this world... you will always be my very first sage.”\n\nNahida: “Good night... and good morning, my very first sage.”"
   gacha_nahida_c3_scene_9_opt_a: "Let’s begin, Buer."
-  gacha_nahida_c3_scene_9_opt_b: "Good morning, Nahida. I’ll remember this—always."
+  gacha_nahida_c3_scene_9_opt_b: "Good morning, Nahida. I won’t forget."

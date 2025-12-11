@@ -7,51 +7,51 @@
   gacha_first_name_klee: "Klee"
   gacha_last_name_klee: "Spark Knight"
 
-  # === Traits ===
-  gacha_klee_origin_trait: "Four-Leaf Clover’s Lucky Blessing"
-  desc_gacha_klee_origin_trait: "“Hehe, as long as you look at this four-leaf clover, your luck will get better! All the soldier uncles look really happy when they see Klee. Even though… I kinda, sorta broke the castle gate’s latch by accident, everyone just laughed even harder, so it should be fine… right?”"
+  # === Traits (Traits) ===
+  gacha_klee_origin_trait: "Four-Leaf Clover's Lucky Blessing"
+  desc_gacha_klee_origin_trait: "Hehe, as long as you look at this four-leaf clover, your luck will get better! All the soldier uncles look really happy when they see Klee. Even though I, um, kind of broke the latch on the city gate by accident... everyone just laughed even harder, so it should be fine, right?"
 
   gacha_klee_awakened_trait: "Supreme Fish-Blasting Expert"
-  desc_gacha_klee_awakened_trait: "“That fortress looks super sturdy—just like those big rocks outside Mondstadt! Can I throw one little Jumpy Dumpty inside? Just one! I promise all the bad guys… uh, all the fish… will flip belly-up and float to the top!”"
+  desc_gacha_klee_awakened_trait: "That fortress looks super sturdy, just like the big rocks outside Mondstadt! Can Klee throw one little Jumpy Dumpty inside? Just one! I promise all the bad guys—uh, all the fish—will flip belly-up and float to the top!"
 
   gacha_klee_transcended_trait: "Runaway Sun"
-  desc_gacha_klee_transcended_trait: "“I don’t really get what a ‘king’ is supposed to do, but if you blow up all the bad guys who don’t behave, then everyone can have tons of fun at the Windblume Festival, right? Everyone will come play with Klee… won’t they? …Won’t they?”"
+  desc_gacha_klee_transcended_trait: "I don't really get what a 'king' is supposed to do, but if you blow up all the bad guys who don't behave, then everyone can happily celebrate the Windblume Festival, right? Everyone will come play with Klee... won't they? ...Won't they?"
 
   # Constellation Traits
-  gacha_klee_c2_trait: "Kaboomy · Shrapnel Field"
-  desc_gacha_klee_c2_trait: "“Eh? Why did those walls all fall down by themselves? It must be because they wanted to play with Klee too! Look, the soldier uncles are all laughing so happily. As long as you follow Klee, all the obstacles in front will go ‘BOOM!’ and disappear! That’s the lucky magic of explosions!”"
+  gacha_klee_c2_trait: "Kaboom · Shrapnel Field"
+  desc_gacha_klee_c2_trait: "Eh? How come those walls all fell down by themselves? It must be because they wanted to play with Klee too! Look, the soldier uncles are laughing so happily. As long as you follow Klee, every obstacle in front will go 'boom!' and disappear! That's the lucky magic of explosions!"
 
   gacha_klee_c4_trait: "Hair-Trigger · Sparks of Fire"
-  desc_gacha_klee_c4_trait: "“Hehe, this is a new formula Albedo taught me! Just a tiny little spark, and the whole fortress turns into a giant firework! Enemies can’t play hide-and-seek inside—’cause explosions don’t care where you hide! This is the Spark Knight’s art of breaching!”"
+  desc_gacha_klee_c4_trait: "Hehe, this is a new formula Albedo taught me! Just a tiny little spark can turn the whole fortress into a giant firework! The enemies can't play hide-and-seek inside—because explosions don't care where you hide! This is the Spark Knight's art of breaching!"
 
   gacha_klee_c6_trait: "Endless Sparks · Dream"
-  desc_gacha_klee_c6_trait: "“Listen up! From today on, all the bad guys in this country have to be reaaally careful! No matter how thick the walls you hide behind are, Klee will find you and blow you sky high! The ground might turn all black and sooty… but that’s the color of victory! C’mon, let’s turn the whole world into our playground!”"
+  desc_gacha_klee_c6_trait: "Listen up! From today on, all the bad guys in this country have to be really, really careful! No matter how thick the walls you hide behind are, Klee will find you and blow you sky high! The ground might end up all black and sooty... but that's the color of victory! Come on, let's turn the whole world into our playground!"
 
-  # === Modifiers ===
+  # === Modifiers (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_klee_modifier: "Blessing of Sparks"
-  STATIC_MODIFIER_DESC_gacha_klee_modifier: "“The red ones are Jumpy Dumpties, the blue ones are… huh? There aren’t any blue ones here? Then we’ll just blow them *all* up!”"
+  STATIC_MODIFIER_DESC_gacha_klee_modifier: "The red ones are Jumpy Dumpties, and the blue ones are... huh? There aren't any blue ones here? Then we'll just blow them all up!"
 
   gacha_klee_modifier: "Joy of Blasting"
-  gacha_klee_modifier_desc: "Klee’s cheerful laughter, mixed with distant thunderous booms, greatly stirs the front-line soldiers’ urge to blow things up."
+  gacha_klee_modifier_desc: "Klee's cheerful laughter, mixed with distant explosions, greatly stirs the front-line soldiers' urge to blow things up."
 
   # === Constellations ===
-  STATIC_MODIFIER_NAME_gacha_klee_c0_modifier: "Clover Constellation · Base"
+  STATIC_MODIFIER_NAME_gacha_klee_c0_modifier: "Four-Leaf Clover Constellation · Base"
   STATIC_MODIFIER_NAME_gacha_klee_c1_modifier: "Chain Reaction"
   STATIC_MODIFIER_NAME_gacha_klee_c2_modifier: "Kaboom Shrapnel"
-  STATIC_MODIFIER_NAME_gacha_klee_c3_modifier: "Klee’s Special Blend"
-  STATIC_MODIFIER_NAME_gacha_klee_c4_modifier: "Hair-Trigger"
+  STATIC_MODIFIER_NAME_gacha_klee_c3_modifier: "Klee's Special Blend"
+  STATIC_MODIFIER_NAME_gacha_klee_c4_modifier: "Hair Trigger"
   STATIC_MODIFIER_NAME_gacha_klee_c5_modifier: "Sky-Shaking Boom"
   STATIC_MODIFIER_NAME_gacha_klee_c6_modifier: "Full Firepower"
 
   # Klee - Country Modifiers
   STATIC_MODIFIER_NAME_gacha_klee_country_modifier: "Four-Leaf Clover Luck"
-  STATIC_MODIFIER_DESC_gacha_klee_country_modifier: "Army morale recovers faster, and prestige rises alongside it."
+  STATIC_MODIFIER_DESC_gacha_klee_country_modifier: "Army morale recovers faster, and prestige rises along with it."
 
   STATIC_MODIFIER_NAME_gacha_klee_c2_country_modifier: "Kaboom Shrapnel Field"
   STATIC_MODIFIER_DESC_gacha_klee_c2_country_modifier: "Siege efficiency and morale increase; enemy fortresses crumble like paper."
 
   STATIC_MODIFIER_NAME_gacha_klee_c1_country_modifier: "Artillery Training Day"
-  STATIC_MODIFIER_DESC_gacha_klee_c1_country_modifier: "Thanks to Klee’s ‘optimizations’, the arsenal’s ledgers are simplified and artillery becomes significantly cheaper to build."
+  STATIC_MODIFIER_DESC_gacha_klee_c1_country_modifier: "Thanks to Klee's 'improvements', the arsenal's ledgers are simplified and artillery becomes significantly cheaper to build."
 
   STATIC_MODIFIER_NAME_gacha_klee_c5_country_modifier: "Booming Sparks"
   STATIC_MODIFIER_DESC_gacha_klee_c5_country_modifier: "Artillery firepower is enhanced in honor of the little demolition expert."
@@ -63,92 +63,92 @@
   STATIC_MODIFIER_DESC_gacha_klee_holy_gardener_modifier: "Using fire as a plow, sieges and construction advance together; the blaze opens up new soil for rebirth."
 
   STATIC_MODIFIER_NAME_gacha_klee_scorched_guardian_modifier: "Guardian of the Scorched Earth"
-  STATIC_MODIFIER_DESC_gacha_klee_scorched_guardian_modifier: "From ash comes revival; war exhaustion eases, morale recovers, and even ruins will someday bloom again."
+  STATIC_MODIFIER_DESC_gacha_klee_scorched_guardian_modifier: "From ash comes revival; war exhaustion eases, morale recovers, and even ruins will one day bloom again."
 
   # === Trait Loss ===
-  gacha_klee_origin_trait_die_desc: "Loses the “Spark Knight” starting bonus."
-  gacha_klee_awakened_trait_die_desc: "Loses the “Apprentice of Blasting” profession bonus."
-  gacha_klee_transcended_trait_die_desc: "Loses the “Dodoco’s Guardian” ruler bonus."
-  gacha_klee_c2_trait_die_desc: "Loses Klee’s C2 ascension bonus."
-  gacha_klee_c4_trait_die_desc: "Loses Klee’s C4 ascension bonus."
-  gacha_klee_c6_trait_die_desc: "Loses Klee’s C6 final ascension bonus."
+  gacha_klee_origin_trait_die_desc: "Loses the 'Spark Knight' starting bonus."
+  gacha_klee_awakened_trait_die_desc: "Loses the 'Apprentice of Blasting' profession bonus."
+  gacha_klee_transcended_trait_die_desc: "Loses the 'Dodoco's Guardian' ruler bonus."
+  gacha_klee_c2_trait_die_desc: "Loses Klee's C2 ascension bonus."
+  gacha_klee_c4_trait_die_desc: "Loses Klee's C4 ascension bonus."
+  gacha_klee_c6_trait_die_desc: "Loses Klee's C6 final ascension bonus."
 
   # === Events ===
-  gacha_klee_events.1.title: "Knights of Favonius · Spark Knight Klee — Boom-Boom Entrance"
-  gacha_klee_events.1.desc: "A harmless puff of pink smoke pops outside the palace window—then a red-and-white bundle tumbles in atop Dodoco. Klee squints around for a ‘commander,’ spots you, and brandishes a Jumpy Dumpty like a business card, grinning ear to ear.\n\nShe’s waiting for your response before she shows off her ‘explosive résumé.’"
-  gacha_klee_events.1.a: "Ask her to set the bomb down and speak."
+  gacha_klee_events.1.title: "Knights of Favonius · Spark Knight Klee — Watch Out for Bombs"
+  gacha_klee_events.1.desc: "#ZG At the center of the wishing circle, golden script crawls along the etched lines.\nBarrels of gunpowder, charred fish bones, apology letters, and scattered siege blueprints whirl above the array, only to be gently swallowed by an orange-red glow rising from the center.\nWithin that light, tiny sparks drift like fireflies, occasionally bursting into miniature fireworks.\nA small figure is curled up inside. Golden hair spills out from under her hat, and a red-and-white cloak is bundled around her.\nShe clutches a stuffed toy tight in her arms, while a few round bombs bob lazily by her feet.\nOne wandering spark lands on the tip of her nose.#!\n\"Mmm... fishies... just a little longer...\"#ZG With a crisp boom, the firelight bursts apart like fireworks.\nThe glowing motes are gathered back into the golden sigils.#!"
+  gacha_klee_events.1.a: "Approach to check on her."
 
-  gacha_klee_events.10.title: "Knights of Favonius · Spark Knight Klee — Your (Highly Hazardous) Mascot"
-  gacha_klee_events.10.desc: "“Dah-dah-dah~! Klee’s here!\n\nHuh? This isn’t the confinement room, or the Knights’ headquarters…\n\nWaaah, what a big map! Are all those red flags the bad guys? Are those little blocks with walls drawn on them the rocks we use for blasting fish?\n\nI’m the Spark Knight Klee! Captain Jean always says I’m too naughty, but I’m super strong, you know!\n\nAnything that goes boom-boom, or any hard, hard walls—just leave them to Klee!\n\nUm… in exchange, could you *not* confiscate my Jumpy Dumpties?\n\nI’ll be really good! Probably… only one explosion a day?\n\nOh, oh, and do you have yummy Calla Lilies here too?”"
+  gacha_klee_events.10.title: "Knights of Favonius · Spark Knight Klee — Highly Hazardous!"
+  gacha_klee_events.10.desc: "#ZG The girl opens her eyes and bounces down into the center of the array, landing with a hop as her skirt and the sparks flare up together.#!\n\"Da-da-da~! Spark Knight Klee, making a super-sparkly entrance!\"\n#ZG She spreads her arms and spins in a circle—then freezes.#!\n\"Eh? This isn't the confinement room... or the Knights of Favonius headquarters...\"\n#ZG She looks around at the golden wishing circle, her eyes growing rounder and rounder.#!\n\"Klee gets it now! This is a big, big wishing circle that can summon a super amazing hero, right?\"\n#ZG She runs up in front of you, tilting her head back, eyes shining.#!\n\"I'm Klee, the boom-boom hero! The best at making things go kaboom! Captain Jean always says I'm too naughty, but I'm really strong, you know!\"\n#ZG She tilts her head in thought, then lowers her voice like a little grown-up.#!\n\"Mom's storybooks say that if you blow up all the bad guys from another world, you can complete the hero's mission.\"\n\"Klee's bombs are super strong—no matter how sturdy the walls or how sneaky the demon king, Klee can go 'da-da-da—boom!' and take care of them for you.\"\n\"But Klee also has one tiny little request.\"\n\"Will you go blow up fish with Klee?\"\n\"I'll be really good! Maybe... only one explosion a day?\""
   gacha_klee_events.10.a: "Welcome, Klee!"
 
-  gacha_klee_events.2.title: "Even Bigger Booms!"
-  gacha_klee_events.2.desc: "Klee’s power has grown, and she jumps up in delight.\n\n“Waaah~ Klee got stronger! Now I can make even bigger bombs! Hehe, then I can blast *sooo* many fish!”"
-  gacha_klee_events.2.a: "Explosion *is* art!"
+  gacha_klee_events.2.title: "Even Bigger Explosions!"
+  gacha_klee_events.2.desc: "Klee's power has grown stronger, and she jumps up in delight.\n\n\"Waaah~ Klee got stronger! Now I can make even bigger bombs! Hehe, then I can blast so many fish!\""
+  gacha_klee_events.2.a: "Explosion is art!"
 
   gacha_klee_events.4.title: "In the Name of Sparks"
-  gacha_klee_events.4.desc: "“I’m the Spark Knight Klee.\n\nWhen I first came here, I was actually a little bit scared.\n\nThere was no Captain Jean nagging me, no Albedo drawing pictures, and no Kaeya to help write my apology letters.\n\nI was afraid that if I blew something up by accident, you’d throw me out like a stranger.\n\nBut… you didn’t.\n\nEvery time I blasted a gap in the walls, you’d pat my head and say, ‘Nice work.’\n\nEvery time I turned the enemy’s position into scorched earth, you’d stand in front of me and block all those angry stares.\n\nHehe, it feels just like being at home.\n\nNow, this big, big realm is Klee’s new home!\n\nNo matter how thick the walls, or how bad the bad guys are,\n\nas long as it’s to protect you, and to protect our home,\n\nKlee will blow them all away!\n\nThat’s the Spark Knight’s promise!\n\n…Um, so, can we skip my confinement today?”"
+  gacha_klee_events.4.desc: "I'm the Spark Knight Klee.\n\nWhen I first came here, I was actually a little bit scared.\n\nThere was no Captain Jean nagging me, no Albedo drawing pictures, and no Kaeya to help write my apology letters.\n\nI was afraid that if I blew something up by accident, you would throw me out like a stranger.\n\nBut... you didn't.\n\nEvery time I blasted a gap in the walls, you would pat my head and say, \"Nice work.\"\n\nEvery time I turned the enemy's position into scorched earth, you would stand in front of me and block all those accusing stares.\n\nHehe, it feels just like being at home.\n\nNow, this big, big realm is Klee's new home!\n\nNo matter how thick the walls are, or how bad the bad guys are,\n\nas long as it's to protect you, and to protect our home,\n\nKlee will blow them all away!\n\nThat's the Spark Knight's promise!\n\n...Um, so, can we skip my confinement today?"
   gacha_klee_events.4.a: "Of course, my little knight."
 
-  gacha_klee_events.11.title: "Doesn’t Even Need a Push"
-  gacha_klee_events.11.desc: "“Why did those enemy walls just fall down all by themselves? Hmm… maybe it’s because Klee buried a few ‘treasures’ over there just now? Hehe, is this what Captain Jean calls ‘subduing the enemy without… what was it… fighting’? Isn’t Klee super smart?”"
+  gacha_klee_events.11.title: "Doesn't Even Need a Push"
+  gacha_klee_events.11.desc: "\"Why did those enemy walls just fall down all by themselves? Hmm... maybe it's because Klee buried a few 'treasures' over there just now? Hehe, is this what Captain Jean calls 'subduing the enemy without... um... fighting'? Isn't Klee super smart?\""
   gacha_klee_events.11.a: "Brilliantly smart!"
 
   gacha_klee_events.12.title: "Art Is an Explosion!"
-  gacha_klee_events.12.desc: "“Full salvo! Rat-a-ta-ta—! Look, that fortress just burst open like a giant firework! So pretty! It’s kind of a pity the land turned all black and sooty… but that means we won, right? Will you praise Klee?”"
+  gacha_klee_events.12.desc: "\"Full salvo! Rat-a-ta-ta—! Look, that fortress just burst open like a giant firework! So pretty! It's kind of a pity the ground turned all black... but that means we won, right? Will you praise Klee?\""
   gacha_klee_events.12.a: "You did great!"
 
   gacha_klee_events.13.title: "\"New\" Fireworks"
-  gacha_klee_events.13.desc: "“Look! This is a brand-new formula Klee made using the gunpowder from here! The sound is just a *tiny* bit louder, and there’s just a *tiny* bit more smoke, buuut… look, aren’t those cannons running way faster now? This is Klee’s present for you!”"
+  gacha_klee_events.13.desc: "\"Look! This is a brand-new formula Klee made using the gunpowder from here! The sound is just a little bit louder, and there's just a little bit more smoke, but... look, aren't those cannons running way faster now? This is Klee's present for you!\""
   gacha_klee_events.13.a: "Thank you for the present!"
 
-  gacha_klee_events.14.title: "Dodoco’s Sky-Shaking Thunder"
-  gacha_klee_events.14.desc: "“This is Dodoco’s best friend, the super—ultra—mega BOMB! I mounted it on a cart, just for you! With this, there’s no door we can’t blow open! Let’s go—full speed ahead!”"
+  gacha_klee_events.14.title: "Dodoco's Sky-Shaking Thunder"
+  gacha_klee_events.14.desc: "\"This is Dodoco's best friend, the super—ultra—mega BOMB! I mounted it on a cart just for you! With this, there's no door we can't blow open! Let's go—full speed ahead!\""
   gacha_klee_events.14.a: "Full speed ahead!"
 
-  # === C3 Story: Gardener of the Scorched Earth ===
+  # === C3 Story Chain: Gardener on the Scorched Earth ===
   gacha_klee_c3_title: "Gardener on the Scorched Earth"
 
   # Scene 1
-  gacha_klee_c3_scene_1_desc: "The long siege has finally ended. It was a price that had to be paid for the empire’s unification.\n\nYou walk across the newly conquered land. The air reeks of burnt charcoal; every inch underfoot records a spike in devastation and the accompanying penalties to your administration.\n\nIt was a necessary destruction—but as the ruler, faced with so much ruin, you still feel a weight in your chest.\n\nUntil, at the center of a massive crater, you notice a splash of red, vividly out of place."
+  gacha_klee_c3_scene_1_desc: "The long siege has finally ended. It was a price that had to be paid for the empire's unification.\n\nYou walk across the newly conquered land. The air reeks of burnt charcoal; every inch underfoot records a surge in devastation—and the accompanying penalties to your administration.\n\nIt was a necessary destruction, but as the ruler, faced with so much ruin, you still feel a weight in your chest.\n\nUntil, at the center of a massive crater, you notice a splash of red, vividly out of place."
   gacha_klee_c3_scene_1_opt_a: "Approach that figure."
   gacha_klee_c3_scene_1_opt_skip: "Skip this story"
 
   # Scene 2
-  gacha_klee_c3_scene_2_desc: "It’s Klee. The fortress that held up your armies for three months finally fell to her sparks.\n\nNow, this “walking calamity” who makes enemy troops tremble is quietly focused on the scorched earth at her feet.\n\nShe isn’t celebrating victory, nor searching for loot. Her movements are as gentle as if she were tending a newborn Dodoco—so gentle it clashes chillingly with the slaughter all around."
+  gacha_klee_c3_scene_2_desc: "It's Klee. The fortress that held up your armies for three months finally fell to her sparks.\n\nNow, this \"walking calamity\" who makes enemy troops tremble is quietly focused on the scorched earth at her feet.\n\nShe isn't celebrating victory, nor searching for loot. Her movements are as gentle as if she were tending a newborn Dodoco—so gentle it clashes chillingly with the slaughter all around."
   gacha_klee_c3_scene_2_opt_a: "Watch in silence."
 
   # Scene 3
-  gacha_klee_c3_scene_3_desc: "Klee turns around, cradling a little wildflower with slightly yellowed petals that she dug up from who-knows-where. Soot smudges her face, but her eyes are terrifyingly clear.\n\nKlee: “...Ah, did you come to confiscate my bombs?”\n\nShe reflexively shields the pit behind her, then shakes her head and lets her hands fall.\n\nKlee: “No, there aren’t any bombs here anymore. All the bombs turned into fireworks and flew up into the sky.”\n\nShe points at the scorched patch behind her, where she just buried a tiny seed.\n\nKlee: “I’m planting flowers. Captain Jean said that in places that got burned, the grass that grows next year will be super tall.”"
-  gacha_klee_c3_scene_3_opt_a: "Squat down: so you’re planting flowers."
+  gacha_klee_c3_scene_3_desc: "Klee turns around, cradling a little wildflower with slightly yellowed petals that she dug up from who-knows-where. Soot smudges her face, but her eyes are terrifyingly clear.\n\nKlee: \"...Ah, did you come to confiscate my bombs?\"\n\nShe reflexively shields the pit behind her, then shakes her head and lets her hands fall.\n\nKlee: \"No, there aren't any bombs here anymore. All the bombs already turned into fireworks and flew up into the sky.\"\n\nShe points at the scorched patch behind her, where she just buried a tiny seed.\n\nKlee: \"I'm planting flowers. Captain Jean said that in places that got burned, the grass that grows next year will be super tall.\""
+  gacha_klee_c3_scene_3_opt_a: "Squat down: so you're planting flowers."
 
-  # Scene 4
-  gacha_klee_c3_scene_4_desc: "Klee looks over the ruins around her. There’s not a trace of fear in her eyes—only a pure, unsettling anticipation.\n\nKlee: “Before, there were waaay too many houses here. They blocked all the sunlight. Everyone was squeezed into dark, narrow alleys, and nobody was happy.”\n\nKlee: “Now it’s better! All the houses are gone, so the sunlight can shine on every little bit of land!”\n\nShe fixes those innocent eyes on you and speaks a truth as cruel as it is simple:\n\nKlee: “Only if you blow up *all* the old things can the new ones have room to grow, right?”"
-  gacha_klee_c3_scene_4_opt_a: "You’re right. Rotten orders must be purified by fire."
-  gacha_klee_c3_scene_4_opt_b: "But all those things you blew up used to be someone’s home."
+  # Scene 4 (branch)
+  gacha_klee_c3_scene_4_desc: "Klee looks over the ruins around her. There's not a trace of fear in her eyes—only a pure, unsettling anticipation.\n\nKlee: \"Before, there were way too many houses here. They blocked all the sunlight. Everyone was squeezed into dark, narrow alleys, and nobody was happy.\"\n\nKlee: \"Now it's better! All the houses are gone, so the sunlight can shine on every little bit of land!\"\n\nShe fixes those innocent eyes on you and speaks a truth as cruel as it is simple:\nKlee: \"Only if you blow up all the old things can the new ones have room to grow, right?\""
+  gacha_klee_c3_scene_4_opt_a: "You're right. Rotten orders must be purified by fire."
+  gacha_klee_c3_scene_4_opt_b: "But all those things you blew up used to be someone's home."
 
   # Scene 5
-  gacha_klee_c3_scene_5_desc_a: "She laughs happily, as if she’s finally found someone who understands."
+  gacha_klee_c3_scene_5_desc_a: "She laughs happily, as if she's finally found someone who understands."
   gacha_klee_c3_scene_5_desc_b: "She frowns in confusion, then seriously argues back."
-  gacha_klee_c3_scene_5_desc_common: "Klee: “But… if you don’t blow them up, they’ll just keep rotting there, you know? Like a lake that doesn’t flow will start to stink.”\n\nKlee: “My mom once told me a story. She said: a long, long time ago, there was a really, really big forest…”\n\nKlee: “The old trees in the forest grew too tall and too dense. They blocked out all the sun, and not a single sapling could grow.”\n\nKlee: “Then one day, a bolt of lightning came down—‘BOOOM!’—and the whole forest burned! The next spring, so many new sprouts grew out of the black ashes!”\n\nShe recites the line that’s far too heavy for a child like she’s reciting scripture:\n\nKlee: “Mom said: ‘Civilization is like an overgrown forest. When the ancient trees block all the light, only the cruelty of flame can awaken the sprouts sleeping beneath the humus.’”\n\nKlee: “I don’t really get what ‘humus’ means… but Mom definitely meant that broken things are just fertilizer that hasn’t been exploded yet!”\n\nKlee: “As long as you use sparks to go ‘KA-BOOM!’ and turn them into ash, they can become the foundation for new houses and the fertilizer for flowers! That’s the ‘prelude to new life’!”"
-  gacha_klee_c3_scene_5_opt_a: "A ‘prelude to new life’? Compared to our great goal, it really is just a prelude."
+  gacha_klee_c3_scene_5_desc_common: "Klee: \"But... if you don't blow them up, they'll just keep rotting there, you know? Like how a lake that doesn't flow will start to stink.\"\n\nKlee: \"My mom once told me a story. She said: a long, long time ago, there was a really, really big forest...\"\n\nKlee: \"The old trees in the forest grew too tall and too dense. They blocked out all the sun, and not a single sapling could grow.\"\n\nKlee: \"Then one day, a bolt of lightning came down—BOOM!—and the whole forest burned! The next spring, so many new sprouts grew out of the black ashes!\"\n\nShe recites the line that's far too heavy for a child like she's reciting scripture:\nKlee: \"Mom said: 'Civilization is like an overgrown forest. When the ancient trees block all the light, only the cruelty of flame can awaken the sprouts sleeping beneath the humus.'\"\n\nKlee: \"I don't really get what 'humus' means... but Mom definitely meant that broken things are just fertilizer that hasn't been exploded yet!\"\n\nKlee: \"As long as you use sparks to go KABOOM and turn them into ash, they can become the foundation for new houses and the fertilizer for flowers! That's the 'prelude to new life'!\""
+  gacha_klee_c3_scene_5_opt_a: "A 'prelude to new life'? Compared to our great goal, it really is just a prelude."
 
   # Scene 6
-  gacha_klee_c3_scene_6_desc: "You look at her.\n\nIn her eyes, those shattered fortresses and burned libraries are nothing more than ‘old trees’ blocking out the light. The old nobles wailing among the ruins are just withered roots clinging to the soil, waiting to be turned into humus.\n\nIn this child’s logic, war isn’t the continuation of politics, but of life-force. A sclerotic empire needs to breathe, and her sparks are the hammer that cracks the shell. Explosions exist so that growth can rage even fiercer."
-  gacha_klee_c3_scene_6_opt_a: "Meet her gaze: she understands the cost of ‘development’ better than anyone."
+  gacha_klee_c3_scene_6_desc: "You look at her.\n\nIn her eyes, those shattered fortresses and burned libraries are nothing more than 'old trees' blocking out the light. The old nobles wailing among the ruins are just withered roots clinging to the soil, waiting to be turned into humus.\n\nIn this child's logic, war isn't the continuation of politics, but of life-force. A sclerotic empire needs to breathe, and her sparks are the hammer that cracks the shell. Explosions exist so that growth can rage even fiercer."
+  gacha_klee_c3_scene_6_opt_a: "Meet her gaze: she understands the cost of 'development' better than anyone."
 
-  # Scene 7 (Locked)
-  gacha_klee_c3_scene_7_desc_a: "Klee: “Will you be mad at me? For making everything all bald and empty?”\n\nShe looks at you nervously, fingers twisting together.\n\nKlee: “But if we just wait, really just wait a little, it’ll become even prettier than before!”"
-  gacha_klee_c3_scene_7_desc_b: "Klee: “Will you be mad at me? For making everything all bald and empty?”\n\nShe looks at you nervously, fingers twisting together.\n\nKlee: “But if we just wait, really just wait a little, it’ll become even prettier than before!”"
-  gacha_klee_c3_scene_7_opt_a: "You’re right. We’re not making ruins; we’re plowing fields for the future."
-  gacha_klee_c3_scene_7_opt_b: "The flowers will bloom. Until then, I’ll guard this land—scars and all."
+  # Scene 7 (locked)
+  gacha_klee_c3_scene_7_desc_a: "Klee: \"Will you be mad at me? For making everything all bald and empty?\"\n\nShe looks at you nervously, fingers twisting together.\n\nKlee: \"But if we just wait, really just wait a little, it'll become even prettier than before!\""
+  gacha_klee_c3_scene_7_desc_b: "Klee: \"Will you be mad at me? For making everything all bald and empty?\"\n\nShe looks at you nervously, fingers twisting together.\n\nKlee: \"But if we just wait, really just wait a little, it'll become even prettier than before!\""
+  gacha_klee_c3_scene_7_opt_a: "You're right. We're not making ruins; we're plowing fields for the future."
+  gacha_klee_c3_scene_7_opt_b: "The flowers will bloom. Until then, I'll guard this land—scars and all."
 
   # Scene 8
-  gacha_klee_c3_scene_8_desc: "Hearing your answer, the unease in Klee’s eyes fades away.\n\nKlee: “Mm! Plowing fields! Klee is the best gardener in all of Teyvat—no, in the whole world!”\n\nShe jumps to her feet and stretches out her arms as if to embrace the scarred land before her.\n\nKlee: “We’ll blow up all the walls that get in the way, and all the broken, rotten houses too…”\n\nKlee: “Someday, the whole world will turn into one big garden, and everyone will be able to run around wherever they want!”"
-  gacha_klee_c3_scene_8_opt_a: "Take her hand: come on, we’ve got a lot of ground to ‘plow’."
+  gacha_klee_c3_scene_8_desc: "Hearing your answer, the unease in Klee's eyes fades away.\n\nKlee: \"Mm! Plowing fields! Klee is the best gardener in all of Teyvat—no, in the whole world!\"\n\nShe jumps to her feet and stretches out her arms as if to embrace the scarred land before her.\n\nKlee: \"We'll blow up all the walls that get in the way, and all the broken, rotten houses too...\"\n\nKlee: \"Someday, the whole world will turn into one big garden, and everyone will be able to run around wherever they want!\""
+  gacha_klee_c3_scene_8_opt_a: "Take her hand: come on, we've got a lot of ground to 'plow'."
 
   # Scene 9
-  gacha_klee_c3_scene_9_desc_a: "You stand side by side with Klee atop the ruins, gazing out over lands not yet conquered. The corner of her backpack bulges with yet more bombs.\n\nYou take her small, soot-stained hand.\n\nYou: “Yes. For that great garden, we’ll need many more sparks.”\n\nKlee nods vigorously, and the Jumpy Dumpties in her pack seem to hum along in excitement.\n\nKlee: “Leave it to me! Wherever there’s a rotten smell, that’s where Klee will go to set off fireworks!”\n\nAll who hinder the empire’s growth are but weeds."
-  gacha_klee_c3_scene_9_desc_b: "You crouch down to meet the tiny flower growing in the charred earth eye-to-eye. Klee stands beside you, carefully brushing the ash from your face.\n\nYou accept the necessity of war, but you also decide not to let that cruelty devour her heart.\n\nYou: “This flower is beautiful. But remember—after you set a fire, you must remember to sow seeds.”\n\nKlee looks at you, half understanding and half not, then breaks into a radiant smile.\n\nKlee: “I don’t really get it… but as long as I’m with you, even on pitch-black scorched earth, I still feel warm!”"
+  gacha_klee_c3_scene_9_desc_a: "You stand side by side with Klee atop the ruins, gazing out over lands not yet conquered. The corner of her backpack bulges with yet more bombs.\n\nYou take her small, soot-stained hand.\n\nYou: \"Yes. For that great garden, we'll need many more sparks.\"\n\nKlee nods vigorously, and the Jumpy Dumpties in her pack seem to hum along in excitement.\n\nKlee: \"Leave it to me! Wherever there's a rotten smell, that's where Klee will go to set off fireworks!\"\n\nAll who hinder the empire's growth are but weeds."
+  gacha_klee_c3_scene_9_desc_b: "You crouch down to meet the tiny flower growing in the charred earth eye-to-eye. Klee stands beside you, carefully brushing the ash from your face.\n\nYou accept the necessity of war, but you also decide not to let that cruelty devour her heart.\n\nYou: \"This flower is beautiful. But remember—after you set a fire, you must remember to sow seeds.\"\n\nKlee looks at you, half understanding and half not, then breaks into a radiant smile.\n\nKlee: \"I don't really get it... but as long as I'm with you, even on pitch-black scorched earth, I still feel warm!\""
   gacha_klee_c3_scene_9_opt_a_new: "All for new life."
-  gacha_klee_c3_scene_9_opt_b: "Let’s go home, Klee."
+  gacha_klee_c3_scene_9_opt_b: "Let's go home, Klee."

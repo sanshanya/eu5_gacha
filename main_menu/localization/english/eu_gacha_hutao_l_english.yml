@@ -1,153 +1,152 @@
 ﻿l_english:
   # ============================================================
-  # Character - Hu Tao "Deconstructing Seriousness"
+  # Character - Hu Tao "Deconstructing Gravitas"
   # ============================================================
 
   # === Name ===
   gacha_first_name_hutao: "Hu Tao"
-  gacha_last_name_hutao: "Wangsheng Funeral Parlor"
+  gacha_last_name_hutao: "Wangsheng"
 
   # === Traits ===
-  gacha_hutao_origin_trait: "Wangsheng Funeral Outreach"
-  desc_gacha_hutao_origin_trait: "“The people of your country sure seem scared of death, huh? That won’t do—when folks fear it too much, that’s when panic spreads. Birth, age, sickness, death… they’re all just part of the natural order, as normal as breathing. Let me help you promote a healthier view of ‘passing on.’ Once people feel at ease about it, they can live their days in peace.”"
+  gacha_hutao_origin_trait: "Wangsheng Business Expansion"
+  desc_gacha_hutao_origin_trait: "“The people of your country seem awfully afraid of dying, huh? That won’t do at all—the more they fear it, the easier they are to panic.\n\nBirth, aging, sickness and death are just the laws of nature, as natural as breathing.\n\nLet me help you spread a little of Wangsheng’s ‘passing on’ philosophy. Once everyone’s hearts are at ease, their days will settle down too.”"
 
-  gacha_hutao_awakened_trait: "Crimson Ghostfire Clears the Way"
-  desc_gacha_hutao_awakened_trait: "“You think I’m no good in war? Tsk, don’t underestimate me. Only someone who’s seen more deaths than most knows how to send people off the fastest. Relax—whether enemy or ally, once they fall, the Wangsheng Funeral Parlor will make sure everyone gets a fair spot on the other side.”"
+  gacha_hutao_awakened_trait: "Crimson Procession Clears the Way"
+  desc_gacha_hutao_awakened_trait: "“You think I don’t know how to fight? Ah, now you’re underestimating me.\n\nOnly someone who’s seen more life and death than most knows how to send people on their way as quickly as possible.\n\nDon’t worry—friend or foe, once they fall, the Wangsheng Funeral Parlor will make sure everyone gets a fair spot on the other side.”"
 
-  gacha_hutao_transcended_trait: "Guide of the Ghostly Butterflies"
-  desc_gacha_hutao_transcended_trait: "“You’re really putting me on the throne, huh? Hehe, suits me just fine. Under my rule, yin and yang will be in order, and both the living and the dead will rest easy. While alive, you get hustle and bustle; once you go, you get dignity and ceremony. Isn’t that the perfect golden age?”"
+  gacha_hutao_transcended_trait: "Guide of the Spirit Butterflies"
+  desc_gacha_hutao_transcended_trait: "“You’re really putting me on the throne? Hehe, well, why not.\n\nUnder my rule, yin and yang will be in proper order, and both the living and the dead will rest easy.\n\nWhile you’re alive, things will be lively and bustling; once you go, it’ll be dignified and proper.\n\nIsn’t that the most perfect kind of golden age?”"
 
   # Constellation Traits
-  gacha_hutao_c2_trait: "Border · Requiem"
-  desc_gacha_hutao_c2_trait: "“Where yin and yang meet, all things ebb and flow. I’ve set boundary stones at the four corners of this land. The dead sleep beneath the earth, returning as fertile spring soil; the living need not fear the flames of war, and life goes on and on. Listen closely—that’s the song of souls going home, and the pulse of a nation growing strong.”"
+  gacha_hutao_c2_trait: "Border · Requiem of Rest"
+  desc_gacha_hutao_c2_trait: "“Yin and yang in order, all things thriving.\n\nI’ve set boundary steles at the four corners of this realm.\n\nThe dead rest underground, returning as spring soil; the living feel no fear before the fires of war, and life goes on, and on.\n\nListen—that’s the song of souls returning home... and the heartbeat of a growing nation.”"
 
-  gacha_hutao_c4_trait: "Crimson Bouquet · Butterfly Blaze"
-  desc_gacha_hutao_c4_trait: "“If words can’t persuade the wicked, then we’ll let fire do the talking! My butterflies will flit across the battlefield; every blossom of flame is a ticket to the far shore for another enemy. Don’t blink—this is a grand funeral rite named ‘destruction’!”"
+  gacha_hutao_c4_trait: "Crimson Host · Butterfly Flames Ablaze"
+  desc_gacha_hutao_c4_trait: "“If words can’t talk the wicked spirits down, then we’ll just use fire to purify them!\n\nMy little butterflies will flutter across the battlefield, and every blossom of flame is another enemy sent to the far shore.\n\nDon’t blink—this is a grand funeral rite called ‘annihilation’!”"
 
-  gacha_hutao_c6_trait: "Mistress of the Afterlife · Samsara"
-  desc_gacha_hutao_c6_trait: "“From this seat I can see even more partings and reunions. But precisely because of that, life feels all the more precious, doesn’t it? There’s no need to fear the end—I’m the gatekeeper. As long as I’m here, this country’s allotted span of years isn’t over yet. So go on, stir up a storm, Your Majesty!”"
+  gacha_hutao_c6_trait: "Sovereign of the Netherworld · Cycle"
+  desc_gacha_hutao_c6_trait: "“From this seat, I see far more partings of life and death than before.\n\nBut that’s exactly why life feels so precious, isn’t it?\n\nThere’s no need to fear the end—I’m the gatekeeper, after all.\n\nAs long as I’m here, this country’s allotted span isn’t over yet.\n\nSo raise a little more hell, Your Majesty!”"
 
   # === Modifiers ===
   STATIC_MODIFIER_NAME_gacha_hutao_modifier: "Blessing of Butterfly Flames"
-  STATIC_MODIFIER_DESC_gacha_hutao_modifier: "“Life and death are just different states of being. Like a butterfly breaking out of its cocoon—it’s only changing its way of living, that’s all.”"
+  STATIC_MODIFIER_DESC_gacha_hutao_modifier: "“Life and death are just different states of being.\n\nLike a butterfly breaking out of its cocoon—it’s only changing how it lives.”"
 
   gacha_hutao_modifier: "Power of Passing On"
-  gacha_hutao_modifier_desc: "Hu Tao’s unique understanding of life and death helps the people of this realm face the cycle of fate with calm acceptance."
+  gacha_hutao_modifier_desc: "Hu Tao’s unique understanding of life and death helps the people of this nation face the turning of fate’s wheel with greater ease."
 
   # === Constellations ===
-  STATIC_MODIFIER_NAME_gacha_hutao_c0_modifier: "Far-Shore Seat · Base"
+  STATIC_MODIFIER_NAME_gacha_hutao_c0_modifier: "Seat of the Far Shore · Base"
   STATIC_MODIFIER_NAME_gacha_hutao_c1_modifier: "Crimson-Turned Butterfly Dance"
   STATIC_MODIFIER_NAME_gacha_hutao_c2_modifier: "Most Restless Spirit"
-  STATIC_MODIFIER_NAME_gacha_hutao_c3_modifier: "Farewell in the Living World"
-  STATIC_MODIFIER_NAME_gacha_hutao_c4_modifier: "Blossoms and Full Moon"
-  STATIC_MODIFIER_NAME_gacha_hutao_c5_modifier: "Inn of Dusty Mortals"
-  STATIC_MODIFIER_NAME_gacha_hutao_c6_modifier: "Butterflies, Different Paths"
+  STATIC_MODIFIER_NAME_gacha_hutao_c3_modifier: "Parting in the Mortal World"
+  STATIC_MODIFIER_NAME_gacha_hutao_c4_modifier: "Flowers in Bloom, Moon in Full"
+  STATIC_MODIFIER_NAME_gacha_hutao_c5_modifier: "Wayside Inn of the Mortal Dust"
+  STATIC_MODIFIER_NAME_gacha_hutao_c6_modifier: "Butterflies on Diverging Paths"
 
-  STATIC_MODIFIER_NAME_gacha_hutao_gravestone_modifier: "Gravestone of Life and Death"
-  STATIC_MODIFIER_DESC_gacha_hutao_gravestone_modifier: "The Director’s promise stands like a boundary stone between yin and yang, tidying away your regrets and smoothing the road beyond."
+  STATIC_MODIFIER_NAME_gacha_hutao_gravestone_modifier: "Boundary Stone of Life and Death"
+  STATIC_MODIFIER_DESC_gacha_hutao_gravestone_modifier: "The Hall Master’s promise stands like a boundary stele between yin and yang, gathering up your regrets and smoothing the road ahead."
 
-  STATIC_MODIFIER_NAME_gacha_hutao_midnight_carnival_modifier: "Midnight Carnival"
-  STATIC_MODIFIER_DESC_gacha_hutao_midnight_carnival_modifier: "That night of unrestrained revelry reignited long-lost youthful spirit; your prestige and morale now sparkle with moonlit sparks."
+  STATIC_MODIFIER_NAME_gacha_hutao_midnight_carnival_modifier: "Moonlit Revelry"
+  STATIC_MODIFIER_DESC_gacha_hutao_midnight_carnival_modifier: "That night of unrestrained fun rekindled long-lost youthful fire; your prestige and morale now sparkle with moonlit embers."
 
   STATIC_MODIFIER_NAME_gacha_hutao_c6_country_modifier: "Butterflies Guide the Court"
-  STATIC_MODIFIER_DESC_gacha_hutao_c6_country_modifier: "State affairs are managed with the precision of a funeral rite; stability costs drop sharply, and talk of rebellion falls silent."
+  STATIC_MODIFIER_DESC_gacha_hutao_c6_country_modifier: "Affairs of state are handled with funeral-level precision; stability costs plunge, and the voices of rebellion fall silent."
 
-  STATIC_MODIFIER_NAME_gacha_hutao_country_modifier: "Wangsheng Funeral Outreach"
-  STATIC_MODIFIER_DESC_gacha_hutao_country_modifier: "The cost of investing in stability falls, and sickness and plague find it hard to take root."
+  STATIC_MODIFIER_NAME_gacha_hutao_country_modifier: "Wangsheng Business Expansion"
+  STATIC_MODIFIER_DESC_gacha_hutao_country_modifier: "The cost of investing in stability falls, and plagues find it hard to gain a foothold."
 
-  STATIC_MODIFIER_NAME_gacha_hutao_c2_country_modifier: "Requiem of the Borders"
-  STATIC_MODIFIER_DESC_gacha_hutao_c2_country_modifier: "Even beyond the coffin, offerings must be made: stability investments cost less, and armies recover more swiftly."
+  STATIC_MODIFIER_NAME_gacha_hutao_c2_country_modifier: "Border Requiem"
+  STATIC_MODIFIER_DESC_gacha_hutao_c2_country_modifier: "The living need offerings too, not just the coffins: stability takes less to maintain, and your armies recover faster."
 
-  STATIC_MODIFIER_NAME_gacha_hutao_c1_country_modifier: "Wangsheng Ledger"
-  STATIC_MODIFIER_DESC_gacha_hutao_c1_country_modifier: "Years of dealing with both the living and the dead have driven advisor costs down to the minimum."
+  STATIC_MODIFIER_NAME_gacha_hutao_c1_country_modifier: "Wangsheng Bookkeeper"
+  STATIC_MODIFIER_DESC_gacha_hutao_c1_country_modifier: "Years of dealing with both realms have pushed advisor costs down to the bare minimum."
 
-  STATIC_MODIFIER_NAME_gacha_hutao_c5_country_modifier: "Guiding Lanterns"
-  STATIC_MODIFIER_DESC_gacha_hutao_c5_country_modifier: "The flames that ward off evil also light the path beneath the missionaries’ feet."
+  STATIC_MODIFIER_NAME_gacha_hutao_c5_country_modifier: "Guiding Lantern"
+  STATIC_MODIFIER_DESC_gacha_hutao_c5_country_modifier: "The flame that wards off evil spirits also lights the path beneath your missionaries’ feet."
 
-  # === Trait Loss ===
-  gacha_hutao_origin_trait_die_desc: "Loses the “Wangsheng Funeral Outreach” starting bonus."
-  gacha_hutao_awakened_trait_die_desc: "Loses the “Night-Wandering Keeper of Rites” profession bonus."
+  gacha_hutao_origin_trait_die_desc: "Loses the “Wangsheng Business Expansion” starting bonus."
+  gacha_hutao_awakened_trait_die_desc: "Loses the “Night-Wandering Spirit” profession bonus."
   gacha_hutao_transcended_trait_die_desc: "Loses the “Guide of the Netherworld” ruler bonus."
   gacha_hutao_c2_trait_die_desc: "Loses Hu Tao’s C2 ascension bonus."
   gacha_hutao_c4_trait_die_desc: "Loses Hu Tao’s C4 ascension bonus."
   gacha_hutao_c6_trait_die_desc: "Loses Hu Tao’s C6 final ascension bonus."
 
   # === Events ===
-  gacha_hutao_events.1.title: "77th Director of the Wangsheng Funeral Parlor Hu Tao — Business Delivered to Your Door"
-  gacha_hutao_events.1.desc: "The palace doors swing open; Hu Tao skips in backward with a paper parasol bouncing on her shoulder. She scans the hall like a shopkeeper eyeing a promising customer, then waves as if to reel you closer.\n\n“Ahem, the Director has arrived—looks like a fresh… cooperation opportunity just walked in on its own!”\n\nShe raises a finger in a playful ‘shh,’ waiting for your opening line."
-  gacha_hutao_events.1.a: "Nod and let her begin."
+  gacha_hutao_events.1.title: "Hu Tao, 77th Director of the Wangsheng Funeral Parlor — Delivered to Your Door"
+  gacha_hutao_events.1.desc: "#ZG At the heart of the wishing circle, golden script flows along the carved grooves.\nTorn account pages, talismans for warding spirits, and scattered playing cards whirl overhead, only to be gently swallowed by a bloom of orange-red flame rising from the central notch.\nWithin the glowing sphere, fire butterflies and soul-lanterns flicker faintly along the inner surface, golden sigils and blood-red flame patterns looping in ring after ring.\nA girl lies curled up inside, hugging a plump white spirit.\nChestnut hair curls slightly in the firelight, and a dark red robe rests quietly against her.#!She’s cuddling a white ghost with a dopey expression, cheek rubbing against its soft belly, a glimmer of drool at the corner of her mouth.\n#ZG A fire butterfly lands on the tip of her nose.\nWith a soft pop, the flames scatter like petals on the wind.#!"
+  gacha_hutao_events.1.a: "Step closer and take a look."
 
-  gacha_hutao_events.10.title: "77th Director of the Wangsheng Funeral Parlor Hu Tao — Your Exclusive (VIP) Funeral Consultant"
-  gacha_hutao_events.10.desc: "“Ayaya? I thought this cross-world ‘business expansion’ would end with me getting lost again, but I actually landed right in the audience hall of a big client this time~\n\nSooo, how about hiring me as your special consultant? I can handle everything from state funerals to everyday offerings!\n\nSign the contract now, and I’ll give you a twenty-percent discount on your own state funeral someday!\n\n—Kidding, kidding, don’t make such a serious face.”"
+  gacha_hutao_events.10.title: "Hu Tao, 77th Director of the Wangsheng Funeral Parlor — Looking Forward to Your State Funeral"
+  gacha_hutao_events.10.desc: "#ZG The girl yawns, rubs her eyes, and drifts drowsily down into the center of the circle.#!\n「Mm...? Eh??!」\n#ZG Her eyes snap open, plum blossom pupils glittering in the firelight.#!\n「This isn’t the game table... or the Wangsheng Funeral Parlor...」\n#ZG She looks around—at the golden wishing array, at the palace silhouette in the distance. Confusion turns to surprise, then settles into an impish grin.#!\n「My, my... I was just up late playing Genius Invokation, and the next thing I know I’ve popped right out in front of a client—no, an honored guest~」\n#ZG She brushes off her clothes, straightens her hat, then slips effortlessly into a textbook salesperson pose, one hand raised, smile beaming:#!「Pleased to meet you! I’m Hu Tao, 77th Director of the Wangsheng Funeral Parlor in Liyue！」\n「And this place of yours... tsk, tsk. The baleful aura is thick—border wars blazing, palace undercurrents churning. That’s a huge busi— ahem, a huge crisis waiting to happen！」\n#ZG She leans in closer, lowers her voice, and winks:#!「I don’t really know how I ended up here either, but since I’m here, let’s call it fate! How about hiring me as your special consultant？」\n「Sign the contract now, and I’ll give you twenty percent off your future state funeral！」\n「Kidding, kidding~ don’t make such a serious face!」"
   gacha_hutao_events.10.a: "Welcome, Director Hu."
 
-  gacha_hutao_events.2.title: "Business Upgrade"
-  gacha_hutao_events.2.desc: "Hu Tao’s scope of business has expanded; now even the enemy’s affairs in the afterlife are fully covered.\n\n“Relax, the Wangsheng Funeral Parlor’s service is absolutely professional!”"
-  gacha_hutao_events.2.a: "That counts as business too, huh…"
+  gacha_hutao_events.2.title: "Business Expansion"
+  gacha_hutao_events.2.desc: "Hu Tao’s business has broadened—she’s now happy to handle the enemy’s last rites as well.\n\n「Relax, the Wangsheng Funeral Parlor is nothing if not professional！」"
+  gacha_hutao_events.2.a: "This counts as business too...?"
 
-  gacha_hutao_events.4.title: "Gravestone Between Life and Death"
-  gacha_hutao_events.4.desc: "“Yo, big client! …Ah, no, Your Majesty.\n\nWhy are you sitting here spacing out all by yourself again…?\n\nAs long as I’m standing behind you, the rules between the living and the dead aren’t going anywhere.\n\nAll right, daydreaming time’s over! C’mon, let’s go to the imperial garden and give that new minister a little scare!”"
-  gacha_hutao_events.4.a: "With you here, I can rest easy."
+  gacha_hutao_events.4.title: "Boundary Stone of Life and Death"
+  gacha_hutao_events.4.desc: "「Yo, VIP customer！... Ah, I mean, Your Majesty.\n\nWhy are you sitting here alone spacing out again?\n\nWorried about the fighting on the borders, or wondering who’ll inherit all this when you’re a hundred years gone?\n\nHehe, to ordinary folks, those are pretty earth-shaking worries.\n\nBut let me tell you, I’ve seen too much of it at the Wangsheng Funeral Parlor.\n\nArrogant generals, merchants richer than nations—no matter who they are, in the end they’re all the same handful of ash in the same-sized box.\n\nSo don’t cling too hard to that hazy thing called ‘eternity.’\n\nBurn bright instead, like a fire butterfly!\n\nCarve your name into the stone of history, burn your will into this land.\n\nAs for the rest...\n\nThe shades lurking in the dark, the regrets left behind, the farewells that must one day come...\n\nJust leave all that to me.\n\nI’m Hu Tao, 77th Director of the Wangsheng Funeral Parlor.\n\nAs long as I’m standing behind you, the rules between the two realms won’t fall into chaos.\n\nAll right, spacing-out time is over! Come on, let’s go to the imperial garden and give that new minister a little scare！」"
+  gacha_hutao_events.4.a: "With you here, I can stop worrying."
 
   gacha_hutao_events.11.title: "Restless Spirits"
-  gacha_hutao_events.11.desc: "“Lately, the wind on the battlefield feels off… too many souls who don’t want to leave are crying out.\n\nNo helping it—we’ll have to hold a grand ritual.\n\nDon’t worry, leave it to me. If the departed aren’t properly soothed, the living won’t get far either.”"
-  gacha_hutao_events.11.a: "Rest in peace."
+  gacha_hutao_events.11.desc: "「The whispers on the battlefield lately feel wrong... there are too many souls crying who don’t want to leave.\n\nNo helping it—looks like we’ll need a major ritual.\n\nDon’t worry, leave it to me. If we don’t soothe the dead, the road of the living won’t stretch very far either.」"
+  gacha_hutao_events.11.a: "May they rest in peace."
 
-  gacha_hutao_events.12.title: "Karmic Flames Cleanse Sin"
-  gacha_hutao_events.12.desc: "“Sometimes only a roaring fire can burn away the rot of karma. Since the enemy insists on upsetting the balance between yin and yang, let the crimson butterflies send them on their way.\n\nForm a nice orderly line over there, please—the Wangsheng Funeral Parlor doesn’t accept queue-cutting ghosts!”"
-  gacha_hutao_events.12.a: "Cleanse it all!"
+  gacha_hutao_events.12.title: "Karmic Flames, Cleansing Sin"
+  gacha_hutao_events.12.desc: "「Sometimes, only a fierce blaze can burn away rotted karmic filth.\n\nIf the enemy insists on disrupting the balance between yin and yang, then let the crimson butterflies send them on their way.\n\nLine up properly over there, now—no cutting in front at the Wangsheng Funeral Parlor！」"
+  gacha_hutao_events.12.a: "Purge everything!"
 
-  gacha_hutao_events.13.title: "Wangsheng Grand Promotion"
-  gacha_hutao_events.13.desc: "“I noticed all your cabinet ministers have dark circles and blackened brows—definitely from overwork!\n\nSo I kindly handed each of them a little ‘buy one, get one free’ coupon… Huh? Why are they running faster than rabbits?\n\nReally now, they just don’t get it. This is the Director’s heartfelt care!”"
-  gacha_hutao_events.13.a: "That care is… a bit heavy."
+  gacha_hutao_events.13.title: "Big Sale at the Funeral Parlor"
+  gacha_hutao_events.13.desc: "「I took one look and saw all your ministers with dark shadows on their brows—definitely from overwork!\n\nSo I gave each of them a nice little ‘buy one, get one free’ coupon... Eh? Why are they running faster than rabbits?\n\nTsk, such a lack of appreciation. This is the Hall Master’s care and concern, you know！」"
+  gacha_hutao_events.13.a: "That care feels a bit... heavy."
 
   gacha_hutao_events.14.title: "Spreading a View of Life and Death"
-  gacha_hutao_events.14.desc: "“I found that once I print my poems on flyers and hand them out, people don’t seem so scared of war anymore.\n\n‘To live is like summer flowers; to die is like autumn leaves…’\n\nMm, looks like I’m quite the propaganda genius too! Should we engrave this poem on the city gate?”"
+  gacha_hutao_events.14.desc: "「I noticed that as long as I print my poems on flyers and hand them out, people seem less afraid of going to war.\n\n『Live like summer flowers, fall like autumn leaves』...\n\nMm, seems I’ve got a real talent for public messaging too! How about carving this poem on the city gates？」"
   gacha_hutao_events.14.a: "Surprisingly profound."
 
-  # === C3 Story Chain: Doggerel in the Back Alleys ===
+  # === C3 Event Chain: Doggerel in the Back Alleys ===
   gacha_hutao_c3_title: "Doggerel in the Back Alleys"
-
-  # Scene 1: Chill at Your Back
-  gacha_hutao_c3_scene_1_desc: "After finishing the paperwork on succession and marriage alliances, you walk alone along the path back to your chambers.\n\nAs you pass an old pagoda tree—rumored to have once borne the corpse of a minister hanged in a previous dynasty—a chill crawls up the back of your neck, like the gaze of something not quite human.\n\nIn the wind, it feels as if someone is softly chanting."
-  gacha_hutao_c3_scene_1_opt_a: "Whip around: who’s there?!"
-  gacha_hutao_c3_scene_1_opt_skip: "Skip this story"
+  
+  # Scene 1: A Chill at Your Back
+  gacha_hutao_c3_scene_1_desc: "Having finished with the documents on succession and arranged marriages, you walk alone along the road back to your chambers.\n\nAs you pass the old pagoda tree where, legend says, a minister of the last dynasty once hanged himself, a cold shiver creeps up your neck—as if something not quite human has fixed its gaze on you.\n\nIn the wind, it almost sounds like someone is softly reciting a verse."
+  gacha_hutao_c3_scene_1_opt_a: "Whirl around: who’s there?!"
+  gacha_hutao_c3_scene_1_opt_skip: "Skip story"
 
   # Scene 2: A Ghost?
-  gacha_hutao_c3_scene_2_desc: "Behind you there’s no one—only a little white ghost flickers at the edge of your vision.\n\nJust as confusion rises, you hear the rustle of cloth from above your head.\n\n???: “Heehee… Big client, your sense of danger’s gotten rusty~”"
-  gacha_hutao_c3_scene_2_opt_a: "Look up at the tree: that voice…"
+  gacha_hutao_c3_scene_2_desc: "There’s no one behind you—only a tiny white ghost flitting at the edge of your vision.\n\nJust as confusion rises, you hear the rustle of cloth overhead.\n\n？？？：「Heehee... VIP customer, your sense of danger’s getting rusty~」"
+  gacha_hutao_c3_scene_2_opt_a: "Look up at the tree: that voice is..."
 
-  # Scene 3: The Upside-Down Director
-  gacha_hutao_c3_scene_3_desc: "Hu Tao hangs upside down from a branch like a bat, plum-blossom eyes gleaming mischievously in the night as she pinches the squirming little ghost trying to escape.\n\nHu Tao: “Yo! Good evening! The palace is packed with gloomy energy, so I came for some volunteer deep-cleaning. That little ‘chill straight to your core’ just now—refreshing, right?”"
-  gacha_hutao_c3_scene_3_opt_a: "Rub your forehead: “Get down here. This is hardly proper.”"
+  # Scene 3: The Upside-Down Hall Master
+  gacha_hutao_c3_scene_3_desc: "Hu Tao hangs upside down from a branch like a bat, plum blossom eyes glinting strangely in the night, one hand gripping the squirming little ghost trying to escape.\n\n胡桃：「Yo~！Good evening! The palace is just packed with heavy yin energy tonight, so I came by to do some volunteer cleaning.\n\nThat little ‘chill to the bone’ you got just now—nice wake-up call, right？」"
+  gacha_hutao_c3_scene_3_opt_a: "Rub your forehead and sigh: get down from there, honestly."
 
-  # Scene 4: The Game Begins
-  gacha_hutao_c3_scene_4_desc: "She flips down to the ground and circles around you, looking you up and down like a physician examining a patient.\n\nHu Tao: “Don’t be so stiff! In a deathly serious palace like this, if even I start acting proper, this place will really turn into a coffin interior.”"
-  gacha_hutao_c3_scene_4_opt_a: "Play along: “Aaah! A ghoooost!!” (you stagger back dramatically)"
-  gacha_hutao_c3_scene_4_opt_b: "Counter-interrogate: “Putting on a ghost act in the middle of the night—is this how Wangsheng does marketing?”"
+  # Scene 4: A Game of Wits (Route Lock)
+  gacha_hutao_c3_scene_4_desc: "She flips neatly to the ground and circles you, eyeing you up like a patient waiting to be diagnosed.\n\n胡桃：「Don’t pull such a long face! In a gloomy old palace like this, if even I started acting serious, the place really would turn into a coffin interior~」"
+  gacha_hutao_c3_scene_4_opt_a: "Play along: 「Waaah! A ghoooost!!」 (you stagger back in exaggerated terror)"
+  gacha_hutao_c3_scene_4_opt_b: "Turn it around on her: 「Lurking around playing ghost at midnight—is this how the Wangsheng Funeral Parlor advertises now？」"
 
-  # Scene 5: Alley Doggerel
-  gacha_hutao_c3_scene_5_desc_a: "Hu Tao doubles over laughing.\n\nHu Tao: “Hahaha! Your Majesty, your acting’s better than a storyteller’s!”\n\nA knowing glint flashes in her eyes.\n\nHu Tao: “Anyone who can still crack jokes like that must be pushing themselves pretty hard, huh? The best actors are always the ones wearing masks.”"
-  gacha_hutao_c3_scene_5_desc_b: "Hu Tao wags a finger in mock severity.\n\nHu Tao: “Misunderstanding! This is market research!”\n\nHer gaze grows tinged with pity.\n\nHu Tao: “If even a joke has to be packaged as ‘tactics’ in your eyes… that string inside you is pulled way too tight. It’s gonna snap.”"
-  gacha_hutao_c3_scene_5_desc_common: "After the laughter fades, she hops up to sit on the vermilion railing, swinging her legs as she recites to the moon:\n\n“High walls lock the deep courtyards tight,\nPaperwork piles like mountains high.\nToil like a dog while still alive—\nWho pays the bill when you finally die?”\n\nHu Tao: “Tsk, tsk. Very deep, very deep!”"
-  gacha_hutao_c3_scene_5_opt_a: "Give a wry smile: “Crude words, sharp truth.”"
+  # Scene 5: Doggerel Verse
+  gacha_hutao_c3_scene_5_desc_a: "Hu Tao doubles over laughing: 「Hahaha! Your Majesty’s acting puts the storytellers to shame！」\n\nA knowing glint flashes in her eyes: 「People who can still joke at a time like this... are usually the ones pushing themselves the hardest. Those who wear masks always make the best actors, you know？」"
+  gacha_hutao_c3_scene_5_desc_b: "Hu Tao waggles a finger in mock outrage: 「Misunderstanding! This is market research！」\n\nHer eyes soften with a hint of pity: 「If even jokes have to be framed as ‘tactics,’ that string inside you is wound too tight—it’ll snap someday, you know？」"
+  gacha_hutao_c3_scene_5_desc_common: "When the laughter dies down, she perches on the vermilion railing, legs swinging, and chants toward the moon:\n\n「Walls high and locks shut tight, scrolls piled up like a mountain white.\nWhile living, worked half to death... who pays the bill once you’ve drawn your last breath？」\n胡桃：「Tsk, tsk—so deep, so deep~！」"
+  gacha_hutao_c3_scene_5_opt_a: "Give a helpless smile: crude words, but not wrong."
 
   # Scene 6: A Dialectic on Life and Death
-  gacha_hutao_c3_scene_6_desc: "Hu Tao tilts her head, a little more serious now.\n\nHu Tao: “You fret over so many things every day, and you’re still worrying about what happens a few hundred years from now…?”\n\nShe reaches out to tap, from afar, at the frown etched into your brow.\n\nHu Tao: “Back home, only the ‘clients’ who didn’t live well enough before they died keep that expression even in their coffins. You haven’t even lain down in yours yet, so why are you already wearing the dead man’s look?”"
-  gacha_hutao_c3_scene_6_opt_a: "Say nothing."
+  gacha_hutao_c3_scene_6_desc: "Hu Tao tilts her head, expression turning more earnest: 「You’ve got all this to worry about every day, and on top of that you’re fretting over how the chronicles will write you a few hundred years from now... isn’t that exhausting？」\n\nShe reaches out to tap, from a distance, at your furrowed brow.\n\n「Back home, only the ‘clients’ who never figured out how to live before they died end up with their brows stuck like that.\n\nYou haven’t even made it into a coffin yet—so why are you already wearing the dead man’s frown？」"
+  gacha_hutao_c3_scene_6_opt_a: "Stay silent."
 
-  # Scene 7: Seeing Through You
-  gacha_hutao_c3_scene_7_desc_a: "Hu Tao sighs and tucks away her usual grin.\n\nHu Tao: “When you were putting on that little act with me just now, you were thinking ‘Can’t let the atmosphere get awkward,’ weren’t you?\n\nYou’re always tending to everyone else’s feelings, always arranging their escape routes—except your own.\n\nYou’re scared that if you fall, everything will collapse with you… right?”"
-  gacha_hutao_c3_scene_7_desc_b: "Hu Tao shakes her head.\n\nHu Tao: “When you were interrogating me just now, you were thinking about how you can’t waste tomorrow morning’s court session, huh?\n\nYou treat everything as tasks, as checkboxes on a form.\n\nIf tomorrow were the end of the world, would you still be there ticking boxes?”"
-  gacha_hutao_c3_scene_7_opt_a: "Meet her eyes: she’s seen straight through you."
+  # Scene 7: Seen Through (Reversal Lock)
+  gacha_hutao_c3_scene_7_desc_a: "Hu Tao sighs and tucks away her grin: 「When you played along with me just now, were you thinking you shouldn’t let the mood get too stiff?\n\nYou’re always managing everyone else’s feelings, always planning exits for them... except yourself.\n\nYou’re scared that if you ever fall, everything will collapse, aren’t you？」"
+  gacha_hutao_c3_scene_7_desc_b: "Hu Tao shakes her head: 「When you were grilling me just now, what you really had in mind was that tomorrow’s morning court can’t be wasted, right?\n\nYou turn everything into tasks and tick-boxes.\n\nIf tomorrow were the end of the world, would you still be there putting little checks on a form？」"
+  gacha_hutao_c3_scene_7_opt_a: "Meet her gaze: she’s seen right through you."
 
-  # Scene 8: The Plum Blossom
-  gacha_hutao_c3_scene_8_desc: "She pulls a single red plum blossom from her sleeve and offers it to you.\n\nHu Tao: “Do you know why plum blossoms bloom in the coldest time of year? Because only when everything else has withered away does the sight of life burning bright become the most moving.\n\nJust like you.”"
-  gacha_hutao_c3_scene_8_opt_a: "Take the plum blossom."
+  # Scene 8: Plum Blossom
+  gacha_hutao_c3_scene_8_desc: "She pulls a sprig of red plum blossoms from her sleeve and holds it out.\n\n胡桃：「Why does the plum bloom in the coldest days of winter?\n\nBecause only when all else has withered away does the way life burns shine the brightest.\n\nJust like you, you know。」"
+  gacha_hutao_c3_scene_8_opt_a: "Take the branch of plum blossoms."
 
-  # Scene 9: Endings A / B
-  gacha_hutao_c3_scene_9_desc_a: "Hu Tao presses her hat to her chest, solemn yet gentle, as if ghostly butterflies are dancing in the air behind her.\n\nHu Tao: “Then let me make you a promise: go ahead and burn, conquer, make mistakes.\n\nThe ashes left behind, the regrets hiding in the shadows, the aftercare you worry about the most—I’ll clean all of it up for you.\n\nAs long as I’m here, the rules between life and death won’t fall into chaos.”"
-  gacha_hutao_c3_scene_9_opt_a: "Thank you… Director."
+  # Scene 9: Endings A/B
+  gacha_hutao_c3_scene_9_desc_a: "Hu Tao presses her hat to her chest, solemn yet gentle, ghostly butterflies seeming to dance behind her.\n\n「If you really can’t let go, then I’ll give you a promise as Hall Master:\n\nGo ahead and burn, conquer, and make mistakes to your heart’s content.\n\nThe ash that’s left, the regrets hiding in the shadows, the aftermath you fear most...\n\nI’ll clean it all up for you.\n\nAs long as I’m here, the rules between life and death won’t fall apart！」"
+  gacha_hutao_c3_scene_9_opt_a: "Thank you... Hall Master."
 
-  gacha_hutao_c3_scene_9_desc_b: "Hu Tao grabs your hand and pulls you deeper into the imperial garden, her skirt swirling.\n\nHu Tao: “Lecture time’s over! With moonlight this pretty, it’d be a waste of life not to play hide-and-seek!”\n\nHu Tao: “Hold on tight! There’s a secret passage by the old dry well that leads straight to the imperial kitchens… let’s go steal some snacks!”\n\nHer laughter sets long-dormant youthful recklessness blazing once more."
-  gacha_hutao_c3_scene_9_opt_b: "Risk life and limb for fun!"
+  gacha_hutao_c3_scene_9_desc_b: "Hu Tao grabs your hand and tugs you toward the depths of the imperial garden, her skirt flaring in the night.\n\n「Lecture time’s over! Treatment time now！\n\nForget the memorials—on a night this pretty, not playing hide-and-seek is a crime against life itself！」\n\n「Hang on tight~ There’s a hidden passage by the old well that leads straight to the imperial kitchens... let’s go steal some snacks！」\n\nHer laughter sparks a long-forgotten sense of youth in your chest."
+  gacha_hutao_c3_scene_9_opt_b: "Recklessly follow her lead!"

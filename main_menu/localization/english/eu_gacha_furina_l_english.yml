@@ -7,136 +7,132 @@
   gacha_first_name_furina: "Furina"
   gacha_last_name_furina: "de Fontaine"
 
-  # === Traits ===
-  gacha_furina_origin_trait: "Opéra Epiclese"
-  desc_gacha_furina_origin_trait: "“See? Even if I don’t say a single word—so long as I’m standing there, every gaze in the room finds its way to me. That’s called ‘star power.’\n\nYour country has been dreary and lifeless for far too long. What it needs is a dramatic twist to jolt the people awake.\n\nLeave it to me. I’ll teach your citizens how to cheer again.”"
+  # === Traits (Traits) ===
+  gacha_furina_origin_trait: "Opéra Épiclèse"
+  desc_gacha_furina_origin_trait: "“See? Even if I don’t say a word, the moment I stand there, everyone’s eyes turn to me. That is what’s called ‘star power.’ Your country’s been dreary for far too long—it needs a touch of drama to rouse the people. Leave it to me. I’ll teach your citizens how to cheer again.”"
 
   gacha_furina_awakened_trait: "Afternoon Tea with the Salon"
-  desc_gacha_furina_awakened_trait: "“Lord Usher, Lady Cheberetta, and Madame Haverma… They may only be the product of my somewhat immature imagination, but out at sea they’re surprisingly reliable, you know?\n\nCommanding a fleet is just like conducting an orchestra—once the rhythm is right, even the raging waves will learn to dance along.”"
+  desc_gacha_furina_awakened_trait: "“Lord Usher, Lady Chevreuse, and Madame Haverma… They may just be my rather immature imaginary friends, but out at sea, they’re remarkably reliable, you know? Commanding a fleet is just like conducting an orchestra—so long as the tempo is right, even raging waves will dance along to the performance.”"
 
-  gacha_furina_transcended_trait: "Mask of the ‘God of Many Waters’"
-  desc_gacha_furina_transcended_trait: "“I may no longer be a god, but the role I played for five hundred years still fits like a glove. Bluffing, diplomatic rhetoric, maintaining dignity in front of the great powers… those are what I’m best at.\n\nSo long as I don’t lose my nerves on stage, no one will dare look down on this nation.”"
+  gacha_furina_transcended_trait: "Mask of the ‘God of All Waters’"
+  desc_gacha_furina_transcended_trait: "“I may no longer be a god, but after playing the role for five hundred years, the posture still remains. Bluffing, diplomatic phrasing, keeping up appearances before great powers… these are what I’m best at. So long as I never lose my nerve, no one will dare belittle this nation.”"
 
-  gacha_furina_c2_trait: "Consul of Verdict and Decree"
-  desc_gacha_furina_c2_trait: "“Look, the people are cheering!\n\nThey need more than bread—they crave a performance of ‘justice’ as well. I’ve made a few tiny edits to your legal code, just enough that reading it feels more like reciting poetry.\n\nNow the resistance to reform has become much smaller… because everyone is dying to see what happens in the next act.”"
+  # Constellation Traits
+  gacha_furina_c2_trait: "Cardinal of Oracular Verdicts"
+  desc_gacha_furina_c2_trait: "“Look, they’re cheering! What they need is not only bread, but also a spectacle of ‘justice.’ I made a few tiny edits to your legal code—just enough to make it read more like poetry. Now the resistance to reform is much smaller, because everyone wants to see what happens in the next act.”"
 
   gacha_furina_c4_trait: "Sea of Universal Revelry"
-  desc_gacha_furina_c4_trait: "“Right now the open sea is my stage! At this very moment, all the spotlights of the world are focused on your fleet!\n\nDon’t fear the storm—that’s just the accompaniment before the climax!\n\nLet the enemy take their final bow and leave the stage amid our revelry. That, darling, is what you call—the show-stopping finale!”"
+  desc_gacha_furina_c4_trait: "“Right now, the sea is my stage! At this very moment, every spotlight in the world is focused on your fleet! Don’t fear the storm—that’s merely the accompaniment before the climax! Let the enemy make their exit amidst our revelry. That, my dear, is what you call… a show-stopping finale!”"
 
-  gacha_furina_c6_trait: "Jubilee for All"
-  desc_gacha_furina_c6_trait: "“Five hundred years… For the longest time I believed ‘rule’ to be nothing but endless loneliness and suffering.\n\nBut here, watching your back as you walk forward, I’ve realized that rulership can also be a grand ball in which everyone gets to dance.\n\nI’m done playing at godhood. From now on, I’m simply the freest… person in this land of joy.”"
+  gacha_furina_c6_trait: "Universal Jubilation"
+  desc_gacha_furina_c6_trait: "“Five hundred years… I once thought that ‘rule’ meant nothing but endless solitude and suffering. But here, watching your back as you walk ahead, I’ve learned that ruling can also be a grand ball that everyone is invited to join. I’m done being a god. From now on, I’m merely the freest… person on this blessed land.”"
 
-  # === Static Modifiers & Auras ===
+  # === Modifiers (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_furina_modifier: "Call of the Stage"
-  STATIC_MODIFIER_DESC_gacha_furina_modifier: "“The world is nothing more than a magnificent stage play—and I will always be the leading lady.”"
-
+  STATIC_MODIFIER_DESC_gacha_furina_modifier: "“The world is but a grand stage play—and I shall be its eternal leading lady.”"
   gacha_furina_modifier: "Retired Diva"
-  gacha_furina_modifier_desc: "Though Furina has laid down her divinity, her stage presence still brings dramatic turnarounds to this nation."
+  gacha_furina_modifier_desc: "Though Furina has laid down her divinity, her stage presence still brings dramatic turnabouts to this country."
 
-  STATIC_MODIFIER_NAME_gacha_furina_c0_modifier: "Solo Seat · Base"
-  STATIC_MODIFIER_NAME_gacha_furina_c1_modifier: "New Troupe Member"
-  STATIC_MODIFIER_NAME_gacha_furina_c2_modifier: "Trial of Justice"
-  STATIC_MODIFIER_NAME_gacha_furina_c3_modifier: "Backstage, Without Make-Up"
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_furina_c0_modifier: "Soloist Constellation · Base"
+  STATIC_MODIFIER_NAME_gacha_furina_c1_modifier: "New Member of the Troupe"
+  STATIC_MODIFIER_NAME_gacha_furina_c2_modifier: "Judgment of Justice"
+  STATIC_MODIFIER_NAME_gacha_furina_c3_modifier: "Backstage Unmasking"
   STATIC_MODIFIER_NAME_gacha_furina_c4_modifier: "Oceanic Symphony"
-  STATIC_MODIFIER_NAME_gacha_furina_c5_modifier: "Audience from All Nations"
-  STATIC_MODIFIER_NAME_gacha_furina_c6_modifier: "Dance of the Mortal"
+  STATIC_MODIFIER_NAME_gacha_furina_c5_modifier: "All Nations in Attendance"
+  STATIC_MODIFIER_NAME_gacha_furina_c6_modifier: "Dance of Mortals"
+  STATIC_MODIFIER_NAME_gacha_furina_co_star_modifier: "Lead Co-Star"
+  STATIC_MODIFIER_DESC_gacha_furina_co_star_modifier: "The new script co-written by you and Furina makes its debut; diplomatic prestige and applause echo throughout the court."
+  STATIC_MODIFIER_NAME_gacha_furina_mortal_oath_modifier: "Mortal’s Oath"
+  STATIC_MODIFIER_DESC_gacha_furina_mortal_oath_modifier: "A vow made with bare faces under the night sky grants your rule a plain yet unshakable trust."
 
-  STATIC_MODIFIER_NAME_gacha_furina_co_star_modifier: "Chief Co-Star"
-  STATIC_MODIFIER_DESC_gacha_furina_co_star_modifier: "The new script you and Furina penned together has opened its run; diplomatic prestige and applause echo through the court in equal measure."
+  # Furina - Country Modifiers
+  STATIC_MODIFIER_NAME_gacha_furina_country_modifier: "Opéra Épiclèse"
+  STATIC_MODIFIER_DESC_gacha_furina_country_modifier: "The curtain rises; prestige and legitimacy accumulate steadily each month."
+  STATIC_MODIFIER_NAME_gacha_furina_c1_country_modifier: "Salon Ledger"
+  STATIC_MODIFIER_DESC_gacha_furina_c1_country_modifier: "The salon’s display of splendor spreads your name abroad; both diplomats and artistic positions expand in number."
+  STATIC_MODIFIER_NAME_gacha_furina_c2_country_modifier: "Oracular Decree · Cardinal"
+  STATIC_MODIFIER_DESC_gacha_furina_c2_country_modifier: "Authoritative scripts accelerate legislation; prestige and legitimacy build up at double speed."
+  STATIC_MODIFIER_NAME_gacha_furina_c5_country_modifier: "All Nations in Attendance"
+  STATIC_MODIFIER_DESC_gacha_furina_c5_country_modifier: "The touring scale expands once more; your court can now host even more artists."
+  STATIC_MODIFIER_NAME_gacha_furina_c6_country_modifier: "Universal Jubilation"
+  STATIC_MODIFIER_DESC_gacha_furina_c6_country_modifier: "Jubilant celebrations leave lasting echoes in prestige and statecraft alike, and the world of the arts is set ablaze."
 
-  STATIC_MODIFIER_NAME_gacha_furina_mortal_oath_modifier: "Mortal Oath"
-  STATIC_MODIFIER_DESC_gacha_furina_mortal_oath_modifier: "A vow made with masks set aside is sealed under the night sky; your rule is now upheld by simple yet solid trust."
-
-  STATIC_MODIFIER_NAME_gacha_furina_country_modifier: "Opéra Epiclese"
-  STATIC_MODIFIER_DESC_gacha_furina_country_modifier: "The curtains rise, and each month prestige and legitimacy grow steadily, like ovations that never quite die away."
-
-  STATIC_MODIFIER_NAME_gacha_furina_c1_country_modifier: "Salon’s Ledger"
-  STATIC_MODIFIER_DESC_gacha_furina_c1_country_modifier: "The salon’s pomp boosts your renown; both diplomat posts and seats for artists expand in number."
-
-  STATIC_MODIFIER_NAME_gacha_furina_c2_country_modifier: "Consul of Verdict and Decree"
-  STATIC_MODIFIER_DESC_gacha_furina_c2_country_modifier: "Authoritative ‘scripts’ speed up the passage of laws; prestige and legitimacy accumulate at twice the pace."
-
-  STATIC_MODIFIER_NAME_gacha_furina_c5_country_modifier: "Audience from All Nations"
-  STATIC_MODIFIER_DESC_gacha_furina_c5_country_modifier: "The size of the touring production grows once again, and the court can now welcome even more artists."
-
-  STATIC_MODIFIER_NAME_gacha_furina_c6_country_modifier: "Jubilee for All"
-  STATIC_MODIFIER_DESC_gacha_furina_c6_country_modifier: "The jubilation becomes universal; prestige and your realm’s stabilizing power linger on, and the world of the arts is set fully ablaze."
-
-  # === Trait Loss ===
-  gacha_furina_origin_trait_die_desc: "Loses the “Opéra Epiclese” starting bonus."
+  # Trait Loss
+  gacha_furina_origin_trait_die_desc: "Loses the “Opéra Épiclèse” starting bonus."
   gacha_furina_awakened_trait_die_desc: "Loses the “Afternoon Tea with the Salon” profession bonus."
-  gacha_furina_transcended_trait_die_desc: "Loses the “Mask of the God of Many Waters” ruler bonus."
+  gacha_furina_transcended_trait_die_desc: "Loses the “Mask of the God of All Waters” ruler bonus."
   gacha_furina_c2_trait_die_desc: "Loses Furina’s C2 ascension bonus."
   gacha_furina_c4_trait_die_desc: "Loses Furina’s C4 ascension bonus."
   gacha_furina_c6_trait_die_desc: "Loses Furina’s C6 final ascension bonus."
 
   # === Events ===
-  gacha_furina_events.1.title: "The Soloist Who Never Bows · Furina — Curtain Rises Again"
-  gacha_furina_events.1.desc: "The theater drapes stir in a windless hall; a string prelude blooms from nowhere. A lone cool spotlight pins the empty stage—then waterlight and a formal gown whirl into being, as if the Opéra Epiclese had been conjured in this foreign court.\n\nFurina raises a finger to her lips in a playful “shh,” mischief sparking in her eyes, waiting for your reply."
-  gacha_furina_events.1.a: "Step into the light and answer her entrance."
+  gacha_furina_events.1.title: "The Soloist Who Never Takes a Bow · Furina — Curtain Rises Again"
+  gacha_furina_events.1.desc: "#ZG At the center of the wishing circle, golden script crawls along the etched lines.\nStacks of verdicts, bound law codes, scraps of finery, and broken masks all dissolve into motes of light, gently swallowed by a clear water bubble rising from the heart of the array.\nWithin the bubble’s shell, where golden sigils and pale-blue ripples intertwine, a young woman sits curled up.\nHer lavish blue-and-white gown cascades in layers like waves; the feather on her hat droops beside her brow.\nHer lashes are lowered, and a faint, ambiguous smile rests on her lips.\nWith a soft pop, the bubble’s wall shatters; droplets scatter, then are gathered once more by the glow of the circle.#!\nThe girl opens one eye, landing lightly at the circle’s center. Her skirt and the mist flare up together, like a curtain slowly descending at center stage."
+  gacha_furina_events.1.a: "Step forward to take a closer look."
 
-  gacha_furina_events.10.title: "The Soloist Who Never Bows · Furina — Just… Furina"
-  gacha_furina_events.10.desc: "“A-hem… Has the spotlight found me yet?\n\nI am Furina de Fontaine. Also known as… well, those titles don’t matter anymore.\n\nRight now I’m just an ordinary woman who’s finally put down a burden and is ready to enjoy some macaroni and afternoon tea.\n\n…Wait, what did you just say?\n\nYou want me to govern this vast empire?\n\nAnd rebuild order in this war-torn, utterly unfamiliar world?\n\nAre you serious?! My performance is over! That ‘perfect, all-knowing, all-powerful god’ has already taken her final bow!\n\n…You really won’t take no for an answer, will you?\n\nFine. Then treat this as a brand-new play.\n\nNo prophecies, no divine trial, no script written in advance.\n\nOnly a retired diva, and a country that insists on dragging her back on stage.”"
-  gacha_furina_events.10.a: "Welcome back to the stage, Furina."
+  gacha_furina_events.10.title: "The Soloist Who Never Takes a Bow · Furina — Just… Furina"
+  gacha_furina_events.10.desc: "“Oh my? So this is the legendary ‘stage of another world,’ is it?”\n“I am Furina de Fontaine. Former… oh, never mind, those old titles don’t matter anymore.”\n“I’ve skimmed through your ‘script’ as well. Tsk, tsk—laws piled like mountains, disputes surging like the tide, dull, dreary, utterly devoid of artistry! And the gallery is packed with people just waiting for a farce.”\n“Since the contract is sealed, I shall *reluctantly* accept the position of ‘chief artistic advisor.’ I will bring both order and delight back to this land.”\n“Well then, the stage is set, and the spotlight ought to be shining—allow me to personally direct this nation’s ‘third act’!”\n#ZG She opens the compact she carries at her side, checks her smile in the mirror until it’s perfect, then extends a hand toward you.#!\n“Why are you just standing there? Where is the afternoon tea and cake prepared for your director?”"
+  gacha_furina_events.10.a: "Welcome to the stage, Lady Furina."
 
-  gacha_furina_events.2.title: "The Drama’s Climax"
-  gacha_furina_events.2.desc: "Furina’s power has grown. She lets out a light laugh, as if she were merely turning a page in the program.\n\n“See? The story’s only just getting started!”"
+  gacha_furina_events.2.title: "Climax of the Play"
+  gacha_furina_events.2.desc: "Furina’s power has grown. She chuckles softly, saying it feels as if the plot has moved into its next act.\n\n“See? The story is only just beginning!”"
   gacha_furina_events.2.a: "On with the show!"
 
-  gacha_furina_events.4.title: "With a Mortal Body"
-  gacha_furina_events.4.desc: "“I am Furina.\n\nDo you know what I feared most, waking up every morning for the last five hundred years?\n\nLooking in the mirror.\n\nThe person in the mirror was flawless—she was a god, a faith, the pillar of all Fontaine.\n\nThe only thing she wasn’t… was ‘me’.\n\nI danced that role alone beneath the spotlight, with knife-edges beneath my feet and a deluge from prophecy before my eyes.\n\nI thought that long, lonely one-woman show would end with no one left to applaud.\n\nUntil I met you.\n\nYou handed me a new script.\n\nIn this one, there is no sacrifice, no tragedy—just unfinished cake and the ‘annoyance’ of deciding where to go tomorrow.\n\nYou made me realize that I don’t have to play the perfect god.\n\nEven as an imperfect Furina… I still have the right to stand at your side and govern this country.\n\nThank you, my… chief audience member.\n\nBy this point in the play, I can no longer tell where the stage ends and reality begins.\n\nBut I don’t care.\n\nSo long as you’ll keep clapping for me, I’m willing to dance this dance for you… until the very end of time.”"
-  gacha_furina_events.4.a: "This is the real Furina."
+  gacha_furina_events.4.title: "In a Mortal’s Body"
+  gacha_furina_events.4.desc: "“I am Furina.\n\nDid you know? For the past five hundred years, the thing I feared most each morning upon waking… was looking in the mirror.\n\nThe person in the mirror was flawless. She was a god, a faith, the very pillar that held up all of Fontaine.\n\nThe one thing she wasn’t… was ‘me.’\n\nI played that role, dancing alone under the spotlight, with blades beneath my feet and the flood of prophecy before my eyes.\n\nI thought that long, lonely monologue would go on until my death, and no one would ever applaud.\n\nBut then, you found me.\n\nYou brought me to this world without prophecies and without curses.\n\nIn the script you gave me, there is no sacrifice, no tragedy—only unfinished cake and the question of where to go tomorrow.\n\nYou’ve shown me that I don’t need to play a god. Even as the imperfect Furina,\n\nI still have the right to stand by your side and help govern this nation.\n\nThank you, my… first and foremost audience member.\n\nWith the play at this point, I can no longer tell where the stage ends and reality begins.\n\nBut I don’t care.\n\nSo long as you are there to applaud for me, I’m willing to dance this dance for you until the very end of time.”"
+  gacha_furina_events.4.a: "Now *this* is the true Furina!"
 
   gacha_furina_events.11.title: "Faith and Law"
-  gacha_furina_events.11.desc: "“Look, they’re cheering again!\n\nPeople need more than bread alone—they need a performance of ‘justice’ as well.\n\nI’ve made a few small tweaks to your legal passages, just enough that reciting them feels like reading verse.\n\nNow, resistance to reform has melted away—because everyone is eager to see what happens in the next act.”"
-  gacha_furina_events.11.a: "The stage for justice is set."
+  gacha_furina_events.11.desc: "“Look, they’re cheering! What they need is not only bread, but also a performance of ‘justice.’ I made a few subtle edits to your legal clauses to make them read more like poetry. Now reform meets less resistance—because everyone wants to see what happens in the next act.”"
+  gacha_furina_events.11.a: "The stage for justice is ready."
 
-  gacha_furina_events.12.title: "Sea of Revelry"
-  gacha_furina_events.12.desc: "“Right now the sea is my stage! At this very moment, all the lights of the world are shining on your fleet!\n\nDo not fear the storm—that is merely the accompaniment before the climax!\n\nLet the enemy exit in the midst of our revelry. That, darling, is what you call—the show-stopping finale!”"
-  gacha_furina_events.12.a: "The ocean cheers for us!"
+  gacha_furina_events.12.title: "Symphony of the Tides"
+  gacha_furina_events.12.desc: "“Right now, the sea is like my stage! At this moment, every light in the world is focused on your fleet! Do not fear the storm—that’s just the accompaniment before the climax! Let the enemy make their exit amidst our revelry. That is what you call… the finale!”"
+  gacha_furina_events.12.a: "Let the ocean cheer for us!"
 
-  gacha_furina_events.13.title: "New Member of the Troupe"
-  gacha_furina_events.13.desc: "“Your court is far too quiet. I’ve brought over a few delightful scripts from Fontaine—mm, or rather, from my memories.\n\nOpen up another advisor seat, won’t you? After all, what kind of opera has only a leading role and no supporting cast?\n\n…Naturally, you’re still the lead.”"
+  gacha_furina_events.13.title: "New Faces in the Troupe"
+  gacha_furina_events.13.desc: "“Your court is far too quiet. I’ve pulled a few interesting scripts from Fontaine—well, from my memories of it. Add another advisor’s seat, won’t you? After all, how can a splendid opera have only a lead and no supporting cast? …Of course, *you* are the lead.”"
   gacha_furina_events.13.a: "Add another seat."
 
-  gacha_furina_events.14.title: "Audience from All Nations"
-  gacha_furina_events.14.desc: "“More and more countries are sending their envoys… Hmph. It seems the charm of Lady Furina cannot be contained even in another world.\n\nGo on, cultivate a few more friends. At the end of the final curtain call, the more people in the audience, the better, don’t you think?”"
-  gacha_furina_events.14.a: "The world bows in attendance."
+  gacha_furina_events.14.title: "All Nations in Attendance"
+  gacha_furina_events.14.desc: "“More and more nations are sending their envoys… Hmph, seems that even in another world, Lady Furina’s charm cannot be stopped. Go on, build more friendships. After all, the more guests you have at your curtain call, the better, don’t you think?”"
+  gacha_furina_events.14.a: "Let the world come to court."
 
-  # === C3 Story Event ===
-  gacha_furina_c3_title: "Encore with No Audience"
+  # === C3 Affection Event: An Encore With No Audience ===
+  gacha_furina_c3_title: "Encore With No Audience"
 
-  gacha_furina_c3_scene_1_desc: "To celebrate the signing of a new diplomatic pact, the court hosted a lavish banquet. Now the clamor has faded, and the guests have long since taken their leave.\n\nAs you pass by the empty main stage, you hear the faint clink of silverware against porcelain, accompanied by a few stifled sighs.\n\nThe curtains hang low, half the chandeliers are dark, and only moonlight from the high windows spills across the boards, making the stage look vast and lonely."
+  gacha_furina_c3_scene_1_desc: "To celebrate the signing of a diplomatic alliance, the court held a grand banquet. Now the clamor has faded; the guests have all taken their leave.\n\nPassing by the empty main stage, you hear the faint clink of silver on porcelain, mingled with a few stifled sighs.\n\nThe curtain hangs low, half the chandeliers are out, and only moonlight spills through the high windows onto the stage, leaving it vast and lonely."
   gacha_furina_c3_scene_1_opt_a: "Follow the sound."
-  gacha_furina_c3_scene_1_opt_skip: "Skip this story."
+  gacha_furina_c3_scene_1_opt_skip: "Skip this story"
 
-  gacha_furina_c3_scene_2_desc: "In the shadows beyond the reach of the spotlights, Furina has kicked off her high heels and sits on the steps wrapped in a thin shawl.\n\nHolding a slice of cake that’s already half-eaten, she takes small bites as she quietly reviews tonight’s ‘performance’ to herself.\n\nFurina: “Phew… Today’s address… shouldn’t have had any holes in it, right? When that ambassador from the neighboring country stared at me, for a moment I thought he’d noticed something…”"
-  gacha_furina_c3_scene_2_opt_a: "Draw closer to the stage."
+  gacha_furina_c3_scene_2_desc: "Just beyond the reach of the spotlights, Furina has kicked off her heels and sits on the steps wrapped in a thin shawl.\n\nShe’s holding a slice of cake, already half-eaten, nibbling in small bites as she mutters to herself, reviewing today’s ‘performance.’\n\nFurina: “...Haa. Today’s speech… shouldn’t have had any flaws, right? When that ambassador from the neighboring country was staring at me, I almost thought he’d noticed something…”"
+  gacha_furina_c3_scene_2_opt_a: "Walk closer to the stage."
 
-  gacha_furina_c3_scene_3_desc: "Your footsteps echo through the theater. She startles like a frightened cat, spinning around.\n\nThe fork clatters onto the plate. She hurriedly lifts her chin and puts on her usual airs—even as a smudge of cream clings to the corner of her mouth.\n\nFurina: “Who goes there?! …Ah, Y-Your Majesty?! A-hem! I was merely… conducting a trial on this slice of cake’s flavor!”"
-  gacha_furina_c3_scene_3_opt_a: "Stop where you are: “Putting a cake on trial?”"
+  gacha_furina_c3_scene_3_desc: "Your footsteps echo through the theater, and she spins around like a startled cat.\n\nHer fork clatters against the plate as she forces her chin up, trying to put on airs—there’s still cream at the corner of her mouth.\n\nFurina: “Who’s there?! …Ah, Y–Your Majesty?! Ahem! I was merely… passing judgment on this cake’s flavor!”"
+  gacha_furina_c3_scene_3_opt_a: "Stop where you are: passing judgment on a cake?"
 
-  gacha_furina_c3_scene_4_desc: "Her defenses are as thin as paper; though her cheeks are flushed, she’s still trying her best to look ‘composed.’\n\nNow it’s your turn to choose how to play along."
-  gacha_furina_c3_scene_4_opt_a: "Play along: “And what sentence does the Chief Justice pronounce upon this cake’s crimes?”"
-  gacha_furina_c3_scene_4_opt_b: "Gently call her out: “There’s no audience here, Furina. You don’t need to justify a midnight snack.”"
+  gacha_furina_c3_scene_4_desc: "Her defenses are as thin as paper; her cheeks flush, yet she still tries to look ‘composed.’ You decide how to respond."
+  gacha_furina_c3_scene_4_opt_a: "Play along: “And what sentence does the High Judge pass on this cake’s crimes?”"
+  gacha_furina_c3_scene_4_opt_b: "Gently unmask her: “There’s no audience here, Furina. You don’t need to justify a midnight snack.”"
 
-  gacha_furina_c3_scene_5_desc_a: "She freezes for a heartbeat, then suddenly bursts into giggles, pointing at the cake with her fork as that familiar, haughty confidence returns to her tone.\n\nFurina: “Hmph… you do know how to read the room! The court hereby rules—this cake is excessively sweet and has enticed me into eating at this ungodly hour. Its crimes are unforgivable!\n\nThe only possible punishment is… ‘death by immediate consumption’!”"
-  gacha_furina_c3_scene_5_desc_b: "Her movements come to a complete halt. The fork trembles lightly in midair before she slowly sets her airs aside and murmurs under her breath.\n\nFurina: “...Did you really have to put it that bluntly? Sometimes, playing a role is the only thing keeping me from falling apart…”"
-  gacha_furina_c3_scene_5_desc_common: "She lowers her head to look at the half-finished cake and lets out a quiet sigh.\n\nFurina: “At the victory banquet just now, I didn’t take a single bite. I was afraid that if I relaxed for even a moment, I’d slip up… and they’d realize that the current me is, in truth, nothing at all.”"
-  gacha_furina_c3_scene_5_opt_a: "Sit down beside her: “You’ve worked hard.”"
+  gacha_furina_c3_scene_5_desc_a: "She freezes for a moment, then lets out a small snort of laughter, pointing her fork at the cake as her usual haughty confidence returns.\n\nFurina: “Hmph… you do know your role. This court hereby declares—this cake is *far* too sweet, tempting me into eating at this hour. Its crimes are grave! It must be sentenced to immediate ‘execution’—that is, to be eaten at once!”"
+  gacha_furina_c3_scene_5_desc_b: "Her movements halt entirely; the fork trembles slightly in the air. Slowly, she lets the façade drop and murmurs under her breath.\n\nFurina: “...Must you be that blunt? Sometimes, acting is the only way to keep myself from falling apart…”"
+  gacha_furina_c3_scene_5_desc_common: "She looks down at the half-slice of cake and sighs softly.\n\nFurina: “At the celebration banquet just now, I didn’t eat a single bite. I was afraid that if I relaxed for even a moment, I’d slip up… that they’d notice that right now, I’m actually… nothing at all.”"
+  gacha_furina_c3_scene_5_opt_a: "Sit down beside her: you’ve worked hard."
 
-  gacha_furina_c3_scene_6_desc: "She turns her head slightly to look at you, her eyes dim.\n\nFurina: “In this world there are no more prophecies, no roles I’m ‘obliged’ to play.”\nFurina: “But the moment the lights come on, I still instinctively reach for my mask.”\n\nShe lifts her gaze; in those violet, mismatched eyes flicker the traces of five hundred years of solitude.\n\nFurina: “If I stop playing the great star… if I’m just Furina who sneaks bites of cake, panics on stage, and makes silly mistakes… would you still have any use for me?”"
-  gacha_furina_c3_scene_6_opt_a: "Meet her gaze."
+  gacha_furina_c3_scene_6_desc: "She turns her head to look at you, her eyes dim.\n\nFurina: “In this world, there’s no prophecy anymore, and no role I *must* play.”\nFurina: “But the moment the lights come on, I still instinctively put on the mask.”\n\nShe lifts her gaze; in her violet eyes flicker the traces of five centuries of loneliness.\n\nFurina: “If I don’t play the great star… if I’m just Furina, who steals food, gets stage fright, and does foolish things… would you still need me?”"
+  gacha_furina_c3_scene_6_opt_a: "Meet her eyes."
 
-  gacha_furina_c3_scene_7_desc: "Years of pretending have made her forget how to simply be herself. She’s terrified that once the makeup comes off, all love and attention will vanish with it.\n\nAs her one and only ‘chief audience member,’ you reach out your hand and give her an answer."
-  gacha_furina_c3_scene_7_opt_a: "Extend an invitation: “Then treat this as a new show that never has to end. I’ll be your leading co-star.”"
-  gacha_furina_c3_scene_7_opt_b: "Offer reassurance: “I don’t need a fake god. I just want the you who’s here sharing cake with me.”"
+  gacha_furina_c3_scene_7_desc: "After so long spent acting, she’s forgotten how to simply be herself. She fears that once the makeup is gone, she’ll lose all love and attention.\n\nAs her one and only ‘premier audience member,’ you reach out and give your answer."
+  gacha_furina_c3_scene_7_opt_a: "Offer an invitation: “Then let this be a brand-new play that never ends—and I’ll be your lead co-star.”"
+  gacha_furina_c3_scene_7_opt_b: "Give affirmation: “I don’t need a fake god. I just need the you who’s here eating cake with me.”"
 
-  gacha_furina_c3_scene_8_desc: "She stares, stunned, then a relieved shimmer of tears gathers at the corners of her eyes as a bright, girlish laugh escapes her.\n\nFurina: “...Lines like that should be illegal. They’re even more over the top than stage dialogue.”\n\nShe breaks the ‘heinously guilty’ cake in half and holds a piece up to your lips."
-  gacha_furina_c3_scene_8_opt_a: "Take a bite: it’s very sweet."
+  gacha_furina_c3_scene_8_desc: "She’s stunned at first, then tears of relief glimmer at the corners of her eyes as a clear, girlish laugh escapes her.\n\nFurina: “...Lines like that are even more unfair than the ones in opera.”\nShe splits the ‘heinous’ cake in two and holds half of it up to your lips."
+  gacha_furina_c3_scene_8_opt_a: "Take a bite: it tastes very sweet."
 
-  gacha_furina_c3_scene_9_desc_a: "Furina rises to her feet and offers you her hand, inviting you to dance upon the empty stage.\n\nFurina: “Very well! Since you’re inviting me so sincerely, Lady Furina shall reluctantly continue to shine!”\nFurina: “This time, we’ll write the script together. No tragedies, no sacrifices—only cheers and thunderous applause!”"
+  gacha_furina_c3_scene_9_desc_a: "Furina rises to her feet and offers you a hand, inviting you to dance with her upon the empty stage.\n\nFurina: “Very well! Since you’ve invited me so earnestly, I, Furina, shall *reluctantly* continue to shine!”\nFurina: “This time, we’ll write the script together. No tragedies, no sacrifices—only cheers and applause!”"
   gacha_furina_c3_scene_9_opt_a: "Let the curtain rise."
 
-  gacha_furina_c3_scene_9_desc_b: "Furina leans against your shoulder, eyes closed, repeating softly to herself: “Just being Furina… is enough?”\n\nFurina: “I don’t want to act anymore. I don’t want to rehearse tomorrow’s expressions one more time. I just want to stay like this and think about nothing at all.”\nFurina: “You’re not allowed to go back on this, you know… my chief audience member.”"
-  gacha_furina_c3_scene_9_opt_b: "Never go back on it."
+  gacha_furina_c3_scene_9_desc_b: "Furina leans against your shoulder, eyes closed in contentment, quietly repeating: “Just being Furina… is enough?”\n\nFurina: “I don’t want to act anymore. I don’t want to rehearse tomorrow’s expressions. I just want to stay like this and think about nothing at all.”\nFurina: “You’re not allowed to go back on this, you know… my premier audience.”"
+  gacha_furina_c3_scene_9_opt_b: "I’ll never go back on it."
