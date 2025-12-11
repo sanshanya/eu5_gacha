@@ -168,7 +168,7 @@ gacha_calc_standard_5_idx_sv = {
         }
     }
 
-    modulo = gacha_pool_size_standard_5_sv
+    modulo = gacha_pool_size_standard_5_sv # Value is 7
 }
 
 # --- 4 星奖励池大小 ---

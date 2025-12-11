@@ -1,0 +1,31 @@
+# ==============================================================================
+# EU5 Gacha System - Core On Actions
+# ==============================================================================
+
+# Yearly Pulse - Handles Banner Rotation
+on_yearly_pulse = {
+    effect = {
+        # Check if enabled (Optional, but safe)
+        if = {
+            limit = { has_global_variable = gacha_is_enabled }
+            
+            # 1. Rotate UP Index
+            # Safety Init
+            if = { limit = { NOT = { has_global_variable = gacha_current_up_idx } } set_global_variable = { name = gacha_current_up_idx value = 0 } }
+            
+            change_global_variable = { name = gacha_current_up_idx add = 1 }
+            
+            # Wrap around (0-7)
+            if = {
+                limit = { global_var:gacha_current_up_idx >= 8 }
+                set_global_variable = { name = gacha_current_up_idx value = 0 }
+            }
+            
+            # 2. Trigger Banner Change Notification
+            # Only for player
+            # every_player_country = {
+            #     trigger_event_non_silently = gacha_events.900
+            # }
+        }
+    }
+}

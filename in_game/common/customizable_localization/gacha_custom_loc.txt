@@ -1,0 +1,45 @@
+# ==============================================================================
+# Custom Localization for Gacha System
+# ==============================================================================
+
+# Get current UP character name based on global index
+defined_text = {
+    name = GetGachaCurrentUPName
+    text = {
+        trigger = { global_var:gacha_current_up_idx = 0 }
+        localization_key = "gacha_char_name_xinhai"
+    }
+    text = {
+        trigger = { global_var:gacha_current_up_idx = 1 }
+        localization_key = "gacha_char_name_fischl"
+    }
+    text = {
+        trigger = { global_var:gacha_current_up_idx = 2 }
+        localization_key = "gacha_char_name_keqing"
+    }
+    text = {
+        trigger = { global_var:gacha_current_up_idx = 3 }
+        localization_key = "gacha_char_name_raiden"
+    }
+    text = {
+        trigger = { global_var:gacha_current_up_idx = 4 }
+        localization_key = "gacha_char_name_furina"
+    }
+    text = {
+        trigger = { global_var:gacha_current_up_idx = 5 }
+        localization_key = "gacha_char_name_hutao"
+    }
+    text = {
+        trigger = { global_var:gacha_current_up_idx = 6 }
+        localization_key = "gacha_char_name_klee"
+    }
+    text = {
+        trigger = { global_var:gacha_current_up_idx = 7 }
+        localization_key = "gacha_char_name_nahida"
+    }
+    # Fallback
+    text = {
+        trigger = { always = yes }
+        localization_key = "gacha_char_name_unknown"
+    }
+}

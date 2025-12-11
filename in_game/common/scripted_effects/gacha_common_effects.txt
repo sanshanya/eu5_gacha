@@ -22,6 +22,12 @@ gacha_ensure_state_initialized = {
     if = { limit = { NOT = { has_variable = gacha_is_guaranteed_bool } }  set_variable = { name = gacha_is_guaranteed_bool value = 0 } }
     if = { limit = { NOT = { has_variable = gacha_block_pity_met_bool } } set_variable = { name = gacha_block_pity_met_bool value = 0 } }
 
+    # --- 轮换索引 (_idx) ---
+    if = { limit = { NOT = { has_global_variable = gacha_current_up_idx } } set_global_variable = { name = gacha_current_up_idx value = 0 } } # 默认 0 (心海)
+    
+    # --- 系统开关 (_bool) ---
+    if = { limit = { NOT = { has_global_variable = gacha_is_enabled } }     set_global_variable = { name = gacha_is_enabled value = 1 } } # 默认开启
+
     # --- 熵资源 (_amt) ---
     # --- 熵资源 (_amt) ---
     if = { 
