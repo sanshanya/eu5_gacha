@@ -141,9 +141,12 @@ gacha_calc_entropy2_sv = {
 # ---------------------------------------------------
 
 # --- 常驻 5 星池大小 ---
-gacha_pool_size_standard_5_sv = { value = 8 }
+# --- 常驻 5 星池大小 ---
+gacha_pool_size_standard_5_sv = { value = 7 }
 
 # 索引计算: (歪次数 * 17) % 池子大小
+# 缺变量时默认索引 0
+# 索引计算: (歪次数 * 17 + 熵) % 池子大小
 # 缺变量时默认索引 0
 gacha_calc_standard_5_idx_sv = {
     value = 0
@@ -153,6 +156,15 @@ gacha_calc_standard_5_idx_sv = {
         add = {
             value = var:gacha_std5_result_count
             multiply = 17
+        }
+    }
+
+    # [V3 Fix] 注入熵以随机化起始序列 (防止首抽锁定)
+    if = {
+        limit = { has_variable = gacha_entropy_gold_amt }
+        add = {
+            value = var:gacha_entropy_gold_amt
+            abs = yes
         }
     }
 

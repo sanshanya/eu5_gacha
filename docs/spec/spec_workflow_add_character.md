@@ -1,11 +1,13 @@
 ﻿# Workflow: Add New Character (添加新角色工作流)
 
-- **Version**: 1.0
-- **Last Verified**: 2025-11-25
+- **Version**: 2.0
+- **Last Verified**: 2025-12-10
 - **Relevant Files**:
   - `in_game/common/traits/`
   - `main_menu/common/static_modifiers/`
   - `main_menu/localization/simp_chinese/`
+  - `in_game/common/scripted_effects/gacha_logic_effects.txt` (核心奖池逻辑)
+  - `in_game/common/script_values/gacha_eu_values.txt` (奖池大小定义)
 
 > **See Also**: 关于特质与修正的设计理念，请参阅 [Design: Traits & Modifiers](../design/design_traits_and_modifiers.md)。
 
@@ -30,7 +32,8 @@
 | **本地化** | `main_menu/localization/simp_chinese/eu_gacha_l_simp_chinese.yml` | **[UPDATE]** 添加名字、描述、事件文本 (不要新建文件) |
 | **事件** | `in_game/events/gacha_raiden_events.txt` | 初次见面、命座提升、满命事件 |
 | **逻辑** | `in_game/common/scripted_effects/gacha_raiden_effects.txt` | **新架构**：角色专属 Wrapper 文件 |
-| **奖池** | `in_game/common/scripted_effects/gacha_pools.txt` | 将角色加入卡池 |
+| **奖池** | `in_game/common/scripted_effects/gacha_logic_effects.txt` | **[UPDATE]** 将角色加入常驻池轮询逻辑 |
+| **池大小** | `in_game/common/script_values/gacha_eu_values.txt` | **[UPDATE]** 更新常驻池总数 |
 
 ---
 
@@ -170,6 +173,7 @@ gacha_raiden_portrait = {
 ls_gacha_portrait_trigger = {
   OR = {
     has_trait = gacha_xinhai_origin_trait
+    # ... 其他角色 ...
     has_trait = gacha_raiden_origin_trait # 新增
   }
 }
@@ -219,7 +223,7 @@ gacha_raiden_modifier = {
 
 ### 步骤 4：本地化 (Localization)
 
-**重要**：请直接修改 `main_menu/localization/simp_chinese/eu_gacha_l_simp_chinese.yml`，**不要**创建新的 `.yml` 文件，否则可能导致加载失败。
+**重要**：请直接修改 `main_menu/localization/simp_chinese/eu_gacha_l_simp_chinese.yml`，**不要**创建新的 `.yml` 文件。
 
 ```yaml
 l_simp_chinese:
@@ -231,39 +235,51 @@ l_simp_chinese:
  gacha_raiden_origin_trait: "御建鸣神主尊"
  desc_gacha_raiden_origin_trait: "..."
 
- # 修正类型描述 (重要！)
+ # 修正类型描述
  MODIFIER_TYPE_NAME_gacha_electro_godeye: "雷元素神之眼"
  MODIFIER_TYPE_DESC_gacha_electro_godeye: "「...」"
  
- # 静态修正描述 (必须添加！)
+ # 静态修正描述
  STATIC_MODIFIER_NAME_gacha_raiden_modifier: "鸣神的加护"
  STATIC_MODIFIER_DESC_gacha_raiden_modifier: "..."
 
  # 事件标题
  gacha_raiden_events.1.title: "雷霆的威光"
- # ...
 ```
 
 ### 步骤 5：创建事件 (Events)
 
 创建 `in_game/events/gacha_raiden_events.txt`。
-**注意**：必须使用 `character_event` 类型，而不是 `country_event`。
+**注意**：V3 架构下必须使用 `country_event` 类型。
 
 你需要至少 5 个事件：
 1.  `.1`: 初次获得 (First Meeting)
 2.  `.2`: 命座提升 (Constellation Up)
 3.  `.4`: 满命 (Max Constellation)
-4.  `.11`: 命座觉醒 (C2) - **必须在 option 中添加 `add_trait`**
-5.  `.12`: 命座超越 (C4) - **必须在 option 中添加 `add_trait`**
+4.  `.11`: 命座觉醒 (C2)
+5.  `.12`: 命座超越 (C4)
 
 ```paradox
+namespace = gacha_raiden_events
+
 gacha_raiden_events.11 = {
-    type = character_event
-    # ...
+    type = country_event  # 必须是 country_event
+    title = gacha_raiden_events.11.title
+    desc = gacha_raiden_events.11.desc
+    
+    immediate = {
+        # 立绘绑定
+        event_illustration_estate_effect = { 
+            foreground = estate_type:nobles_estate 
+            background = estate_type:nobles_estate 
+        }
+    }
+
     option = {
         name = gacha_raiden_events.11.a
-        scope:existing_char ?= {
-            add_trait = gacha_raiden_awakened_trait
+        # 使用 saved scope 操作角色
+        scope:gacha_last_pulled_char = {
+            add_trait = trait:gacha_raiden_awakened_trait
         }
     }
 }
@@ -282,40 +298,34 @@ gacha_raiden_events.11 = {
 5.  **注册调用**: `gacha_register_new_character = { who = raiden }`
 6.  **数值**: 修改 `adm/dip/mil` 属性、文化、宗教
 
+**注意事项**:
+- 使用 `save_scope_as = existing_char` 和 `exists = scope:existing_char` 检查
+- 确保调用 `save_scope_as = gacha_last_pulled_char` 以便 UI 正确显示
+
 ### 步骤 7：加入奖池 (Pools)
 
-打开 `in_game/common/scripted_effects/gacha_pools.txt`。
+此步骤涉及两个文件的修改。
 
-**重要**：不要使用 `random_list`！必须使用基于 `gacha_rand` 的伪随机逻辑来保证公平性。
+#### 7.1 更新奖池大小
+打开 `in_game/common/script_values/gacha_eu_values.txt`，更新常驻池大小：
 
 ```paradox
-gacha_pool_5star_standard = {
-    # 1. 计算选择变量 (0 或 1)
-    set_variable = { name = gacha_5star_choice value = gacha_rand }
-    
-    # 增加一些熵源
-    change_variable = { name = gacha_5star_choice add = gacha_total_rolls }
-    
-    # 取模 2
-    while = {
-        limit = { gacha_5star_choice >= 2 }
-        change_variable = { name = gacha_5star_choice subtract = 2 }
-    }
-
-    # 2. 根据结果分发
-    if = {
-        limit = { gacha_5star_choice = 0 }
-        gacha_create_raiden_effect = yes
-    }
-    else = {
-        # choice = 1
-        gacha_create_furina_effect = yes
-    }
-
-    # 3. 清理变量
-    remove_variable = gacha_5star_choice
-}
+# --- 常驻 5 星池大小 ---
+gacha_pool_size_standard_5_sv = { value = 9 } # 原为 8，改为 9
 ```
+
+#### 7.2 添加到轮询逻辑
+打开 `in_game/common/scripted_effects/gacha_logic_effects.txt`，找到 `gacha_resolve_5star_and_save_scope`，在 `else` (歪常驻) 的分支中添加新角色：
+
+```paradox
+if = { limit = { local_var:gacha_standard_5_idx = 0 } gacha_create_keqing_effect = yes }
+else_if = { limit = { local_var:gacha_standard_5_idx = 1 } gacha_create_raiden_effect = yes }
+# ... 
+else_if = { limit = { local_var:gacha_standard_5_idx = 7 } gacha_create_fischl_effect = yes }
+else = { gacha_create_new_char_effect = yes } # Index 8 (你的新角色)
+```
+
+**重要**：不要使用 `random_list`！`gacha_eu_values.txt` 中的 `gacha_calc_standard_5_idx_sv` 会自动根据池子大小处理随机分布。
 
 ---
 
@@ -324,10 +334,8 @@ gacha_pool_5star_standard = {
 *   **Q: 角色名字显示乱码？**
     *   A: 检查 `.yml` 文件是否以 UTF-8 BOM 格式保存。
 *   **Q: 抽到了但是没弹窗？**
-    *   A: 检查 `gacha_raiden_events.txt` 顶部是否写了 `namespace = gacha_raiden_events`，以及事件类型是否为 `character_event`。
-*   **Q: 角色没有特质？**
-    *   A: 检查 `gacha_raiden_effects.txt` 里的 `gacha_register_new_character` 调用参数是否正确。
-*   **Q: 立绘不显示？**
-    *   A: 检查 `gacha_trigger.txt` 是否加入了新角色的特质，以及 `.asset` 文件中的贴图路径是否正确。
-*   **Q: 修正描述显示为代码？**
-    *   A: 确保在本地化文件中添加了 `STATIC_MODIFIER_NAME_xxx` 和 `STATIC_MODIFIER_DESC_xxx`。
+    *   A: 检查 namespace 是否定义，以及是否错误使用了 `character_event` (应为 `country_event`)。
+*   **Q: 交互 scope:actor 报错？**
+    *   A: 记住 Interaction 的 `scope:actor` 是 Country，不是 Character。
+*   **Q: 角色属性没加上？**
+    *   A: 检查 Effect 是否在 Character Scope 内执行 (`scope:char = { add_adm = 5 }`)。
