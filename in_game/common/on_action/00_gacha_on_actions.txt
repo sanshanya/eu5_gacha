@@ -1,0 +1,37 @@
+﻿# ==============================================================================
+# EU5 Gacha System - Yearly Banner Rotation
+# ==============================================================================
+# 按照官方文档：只能通过 on_actions 块扩展 hardcoded on_action
+# "Only a new on_actions block can be added to existing on actions. 
+#  Adding other blocks to an existing on action causes errors."
+
+# 扩展官方的 yearly_country_pulse
+yearly_country_pulse = {
+    on_actions = {
+        gacha_yearly_rotation_action
+    }
+}
+
+# 自定义 on_action - 处理UP池轮替
+gacha_yearly_rotation_action = {
+    trigger = {
+        is_ai = no
+    }
+    
+    effect = {
+        # Safety Init
+        if = { 
+            limit = { NOT = { has_global_variable = gacha_current_up_idx } } 
+            set_global_variable = { name = gacha_current_up_idx value = 0 } 
+        }
+        
+        # Rotate +1
+        change_global_variable = { name = gacha_current_up_idx add = 1 }
+        
+        # Wrap around (0-7)
+        if = {
+            limit = { global_var:gacha_current_up_idx >= 8 }
+            set_global_variable = { name = gacha_current_up_idx value = 0 }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+﻿# ==============================================================================
+# EU5 Gacha System - Game Start/Load On Actions
+# ==============================================================================
+# 已禁用 - 初始化逻辑已移至其他地方
+# 
+# 注：add_estate_privilege 在 effect 块中可能无效
+#     如需要此功能，应通过其他方式实现
+
+# on_game_start = {
+#     on_actions = {
+#         gacha_game_init_action
+#     }
+# }
+
+# on_game_loaded = {
+#     on_actions = {
+#         gacha_game_init_action
+#     }
+# }
+
+# gacha_game_init_action = {
+#     trigger = {
+#         is_ai = no
+#     }
+#     
+#     effect = {
+#         gacha_ensure_state_initialized = yes
+#         add_country_modifier = { modifier = gacha_estate_integration_modifier years = -1 mode = add_and_extend }
+#     }
+# }

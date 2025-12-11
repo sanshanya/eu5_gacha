@@ -50,6 +50,17 @@
   gacha_events.1.single_lack: "Insufficient Offering"
   gacha_not_enough_gold_tt: "The treasury is empty; you cannot gather the offerings required for this wish."
 
+  # === Current UP Character Display ===
+  gacha_up_name_0: "\n#bold Featured:#! #color_yellow Sangonomiya Kokomi#!"
+  gacha_up_name_1: "\n#bold Featured:#! #color_yellow Fischl#!"
+  gacha_up_name_2: "\n#bold Featured:#! #color_yellow Keqing#!"
+  gacha_up_name_3: "\n#bold Featured:#! #color_yellow Raiden Shogun#!"
+  gacha_up_name_4: "\n#bold Featured:#! #color_yellow Furina#!"
+  gacha_up_name_5: "\n#bold Featured:#! #color_yellow Hu Tao#!"
+  gacha_up_name_6: "\n#bold Featured:#! #color_yellow Klee#!"
+  gacha_up_name_7: "\n#bold Featured:#! #color_yellow Nahida#!"
+  gacha_up_name_unknown: "\n#bold Featured:#! Unknown"
+
   # === Result: 3-star / Blue (.2) ===
   gacha_events.2.title: "Wishing Result: Silent Stars"
   gacha_events.2.desc: "The stars fall silent and the starlight dims; no hero answers tonight’s call.\n\nOnly the futile quiet of the altar remains, the cold wind whispering over stone."

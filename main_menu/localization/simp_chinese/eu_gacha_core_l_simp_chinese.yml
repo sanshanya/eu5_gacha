@@ -50,6 +50,17 @@
   gacha_events.1.single_lack: "奉纳不足"
   gacha_not_enough_gold_tt: "国库空虚，无法筹措祈愿所需的祭品。"
 
+  # === 当期UP角色显示 ===
+  gacha_up_name_0: "\n#bold 当期UP：#!#color_yellow 珊瑚宫心海#!"
+  gacha_up_name_1: "\n#bold 当期UP：#!#color_yellow 菲谢尔#!"
+  gacha_up_name_2: "\n#bold 当期UP：#!#color_yellow 刻晴#!"
+  gacha_up_name_3: "\n#bold 当期UP：#!#color_yellow 雷电将军#!"
+  gacha_up_name_4: "\n#bold 当期UP：#!#color_yellow 芙宁娜#!"
+  gacha_up_name_5: "\n#bold 当期UP：#!#color_yellow 胡桃#!"
+  gacha_up_name_6: "\n#bold 当期UP：#!#color_yellow 可莉#!"
+  gacha_up_name_7: "\n#bold 当期UP：#!#color_yellow 纳西妲#!"
+  gacha_up_name_unknown: "\n#bold 当期UP：#!未知"
+
   # === 结果：凡铁/蓝光 (.2) ===
   gacha_events.2.title: "祈愿结果：寂静星空"
   gacha_events.2.desc: "群星缄默，星辉黯淡，似乎并无英灵回应今夜的呼唤，唯有祭坛上冷风掠过。\n\n除了徒劳的寂静，什么也没有留下。"
@@ -172,3 +183,14 @@
   desc_gacha_core_trait: "绑定祈愿角色的核心标记。"
 
   gacha_core_trait_die_desc: "失去祈愿核心标记。"
+
+  # === 调试事件 ===
+  gacha_events.998.title: "UP池轮替"
+  gacha_events.998.a: "确认"
+  gacha_events.999.title: "DEBUG: UP池轮替"
+  gacha_events.999.desc: "当前UP Index将调整"
+  gacha_events.999.a: "轮替 +1"
+  gacha_events.999.b: "设为心海(0)"
+  gacha_events.999.c: "设为菲谢尔(1)"
+  gacha_events.999.d: "设为雷电将军(3)"
+  gacha_events.999.e: "取消"

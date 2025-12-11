@@ -11,19 +11,33 @@ gacha_events.1 = {
         gacha_ensure_state_initialized = yes
     }
 
-    # 使用 triggered_desc 根据保底状态显示不同文本（V3: 使用 *_bool 变量）
+    # 使用 triggered_desc 显示当前UP角色和保底状态
     desc = {
         first_valid = {
+            # === 大保底状态 ===
             triggered_desc = {
                 trigger = { 
                     has_variable = gacha_is_guaranteed_bool
                     var:gacha_is_guaranteed_bool = 1 
                 }
-                desc = gacha_events.1.desc_guaranteed # "Current UP: [Root.GetGachaCurrentUPName]"
+                desc = gacha_events.1.desc_guaranteed
             }
+            # === 普通状态 ===
             triggered_desc = {
-                desc = gacha_events.1.desc_not_guaranteed # "Current UP: [Root.GetGachaCurrentUPName]"
+                desc = gacha_events.1.desc_not_guaranteed
             }
+        }
+        # === 当前UP角色显示 (独立段落) ===
+        first_valid = {
+            triggered_desc = { trigger = { global_var:gacha_current_up_idx = 0 } desc = gacha_up_name_0 }
+            triggered_desc = { trigger = { global_var:gacha_current_up_idx = 1 } desc = gacha_up_name_1 }
+            triggered_desc = { trigger = { global_var:gacha_current_up_idx = 2 } desc = gacha_up_name_2 }
+            triggered_desc = { trigger = { global_var:gacha_current_up_idx = 3 } desc = gacha_up_name_3 }
+            triggered_desc = { trigger = { global_var:gacha_current_up_idx = 4 } desc = gacha_up_name_4 }
+            triggered_desc = { trigger = { global_var:gacha_current_up_idx = 5 } desc = gacha_up_name_5 }
+            triggered_desc = { trigger = { global_var:gacha_current_up_idx = 6 } desc = gacha_up_name_6 }
+            triggered_desc = { trigger = { global_var:gacha_current_up_idx = 7 } desc = gacha_up_name_7 }
+            triggered_desc = { desc = gacha_up_name_unknown }
         }
     }
 
