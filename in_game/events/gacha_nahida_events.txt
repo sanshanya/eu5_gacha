@@ -20,7 +20,10 @@ gacha_nahida_events.10 = {
     desc = gacha_nahida_events.10.desc
     hide_portraits = yes
     image = "gfx/event_pictures/gacha_nahida_intro_special2.dds"
-    option = { name = gacha_nahida_events.10.a historical_option = yes }
+    option = { 
+        name = gacha_nahida_events.10.a 
+        historical_option = yes 
+    }
 }
 
 # 2. 提升
@@ -33,6 +36,7 @@ gacha_nahida_events.2 = {
     option = {
         name = gacha_nahida_events.2.a
         if = { limit = { exists = scope:gacha_last_pulled_char } scope:gacha_last_pulled_char = { add_adm = 10 } }
+        # [V3] Hook: Playback Next
     }
 }
 
@@ -46,6 +50,7 @@ gacha_nahida_events.4 = {
     option = {
         name = gacha_nahida_events.4.a
         if = { limit = { exists = scope:gacha_last_pulled_char } scope:gacha_last_pulled_char = { add_adm = 100 } }
+        # [V3] Hook: Playback Next
     }
 }
 
@@ -57,6 +62,7 @@ gacha_nahida_events.11 = {
     option = {
         name = gacha_nahida_events.11.a
         if = { limit = { exists = scope:gacha_last_pulled_char } scope:gacha_last_pulled_char = { add_adm = 50 } }
+        # [V3] Hook: Playback Next
     }
 }
 
@@ -68,6 +74,7 @@ gacha_nahida_events.12 = {
     option = {
         name = gacha_nahida_events.12.a
         if = { limit = { exists = scope:gacha_last_pulled_char } scope:gacha_last_pulled_char = { add_dip = 50 } }
+        # [V3] Hook: Playback Next
     }
 }
 
@@ -76,7 +83,10 @@ gacha_nahida_events.13 = {
     type = country_event
     title = gacha_nahida_events.13.title
     desc = gacha_nahida_events.13.desc
-    option = { name = gacha_nahida_events.13.a }
+    option = { 
+        name = gacha_nahida_events.13.a
+        # [V3] Hook: Playback Next
+    }
 }
 
 # 14. C5："虚空的扩容"
@@ -84,7 +94,10 @@ gacha_nahida_events.14 = {
     type = country_event
     title = gacha_nahida_events.14.title
     desc = gacha_nahida_events.14.desc
-    option = { name = gacha_nahida_events.14.a }
+    option = { 
+        name = gacha_nahida_events.14.a 
+        # [V3] Hook: Playback Next
+    }
 }
 
 # ==============================================================================
@@ -288,5 +301,6 @@ gacha_nahida_events.38 = {
         clear_saved_scope = gacha_c3_target_char
         remove_variable = gacha_nahida_c3_path
         remove_variable = gacha_nahida_c3_ending
+        
     }
 }

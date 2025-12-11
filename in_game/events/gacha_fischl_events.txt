@@ -20,7 +20,10 @@ gacha_fischl_events.10 = {
     desc = gacha_fischl_events.10.desc
     hide_portraits = yes
     image = "gfx/event_pictures/gacha_fischl_intro_special2.dds"
-    option = { name = gacha_fischl_events.10.a historical_option = yes }
+    option = { 
+        name = gacha_fischl_events.10.a 
+        historical_option = yes 
+    }
 }
 
 # 2. 提升
@@ -30,7 +33,11 @@ gacha_fischl_events.2 = {
     desc = gacha_fischl_events.2.desc
     
     immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
-    option = { name = gacha_fischl_events.2.a add_prestige = 10 }
+    option = { 
+        name = gacha_fischl_events.2.a 
+        add_prestige = 10 
+        # [V3] Hook: Playback Next
+    }
 }
 
 # 4. 满命（C6）
@@ -40,7 +47,12 @@ gacha_fischl_events.4 = {
     desc = gacha_fischl_events.4.desc
     
     immediate = { event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate } }
-    option = { name = gacha_fischl_events.4.a add_prestige = 50 add_legitimacy = 20 }
+    option = { 
+        name = gacha_fischl_events.4.a 
+        add_prestige = 50 
+        add_legitimacy = 20 
+        # [V3] Hook: Playback Next
+    }
 }
 
 # 11. C2 觉醒
@@ -48,7 +60,11 @@ gacha_fischl_events.11 = {
     type = country_event
     title = gacha_fischl_events.11.title
     desc = gacha_fischl_events.11.desc
-    option = { name = gacha_fischl_events.11.a add_stability = 8 }
+    option = { 
+        name = gacha_fischl_events.11.a 
+        add_stability = 8
+        # [V3] Hook: Playback Next 
+    }
 }
 
 # 12. C4 超越
@@ -56,7 +72,11 @@ gacha_fischl_events.12 = {
     type = country_event
     title = gacha_fischl_events.12.title
     desc = gacha_fischl_events.12.desc
-    option = { name = gacha_fischl_events.12.a add_legitimacy = 5 }
+    option = { 
+        name = gacha_fischl_events.12.a 
+        add_legitimacy = 5 
+        # [V3] Hook: Playback Next
+    }
 }
 
 # 13. C1 渡鸦的信使
@@ -64,7 +84,10 @@ gacha_fischl_events.13 = {
     type = country_event
     title = gacha_fischl_events.13.title
     desc = gacha_fischl_events.13.desc
-    option = { name = gacha_fischl_events.13.a }
+    option = { 
+        name = gacha_fischl_events.13.a
+        # [V3] Hook: Playback Next
+    }
 }
 
 # 14. C5 宿命的仇敌
@@ -72,7 +95,10 @@ gacha_fischl_events.14 = {
     type = country_event
     title = gacha_fischl_events.14.title
     desc = gacha_fischl_events.14.desc
-    option = { name = gacha_fischl_events.14.a }
+    option = { 
+        name = gacha_fischl_events.14.a 
+        # [V3] Hook: Playback Next
+    }
 }
 
 # ==============================================================================
@@ -311,5 +337,6 @@ gacha_fischl_events.37 = {
         clear_saved_scope = gacha_c3_target_char
         remove_variable = gacha_fischl_c3_path
         remove_variable = gacha_fischl_c3_ending
+
     }
 }

@@ -215,6 +215,7 @@ gacha_refund_gold_small_sv = { value = 1 }
 # 祈愿消耗
 gacha_single_pull_cost_sv = { value = 16 }
 gacha_ten_pull_cost_sv = { value = 160 }
+gacha_hundred_pull_cost_sv = { value = 1600 }
 gacha_starlight_exchange_cost_sv = { value = 3 }
 
 # 四星奖励事件（20-24）

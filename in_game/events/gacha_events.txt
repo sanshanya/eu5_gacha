@@ -58,6 +58,19 @@ gacha_events.1 = {
     }
 
     # ==========================================
+    # 选项 A100：【百连】(孤注一掷)
+    # ==========================================
+    option = {
+        name = gacha_events.1.a100
+        
+        add_gold = -1600
+        hidden_effect = {
+            gacha_ensure_state_initialized = yes 
+            gacha_wrapper_hundred_pull = yes
+        }
+    }
+
+    # ==========================================
     # 选项 A 的备用项：【钱不够时显示】
     # ==========================================
     # option = {
@@ -163,11 +176,19 @@ gacha_events.5 = {
         # 奖励已在内核发放，此处为空
     }
 
-    # 【Cleanup】窗口关闭后清理 Scope，避免泄漏
-    # after = {
-    #     clear_saved_scope = gacha_event_target_char
-    #     clear_saved_scope = gacha_last_pulled_char
-    # }
+}
+
+# ==========================================
+# 100. 百连汇总 (Summary)
+# ==========================================
+gacha_events.100 = {
+    type = country_event
+    title = gacha_events.100.title
+    desc = gacha_events.100.desc # 显示 4星/5星 数量变量
+    
+    option = {
+        name = gacha_events.100.a # "见证神迹"
+    }
 }
 
 # ==========================================

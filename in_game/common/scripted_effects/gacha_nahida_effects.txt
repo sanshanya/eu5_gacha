@@ -96,7 +96,15 @@ gacha_create_nahida_effect = {
                 gacha_nahida_apply_country_modifiers = yes
 
                 # 3. Trigger Intro Event
-                root = { trigger_event_non_silently = { id = gacha_nahida_events.1 } }
+                if = {
+                    limit = { 
+                        OR = {
+                            NOT = { has_variable = gacha_is_suppress_events_bool }
+                            var:gacha_is_suppress_events_bool = 0
+                        }
+                    }
+                    root = { trigger_event_non_silently = { id = gacha_nahida_events.1 } }
+                }
             }
         }
         
@@ -176,31 +184,40 @@ gacha_nahida_trigger_event = {
         # Should not happen, but safe fallback
     }
     else = {
+        # [V3] Event Suppression Check
         if = {
-            limit = { var:gacha_constellation_lvl >= 6 }
-            root = { trigger_event_non_silently = { id = gacha_nahida_events.4 } }
-        }
-        else_if = {
-            limit = { var:gacha_constellation_lvl = 5 }
-            root = { trigger_event_non_silently = { id = gacha_nahida_events.14 } }
-        }
-        else_if = {
-            limit = { var:gacha_constellation_lvl = 4 }
-            root = { trigger_event_non_silently = { id = gacha_nahida_events.12 } }
-        }
-        else_if = {
-            limit = { var:gacha_constellation_lvl = 3 }
-            # C3 Special: Save scope for relationship event
-            save_scope_as = gacha_c3_target_char
-            root = { trigger_event_non_silently = { id = gacha_nahida_events.30 } }
-        }
-        else_if = {
-            limit = { var:gacha_constellation_lvl = 2 }
-            root = { trigger_event_non_silently = { id = gacha_nahida_events.11 } }
-        }
-        else_if = {
-            limit = { var:gacha_constellation_lvl = 1 }
-            root = { trigger_event_non_silently = { id = gacha_nahida_events.13 } }
+            limit = { 
+                OR = {
+                    NOT = { has_variable = gacha_is_suppress_events_bool }
+                    var:gacha_is_suppress_events_bool = 0
+                }
+            }
+            if = {
+                limit = { var:gacha_constellation_lvl >= 6 }
+                root = { trigger_event_non_silently = { id = gacha_nahida_events.4 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 5 }
+                root = { trigger_event_non_silently = { id = gacha_nahida_events.14 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 4 }
+                root = { trigger_event_non_silently = { id = gacha_nahida_events.12 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 3 }
+                # C3 Special: Save scope for relationship event
+                save_scope_as = gacha_c3_target_char
+                root = { trigger_event_non_silently = { id = gacha_nahida_events.30 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 2 }
+                root = { trigger_event_non_silently = { id = gacha_nahida_events.11 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 1 }
+                root = { trigger_event_non_silently = { id = gacha_nahida_events.13 } }
+            }
         }
     }
 }

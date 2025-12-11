@@ -248,3 +248,46 @@ gacha_execute_single_roll = {
 gacha_execute_ten_rolls = {
     gacha_wrapper_ten_pull = yes
 }
+
+# ------------------------------------------------------------
+# 7.3 百连包装器 (Hundred Pull)
+# 职责：执行 100 次抽卡（事件正常触发）-> 触发汇总事件
+# ------------------------------------------------------------
+gacha_wrapper_hundred_pull = {
+    # 1. 初始化
+    set_local_variable = { name = gacha_loop_idx value = 0 }
+    
+    # 统计用变量 (用于汇总弹窗)
+    set_variable = { name = gacha_batch_4star_count value = 0 }
+    set_variable = { name = gacha_batch_5star_count value = 0 }
+
+    # 2. 循环抽卡（事件正常触发，不静默）
+    while = {
+        limit = { local_var:gacha_loop_idx < 100 }
+
+        # A. 运行内核
+        gacha_execute_single_roll_silent = yes
+
+        # B. 结果统计
+        if = {
+            limit = { local_var:gacha_calc_tier_idx = 2 }
+            change_variable = { name = gacha_batch_5star_count add = 1 }
+        }
+        else_if = {
+            limit = { local_var:gacha_calc_tier_idx = 1 }
+            change_variable = { name = gacha_batch_4star_count add = 1 }
+        }
+
+        change_local_variable = { name = gacha_loop_idx add = 1 }
+    }
+
+    # 3. 触发汇总事件
+    trigger_event_non_silently = gacha_events.100
+}
+
+
+# ------------------------------------------------------------
+# 7.4 回放队列步进器 (Playback Stepper)
+# 职责：从队列取出一个 5 星 -> 触发其事件 -> 递归自身
+# ------------------------------------------------------------
+

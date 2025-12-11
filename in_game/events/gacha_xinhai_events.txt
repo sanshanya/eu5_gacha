@@ -21,7 +21,10 @@ gacha_xinhai_events.10 = {
     desc = gacha_xinhai_events.10.desc
 		hide_portraits = yes
     image = "gfx/event_pictures/gacha_xinhai_intro_special2.dds"
-    option = { name = gacha_xinhai_events.10.a historical_option = yes }
+    option = { 
+        name = gacha_xinhai_events.10.a 
+        historical_option = yes 
+    }
 }
 
 # 2. 提升
@@ -31,7 +34,11 @@ gacha_xinhai_events.2 = {
     desc = gacha_xinhai_events.2.desc
     
     immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
-    option = { name = gacha_xinhai_events.2.a add_prestige = 10 }
+    option = { 
+        name = gacha_xinhai_events.2.a 
+        add_prestige = 10 
+        # [V3] Hook: Playback Next (Upgrade)
+    }
 }
 
 # 4. 满命
@@ -41,7 +48,12 @@ gacha_xinhai_events.4 = {
     desc = gacha_xinhai_events.4.desc
     
     immediate = { event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate } }
-    option = { name = gacha_xinhai_events.4.a add_prestige = 50 add_legitimacy = 20 }
+    option = { 
+        name = gacha_xinhai_events.4.a 
+        add_prestige = 50 
+        add_legitimacy = 20
+        # [V3] Hook: Playback Next (C6) 
+    }
 }
 
 # 11. 觉醒 (C2)
@@ -49,7 +61,11 @@ gacha_xinhai_events.11 = {
     type = country_event
     title = gacha_xinhai_events.11.title
     desc = gacha_xinhai_events.11.desc
-    option = { name = gacha_xinhai_events.11.a add_stability = 8 }
+    option = { 
+        name = gacha_xinhai_events.11.a 
+        add_stability = 8 
+        # [V3] Hook: Playback Next (C2)
+    }
 }
 
 # 12. 超越 (C4)
@@ -57,7 +73,11 @@ gacha_xinhai_events.12 = {
     type = country_event
     title = gacha_xinhai_events.12.title
     desc = gacha_xinhai_events.12.desc
-    option = { name = gacha_xinhai_events.12.a add_legitimacy = 5 }
+    option = { 
+        name = gacha_xinhai_events.12.a 
+        add_legitimacy = 5 
+        # [V3] Hook: Playback Next (C4)
+    }
 }
 
 # 13. 意外多出的位置 (C1 内阁席位 +1)
@@ -65,7 +85,10 @@ gacha_xinhai_events.13 = {
     type = country_event
     title = gacha_xinhai_events.13.title
     desc  = gacha_xinhai_events.13.desc
-    option = { name = gacha_xinhai_events.13.a }
+    option = { 
+        name = gacha_xinhai_events.13.a
+        # [V3] Hook: Playback Next (C1)
+    }
 }
 
 # 14. 意外多出的国策位 (C5 国策槽位 +1)
@@ -73,7 +96,10 @@ gacha_xinhai_events.14 = {
     type = country_event
     title = gacha_xinhai_events.14.title
     desc  = gacha_xinhai_events.14.desc
-    option = { name = gacha_xinhai_events.14.a }
+    option = { 
+        name = gacha_xinhai_events.14.a 
+        # [V3] Hook: Playback Next (C5)
+    }
 }
 
 # ==============================================================================

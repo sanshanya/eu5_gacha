@@ -20,7 +20,10 @@ gacha_hutao_events.10 = {
     desc = gacha_hutao_events.10.desc
     hide_portraits = yes
     image = "gfx/event_pictures/gacha_hutao_intro_special2.dds"
-    option = { name = gacha_hutao_events.10.a historical_option = yes }
+    option = { 
+        name = gacha_hutao_events.10.a 
+        historical_option = yes 
+    }
 }
 
 # 2. 提升
@@ -30,7 +33,11 @@ gacha_hutao_events.2 = {
     desc = gacha_hutao_events.2.desc
     
     immediate = { event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate } }
-    option = { name = gacha_hutao_events.2.a add_prestige = 10 }
+    option = { 
+        name = gacha_hutao_events.2.a 
+        add_prestige = 10 
+        # [V3] Hook: Playback Next
+    }
 }
 
 # 4. 满命（C6）："生死界碑"
@@ -40,7 +47,11 @@ gacha_hutao_events.4 = {
     desc = gacha_hutao_events.4.desc
     
     immediate = { event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate } }
-    option = { name = gacha_hutao_events.4.a add_stability = 1 }
+    option = { 
+        name = gacha_hutao_events.4.a 
+        add_stability = 1 
+        # [V3] Hook: Playback Next
+    }
 }
 
 # 11. C2："不安的亡魂"
@@ -48,7 +59,11 @@ gacha_hutao_events.11 = {
     type = country_event
     title = gacha_hutao_events.11.title
     desc = gacha_hutao_events.11.desc
-    option = { name = gacha_hutao_events.11.a add_manpower = 1000 }
+    option = { 
+        name = gacha_hutao_events.11.a 
+        add_manpower = 1000 
+        # [V3] Hook: Playback Next
+    }
 }
 
 # 12. C4："业火净罪"
@@ -59,6 +74,7 @@ gacha_hutao_events.12 = {
     option = {
         name = gacha_hutao_events.12.a
         if = { limit = { exists = scope:gacha_last_pulled_char } scope:gacha_last_pulled_char = { add_mil = 50 } }
+        # [V3] Hook: Playback Next
     }
 }
 
@@ -67,7 +83,10 @@ gacha_hutao_events.13 = {
     type = country_event
     title = gacha_hutao_events.13.title
     desc = gacha_hutao_events.13.desc
-    option = { name = gacha_hutao_events.13.a }
+    option = { 
+        name = gacha_hutao_events.13.a
+        # [V3] Hook: Playback Next
+    }
 }
 
 # 14. C5："生死观普及"
@@ -75,7 +94,10 @@ gacha_hutao_events.14 = {
     type = country_event
     title = gacha_hutao_events.14.title
     desc = gacha_hutao_events.14.desc
-    option = { name = gacha_hutao_events.14.a }
+    option = { 
+        name = gacha_hutao_events.14.a 
+        # [V3] Hook: Playback Next
+    }
 }
 
 # ==============================================================================
@@ -295,5 +317,6 @@ gacha_hutao_events.38 = {
     after = {
         clear_saved_scope = gacha_c3_target_char
         remove_variable = gacha_hutao_c3_path
+        
     }
 }

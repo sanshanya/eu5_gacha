@@ -73,10 +73,15 @@
   gacha_events.4.desc: "这位异界英雄的能力已臻化境。\n\n$gacha_text_reward_prestige_overflow$"
   gacha_events.4.a: "物尽其用"
 
-  # === 结果：金光演出 (.5) ===
   gacha_events.5.title: "金光乍现！"
   gacha_events.5.desc: "天空中划过一道耀眼的金色流星，整个祭坛都被神圣的光芒笼罩……\n\n这股气息，非比寻常！"
   gacha_events.5.a: "揭示命运！"
+
+  # === 结果：百连汇总 (.100) ===
+  gacha_events.100.title: "孤注一掷：星辰的回响"
+  gacha_events.100.desc: "百次祈愿已毕。祭坛上堆满了星辰的馈赠：\n\n#color_yellow [ROOT.GetVariable('gacha_batch_4star_count')|0]#! 份星辰恩赐 (四星资源)\n#color_yellow [ROOT.GetVariable('gacha_batch_5star_count')|0]#! 位天选之人 (五星角色)\n\n现在，是时候揭示那些最耀眼的名字了……"
+  gacha_events.100.a: "见证奇迹"
+  gacha_events.1.a100: "孤注一掷 (百连) ： @gold!#color_yellow [ROOT.ScriptValue('gacha_hundred_pull_cost_sv')|0]#!"
 
   # === 其他结果 ===
   gacha_events.6.title: "意外之财"
