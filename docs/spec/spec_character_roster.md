@@ -1,7 +1,7 @@
 ﻿# Character Roster Specification
 
 **Version**: 1.0  
-**Last Updated**: 2025-12-04  
+**Last Updated**: 2025-12-13  
 **Status**: 🟢 Production  
 **Purpose**: 记录所有已实装角色的技术细节与实现状态
 

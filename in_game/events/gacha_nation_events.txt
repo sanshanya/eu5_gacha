@@ -1,0 +1,83 @@
+﻿namespace = gacha_nation_events
+
+# ==============================================================================
+# 1. 璃月建国成功通知
+# ==============================================================================
+gacha_nation_events.1 = {
+    type = country_event
+    title = gacha_nation_events.1.title
+    desc = gacha_nation_events.1.desc
+    
+    illustration_tags = {
+        10 = interior
+        10 = regular
+    }
+    
+    immediate = {
+    }
+    
+    option = {
+        name = gacha_nation_events.1.a
+        add_prestige = 50
+    }
+}
+
+# ==============================================================================
+# 10. 「璃月计划」：第一幕（新年夜）
+# ==============================================================================
+gacha_nation_events.10 = {
+    type = country_event
+    title = gacha_nation_events.10.title
+    desc = gacha_nation_events.10.desc
+    hide_portraits = yes
+    image = "gfx/event_pictures/gecha_LiY.dds"
+
+    option = {
+        name = gacha_nation_events.10.a
+        trigger_event_non_silently = { id = gacha_nation_events.11 }
+    }
+
+    option = {
+        name = gacha_nation_events.10.b
+        trigger_event_non_silently = { id = gacha_nation_events.12 }
+    }
+}
+
+# ==============================================================================
+# 11. 「璃月计划」：第二幕（立约）
+# ==============================================================================
+gacha_nation_events.11 = {
+    type = country_event
+    title = gacha_nation_events.10.title
+    desc = gacha_nation_events.11.desc
+    hide_portraits = yes
+    image = "gfx/event_pictures/gecha_LiY_2.dds"
+
+    option = {
+        name = gacha_nation_events.11.a
+        set_variable = { name = gacha_liyue_plan_unlocked value = yes }
+    }
+
+    after = {
+        remove_variable = gacha_liyue_plan_lock
+    }
+}
+
+# ==============================================================================
+# 12. 「璃月计划」：第二幕（再议）
+# ==============================================================================
+gacha_nation_events.12 = {
+    type = country_event
+    title = gacha_nation_events.10.title
+    desc = gacha_nation_events.12.desc
+    hide_portraits = yes
+    image = "gfx/event_pictures/gecha_LiY_reject.dds"
+
+    option = {
+        name = gacha_nation_events.11.a
+    }
+
+    after = {
+        remove_variable = gacha_liyue_plan_lock
+    }
+}

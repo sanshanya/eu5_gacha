@@ -23,6 +23,7 @@
 | [spec_gacha_system.md](spec_gacha_system.md) | 抽卡系统核心机制(概率、保底、奖池) |
 | [spec_character_roster.md](spec_character_roster.md) | **8角色花名册**与命座实装状态 |
 | [spec_estate_system.md](spec_estate_system.md) | **天外之人阶层**设计与特权 |
+| [spec_genshin_nations.md](spec_genshin_nations.md) | 七国系统原型（国家/附庸/旗帜/内阁行动） |
 
 ### 技术规范
 | 文档 | 说明 |

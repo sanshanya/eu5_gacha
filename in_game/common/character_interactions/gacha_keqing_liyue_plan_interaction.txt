@@ -1,0 +1,53 @@
+﻿gacha_keqing_liyue_plan_interaction = {
+  message = no
+  is_consort_action = no
+  on_own_nation = yes
+  ai_tick = never
+  context_menu_click_mode = click
+
+  # actor = country
+  potential = {
+    scope:actor = {
+      is_ai = no
+      has_ruler = yes
+    }
+  }
+
+  # 按钮置灰逻辑：
+  # - 已解锁：永久不可再点（显示为灰色）
+  # - 正在打开事件：临时锁，防止玩家连点触发多个事件实例
+  # - 前置条件：需要拥有东莞（璃月计划实施地），否则按钮置灰
+  allow = {
+    scope:actor = {
+      location:dongguan = { owner = this }
+      NOT = { has_variable = gacha_liyue_plan_unlocked }
+      NOT = { has_variable = gacha_liyue_plan_lock }
+    }
+  }
+
+  # 选择刻晴作为目标（该交互只对刻晴可见）
+  select_trigger = {
+    looking_for_a = character
+    source = actor
+    target_flag = recipient
+    name = "gacha_keqing_liyue_plan_select"
+    column = { data = name }
+    visible = {
+      is_alive = yes
+      owner = scope:actor
+      has_character_modifier = gacha_keqing_modifier
+    }
+  }
+
+  effect = {
+    scope:actor = {
+      # 立即加锁，防止重复点击触发多个事件实例
+      set_variable = { name = gacha_liyue_plan_lock value = yes }
+
+      # 通过事件解锁内阁行动中的“璃月”决议（避免常驻碍眼）
+      trigger_event_non_silently = gacha_nation_events.10
+    }
+  }
+
+  ai_will_do = { value = 0 }
+}

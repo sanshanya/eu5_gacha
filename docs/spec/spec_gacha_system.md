@@ -1,6 +1,6 @@
 ﻿# Gacha System Specification (抽卡系统规范)
 
-> **Verified**: 2025-12-04 | V3.0.0  
+> **Verified**: 2025-12-13 | 0.4.0 (V3)  
 > **Purpose**: 定义抽卡系统的核心机制、概率模型与实现规范  
 > **Characters**: 8位角色已实装 (详见 [spec_character_roster.md](spec_character_roster.md))
 
@@ -12,7 +12,7 @@
 
 | 类别 | 文件 | 说明 |
 |:---|:---|:---|
-| **抽卡入口** | `character_interactions/gacha_wish_interaction.txt` | 单抽/十连交互 |
+| **抽卡入口** | `character_interactions/gacha_wish_interaction.txt` | 单抽/十连交互（含防连点锁） |
 | **概率计算** | `script_values/gacha_eu_values.txt` | 阈值、RNG公式 |
 | **核心逻辑** | `scripted_effects/gacha_logic_effects.txt` | Silent内核、池选择 |
 | **公共效果** | `scripted_effects/gacha_common_effects.txt` | 初始化、注册、Estate分配 |
@@ -44,6 +44,7 @@ set_variable = { name = gacha_pity_count value = 0 }         # 5星保底计数 
 set_variable = { name = gacha_pity_4star value = 0 }         # 4星保底计数 (0-9)
 set_variable = { name = gacha_block_has_4star value = 0 }    # 当前十连BLOCK状态
 set_variable = { name = gacha_is_guaranteed value = 0 }      # 大保底Flag
+set_variable = { name = gacha_event_lock value = yes }       # 交互事件锁（防连点）
 ```
 
 **Global Lists** (角色池):

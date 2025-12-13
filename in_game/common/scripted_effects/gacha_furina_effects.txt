@@ -22,9 +22,15 @@ gacha_create_furina_effect = {
             scope:existing_char = {
                 # Ensure employer is root
                 if = {
-                    limit = { NOT = { employer = root } }
+                    limit = {
+                        NOT = { employer = root }
+                        NOT = { is_ruler = yes } # 允许其作为“七国君主”等在他国执政
+                    }
                     move_country = root
                 }
+
+                # 标准化身份（阶层/宗族）
+                gacha_standardize_character_identity = { who = furina }
 
                 # Save scope for UI
                 save_scope_as = gacha_last_pulled_char

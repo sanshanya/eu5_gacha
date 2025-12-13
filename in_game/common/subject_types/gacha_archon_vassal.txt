@@ -1,0 +1,35 @@
+﻿# ==============================================================================
+# 原神七国附庸类型 - Gacha Archon Vassal
+# ==============================================================================
+# 特殊附庸类型：由神之眼角色统治的国度
+
+gacha_archon_vassal = {
+    subject_pays = subject_pays_vassal
+    color = subject_vassal
+    level = 3
+    
+    # 附庸国获得的修正
+    subject_modifier = {
+        country_cabinet_efficiency = 0.15
+        discipline = 0.05
+    }
+    
+    # 宗主国获得的修正
+    overlord_modifier = {
+        monthly_prestige = 0.5
+    }
+    
+    # 制度传播
+    institution_spread_to_subject = monthly_institution_spread_mild
+    institution_spread_to_overlord = monthly_institution_spread_mild
+    
+    # 可见条件（不通过外交显示，只能通过特殊方式创建）
+    visible_through_diplomacy = {
+        always = no
+    }
+    
+    # 参与宗主国战争
+    join_offensive_wars_always = {
+        always = yes
+    }
+}

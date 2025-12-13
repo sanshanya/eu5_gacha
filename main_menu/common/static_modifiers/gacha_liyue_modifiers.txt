@@ -1,0 +1,28 @@
+﻿# Liyue (璃月) - Nation Modifiers
+
+# 常驻：贸易与建造的温和增益（长期稳定）
+gacha_liyue_trade_hub_modifier = {
+    game_data = { category = country decaying = no }
+    trade_income = 0.10
+    trade_efficiency = 0.20
+    trade_range = 50
+    global_merchant_capacity_modifier = 0.30
+    global_construction_speed = 0.10
+    global_build_buildings_cost = -0.15
+    global_production_efficiency = 0.05
+}
+
+# 建国后 10 年：超级强力“起飞期”增益（一次性）
+gacha_liyue_foundation_boom_modifier = {
+    game_data = { category = country decaying = no }
+    trade_income = 0.35
+    trade_efficiency = 0.25
+    trade_range = 25
+    global_merchant_capacity_modifier = 0.35
+    country_cabinet_efficiency = 10
+    global_production_efficiency = 0.30
+    tax_income_efficiency = 0.15
+    monthly_gold_income = 180  
+    global_construction_speed = 10
+    global_build_buildings_cost = -0.15
+}

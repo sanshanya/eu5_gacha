@@ -194,3 +194,41 @@
   gacha_events.999.c: "设为菲谢尔(1)"
   gacha_events.999.d: "设为雷电将军(3)"
   gacha_events.999.e: "取消"
+
+  # ============================================================
+  # 原神七国 (Genshin Nations)
+  # ============================================================
+
+  # 附庸类型
+  gacha_archon_vassal: "神之眷属"
+  gacha_archon_vassal_desc: "由七神之力眷顾的国度，其统治者拥有神之眼的祝福。作为宗主国的忠诚盟友，他们将在战争与和平中始终追随。"
+
+  # 内阁行动
+  gacha_create_liyue_nation: "再造璃月"
+  gacha_create_liyue_nation_desc: "在东莞再造璃月国，以岩神摩拉克斯之名创立的商业与合约之国。"
+  gacha_create_liyue_nation_active: "正在再造璃月..."
+  gacha_create_liyue_nation_action: "在此地再造璃月"
+
+  # 璃月 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_liyue_foundation_boom_modifier: "璃月新生：千帆竞发"
+  STATIC_MODIFIER_DESC_gacha_liyue_foundation_boom_modifier: "建国后的黄金十年，港口与商路被迅速重整，合约与财政体系高速运转，生产与建设全面起飞。"
+  STATIC_MODIFIER_NAME_gacha_liyue_trade_hub_modifier: "璃月商港"
+  STATIC_MODIFIER_DESC_gacha_liyue_trade_hub_modifier: "以契约为骨、以商贸为血的港口国家。长期的贸易繁荣与城市建设为璃月提供稳定增长。"
+
+  scv_release_small_vassal_select_location: "选择位置"
+
+  # 事件
+  gacha_nation_events.1.title: "璃月建国"
+  gacha_nation_events.1.desc: "在璃月港的烟波浩渺中，一个新的国度诞生了。岩神摩拉克斯的契约精神将在这片土地上延续，繁荣的商贸与坚定的合约将成为这个国家的基石。\n\n作为宗主，您获得了璃月的效忠。"
+  gacha_nation_events.1.a: "愿岩神庇佑"
+
+  gacha_nation_events.10.title: "璃月计划"
+  gacha_nation_events.10.desc: "#ZG 新年夜。窗外烟火正盛。\n刻晴背对灯火，将图纸铺满案头。她没有看烟花。\n刻晴指尖的紫电照亮了图纸上密密麻麻的批注。#!\n刻晴：「陛下，璃月的理想并非神明赐予，而是由人亲手缔造。」\n#ZG 她顿了顿，目光掠过窗外升空的孔明灯，和霄灯很像。#!\n刻晴：「若您愿意兑现那句『再造璃月』的承诺，我将以玉衡之名接手港口，商路、矿脉、城建、契约，皆会在最短时间内重整。」\n#ZG 你望向少女的脸庞，由于祈愿之力，少女的外貌与第一次见面时无异。\n眼神却不复当初稚嫩...\n倒映着窗外那些越飘越远的光点。#!"
+  gacha_nation_events.10.a: "愿新璃月，千帆竞发。"
+  gacha_nation_events.10.b: "再议。"
+
+  gacha_nation_events.11.desc: "刻晴：「……定不负君所托。」\n#ZG 刻晴将璃月港蓝图铺开在桌面邀请你一同查看。#!\n\n#bold 解锁内阁行动：#!#bold;color_yellow $gacha_create_liyue_nation$#!"
+  gacha_nation_events.12.desc: "#ZG 刻晴点点头，将图纸收起。#!\n刻晴：「是我操之过急了。此事不论早晚，等您决定，我会把方案保持在可启动状态。」\n#ZG 她转身看向窗外的烟火，没有再说话。#!"
+  gacha_nation_events.11.a: "这一天不会太远"
+
+  # 国家名称（见 gacha_country_names_l_simp_chinese.yml）

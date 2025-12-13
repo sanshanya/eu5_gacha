@@ -1,7 +1,7 @@
 ﻿# 天外之人阶层规范 (Gacha Estate Specification)
 
-**Version**: 1.0  
-**Last Updated**: 2025-12-04  
+**Version**: 1.1  
+**Last Updated**: 2025-12-13  
 **Status**: 🟢 Production  
 
 ---
@@ -23,7 +23,7 @@ in_game/common/
 ├── estate_privileges/gacha_estate.txt    # 2个特权
 ├── auto_modifiers/gacha_estate.txt       # 自动修正(权限基线)
 ├── pop_types/gacha_pop_type.txt          # Pop类型绑定
-└── character_interactions/gacha_estate_privileges_interaction.txt
+└── scripted_effects/gacha_common_effects.txt  # 角色创建后的身份兜底
 
 main_menu/common/
 ├── static_modifiers/gacha_modifiers.txt  # 国家级修正
@@ -123,64 +123,42 @@ gacha_estate_integration_modifier = {
 }
 ```
 
+> [!NOTE]
+> 当前版本主要依赖 `auto_modifiers/gacha_estate.txt` 提供的基线放行（内阁/领兵）。  
+> `gacha_estate_integration_modifier` 与两个特权保留用于未来扩展（例如：在特定剧情/政体下再启用）。
+
 ---
 
 ## 7. 角色分配流程
 
 ### 7.1 自动分配
 
-角色创建后通过 `gacha_register_new_character` 自动分配：
+角色创建后通过 `gacha_register_new_character` 统一兜底身份：
 
 ```paradox
 # gacha_common_effects.txt
 gacha_register_new_character = {
     ...
-    gacha_assign_to_gacha_estate = yes
+    gacha_standardize_character_identity = { who = $who$ }
 }
 
-gacha_assign_to_gacha_estate = {
-    if = { limit = { is_character = yes } }
-    change_character_estate = estate_type:gacha_estate
-}
-```
-
-### 7.2 游戏启动初始化
-
-**文件**: `in_game/common/on_actions/gacha_on_actions.txt`
-
-```paradox
-on_game_start = {
-    effect = {
-        every_country = {
-            if = { limit = { is_player = yes } }
-            add_country_modifier = { 
-                modifier = gacha_estate_integration_modifier 
-                years = -1 
-                mode = add_and_extend 
-            }
-            add_estate_privilege = { 
-                estate = estate_type:gacha_estate 
-                privilege = estate_privilege:gacha_in_administration 
-            }
-            add_estate_privilege = { 
-                estate = estate_type:gacha_estate 
-                privilege = estate_privilege:gacha_command_positions 
-            }
-        }
-    }
+gacha_standardize_character_identity = {
+    ...
+    if = { limit = { is_ruler = no } change_character_estate = estate_type:gacha_estate }
 }
 ```
+
+### 7.2 统治者/摄政处理
+
+当抽卡角色被设置为统治者/摄政（例如：代政交互、七国建国流程）时，应显式放入 `crown_estate`，并确保其拥有宗族（dynasty）。
+
+> 经验：不要在“角色仍是统治者”时把他强行塞回 `gacha_estate`，否则会导致王权/宗族/联姻等系统显示异常。
 
 ---
 
-## 8. 玩家交互
+## 8. 备注：关于 on_action 初始化
 
-**文件**: `in_game/common/character_interactions/gacha_estate_privileges_interaction.txt`
-
-玩家可通过"授予天外之人特权"交互按钮手动激活：
-1. 添加 `gacha_estate_integration_modifier` 国家修正
-2. 添加两个阶层特权
-3. 确保阶层在面板中可见
+曾尝试在 `on_game_start/on_game_loaded` 中自动 `add_estate_privilege`，但该 effect 在部分版本/场景下可能无效，因此目前未作为强依赖（见 `in_game/common/on_action/gacha_on_actions.txt` 的注释）。
 
 ---
 

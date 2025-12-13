@@ -1,0 +1,9 @@
+﻿GL1 = { # Liyue
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 { 40 70 90 }
+
+	textured_emblem = {
+		texture = "te_gacha_GL1_liyue_flag.dds"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}

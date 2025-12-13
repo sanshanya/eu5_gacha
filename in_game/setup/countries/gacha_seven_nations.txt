@@ -1,0 +1,8 @@
+﻿GL1 = { # Liyue (璃月)
+	color = rgb { 255 215 0 }  # Gold
+	color2 = rgb { 255 215 0 }
+	culture_definition = yuehai_culture
+	religion_definition = sanjiao
+	description_category = administrative
+	is_historic = no
+}

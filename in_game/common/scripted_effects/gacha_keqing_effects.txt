@@ -22,9 +22,15 @@ gacha_create_keqing_effect = {
             scope:existing_char = {
                 # Ensure employer is root
                 if = {
-                    limit = { NOT = { employer = root } }
+                    limit = {
+                        NOT = { employer = root }
+                        NOT = { is_ruler = yes } # 允许其作为“七国君主”等在他国执政
+                    }
                     move_country = root
                 }
+
+                # 标准化身份（阶层/宗族）
+                gacha_standardize_character_identity = { who = keqing }
 
                 # Save scope for UI
                 save_scope_as = gacha_last_pulled_char
@@ -232,43 +238,50 @@ gacha_keqing_apply_country_modifiers = {
         # Safety Init
         if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
 
-        # Level 0 (Init): Base Modifier
+        # [Idempotent] 先清空再按当前命座重建，支持刻晴成为“七国君主”后迁国
+        employer = {
+            remove_country_modifier = gacha_keqing_country_modifier
+            remove_country_modifier = gacha_keqing_c1_country_modifier
+            remove_country_modifier = gacha_keqing_c2_country_modifier
+            remove_country_modifier = gacha_keqing_c4_country_modifier
+            remove_country_modifier = gacha_keqing_c5_country_modifier
+            remove_country_modifier = gacha_keqing_c6_country_modifier
+        }
+
+        # C0：基础光环（C0/C1 生效；C2 起由 C2 替换）
         if = {
-            limit = { var:gacha_constellation_lvl = 0 }
-            root = { add_country_modifier = { modifier = gacha_keqing_country_modifier years = -1 mode = add_and_extend } }
+            limit = { var:gacha_constellation_lvl < 2 }
+            employer = { add_country_modifier = { modifier = gacha_keqing_country_modifier years = -1 mode = add_and_extend } }
         }
 
-        # Level 1: Add C1 (Building Slot +1)
-        else_if = {
-            limit = { var:gacha_constellation_lvl = 1 }
-            root = { add_country_modifier = { modifier = gacha_keqing_c1_country_modifier years = -1 mode = add_and_extend } }
+        # C1：建筑槽 +1（C1 起永久保留）
+        if = {
+            limit = { var:gacha_constellation_lvl >= 1 }
+            employer = { add_country_modifier = { modifier = gacha_keqing_c1_country_modifier years = -1 mode = add_and_extend } }
         }
 
-        # Level 2: Remove Base, Add C2
-        else_if = {
-            limit = { var:gacha_constellation_lvl = 2 }
-            root = { 
-                remove_country_modifier = gacha_keqing_country_modifier
-                add_country_modifier = { modifier = gacha_keqing_c2_country_modifier years = -1 mode = add_and_extend } 
-            }
+        # C2：光环升级（C2 起永久保留）
+        if = {
+            limit = { var:gacha_constellation_lvl >= 2 }
+            employer = { add_country_modifier = { modifier = gacha_keqing_c2_country_modifier years = -1 mode = add_and_extend } }
         }
 
-        # Level 4: Add C4 (占位)
-        else_if = {
-            limit = { var:gacha_constellation_lvl = 4 }
-            root = { add_country_modifier = { modifier = gacha_keqing_c4_country_modifier years = -1 mode = add_and_extend } }
+        # C4：国家级占位（C4 起永久保留）
+        if = {
+            limit = { var:gacha_constellation_lvl >= 4 }
+            employer = { add_country_modifier = { modifier = gacha_keqing_c4_country_modifier years = -1 mode = add_and_extend } }
         }
 
-        # Level 5: Add C5 (Advisor Cost -25%)
-        else_if = {
-            limit = { var:gacha_constellation_lvl = 5 }
-            root = { add_country_modifier = { modifier = gacha_keqing_c5_country_modifier years = -1 mode = add_and_extend } }
+        # C5：顾问花费（C5 起永久保留）
+        if = {
+            limit = { var:gacha_constellation_lvl >= 5 }
+            employer = { add_country_modifier = { modifier = gacha_keqing_c5_country_modifier years = -1 mode = add_and_extend } }
         }
 
-        # Level 6: Add C6 (Admin Eff +10%, Power Cost -10%, Absolutism +10)
-        else_if = {
-            limit = { var:gacha_constellation_lvl = 6 }
-            root = { add_country_modifier = { modifier = gacha_keqing_c6_country_modifier years = -1 mode = add_and_extend } }
+        # C6：国家级机制（C6 起永久保留）
+        if = {
+            limit = { var:gacha_constellation_lvl >= 6 }
+            employer = { add_country_modifier = { modifier = gacha_keqing_c6_country_modifier years = -1 mode = add_and_extend } }
         }
     }
 }

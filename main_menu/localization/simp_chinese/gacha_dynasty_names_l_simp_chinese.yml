@@ -1,0 +1,12 @@
+﻿l_simp_chinese:
+  gacha_xinhai_dynasty: "珊瑚宫"
+  gacha_fischl_dynasty: "幽夜"
+  gacha_keqing_dynasty: "玉衡"
+  gacha_raiden_dynasty: "雷电"
+  gacha_furina_dynasty: "德·枫丹"
+  gacha_hutao_dynasty: "往生堂"
+  gacha_klee_dynasty: "火花骑士"
+  gacha_nahida_dynasty: "布耶尔"
+
+  # 兼容旧 key（早期璃月测试用）
+  gacha_yuheng_dynasty: "玉衡"

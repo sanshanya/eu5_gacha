@@ -7,6 +7,11 @@
   gacha_first_name_keqing: "Keqing"
   gacha_last_name_keqing: "Yuheng"
 
+  # === Character Interaction ===
+  gacha_keqing_liyue_plan_interaction: "Liyue Plan"
+  gacha_keqing_liyue_plan_interaction_desc: "Led by the Yuheng, this plan unlocks the Liyue cabinet action and provides a path to restore and reorganize it when needed."
+  gacha_keqing_liyue_plan_select: "Begin the \"Liyue Plan\""
+
   # === Traits ===
   gacha_keqing_origin_trait: "A Thousand Sails of Liyue"
   desc_gacha_keqing_origin_trait: "“Standing here for just a moment, I could almost see Liyue Harbor’s forest of sails racing across the water...\n\nNo, that’s not quite right. Your infrastructure is far too underdeveloped.\n\nIf you want a wealthy nation, you start with roads, trade routes, and a well-ordered market.\n\nShow me the plans. I’ll see to it that this land shines with a golden luster.”"

@@ -1,7 +1,7 @@
 ﻿# Scope Management Standards (作用域管理规范)
 
-- **Version**: 2.0
-- **Last Verified**: 2025-11-25
+- **Version**: 2.1
+- **Last Verified**: 2025-12-13
 - **Official Reference**: [EU5 Wiki - Scope](https://eu5.paradoxwikis.com/Scope)
 - **Engine Truth**: [`spec_engine_basics.md` §4](spec_engine_basics.md)
 
@@ -209,6 +209,28 @@ effect = {
     
     # 4. 清理 (最后一步)
     clear_saved_scope = old_ruler
+}
+```
+
+### 3.5 Cabinet Action 模式（关键）
+
+> [!IMPORTANT]
+> **Cabinet Action 的 base scope 不是 country，而是 `cabinet`。**  
+> 需要在 `scope:actor` 中执行国家 effect，否则会出现类似：  
+> `Wrong scope for effect: cabinet, expected country`
+
+```paradox
+# in_game/common/cabinet_actions/*.txt
+my_cabinet_action = {
+  on_fully_activated = {
+    # ✅ 国家在 scope:actor
+    scope:actor = {
+      create_country_from_cores_in_our_locations = c:TAG
+    }
+
+    # ❌ 错误：root 是 cabinet
+    # create_country_from_cores_in_our_locations = c:TAG
+  }
 }
 ```
 

@@ -1,0 +1,8 @@
+﻿GL1 = { # Liyue
+	flag_definition = {
+		coa = GL1
+		allow_overlord_canton = no
+		priority = 10000
+	}
+}
+

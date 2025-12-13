@@ -1,0 +1,257 @@
+﻿# ==============================================================================
+# 原神七国创建 - Cabinet Actions
+# ==============================================================================
+# 用于创建原神七国附庸的内阁行动
+
+# ------------------------------------------------------------------------------
+# 璃月 (Liyue) - 测试案例
+# 首都: 东莞 (Location ID 10778)
+# 注意：此版本使用静态 TAG（GL1），便于自定义颜色/旗帜/名字
+# ------------------------------------------------------------------------------
+gacha_create_liyue_nation = {
+    ability = dip
+    
+    allow_multiple = no
+    
+    days = 30  # 30天完成
+    
+    # 显示条件：玩家拥有刻晴
+    potential = {
+        is_ai = no
+        # 需要先通过刻晴角色交互解锁（避免内阁列表常驻过于碍眼）
+        has_variable = gacha_liyue_plan_unlocked
+        # 检查玩家是否拥有刻晴
+        any_in_global_list = {
+            variable = gacha_obtained_characters
+            has_character_modifier = gacha_keqing_modifier
+	        }
+	        OR = {
+	            # 创建模式：玩家拥有东莞
+	            AND = {
+	                NOT = { country_exists = c:GL1 }
+	                location:dongguan = { owner = root }
+	            }
+	            # 修复模式：璃月已存在，但统治者不是刻晴
+	            AND = {
+	                country_exists = c:GL1
+                c:GL1 = {
+                    OR = {
+                        NOT = {
+                            ruler_or_regent ?= { has_character_modifier = gacha_keqing_modifier }
+                        }
+                        AND = {
+                            ruler_or_regent ?= { has_character_modifier = gacha_keqing_modifier }
+                            ruler_or_regent ?= { has_dynasty = no }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    # 启动条件（与 potential 一致）
+    allow = {
+	        has_variable = gacha_liyue_plan_unlocked
+	        OR = {
+	            AND = {
+	                NOT = { country_exists = c:GL1 }
+	                location:dongguan = { owner = root }
+	            }
+	            AND = {
+	                country_exists = c:GL1
+	                c:GL1 = {
+                    OR = {
+                        NOT = {
+                            ruler_or_regent ?= { has_character_modifier = gacha_keqing_modifier }
+                        }
+                        AND = {
+                            ruler_or_regent ?= { has_character_modifier = gacha_keqing_modifier }
+                            ruler_or_regent ?= { has_dynasty = no }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    # 完成时执行
+    on_fully_activated = {
+        # Cabinet Action 的 root 是 cabinet；国家在 scope:actor
+        scope:actor = {
+            # 先找到刻晴角色
+            random_in_global_list = {
+                variable = gacha_obtained_characters
+                limit = { has_character_modifier = gacha_keqing_modifier }
+                save_scope_as = keqing_char
+            }
+	            
+	            # 1) 在东莞为静态 TAG (GL1) 添加核心
+	            if = {
+	                limit = { NOT = { country_exists = c:GL1 } }
+	                
+	                location:dongguan = { add_core = c:GL1 }
+
+	                # 基于我方拥有的 GL1 核心领地释放建国（country scope required）
+	                create_country_from_cores_in_our_locations = c:GL1
+	                # 标记：本次内阁行动触发了“璃月建国”（用于一次性建国期增益）
+	                set_variable = { name = gacha_liyue_created_now value = yes }
+	            }
+
+	            # 建国后兜底：确保东莞归属璃月（若建国效果未自动转移）
+	            if = {
+	                limit = {
+	                    country_exists = c:GL1
+	                    location:dongguan = { owner = scope:actor }
+	                }
+	                location:dongguan = { change_location_owner = c:GL1 }
+	            }
+
+            # 3) 转移刻晴“国策加成”到璃月（可选：避免宗主国继续保留）
+            remove_country_modifier = gacha_keqing_country_modifier
+            remove_country_modifier = gacha_keqing_c1_country_modifier
+            remove_country_modifier = gacha_keqing_c2_country_modifier
+            remove_country_modifier = gacha_keqing_c4_country_modifier
+            remove_country_modifier = gacha_keqing_c5_country_modifier
+            remove_country_modifier = gacha_keqing_c6_country_modifier
+
+            # 4) 配置璃月（保证政府/宗教/附庸关系稳定）
+            if = {
+                limit = { country_exists = c:GL1 }
+
+                # 先把刻晴移交到璃月，再设为统治者（更稳）
+                if = {
+                    limit = { exists = scope:keqing_char }
+                    scope:keqing_char = { move_country = c:GL1 }
+                }
+
+	                c:GL1 = {
+                    # 避免显示为“璃月伯国”
+                    set_country_rank_effect = { rank = country_rank:rank_kingdom }
+
+	                    # 首都：优先东莞，否则回落到最高发展度的属地
+	                    if = {
+	                        limit = { location:dongguan = { owner = c:GL1 } }
+	                        set_capital = location:dongguan
+	                    }
+                    else = {
+                        ordered_owned_location = {
+                            order_by = development
+                            max = 1
+                            save_scope_as = liyue_capital_loc
+                        }
+                        set_capital = scope:liyue_capital_loc
+                        clear_saved_scope = liyue_capital_loc
+                    }
+	                    change_culture = culture:yuehai_culture
+	                    change_religion = religion:sanjiao
+	                    change_government_type = government_type:monarchy
+
+                    # 设刻晴为统治者（王权）+ 应用刻晴国家修正
+                    if = {
+                        limit = { exists = scope:keqing_char }
+                        # 统治宗族：刻晴需要拥有宗族（dynasty），否则会显示“不属于统治宗族”
+                        if = {
+                            limit = { NOT = { dynasty_exists = gacha_keqing_dynasty } }
+                            create_named_dynasty = gacha_keqing_dynasty
+                        }
+
+                        # 修复模式：刻晴已是统治者，但缺少宗族/王室身份
+                        if = {
+                            limit = { ruler_or_regent ?= { has_character_modifier = gacha_keqing_modifier } }
+                            ruler_or_regent ?= {
+                                change_dynasty = dynasty:gacha_keqing_dynasty
+                                change_character_estate = estate_type:crown_estate
+                                # remove_character_modifier = block_marriage
+                                gacha_keqing_apply_country_modifiers = yes
+                            }
+                            # 清理：只做一次，移除建国时残留的默认王室成员（避免界面上还出现“国王”）
+                            if = {
+                                limit = { NOT = { has_variable = gacha_liyue_placeholder_royals_cleaned } }
+                                every_character = {
+                                    limit = {
+                                        is_alive = yes
+                                        has_estate = estate_type:crown_estate
+                                        NOT = { has_character_modifier = gacha_keqing_modifier }
+                                    }
+                                    kill_character_silently = { target = this reason = vanished }
+                                }
+                                set_variable = { name = gacha_liyue_placeholder_royals_cleaned value = yes }
+                            }
+                        }
+                        # 创建模式：替换建国时自动生成的默认“国王”
+                        else = {
+                            # 记录默认生成的旧统治者（建国时会自动生成一个“国王”）
+                            ruler_or_regent ?= { save_scope_as = liyue_old_ruler }
+
+                            scope:keqing_char = {
+                                change_dynasty = dynasty:gacha_keqing_dynasty
+                                change_character_estate = estate_type:crown_estate
+                                # remove_character_modifier = block_marriage
+                            }
+                            set_new_ruler = scope:keqing_char
+                            scope:keqing_char = { gacha_keqing_apply_country_modifiers = yes }
+
+                            # 把建国瞬间生成的旧“国王”移除，避免列表里还显示一个国王
+                            if = {
+                                limit = { exists = scope:liyue_old_ruler }
+                                scope:liyue_old_ruler = {
+                                    if = {
+                                        limit = { this != scope:keqing_char }
+                                        kill_character_silently = { target = this reason = vanished }
+                                    }
+                                }
+                                clear_saved_scope = liyue_old_ruler
+                            }
+                            # 进一步清理：只做一次，移除璃月内残留的默认王室成员（旧王室家族/继承人等）
+                            if = {
+                                limit = { NOT = { has_variable = gacha_liyue_placeholder_royals_cleaned } }
+                                every_character = {
+                                    limit = {
+                                        is_alive = yes
+                                        has_estate = estate_type:crown_estate
+                                        NOT = { has_character_modifier = gacha_keqing_modifier }
+                                    }
+                                    kill_character_silently = { target = this reason = vanished }
+                                }
+                                set_variable = { name = gacha_liyue_placeholder_royals_cleaned value = yes }
+                            }
+                        }
+                    }
+
+	                    # 关键：璃月成为玩家的附庸（Cabinet Action root= cabinet，不能用 root）
+	                    # 贸易/建造国家修正：
+	                    # - 常驻：温和增益
+	                    # - 建国后 10 年：一次性强力增益（只在首次建国时添加）
+	                    if = {
+	                        limit = { NOT = { has_country_modifier = gacha_liyue_trade_hub_modifier } }
+	                        add_country_modifier = { modifier = gacha_liyue_trade_hub_modifier years = -1 mode = add_and_extend }
+	                    }
+	                    if = {
+	                        limit = {
+	                            NOT = { has_variable = gacha_liyue_foundation_boom_used }
+	                            scope:actor = { has_variable = gacha_liyue_created_now }
+	                        }
+	                        add_country_modifier = { modifier = gacha_liyue_foundation_boom_modifier years = 10 mode = add_and_replace }
+	                        set_variable = { name = gacha_liyue_foundation_boom_used value = yes }
+	                    }
+
+	                    make_subject_of = {
+	                        target = scope:actor
+	                        type = subject_type:gacha_archon_vassal
+	                    }
+	                }
+	            }
+	            
+	            # 清理：仅用于本次 action 的临时标记
+	            remove_variable = gacha_liyue_created_now
+	            
+	            # 清理
+	            clear_saved_scope = keqing_char
+	        }
+	    }
+    
+    # 地图标记
+    map_marker = {
+        show_for_owner = yes
+    }
+}

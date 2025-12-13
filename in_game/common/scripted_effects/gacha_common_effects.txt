@@ -129,6 +129,9 @@ gacha_register_new_character = {
     # 关键步骤：在名字和特质确定后，移动到国家
     move_country = root
 
+    # [标配] 统一身份：天外之人阶层 + 固定宗族（用于未来七国王权/王室联姻等系统）
+    gacha_standardize_character_identity = { who = $who$ }
+
     # # 统一把抽卡角色归入自定义阶层
     # gacha_assign_to_gacha_estate = yes
 
@@ -143,11 +146,48 @@ gacha_register_new_character = {
 # ------------------------------------------------------------------------------ 
 gacha_assign_to_gacha_estate = {
     if = {
-        limit = { exists = this }
+        limit = {
+            exists = this
+            is_ruler = no # 七国君主等不应被强制归回自定义阶层
+        }
         # 确保天外之人身份信息完备
         change_character_culture = culture:gacha_culture
         change_character_religion = religion:sanjiao
         change_character_estate = estate_type:gacha_estate
+    }
+}
+
+# ------------------------------------------------------------------------------ 
+# Helper: 统一“抽卡角色”身份（阶层 + 宗族）
+# 说明：
+# - 阶层：默认归入 gacha_estate；若已是统治者则不改阶层（避免覆盖 crown_estate）。
+# - 宗族：为每个角色建立固定宗族（gacha_$who$_dynasty），用于王权/联姻等需要“统治宗族”的系统。
+# ------------------------------------------------------------------------------ 
+gacha_standardize_character_identity = {
+    if = {
+        limit = { exists = this }
+
+        # 文化/宗教统一（兜底）
+        change_character_culture = culture:gacha_culture
+        change_character_religion = religion:sanjiao
+
+        # 宗族兜底：没有宗族就分配一个固定宗族
+        if = {
+            limit = { has_dynasty = no }
+            root = {
+                if = {
+                    limit = { NOT = { dynasty_exists = gacha_$who$_dynasty } }
+                    create_named_dynasty = gacha_$who$_dynasty
+                }
+            }
+            change_dynasty = dynasty:gacha_$who$_dynasty
+        }
+
+        # 阶层兜底：避免落到默认贵族等阶层（放在最后，避免被其他逻辑覆盖）
+        if = {
+            limit = { is_ruler = no }
+            change_character_estate = estate_type:gacha_estate
+        }
     }
 }
 

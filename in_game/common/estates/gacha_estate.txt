@@ -6,6 +6,6 @@
     alliance = 0
 		revolt_court_language = common_language
     bank = yes
-    # Avoid auto-creating dynasties for gacha characters to prevent naming anomalies
+    # 不自动生成宗族（由脚本为每位角色分配固定宗族）
     characters_have_dynasty = never
 }

@@ -1,0 +1,63 @@
+# Implementation Plan - Seven Nations Vassals (Static Tags)
+
+This plan implements the "Seven Nations" (Mondstadt, Liyue, Inazuma, Sumeru, Fontaine, Natlan, Snezhnaya) as fully defined static tags, replacing the dynamic country creation method. This allows for custom colors, flags, and persistent identities.
+
+## Goal Description
+
+Transition the "Seven Nations" creation logic from `create_country_from_location` (dynamic Dxx tags) to **Static Tags** (e.g., `MND`, `LYU`). This involves defining their metadata (colors/cultures) and updating the Cabinet Action to spawn these specific tags.
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Map Location Choice**: The plan currently assumes **Liyue = Guangzhou** (based on your existing code). We need to decide on locations for the other 6 nations. I will use placeholders (e.g., major capitals) for now, which you can adjust later.
+
+> [!NOTE]
+> **Tag Naming**: I will use the following 3-letter tags. Please confirm if they conflict with any other mod/vanilla tags you know of:
+> *   `MND` - Mondstadt
+> *   `LYU` - Liyue
+> *   `INZ` - Inazuma
+> *   `SUM` - Sumeru
+> *   `FNT` - Fontaine
+> *   `NTL` - Natlan
+> *   `SZN` - Snezhnaya
+
+## Proposed Changes
+
+### 1. In Game - Setup (New Tags)
+
+#### [NEW] [gacha_seven_nations.txt](file:///e:/app/steam/steamapps/common/Europa%20Universalis%20V/game/mod/eu5_gacha/in_game/setup/countries/gacha_seven_nations.txt)
+Define the metadata for the 7 nations.
+*   **Content**: Color definitions (Teal for Venti, Gold for Zhongli, etc.), Culture defaults, Religion defaults.
+
+### 2. Main Menu - Localization
+
+#### [MODIFY] [eu_gacha_core_l_simp_chinese.yml](file:///e:/app/steam/steamapps/common/Europa%20Universalis%20V/game/mod/eu5_gacha/main_menu/localization/simp_chinese/eu_gacha_core_l_simp_chinese.yml)
+Add localization for the new tags.
+*   `MND`: "蒙德"
+*   `LYU`: "璃月"
+*   ...and so on.
+
+### 3. In Game - Cabinet Actions (Spawn Logic)
+
+#### [MODIFY] [gacha_nation_actions.txt](file:///e:/app/steam/steamapps/common/Europa%20Universalis%20V/game/mod/eu5_gacha/in_game/common/cabinet_actions/gacha_nation_actions.txt)
+Update `gacha_create_liyue_nation` (and add others) to use the **Static Tag Spawn** logic:
+1.  **Add Core**: `location:guangzhou = { add_core = tag:LYU }`
+2.  **Release/Cede**:
+    *   If `LYU` does not exist: `release_country = tag:LYU` (This creates it with the core).
+    *   If `LYU` exists: `cede_province = tag:LYU`.
+3.  **Vassalize**: Ensure `make_subject_of` targets `scope:actor` with type `gacha_archon_vassal`.
+4.  **Set Ruler**: `tag:LYU = { set_ruler = scope:keqing_char }`.
+
+## Verification Plan
+
+### Automated Tests
+*   **Console Test**:
+    1.  Start game as Ming (or owner of Guangzhou).
+    2.  Run `scripted_trigger gacha_create_liyue_nation` (check logic).
+    3.  Run `effect location:guangzhou = { add_core = tag:LYU release_country_as_vassal = tag:LYU }` (simulate action).
+
+### Manual Verification
+1.  **Tag Existence**: Verify `MND`, `LYU` etc. exist in the game database (debug mode tooltip).
+2.  **Color Check**: Execute the Cabinet Action and verify "Liyue" appears with the defined **Gold Color** (not random dynamic color).
+3.  **Flag Check**: Verify they use the defined/default flags.
+4.  **Subject Type**: Verify they become "Archon Vassal" type.

@@ -7,6 +7,11 @@
   gacha_first_name_keqing: "刻晴"
   gacha_last_name_keqing: "玉衡"
 
+  # === 角色交互 ===
+  gacha_keqing_liyue_plan_interaction: "璃月计划『Dev』"
+  gacha_keqing_liyue_plan_interaction_desc: "由玉衡星牵头，启动璃月的国家构想。解锁内阁行动中的相关决议，并在需要时用于修复与重整。"
+  gacha_keqing_liyue_plan_select: "启动「璃月计划」"
+
   # === 特质 (Traits) ===
   gacha_keqing_origin_trait: "璃月千帆之繁"
   desc_gacha_keqing_origin_trait: "「在此地驻足片刻，我仿佛看到了璃月港千帆竞发的景象……不对，这里的基础设施太差了。想要富国，先要修路、通商、整顿市集。把图纸给我，我会让这片土地焕发出黄金般的光泽。」"
@@ -53,6 +58,8 @@
   STATIC_MODIFIER_DESC_gacha_keqing_c1_country_modifier: "流程优化，施工更快。"
   STATIC_MODIFIER_NAME_gacha_keqing_c2_country_modifier: "黄金的土地"
   STATIC_MODIFIER_DESC_gacha_keqing_c2_country_modifier: "基建狂魔模式，全域施工与发展提速，产出同步提升。"
+  STATIC_MODIFIER_NAME_gacha_keqing_c4_country_modifier: "七星·玉衡"
+  STATIC_MODIFIER_DESC_gacha_keqing_c4_country_modifier: "璃月七星之一"
   STATIC_MODIFIER_NAME_gacha_keqing_c5_country_modifier: "玉衡秘阁"
   STATIC_MODIFIER_DESC_gacha_keqing_c5_country_modifier: "精打细算的官僚体系，顾问成本进一步压缩。"
   STATIC_MODIFIER_NAME_gacha_keqing_c6_country_modifier: "玉衡治世"

@@ -1,0 +1,12 @@
+﻿l_english:
+  gacha_xinhai_dynasty: "Sangonomiya"
+  gacha_fischl_dynasty: "of the Night"
+  gacha_keqing_dynasty: "Yuheng"
+  gacha_raiden_dynasty: "Raiden"
+  gacha_furina_dynasty: "de Fontaine"
+  gacha_hutao_dynasty: "Wangsheng"
+  gacha_klee_dynasty: "Spark Knight"
+  gacha_nahida_dynasty: "Buer"
+
+  # Backwards compatibility (early Liyue test key)
+  gacha_yuheng_dynasty: "Yuheng"
