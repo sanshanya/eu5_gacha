@@ -37,21 +37,27 @@
 
 ### Key Data Structures
 
-**Country Variables** (保底状态):
+**Country Variables** (核心状态):
 ```paradox
-set_variable = { name = gacha_total_rolls value = 0 }        # 总抽卡次数
-set_variable = { name = gacha_pity_count value = 0 }         # 5星保底计数 (0-89)
-set_variable = { name = gacha_pity_4star value = 0 }         # 4星保底计数 (0-9)
-set_variable = { name = gacha_block_has_4star value = 0 }    # 当前十连BLOCK状态
-set_variable = { name = gacha_is_guaranteed value = 0 }      # 大保底Flag
+set_variable = { name = gacha_total_rolls_count value = 0 }  # 总抽卡次数
+set_variable = { name = gacha_pity_5star_count value = 0 }   # 5★保底计数 (0-89)
+set_variable = { name = gacha_pity_4star_count value = 0 }   # 4★保底计数
+set_variable = { name = gacha_is_guaranteed_bool value = 0 } # 大保底标记
+set_variable = { name = gacha_starlight value = 0 }          # 星辉货币
 set_variable = { name = gacha_event_lock value = yes }       # 交互事件锁（防连点）
 ```
 
-**Global Lists** (角色池):
+**Legacy Global List**（已弃用）:
+- `gacha_obtained_characters` 曾用于存“已获得角色”，但 **不要把 `Character` 存入 `global_variable_list`**（死亡后可能残留坏引用导致 CTD）。
+
+**Current Pattern**（按 modifier 全局搜索）:
 ```paradox
-add_to_global_variable_list = {               # 已获得角色列表
-  name = gacha_obtained_characters
-  target = scope:new_char
+random_country = {
+  limit = { any_character = { is_alive = yes has_character_modifier = gacha_xinhai_modifier } }
+  random_character = {
+    limit = { is_alive = yes has_character_modifier = gacha_xinhai_modifier }
+    save_scope_as = existing_char
+  }
 }
 ```
 

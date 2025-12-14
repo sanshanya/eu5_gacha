@@ -32,18 +32,17 @@
   }
   # === 效果 ===
   effect = {
-    scope:actor = {
-      # [FIX] 立即设置事件锁，防止重复触发
-      set_variable = { name = gacha_event_lock value = yes }
-      
-      # [V3] 打开菜单前先进行懒加载初始化，确保所有抽卡变量已就绪
-      gacha_ensure_state_initialized = yes
+    # [CTD Fix] 交互悬浮 Tooltip 可能会预览/评估 effect；将逻辑放入 hidden_effect，避免悬浮触发复杂脚本
+    hidden_effect = {
+      scope:actor = {
+        # [FIX] 立即设置事件锁，防止重复触发
+        set_variable = { name = gacha_event_lock value = yes }
 
-      # 触发祈愿主菜单事件
-      trigger_event_non_silently = gacha_events.1
+        # 触发祈愿主菜单事件（事件内部会再次执行 gacha_ensure_state_initialized 兜底初始化）
+        trigger_event_non_silently = gacha_events.1
+      }
     }
   }
 
   ai_will_do = { value = 0 }
 }
-

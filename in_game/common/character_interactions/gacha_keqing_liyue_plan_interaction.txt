@@ -19,7 +19,7 @@
   # - 前置条件：需要拥有东莞（璃月计划实施地），否则按钮置灰
   allow = {
     scope:actor = {
-      location:dongguan = { owner = this }
+      location:dongguan = { owner = scope:actor }
       NOT = { has_variable = gacha_liyue_plan_unlocked }
       NOT = { has_variable = gacha_liyue_plan_lock }
     }
@@ -40,12 +40,15 @@
   }
 
   effect = {
-    scope:actor = {
-      # 立即加锁，防止重复点击触发多个事件实例
-      set_variable = { name = gacha_liyue_plan_lock value = yes }
+    # [STYLE] 与抽卡交互一致：避免悬浮 Tooltip 预评估 effect 时触发复杂脚本
+    hidden_effect = {
+      scope:actor = {
+        # 立即加锁，防止重复点击触发多个事件实例
+        set_variable = { name = gacha_liyue_plan_lock value = yes }
 
-      # 通过事件解锁内阁行动中的“璃月”决议（避免常驻碍眼）
-      trigger_event_non_silently = gacha_nation_events.10
+        # 通过事件解锁内阁行动中的“璃月”决议（避免常驻碍眼）
+        trigger_event_non_silently = gacha_nation_events.10
+      }
     }
   }
 

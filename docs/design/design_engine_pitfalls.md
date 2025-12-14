@@ -138,3 +138,44 @@ else = {
   - 效果: 变量 `my_var` 存储了字符串键 `loc_key_name`。
   - 用途: 在 GUI 或文本中通过 `[Var('my_var').GetFlagName]` 动态显示对应的本地化文本。
 - **警示**: 绝不要把 `flag:` 当作数值或布尔值来运算。
+
+---
+
+## §6. Global Variable List 存 Character → CTD（坏引用）
+
+### 现象
+- 角色死亡后，一切正常；但**只要某个 UI/按钮悬浮**（Tooltip）或某个事件选项需要遍历该列表，就可能直接闪退（CTD）。
+- error.log 往往**没有明确脚本报错**（因为是引擎层崩溃）。
+
+### 根本原因（工程解释）
+- `global_variable_list` 存的是对象引用（类似“指针”）。  
+- 角色死亡后，引擎会清理国家/宗族等一阶关系，但**不会自动清理你自定义的全局列表**。  
+- 后续任何对该列表的访问/扫描，都可能命中“已销毁对象引用”从而崩溃。
+
+### 规避规范
+- **DON'T**: 不要把 `Character` 存进 `global_variable_list` 作为长期存储。
+- **DO**: 改用“按 modifier 全局搜索”的方式定位角色：
+  - `random_country` → `random_character` with `has_character_modifier = gacha_xxx_modifier`
+- **DO**: 用 `on_character_death` 兜底清理相关状态（如 `*_is_summoned`、saved scopes）。
+
+---
+
+## §7. Tooltip / 预评估会跑脚本（Interaction / Event Option）
+
+### 现象
+- 玩家**只是悬浮按钮/选项**就触发异常，甚至 CTD。
+- 典型触发点：交互按钮、事件选项（尤其当 trigger 成立、选项出现/变亮时）。
+
+### 根本原因（工程解释）
+- 引擎为了生成 tooltip / 预测效果，可能会对 `effect` 做预评估或局部执行。
+- 如果 `effect` 里包含：
+  - 创建对象（`create_character`）
+  - 大量随机/遍历
+  - 或“递归自调用兜底”
+  
+  在预评估模式下会非常不稳定，甚至无限递归导致栈溢出 → CTD。
+
+### 规避规范
+- **DO**: 把复杂逻辑放入 `hidden_effect`（交互 / 事件选项均适用）。
+- **DO**: 避免递归兜底；改用“清旗标→让后续分支继续”。
+- **DO**: 对可重复触发交互加锁，并在 `after`/`on_game_start` 解锁兜底（防止崩溃后永久锁死）。

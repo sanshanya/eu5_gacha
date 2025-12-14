@@ -132,13 +132,14 @@ Script involving advances
 
 ### File Locations
 - **Gacha Entry Point**: `in_game/common/character_interactions/gacha_wish_interaction.txt`
-- **Probability Logic**: `in_game/common/script_values/gacha_values.txt`
+- **Probability Logic**: `in_game/common/script_values/gacha_eu_values.txt`
 - **Core Effects**: `in_game/common/scripted_effects/gacha_logic_effects.txt`
+- **Common Effects**: `in_game/common/scripted_effects/gacha_common_effects.txt`
 - **Event UI**: `in_game/events/gacha_events.txt`
 
 ### Key Data Structures
-- **Pity Counter**: Country variable `gacha_current_pity`
-- **Character Pool**: Global list `gacha_obtained_characters`
+- **Pity Counter**: Country variables `gacha_pity_5star_count` / `gacha_pity_4star_count`
+- **Character Tracking**: 全局变量 `gacha_*_is_summoned` + `has_character_modifier` 全局搜索（不要把 Character 存入 `global_variable_list`）
 - **Constellation**: Character variable `gacha_constellation_lvl`
 ```
 

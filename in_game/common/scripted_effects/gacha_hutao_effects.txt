@@ -10,11 +10,23 @@ gacha_create_hutao_effect = {
     if = {
         limit = { has_global_variable = gacha_hutao_is_summoned }
         
-        random_in_global_list = {
-            variable = gacha_obtained_characters
-            limit = { has_character_modifier = gacha_hutao_modifier }
-            save_scope_as = existing_char
-        }
+	        clear_saved_scope = existing_char
+
+	        random_country = {
+	            limit = {
+	                any_character = {
+	                    is_alive = yes
+	                    has_character_modifier = gacha_hutao_modifier
+	                }
+	            }
+	            random_character = {
+	                limit = {
+	                    is_alive = yes
+	                    has_character_modifier = gacha_hutao_modifier
+	                }
+	                save_scope_as = existing_char
+	            }
+	        }
 
         if = {
             limit = { exists = scope:existing_char }
@@ -67,13 +79,13 @@ gacha_create_hutao_effect = {
         else = {
             # Error fallback: Owned but not found (Dead/Dismissed)? 
             # Treat as new summon to ensure player gets the character.
-            set_global_variable = { name = gacha_hutao_is_summoned value = 0 }
-            gacha_create_hutao_effect = yes
+            remove_global_variable = gacha_hutao_is_summoned
         }
     }
 
     # === B. New Creation Logic ===
-    else = {
+    if = {
+        limit = { NOT = { has_global_variable = gacha_hutao_is_summoned } }
         create_character = {
             first_name = gacha_first_name_hutao
             last_name = gacha_last_name_hutao

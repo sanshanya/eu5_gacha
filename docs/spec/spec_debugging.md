@@ -247,6 +247,28 @@ gacha_wish_interaction = {
 
 ---
 
+### Problem 5: 仅悬浮按钮/选项就 CTD（闪退）
+
+**症状**:
+- 鼠标悬浮某个交互按钮或事件选项时直接闪退（无需点击）。
+- 常见触发：选项“刚好变亮/出现”的瞬间（例如星辉兑换选项在 `gacha_starlight >= 3` 时出现）。
+
+**高概率原因**:
+1. **Tooltip/预评估运行脚本**：引擎可能会预评估 `effect` 来生成 tooltip/效果摘要。
+2. **递归兜底或复杂 effect**：`effect` 中包含 `create_character`、随机遍历、或“清旗标+自我递归调用”。
+3. **坏引用**：历史代码把 `Character` 存进 `global_variable_list`，死亡后残留坏引用。
+
+**排查/修复清单**:
+- [ ] 把交互/选项中的复杂逻辑移入 `hidden_effect`（尤其是创建/随机/大量改变量）。
+- [ ] 删除 `scripted_effect` 的自我递归兜底；改为“清旗标→让后续分支继续”。
+- [ ] 不要把 `Character` 存进 `global_variable_list`；改用 `has_character_modifier` 全局搜索。
+- [ ] 在 `on_character_death` 里清理 `*_is_summoned`、saved scopes 等状态。
+
+**参考**:
+- `docs/design/design_engine_pitfalls.md` §6-§7
+
+---
+
 ## 5. Best Practices & Tools
 
 **调试规范**: 详见 [design_project_guidelines.md](../design/design_project_guidelines.md) §调试原则

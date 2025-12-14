@@ -192,11 +192,13 @@ gacha_create_xinhai_effect = {
     if = {
         limit = { has_global_variable = gacha_xinhai_is_summoned }
         
-        # 找到已存在的心海
-        random_in_global_list = {
-            variable = gacha_obtained_characters
-            limit = { has_trait = gacha_xinhai_origin_trait }
-            save_scope_as = xinhai_char  # 使用角色名作为scope名称
+        # 找到已存在的心海（按 modifier 全局搜索；避免 Character 全局列表）
+        random_country = {
+            limit = { any_character = { is_alive = yes has_character_modifier = gacha_xinhai_modifier } }
+            random_character = {
+                limit = { is_alive = yes has_character_modifier = gacha_xinhai_modifier }
+                save_scope_as = xinhai_char
+            }
         }
         
         # 升级命座并触发事件
@@ -221,8 +223,8 @@ gacha_create_xinhai_effect = {
             # ... 其他命座
         }
         
-        # ⚠️ 不要在这里clear_saved_scope！
-        # scope会在事件的after块中清理
+        # ✅ 清理临时 scope；用于UI展示的 scope 由事件链/统一兜底清理负责
+        clear_saved_scope = xinhai_char
     }
 }
 ```
@@ -359,7 +361,7 @@ gacha_xinhai_events.31 = {
 > [!TIP]
 > **为什么不用列表遍历**: 
 > - C3事件触发时，当前scope就是心海角色
-> - 通过`save_scope_as`直接保存引用，无需遍历`gacha_obtained_characters`
+> - 通过`save_scope_as`直接保存引用，无需遍历任何角色列表（旧版 `gacha_obtained_characters` 已弃用）
 > - 性能更好，逻辑更清晰
 
 ---

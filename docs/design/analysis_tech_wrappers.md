@@ -38,5 +38,5 @@ The reference mod's approach is excellent for a **"Unique Hero"** system where y
 
 **Recommendation**:
 *   **Keep our current structure.** It provides the necessary flexibility for the Gacha loop.
-*   **Adopt their "List Registration"**: We already do this (`add_to_global_variable_list`), which is good.
-*   **Adopt their "Estate Assignment"**: We should ensure we assign them to our custom "Gacha Guild" estate (once created) rather than just the Crown Estate, similar to their `ls_snow_Heimdall_estate`.
+*   **Do NOT adopt their "List Registration"**: Avoid storing `Character` in `global_variable_list` (death can leave invalid references → tooltip/hover CTD). We use the **"search by character modifier"** pattern instead (see `docs/design/design_engine_pitfalls.md` §6).
+*   **Adopt their "Estate Assignment"**: Ensure characters are assigned to our custom `gacha_estate` (unless they are a ruler), instead of default estates.

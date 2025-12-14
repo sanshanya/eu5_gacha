@@ -128,17 +128,22 @@ option = {
     name = "与心海讨论治国之道"
     
     trigger = {
-        any_in_list = {
-            variable = gacha_obtained_characters
-            has_trait = gacha_xinhai_origin_trait
-            gacha_affinity_level >= 40
+        any_character = {
+            limit = {
+                is_alive = yes
+                has_character_modifier = gacha_xinhai_modifier
+                has_variable = gacha_affinity_level
+                var:gacha_affinity_level >= 40
+            }
         }
     }
     
     # +15 好感度
-    random_in_list = {
-        variable = gacha_obtained_characters
-        limit = { has_trait = gacha_xinhai_origin_trait }
+    random_character = {
+        limit = {
+            is_alive = yes
+            has_character_modifier = gacha_xinhai_modifier
+        }
         change_variable = { name = gacha_affinity_level add = 15 }
     }
 }
@@ -210,13 +215,9 @@ gacha_xinhai_events.12 = {
         name = "陪她巡视海岛"
         
         # 解锁小礼物：特殊修正
-        random_in_list = {
-            variable = gacha_obtained_characters
-            limit = { has_trait = gacha_xinhai_origin_trait }
-            add_character_modifier = {
-                modifier = gacha_xinhai_gift_tier_2
-                years = -1
-            }
+        random_character = {
+            limit = { is_alive = yes has_character_modifier = gacha_xinhai_modifier }
+            add_character_modifier = { modifier = gacha_xinhai_gift_tier_2 years = -1 }
         }
     }
 }
@@ -303,27 +304,31 @@ gacha_affinity_decay_event = {
     hidden = yes
     
     trigger = {
-        any_in_list = {
-            variable = gacha_obtained_characters
-            gacha_affinity_level > 0
-            NOT = { has_variable = gacha_affinity_interaction_this_year }
+        any_character = {
+            limit = {
+                is_alive = yes
+                has_character_modifier = gacha_core_modifier
+                has_variable = gacha_affinity_level
+                var:gacha_affinity_level > 0
+                NOT = { has_variable = gacha_affinity_interaction_this_year }
+            }
         }
     }
     
     immediate = {
-        every_in_list = {
-            variable = gacha_obtained_characters
+        every_character = {
             limit = {
-                gacha_affinity_level > 0
+                is_alive = yes
+                has_character_modifier = gacha_core_modifier
+                has_variable = gacha_affinity_level
+                var:gacha_affinity_level > 0
                 NOT = { has_variable = gacha_affinity_interaction_this_year }
             }
+
             # -5 好感度/年
             change_variable = { name = gacha_affinity_level add = -5 }
-        }
-        
-        # 清除交互标记
-        every_in_list = {
-            variable = gacha_obtained_characters
+
+            # 清除交互标记
             remove_variable = gacha_affinity_interaction_this_year
         }
     }

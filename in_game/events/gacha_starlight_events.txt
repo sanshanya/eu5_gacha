@@ -23,8 +23,10 @@ gacha_starlight_events.1 = {
             var:gacha_starlight >= 3
         }
         
-        change_variable = { name = gacha_starlight subtract = 3 }
-        gacha_create_xinhai_effect = yes
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_xinhai_effect = yes
+        }
     }
     
     # 选项2：兑换雷电将军
@@ -34,8 +36,10 @@ gacha_starlight_events.1 = {
             var:gacha_starlight >= 3
         }
         
-        change_variable = { name = gacha_starlight subtract = 3 }
-        gacha_create_raiden_effect = yes
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_raiden_effect = yes
+        }
     }
     
     # 选项3：兑换刻晴
@@ -45,8 +49,10 @@ gacha_starlight_events.1 = {
             var:gacha_starlight >= 3
         }
         
-        change_variable = { name = gacha_starlight subtract = 3 }
-        gacha_create_keqing_effect = yes
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_keqing_effect = yes
+        }
     }
     
     # 选项4：兑换芙宁娜
@@ -56,8 +62,10 @@ gacha_starlight_events.1 = {
             var:gacha_starlight >= 3
         }
         
-        change_variable = { name = gacha_starlight subtract = 3 }
-        gacha_create_furina_effect = yes
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_furina_effect = yes
+        }
     }
     
     # 选项5：兑换胡桃
@@ -67,8 +75,10 @@ gacha_starlight_events.1 = {
             var:gacha_starlight >= 3
         }
         
-        change_variable = { name = gacha_starlight subtract = 3 }
-        gacha_create_hutao_effect = yes
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_hutao_effect = yes
+        }
     }
 
     option = {
@@ -77,8 +87,10 @@ gacha_starlight_events.1 = {
             var:gacha_starlight >= 3
         }
         
-        change_variable = { name = gacha_starlight subtract = 3 }
-        gacha_create_fischl_effect = yes
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_fischl_effect = yes
+        }
     }
 
     option = {
@@ -87,8 +99,10 @@ gacha_starlight_events.1 = {
             var:gacha_starlight >= 3
         }
         
-        change_variable = { name = gacha_starlight subtract = 3 }
-        gacha_create_klee_effect = yes
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_klee_effect = yes
+        }
     }
     
     option = {
@@ -97,8 +111,10 @@ gacha_starlight_events.1 = {
             var:gacha_starlight >= 3
         }
         
-        change_variable = { name = gacha_starlight subtract = 3 }
-        gacha_create_nahida_effect = yes
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_nahida_effect = yes
+        }
     }
     
     # 选项6：取消

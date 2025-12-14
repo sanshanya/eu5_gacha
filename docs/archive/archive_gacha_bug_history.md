@@ -2,7 +2,7 @@
 
 > **Status**: 归档 - 所有问题已修复  
 > **Purpose**: 记录抽卡系统历史 Bug 及修复过程，供后人参考  
-> **Last Updated**: 2025-11-25
+> **Last Updated**: 2025-12-14
 
 ---
 
@@ -218,18 +218,12 @@ set_variable = { name = gacha_4star_choice value = gacha_rand_ones }
 
 **修复方案**:
 - 改用已存在的 `gacha_rand`
-- 通过 mod 3 来随机选择奖励类型（金币/威望/正统性）
+- 通过取模随机选择奖励类型（金币/威望/正统性）
 
-**修复后代码**:
+**修复后代码**（早期版本示例）:
 ```paradox
-set_variable = { 
-    name = gacha_4star_choice 
-    value = gacha_rand 
-}
-change_variable = { 
-    name = gacha_4star_choice 
-    modulo = 3 
-}
+set_variable = { name = gacha_4star_choice value = gacha_rand }
+change_variable = { name = gacha_4star_choice modulo = 3 }
 
 # 0=金币, 1=威望, 2=正统性
 if = { limit = { gacha_4star_choice = 0 } add_gold = 100 }
@@ -237,11 +231,41 @@ else_if = { limit = { gacha_4star_choice = 1 } add_prestige = 50 }
 else = { add_legitimacy = 10 }
 ```
 
-**文件**: `in_game/common/scripted_effects/gacha_pools.txt:19`
+**文件**（早期版本）: `in_game/common/scripted_effects/gacha_pools.txt:19`
 
 ---
 
-### Bug #6: 事件顺序错误 🟢 FIXED
+### Bug #6: 星辉≥3 后悬浮/兑换导致 CTD 🟢 FIXED
+**日期**: 2025-12-14  
+**严重程度**: 严重（直接闪退）
+
+**表现**:
+- 当 `gacha_starlight >= 3`（星辉兑换选项出现）时：
+  - 仅悬浮抽卡交互/事件选项就可能 CTD（无需点击）
+  - 若曾召唤角色并死亡，用控制台把星辉改到 3 更容易复现
+- 星辉 < 3 时基本不触发
+
+**根本原因**（组合问题）:
+1. **Tooltip/预评估会跑脚本**：交互/事件选项在显示或悬浮时，引擎可能预评估 `effect`。
+2. **递归兜底**：`gacha_create_*_effect` 在“已召唤但找不到存活角色”场景下使用“清旗标 + 自己调用自己”的递归兜底，预评估模式下变量变更不稳定，导致无限递归 → 栈溢出 → CTD。
+3. **旧版本遗留的全局列表风险**：历史上把 `Character` 存入 `global_variable_list`，角色死亡后可能残留坏引用（更放大 CTD 概率）。
+
+**修复方案**:
+- **交互/事件选项安全化**：复杂逻辑放入 `hidden_effect`，避免 tooltip 预评估触发。
+- **去掉递归兜底**：改为两个 if 分支（升级/新建）。找不到存活角色时仅 `remove_global_variable = gacha_*_is_summoned`，让同一条 effect 链继续走“新建”分支。
+- **死亡清理**：`on_character_death` 清理 `*_is_summoned` 旗标 + saved scopes，避免悬挂引用。
+- **全局列表降级为 legacy**：不再把 `Character` 存入全局列表，改为按 `has_character_modifier` 全局搜索；并在开局/读档做一次 legacy 清理。
+
+**相关文件**:
+- `in_game/common/character_interactions/gacha_wish_interaction.txt`
+- `in_game/events/gacha_starlight_events.txt`
+- `in_game/common/scripted_effects/gacha_{char}_effects.txt`
+- `in_game/common/on_action/00_gacha_on_actions.txt`
+- `in_game/common/scripted_effects/gacha_common_effects.txt`
+
+---
+
+### Bug #7: 事件顺序错误 🟢 FIXED
 **日期**: 早期版本  
 **严重程度**: 中
 
@@ -365,11 +389,11 @@ rand = rand mod 1000
 
 | 指标 | 数值 |
 |:---|:---:|
-| **总Bug数** | 6 |
-| **严重Bug** | 3 (50%) |
-| **中等Bug** | 3 (50%) |
+| **总Bug数** | 7 |
+| **严重Bug** | 3 |
+| **中等Bug** | 4 |
 | **平均修复时间** | 1-2小时 |
-| **最难调试** | Bug #2 (Script Value限制) |
+| **最难调试** | Bug #6 (CTD / 预评估) |
 
 ---
 
@@ -383,4 +407,4 @@ rand = rand mod 1000
 ---
 
 **文档维护者**: AI + sansm  
-**归档日期**: 2025-11-25
+**归档日期**: 2025-12-14

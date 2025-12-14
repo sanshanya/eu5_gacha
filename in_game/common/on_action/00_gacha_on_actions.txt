@@ -1,9 +1,27 @@
 ﻿# ==============================================================================
-# EU5 Gacha System - Yearly Banner Rotation
+# EU5 Gacha System - On Actions
 # ==============================================================================
 # 按照官方文档：只能通过 on_actions 块扩展 hardcoded on_action
 # "Only a new on_actions block can be added to existing on actions. 
 #  Adding other blocks to an existing on action causes errors."
+
+# ------------------------------------------------------------------------------
+# 修复：抽卡角色死亡后，残留状态（召唤旗标 / saved scopes）可能在 UI 预评估/悬浮 tooltip 下放大风险
+# ------------------------------------------------------------------------------
+on_character_death = {
+    on_actions = {
+        gacha_on_character_death_cleanup_action
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 读档/开局自愈：清理临时 scopes / 锁变量（防止崩溃后按钮永久置灰）
+# ------------------------------------------------------------------------------
+on_game_start = {
+    on_actions = {
+        gacha_on_game_start_initialize_action
+    }
+}
 
 # 扩展官方的 yearly_country_pulse
 yearly_country_pulse = {
@@ -32,6 +50,50 @@ gacha_yearly_rotation_action = {
         if = {
             limit = { global_var:gacha_current_up_idx >= 8 }
             set_global_variable = { name = gacha_current_up_idx value = 0 }
+        }
+    }
+}
+
+# ------------------------------------------------------------------------------
+# On Action: gacha character death cleanup
+# root = country, scope:target = dead character
+# ------------------------------------------------------------------------------
+gacha_on_character_death_cleanup_action = {
+    trigger = {
+        scope:target = {
+            OR = {
+                has_character_modifier = gacha_core_modifier
+                has_trait = gacha_core_trait
+            }
+        }
+    }
+
+    effect = {
+        # 同步清理“已召唤”旗标：角色死亡后不应再走重复抽取路径
+        scope:target = { gacha_remove_summoned_flag_for_character = yes }
+
+        # 兜底：崩溃/强退/旧逻辑可能残留临时 saved scopes；一并清理
+        gacha_clear_gacha_saved_scopes = yes
+    }
+}
+
+# ------------------------------------------------------------------------------
+# On Action: initialize state at game start (new game / load)
+# ------------------------------------------------------------------------------
+gacha_on_game_start_initialize_action = {
+    trigger = { always = yes }
+    effect = {
+        # 兜底：清理临时 scopes（避免旧存档/崩溃残留引用污染 UI）
+        gacha_clear_gacha_saved_scopes = yes
+
+        # 开局/读档兜底：初始化玩家抽卡状态，避免 tooltip/触发器读取未初始化变量
+        every_country = {
+            limit = { is_ai = no }
+            gacha_ensure_state_initialized = yes
+
+            # 防止上一次崩溃/强退导致锁变量残留，使按钮永久变灰
+            remove_variable = gacha_event_lock
+            remove_variable = gacha_liyue_plan_lock
         }
     }
 }

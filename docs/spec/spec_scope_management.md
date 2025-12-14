@@ -101,10 +101,20 @@ trigger_event_non_silently = { id = event.1 }  # 2. 后触发
 
 ```paradox
 # Effect中保存scope
-random_in_global_list = {
-    variable = gacha_obtained_characters
-    limit = { has_trait = gacha_xinhai_origin_trait }
-    save_scope_as = xinhai_char  # 保存但不清理
+random_country = {
+    limit = {
+        any_character = {
+            is_alive = yes
+            has_character_modifier = gacha_xinhai_modifier
+        }
+    }
+    random_character = {
+        limit = {
+            is_alive = yes
+            has_character_modifier = gacha_xinhai_modifier
+        }
+        save_scope_as = xinhai_char  # 保存但不清理
+    }
 }
 
 scope:xinhai_char = {
@@ -159,10 +169,20 @@ clear_saved_scope = existing_char
 
 ```paradox
 # 场景2: 传递给Event使用 (推荐模式)
-random_in_global_list = {
-    variable = gacha_obtained_characters
-    limit = { has_trait = gacha_xinhai_origin_trait }
-    save_scope_as = xinhai_char
+random_country = {
+    limit = {
+        any_character = {
+            is_alive = yes
+            has_character_modifier = gacha_xinhai_modifier
+        }
+    }
+    random_character = {
+        limit = {
+            is_alive = yes
+            has_character_modifier = gacha_xinhai_modifier
+        }
+        save_scope_as = xinhai_char
+    }
 }
 
 scope:xinhai_char = {

@@ -59,19 +59,20 @@ on_war_declared = {
 # 宣战事件分发器
 # ======================================================
 gacha_on_war_declared_dispatcher_effect = {
-    # 遍历全局角色列表中的每一个角色
-    every_in_global_list = {
-        variable = gacha_obtained_characters
-        
-        # 将当前遍历到的角色保存为 'story_character'
+    # 遍历本国角色（按 modifier 过滤 gacha 角色；避免 Character 全局列表）
+    every_character = {
+        limit = {
+            is_alive = yes
+            has_character_modifier = gacha_core_modifier
+        }
+
         save_scope_as = story_character
 
         # 在该角色身上执行她的专属响应逻辑
-        # 引擎会自动根据角色的特质，执行匹配的那个 if 分支
         scope:story_character = {
             # --- 心海的响应 ---
             if = {
-                limit = { has_trait = gacha_xinhai_origin_trait }
+                limit = { has_character_modifier = gacha_xinhai_modifier }
                 
                 # 调用心海的专属战争事件
                 # 使用 root.root 来确保作用域回到最开始的国家
@@ -87,6 +88,8 @@ gacha_on_war_declared_dispatcher_effect = {
             #     }
             # }
         }
+
+        clear_saved_scope = story_character
     }
 }
 ```

@@ -2,54 +2,259 @@
 # GACHA SYSTEM: COMMON EFFECTS LIBRARY
 # 抽卡系统核心逻辑库（仅包含通用内核，不含角色特异逻辑）
 # ==============================================================================
-
 # ------------------------------------------------------------------------------
 # [V3] 状态卫兵 (Gatekeeper)
 # 作用：懒加载初始化所有抽卡相关的持久变量
 # 要求：在 Country Scope 下调用
 # ------------------------------------------------------------------------------
 gacha_ensure_state_initialized = {
-    # --- 计数器 (_count) ---
-    if = { limit = { NOT = { has_variable = gacha_total_rolls_count } }  set_variable = { name = gacha_total_rolls_count value = 0 } }
-    if = { limit = { NOT = { has_variable = gacha_pity_5star_count } }   set_variable = { name = gacha_pity_5star_count value = 0 } }
-    if = { limit = { NOT = { has_variable = gacha_pity_4star_count } }   set_variable = { name = gacha_pity_4star_count value = 0 } }
-
-    # --- 结果统计 (_count) ---
-    if = { limit = { NOT = { has_variable = gacha_std5_result_count } }  set_variable = { name = gacha_std5_result_count value = 0 } }
-    if = { limit = { NOT = { has_variable = gacha_4star_result_count } } set_variable = { name = gacha_4star_result_count value = 0 } }
-
-    # --- 状态旗标 (_bool) ---
-    if = { limit = { NOT = { has_variable = gacha_is_guaranteed_bool } }  set_variable = { name = gacha_is_guaranteed_bool value = 0 } }
-    if = { limit = { NOT = { has_variable = gacha_block_pity_met_bool } } set_variable = { name = gacha_block_pity_met_bool value = 0 } }
-    if = { limit = { NOT = { has_variable = gacha_is_suppress_events_bool } } set_variable = { name = gacha_is_suppress_events_bool value = 0 } }
-
-    # --- 轮换索引 (_idx) ---
-    if = { limit = { NOT = { has_global_variable = gacha_current_up_idx } } set_global_variable = { name = gacha_current_up_idx value = 0 } } # 默认 0 (心海)
-    
-    # --- 系统开关 (_bool) ---
-    if = { limit = { NOT = { has_global_variable = gacha_is_enabled } }     set_global_variable = { name = gacha_is_enabled value = 1 } } # 默认开启
-
-    # --- 熵资源 (_amt) ---
-    # --- 熵资源 (_amt) ---
-    if = { 
-        limit = { NOT = { has_variable = gacha_entropy_gold_amt } }   
-        # [V3 Fix] 使用 random_list 初始化熵，破除开局定数组
-        # 选取 7 个数值，满足：
-        # 1. 在 0-10000 间均匀分布 (影响 50/50 初始值)
-        # 2. 对 7 取模覆盖 0-6 (影响常驻首抽)
-        random_list = {
-            10 = { set_variable = { name = gacha_entropy_gold_amt value = 1428 } } # Mod 7 = 0
-            10 = { set_variable = { name = gacha_entropy_gold_amt value = 2857 } } # Mod 7 = 1
-            10 = { set_variable = { name = gacha_entropy_gold_amt value = 4286 } } # Mod 7 = 2
-            10 = { set_variable = { name = gacha_entropy_gold_amt value = 5716 } } # Mod 7 = 3 (Adjusted)
-            10 = { set_variable = { name = gacha_entropy_gold_amt value = 7144 } } # Mod 7 = 4
-            10 = { set_variable = { name = gacha_entropy_gold_amt value = 8573 } } # Mod 7 = 5
-            10 = { set_variable = { name = gacha_entropy_gold_amt value = 9995 } } # Mod 7 = 6
-        }
+  # --- 计数器 (_count) ---
+  if = {
+    limit = {
+      NOT = {
+        has_variable = gacha_total_rolls_count
+      }
     }
+    set_variable = {
+      name = gacha_total_rolls_count
+      value = 0
+    }
+  }
+  if = {
+    limit = {
+      NOT = {
+        has_variable = gacha_pity_5star_count
+      }
+    }
+    set_variable = {
+      name = gacha_pity_5star_count
+      value = 0
+    }
+  }
+  if = {
+    limit = {
+      NOT = {
+        has_variable = gacha_pity_4star_count
+      }
+    }
+    set_variable = {
+      name = gacha_pity_4star_count
+      value = 0
+    }
+  }
+  # --- 结果统计 (_count) ---
+  if = {
+    limit = {
+      NOT = {
+        has_variable = gacha_std5_result_count
+      }
+    }
+    set_variable = {
+      name = gacha_std5_result_count
+      value = 0
+    }
+  }
+  if = {
+    limit = {
+      NOT = {
+        has_variable = gacha_4star_result_count
+      }
+    }
+    set_variable = {
+      name = gacha_4star_result_count
+      value = 0
+    }
+  }
+  # --- 状态旗标 (_bool) ---
+  if = {
+    limit = {
+      NOT = {
+        has_variable = gacha_is_guaranteed_bool
+      }
+    }
+    set_variable = {
+      name = gacha_is_guaranteed_bool
+      value = 0
+    }
+  }
+  if = {
+    limit = {
+      NOT = {
+        has_variable = gacha_block_pity_met_bool
+      }
+    }
+    set_variable = {
+      name = gacha_block_pity_met_bool
+      value = 0
+    }
+  }
+  if = {
+    limit = {
+      NOT = {
+        has_variable = gacha_is_suppress_events_bool
+      }
+    }
+    set_variable = {
+      name = gacha_is_suppress_events_bool
+      value = 0
+    }
+  }
+  # --- 轮换索引 (_idx) ---
+  if = {
+    limit = {
+      NOT = {
+        has_global_variable = gacha_current_up_idx
+      }
+    }
+    set_global_variable = {
+      name = gacha_current_up_idx
+      value = 0
+    }
+  }	# 默认 0 (心海)
+  # --- 系统开关 (_bool) ---
+  if = {
+    limit = {
+      NOT = {
+        has_global_variable = gacha_is_enabled
+      }
+    }
+    set_global_variable = {
+      name = gacha_is_enabled
+      value = 1
+    }
+  }	# 默认开启
+  # --- 熵资源 (_amt) ---
+  if = {
+    limit = {
+      NOT = {
+        has_variable = gacha_entropy_gold_amt
+      }
+    }
+    # [V3 Fix] 使用 random_list 初始化熵，破除开局定数组
+    # 选取 7 个数值，满足：
+    # 1. 在 0-10000 间均匀分布 (影响 50/50 初始值)
+    # 2. 对 7 取模覆盖 0-6 (影响常驻首抽)
+    random_list = {
+      10 = {
+        set_variable = {
+          name = gacha_entropy_gold_amt
+          value = 1428
+        }
+      }			# Mod 7 = 0
+      10 = {
+        set_variable = {
+          name = gacha_entropy_gold_amt
+          value = 2857
+        }
+      }			# Mod 7 = 1
+      10 = {
+        set_variable = {
+          name = gacha_entropy_gold_amt
+          value = 4286
+        }
+      }			# Mod 7 = 2
+      10 = {
+        set_variable = {
+          name = gacha_entropy_gold_amt
+          value = 5716
+        }
+      }			# Mod 7 = 3 (Adjusted)
+      10 = {
+        set_variable = {
+          name = gacha_entropy_gold_amt
+          value = 7144
+        }
+      }			# Mod 7 = 4
+      10 = {
+        set_variable = {
+          name = gacha_entropy_gold_amt
+          value = 8573
+        }
+      }			# Mod 7 = 5
+      10 = {
+        set_variable = {
+          name = gacha_entropy_gold_amt
+          value = 9995
+        }
+      }			# Mod 7 = 6
+    }
+  }
+  # --- 其他持久资源 ---
+  if = {
+    limit = {
+      NOT = {
+        has_variable = gacha_starlight
+      }
+    }
+    set_variable = {
+      name = gacha_starlight
+      value = 0
+    }
+  }
+}
 
-    # --- 其他持久资源 ---
-    if = { limit = { NOT = { has_variable = gacha_starlight } } set_variable = { name = gacha_starlight value = 0 } }
+# ------------------------------------------------------------------------------
+# Maintenance: 清理抽卡系统临时 Saved Scopes
+# 背景：崩溃/强退/旧逻辑可能残留 saved scope，导致 UI/事件捕获到错误对象。
+# ------------------------------------------------------------------------------
+gacha_clear_gacha_saved_scopes = {
+  clear_saved_scope = gacha_last_pulled_char
+  clear_saved_scope = gacha_c3_target_char
+}
+
+# ------------------------------------------------------------------------------
+# Maintenance: 角色死亡时移除“已召唤”旗标
+# 用法：在 Character scope 下调用（通常为 on_character_death 的 scope:target）。
+# ------------------------------------------------------------------------------
+gacha_remove_summoned_flag_for_character = {
+  if = {
+    limit = {
+      has_character_modifier = gacha_xinhai_modifier
+    }
+    remove_global_variable = gacha_xinhai_is_summoned
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_fischl_modifier
+    }
+    remove_global_variable = gacha_fischl_is_summoned
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_keqing_modifier
+    }
+    remove_global_variable = gacha_keqing_is_summoned
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_raiden_modifier
+    }
+    remove_global_variable = gacha_raiden_is_summoned
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_furina_modifier
+    }
+    remove_global_variable = gacha_furina_is_summoned
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_hutao_modifier
+    }
+    remove_global_variable = gacha_hutao_is_summoned
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_klee_modifier
+    }
+    remove_global_variable = gacha_klee_is_summoned
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_nahida_modifier
+    }
+    remove_global_variable = gacha_nahida_is_summoned
+  }
 }
 
 # ------------------------------------------------------------------------------
@@ -58,137 +263,134 @@ gacha_ensure_state_initialized = {
 # 接收参数：$who$ (角色代号字符串，如 xinhai)
 # ------------------------------------------------------------------------------
 gacha_register_new_character = {
-    # === A. 挂载修正 (Modifiers) ===
-    # 核心标记 (永久)
-    add_character_modifier = {
-        modifier = gacha_core_modifier
-        years    = -1
-        mode     = add_and_extend
+  # === A. 挂载修正 (Modifiers) ===
+  # 核心标记 (永久)
+  add_character_modifier = {
+    modifier = gacha_core_modifier
+    years = -1
+    mode = add_and_extend
+  }
+  # 角色专属 Buff (永久)
+  add_character_modifier = {
+    modifier = gacha_$who$_modifier
+    years = -1
+    mode = add_and_extend
+  }
+  # 禁止结婚逻辑 (永久)
+  add_character_modifier = {
+    modifier = block_marriage
+    years = -1
+    mode = add_and_extend
+  }
+  # === B. 挂载特质 (Traits) ===
+  # 用于触发 2D 立绘显示
+  remove_traits_of_category = ruler
+  add_trait = trait:gacha_core_trait
+  add_trait = trait:gacha_$who$_origin_trait
+  # === C. 系统管理 (System) ===
+  # 统一文化与宗教，以自定义文化/宗教标识天外之人
+  change_character_culture = culture:gacha_culture
+  change_character_religion = religion:sanjiao
+  # 新角色首次抵达：在首都添加少量天外之人 Pop (约一人)
+  root = {
+    random_owned_location = {
+      limit = {
+        is_capital = yes
+      }
+      add_pop = {
+        type = pop_type:gacha
+        size = 0.001
+        culture = culture:gacha_culture
+        religion = religion:sanjiao
+      }
     }
-
-    # 角色专属 Buff (永久)
-    add_character_modifier = {
-        modifier = gacha_$who$_modifier
-        years    = -1
-        mode     = add_and_extend
-    }
-
-    # 禁止结婚逻辑 (永久)
-    add_character_modifier = {
-        modifier = block_marriage
-        years    = -1
-        mode     = add_and_extend
-    }
-
-    # === B. 挂载特质 (Traits) ===
-    # 用于触发 2D 立绘显示
-    remove_traits_of_category = ruler
-    add_trait = trait:gacha_core_trait
-    add_trait = trait:gacha_$who$_origin_trait
-    
-    # === C. 系统管理 (System) ===
-    # 统一文化与宗教，以自定义文化/宗教标识天外之人
-    change_character_culture = culture:gacha_culture
-    change_character_religion = religion:sanjiao
-
-    # 新角色首次抵达：在首都添加少量天外之人 Pop (约一人)
-    root = {
-        random_owned_location = {
-            limit = { is_capital = yes }
-            add_pop = {
-                type = pop_type:gacha
-                size = 0.001
-                culture = culture:gacha_culture
-                religion = religion:sanjiao
-            }
-        }
-    }
-
-    # 加入全局管理列表，方便后续遍历查找
-    add_to_global_variable_list = {
-        name   = gacha_obtained_characters
-        target = this
-    }
-
-    # 初始化命之座变量为 0
-    set_variable = {
-        name  = gacha_constellation_lvl
-        value = 0
-    }
-
-    # 初始化好感度变量为 0（角色本地变量）
-    set_variable = {
-        name  = gacha_affinity_level
-        value = 0
-    }
-
-    # 刷新数值 (调用命座计算脚本)
-    gacha_apply_constellation_stats_effect = { who = $who$ }
-
-    # === D. 身份确立 (Citizenship) & Scope 绑定 ===
-    # 关键步骤：在名字和特质确定后，移动到国家
-    move_country = root
-
-    # [标配] 统一身份：天外之人阶层 + 固定宗族（用于未来七国王权/王室联姻等系统）
-    gacha_standardize_character_identity = { who = $who$ }
-
-    # # 统一把抽卡角色归入自定义阶层
-    # gacha_assign_to_gacha_estate = yes
-
-    # 【V3 契约】保存当前角色 Scope，供 UI 事件使用
-    # 注意：不要在角色 wrapper 中清理该 Scope，由展示事件的 after 块负责清理
-    save_scope_as = gacha_last_pulled_char
+  }
+  # [CTD Fix] 不再把 Character 存进 global_variable_list（改为按 modifier 全局搜索）
+  # 初始化命之座变量为 0
+  set_variable = {
+    name = gacha_constellation_lvl
+    value = 0
+  }
+  # 初始化好感度变量为 0（角色本地变量）
+  set_variable = {
+    name = gacha_affinity_level
+    value = 0
+  }
+  # 刷新数值 (调用命座计算脚本)
+  gacha_apply_constellation_stats_effect = {
+    who = $who$
+  }
+  # === D. 身份确立 (Citizenship) & Scope 绑定 ===
+  # 关键步骤：在名字和特质确定后，移动到国家
+  move_country = root
+  # [标配] 统一身份：天外之人阶层 + 固定宗族（用于未来七国王权/王室联姻等系统）
+  gacha_standardize_character_identity = {
+    who = $who$
+  }
+  # # 统一把抽卡角色归入自定义阶层
+  # gacha_assign_to_gacha_estate = yes
+  # 【V3 契约】保存当前角色 Scope，供 UI 事件使用
+  # 注意：不要在角色 wrapper 中清理该 Scope，由展示事件的 after 块负责清理
+  save_scope_as = gacha_last_pulled_char
 }
 
-# ------------------------------------------------------------------------------ 
+# ------------------------------------------------------------------------------
 # Helper: 将角色归入自定义阶层
 # 作用：避免角色落在默认贵族等阶层，保障 pop/estate 映射正确
-# ------------------------------------------------------------------------------ 
+# ------------------------------------------------------------------------------
 gacha_assign_to_gacha_estate = {
-    if = {
-        limit = {
-            exists = this
-            is_ruler = no # 七国君主等不应被强制归回自定义阶层
-        }
-        # 确保天外之人身份信息完备
-        change_character_culture = culture:gacha_culture
-        change_character_religion = religion:sanjiao
-        change_character_estate = estate_type:gacha_estate
+  if = {
+    limit = {
+      exists = this
+      is_alive = yes
+      is_ruler = no			# 七国君主等不应被强制归回自定义阶层
     }
+    # 确保天外之人身份信息完备
+    change_character_culture = culture:gacha_culture
+    change_character_religion = religion:sanjiao
+    change_character_estate = estate_type:gacha_estate
+  }
 }
 
-# ------------------------------------------------------------------------------ 
+# ------------------------------------------------------------------------------
 # Helper: 统一“抽卡角色”身份（阶层 + 宗族）
 # 说明：
 # - 阶层：默认归入 gacha_estate；若已是统治者则不改阶层（避免覆盖 crown_estate）。
 # - 宗族：为每个角色建立固定宗族（gacha_$who$_dynasty），用于王权/联姻等需要“统治宗族”的系统。
-# ------------------------------------------------------------------------------ 
+# ------------------------------------------------------------------------------
 gacha_standardize_character_identity = {
-    if = {
-        limit = { exists = this }
-
-        # 文化/宗教统一（兜底）
-        change_character_culture = culture:gacha_culture
-        change_character_religion = religion:sanjiao
-
-        # 宗族兜底：没有宗族就分配一个固定宗族
-        if = {
-            limit = { has_dynasty = no }
-            root = {
-                if = {
-                    limit = { NOT = { dynasty_exists = gacha_$who$_dynasty } }
-                    create_named_dynasty = gacha_$who$_dynasty
-                }
-            }
-            change_dynasty = dynasty:gacha_$who$_dynasty
-        }
-
-        # 阶层兜底：避免落到默认贵族等阶层（放在最后，避免被其他逻辑覆盖）
-        if = {
-            limit = { is_ruler = no }
-            change_character_estate = estate_type:gacha_estate
-        }
+  if = {
+    limit = {
+      exists = this
     }
+    # 文化/宗教统一（兜底）
+    change_character_culture = culture:gacha_culture
+    change_character_religion = religion:sanjiao
+    # 宗族兜底：没有宗族就分配一个固定宗族
+    if = {
+      limit = {
+        has_dynasty = no
+      }
+      root = {
+        if = {
+          limit = {
+            NOT = {
+              dynasty_exists = gacha_$who$_dynasty
+            }
+          }
+          create_named_dynasty = gacha_$who$_dynasty
+        }
+      }
+      change_dynasty = dynasty:gacha_$who$_dynasty
+    }
+    # 阶层兜底：避免落到默认贵族等阶层（放在最后，避免被其他逻辑覆盖）
+    if = {
+      limit = {
+        is_ruler = no
+      }
+      change_character_estate = estate_type:gacha_estate
+    }
+  }
 }
 
 # ------------------------------------------------------------------------------
