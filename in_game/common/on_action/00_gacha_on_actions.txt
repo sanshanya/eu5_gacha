@@ -95,5 +95,14 @@ gacha_on_game_start_initialize_action = {
             remove_variable = gacha_event_lock
             remove_variable = gacha_liyue_plan_lock
         }
+
+        # 迁移/兜底：禁止 AI 持有“神之眷属”（旧存档/其他脚本可能强行 make_subject_of）
+        every_country = {
+            limit = { is_ai = yes }
+            every_subject = {
+                limit = { is_subject_type = gacha_archon_vassal }
+                make_subject_of = { target = prev type = subject_type:vassal }
+            }
+        }
     }
 }

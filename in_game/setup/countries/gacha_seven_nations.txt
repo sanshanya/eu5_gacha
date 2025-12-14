@@ -4,5 +4,6 @@
 	culture_definition = yuehai_culture
 	religion_definition = sanjiao
 	description_category = administrative
-	is_historic = no
+	# Not present at game start; spawned by script (Keqing → Liyue Plan → Cabinet Action).
+	is_historic = yes
 }

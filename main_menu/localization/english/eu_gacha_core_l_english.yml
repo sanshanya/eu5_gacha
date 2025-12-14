@@ -191,6 +191,16 @@
   # Subject Type
   gacha_archon_vassal: "Divine Dominion"
   gacha_archon_vassal_desc: "A nation blessed by the power of the Seven Archons, ruled by those who bear a Vision. As loyal allies of the suzerain, they shall follow in war and peace."
+  # Diplomacy UI: cancel subject relation (otherwise shows raw localization keys)
+  CANCEL_gacha_archon_vassal_TOOLTIP_HEADER: "Cancel the $gacha_archon_vassal$ of [TARGET_COUNTRY.GetName]"
+  CANCEL_gacha_archon_vassal_TOOLTIP_HEADER_NO_TARGET: "Cancel the $gacha_archon_vassal$ of a [country|e]"
+  CANCEL_gacha_archon_vassalTITLE: "Cancel $gacha_archon_vassal$ Status"
+  CANCEL_gacha_archon_vassal_FLAVOR: "Choose a [country|e] to cancel their [ShowSubjectTypeName('gacha_archon_vassal')] status"
+  CANCEL_gacha_archon_vassal_CATEGORY: "CATEGORY_SUBJECT_ACTIONS"
+  CANCEL_gacha_archon_vassal_NEWDESC: "Do we wish to end $gacha_archon_vassal$ status of [COUNTRY.GetName]?"
+  CANCEL_gacha_archon_vassal_DESC: "End $gacha_archon_vassal$ status."
+  CANCEL_gacha_archon_vassal_REQDESC: "$MONARCHTITLE$"
+  CANCEL_gacha_archon_vassal_NOT_IN_TRUCE: "$not_possible_to_break_subject_in_truce$"
 
   # Cabinet Actions
   gacha_create_liyue_nation: "Rebuild Liyue"

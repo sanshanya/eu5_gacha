@@ -51,6 +51,7 @@ gacha_create_liyue_nation = {
 
     # 启动条件（与 potential 一致）
     allow = {
+        is_ai = no
         has_variable = gacha_liyue_plan_unlocked
         any_country = {
             any_character = {

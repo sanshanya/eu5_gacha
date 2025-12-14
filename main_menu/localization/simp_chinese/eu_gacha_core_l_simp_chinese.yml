@@ -15,7 +15,7 @@
   # ============================================================
 
   # === 交互按钮 ===
-  gacha_events_interaction: "祭典：相遇之缘"
+  gacha_events_interaction: "祭典:相遇之缘"
   gacha_events_interaction_desc: "[actor.GetName]将设立祭坛，以此世的财帛，感召彼方星海的英灵与智者。"
 
   # === 核心修饰符 (Core Modifiers) ===
@@ -39,11 +39,11 @@
   STATIC_MODIFIER_DESC_gacha_former_ruler_modifier: "暂让王位、退居幕后，保有内阁与将领资格，以另一种方式守护国家。"
 
   # === 祈愿主菜单 (.1) ===
-  gacha_events.1.title: "祈愿：异世相遇"
+  gacha_events.1.title: "祈愿:异世相遇"
   gacha_events.1.desc_guaranteed: "当前祈愿已受祝福，下次获得的必定是当期角色！\n投入资源，祈求命运的回应吧。"
   gacha_events.1.desc_not_guaranteed: "投入资源，祈求命运的回应吧。"
-  gacha_events.1.a: "奉纳金币 (祈愿) ： @gold!#color_yellow [ROOT.ScriptValue('gacha_single_pull_cost_sv')|0]#!"
-  gacha_events.1.a10: "盛大祈愿 (十连) ： @gold!#color_yellow [ROOT.ScriptValue('gacha_ten_pull_cost_sv')|0]#!"
+  gacha_events.1.a: "奉纳金币 (祈愿) : @gold!#color_yellow [ROOT.ScriptValue('gacha_single_pull_cost_sv')|0]#!"
+  gacha_events.1.a10: "盛大祈愿 (十连) : @gold!#color_yellow [ROOT.ScriptValue('gacha_ten_pull_cost_sv')|0]#!"
   gacha_events.1.starlight_exchange: "星辉兑换(需要#color_yellow [ROOT.ScriptValue('gacha_starlight_exchange_cost_sv')|0]#!星辉)"
   gacha_free_first_roll: "免费首抽(新手福利)"
   gacha_events.1.b: "暂且观望"
@@ -51,35 +51,35 @@
   gacha_not_enough_gold_tt: "国库空虚，无法筹措祈愿所需的祭品。"
 
   # === 当期UP角色显示 ===
-  gacha_up_name_0: "\n#bold 当期UP：#!#color_yellow 珊瑚宫心海#!"
-  gacha_up_name_1: "\n#bold 当期UP：#!#color_yellow 菲谢尔#!"
-  gacha_up_name_2: "\n#bold 当期UP：#!#color_yellow 刻晴#!"
-  gacha_up_name_3: "\n#bold 当期UP：#!#color_yellow 雷电将军#!"
-  gacha_up_name_4: "\n#bold 当期UP：#!#color_yellow 芙宁娜#!"
-  gacha_up_name_5: "\n#bold 当期UP：#!#color_yellow 胡桃#!"
-  gacha_up_name_6: "\n#bold 当期UP：#!#color_yellow 可莉#!"
-  gacha_up_name_7: "\n#bold 当期UP：#!#color_yellow 纳西妲#!"
-  gacha_up_name_unknown: "\n#bold 当期UP：#!未知"
+  gacha_up_name_0: "\n#bold 当期UP:#!#color_yellow 珊瑚宫心海#!"
+  gacha_up_name_1: "\n#bold 当期UP:#!#color_yellow 菲谢尔#!"
+  gacha_up_name_2: "\n#bold 当期UP:#!#color_yellow 刻晴#!"
+  gacha_up_name_3: "\n#bold 当期UP:#!#color_yellow 雷电将军#!"
+  gacha_up_name_4: "\n#bold 当期UP:#!#color_yellow 芙宁娜#!"
+  gacha_up_name_5: "\n#bold 当期UP:#!#color_yellow 胡桃#!"
+  gacha_up_name_6: "\n#bold 当期UP:#!#color_yellow 可莉#!"
+  gacha_up_name_7: "\n#bold 当期UP:#!#color_yellow 纳西妲#!"
+  gacha_up_name_unknown: "\n#bold 当期UP:#!未知"
 
-  # === 结果：凡铁/蓝光 (.2) ===
-  gacha_events.2.title: "祈愿结果：寂静星空"
+  # === 结果:凡铁/蓝光 (.2) ===
+  gacha_events.2.title: "祈愿结果:寂静星空"
   gacha_events.2.desc: "群星缄默，星辉黯淡，似乎并无英灵回应今夜的呼唤，唯有祭坛上冷风掠过。\n\n除了徒劳的寂静，什么也没有留下。"
   gacha_events.2.a: "记下此兆"
 
-  # === 结果：四星奖励 (.20) ===
-  gacha_events.20.title: "祈愿结果：星辰的馈赠"
-  gacha_events.20.desc_gold: "星光汇成一袋闪亮的金币，或许可以再次诱引命运。\n\n获得：@gold!#color_yellow [ROOT.ScriptValue('gacha_reward_gold_4star_sv')|0]#!"
-  gacha_events.20.desc_prestige: "星辉化作一纸诏令，你的名讳传遍诸国。\n\n获得：@prestige!#color_yellow [ROOT.ScriptValue('gacha_reward_prestige_4star_sv')|0]#!"
-  gacha_events.20.desc_legitimacy: "星光在宫廷回响，巩固民众对王座的信任。\n\n获得：@legitimacy!#color_yellow [ROOT.ScriptValue('gacha_reward_legitimacy_4star_sv')|0]#!"
-  gacha_events.20.desc_stability: "星光照耀田野，国土吐纳着安定的呼吸。\n\n获得：@stability!#color_yellow [ROOT.ScriptValue('gacha_reward_stability_4star_sv')|0]#!"
+  # === 结果:四星奖励 (.20) ===
+  gacha_events.20.title: "祈愿结果:星辰的馈赠"
+  gacha_events.20.desc_gold: "星光汇成一袋闪亮的金币，或许可以再次诱引命运。\n\n获得:@gold!#color_yellow [ROOT.ScriptValue('gacha_reward_gold_4star_sv')|0]#!"
+  gacha_events.20.desc_prestige: "星辉化作一纸诏令，你的名讳传遍诸国。\n\n获得:@prestige!#color_yellow [ROOT.ScriptValue('gacha_reward_prestige_4star_sv')|0]#!"
+  gacha_events.20.desc_legitimacy: "星光在宫廷回响，巩固民众对王座的信任。\n\n获得:@legitimacy!#color_yellow [ROOT.ScriptValue('gacha_reward_legitimacy_4star_sv')|0]#!"
+  gacha_events.20.desc_stability: "星光照耀田野，国土吐纳着安定的呼吸。\n\n获得:@stability!#color_yellow [ROOT.ScriptValue('gacha_reward_stability_4star_sv')|0]#!"
   gacha_events.20.a: "收下恩赐"
 
-  # === 结果：小保底/歪了 (.3) ===
-  gacha_events.3.title: "祈愿结果：小保底"
+  # === 结果:小保底/歪了 (.3) ===
+  gacha_events.3.title: "祈愿结果:小保底"
   gacha_events.3.desc: "金光乍现！但从星门中走出的并非你期盼的那位军师，而是来自稻妻的雷电将军。\n\n虽然失去了五五开的赌注，但获得常驻池五星角色也是不错的收获。下次祈愿将必定获得UP角色！"
   gacha_events.3.a: "既来之，则安之"
 
-  # === 结果：满命通用 (.4) ===
+  # === 结果:满命通用 (.4) ===
   gacha_events.4.title: "命星至臻"
   gacha_events.4.desc: "这位异界英雄的能力已臻化境。\n\n$gacha_text_reward_prestige_overflow$"
   gacha_events.4.a: "物尽其用"
@@ -88,22 +88,22 @@
   gacha_events.5.desc: "天空中划过一道耀眼的金色流星，整个祭坛都被神圣的光芒笼罩……\n\n这股气息，非比寻常！"
   gacha_events.5.a: "揭示命运！"
 
-  # === 结果：百连汇总 (.100) ===
-  gacha_events.100.title: "孤注一掷：星辰的回响"
-  gacha_events.100.desc: "百次祈愿已毕。祭坛上堆满了星辰的馈赠：\n\n#bold 五星角色#!：#color_yellow [ROOT.Var('gacha_batch_5star_count').GetValue|0]#! 位\n\n#bold 四星资源#!：#color_yellow [ROOT.Var('gacha_batch_4star_count').GetValue|0]#! 份\n   @gold!  +[ROOT.Var('gacha_batch_gold_count').GetValue|0]\n  @prestige! +[ROOT.Var('gacha_batch_prestige_count').GetValue|0]\n  @legitimacy! +[ROOT.Var('gacha_batch_legitimacy_count').GetValue|0]\n  @stability! +[ROOT.Var('gacha_batch_stability_count').GetValue|0]"
+  # === 结果:百连汇总 (.100) ===
+  gacha_events.100.title: "孤注一掷:星辰的回响"
+  gacha_events.100.desc: "百次祈愿已毕。祭坛上堆满了星辰的馈赠:\n\n#bold 五星角色#!:#color_yellow [ROOT.Var('gacha_batch_5star_count').GetValue|0]#! 位\n\n#bold 四星资源#!:#color_yellow [ROOT.Var('gacha_batch_4star_count').GetValue|0]#! 份\n   @gold!  +[ROOT.Var('gacha_batch_gold_count').GetValue|0]\n  @prestige! +[ROOT.Var('gacha_batch_prestige_count').GetValue|0]\n  @legitimacy! +[ROOT.Var('gacha_batch_legitimacy_count').GetValue|0]\n  @stability! +[ROOT.Var('gacha_batch_stability_count').GetValue|0]"
   gacha_events.100.a: "收下馈赠"
-  gacha_events.1.a100: "孤注一掷 (百连) ： @gold!#color_yellow [ROOT.ScriptValue('gacha_hundred_pull_cost_sv')|0]#!"
+  gacha_events.1.a100: "孤注一掷 (百连) : @gold!#color_yellow [ROOT.ScriptValue('gacha_hundred_pull_cost_sv')|0]#!"
 
   # === 其他结果 ===
   gacha_events.6.title: "意外之财"
-  gacha_events.6.desc: "虽然没有英灵回应，但你在祭坛角落发现了一些古代遗留的宝藏。\n\n获得：@gold!#color_yellow [ROOT.ScriptValue('gacha_reward_gold_windfall_sv')|0]#!"
+  gacha_events.6.desc: "虽然没有英灵回应，但你在祭坛角落发现了一些古代遗留的宝藏。\n\n获得:@gold!#color_yellow [ROOT.ScriptValue('gacha_reward_gold_windfall_sv')|0]#!"
   gacha_events.common.a: "收下恩赐"
 
   gacha_events.7.title: "名声大噪"
-  gacha_events.7.desc: "你的虔诚祈愿感动了围观的民众，你的声望得到了提升。\n\n获得：@prestige!#color_yellow [ROOT.ScriptValue('gacha_reward_prestige_fame_sv')|0]#!"
+  gacha_events.7.desc: "你的虔诚祈愿感动了围观的民众，你的声望得到了提升。\n\n获得:@prestige!#color_yellow [ROOT.ScriptValue('gacha_reward_prestige_fame_sv')|0]#!"
 
   gacha_events.8.title: "天命所归"
-  gacha_events.8.desc: "虽然没有召唤出异界之人，但这祥瑞之兆巩固了你的统治合法性。\n\n获得：@legitimacy!#color_yellow [ROOT.ScriptValue('gacha_reward_legitimacy_omen_sv')|0]#!"
+  gacha_events.8.desc: "虽然没有召唤出异界之人，但这祥瑞之兆巩固了你的统治合法性。\n\n获得:@legitimacy!#color_yellow [ROOT.ScriptValue('gacha_reward_legitimacy_omen_sv')|0]#!"
 
   # ============================================================
   # === 通用修饰符 ===
@@ -171,7 +171,7 @@
   gacha_group: "祈愿文化组"
   gacha_group_desc: "祈愿角色的专属文化分组。"
   gacha_select_title: "选择祈愿目标"
-  gacha_delegate_regency_interaction_desc: "委托摄政：暂时让祈愿角色代行政务。"
+  gacha_delegate_regency_interaction_desc: "委托摄政:暂时让祈愿角色代行政务。"
   gacha_delegate_regency_interaction_past: "曾委托摄政"
   gacha_delegate_regency_interaction_act: "委托摄政"
   gacha_delegate_regency_interaction_act_past: "已结束的摄政委托"
@@ -202,6 +202,16 @@
   # 附庸类型
   gacha_archon_vassal: "神之眷属"
   gacha_archon_vassal_desc: "由七神之力眷顾的国度，其统治者拥有神之眼的祝福。作为宗主国的忠诚盟友，他们将在战争与和平中始终追随。"
+  # 外交界面:终止附庸关系（不写会显示为代码）
+  CANCEL_gacha_archon_vassal_TOOLTIP_HEADER: "取消[TARGET_COUNTRY.GetName]的$gacha_archon_vassal$地位"
+  CANCEL_gacha_archon_vassal_TOOLTIP_HEADER_NO_TARGET: "取消一个[country|e]的$gacha_archon_vassal$地位"
+  CANCEL_gacha_archon_vassalTITLE: "取消$gacha_archon_vassal$地位"
+  CANCEL_gacha_archon_vassal_FLAVOR: "选择一个[country|e]以取消其[ShowSubjectTypeName('gacha_archon_vassal')]地位"
+  CANCEL_gacha_archon_vassal_CATEGORY: "CATEGORY_SUBJECT_ACTIONS"
+  CANCEL_gacha_archon_vassal_NEWDESC: "我们是否希望终止[COUNTRY.GetName]的$gacha_archon_vassal$地位？"
+  CANCEL_gacha_archon_vassal_DESC: "终止$gacha_archon_vassal$地位。"
+  CANCEL_gacha_archon_vassal_REQDESC: "$MONARCHTITLE$"
+  CANCEL_gacha_archon_vassal_NOT_IN_TRUCE: "$not_possible_to_break_subject_in_truce$"
 
   # 内阁行动
   gacha_create_liyue_nation: "再造璃月"
@@ -210,7 +220,7 @@
   gacha_create_liyue_nation_action: "在此地再造璃月"
 
   # 璃月 - 国家修正
-  STATIC_MODIFIER_NAME_gacha_liyue_foundation_boom_modifier: "璃月新生：千帆竞发"
+  STATIC_MODIFIER_NAME_gacha_liyue_foundation_boom_modifier: "璃月新生:千帆竞发"
   STATIC_MODIFIER_DESC_gacha_liyue_foundation_boom_modifier: "建国后的黄金十年，港口与商路被迅速重整，合约与财政体系高速运转，生产与建设全面起飞。"
   STATIC_MODIFIER_NAME_gacha_liyue_trade_hub_modifier: "璃月商港"
   STATIC_MODIFIER_DESC_gacha_liyue_trade_hub_modifier: "以契约为骨、以商贸为血的港口国家。长期的贸易繁荣与城市建设为璃月提供稳定增长。"
@@ -223,12 +233,12 @@
   gacha_nation_events.1.a: "愿岩神庇佑"
 
   gacha_nation_events.10.title: "璃月计划"
-  gacha_nation_events.10.desc: "#ZG 新年夜。窗外烟火正盛。\n刻晴背对灯火，将图纸铺满案头。她没有看烟花。\n刻晴指尖的紫电照亮了图纸上密密麻麻的批注。#!\n刻晴：「陛下，璃月的理想并非神明赐予，而是由人亲手缔造。」\n#ZG 她顿了顿，目光掠过窗外升空的孔明灯，和霄灯很像。#!\n刻晴：「若您愿意兑现那句『再造璃月』的承诺，我将以玉衡之名接手港口，商路、矿脉、城建、契约，皆会在最短时间内重整。」\n#ZG 你望向少女的脸庞，由于祈愿之力，少女的外貌与第一次见面时无异。\n眼神却不复当初稚嫩...\n倒映着窗外那些越飘越远的光点。#!"
+  gacha_nation_events.10.desc: "#ZG 新年夜。窗外烟火正盛。\n刻晴背对灯火，将图纸铺满案头。她没有看烟花。\n刻晴指尖的紫电照亮了图纸上密密麻麻的批注。#!\n刻晴:「陛下，璃月的理想并非神明赐予，而是由人亲手缔造。」\n#ZG 她顿了顿，目光掠过窗外升空的孔明灯，和霄灯很像。#!\n刻晴:「若您愿意兑现那句『再造璃月』的承诺，我将以玉衡之名接手港口，商路、矿脉、城建、契约，皆会在最短时间内重整。」\n#ZG 你望向少女的脸庞，由于祈愿之力，少女的外貌与第一次见面时无异。\n眼神却不复当初稚嫩...\n倒映着窗外那些越飘越远的光点。#!"
   gacha_nation_events.10.a: "愿新璃月，千帆竞发。"
   gacha_nation_events.10.b: "再议。"
 
-  gacha_nation_events.11.desc: "刻晴：「……定不负君所托。」\n#ZG 刻晴将璃月港蓝图铺开在桌面邀请你一同查看。#!\n\n#bold 解锁内阁行动：#!#bold;color_yellow $gacha_create_liyue_nation$#!"
-  gacha_nation_events.12.desc: "#ZG 刻晴点点头，将图纸收起。#!\n刻晴：「是我操之过急了。此事不论早晚，等您决定，我会把方案保持在可启动状态。」\n#ZG 她转身看向窗外的烟火，没有再说话。#!"
+  gacha_nation_events.11.desc: "刻晴:「……定不负君所托。」\n#ZG 刻晴将璃月港蓝图铺开在桌面邀请你一同查看。#!\n\n#bold 解锁内阁行动:#!#bold;color_yellow $gacha_create_liyue_nation$#!"
+  gacha_nation_events.12.desc: "#ZG 刻晴点点头，将图纸收起。#!\n刻晴:「是我操之过急了。此事不论早晚，等您决定，我会把方案保持在可启动状态。」\n#ZG 她转身看向窗外的烟火，没有再说话。#!"
   gacha_nation_events.11.a: "这一天不会太远"
 
   # 国家名称（见 gacha_country_names_l_simp_chinese.yml）

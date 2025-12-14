@@ -7,6 +7,35 @@ gacha_archon_vassal = {
     subject_pays = subject_pays_vassal
     color = subject_vassal
     level = 3
+
+    # --------------------------------------------------------------------------
+    # Creation Restrictions
+    # 目标：该附庸类型只能由脚本（刻晴→璃月计划→内阁行动）创建，AI 不应在外交/和平提议中选择它
+    # 参考：base game `subject_types/uc_bey.txt`
+    # --------------------------------------------------------------------------
+    creation_visible = { always = no }
+    visible_through_diplomacy = { always = no }
+    enabled_through_diplomacy = { always = no }
+    visible_through_treaty = { always = no }
+    enabled_through_treaty = { always = no }
+    subject_creation_enabled = { always = no }
+    release_country_enabled = { always = no }
+
+    # --------------------------------------------------------------------------
+    # AI Safety Net (Defense-in-Depth)
+    # 说明：subject_type 的 enabled/visible 只影响 UI/和平提议/释放国家等入口，无法阻止脚本直接 make_subject_of。
+    # 因此增加兜底：若未来宗主国是 AI，则立即将该关系降级为普通附庸（vassal）。
+    # root = subject; scope:future_overlord = overlord
+    # --------------------------------------------------------------------------
+    on_enable = {
+        if = {
+            limit = {
+                exists = scope:future_overlord
+                scope:future_overlord = { is_ai = yes }
+            }
+            make_subject_of = { target = scope:future_overlord type = subject_type:vassal }
+        }
+    }
     
     # 附庸国获得的修正
     subject_modifier = {
@@ -22,11 +51,6 @@ gacha_archon_vassal = {
     # 制度传播
     institution_spread_to_subject = monthly_institution_spread_mild
     institution_spread_to_overlord = monthly_institution_spread_mild
-    
-    # 可见条件（不通过外交显示，只能通过特殊方式创建）
-    visible_through_diplomacy = {
-        always = no
-    }
     
     # 参与宗主国战争
     join_offensive_wars_always = {
