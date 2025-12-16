@@ -1,0 +1,60 @@
+﻿l_simp_chinese:
+  # ============================================================================
+  # 局势（Gacha）
+  # ============================================================================
+  gacha_liyue_reconstruction: "璃月筹建"
+  gacha_liyue_reconstruction_desc: "刻晴已将蓝图铺开。接下来，璃月能否在东莞落成，取决于我们在港口、商路与契约上的投入与准备。\n\n先启动内阁行动：$gacha_create_liyue_nation$，再执行局势行动：$gacha_liyue_build_market$（必做）。\n\n当东莞成为市场所在地后，筹建将以 5/月 的基础速度推进（受内阁效率影响），并可通过投入资金加速。进度达到 100 后将立刻建国。"
+
+  gacha_liyue_reconstruction_dongguan_tt: "东莞是再造璃月的筹备核心。"
+
+  gacha_liyue_reconstruction_overview_title: "解锁条件"
+  gacha_liyue_reconstruction_overview_desc: "○ 启动内阁行动：#color_yellow $gacha_create_liyue_nation$ #!\n○ 执行局势行动：#color_yellow $gacha_liyue_build_market$ #!\n○ 投入资金以加速筹建\n○ 进度达到 100 后将立刻建国"
+
+  gacha_liyue_reconstruction_status_title: "状态"
+  gacha_liyue_reconstruction_status_tt: "#bold 筹建进度:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_progress').GetValue|Y0]/100\n#bold 每月进度:#! +[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_monthly_progress').GetValue|Y1]\n#bold 已投入:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_investment').GetValue|Y0] 金"
+  gacha_tt_liyue_plan_unlocked: "已解锁「璃月计划」。"
+  gacha_tt_liyue_not_established_yet: "璃月尚未建立。"
+  gacha_tt_liyue_requires_keqing_alive: "刻晴仍在世。"
+  gacha_tt_liyue_not_already_completed: "璃月筹建尚未完成。"
+  gacha_tt_liyue_requires_cabinet_action_started: "需要先启动内阁行动「$gacha_create_liyue_nation$」。"
+  gacha_tt_liyue_situation_is_ours: "该局势属于我们。"
+  gacha_tt_dongguan_owned_by_us: "东莞归属于我们。"
+  gacha_tt_dongguan_not_independent_market_yet: "东莞尚未拥有独立市场（仍属于广州市场）。"
+  gacha_tt_dongguan_no_market_construction: "东莞未在建设市场。"
+  gacha_tt_dongguan_own_market_required: "东莞需建立独立市场（不能属于广州市场）。"
+  gacha_tt_liyue_build_market_effect: "我们开始在东莞建立独立市场。"
+  gacha_tt_liyue_invest_50_effect: "投入 50 金：筹建进度 +5。"
+  gacha_tt_liyue_invest_200_effect: "投入 200 金：筹建进度 +20。"
+  gacha_tt_liyue_invest_500_effect: "投入 500 金：筹建进度 +55。"
+
+  # 行动分组标题（exclusive_group = gacha_liyue_preparation_actions）
+  GACHA_LIYUE_PREPARATION_ACTIONS: "璃月筹备行动"
+
+  # ============================================================================
+  # 局势行动
+  # ============================================================================
+  gacha_liyue_build_market: "在东莞建立独立市场"
+  gacha_liyue_build_market_desc: "在东莞启动市场建设，使其成为独立的市场所在地（不再属于广州市场）。这是再造璃月的必要步骤。"
+  gacha_liyue_build_market_price: "建立独立市场（500 金）"
+
+  gacha_liyue_invest_50: "投入 50 金"
+  gacha_liyue_invest_50_desc: "以小额投入完善东莞港口与商路，推进筹建。"
+  gacha_liyue_invest_50_price: "璃月筹建投入（50 金）"
+
+  gacha_liyue_invest_200: "投入 200 金"
+  gacha_liyue_invest_200_desc: "以显著投入加速筹建进度。"
+  gacha_liyue_invest_200_price: "璃月筹建投入（200 金）"
+
+  gacha_liyue_invest_500: "投入 500 金"
+  gacha_liyue_invest_500_desc: "以大额投入快速推动筹建。"
+  gacha_liyue_invest_500_price: "璃月筹建投入（500 金）"
+
+  # 修正类型（价格）
+  MODIFIER_TYPE_NAME_gacha_liyue_build_market_price_cost_modifier: "建立独立市场花费"
+  MODIFIER_TYPE_DESC_gacha_liyue_build_market_price_cost_modifier: "用于调整「璃月筹建」中「在东莞建立独立市场」选项的花费。"
+  MODIFIER_TYPE_NAME_gacha_liyue_invest_50_price_cost_modifier: "璃月筹建花费（50 金）"
+  MODIFIER_TYPE_DESC_gacha_liyue_invest_50_price_cost_modifier: "用于调整「璃月筹建」中「投入 50 金」选项的花费。"
+  MODIFIER_TYPE_NAME_gacha_liyue_invest_200_price_cost_modifier: "璃月筹建花费（200 金）"
+  MODIFIER_TYPE_DESC_gacha_liyue_invest_200_price_cost_modifier: "用于调整「璃月筹建」中「投入 200 金」选项的花费。"
+  MODIFIER_TYPE_NAME_gacha_liyue_invest_500_price_cost_modifier: "璃月筹建花费（500 金）"
+  MODIFIER_TYPE_DESC_gacha_liyue_invest_500_price_cost_modifier: "用于调整「璃月筹建」中「投入 500 金」选项的花费。"

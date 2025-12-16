@@ -1,0 +1,60 @@
+﻿l_english:
+  # ============================================================================
+  # Situations (Gacha)
+  # ============================================================================
+  gacha_liyue_reconstruction: "Liyue Preparations"
+  gacha_liyue_reconstruction_desc: "With Keqing's blueprint laid out, the work now depends on our preparations in Dongguan.\n\nStart the Cabinet Action: $gacha_create_liyue_nation$ to begin, then take the Situation Action: $gacha_liyue_build_market$ (required).\n\nOnce Dongguan becomes a Market location, preparations advance at a base rate of 5 per month (scaled by Cabinet Efficiency), and you may invest gold to accelerate. When progress reaches 100, Liyue will be founded immediately."
+
+  gacha_liyue_reconstruction_dongguan_tt: "Dongguan is the staging ground for rebuilding Liyue."
+
+  gacha_liyue_reconstruction_overview_title: "Overview"
+  gacha_liyue_reconstruction_overview_desc: "Start the Cabinet Action: $gacha_create_liyue_nation$, then take the Situation Action: $gacha_liyue_build_market$ (required). Invest gold to accelerate. When progress reaches 100, Liyue will be founded immediately."
+
+  gacha_liyue_reconstruction_status_title: "Status"
+  gacha_liyue_reconstruction_status_tt: "#bold Progress:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_progress').GetValue|Y0]/100\\n#bold Monthly Progress:#! +[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_monthly_progress').GetValue|Y1]\\n#bold Invested:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_investment').GetValue|Y0] Gold"
+  gacha_tt_liyue_plan_unlocked: "The “Liyue Plan” is unlocked."
+  gacha_tt_liyue_not_established_yet: "Liyue has not been founded yet."
+  gacha_tt_liyue_requires_keqing_alive: "Keqing is alive."
+  gacha_tt_liyue_not_already_completed: "Liyue Preparations are not yet completed."
+  gacha_tt_liyue_requires_cabinet_action_started: "You must first start the Cabinet Action “$gacha_create_liyue_nation$”."
+  gacha_tt_liyue_situation_is_ours: "This situation is assigned to us."
+  gacha_tt_dongguan_owned_by_us: "Dongguan is owned by us."
+  gacha_tt_dongguan_not_independent_market_yet: "Dongguan does not yet have an independent Market (it still belongs to the Guangzhou Market)."
+  gacha_tt_dongguan_no_market_construction: "No Market is currently being constructed in Dongguan."
+  gacha_tt_dongguan_own_market_required: "Dongguan must have its own Market (it must not be part of the Guangzhou Market)."
+  gacha_tt_liyue_build_market_effect: "We begin establishing an independent Market in Dongguan."
+  gacha_tt_liyue_invest_50_effect: "Invest 50 Gold: +5 preparation progress."
+  gacha_tt_liyue_invest_200_effect: "Invest 200 Gold: +20 preparation progress."
+  gacha_tt_liyue_invest_500_effect: "Invest 500 Gold: +55 preparation progress."
+
+  # Action group title (exclusive_group = gacha_liyue_preparation_actions)
+  GACHA_LIYUE_PREPARATION_ACTIONS: "Preparation Actions"
+
+  # ============================================================================
+  # Situation Actions
+  # ============================================================================
+  gacha_liyue_build_market: "Establish a Market in Dongguan"
+  gacha_liyue_build_market_desc: "Start Market construction in Dongguan, making it an independent Market location (not part of the Guangzhou Market). This is required to rebuild Liyue."
+  gacha_liyue_build_market_price: "Establish Independent Market (500 Gold)"
+
+  gacha_liyue_invest_50: "Invest 50 Gold"
+  gacha_liyue_invest_50_desc: "Invest a small sum into Dongguan's harbor and trade routes to speed up preparations."
+  gacha_liyue_invest_50_price: "Liyue Investment (50 Gold)"
+
+  gacha_liyue_invest_200: "Invest 200 Gold"
+  gacha_liyue_invest_200_desc: "Commit a significant investment to accelerate preparations."
+  gacha_liyue_invest_200_price: "Liyue Investment (200 Gold)"
+
+  gacha_liyue_invest_500: "Invest 500 Gold"
+  gacha_liyue_invest_500_desc: "Make a major investment in Dongguan to rapidly push the plan forward."
+  gacha_liyue_invest_500_price: "Liyue Investment (500 Gold)"
+
+  # Modifier Types (prices)
+  MODIFIER_TYPE_NAME_gacha_liyue_build_market_price_cost_modifier: "Liyue Preparations Cost (Market)"
+  MODIFIER_TYPE_DESC_gacha_liyue_build_market_price_cost_modifier: "Cost modifier for establishing an independent Market in Dongguan during Liyue Preparations."
+  MODIFIER_TYPE_NAME_gacha_liyue_invest_50_price_cost_modifier: "Liyue Preparations Cost (50)"
+  MODIFIER_TYPE_DESC_gacha_liyue_invest_50_price_cost_modifier: "Cost modifier for the 50 gold investment option in Liyue Preparations."
+  MODIFIER_TYPE_NAME_gacha_liyue_invest_200_price_cost_modifier: "Liyue Preparations Cost (200)"
+  MODIFIER_TYPE_DESC_gacha_liyue_invest_200_price_cost_modifier: "Cost modifier for the 200 gold investment option in Liyue Preparations."
+  MODIFIER_TYPE_NAME_gacha_liyue_invest_500_price_cost_modifier: "Liyue Preparations Cost (500)"
+  MODIFIER_TYPE_DESC_gacha_liyue_invest_500_price_cost_modifier: "Cost modifier for the 500 gold investment option in Liyue Preparations."

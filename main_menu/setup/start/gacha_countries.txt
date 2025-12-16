@@ -1,0 +1,18 @@
+countries = {
+  countries = {
+    # --------------------------------------------------------------------------
+    # GL1 - Liyue (璃月)
+    # 仅作为“可被脚本创建/释放的国家模板”存在；不在开局生成。
+    # 目的：
+    # - 为 create_country_from_cores_in_our_locations 提供完整政府/法律/社会值等默认数据
+    # - 避免初始化阶段的缺失字段报错（government_type / heir-selection / capital 等）
+    # --------------------------------------------------------------------------
+    GL1 = {
+      our_cores_conquered_by_others = {}
+      include = "chinese_monarchy"
+      government = { ruler = random }
+      country_rank = rank_kingdom
+      capital = dongguan
+    }
+  }
+}

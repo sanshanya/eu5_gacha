@@ -1,0 +1,15 @@
+﻿gacha_liyue_build_market_price = {
+	gold = 500
+}
+
+gacha_liyue_invest_50_price = {
+	gold = 50
+}
+
+gacha_liyue_invest_200_price = {
+	gold = 200
+}
+
+gacha_liyue_invest_500_price = {
+	gold = 500
+}

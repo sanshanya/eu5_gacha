@@ -1,0 +1,51 @@
+﻿situation_panel = {
+
+  ##################################### SUBHEADER #####################################
+
+  # Default
+  blockoverride "situation_subheader_content" { }
+
+  ##################################### MAIN CONTENT #####################################
+
+  blockoverride "situation_panel_main_content" {
+
+    # 概览
+    situation_card_expandable = {
+      blockoverride "header_text" {
+        text = "gacha_liyue_reconstruction_overview_title"
+      }
+      blockoverride "header_icon" {
+        texture = "gfx/interface/icons/map_subdivisons/unlocked.dds"
+      }
+      blockoverride "bottom_content" {
+        text_multi = {
+          margin = { 15 0 }
+          layoutpolicy_horizontal = expanding
+          max_width = 480
+          autoresize = yes
+          text = "gacha_liyue_reconstruction_overview_desc"
+        }
+      }
+    }
+
+    # 状态
+    situation_card_expandable = {
+      blockoverride "header_text" {
+        text = "gacha_liyue_reconstruction_status_title"
+      }
+      blockoverride "header_icon" {
+        texture = "gfx/interface/icons/flat_icons/geopolitics/location.dds"
+      }
+      blockoverride "bottom_content" {
+        text_multi = {
+          margin = { 15 0 }
+          layoutpolicy_horizontal = expanding
+          max_width = 480
+          autoresize = yes
+          text = "gacha_liyue_reconstruction_status_tt"
+        }
+      }
+    }
+  }
+}
+

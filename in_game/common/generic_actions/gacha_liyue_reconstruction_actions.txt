@@ -1,0 +1,369 @@
+﻿# ------------------------------------------------------------------------------
+# Liyue Reconstruction - Situation Actions
+# ------------------------------------------------------------------------------
+
+gacha_liyue_build_market = {
+  type = situation
+
+  # 不弹消息：避免 message_types 缺失带来的日志噪音
+  show_message = no
+  # 使用原版已存在的 message type，避免出现 Failed to find message type: PERFORM_<action>_ACTION
+  message = national_church_action
+
+  ai_tick = never
+  automation_tick = never
+
+  exclusive_group = gacha_liyue_preparation_actions
+
+  allow = {
+    custom_tooltip = {
+      text = gacha_tt_liyue_requires_cabinet_action_started
+      scope:actor ?= { has_variable = gacha_liyue_reconstruction_in_progress }
+    }
+
+    location:dongguan = {
+      custom_tooltip = {
+        text = gacha_tt_dongguan_owned_by_us
+        owner = scope:actor
+      }
+      custom_tooltip = {
+        text = gacha_tt_dongguan_not_independent_market_yet
+        NOT = { this = market.location }
+      }
+      custom_tooltip = {
+        text = gacha_tt_dongguan_no_market_construction
+        has_market_construction = no
+      }
+    }
+
+    custom_tooltip = {
+      text = gacha_tt_liyue_situation_is_ours
+      scope:recipient ?= {
+        exists = var:target_country
+        trigger_if = {
+          limit = { exists = var:target_country }
+          var:target_country = scope:actor
+        }
+      }
+    }
+  }
+
+  # 该行动会创建一个“市场建设”，因此不在这里直接执行价格（价格信息用于取消/恢复）
+  should_execute_price = no
+  # 为避免原版 create_market 的动态价格导致数值/小数过大，这里使用固定价格
+  price = price:gacha_liyue_build_market_price
+  price_modifier = { add = 0 }
+
+  select_trigger = {
+    looking_for_a = situation
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:gacha_liyue_reconstruction = this
+      situation_is_active = yes
+    }
+  }
+
+  effect = {
+    custom_tooltip = gacha_tt_liyue_build_market_effect
+    hidden_effect = {
+      create_market = {
+        builder = scope:actor
+        location = location:dongguan
+        price = scope:price
+        price_modifier = scope:price_modifier
+      }
+    }
+  }
+
+  ai_will_do = { value = 0 }
+}
+
+gacha_liyue_invest_50 = {
+  type = situation
+
+  # 不弹消息：避免 message_types 缺失带来的日志噪音
+  show_message = no
+  # 使用原版已存在的 message type，避免出现 Failed to find message type: PERFORM_<action>_ACTION
+  message = national_church_action
+
+  ai_tick = never
+  automation_tick = never
+
+  exclusive_group = gacha_liyue_preparation_actions
+
+  allow = {
+    custom_tooltip = {
+      text = gacha_tt_liyue_requires_cabinet_action_started
+      scope:actor ?= { has_variable = gacha_liyue_reconstruction_in_progress }
+    }
+
+    location:dongguan = {
+      custom_tooltip = {
+        text = gacha_tt_dongguan_owned_by_us
+        owner = scope:actor
+      }
+      # “在东莞建立市场” = 东莞成为其市场的所在地
+      custom_tooltip = {
+        text = gacha_tt_dongguan_own_market_required
+        this = market.location
+      }
+    }
+
+    custom_tooltip = {
+      text = gacha_tt_liyue_situation_is_ours
+      scope:recipient ?= {
+        exists = var:target_country
+        trigger_if = {
+          limit = { exists = var:target_country }
+          var:target_country = scope:actor
+        }
+      }
+    }
+  }
+
+  price = price:gacha_liyue_invest_50_price
+
+  select_trigger = {
+    looking_for_a = situation
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:gacha_liyue_reconstruction = this
+      situation_is_active = yes
+    }
+  }
+
+  effect = {
+    custom_tooltip = gacha_tt_liyue_invest_50_effect
+    hidden_effect = {
+      scope:recipient ?= {
+        change_variable = { name = gacha_liyue_investment add = 50 }
+        change_variable = { name = gacha_liyue_progress add = 5 }
+        if = {
+          limit = { var:gacha_liyue_progress > 100 }
+          set_variable = { name = gacha_liyue_progress value = 100 }
+        }
+      }
+      scope:actor ?= {
+        change_variable = { name = gacha_liyue_investment_total add = 50 }
+      }
+
+      # 达到 100：立刻尝试建国（不必等待下个月刷新）
+      if = {
+        limit = {
+          scope:recipient ?= { var:gacha_liyue_progress >= 100 }
+          exists = scope:recipient.var:target_country
+        }
+
+        if = {
+          limit = { NOT = { country_exists = c:GL1 } }
+          scope:recipient.var:target_country = { gacha_create_liyue_nation_from_plan = yes }
+        }
+
+        # 建国成功：结束局势并完成内阁行动
+        if = {
+          limit = { country_exists = c:GL1 }
+          scope:recipient.var:target_country = { set_variable = { name = gacha_liyue_preparations_complete value = yes } }
+          scope:recipient = { end_situation = this }
+        }
+      }
+    }
+  }
+
+  ai_will_do = { value = 0 }
+}
+
+gacha_liyue_invest_200 = {
+  type = situation
+
+  # 不弹消息：避免 message_types 缺失带来的日志噪音
+  show_message = no
+  # 使用原版已存在的 message type，避免出现 Failed to find message type: PERFORM_<action>_ACTION
+  message = national_church_action
+
+  ai_tick = never
+  automation_tick = never
+
+  exclusive_group = gacha_liyue_preparation_actions
+
+  allow = {
+    custom_tooltip = {
+      text = gacha_tt_liyue_requires_cabinet_action_started
+      scope:actor ?= { has_variable = gacha_liyue_reconstruction_in_progress }
+    }
+
+    location:dongguan = {
+      custom_tooltip = {
+        text = gacha_tt_dongguan_owned_by_us
+        owner = scope:actor
+      }
+      # “在东莞建立市场” = 东莞成为其市场的所在地
+      custom_tooltip = {
+        text = gacha_tt_dongguan_own_market_required
+        this = market.location
+      }
+    }
+
+    custom_tooltip = {
+      text = gacha_tt_liyue_situation_is_ours
+      scope:recipient ?= {
+        exists = var:target_country
+        trigger_if = {
+          limit = { exists = var:target_country }
+          var:target_country = scope:actor
+        }
+      }
+    }
+  }
+
+  price = price:gacha_liyue_invest_200_price
+
+  select_trigger = {
+    looking_for_a = situation
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:gacha_liyue_reconstruction = this
+      situation_is_active = yes
+    }
+  }
+
+  effect = {
+    custom_tooltip = gacha_tt_liyue_invest_200_effect
+    hidden_effect = {
+      scope:recipient ?= {
+        change_variable = { name = gacha_liyue_investment add = 200 }
+        change_variable = { name = gacha_liyue_progress add = 20 }
+        if = {
+          limit = { var:gacha_liyue_progress > 100 }
+          set_variable = { name = gacha_liyue_progress value = 100 }
+        }
+      }
+      scope:actor ?= {
+        change_variable = { name = gacha_liyue_investment_total add = 200 }
+      }
+
+      # 达到 100：立刻尝试建国（不必等待下个月刷新）
+      if = {
+        limit = {
+          scope:recipient ?= { var:gacha_liyue_progress >= 100 }
+          exists = scope:recipient.var:target_country
+        }
+
+        if = {
+          limit = { NOT = { country_exists = c:GL1 } }
+          scope:recipient.var:target_country = { gacha_create_liyue_nation_from_plan = yes }
+        }
+
+        # 建国成功：结束局势并完成内阁行动
+        if = {
+          limit = { country_exists = c:GL1 }
+          scope:recipient.var:target_country = { set_variable = { name = gacha_liyue_preparations_complete value = yes } }
+          scope:recipient = { end_situation = this }
+        }
+      }
+    }
+  }
+
+  ai_will_do = { value = 0 }
+}
+
+gacha_liyue_invest_500 = {
+  type = situation
+
+  # 不弹消息：避免 message_types 缺失带来的日志噪音
+  show_message = no
+  # 使用原版已存在的 message type，避免出现 Failed to find message type: PERFORM_<action>_ACTION
+  message = national_church_action
+
+  ai_tick = never
+  automation_tick = never
+
+  exclusive_group = gacha_liyue_preparation_actions
+
+  allow = {
+    custom_tooltip = {
+      text = gacha_tt_liyue_requires_cabinet_action_started
+      scope:actor ?= { has_variable = gacha_liyue_reconstruction_in_progress }
+    }
+
+    location:dongguan = {
+      custom_tooltip = {
+        text = gacha_tt_dongguan_owned_by_us
+        owner = scope:actor
+      }
+      # “在东莞建立市场” = 东莞成为其市场的所在地
+      custom_tooltip = {
+        text = gacha_tt_dongguan_own_market_required
+        this = market.location
+      }
+    }
+
+    custom_tooltip = {
+      text = gacha_tt_liyue_situation_is_ours
+      scope:recipient ?= {
+        exists = var:target_country
+        trigger_if = {
+          limit = { exists = var:target_country }
+          var:target_country = scope:actor
+        }
+      }
+    }
+  }
+
+  price = price:gacha_liyue_invest_500_price
+
+  select_trigger = {
+    looking_for_a = situation
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:gacha_liyue_reconstruction = this
+      situation_is_active = yes
+    }
+  }
+
+  effect = {
+    custom_tooltip = gacha_tt_liyue_invest_500_effect
+    hidden_effect = {
+      scope:recipient ?= {
+        change_variable = { name = gacha_liyue_investment add = 500 }
+        change_variable = { name = gacha_liyue_progress add = 55 }
+        if = {
+          limit = { var:gacha_liyue_progress > 100 }
+          set_variable = { name = gacha_liyue_progress value = 100 }
+        }
+      }
+      scope:actor ?= {
+        change_variable = { name = gacha_liyue_investment_total add = 500 }
+      }
+
+      # 达到 100：立刻尝试建国（不必等待下个月刷新）
+      if = {
+        limit = {
+          scope:recipient ?= { var:gacha_liyue_progress >= 100 }
+          exists = scope:recipient.var:target_country
+        }
+
+        if = {
+          limit = { NOT = { country_exists = c:GL1 } }
+          scope:recipient.var:target_country = { gacha_create_liyue_nation_from_plan = yes }
+        }
+
+        # 建国成功：结束局势并完成内阁行动
+        if = {
+          limit = { country_exists = c:GL1 }
+          scope:recipient.var:target_country = { set_variable = { name = gacha_liyue_preparations_complete value = yes } }
+          scope:recipient = { end_situation = this }
+        }
+      }
+    }
+  }
+
+  ai_will_do = { value = 0 }
+}

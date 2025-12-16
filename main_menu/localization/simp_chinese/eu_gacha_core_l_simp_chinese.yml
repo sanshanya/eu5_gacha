@@ -42,8 +42,8 @@
   gacha_events.1.title: "祈愿:异世相遇"
   gacha_events.1.desc_guaranteed: "当前祈愿已受祝福，下次获得的必定是当期角色！\n投入资源，祈求命运的回应吧。"
   gacha_events.1.desc_not_guaranteed: "投入资源，祈求命运的回应吧。"
-  gacha_events.1.a: "奉纳金币 (祈愿) : @gold!#color_yellow [ROOT.ScriptValue('gacha_single_pull_cost_sv')|0]#!"
-  gacha_events.1.a10: "盛大祈愿 (十连) : @gold!#color_yellow [ROOT.ScriptValue('gacha_ten_pull_cost_sv')|0]#!"
+  gacha_events.1.a: "奉纳金币 (祈愿): @gold!#color_yellow [ROOT.ScriptValue('gacha_single_pull_cost_sv')|0]#!"
+  gacha_events.1.a10: "盛大祈愿 (十连): @gold!#color_yellow [ROOT.ScriptValue('gacha_ten_pull_cost_sv')|0]#!"
   gacha_events.1.starlight_exchange: "星辉兑换(需要#color_yellow [ROOT.ScriptValue('gacha_starlight_exchange_cost_sv')|0]#!星辉)"
   gacha_free_first_roll: "免费首抽(新手福利)"
   gacha_events.1.b: "暂且观望"
@@ -92,7 +92,7 @@
   gacha_events.100.title: "孤注一掷:星辰的回响"
   gacha_events.100.desc: "百次祈愿已毕。祭坛上堆满了星辰的馈赠:\n\n#bold 五星角色#!:#color_yellow [ROOT.Var('gacha_batch_5star_count').GetValue|0]#! 位\n\n#bold 四星资源#!:#color_yellow [ROOT.Var('gacha_batch_4star_count').GetValue|0]#! 份\n   @gold!  +[ROOT.Var('gacha_batch_gold_count').GetValue|0]\n  @prestige! +[ROOT.Var('gacha_batch_prestige_count').GetValue|0]\n  @legitimacy! +[ROOT.Var('gacha_batch_legitimacy_count').GetValue|0]\n  @stability! +[ROOT.Var('gacha_batch_stability_count').GetValue|0]"
   gacha_events.100.a: "收下馈赠"
-  gacha_events.1.a100: "孤注一掷 (百连) : @gold!#color_yellow [ROOT.ScriptValue('gacha_hundred_pull_cost_sv')|0]#!"
+  gacha_events.1.a100: "孤注一掷 (百连): @gold!#color_yellow [ROOT.ScriptValue('gacha_hundred_pull_cost_sv')|0]#!"
 
   # === 其他结果 ===
   gacha_events.6.title: "意外之财"
@@ -170,6 +170,7 @@
 
   gacha_group: "祈愿文化组"
   gacha_group_desc: "祈愿角色的专属文化分组。"
+  gacha_demand: "祈愿需求"
   gacha_select_title: "选择祈愿目标"
   gacha_delegate_regency_interaction_desc: "委托摄政:暂时让祈愿角色代行政务。"
   gacha_delegate_regency_interaction_past: "曾委托摄政"
@@ -202,6 +203,8 @@
   # 附庸类型
   gacha_archon_vassal: "神之眷属"
   gacha_archon_vassal_desc: "由七神之力眷顾的国度，其统治者拥有神之眼的祝福。作为宗主国的忠诚盟友，他们将在战争与和平中始终追随。"
+  LEAD_gacha_archon_vassal: "$LIST$是[SUBJECT_TYPE.GetName]"
+  AM_gacha_archon_vassal: "$LIST$的[SUBJECT_TYPE.GetName]。"
   # 外交界面:终止附庸关系（不写会显示为代码）
   CANCEL_gacha_archon_vassal_TOOLTIP_HEADER: "取消[TARGET_COUNTRY.GetName]的$gacha_archon_vassal$地位"
   CANCEL_gacha_archon_vassal_TOOLTIP_HEADER_NO_TARGET: "取消一个[country|e]的$gacha_archon_vassal$地位"
@@ -218,6 +221,9 @@
   gacha_create_liyue_nation_desc: "在东莞再造璃月国，以岩神摩拉克斯之名创立的商业与合约之国。"
   gacha_create_liyue_nation_active: "正在再造璃月..."
   gacha_create_liyue_nation_action: "在此地再造璃月"
+  gacha_create_liyue_nation_action_progress: "[Cabinet.GetActionNumProgress|%]"
+  gacha_create_liyue_nation_action_progress_wordier: "筹建进度：[Cabinet.GetActionNumProgress|%]"
+  gacha_create_liyue_nation_action_progress_tooltip: "再造璃月的筹建进度。进度达到 100% 后将立即建国。"
 
   # 璃月 - 国家修正
   STATIC_MODIFIER_NAME_gacha_liyue_foundation_boom_modifier: "璃月新生:千帆竞发"
@@ -232,12 +238,16 @@
   gacha_nation_events.1.desc: "在璃月港的烟波浩渺中，一个新的国度诞生了。岩神摩拉克斯的契约精神将在这片土地上延续，繁荣的商贸与坚定的合约将成为这个国家的基石。\n\n作为宗主，您获得了璃月的效忠。"
   gacha_nation_events.1.a: "愿岩神庇佑"
 
+  gacha_nation_events.2.title: "璃月筹建受阻"
+  gacha_nation_events.2.desc: "某些条件阻止我们立即建立璃月。\n\n请确认：\n- 你仍拥有东莞\n- 东莞已建立市场（东莞是市场所在地）\n\n若仍无法建立，请查看错误日志中与 create_country_from_cores_in_our_locations 相关的报错信息。"
+  gacha_nation_events.2.a: "明白了。"
+
   gacha_nation_events.10.title: "璃月计划"
   gacha_nation_events.10.desc: "#ZG 新年夜。窗外烟火正盛。\n刻晴背对灯火，将图纸铺满案头。她没有看烟花。\n刻晴指尖的紫电照亮了图纸上密密麻麻的批注。#!\n刻晴:「陛下，璃月的理想并非神明赐予，而是由人亲手缔造。」\n#ZG 她顿了顿，目光掠过窗外升空的孔明灯，和霄灯很像。#!\n刻晴:「若您愿意兑现那句『再造璃月』的承诺，我将以玉衡之名接手港口，商路、矿脉、城建、契约，皆会在最短时间内重整。」\n#ZG 你望向少女的脸庞，由于祈愿之力，少女的外貌与第一次见面时无异。\n眼神却不复当初稚嫩...\n倒映着窗外那些越飘越远的光点。#!"
   gacha_nation_events.10.a: "愿新璃月，千帆竞发。"
   gacha_nation_events.10.b: "再议。"
 
-  gacha_nation_events.11.desc: "刻晴:「……定不负君所托。」\n#ZG 刻晴将璃月港蓝图铺开在桌面邀请你一同查看。#!\n\n#bold 解锁内阁行动:#!#bold;color_yellow $gacha_create_liyue_nation$#!"
+  gacha_nation_events.11.desc: "刻晴:「……定不负君所托。」\n#ZG 刻晴将璃月港蓝图铺开在桌面邀请你一同查看。#!\n\n#bold 解锁内阁行动:#!#bold;color_yellow $gacha_create_liyue_nation$#!\n#bold 启动局势:#!#bold;color_yellow $gacha_liyue_reconstruction$#!"
   gacha_nation_events.12.desc: "#ZG 刻晴点点头，将图纸收起。#!\n刻晴:「是我操之过急了。此事不论早晚，等您决定，我会把方案保持在可启动状态。」\n#ZG 她转身看向窗外的烟火，没有再说话。#!"
   gacha_nation_events.11.a: "这一天不会太远"
 

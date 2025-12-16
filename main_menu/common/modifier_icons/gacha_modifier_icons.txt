@@ -80,3 +80,9 @@ global_gacha_conversion_blocked = { positive = "gfx/interface/icons/modifier_typ
 local_gacha_conversion_blocked = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
 local_gacha_food_consumption = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
 global_gacha_food_consumption = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+
+# Price cost modifier icons (situation investment prices)
+gacha_liyue_build_market_price_cost_modifier = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_liyue_invest_50_price_cost_modifier = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_liyue_invest_200_price_cost_modifier = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_liyue_invest_500_price_cost_modifier = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }

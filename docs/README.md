@@ -17,6 +17,7 @@
 ## 0.4 里程碑（摘要）
 
 - **七国系统原型（璃月）**：静态 TAG `GL1` + 附庸类型 `gacha_archon_vassal` + 内阁行动「再造璃月」
+- **璃月筹建局势**：局势 `gacha_liyue_reconstruction` + 必做「东莞独立市场」+ 投资加速 + 进度 100 自动建国
 - **刻晴交互「璃月计划」**：两幕事件 + 一次性解锁（按钮置灰、防连点锁）
 - **角色身份标准化**：统一兜底 dynasty/estate，避免“抽出来变贵族/宗族缺失/统治者被拖回本国”
 
@@ -52,3 +53,13 @@
 1. **Code + Docs in Sync**：任何核心机制变更必须在同一次提交中更新对应 Spec。
 2. **权威性**：Design 与 Spec 冲突 → 以 Spec 为准；Spec 与代码冲突 → 先修代码/验证，再修 Spec。
 3. **可验证**：每条关键结论尽量写清对应文件路径/关键变量/关键 effect，方便回查与复用。
+
+---
+
+## ⚠️ 原版覆盖（必须知悉）
+
+本版本包含 **对原版 GUI 的覆盖补丁**（用于消除引擎日志刷屏，属于“Vanilla Patch”）：
+
+- `in_game/gui/zz_gacha_messages_patch.gui`：覆盖原版 `template message_template`（源自 `in_game/gui/messages.gui`），为描述区补齐 `BlockList` 上下文以避免 `BlockList.GetBlocks` 报错。
+
+> 兼容性提示：这会与其他“改 messages 弹窗”的 UI 模组产生冲突；如需要排查 UI 兼容性，可临时移除该文件验证。

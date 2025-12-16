@@ -1,0 +1,172 @@
+﻿# ==============================================================================
+# Liyue (璃月) - Nation Creation / Setup Effects
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Create Liyue (GL1) from the Liyue Plan project.
+#
+# Scope:
+# - root = country (the overlord / player country)
+# ------------------------------------------------------------------------------
+gacha_create_liyue_nation_from_plan = {
+	# The country that is running this effect (the overlord / player country)
+	save_scope_as = liyue_overlord
+
+	# Preconditions (soft): only proceed when it makes sense
+	if = {
+		limit = {
+			is_ai = no
+			NOT = { country_exists = c:GL1 }
+			location:dongguan = { owner = scope:liyue_overlord }
+			# “在东莞建立市场” = 东莞成为其市场的所在地
+			location:dongguan = { this = market.location }
+		}
+
+		# Find Keqing (alive) globally (robust vs. character ownership changes)
+		clear_saved_scope = keqing_char
+		random_country = {
+			limit = {
+				any_character = {
+					is_alive = yes
+					has_character_modifier = gacha_keqing_modifier
+				}
+			}
+			random_character = {
+				limit = {
+					is_alive = yes
+					has_character_modifier = gacha_keqing_modifier
+				}
+				save_scope_as = keqing_char
+			}
+		}
+
+		# 1) Add core on Dongguan and create the country from our cores
+		location:dongguan = { add_core = c:GL1 }
+		create_country_from_cores_in_our_locations = c:GL1
+
+		# Success path
+		if = {
+			limit = { country_exists = c:GL1 }
+
+			# Ensure Dongguan belongs to Liyue (some setups may not auto-transfer)
+			if = {
+				limit = { location:dongguan = { owner = scope:liyue_overlord } }
+				location:dongguan = { change_location_owner = c:GL1 }
+			}
+
+			# Transfer Keqing country modifiers away from the overlord (optional safety)
+			remove_country_modifier = gacha_keqing_country_modifier
+			remove_country_modifier = gacha_keqing_c1_country_modifier
+			remove_country_modifier = gacha_keqing_c2_country_modifier
+			remove_country_modifier = gacha_keqing_c4_country_modifier
+			remove_country_modifier = gacha_keqing_c5_country_modifier
+			remove_country_modifier = gacha_keqing_c6_country_modifier
+
+			# Configure Liyue (government / capital / ruler / subject)
+			c:GL1 = {
+				# Avoid showing as a low rank like “伯国”
+				set_country_rank_effect = { rank = country_rank:rank_kingdom }
+
+				# Capital: Dongguan (hard requirement), fallback just in case
+				if = {
+					limit = { location:dongguan = { owner = c:GL1 } }
+					set_capital = location:dongguan
+				}
+				else = {
+					ordered_owned_location = {
+						order_by = development
+						max = 1
+						save_scope_as = liyue_capital_loc
+					}
+					set_capital = scope:liyue_capital_loc
+					clear_saved_scope = liyue_capital_loc
+				}
+
+				change_culture = culture:yuehai_culture
+				change_religion = religion:sanjiao
+				change_government_type = government_type:monarchy
+				change_heir_selection = heir_selection:cognatic_primogeniture
+
+				# Move Keqing to Liyue first, then set as ruler (more stable)
+				if = {
+					limit = { exists = scope:keqing_char }
+					scope:keqing_char = { move_country = c:GL1 }
+				}
+
+				if = {
+					limit = { exists = scope:keqing_char }
+					# Dynasty: ensure it exists and Keqing belongs to it
+					if = {
+						limit = { NOT = { dynasty_exists = gacha_keqing_dynasty } }
+						create_named_dynasty = gacha_keqing_dynasty
+					}
+
+					# Replace the auto-generated monarch with Keqing
+					ruler_or_regent ?= { save_scope_as = liyue_old_ruler }
+
+					scope:keqing_char = {
+						change_dynasty = dynasty:gacha_keqing_dynasty
+						change_character_estate = estate_type:crown_estate
+					}
+					set_new_ruler = scope:keqing_char
+					scope:keqing_char = { gacha_keqing_apply_country_modifiers = yes }
+
+					# Remove placeholder royals (avoid UI showing extra “king” etc.)
+					if = {
+						limit = { exists = scope:liyue_old_ruler }
+						scope:liyue_old_ruler = {
+							if = {
+								limit = { this != scope:keqing_char }
+								kill_character_silently = { target = this reason = vanished }
+							}
+						}
+						clear_saved_scope = liyue_old_ruler
+					}
+
+					if = {
+						limit = { NOT = { has_variable = gacha_liyue_placeholder_royals_cleaned } }
+						every_character = {
+							limit = {
+								is_alive = yes
+								has_estate = estate_type:crown_estate
+								NOT = { has_character_modifier = gacha_keqing_modifier }
+							}
+							kill_character_silently = { target = this reason = vanished }
+						}
+						set_variable = { name = gacha_liyue_placeholder_royals_cleaned value = yes }
+					}
+				}
+
+				# Permanent + temporary economic boons
+				if = {
+					limit = { NOT = { has_country_modifier = gacha_liyue_trade_hub_modifier } }
+					add_country_modifier = { modifier = gacha_liyue_trade_hub_modifier years = -1 mode = add_and_extend }
+				}
+				add_country_modifier = { modifier = gacha_liyue_foundation_boom_modifier years = 10 mode = add }
+
+				# Make Liyue our subject (player-only safeguards exist in subject type)
+				make_subject_of = {
+					target = scope:liyue_overlord
+					type = subject_type:gacha_archon_vassal
+				}
+			}
+
+			# Cleanup
+			clear_saved_scope = keqing_char
+
+			# Notify the overlord
+			trigger_event_non_silently = gacha_nation_events.1
+		}
+		# Failure path (throttled to avoid monthly spam)
+		else = {
+			if = {
+				limit = { NOT = { has_variable = gacha_liyue_create_failed_notice_lock } }
+				set_variable = { name = gacha_liyue_create_failed_notice_lock months = 1 }
+				trigger_event_non_silently = gacha_nation_events.2
+			}
+			clear_saved_scope = keqing_char
+		}
+	}
+
+	clear_saved_scope = liyue_overlord
+}

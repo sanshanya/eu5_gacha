@@ -1,0 +1,150 @@
+﻿gacha_liyue_reconstruction = {
+  # 仅通过脚本强制激活（不会自然出现）
+  monthly_spawn_chance = 0
+
+  can_start = {
+    # Activated by gacha_nation_events.11 (player choice)
+    always = no
+  }
+
+  # 仅在脚本里强制结束（由筹建进度达成时 end_situation），这里保留兜底：
+  # - 目标国家丢失：直接结束（避免残留）
+  # - 璃月已存在：结束（避免卡在界面上）
+  can_end = {
+    OR = {
+      NOT = { exists = var:target_country }
+      country_exists = c:GL1
+    }
+  }
+
+  # 可见性：只对触发该局势的国家显示
+  visible = {
+    exists = situation:gacha_liyue_reconstruction.var:target_country
+    trigger_if = {
+      limit = { exists = situation:gacha_liyue_reconstruction.var:target_country }
+      this = situation:gacha_liyue_reconstruction.var:target_country
+    }
+  }
+
+  on_start = {
+    set_variable = { name = gacha_liyue_progress value = 0 }
+    set_variable = { name = gacha_liyue_investment value = 0 }
+    set_variable = { name = gacha_liyue_monthly_progress value = 0 }
+  }
+
+  on_monthly = {
+    # 目标国家不存在时不再推进（can_end 会结束）
+    if = {
+      limit = { exists = var:target_country }
+
+      # 默认：不推进（必须满足硬性前置）
+      set_variable = { name = gacha_liyue_monthly_progress value = 0 }
+
+      # 进度推进条件：
+      # - 玩家已启动内阁行动（内阁投入）
+      # - 仍拥有东莞
+      # - 东莞已建立市场（必须，不再是可选加速项）
+      if = {
+        limit = {
+          var:target_country ?= { has_variable = gacha_liyue_reconstruction_in_progress }
+          # 注意：进入 location scope 后 var:target_country 会指向 location 自己的变量
+          # 这里必须用 root.var:target_country 取回 Situation 上保存的目标国家
+          location:dongguan = { owner = root.var:target_country }
+          # “在东莞建立市场” = 东莞成为其市场的所在地
+          location:dongguan = { this = market.location }
+        }
+
+        # 基础进度：5/月（受内阁效率影响；投入可进一步加速）
+        set_variable = {
+          name = gacha_liyue_monthly_progress
+          value = {
+            value = 5
+            multiply = {
+              value = 1
+              add = { value = var:target_country.modifier:country_cabinet_efficiency }
+              min = 0.1
+            }
+            add = { value = var:gacha_liyue_investment divide = 200 }
+            min = 0
+          }
+        }
+
+        change_variable = { name = gacha_liyue_progress add = var:gacha_liyue_monthly_progress }
+
+        if = {
+          limit = { var:gacha_liyue_progress > 100 }
+          set_variable = { name = gacha_liyue_progress value = 100 }
+        }
+      }
+
+      # 达到 100：立刻尝试建国（fail-safe：即使内阁行动中断也会尝试）
+      if = {
+        limit = {
+          var:gacha_liyue_progress >= 100
+          NOT = { country_exists = c:GL1 }
+        }
+        var:target_country = { gacha_create_liyue_nation_from_plan = yes }
+      }
+
+      # 建国成功：结束局势并完成内阁行动
+      if = {
+        limit = {
+          var:gacha_liyue_progress >= 100
+          country_exists = c:GL1
+        }
+        if = {
+          limit = { var:target_country ?= { NOT = { has_variable = gacha_liyue_preparations_complete } } }
+          var:target_country = { set_variable = { name = gacha_liyue_preparations_complete value = yes } }
+        }
+        end_situation = situation:gacha_liyue_reconstruction
+      }
+    }
+  }
+
+  on_ending = {
+    # 仅在成功完成时写回国家变量，用于解锁后续内阁行动
+    if = {
+      limit = {
+        exists = var:target_country
+        var:gacha_liyue_progress >= 100
+      }
+      var:target_country = {
+        # 记录投入档位（后续可用于缩放建国收益）
+        if = {
+          limit = { var:gacha_liyue_investment_total >= 1000 }
+          set_variable = { name = gacha_liyue_investment_tier value = 3 }
+        }
+        else_if = {
+          limit = { var:gacha_liyue_investment_total >= 500 }
+          set_variable = { name = gacha_liyue_investment_tier value = 2 }
+        }
+        else = {
+          set_variable = { name = gacha_liyue_investment_tier value = 1 }
+        }
+      }
+    }
+  }
+
+  on_ended = {
+    # 清理局势变量，减少存档体积
+    remove_variable = gacha_liyue_progress
+    remove_variable = gacha_liyue_investment
+    remove_variable = gacha_liyue_monthly_progress
+    remove_variable = target_country
+  }
+
+  # 简易地图模式：高亮东莞
+  is_data_map = yes
+  map_color = {
+    if = {
+      limit = { this = location:dongguan }
+      value = rgb { 255 215 0 }
+    }
+  }
+  tooltip = {
+    if = {
+      limit = { this = location:dongguan }
+      custom_tooltip = gacha_liyue_reconstruction_dongguan_tt
+    }
+  }
+}

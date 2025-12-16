@@ -10,6 +10,10 @@
   # === Character Interaction ===
   gacha_keqing_liyue_plan_interaction: "Liyue Plan"
   gacha_keqing_liyue_plan_interaction_desc: "Led by the Yuheng, this plan unlocks the Liyue cabinet action and provides a path to restore and reorganize it when needed."
+  gacha_keqing_liyue_plan_interaction_desc_specific: "Pledge to rebuild Liyue with Keqing, unlocking the “Rebuild Liyue” cabinet action. Starting it will open the preparations situation."
+  gacha_keqing_liyue_plan_interaction_past: "Started the Liyue Plan"
+  gacha_keqing_liyue_plan_interaction_act: "Start the Liyue Plan"
+  gacha_keqing_liyue_plan_interaction_act_past: "Liyue Plan resolved"
   gacha_keqing_liyue_plan_select: "Begin the \"Liyue Plan\""
 
   # === Traits ===

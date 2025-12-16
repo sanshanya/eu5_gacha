@@ -99,7 +99,7 @@
 
 ## 3. 数据层代码 (The Data Layer)
 
- **文件路径** : `in_game/common/script_values/gacha_eu_values.txt`
+ **文件路径**: `in_game/common/script_values/gacha_eu_values.txt`
 
 ### 3.1 熵值与概率公式
 
@@ -233,11 +233,11 @@ gacha_calc_4star_idx_sv = {
 
 ## 4. 通用逻辑定义 (Common Logic)
 
- **文件** : `in_game/common/scripted_effects/gacha_common_effects.txt`
+ **文件**: `in_game/common/scripted_effects/gacha_common_effects.txt`
 
 ### 4.1 状态卫兵 (The Gatekeeper)
 
- **职责** : 幂等初始化。确保后续逻辑运行时，所有持久化变量 (`_count`, `_bool`, `_amt`) 均已存在。
+ **职责**: 幂等初始化。确保后续逻辑运行时，所有持久化变量 (`_count`, `_bool`, `_amt`) 均已存在。
 
 ```
 # =======================================================
@@ -266,7 +266,7 @@ gacha_ensure_state_initialized = {
 
 ### 4.2 角色注册契约 (The Registration Contract)
 
- **职责** : 任何新角色的创建逻辑最终都必须调用此 Effect，以确保 Scope 被正确保存供 UI 使用。
+ **职责**: 任何新角色的创建逻辑最终都必须调用此 Effect，以确保 Scope 被正确保存供 UI 使用。
 
 ```
 gacha_register_new_character = {
@@ -286,12 +286,12 @@ gacha_register_new_character = {
 
 ## 5. 核心逻辑内核 (The Logic Kernel)
 
- **文件** : `in_game/common/scripted_effects/gacha_logic_effects.txt`
+ **文件**: `in_game/common/scripted_effects/gacha_logic_effects.txt`
 
 ### 5.1 单抽静默内核 (Silent Kernel)
 
- **职责** : 状态步进 -> 获取数学结果 -> 判定星级 -> 更新保底 -> 分发结算。
- **规范** : 全程在 Country Scope 运行，不进行任何 Scope 切换。
+ **职责**: 状态步进 -> 获取数学结果 -> 判定星级 -> 更新保底 -> 分发结算。
+ **规范**: 全程在 Country Scope 运行，不进行任何 Scope 切换。
 
 ```
 gacha_execute_single_roll_silent = {
@@ -376,11 +376,11 @@ gacha_execute_single_roll_silent = {
 
 ## 6. 结果解析器 (Resolvers)
 
- **文件** : `in_game/common/scripted_effects/gacha_logic_effects.txt` (续)
+ **文件**: `in_game/common/scripted_effects/gacha_logic_effects.txt` (续)
 
 ### 6.1 五星解析 (Resolve & Save)
 
- **职责** : 判定 UP/歪 -> 轮询常驻 -> 发放角色 ->  **确保保存 Scope** 。
+ **职责**: 判定 UP/歪 -> 轮询常驻 -> 发放角色 ->  **确保保存 Scope** 。
 
 ```
 gacha_resolve_5star_and_save_scope = {
@@ -433,7 +433,7 @@ gacha_resolve_5star_and_save_scope = {
 
 ### 6.2 四星解析 (Resolve Reward)
 
- **职责** : 计算索引 ->  **直接发放资源** 。
+ **职责**: 计算索引 ->  **直接发放资源** 。
 
 ```
 gacha_resolve_4star_logic = {
@@ -454,10 +454,10 @@ gacha_resolve_4star_logic = {
 
 ## 7. 逻辑包装器 (Wrappers)
 
- **文件** : `in_game/common/scripted_effects/gacha_logic_effects.txt` (续)
+ **文件**: `in_game/common/scripted_effects/gacha_logic_effects.txt` (续)
 
- **职责** : 循环调用内核，并根据结果 **触发对应的 UI 事件** 。
- **关键** : 使用 `trigger_event_non_silently` 将事件放入 UI 队列，利用事件自身的 `immediate` 机制抓取快照。
+ **职责**: 循环调用内核，并根据结果 **触发对应的 UI 事件** 。
+ **关键**: 使用 `trigger_event_non_silently` 将事件放入 UI 队列，利用事件自身的 `immediate` 机制抓取快照。
 
 ### 7.1 十连包装器 (Ten Pull)
 
@@ -522,7 +522,7 @@ gacha_wrapper_single_pull = {
 
 ### 7.1 交互入口 (Interaction Entry)
 
- **文件** : `in_game/common/character_interactions/gacha_wish_interaction.txt`
+ **文件**: `in_game/common/character_interactions/gacha_wish_interaction.txt`
 
  **核心职责** ：懒加载初始化。这是系统的唯一安全入口。
 
@@ -554,7 +554,7 @@ gacha_wish_interaction = {
 
 ### 7.2 祈愿主菜单 (Main Menu)
 
- **文件** : `in_game/events/gacha_events.txt`
+ **文件**: `in_game/events/gacha_events.txt`
 
  **核心职责** ：展示保底状态，提供抽卡选项。
 
@@ -630,7 +630,7 @@ gacha_events.1 = {
 
 ### 7.3 五星展示事件 (5-Star Reveal)
 
- **文件** : `in_game/events/gacha_events.txt` (续)
+ **文件**: `in_game/events/gacha_events.txt` (续)
 
  **核心机制** ： **Scope Snapshot (快照)** 。
 这是解决十连抽“时间错位”的终极方案。在事件触发瞬间 (`immediate`)，将易变的全局指针转存为事件实例的私有变量。
@@ -805,13 +805,13 @@ gacha_pool_size_standard_5_sv = { value = 9 } # 8 -> 9
 
 # EU5 Gacha System Final Report (v1.0) - Rev 4.7
 
- **核心修正** : **Implicit Portrait Binding** (移除 character =，利用 immediate 顺序绑定)。
+ **核心修正**: **Implicit Portrait Binding** (移除 character =，利用 immediate 顺序绑定)。
 
 ---
 
 ## Part 3: 表现层代码 (UI Layer)
 
- **文件** : in_game/events/gacha_events.txt
+ **文件**: in_game/events/gacha_events.txt
 
 ### 7.3 五星展示事件 (Corrected)
 
@@ -873,15 +873,15 @@ after = {
 
 🚧 **Design Document** (未实装)
 
- **Version** : 3.0
+ **Version**: 3.0
 
- **Last Updated** : 2025-11-26
+ **Last Updated**: 2025-11-26
 
- **Purpose** : 定义 V3 角色设计文档到 EU5 Mod 代码的标准转换流程
+ **Purpose**: 定义 V3 角色设计文档到 EU5 Mod 代码的标准转换流程
 
 > [!IMPORTANT]
 
-> **真相来源** : 语法优先以 `script_docs` 与 base game 代码为准；本文档只展示在本项目中已跑通的用法。如遇版本更新导致行为变化，以最新的 `script_docs` 输出为准。
+> **真相来源**: 语法优先以 `script_docs` 与 base game 代码为准；本文档只展示在本项目中已跑通的用法。如遇版本更新导致行为变化，以最新的 `script_docs` 输出为准。
 
 ---
 
@@ -905,8 +905,8 @@ after = {
 
 将**原神的陪伴感**融入 **EU5的帝国叙事** ：
 
-* **V2** : 功能性角色，提供 Buff
-* **V3** : 有成长弧线的伙伴，从"雇佣"到"陪伴"
+* **V2**: 功能性角色，提供 Buff
+* **V3**: 有成长弧线的伙伴，从"雇佣"到"陪伴"
 
 ### 1.2 V2 → V3 演进
 
@@ -1054,7 +1054,7 @@ main_menu/
 
 > [!NOTE]
 
-> **ID约定** : `.1X` 对应 `CX` 特殊命座事件，`.30+` 系列用于多轮互动事件。
+> **ID约定**: `.1X` 对应 `CX` 特殊命座事件，`.30+` 系列用于多轮互动事件。
 
 ---
 
@@ -1223,9 +1223,9 @@ gacha_create_xinhai_effect = {
 
 > [!CAUTION]
 
-> **Scope 生命周期陷阱** : `trigger_event_non_silently` 会将事件放入队列异步执行。如果在 effect 中立即 `clear_saved_scope`，事件触发时 scope 已被清理！
+> **Scope 生命周期陷阱**: `trigger_event_non_silently` 会将事件放入队列异步执行。如果在 effect 中立即 `clear_saved_scope`，事件触发时 scope 已被清理！
 
-> **正确做法** : 在事件的 `after` 块中清理 scope。
+> **正确做法**: 在事件的 `after` 块中清理 scope。
 
 ### 5.3 模块五：C3 好感事件 (2×2)
 
@@ -1303,7 +1303,7 @@ gacha_xinhai_events.31 = {
 
 > [!TIP]
 
-> **为什么不用列表遍历** : C3 事件触发时，当前 scope 就是心海角色。通过 `save_scope_as` 直接保存引用，无需遍历 `gacha_obtained_characters`。
+> **为什么不用列表遍历**: C3 事件触发时，当前 scope 就是心海角色。通过 `save_scope_as` 直接保存引用，无需遍历 `gacha_obtained_characters`。
 
 ---
 
@@ -1477,11 +1477,11 @@ after = {
 
 ---
 
- **文档维护者** : AI + sansm
+ **文档维护者**: AI + sansm
 
- **创建日期** : 2025-11-25
+ **创建日期**: 2025-11-25
 
- **最后更新** : 2025-11-26
+ **最后更新**: 2025-11-26
 
 现人神巫女 · 珊瑚宫心海
 

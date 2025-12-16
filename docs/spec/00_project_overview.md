@@ -55,14 +55,20 @@
 | 路径 | 说明 | 状态 |
 |------|------|------|
 | `in_game/setup/countries/gacha_seven_nations.txt` | 静态 TAG 定义（颜色/基础文化宗教） | ✅ 正确 |
+| `main_menu/setup/start/gacha_countries.txt` | 脚本建国用的国家模板（补齐政府/法律/首都等默认字段） | ✅ 正确 |
 | `in_game/common/subject_types/gacha_archon_vassal.txt` | 七国附庸类型 | ✅ 正确 |
 | `in_game/common/character_interactions/gacha_keqing_liyue_plan_interaction.txt` | 刻晴专属「璃月计划」交互入口 | ✅ 正确 |
 | `in_game/events/gacha_nation_events.txt` | 璃月计划（两幕）与建国通知事件 | ✅ 正确 |
 | `in_game/common/cabinet_actions/gacha_nation_actions.txt` | 内阁行动：创建/修复璃月并设刻晴为统治者 | ✅ 正确 |
+| `in_game/common/situations/gacha_liyue_reconstruction.txt` | 局势：璃月筹建（进度条/硬性前置/收束建国） | ✅ 正确 |
+| `in_game/common/generic_actions/gacha_liyue_reconstruction_actions.txt` | 局势行动：建市场（必做）/投入加速（可选） | ✅ 正确 |
+| `in_game/common/prices/gacha_liyue_reconstruction_prices.txt` | 局势行动价格（price system） | ✅ 正确 |
 | `main_menu/common/static_modifiers/gacha_liyue_modifiers.txt` | 璃月国家修正（10年强力 + 常驻） | ✅ 正确 |
 | `main_menu/common/flag_definitions/gacha_flag_definitions.txt` | 旗帜定义 | ✅ 正确 |
 | `main_menu/common/coat_of_arms/coat_of_arms/gacha_coat_of_arms.txt` | CoA 定义 | ✅ 正确 |
 | `main_menu/localization/*/gacha_country_names_l_*.yml` | 国家名/形容词本地化集中管理 | ✅ 正确 |
+| `main_menu/gfx/interface/icons/situations/gacha_liyue_reconstruction.dds` | 局势图标（告警/列表） | ✅ 正确 |
+| `main_menu/gfx/interface/illustrations/situation/gacha_liyue_reconstruction.dds` | 局势背景图（面板顶部插画） | ✅ 正确 |
 
 ---
 
@@ -72,3 +78,14 @@
 - **我要修改抽卡概率** → [Spec: Gacha System](spec_gacha_system.md)
 - **我要写复杂脚本** → [Standard: Scope Management](spec_scope_management.md)
 - **我要添加七国国家** → [Spec: Genshin Nations](spec_genshin_nations.md)
+
+---
+
+## 6. ⚠️ Vanilla Patches（原版覆盖）
+
+> 目标：尽量不覆盖原版；如果不得不覆盖，必须在文档中标注路径、原因与兼容性风险。
+
+- `in_game/gui/zz_gacha_messages_patch.gui`
+  - 覆盖原版 `template message_template`（base game `in_game/gui/messages.gui`）
+  - 原因：修复 `gui/messages.gui:54` 处 `TooltipBlockListContent` 缺少 `BlockList` 上下文导致的日志刷屏
+  - 风险：与其他修改 message popup 的 UI 模组可能冲突；如需排查请临时移除该文件做对比

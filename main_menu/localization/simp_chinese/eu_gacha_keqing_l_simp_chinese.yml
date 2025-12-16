@@ -10,6 +10,10 @@
   # === 角色交互 ===
   gacha_keqing_liyue_plan_interaction: "璃月计划『Dev』"
   gacha_keqing_liyue_plan_interaction_desc: "由玉衡星牵头，启动璃月的国家构想。解锁内阁行动中的相关决议，并在需要时用于修复与重整。"
+  gacha_keqing_liyue_plan_interaction_desc_specific: "与刻晴立下「再造璃月」之约，解锁内阁行动「再造璃月」。启动该内阁行动后将开启筹建局势。"
+  gacha_keqing_liyue_plan_interaction_past: "曾启动璃月计划"
+  gacha_keqing_liyue_plan_interaction_act: "启动璃月计划"
+  gacha_keqing_liyue_plan_interaction_act_past: "璃月计划已处理"
   gacha_keqing_liyue_plan_select: "启动「璃月计划」"
 
   # === 特质 (Traits) ===

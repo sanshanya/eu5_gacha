@@ -170,6 +170,7 @@
 
   gacha_group: "Wishing Culture Group"
   gacha_group_desc: "An exclusive culture group for characters obtained through the wishing system."
+  gacha_demand: "Wishing Demand"
   gacha_select_title: "Select Wishing Target"
   gacha_delegate_regency_interaction_desc: "Delegate regency: temporarily allow a wishing character to administer daily affairs."
   gacha_delegate_regency_interaction_past: "Previously Delegated as Regent"
@@ -191,6 +192,8 @@
   # Subject Type
   gacha_archon_vassal: "Divine Dominion"
   gacha_archon_vassal_desc: "A nation blessed by the power of the Seven Archons, ruled by those who bear a Vision. As loyal allies of the suzerain, they shall follow in war and peace."
+  LEAD_gacha_archon_vassal: "$LIST$ is a [SUBJECT_TYPE.GetName]"
+  AM_gacha_archon_vassal: "[SUBJECT_TYPE.GetName] of $LIST$."
   # Diplomacy UI: cancel subject relation (otherwise shows raw localization keys)
   CANCEL_gacha_archon_vassal_TOOLTIP_HEADER: "Cancel the $gacha_archon_vassal$ of [TARGET_COUNTRY.GetName]"
   CANCEL_gacha_archon_vassal_TOOLTIP_HEADER_NO_TARGET: "Cancel the $gacha_archon_vassal$ of a [country|e]"
@@ -207,6 +210,9 @@
   gacha_create_liyue_nation_desc: "Rebuild the nation of Liyue in Dongguan, a land of commerce and contracts founded in the name of Rex Lapis, the Geo Archon."
   gacha_create_liyue_nation_active: "Rebuilding Liyue..."
   gacha_create_liyue_nation_action: "Rebuild Liyue Here"
+  gacha_create_liyue_nation_action_progress: "[Cabinet.GetActionNumProgress|%]"
+  gacha_create_liyue_nation_action_progress_wordier: "Preparations: [Cabinet.GetActionNumProgress|%]"
+  gacha_create_liyue_nation_action_progress_tooltip: "Progress towards rebuilding Liyue. Reach 100% to found Liyue."
 
   # Liyue - Country Modifiers
   STATIC_MODIFIER_NAME_gacha_liyue_foundation_boom_modifier: "Liyue Reborn: A Thousand Sails"
@@ -220,13 +226,17 @@
   gacha_nation_events.1.title: "The Founding of Liyue"
   gacha_nation_events.1.desc: "Amidst the misty harbor, a new nation is born. The spirit of contracts, upheld by Rex Lapis, shall endure in this land. Prosperous trade and steadfast agreements will form the foundation of this nation.\\n\\nAs suzerain, you have received Liyue's allegiance."
   gacha_nation_events.1.a: "May Rex Lapis protect us"
+
+  gacha_nation_events.2.title: "The Liyue Plan Stalls"
+  gacha_nation_events.2.desc: "Something prevents Liyue from being founded right now.\\n\\nPlease double-check the prerequisites (you own Dongguan, and Dongguan is the location of a Market), then try again.\\n\\nIf the issue persists, check the error log for messages related to #bold create_country_from_cores_in_our_locations#!."
+  gacha_nation_events.2.a: "Understood."
   
   gacha_nation_events.10.title: "The Liyue Plan"
   gacha_nation_events.10.desc: "New Year's night. Fireworks blaze outside the window. Keqing turns her back to the lights and covers the desk with blueprints. She does not watch the fireworks.\\n\\nViolet lightning at her fingertips illuminates the dense notes on the plans.\\n\\n#bold Keqing#!: Your Majesty, the ideal of Liyue is not a gift from the gods—it is forged by human hands.\\n\\nShe pauses, her gaze passing over the lanterns rising into the sky outside the window—so much like Xiao Lanterns.\\n\\n#bold Keqing#!: If you will honor your promise to rebuild Liyue, then in the name of the Yuheng I will take charge of the harbor. Trade routes, mines, urban works, and contracts—everything will be restored in the shortest time.\\n\\nYou look at the young woman's face. By the power of the wish, her appearance is unchanged from your first meeting.\\n\\nYet her eyes are no longer naïve, reflecting the lights drifting ever farther into the night."
   gacha_nation_events.10.a: "May the new Liyue's thousand sails set forth."
   gacha_nation_events.10.b: "Let's discuss it later."
 
-  gacha_nation_events.11.desc: "#bold Keqing#!: ...I will not fail your trust.\\n\\n#bold Unlocks Cabinet Action:#! #bold;color_yellow $gacha_create_liyue_nation$#!"
+  gacha_nation_events.11.desc: "#bold Keqing#!: ...I will not fail your trust.\\n\\n#bold Unlocks Cabinet Action:#! #bold;color_yellow $gacha_create_liyue_nation$#!\\n#bold Starts Situation:#! #bold;color_yellow $gacha_liyue_reconstruction$#!"
   gacha_nation_events.12.desc: "Keqing nods and gathers the plans.\\n\\n#bold Keqing#!: I was too hasty. Whenever you decide, I'll keep the proposal ready to be put into motion.\\n\\nShe turns to the fireworks outside the window, and says no more."
   gacha_nation_events.11.a: "That day won't be far."
 

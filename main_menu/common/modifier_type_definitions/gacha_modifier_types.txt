@@ -121,3 +121,33 @@ global_gacha_conversion_blocked = { boolean = yes game_data = { category = count
 local_gacha_conversion_blocked = { boolean = yes game_data = { category = location } }
 local_gacha_food_consumption = { percent = yes game_data = { category = location } }
 global_gacha_food_consumption = { percent = yes game_data = { category = country } }
+
+# Price cost modifiers (used by price = price:<id> in generic actions)
+gacha_liyue_build_market_price_cost_modifier={
+  color=bad
+  percent=yes
+  game_data={
+    category=country
+  }
+}
+gacha_liyue_invest_50_price_cost_modifier={
+  color=bad
+  percent=yes
+  game_data={
+    category=country
+  }
+}
+gacha_liyue_invest_200_price_cost_modifier={
+  color=bad
+  percent=yes
+  game_data={
+    category=country
+  }
+}
+gacha_liyue_invest_500_price_cost_modifier={
+  color=bad
+  percent=yes
+  game_data={
+    category=country
+  }
+}

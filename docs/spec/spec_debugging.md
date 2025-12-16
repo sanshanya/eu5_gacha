@@ -269,6 +269,30 @@ gacha_wish_interaction = {
 
 ---
 
+### Problem 6: GUI 日志刷屏（BlockList.GetBlocks / messages.gui:54）
+
+**症状**：
+- `error.log` / `game.log` 出现大量：
+  - `No context supplied (Use SetDataContext), wanted context of type 'BlockList' for 'BlockList.GetBlocks'`
+  - `FetchData failed for 'BlockList.GetBlocks' - gui/messages.gui:54`
+
+**原因（原版 UI 问题被触发）**：
+- base game `in_game/gui/messages.gui` 的 `template message_template` 在“描述区”使用了 `TooltipBlockListContent`
+- 但该区块没有设置 `textcontext`/`SetBlockListFromTextContext`，导致 `TooltipBlockListContent` 的 `datamodel = [BlockList.GetBlocks]` 找不到 BlockList 上下文时刷日志
+
+**本项目修复（⚠️ Vanilla Patch）**：
+- `in_game/gui/zz_gacha_messages_patch.gui`
+  - 覆盖原版 `template message_template`
+  - 为描述区补齐：
+    - `textcontext = "[MessagePopup.GetDescription]"`
+    - `ontextcontextchanged = "[SetBlockListFromTextContext(PdxGuiWidget.AccessSelf)]"`
+
+**兼容性提示**：
+- 这是对原版 GUI 的覆盖，可能与其他改消息弹窗的 UI 模组冲突。
+- 排查兼容性时，可临时移除 `in_game/gui/zz_gacha_messages_patch.gui` 做 A/B 对比。
+
+---
+
 ## 5. Best Practices & Tools
 
 **调试规范**: 详见 [design_project_guidelines.md](../design/design_project_guidelines.md) §调试原则
