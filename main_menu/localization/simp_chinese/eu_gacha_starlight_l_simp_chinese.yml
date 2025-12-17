@@ -10,6 +10,8 @@
   gacha_events.30.title: "命星之辉"
   gacha_events.30.desc: "这位英雄的力量已臻化境，无法再度提升。他们的命星化作一枚闪耀的星辉，期待着新的邂逅。\n\n你获得了 1 个星辉！\n当前星辉总数：#bold;color_yellow [ROOT.ScriptValue('gacha_starlight_display_sv')|0]#!"
   gacha_events.30.a: "收下星辉"
+  gacha_events.31.desc: "$gacha_already_owned_desc$\n\n你获得了 1 个星辉！\n当前星辉总数：#bold;color_yellow [ROOT.ScriptValue('gacha_starlight_display_sv')|0]#!"
+  gacha_events.31.a: "收下补偿"
 
   # === 星辉兑换事件 ===
   gacha_starlight_events.1.title: "星辉兑换"

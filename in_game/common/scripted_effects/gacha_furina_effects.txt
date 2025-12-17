@@ -32,47 +32,52 @@ gacha_create_furina_effect = {
             limit = { exists = scope:existing_char }
             
             scope:existing_char = {
-                # Ensure employer is root
                 if = {
                     limit = {
-                        NOT = { employer = root }
-                        NOT = { is_ruler = yes } # 允许其作为“七国君主”等在他国执政
+                        employer = root
                     }
-                    move_country = root
-                }
 
-                # 标准化身份（阶层/宗族）
-                gacha_standardize_character_identity = { who = furina }
+	                # 标准化身份（阶层/宗族）
+	                gacha_standardize_character_identity = { who = furina }
+	
+	                # Save scope for UI
+	                save_scope_as = gacha_last_pulled_char
+	
+	                # Check for C6 overflow
+	                if = {
+	                    limit = { 
+	                        has_variable = gacha_constellation_lvl
+	                        var:gacha_constellation_lvl >= 6 
+	                    }
+	                    # Overflow: Starlight
+	                    root = {
+	                        change_variable = { name = gacha_starlight add = 1 }
+	                        trigger_event_non_silently = { id = gacha_events.30 }
+	                    }
+	                }
+	                else = {
+	                    # Normal Upgrade
+	                    # 1. Increment Level
+	                    if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+	                    change_variable = { name = gacha_constellation_lvl add = 1 }
+	
+	                    # 2. Apply Stats & Modifiers (Delta Logic)
+	                    gacha_apply_constellation_stats_effect = { who = furina }
+	                    gacha_furina_apply_country_modifiers = yes
+	                    gacha_furina_update_traits = yes
+	
+	                    # 3. Trigger Event
+	                    gacha_furina_trigger_event = yes
+	                }
+				}
+					else = {
+						# World-unique: the character exists elsewhere; do not steal or upgrade.
+						root = {
+							change_variable = { name = gacha_starlight add = 1 }
+							trigger_event_non_silently = { id = gacha_events.31 }
+						}
+					}
 
-                # Save scope for UI
-                save_scope_as = gacha_last_pulled_char
-
-                # Check for C6 overflow
-                if = {
-                    limit = { 
-                        has_variable = gacha_constellation_lvl
-                        var:gacha_constellation_lvl >= 6 
-                    }
-                    # Overflow: Starlight
-                    root = {
-                        change_variable = { name = gacha_starlight add = 1 }
-                        trigger_event_non_silently = { id = gacha_events.30 }
-                    }
-                }
-                else = {
-                    # Normal Upgrade
-                    # 1. Increment Level
-                    if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
-                    change_variable = { name = gacha_constellation_lvl add = 1 }
-
-                    # 2. Apply Stats & Modifiers (Delta Logic)
-                    gacha_apply_constellation_stats_effect = { who = furina }
-                    gacha_furina_apply_country_modifiers = yes
-                    gacha_furina_update_traits = yes
-
-                    # 3. Trigger Event
-                    gacha_furina_trigger_event = yes
-                }
             }
             clear_saved_scope = existing_char
         }

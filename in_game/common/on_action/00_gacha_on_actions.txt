@@ -82,25 +82,74 @@ gacha_on_character_death_cleanup_action = {
 # ------------------------------------------------------------------------------
 gacha_on_game_start_initialize_action = {
     trigger = { always = yes }
-    effect = {
-        # 兜底：清理临时 scopes（避免旧存档/崩溃残留引用污染 UI）
-        gacha_clear_gacha_saved_scopes = yes
+	    effect = {
+	        # 兜底：清理临时 scopes（避免旧存档/崩溃残留引用污染 UI）
+	        gacha_clear_gacha_saved_scopes = yes
 
-        # 开局/读档兜底：初始化玩家抽卡状态，避免 tooltip/触发器读取未初始化变量
-        every_country = {
-            limit = { is_ai = no }
-            gacha_ensure_state_initialized = yes
+	        # 开局/读档兜底：初始化玩家抽卡状态，避免 tooltip/触发器读取未初始化变量
+		        every_country = {
+		            limit = { is_ai = no }
+		            gacha_ensure_state_initialized = yes
 
-            # 防止上一次崩溃/强退导致锁变量残留，使按钮永久变灰
-            remove_variable = gacha_event_lock
-            remove_variable = gacha_liyue_plan_lock
-        }
+		            # 防止上一次崩溃/强退导致锁变量残留，使按钮永久变灰
+		            remove_variable = gacha_event_lock
+		            remove_variable = gacha_liyue_plan_lock
+		        }
 
-        # 迁移/兜底：禁止 AI 持有“神之眷属”（旧存档/其他脚本可能强行 make_subject_of）
-        every_country = {
-            limit = { is_ai = yes }
-            every_subject = {
-                limit = { is_subject_type = gacha_archon_vassal }
+	        # 读档/开局自愈：世界唯一角色的“已召唤”标记应为全局变量；按实际存活角色重建
+	        if = {
+	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_xinhai_modifier } } }
+	            set_global_variable = { name = gacha_xinhai_is_summoned value = 1 }
+	        }
+	        else = { remove_global_variable = gacha_xinhai_is_summoned }
+
+	        if = {
+	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_fischl_modifier } } }
+	            set_global_variable = { name = gacha_fischl_is_summoned value = 1 }
+	        }
+	        else = { remove_global_variable = gacha_fischl_is_summoned }
+
+	        if = {
+	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_keqing_modifier } } }
+	            set_global_variable = { name = gacha_keqing_is_summoned value = 1 }
+	        }
+	        else = { remove_global_variable = gacha_keqing_is_summoned }
+
+	        if = {
+	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_raiden_modifier } } }
+	            set_global_variable = { name = gacha_raiden_is_summoned value = 1 }
+	        }
+	        else = { remove_global_variable = gacha_raiden_is_summoned }
+
+	        if = {
+	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_furina_modifier } } }
+	            set_global_variable = { name = gacha_furina_is_summoned value = 1 }
+	        }
+	        else = { remove_global_variable = gacha_furina_is_summoned }
+
+	        if = {
+	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_hutao_modifier } } }
+	            set_global_variable = { name = gacha_hutao_is_summoned value = 1 }
+	        }
+	        else = { remove_global_variable = gacha_hutao_is_summoned }
+
+	        if = {
+	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_klee_modifier } } }
+	            set_global_variable = { name = gacha_klee_is_summoned value = 1 }
+	        }
+	        else = { remove_global_variable = gacha_klee_is_summoned }
+
+	        if = {
+	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_nahida_modifier } } }
+	            set_global_variable = { name = gacha_nahida_is_summoned value = 1 }
+	        }
+	        else = { remove_global_variable = gacha_nahida_is_summoned }
+
+	        # 迁移/兜底：禁止 AI 持有“神之眷属”（旧存档/其他脚本可能强行 make_subject_of）
+	        every_country = {
+	            limit = { is_ai = yes }
+	            every_subject = {
+	                limit = { is_subject_type = gacha_archon_vassal }
                 make_subject_of = { target = prev type = subject_type:vassal }
             }
         }

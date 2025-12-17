@@ -22,36 +22,34 @@ gacha_create_liyue_nation_from_plan = {
 			location:dongguan = { this = market.location }
 		}
 
-		# Find Keqing (alive) globally (robust vs. character ownership changes)
-		clear_saved_scope = keqing_char
-		random_country = {
-			limit = {
-				any_character = {
-					is_alive = yes
-					has_character_modifier = gacha_keqing_modifier
+			# Find Keqing for THIS overlord first (MP-safe; avoids picking other players' Keqing).
+			clear_saved_scope = keqing_char
+				scope:liyue_overlord = {
+					random_character = {
+						limit = {
+							is_alive = yes
+						has_character_modifier = gacha_keqing_modifier
+					}
+						save_scope_as = keqing_char
+					}
 				}
-			}
-			random_character = {
-				limit = {
-					is_alive = yes
-					has_character_modifier = gacha_keqing_modifier
-				}
-				save_scope_as = keqing_char
-			}
-		}
 
-		# 1) Add core on Dongguan and create the country from our cores
-		location:dongguan = { add_core = c:GL1 }
-		create_country_from_cores_in_our_locations = c:GL1
+				# World-unique: Keqing must be owned by the overlord (no global fallback / no stealing in MP).
+				if = {
+					limit = { exists = scope:keqing_char }
 
-		# Success path
-		if = {
-			limit = { country_exists = c:GL1 }
+					# 1) Add core on Dongguan and create the country from our cores
+					location:dongguan = { add_core = c:GL1 }
+					create_country_from_cores_in_our_locations = c:GL1
 
-			# Ensure Dongguan belongs to Liyue (some setups may not auto-transfer)
-			if = {
-				limit = { location:dongguan = { owner = scope:liyue_overlord } }
-				location:dongguan = { change_location_owner = c:GL1 }
+					# Success path
+					if = {
+						limit = { country_exists = c:GL1 }
+
+				# Ensure Dongguan belongs to Liyue (some setups may not auto-transfer)
+				if = {
+					limit = { location:dongguan = { owner = scope:liyue_overlord } }
+					location:dongguan = { change_location_owner = c:GL1 }
 			}
 
 			# Transfer Keqing country modifiers away from the overlord (optional safety)
@@ -154,19 +152,28 @@ gacha_create_liyue_nation_from_plan = {
 			# Cleanup
 			clear_saved_scope = keqing_char
 
-			# Notify the overlord
-			trigger_event_non_silently = gacha_nation_events.1
-		}
-		# Failure path (throttled to avoid monthly spam)
-		else = {
-			if = {
-				limit = { NOT = { has_variable = gacha_liyue_create_failed_notice_lock } }
-				set_variable = { name = gacha_liyue_create_failed_notice_lock months = 1 }
-				trigger_event_non_silently = gacha_nation_events.2
+				# Notify the overlord
+				trigger_event_non_silently = gacha_nation_events.1
 			}
-			clear_saved_scope = keqing_char
+			# Failure path (throttled to avoid monthly spam)
+					else = {
+						if = {
+							limit = { NOT = { has_variable = gacha_liyue_create_failed_notice_lock } }
+							set_variable = { name = gacha_liyue_create_failed_notice_lock months = 1 }
+							trigger_event_non_silently = gacha_nation_events.2
+						}
+						clear_saved_scope = keqing_char
+					}
+				}
+				else = {
+					if = {
+						limit = { NOT = { has_variable = gacha_liyue_create_failed_notice_lock } }
+						set_variable = { name = gacha_liyue_create_failed_notice_lock months = 1 }
+						trigger_event_non_silently = gacha_nation_events.2
+					}
+					clear_saved_scope = keqing_char
+				}
 		}
-	}
 
 	clear_saved_scope = liyue_overlord
 }

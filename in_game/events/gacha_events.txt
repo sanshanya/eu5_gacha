@@ -305,3 +305,25 @@ gacha_events.30 = {
         # 仅提示，不做其他操作
     }
 }
+
+# ==========================================
+# 31. 重复祈愿（他国已拥有）
+# ==========================================
+gacha_events.31 = {
+    type = country_event
+    title = gacha_already_owned_title
+    desc  = gacha_events.31.desc
+    
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+    }
+
+    option = {
+        name = gacha_events.31.a
+        # 仅提示，不做其他操作
+    }
+}

@@ -10,78 +10,120 @@ gacha_create_keqing_effect = {
     if = {
         limit = { has_global_variable = gacha_keqing_is_summoned }
         
-	        clear_saved_scope = existing_char
+			        clear_saved_scope = existing_char
 
-	        random_country = {
-	            limit = {
-	                any_character = {
-	                    is_alive = yes
-	                    has_character_modifier = gacha_keqing_modifier
-	                }
-	            }
-	            random_character = {
-	                limit = {
-	                    is_alive = yes
-	                    has_character_modifier = gacha_keqing_modifier
-	                }
-	                save_scope_as = existing_char
-	            }
-	        }
+			        # Prefer: find Keqing in this country
+			        random_character = {
+			            limit = {
+			                is_alive = yes
+			                has_character_modifier = gacha_keqing_modifier
+			            }
+			            save_scope_as = existing_char
+			        }
 
+			        # If Keqing is currently ruling Liyue (GL1) as our subject, upgrade that instance.
+			        if = {
+			            limit = {
+			                NOT = { exists = scope:existing_char }
+			                country_exists = c:GL1
+			                c:GL1 = { is_subject_of = root }
+			            }
+			            c:GL1 = {
+			                random_character = {
+			                    limit = {
+			                        is_alive = yes
+			                        has_character_modifier = gacha_keqing_modifier
+			                    }
+			                    save_scope_as = existing_char
+			                }
+			            }
+			        }
+
+			        # Fallback: global search (world-unique)
+			        if = {
+			            limit = { NOT = { exists = scope:existing_char } }
+			            random_country = {
+			                limit = {
+			                    any_character = {
+			                        is_alive = yes
+			                        has_character_modifier = gacha_keqing_modifier
+			                    }
+			                }
+			                random_character = {
+			                    limit = {
+			                        is_alive = yes
+			                        has_character_modifier = gacha_keqing_modifier
+			                    }
+			                    save_scope_as = existing_char
+			                }
+			            }
+			        }
+		
         if = {
             limit = { exists = scope:existing_char }
             
             scope:existing_char = {
-                # Ensure employer is root
                 if = {
                     limit = {
-                        NOT = { employer = root }
-                        NOT = { is_ruler = yes } # 允许其作为“七国君主”等在他国执政
+                        OR = {
+                            employer = root
+                            AND = {
+                                country_exists = c:GL1
+                                employer = c:GL1
+                                c:GL1 = { is_subject_of = root }
+                            }
+                        }
                     }
-                    move_country = root
-                }
 
-                # 标准化身份（阶层/宗族）
-                gacha_standardize_character_identity = { who = keqing }
-
-                # Save scope for UI
-                save_scope_as = gacha_last_pulled_char
-
-                # Check for C6 overflow
-                if = {
-                    limit = { 
-                        has_variable = gacha_constellation_lvl
-                        var:gacha_constellation_lvl >= 6 
-                    }
-                    # Overflow: Starlight
-                    root = {
-                        change_variable = { name = gacha_starlight add = 1 }
-                        trigger_event_non_silently = { id = gacha_events.30 }
-                    }
-                }
-                else = {
-                    # Normal Upgrade
-                    # 1. Increment Level
-                    if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
-                    change_variable = { name = gacha_constellation_lvl add = 1 }
-
-                    # 2. Apply Stats & Modifiers (Delta Logic)
-                    gacha_apply_constellation_stats_effect = { who = keqing }
-                    gacha_keqing_apply_country_modifiers = yes
-                    gacha_keqing_update_traits = yes
-
-                    # 3. Trigger Event
-                    gacha_keqing_trigger_event = yes
-                }
+		                # 标准化身份（阶层/宗族）
+		                gacha_standardize_character_identity = { who = keqing }
+		
+		                # Save scope for UI
+		                save_scope_as = gacha_last_pulled_char
+		
+		                # Check for C6 overflow
+		                if = {
+		                    limit = { 
+		                        has_variable = gacha_constellation_lvl
+		                        var:gacha_constellation_lvl >= 6 
+		                    }
+		                    # Overflow: Starlight
+		                    root = {
+		                        change_variable = { name = gacha_starlight add = 1 }
+		                        trigger_event_non_silently = { id = gacha_events.30 }
+		                    }
+		                }
+		                else = {
+		                    # Normal Upgrade
+		                    # 1. Increment Level
+		                    if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+		                    change_variable = { name = gacha_constellation_lvl add = 1 }
+		
+		                    # 2. Apply Stats & Modifiers (Delta Logic)
+		                    gacha_apply_constellation_stats_effect = { who = keqing }
+		                    gacha_keqing_apply_country_modifiers = yes
+		                    gacha_keqing_update_traits = yes
+		
+		                    # 3. Trigger Event
+		                    gacha_keqing_trigger_event = yes
+		                }
+		            }
+		            else = {
+		                # World-unique: the character exists elsewhere; do not steal or upgrade.
+		                root = {
+		                    change_variable = { name = gacha_starlight add = 1 }
+		                    trigger_event_non_silently = { id = gacha_events.31 }
+		                }
+		            }
             }
             clear_saved_scope = existing_char
         }
-	        else = {
-	            # Error fallback: Owned but not found (Dead/Dismissed)? 
-	            # Treat as new summon to ensure player gets the character.
-	            remove_global_variable = gacha_keqing_is_summoned
-	        }
-	    }
+		        else = {
+		            # Error fallback: Owned but not found (Dead/Dismissed)? 
+		            # Treat as new summon to ensure player gets the character.
+		            remove_global_variable = gacha_keqing_is_summoned
+		        }
+		    }
 
     # === B. New Creation Logic ===
     if = {
@@ -122,14 +164,14 @@ gacha_create_keqing_effect = {
                         }
                     }
                     root = { trigger_event_non_silently = { id = gacha_keqing_events.1 } }
-                }
-            }
-        }
-        
-        set_global_variable = { name = gacha_keqing_is_summoned value = 1 }
-        clear_saved_scope = new_char
-    }
-}
+	            }
+	        }
+		        }
+		        
+		        set_global_variable = { name = gacha_keqing_is_summoned value = 1 }
+		        clear_saved_scope = new_char
+	    }
+	}
 
 # ------------------------------------------------------------------------------
 # 2. Debug Helper: Replay Intro (Two-Stage Arrival) [DISABLED FOR TEST]

@@ -21,6 +21,10 @@ gacha_starlight_events.1 = {
         name = gacha_starlight_events.1.xinhai
         trigger = {
             var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_xinhai_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_xinhai_modifier }
+            }
         }
         
         hidden_effect = {
@@ -34,6 +38,10 @@ gacha_starlight_events.1 = {
         name = gacha_starlight_events.1.raiden
         trigger = {
             var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_raiden_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_raiden_modifier }
+            }
         }
         
         hidden_effect = {
@@ -47,6 +55,17 @@ gacha_starlight_events.1 = {
         name = gacha_starlight_events.1.keqing
         trigger = {
             var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_keqing_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_keqing_modifier }
+                AND = {
+                    country_exists = c:GL1
+                    c:GL1 = {
+                        is_subject_of = root
+                        any_character = { is_alive = yes has_character_modifier = gacha_keqing_modifier }
+                    }
+                }
+            }
         }
         
         hidden_effect = {
@@ -60,6 +79,10 @@ gacha_starlight_events.1 = {
         name = gacha_starlight_events.1.furina
         trigger = {
             var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_furina_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_furina_modifier }
+            }
         }
         
         hidden_effect = {
@@ -73,6 +96,10 @@ gacha_starlight_events.1 = {
         name = gacha_starlight_events.1.hutao
         trigger = {
             var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_hutao_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_hutao_modifier }
+            }
         }
         
         hidden_effect = {
@@ -85,6 +112,10 @@ gacha_starlight_events.1 = {
         name = gacha_starlight_events.1.fischl
         trigger = {
             var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_fischl_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_fischl_modifier }
+            }
         }
         
         hidden_effect = {
@@ -97,6 +128,10 @@ gacha_starlight_events.1 = {
         name = gacha_starlight_events.1.klee
         trigger = {
             var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_klee_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_klee_modifier }
+            }
         }
         
         hidden_effect = {
@@ -109,6 +144,10 @@ gacha_starlight_events.1 = {
         name = gacha_starlight_events.1.nahida
         trigger = {
             var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_nahida_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_nahida_modifier }
+            }
         }
         
         hidden_effect = {

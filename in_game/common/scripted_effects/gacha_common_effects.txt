@@ -134,51 +134,51 @@ gacha_ensure_state_initialized = {
     # 选取 7 个数值，满足：
     # 1. 在 0-10000 间均匀分布 (影响 50/50 初始值)
     # 2. 对 7 取模覆盖 0-6 (影响常驻首抽)
-    random_list = {
-      10 = {
-        set_variable = {
-          name = gacha_entropy_gold_amt
-          value = 1428
-        }
-      }			# Mod 7 = 0
-      10 = {
-        set_variable = {
-          name = gacha_entropy_gold_amt
-          value = 2857
-        }
-      }			# Mod 7 = 1
-      10 = {
-        set_variable = {
-          name = gacha_entropy_gold_amt
-          value = 4286
-        }
-      }			# Mod 7 = 2
-      10 = {
-        set_variable = {
-          name = gacha_entropy_gold_amt
-          value = 5716
-        }
-      }			# Mod 7 = 3 (Adjusted)
-      10 = {
-        set_variable = {
-          name = gacha_entropy_gold_amt
-          value = 7144
-        }
-      }			# Mod 7 = 4
-      10 = {
-        set_variable = {
-          name = gacha_entropy_gold_amt
-          value = 8573
-        }
-      }			# Mod 7 = 5
-      10 = {
-        set_variable = {
-          name = gacha_entropy_gold_amt
-          value = 9995
-        }
-      }			# Mod 7 = 6
-    }
-  }
+	    random_list = {
+	      10 = {
+	        set_variable = {
+	          name = gacha_entropy_gold_amt
+	          value = -1428
+	        }
+	      }			# abs(Mod 7) = 0
+	      10 = {
+	        set_variable = {
+	          name = gacha_entropy_gold_amt
+	          value = -2857
+	        }
+	      }			# abs(Mod 7) = 1
+	      10 = {
+	        set_variable = {
+	          name = gacha_entropy_gold_amt
+	          value = -4286
+	        }
+	      }			# abs(Mod 7) = 2
+	      10 = {
+	        set_variable = {
+	          name = gacha_entropy_gold_amt
+	          value = -5716
+	        }
+	      }			# abs(Mod 7) = 3 (Adjusted)
+	      10 = {
+	        set_variable = {
+	          name = gacha_entropy_gold_amt
+	          value = -7144
+	        }
+	      }			# abs(Mod 7) = 4
+	      10 = {
+	        set_variable = {
+	          name = gacha_entropy_gold_amt
+	          value = -8573
+	        }
+	      }			# abs(Mod 7) = 5
+	      10 = {
+	        set_variable = {
+	          name = gacha_entropy_gold_amt
+	          value = -9995
+	        }
+	      }			# abs(Mod 7) = 6
+	    }
+	  }
   # --- 其他持久资源 ---
   if = {
     limit = {
@@ -211,49 +211,49 @@ gacha_remove_summoned_flag_for_character = {
     limit = {
       has_character_modifier = gacha_xinhai_modifier
     }
-    remove_global_variable = gacha_xinhai_is_summoned
+    root = { remove_global_variable = gacha_xinhai_is_summoned }
   }
   if = {
     limit = {
       has_character_modifier = gacha_fischl_modifier
     }
-    remove_global_variable = gacha_fischl_is_summoned
+    root = { remove_global_variable = gacha_fischl_is_summoned }
   }
   if = {
     limit = {
       has_character_modifier = gacha_keqing_modifier
     }
-    remove_global_variable = gacha_keqing_is_summoned
+    root = { remove_global_variable = gacha_keqing_is_summoned }
   }
   if = {
     limit = {
       has_character_modifier = gacha_raiden_modifier
     }
-    remove_global_variable = gacha_raiden_is_summoned
+    root = { remove_global_variable = gacha_raiden_is_summoned }
   }
   if = {
     limit = {
       has_character_modifier = gacha_furina_modifier
     }
-    remove_global_variable = gacha_furina_is_summoned
+    root = { remove_global_variable = gacha_furina_is_summoned }
   }
   if = {
     limit = {
       has_character_modifier = gacha_hutao_modifier
     }
-    remove_global_variable = gacha_hutao_is_summoned
+    root = { remove_global_variable = gacha_hutao_is_summoned }
   }
   if = {
     limit = {
       has_character_modifier = gacha_klee_modifier
     }
-    remove_global_variable = gacha_klee_is_summoned
+    root = { remove_global_variable = gacha_klee_is_summoned }
   }
   if = {
     limit = {
       has_character_modifier = gacha_nahida_modifier
     }
-    remove_global_variable = gacha_nahida_is_summoned
+    root = { remove_global_variable = gacha_nahida_is_summoned }
   }
 }
 

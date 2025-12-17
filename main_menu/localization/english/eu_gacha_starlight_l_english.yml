@@ -10,6 +10,8 @@
   gacha_events.30.title: "Radiance of the Fated Star"
   gacha_events.30.desc: "This hero has reached the absolute peak of their strength; their constellation can grow no further. Their fated star condenses into a shard of shimmering Starlight, awaiting a new destined bearer.\n\nCurrent Starlight: #color_yellow [ROOT.ScriptValue('gacha_starlight_display_sv')|0]#!"
   gacha_events.30.a: "Claim the Starlight"
+  gacha_events.31.desc: "$gacha_already_owned_desc$\n\nCurrent Starlight: #color_yellow [ROOT.ScriptValue('gacha_starlight_display_sv')|0]#!"
+  gacha_events.31.a: "Accept the compensation"
 
   # === Starlight Exchange Event ===
   gacha_starlight_events.1.title: "Starlight Exchange"
