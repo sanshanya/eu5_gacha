@@ -42,15 +42,28 @@ gacha_create_liyue_nation_from_plan = {
 					location:dongguan = { add_core = c:GL1 }
 					create_country_from_cores_in_our_locations = c:GL1
 
-					# Success path
-					if = {
-						limit = { country_exists = c:GL1 }
-
-				# Ensure Dongguan belongs to Liyue (some setups may not auto-transfer)
+				# Success path
 				if = {
-					limit = { location:dongguan = { owner = scope:liyue_overlord } }
-					location:dongguan = { change_location_owner = c:GL1 }
-			}
+					limit = { country_exists = c:GL1 }
+
+					# Unlock: once Liyue is founded, enable the Liyue pool globally for all players
+					set_global_variable = { name = gacha_liyue_pool_unlocked value = 1 }
+
+					# Start hidden Liyue auto-recruitment timer (monthly, fires every 12 months)
+					situation:gacha_liyue_auto_recruitment ?= {
+						set_variable = { name = target_country value = c:GL1 }
+						set_variable = { name = gacha_liyue_recruit_months value = 0 }
+					}
+					if = {
+						limit = { NOT = { situation:gacha_liyue_auto_recruitment = { situation_is_active = yes } } }
+						activate_situation = situation:gacha_liyue_auto_recruitment
+					}
+
+					# Ensure Dongguan belongs to Liyue (some setups may not auto-transfer)
+					if = {
+						limit = { location:dongguan = { owner = scope:liyue_overlord } }
+						location:dongguan = { change_location_owner = c:GL1 }
+				}
 
 			# Transfer Keqing country modifiers away from the overlord (optional safety)
 			remove_country_modifier = gacha_keqing_country_modifier
@@ -78,6 +91,17 @@ gacha_create_liyue_nation_from_plan = {
 					}
 					set_capital = scope:liyue_capital_loc
 					clear_saved_scope = liyue_capital_loc
+				}
+
+				# AI 很难主动建造（成本/需求/权重等），因此在璃月建国时直接建好“璃月港”
+				if = {
+					limit = { location:dongguan = { owner = c:GL1 } }
+					location:dongguan = {
+						if = {
+							limit = { NOT = { has_building = building_type:gacha_liyue_harbor } }
+							change_building_level_in_location = { building = building_type:gacha_liyue_harbor value = 1 }
+						}
+					}
 				}
 
 				change_culture = culture:yuehai_culture
@@ -135,11 +159,7 @@ gacha_create_liyue_nation_from_plan = {
 					}
 				}
 
-				# Permanent + temporary economic boons
-				if = {
-					limit = { NOT = { has_country_modifier = gacha_liyue_trade_hub_modifier } }
-					add_country_modifier = { modifier = gacha_liyue_trade_hub_modifier years = -1 mode = add_and_extend }
-				}
+				# Temporary economic boons
 				add_country_modifier = { modifier = gacha_liyue_foundation_boom_modifier years = 10 mode = add }
 
 				# Make Liyue our subject (player-only safeguards exist in subject type)
@@ -176,4 +196,129 @@ gacha_create_liyue_nation_from_plan = {
 		}
 
 	clear_saved_scope = liyue_overlord
+}
+
+# ==============================================================================
+# Liyue - Auto Recruitment (AI)
+# 说明：
+# - 由 situation:gacha_liyue_auto_recruitment 每 12 个月触发一次（建国后 1 年第一次触发）
+# - 按固定顺序招募“璃月池”角色（目前仅：凝光）
+# - 世界唯一：若玩家已抢先召唤，则璃月跳过该角色（不偷人、不发补偿）
+# - AI 简化：首次招募即直接满命（C6），避免 AI 抽卡重复与事件刷屏
+# ==============================================================================
+
+gacha_liyue_ai_recruit_liyue_pool_once = {
+	# Only for AI-controlled Liyue (GL1) and only after the pool is globally unlocked
+	if = {
+		limit = {
+			is_ai = yes
+			has_global_variable = gacha_liyue_pool_unlocked
+		}
+
+		# 持久索引：固定顺序（将来璃月池扩容只需在此追加分支）
+		if = { limit = { NOT = { has_variable = gacha_liyue_ai_pool_idx } } set_variable = { name = gacha_liyue_ai_pool_idx value = 0 } }
+
+		# 池大小（目前仅 1：凝光）
+		set_local_variable = { name = gacha_liyue_pool_size value = 1 }
+
+		# 试探一次：最多遍历池大小次，找到第一个“尚未被世界召唤”的角色
+		set_local_variable = { name = gacha_scan_tries value = 0 }
+		set_local_variable = { name = gacha_scan_idx value = 0 }
+		if = { limit = { has_variable = gacha_liyue_ai_pool_idx } set_local_variable = { name = gacha_scan_idx value = var:gacha_liyue_ai_pool_idx } }
+
+		set_local_variable = { name = gacha_found_bool value = 0 }
+		while = {
+			limit = {
+				local_var:gacha_scan_tries < local_var:gacha_liyue_pool_size
+				local_var:gacha_found_bool = 0
+			}
+
+			# Wrap idx
+			if = {
+				limit = { local_var:gacha_scan_idx >= local_var:gacha_liyue_pool_size }
+				set_local_variable = { name = gacha_scan_idx value = 0 }
+			}
+
+			# idx 0 -> Ningguang
+			if = {
+				limit = {
+					local_var:gacha_scan_idx = 0
+					NOT = { has_global_variable = gacha_ningguang_is_summoned }
+				}
+				gacha_liyue_ai_force_c6_ningguang = yes
+				set_local_variable = { name = gacha_found_bool value = 1 }
+			}
+
+			# Advance scan
+			if = {
+				limit = { local_var:gacha_found_bool = 0 }
+				change_local_variable = { name = gacha_scan_idx add = 1 }
+				change_local_variable = { name = gacha_scan_tries add = 1 }
+			}
+		}
+
+		# 找到后：下一次从 (idx+1) 开始，保持固定顺序
+		if = {
+			limit = { local_var:gacha_found_bool = 1 }
+			change_local_variable = { name = gacha_scan_idx add = 1 }
+			if = {
+				limit = { local_var:gacha_scan_idx >= local_var:gacha_liyue_pool_size }
+				set_local_variable = { name = gacha_scan_idx value = 0 }
+			}
+			set_variable = { name = gacha_liyue_ai_pool_idx value = local_var:gacha_scan_idx }
+		}
+	}
+}
+
+gacha_liyue_ai_force_c6_ningguang = {
+	# World-unique precondition: only create if she doesn't exist anywhere yet
+	if = {
+		limit = { NOT = { has_global_variable = gacha_ningguang_is_summoned } }
+
+		# AI 简化：直接创建并拉到满命（C6），不触发任何剧情事件
+		create_character = {
+			first_name = gacha_first_name_ningguang
+			last_name = gacha_last_name_ningguang
+			female = yes
+			age = 500
+			culture = culture:gacha_culture
+			religion = religion:sanjiao
+			birth_location = location:la_mothe_en_bassigny
+			estate = estate_type:gacha_estate
+			adm = { 80 90 }
+			dip = { 90 100 }
+			mil = { 60 75 }
+			create_in_limbo = yes
+			save_scope_as = new_char
+		}
+
+		if = {
+			limit = { exists = scope:new_char }
+			scope:new_char = {
+				# 1) Register at C0
+				gacha_register_new_character = { who = ningguang }
+
+				# 2) Ensure C0 trait state exists
+				gacha_ningguang_update_traits = yes
+
+				# 3) Upgrade to C6 (delta steps; no events)
+				while = {
+					limit = { var:gacha_constellation_lvl < 6 }
+					change_variable = { name = gacha_constellation_lvl add = 1 }
+					gacha_apply_constellation_stats_effect = { who = ningguang }
+					gacha_ningguang_update_traits = yes
+				}
+
+				# 4) Apply country modifiers (idempotent rebuild)
+				gacha_ningguang_apply_country_modifiers = yes
+			}
+
+			set_global_variable = { name = gacha_ningguang_is_summoned value = 1 }
+			clear_saved_scope = new_char
+		}
+
+		# Avoid polluting UI saved scopes
+		clear_saved_scope = gacha_last_pulled_char
+		clear_saved_scope = gacha_c3_target_char
+	}
 }

@@ -1,0 +1,49 @@
+﻿gacha_liyue_auto_recruitment = {
+  # 仅通过脚本强制激活（不会自然出现）
+  monthly_spawn_chance = 0
+
+  can_start = { always = no }
+
+  # 不显示在 UI（纯逻辑用）
+  visible = { always = no }
+
+  # 目标国家不存在/璃月不存在时结束（避免残留）
+  can_end = {
+    OR = {
+      NOT = { exists = var:target_country }
+      NOT = { country_exists = c:GL1 }
+    }
+  }
+
+  on_start = {
+    # 计数：从激活开始累计月数；12 个月触发一次“璃月池招募”
+    set_variable = { name = gacha_liyue_recruit_months value = 0 }
+  }
+
+  on_monthly = {
+    # 目标国家不存在时不再推进（can_end 会结束）
+    if = {
+      limit = { exists = var:target_country }
+
+      # 若璃月不存在则结束（防止被吞并/灭国后持续运行）
+      if = {
+        limit = { NOT = { country_exists = c:GL1 } }
+        end_situation = situation:gacha_liyue_auto_recruitment
+      }
+      else = {
+        # 月计数 +1
+        change_variable = { name = gacha_liyue_recruit_months add = 1 }
+
+        # 到点：触发一次招募，然后回到 0（固定每 12 个月一次）
+        if = {
+          limit = { var:gacha_liyue_recruit_months >= 12 }
+          set_variable = { name = gacha_liyue_recruit_months value = 0 }
+
+          # Liyue (GL1) AI 招募一次璃月池（固定顺序、世界唯一、直接满命）
+          # 注意：必须通过 country_event 触发，确保 root=country（避免 situation root 破坏角色注册逻辑）
+          var:target_country = { trigger_event_non_silently = { id = gacha_liyue_events.1 } }
+        }
+      }
+    }
+  }
+}

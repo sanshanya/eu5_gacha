@@ -123,62 +123,19 @@ gacha_ensure_state_initialized = {
       value = 1
     }
   }	# 默认开启
-  # --- 熵资源 (_amt) ---
+  # --- RNG State (_amt) ---
   if = {
     limit = {
       NOT = {
         has_variable = gacha_entropy_gold_amt
       }
     }
-    # [V3 Fix] 使用 random_list 初始化熵，破除开局定数组
-    # 选取 7 个数值，满足：
-    # 1. 在 0-10000 间均匀分布 (影响 50/50 初始值)
-    # 2. 对 7 取模覆盖 0-6 (影响常驻首抽)
-	    random_list = {
-	      10 = {
-	        set_variable = {
-	          name = gacha_entropy_gold_amt
-	          value = -1428
-	        }
-	      }			# abs(Mod 7) = 0
-	      10 = {
-	        set_variable = {
-	          name = gacha_entropy_gold_amt
-	          value = -2857
-	        }
-	      }			# abs(Mod 7) = 1
-	      10 = {
-	        set_variable = {
-	          name = gacha_entropy_gold_amt
-	          value = -4286
-	        }
-	      }			# abs(Mod 7) = 2
-	      10 = {
-	        set_variable = {
-	          name = gacha_entropy_gold_amt
-	          value = -5716
-	        }
-	      }			# abs(Mod 7) = 3 (Adjusted)
-	      10 = {
-	        set_variable = {
-	          name = gacha_entropy_gold_amt
-	          value = -7144
-	        }
-	      }			# abs(Mod 7) = 4
-	      10 = {
-	        set_variable = {
-	          name = gacha_entropy_gold_amt
-	          value = -8573
-	        }
-	      }			# abs(Mod 7) = 5
-	      10 = {
-	        set_variable = {
-	          name = gacha_entropy_gold_amt
-	          value = -9995
-	        }
-	      }			# abs(Mod 7) = 6
-	    }
-	  }
+    # 说明：
+    # - 此变量现在作为抽卡 PRNG 状态（0-9999），每抽都会在内核中步进（LCG）
+    # - 初始化只需要一次 seed；即使引擎随机与日期相关，也不会造成“同日多抽锁死”
+    set_variable = { name = gacha_entropy_gold_amt value = this.random_integer }
+    change_variable = { name = gacha_entropy_gold_amt modulo = 10000 }
+  }
   # --- 其他持久资源 ---
   if = {
     limit = {
@@ -254,6 +211,12 @@ gacha_remove_summoned_flag_for_character = {
       has_character_modifier = gacha_nahida_modifier
     }
     root = { remove_global_variable = gacha_nahida_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_ningguang_modifier
+    }
+    root = { remove_global_variable = gacha_ningguang_is_summoned }
   }
 }
 

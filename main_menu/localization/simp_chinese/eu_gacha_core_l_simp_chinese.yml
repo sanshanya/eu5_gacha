@@ -46,6 +46,7 @@
   gacha_events.1.a10: "盛大祈愿 (十连): @gold!#color_yellow [ROOT.ScriptValue('gacha_ten_pull_cost_sv')|0]#!"
   gacha_events.1.starlight_exchange: "星辉兑换(需要#color_yellow [ROOT.ScriptValue('gacha_starlight_exchange_cost_sv')|0]#!星辉)"
   gacha_free_first_roll: "免费首抽(新手福利)"
+  gacha_events.1.rng_test: "RNG 实测（调试）"
   gacha_events.1.b: "暂且观望"
   gacha_events.1.single_lack: "奉纳不足"
   gacha_not_enough_gold_tt: "国库空虚，无法筹措祈愿所需的祭品。"
@@ -59,7 +60,17 @@
   gacha_up_name_5: "\n#bold 当期UP:#!#color_yellow 胡桃#!"
   gacha_up_name_6: "\n#bold 当期UP:#!#color_yellow 可莉#!"
   gacha_up_name_7: "\n#bold 当期UP:#!#color_yellow 纳西妲#!"
+  gacha_up_name_8: "\n#bold 当期UP:#!#color_yellow 凝光#!"
   gacha_up_name_unknown: "\n#bold 当期UP:#!未知"
+
+  # === 璃月：自动招募（AI）===
+  gacha_liyue_events.1.title: "群玉阁的契约"
+  gacha_liyue_events.1.desc: "璃月的财富与秩序正在重建。按既定契约，璃月将尝试招募一位来自「璃月池」的英雄，以巩固命座与国策。\n\n（此事件为 AI 逻辑用，正常情况下不会向玩家弹窗。）"
+  gacha_liyue_events.1.a: "继续"
+
+  # === 建筑：璃月 ===
+  gacha_liyue_harbor: "璃月港"
+  gacha_liyue_harbor_desc: "璃月的海贸之门与契约秩序的锚点。\n\n只能在广州（东莞）修建。"
 
   # === 结果:凡铁/蓝光 (.2) ===
   gacha_events.2.title: "祈愿结果:寂静星空"
@@ -129,6 +140,16 @@
   gacha_max_constellation_desc: "已经达到了完美状态！"
   gacha_already_owned_title: "重复祈愿"
   gacha_already_owned_desc: "该廷臣已由他国聘用，转化为资源补偿。"
+
+  # === RNG 实测 (.900) ===
+  gacha_events.900.title: "RNG 实测"
+  gacha_events.900.desc: "用于验证引擎随机行为（同日连点是否锁死）。\n\n#bold random_list#!: last=#color_yellow [ROOT.Var('gacha_rng_rl_last').GetValue|0]#!  rolls=[ROOT.Var('gacha_rng_rl_rolls').GetValue|0]  0=[ROOT.Var('gacha_rng_rl_0_count').GetValue|0]  1=[ROOT.Var('gacha_rng_rl_1_count').GetValue|0]\n#bold random_integer#!(mod10000): last=#color_yellow [ROOT.Var('gacha_rng_ri_last').GetValue|0]#!  rolls=[ROOT.Var('gacha_rng_ri_rolls').GetValue|0]\n#bold LCG#!(mod10000): state=#color_yellow [ROOT.Var('gacha_rng_lcg_state').GetValue|0]#!  rolls=[ROOT.Var('gacha_rng_lcg_rolls').GetValue|0]\n\n建议：暂停游戏、停留同一天，连续点击同一按钮观察数值是否变化。"
+  gacha_events.900.random_list: "抽一次 random_list (50/50)"
+  gacha_events.900.random_list_10x: "连抽10次 random_list (50/50)"
+  gacha_events.900.random_integer: "抽一次 random_integer (mod10000)"
+  gacha_events.900.lcg_step: "步进一次 LCG（state=state*21+1）"
+  gacha_events.900.reset: "清空统计"
+  gacha_events.900.back: "返回祈愿菜单"
 
   # === 额外修正类型与通用键 ===
   MODIFIER_TYPE_NAME_local_gacha_desired_pop_scaled: "本地祈愿期望人口（倍数）"

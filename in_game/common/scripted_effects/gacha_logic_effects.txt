@@ -22,29 +22,12 @@ gacha_execute_single_roll_silent = {
   # Step 1: 状态步进
   # --------------------------------------------------------
   change_variable = { name = gacha_total_rolls_count add = 1 }
-  change_variable = { name = gacha_entropy_gold_amt subtract = 16 }
-
-  # [RNG] 每抽注入随机扰动：打散确定性熵序列，避免出现“连续低熵→连金”等极端波动
-  # 说明：random_list 在多人下会同步执行；即使处于同一天，多次调用也会推进 RNG 状态，不会固定不变
-	    random_list = {
-	        10 = { } # no-op
-	        10 = { change_variable = { name = gacha_entropy_gold_amt add = 7 } }
-	        10 = { change_variable = { name = gacha_entropy_gold_amt subtract = 7 } }
-    10 = { change_variable = { name = gacha_entropy_gold_amt add = 31 } }
-    10 = { change_variable = { name = gacha_entropy_gold_amt subtract = 31 } }
-    10 = { change_variable = { name = gacha_entropy_gold_amt add = 97 } }
-    10 = { change_variable = { name = gacha_entropy_gold_amt subtract = 97 } }
-    5  = { change_variable = { name = gacha_entropy_gold_amt add = 257 } }
-    5  = { change_variable = { name = gacha_entropy_gold_amt subtract = 257 } }
-	        2  = { change_variable = { name = gacha_entropy_gold_amt add = 997 } }
-	        2  = { change_variable = { name = gacha_entropy_gold_amt subtract = 997 } }
-	    }
-
-	    # 关键：保持熵资源为负值，避免出现“净变化=+1”的确定性序列（会导致极端连金/连黑）
-	    if = {
-	        limit = { var:gacha_entropy_gold_amt > 0 }
-	        change_variable = { name = gacha_entropy_gold_amt multiply = -1 }
-	    }
+  
+  # [RNG] 自维护 PRNG 状态（LCG, Mod 10000，满周期）
+  # state = (state * 21 + 1) % 10000
+  change_variable = { name = gacha_entropy_gold_amt multiply = 21 }
+  change_variable = { name = gacha_entropy_gold_amt add = 1 }
+  change_variable = { name = gacha_entropy_gold_amt modulo = 10000 }
 	
 	    # --------------------------------------------------------
 	    # Step 2: 数据快照 (Script Values -> Local Variables)
@@ -130,7 +113,19 @@ gacha_execute_single_roll_silent = {
 # 职责：判定 UP/歪 -> 轮询常驻 -> 发放角色 -> 确保保存 Scope
 # ------------------------------------------------------------
 gacha_resolve_5star_and_save_scope = {
-  # 1. 获取二级熵 (用于 50/50)
+  # Safety: ensure global UP index exists (prevents global_var comparisons on first use)
+  if = {
+    limit = { NOT = { has_global_variable = gacha_current_up_idx } }
+    set_global_variable = { name = gacha_current_up_idx value = 0 }
+  }
+
+  # 1. RNG step：为 50/50 使用独立随机数，避免与星级判定熵强相关
+  # state = (state * 21 + 1) % 10000
+  change_variable = { name = gacha_entropy_gold_amt multiply = 21 }
+  change_variable = { name = gacha_entropy_gold_amt add = 1 }
+  change_variable = { name = gacha_entropy_gold_amt modulo = 10000 }
+
+  # 2. 获取二级熵 (用于 50/50)
   set_local_variable = { name = gacha_calc_entropy2_val value = gacha_calc_entropy2_sv }
   set_local_variable = { name = gacha_is_up_bool_val   value = 0 }
 
@@ -162,35 +157,39 @@ gacha_resolve_5star_and_save_scope = {
     # >> 情况 A: 抽中当期 UP <<
     limit = { local_var:gacha_is_up_bool_val = 1 }
 
-    # 安全初始化
-    if = { limit = { NOT = { has_global_variable = gacha_current_up_idx } } set_global_variable = { name = gacha_current_up_idx value = 0 } }
-
     # 根据 Index 分发
     if = { limit = { global_var:gacha_current_up_idx = 0 } gacha_create_xinhai_effect = yes }
     else_if = { limit = { global_var:gacha_current_up_idx = 1 } gacha_create_fischl_effect = yes }
     else_if = { limit = { global_var:gacha_current_up_idx = 2 } gacha_create_keqing_effect = yes }
     else_if = { limit = { global_var:gacha_current_up_idx = 3 } gacha_create_raiden_effect = yes }
     else_if = { limit = { global_var:gacha_current_up_idx = 4 } gacha_create_furina_effect = yes }
-    else_if = { limit = { global_var:gacha_current_up_idx = 5 } gacha_create_hutao_effect = yes }
-    else_if = { limit = { global_var:gacha_current_up_idx = 6 } gacha_create_klee_effect = yes }
-    else_if = { limit = { global_var:gacha_current_up_idx = 7 } gacha_create_nahida_effect = yes }
-    # else = { debug_log = "Error: Invalid UP Index" }
-  }
+	    else_if = { limit = { global_var:gacha_current_up_idx = 5 } gacha_create_hutao_effect = yes }
+	    else_if = { limit = { global_var:gacha_current_up_idx = 6 } gacha_create_klee_effect = yes }
+	    else_if = { limit = { global_var:gacha_current_up_idx = 7 } gacha_create_nahida_effect = yes }
+	    else_if = { limit = { global_var:gacha_current_up_idx = 8 } gacha_create_ningguang_effect = yes }
+	    # else = { debug_log = "Error: Invalid UP Index" }
+	  }
   else = {
     # >> 情况 B: 歪常驻 (Sliding Window Algorithm) <<
     change_variable = { name = gacha_std5_result_count add = 1 }
 
-    # 1. 获取 0-6 的随机数 (池容量 7)
-    set_local_variable = { name = gacha_standard_5_idx value = gacha_calc_standard_5_idx_sv }
+    # RNG step：为常驻池索引使用独立随机数，避免与 50/50 强相关
+    # state = (state * 21 + 1) % 10000
+    change_variable = { name = gacha_entropy_gold_amt multiply = 21 }
+    change_variable = { name = gacha_entropy_gold_amt add = 1 }
+    change_variable = { name = gacha_entropy_gold_amt modulo = 10000 }
 
-    # 2. 滑动窗口：如果随机数 >= 当前 UP 索引，则 +1 跳过 UP
-    if = {
-      limit = {
-        has_global_variable = gacha_current_up_idx
-        local_var:gacha_standard_5_idx >= global_var:gacha_current_up_idx
-      }
-      change_local_variable = { name = gacha_standard_5_idx add = 1 }
-    }
+	    # 1. 获取 0-7 的随机数 (池容量 8)
+    set_local_variable = { name = gacha_standard_5_idx value = gacha_calc_standard_5_idx_sv }
+	
+	    # 2. 滑动窗口：如果随机数 >= 当前 UP 索引，则 +1 跳过 UP
+	    if = {
+	      limit = { has_global_variable = gacha_current_up_idx }
+	      if = {
+	        limit = { local_var:gacha_standard_5_idx >= global_var:gacha_current_up_idx }
+	        change_local_variable = { name = gacha_standard_5_idx add = 1 }
+	      }
+	    }
 
     # 3. 根据最终 Index 分发 (0-7, 但肯定不等于 current_up_idx)
     if = { limit = { local_var:gacha_standard_5_idx = 0 } gacha_create_xinhai_effect = yes }
@@ -201,6 +200,7 @@ gacha_resolve_5star_and_save_scope = {
     else_if = { limit = { local_var:gacha_standard_5_idx = 5 } gacha_create_hutao_effect = yes }
     else_if = { limit = { local_var:gacha_standard_5_idx = 6 } gacha_create_klee_effect = yes }
     else_if = { limit = { local_var:gacha_standard_5_idx = 7 } gacha_create_nahida_effect = yes }
+    else_if = { limit = { local_var:gacha_standard_5_idx = 8 } gacha_create_ningguang_effect = yes }
   }
 
   # 补丁：无论新抽还是重复抽，统一确保归入自定义阶层

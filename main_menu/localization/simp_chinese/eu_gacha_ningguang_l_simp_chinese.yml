@@ -1,0 +1,82 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 凝光 (Ningguang) "天权 · 凝光"
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_ningguang: "凝光"
+  gacha_last_name_ningguang: "天权"
+
+  # === 特质 (Traits) ===
+  gacha_ningguang_origin_trait: "群玉阁的主人"
+  desc_gacha_ningguang_origin_trait: "「群玉阁曾是璃月财富与权力的标尺。它坠落过——但我从不把一次损失当作结局。先把你的商路疏通：堵点清掉，账目重算，钱自然会回来。」"
+
+  gacha_ningguang_awakened_trait: "天权的裁决"
+  desc_gacha_ningguang_awakened_trait: "「谈判不是祈求，是结算。对方的底线、筹码与恐惧——只要价格算对，签字不过是走个过场。我会让他们明白，什么叫『天权的裁决』。」"
+
+  gacha_ningguang_transcended_trait: "璃月的无冕女王"
+  desc_gacha_ningguang_transcended_trait: "「治国与经商并无二致：让资源流向最高效的地方。我不需要王冠——账本上的每一行数字，都会替我说话。在我的注视下，每一枚铜板都无处遁形。」"
+
+  gacha_ningguang_c2_trait: "黄金法则"
+  desc_gacha_ningguang_c2_trait: "「你们的贸易法规漏洞太多，像是把港口钥匙交给走私犯。现在开始，每一笔交易都有价，每一次违约都有罚。黄金法则？很简单，谁能付账，谁就能写条款。」"
+
+  gacha_ningguang_c4_trait: "七星之首"
+  desc_gacha_ningguang_c4_trait: "「你以为群玉阁只是宫殿？不。它是信息的定价中心，每个商人、每艘船、每句闲谈，都有标价。现在，这张网覆盖你的疆域。风起之前，我会先听见。」"
+
+  gacha_ningguang_c6_trait: "天权临世"
+  desc_gacha_ningguang_c6_trait: "「我曾亲手炸毁群玉阁，用毕生心血换取璃月的存续。那一刻我明白，真正的财富，不是金银珠宝，而是值得守护的东西。现在，我把新的答案放在你这里：你的国，就是我的新群玉阁。这一次，我会让它永不坠落。」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_ningguang_modifier: "天权的注资"
+  STATIC_MODIFIER_DESC_gacha_ningguang_modifier: "「这笔交易，我不撤资。」"
+  gacha_ningguang_modifier: "群玉阁的掌舵者"
+  gacha_ningguang_modifier_desc: "天权的目光落在账本与契约之上，财富与秩序一并被重新定价。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_ningguang_c0_modifier: "命之座·零命"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c1_modifier: "璃月商会分部"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c2_modifier: "重订契约"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c3_modifier: "月下棋局"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c4_modifier: "情报之网"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c5_modifier: "人才储备"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c6_modifier: "最后的筹码"
+
+  # 凝光 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_ningguang_country_modifier: "群玉阁的主人"
+  STATIC_MODIFIER_DESC_gacha_ningguang_country_modifier: "商路梳理、账目重算，财富回流。"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c1_country_modifier: "璃月商会分部"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c1_country_modifier: "旧日合作伙伴在此设点，以璃月商会章程运转。"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c2_country_modifier: "黄金法则"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c2_country_modifier: "契约与罚则重订，市场规则被重新书写。"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c4_country_modifier: "七星之首"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c4_country_modifier: "璃月七星之首"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c5_country_modifier: "人才储备"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c5_country_modifier: "评估与筛选体系成型，让资产增值，负债出清。"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c6_country_modifier: "天权临世"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c6_country_modifier: "新的群玉阁不会坠落。"
+
+  # === 事件 (Events) ===
+  gacha_ningguang_events.1.title: "天权 · 凝光"
+  gacha_ningguang_events.1.desc: "祈愿阵中央，金色经文沿刻痕游走。\n\n账簿残页、玉石原矿与封蜡契约在阵心上空翻卷。\n琥珀色光芒自刻痕中央升起，收拢成一颗圆满的光球，将一切杂乱都扣进秩序里。\n\n光球内，一个女子端坐其中，雪白长发如瀑垂落，金纹长裙在光流中轻轻起伏。\n她像是在核对一份账本时睡着。\n\n女子抬眼，落在阵心。\n\n「我是凝光，璃月七星中的『天权』。掌管商业与契约，偶尔也裁决一些……不听话的人。」\n\n「既然命运将我召唤至此，那就当做是一笔风险投资吧。」"
+  gacha_ningguang_events.1.a: "签下契约"
+
+  gacha_ningguang_events.13.title: "璃月商会分部"
+  gacha_ningguang_events.13.desc: "「我已让旧日的合作伙伴在此设点，按璃月商会的章程运转。别担心，他们很清楚，在我的规则里耍花样，成本会高到无法承受。」"
+  gacha_ningguang_events.13.a: "按章程运转"
+
+  gacha_ningguang_events.11.title: "重订契约"
+  gacha_ningguang_events.11.desc: "「你们的贸易法规漏洞太多，像是把港口钥匙交给走私犯。现在开始，每一笔交易都有价，每一次违约都有罚。黄金法则？很简单，谁能付账，谁就能写条款。」"
+  gacha_ningguang_events.11.a: "重订条款"
+
+  gacha_ningguang_events.12.title: "情报之网"
+  gacha_ningguang_events.12.desc: "「你以为群玉阁只是宫殿？不。它是信息的定价中心，每个商人、每艘船、每句闲谈，都有标价。现在，这张网覆盖你的疆域。风起之前，我会先听见。」"
+  gacha_ningguang_events.12.a: "标价一切"
+
+  gacha_ningguang_events.14.title: "人才储备"
+  gacha_ningguang_events.14.desc: "「优秀的人才是资产，庸才是负债。我已经把评估与筛选体系搭好：该留下的留下，该清退的清退。你付的钱，会更少浪费。」"
+  gacha_ningguang_events.14.a: "资产增值"
+
+  gacha_ningguang_events.4.title: "最后的筹码"
+  gacha_ningguang_events.4.desc: "「我曾亲手炸毁群玉阁，用毕生心血换取璃月的存续。那一刻我明白，真正的财富，不是金银珠宝，而是值得守护的东西。\n\n现在，我把新的答案放在你这里：你的国，就是我的新群玉阁。这一次，我会让它永不坠落。」"
+  gacha_ningguang_events.4.a: "不撤资"
+

@@ -1,0 +1,56 @@
+﻿gacha_liyue_harbor = {
+	is_foreign = no
+	max_levels = 1
+	pop_type = nobles
+
+	category = trade_category
+	employment_size = large_noble_employment
+
+	town = yes
+	city = yes
+
+	# 仅用于“广州（东莞）”的独特港口：高强度贸易中枢
+	icon = gacha_liyue_harbor
+	expensive = yes
+	build_time = large_port_building_time
+
+	country_potential = {
+		has_global_variable = gacha_liyue_pool_unlocked
+		this = c:GL1
+	}
+
+	location_potential = {
+		this = location:dongguan
+	}
+
+	# 若璃月失去东莞，则该建筑自动移除（避免被他国继承超模收益）
+	remove_if = {
+		owner = { NOT = { this = c:GL1 } }
+	}
+
+	possible_production_methods = {
+		port_building_maintenance
+	}
+	construction_demand = gacha_liyue_harbor_construction
+
+	modifier = {
+		local_market_access = 0.05
+		local_merchant_power = 5
+		local_trades_per_burgher = 0.5
+		merchant_capacity_from_building = 1.0
+		local_merchant_capacity = 3
+		harbor_suitability = 0.20
+	}
+
+	# 东莞为璃月首都时，额外给予国家级增益
+	capital_country_modifier = {
+		# 直接替代“璃月商港”常驻国家修正
+		trade_income = 0.10
+		trade_efficiency = 0.20
+		trade_range = 50
+		global_merchant_capacity_modifier = 0.30
+		global_construction_speed = 0.10
+		global_build_buildings_cost = -0.15
+		global_production_efficiency = 0.05
+	}
+}

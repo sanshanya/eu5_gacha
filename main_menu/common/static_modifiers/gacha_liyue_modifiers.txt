@@ -22,7 +22,7 @@ gacha_liyue_foundation_boom_modifier = {
     country_cabinet_efficiency = 10
     global_production_efficiency = 0.30
     tax_income_efficiency = 0.15
-    monthly_gold_income = 180  
+    monthly_gold_income = 180
     global_construction_speed = 10
     global_build_buildings_cost = -0.15
 }

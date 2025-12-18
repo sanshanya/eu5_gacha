@@ -2,56 +2,67 @@
 # EU5 Gacha System - On Actions
 # ==============================================================================
 # 按照官方文档：只能通过 on_actions 块扩展 hardcoded on_action
-# "Only a new on_actions block can be added to existing on actions. 
+# "Only a new on_actions block can be added to existing on actions.
 #  Adding other blocks to an existing on action causes errors."
 
 # ------------------------------------------------------------------------------
 # 修复：抽卡角色死亡后，残留状态（召唤旗标 / saved scopes）可能在 UI 预评估/悬浮 tooltip 下放大风险
 # ------------------------------------------------------------------------------
 on_character_death = {
-    on_actions = {
-        gacha_on_character_death_cleanup_action
-    }
+  on_actions = {
+    gacha_on_character_death_cleanup_action
+  }
 }
 
 # ------------------------------------------------------------------------------
 # 读档/开局自愈：清理临时 scopes / 锁变量（防止崩溃后按钮永久置灰）
 # ------------------------------------------------------------------------------
 on_game_start = {
-    on_actions = {
-        gacha_on_game_start_initialize_action
-    }
+  on_actions = {
+    gacha_on_game_start_initialize_action
+  }
 }
 
 # 扩展官方的 yearly_country_pulse
 yearly_country_pulse = {
-    on_actions = {
-        gacha_yearly_rotation_action
-    }
+  on_actions = {
+    gacha_yearly_rotation_action
+  }
 }
 
 # 自定义 on_action - 处理UP池轮替
 gacha_yearly_rotation_action = {
-    trigger = {
-        is_ai = no
+  trigger = {
+    is_ai = no
+  }
+
+  effect = {
+    # Safety Init
+    if = {
+      limit = { NOT = { has_global_variable = gacha_current_up_idx } }
+      set_global_variable = { name = gacha_current_up_idx value = 0 }
     }
-    
-    effect = {
-        # Safety Init
-        if = { 
-            limit = { NOT = { has_global_variable = gacha_current_up_idx } } 
-            set_global_variable = { name = gacha_current_up_idx value = 0 } 
-        }
-        
-        # Rotate +1
-        change_global_variable = { name = gacha_current_up_idx add = 1 }
-        
-        # Wrap around (0-7)
-        if = {
-            limit = { global_var:gacha_current_up_idx >= 8 }
-            set_global_variable = { name = gacha_current_up_idx value = 0 }
-        }
+
+    # Rotate +1
+    change_global_variable = { name = gacha_current_up_idx add = 1 }
+
+    # Wrap around
+    # - default roster: 0-7
+    # - after Liyue pool unlock: 0-8 (adds Ningguang)
+    if = {
+      limit = { has_global_variable = gacha_liyue_pool_unlocked }
+      if = {
+        limit = { global_var:gacha_current_up_idx >= 9 }
+        set_global_variable = { name = gacha_current_up_idx value = 0 }
+      }
     }
+    else = {
+      if = {
+        limit = { global_var:gacha_current_up_idx >= 8 }
+        set_global_variable = { name = gacha_current_up_idx value = 0 }
+      }
+    }
+  }
 }
 
 # ------------------------------------------------------------------------------
@@ -59,99 +70,145 @@ gacha_yearly_rotation_action = {
 # root = country, scope:target = dead character
 # ------------------------------------------------------------------------------
 gacha_on_character_death_cleanup_action = {
-    trigger = {
-        scope:target = {
-            OR = {
-                has_character_modifier = gacha_core_modifier
-                has_trait = gacha_core_trait
-            }
-        }
+  trigger = {
+    scope:target = {
+      OR = {
+        has_character_modifier = gacha_core_modifier
+        has_trait = gacha_core_trait
+      }
     }
+  }
 
-    effect = {
-        # 同步清理“已召唤”旗标：角色死亡后不应再走重复抽取路径
-        scope:target = { gacha_remove_summoned_flag_for_character = yes }
+  effect = {
+    # 同步清理“已召唤”旗标：角色死亡后不应再走重复抽取路径
+    scope:target = { gacha_remove_summoned_flag_for_character = yes }
 
-        # 兜底：崩溃/强退/旧逻辑可能残留临时 saved scopes；一并清理
-        gacha_clear_gacha_saved_scopes = yes
-    }
+    # 兜底：崩溃/强退/旧逻辑可能残留临时 saved scopes；一并清理
+    gacha_clear_gacha_saved_scopes = yes
+  }
 }
 
 # ------------------------------------------------------------------------------
 # On Action: initialize state at game start (new game / load)
 # ------------------------------------------------------------------------------
 gacha_on_game_start_initialize_action = {
-    trigger = { always = yes }
-	    effect = {
-	        # 兜底：清理临时 scopes（避免旧存档/崩溃残留引用污染 UI）
-	        gacha_clear_gacha_saved_scopes = yes
+  trigger = { always = yes }
+  effect = {
+    # 兜底：清理临时 scopes（避免旧存档/崩溃残留引用污染 UI）
+    gacha_clear_gacha_saved_scopes = yes
 
-	        # 开局/读档兜底：初始化玩家抽卡状态，避免 tooltip/触发器读取未初始化变量
-		        every_country = {
-		            limit = { is_ai = no }
-		            gacha_ensure_state_initialized = yes
-
-		            # 防止上一次崩溃/强退导致锁变量残留，使按钮永久变灰
-		            remove_variable = gacha_event_lock
-		            remove_variable = gacha_liyue_plan_lock
-		        }
-
-	        # 读档/开局自愈：世界唯一角色的“已召唤”标记应为全局变量；按实际存活角色重建
-	        if = {
-	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_xinhai_modifier } } }
-	            set_global_variable = { name = gacha_xinhai_is_summoned value = 1 }
-	        }
-	        else = { remove_global_variable = gacha_xinhai_is_summoned }
-
-	        if = {
-	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_fischl_modifier } } }
-	            set_global_variable = { name = gacha_fischl_is_summoned value = 1 }
-	        }
-	        else = { remove_global_variable = gacha_fischl_is_summoned }
-
-	        if = {
-	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_keqing_modifier } } }
-	            set_global_variable = { name = gacha_keqing_is_summoned value = 1 }
-	        }
-	        else = { remove_global_variable = gacha_keqing_is_summoned }
-
-	        if = {
-	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_raiden_modifier } } }
-	            set_global_variable = { name = gacha_raiden_is_summoned value = 1 }
-	        }
-	        else = { remove_global_variable = gacha_raiden_is_summoned }
-
-	        if = {
-	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_furina_modifier } } }
-	            set_global_variable = { name = gacha_furina_is_summoned value = 1 }
-	        }
-	        else = { remove_global_variable = gacha_furina_is_summoned }
-
-	        if = {
-	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_hutao_modifier } } }
-	            set_global_variable = { name = gacha_hutao_is_summoned value = 1 }
-	        }
-	        else = { remove_global_variable = gacha_hutao_is_summoned }
-
-	        if = {
-	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_klee_modifier } } }
-	            set_global_variable = { name = gacha_klee_is_summoned value = 1 }
-	        }
-	        else = { remove_global_variable = gacha_klee_is_summoned }
-
-	        if = {
-	            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_nahida_modifier } } }
-	            set_global_variable = { name = gacha_nahida_is_summoned value = 1 }
-	        }
-	        else = { remove_global_variable = gacha_nahida_is_summoned }
-
-	        # 迁移/兜底：禁止 AI 持有“神之眷属”（旧存档/其他脚本可能强行 make_subject_of）
-	        every_country = {
-	            limit = { is_ai = yes }
-	            every_subject = {
-	                limit = { is_subject_type = gacha_archon_vassal }
-                make_subject_of = { target = prev type = subject_type:vassal }
-            }
-        }
+    # 兜底：确保全局 UP 索引存在（避免 UI/脚本首次读取时报错）
+    if = {
+      limit = { NOT = { has_global_variable = gacha_current_up_idx } }
+      set_global_variable = { name = gacha_current_up_idx value = 0 }
     }
+
+    # 兜底：如果存档里璃月已存在，则视为“已建国过”，解锁璃月池（全局）
+    if = {
+      limit = { country_exists = c:GL1 }
+      set_global_variable = { name = gacha_liyue_pool_unlocked value = 1 }
+
+      # 热更迁移：移除旧版“璃月商港”常驻国家修正（改由“璃月港”建筑首都修正提供）
+      c:GL1 = {
+        if = { limit = { has_country_modifier = gacha_liyue_trade_hub_modifier } remove_country_modifier = gacha_liyue_trade_hub_modifier }
+      }
+
+      # 热更/读档兜底：确保“璃月港”存在（AI 不一定会建）
+      if = {
+        limit = {
+          location:dongguan = {
+            owner = c:GL1
+            NOT = { has_building = building_type:gacha_liyue_harbor }
+          }
+        }
+        location:dongguan = { change_building_level_in_location = { building = building_type:gacha_liyue_harbor value = 1 } }
+      }
+    }
+
+    # 兜底：若璃月已存在但“自动招募”局势未激活，则激活（用于旧存档/热更）
+    if = {
+      limit = {
+        country_exists = c:GL1
+        NOT = { situation:gacha_liyue_auto_recruitment = { situation_is_active = yes } }
+      }
+      situation:gacha_liyue_auto_recruitment ?= {
+        set_variable = { name = target_country value = c:GL1 }
+      }
+      activate_situation = situation:gacha_liyue_auto_recruitment
+    }
+
+    # 开局/读档兜底：初始化玩家抽卡状态，避免 tooltip/触发器读取未初始化变量
+    every_country = {
+      limit = { is_ai = no }
+      gacha_ensure_state_initialized = yes
+
+      # 防止上一次崩溃/强退导致锁变量残留，使按钮永久变灰
+      remove_variable = gacha_event_lock
+      remove_variable = gacha_liyue_plan_lock
+    }
+
+    # 读档/开局自愈：世界唯一角色的“已召唤”标记应为全局变量；按实际存活角色重建
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_xinhai_modifier } } }
+      set_global_variable = { name = gacha_xinhai_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_xinhai_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_fischl_modifier } } }
+      set_global_variable = { name = gacha_fischl_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_fischl_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_keqing_modifier } } }
+      set_global_variable = { name = gacha_keqing_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_keqing_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_raiden_modifier } } }
+      set_global_variable = { name = gacha_raiden_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_raiden_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_furina_modifier } } }
+      set_global_variable = { name = gacha_furina_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_furina_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_hutao_modifier } } }
+      set_global_variable = { name = gacha_hutao_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_hutao_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_klee_modifier } } }
+      set_global_variable = { name = gacha_klee_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_klee_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_nahida_modifier } } }
+      set_global_variable = { name = gacha_nahida_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_nahida_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_ningguang_modifier } } }
+      set_global_variable = { name = gacha_ningguang_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_ningguang_is_summoned }
+
+    # 迁移/兜底：禁止 AI 持有“神之眷属”（旧存档/其他脚本可能强行 make_subject_of）
+    every_country = {
+      limit = { is_ai = yes }
+      every_subject = {
+        limit = { is_subject_type = gacha_archon_vassal }
+        make_subject_of = { target = prev type = subject_type:vassal }
+      }
+    }
+  }
 }

@@ -2,3 +2,9 @@
   hidden = yes
   category = pop_needs
 }
+
+# “璃月港”专用建造需求：仅消耗砖石（masonry）
+gacha_liyue_harbor_construction = {
+	masonry = 0.1
+	category = building_construction
+}

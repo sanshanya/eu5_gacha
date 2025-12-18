@@ -1,0 +1,53 @@
+﻿# Generated Modifiers for ningguang (V3) "天权 · 凝光"
+
+# 角色标识：凝光本体
+gacha_ningguang_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+}
+
+# 命之座等级展示（0-6）
+gacha_ningguang_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_ningguang_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_ningguang_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_ningguang_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_ningguang_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_ningguang_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_ningguang_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（贸易效率+10%, 贸易范围+10）
+gacha_ningguang_country_modifier = {
+    game_data = { category = country decaying = no }
+    trade_efficiency = 0.10
+    trade_range = 10
+}
+
+# C2 光环升级（贸易效率+20%, 贸易范围+20）
+gacha_ningguang_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    trade_efficiency = 0.20
+    trade_range = 20
+}
+
+# C1 专属机制：商人数量+2（EU5 目前用 merchant_capacity 表达；先用于测试）
+gacha_ningguang_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    global_merchant_capacity_modifier = 0.20
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_ningguang_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：顾问花费-30%
+gacha_ningguang_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    hire_advisor_cost_modifier = -0.30
+}
+
+# C6 国家级占位（主要属性在 Trait 中）
+gacha_ningguang_c6_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+

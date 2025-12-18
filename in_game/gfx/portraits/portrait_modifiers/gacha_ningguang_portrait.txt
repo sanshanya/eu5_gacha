@@ -1,0 +1,23 @@
+﻿gacha_ningguang_portrait = {
+  usage    = game
+  priority = 100
+
+  gacha_ningguang_01 = {
+    dna_modifiers = {
+      accessory = {
+        mode     = replace
+        gene     = gacha_ningguang_props_1      # 这里用你 gene 文件里的名字
+        template = gacha_ningguang_01          # 用 accessory 的名字
+        value    = 0.5
+      }
+    }
+    weight = {
+      base = 0
+      modifier = {
+        add = 255
+
+        has_character_modifier = gacha_ningguang_modifier
+      }
+    }
+  }
+}

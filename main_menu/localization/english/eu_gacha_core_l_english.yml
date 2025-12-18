@@ -46,6 +46,7 @@
   gacha_events.1.a10: "Grand Rite (10 Wishes): @gold!#color_yellow [ROOT.ScriptValue('gacha_ten_pull_cost_sv')|0]#!"
   gacha_events.1.starlight_exchange: "Starlight Exchange (requires #color_yellow [ROOT.ScriptValue('gacha_starlight_exchange_cost_sv')|0]#! Starlight)"
   gacha_free_first_roll: "Free First Pull (Newcomer Bonus)"
+  gacha_events.1.rng_test: "RNG Test (Debug)"
   gacha_events.1.b: "Wait and see"
   gacha_events.1.single_lack: "Insufficient Offering"
   gacha_not_enough_gold_tt: "The treasury is empty; you cannot gather the offerings required for this wish."
@@ -59,7 +60,17 @@
   gacha_up_name_5: "\n#bold Featured:#! #color_yellow Hu Tao#!"
   gacha_up_name_6: "\n#bold Featured:#! #color_yellow Klee#!"
   gacha_up_name_7: "\n#bold Featured:#! #color_yellow Nahida#!"
+  gacha_up_name_8: "\n#bold Featured:#! #color_yellow Ningguang#!"
   gacha_up_name_unknown: "\n#bold Featured:#! Unknown"
+
+  # === Liyue: Auto Recruitment (AI) ===
+  gacha_liyue_events.1.title: "Contract of the Jade Chamber"
+  gacha_liyue_events.1.desc: "Liyue’s wealth and order are being rebuilt. By the terms of the contract, Liyue will attempt to recruit one hero from the \"Liyue Pool\" each year to strengthen constellations and statecraft.\n\n(This event is AI logic and should not normally appear to players.)"
+  gacha_liyue_events.1.a: "Continue"
+
+  # === Buildings: Liyue ===
+  gacha_liyue_harbor: "Port of Liyue"
+  gacha_liyue_harbor_desc: "The maritime gateway of Liyue and an anchor of contractual order.\n\nCan only be built in Guangzhou (Dongguan)."
 
   # === Result: 3-star / Blue (.2) ===
   gacha_events.2.title: "Wishing Result: Silent Stars"
@@ -129,6 +140,16 @@
   gacha_max_constellation_desc: "This character has reached their perfect state!"
   gacha_already_owned_title: "Duplicate Wish"
   gacha_already_owned_desc: "This courtier is already in the service of another realm and has been converted into compensation resources."
+
+  # === RNG Test (.900) ===
+  gacha_events.900.title: "RNG Test"
+  gacha_events.900.desc: "Use this to empirically verify engine RNG behavior (e.g. whether repeated clicks on the same day are locked).\n\n#bold random_list#!: last=#color_yellow [ROOT.Var('gacha_rng_rl_last').GetValue|0]#!  rolls=[ROOT.Var('gacha_rng_rl_rolls').GetValue|0]  0=[ROOT.Var('gacha_rng_rl_0_count').GetValue|0]  1=[ROOT.Var('gacha_rng_rl_1_count').GetValue|0]\n#bold random_integer#!(mod10000): last=#color_yellow [ROOT.Var('gacha_rng_ri_last').GetValue|0]#!  rolls=[ROOT.Var('gacha_rng_ri_rolls').GetValue|0]\n#bold LCG#!(mod10000): state=#color_yellow [ROOT.Var('gacha_rng_lcg_state').GetValue|0]#!  rolls=[ROOT.Var('gacha_rng_lcg_rolls').GetValue|0]\n\nTip: pause the game, stay on the same day, and click the same button repeatedly to see if values change."
+  gacha_events.900.random_list: "Roll random_list (50/50)"
+  gacha_events.900.random_list_10x: "Roll random_list x10 (50/50)"
+  gacha_events.900.random_integer: "Sample random_integer (mod10000)"
+  gacha_events.900.lcg_step: "Step LCG (state=state*21+1)"
+  gacha_events.900.reset: "Reset counters"
+  gacha_events.900.back: "Back to wishing menu"
 
   # === Extra Modifier Types & Generic Keys ===
   MODIFIER_TYPE_NAME_local_gacha_desired_pop_scaled: "Local Wishing Target Pop (Multiplier)"

@@ -37,6 +37,7 @@ gacha_events.1 = {
             triggered_desc = { trigger = { global_var:gacha_current_up_idx = 5 } desc = gacha_up_name_5 }
             triggered_desc = { trigger = { global_var:gacha_current_up_idx = 6 } desc = gacha_up_name_6 }
             triggered_desc = { trigger = { global_var:gacha_current_up_idx = 7 } desc = gacha_up_name_7 }
+            triggered_desc = { trigger = { global_var:gacha_current_up_idx = 8 } desc = gacha_up_name_8 }
             triggered_desc = { desc = gacha_up_name_unknown }
         }
     }
@@ -130,6 +131,23 @@ gacha_events.1 = {
               gacha_resolve_5star_and_save_scope = yes
           }
       }
+    }
+
+    # ==========================================
+    # 选项 B2：【调试用】RNG 实测
+    # 说明：仅在设置 country 变量 gacha_debug_enabled=1 时显示
+    # ==========================================
+    option = {
+        name = gacha_events.1.rng_test
+
+        trigger = {
+            has_variable = gacha_debug_enabled
+            var:gacha_debug_enabled = 1
+        }
+
+        hidden_effect = {
+            trigger_event_non_silently = { id = gacha_events.900 }
+        }
     }
 
     # ==========================================
@@ -325,5 +343,118 @@ gacha_events.31 = {
     option = {
         name = gacha_events.31.a
         # 仅提示，不做其他操作
+    }
+}
+
+# ==========================================
+# 900. RNG 实测（调试）
+# 用途：验证 random_list / random_integer 的实际行为（同日连点是否锁死）
+# ==========================================
+gacha_events.900 = {
+    type = country_event
+    title = gacha_events.900.title
+    desc  = gacha_events.900.desc
+
+    immediate = {
+        if = { limit = { NOT = { has_variable = gacha_rng_rl_last } } set_variable = { name = gacha_rng_rl_last value = 0 } }
+        if = { limit = { NOT = { has_variable = gacha_rng_rl_0_count } } set_variable = { name = gacha_rng_rl_0_count value = 0 } }
+        if = { limit = { NOT = { has_variable = gacha_rng_rl_1_count } } set_variable = { name = gacha_rng_rl_1_count value = 0 } }
+        if = { limit = { NOT = { has_variable = gacha_rng_rl_rolls } } set_variable = { name = gacha_rng_rl_rolls value = 0 } }
+
+        if = { limit = { NOT = { has_variable = gacha_rng_ri_last } } set_variable = { name = gacha_rng_ri_last value = 0 } }
+        if = { limit = { NOT = { has_variable = gacha_rng_ri_rolls } } set_variable = { name = gacha_rng_ri_rolls value = 0 } }
+
+        if = { limit = { NOT = { has_variable = gacha_rng_lcg_rolls } } set_variable = { name = gacha_rng_lcg_rolls value = 0 } }
+    }
+
+    option = {
+        name = gacha_events.900.random_list
+        hidden_effect = {
+            random_list = {
+                50 = {
+                    set_variable = { name = gacha_rng_rl_last value = 0 }
+                    change_variable = { name = gacha_rng_rl_0_count add = 1 }
+                }
+                50 = {
+                    set_variable = { name = gacha_rng_rl_last value = 1 }
+                    change_variable = { name = gacha_rng_rl_1_count add = 1 }
+                }
+            }
+            change_variable = { name = gacha_rng_rl_rolls add = 1 }
+            trigger_event_non_silently = { id = gacha_events.900 }
+        }
+    }
+
+    option = {
+        name = gacha_events.900.random_list_10x
+        hidden_effect = {
+            set_local_variable = { name = gacha_rng_loop_idx value = 0 }
+            while = {
+                limit = { local_var:gacha_rng_loop_idx < 10 }
+                random_list = {
+                    50 = {
+                        set_variable = { name = gacha_rng_rl_last value = 0 }
+                        change_variable = { name = gacha_rng_rl_0_count add = 1 }
+                    }
+                    50 = {
+                        set_variable = { name = gacha_rng_rl_last value = 1 }
+                        change_variable = { name = gacha_rng_rl_1_count add = 1 }
+                    }
+                }
+                change_variable = { name = gacha_rng_rl_rolls add = 1 }
+                change_local_variable = { name = gacha_rng_loop_idx add = 1 }
+            }
+            trigger_event_non_silently = { id = gacha_events.900 }
+        }
+    }
+
+    option = {
+        name = gacha_events.900.random_integer
+        hidden_effect = {
+            set_variable = { name = gacha_rng_ri_last value = this.random_integer }
+            change_variable = { name = gacha_rng_ri_last modulo = 10000 }
+            change_variable = { name = gacha_rng_ri_rolls add = 1 }
+            trigger_event_non_silently = { id = gacha_events.900 }
+        }
+    }
+
+    option = {
+        name = gacha_events.900.lcg_step
+        hidden_effect = {
+            if = {
+                limit = { NOT = { has_variable = gacha_rng_lcg_state } }
+                set_variable = { name = gacha_rng_lcg_state value = this.random_integer }
+                change_variable = { name = gacha_rng_lcg_state modulo = 10000 }
+            }
+
+            change_variable = { name = gacha_rng_lcg_rolls add = 1 }
+            change_variable = { name = gacha_rng_lcg_state multiply = 21 }
+            change_variable = { name = gacha_rng_lcg_state add = 1 }
+            change_variable = { name = gacha_rng_lcg_state modulo = 10000 }
+            trigger_event_non_silently = { id = gacha_events.900 }
+        }
+    }
+
+    option = {
+        name = gacha_events.900.reset
+        hidden_effect = {
+            set_variable = { name = gacha_rng_rl_last value = 0 }
+            set_variable = { name = gacha_rng_rl_0_count value = 0 }
+            set_variable = { name = gacha_rng_rl_1_count value = 0 }
+            set_variable = { name = gacha_rng_rl_rolls value = 0 }
+
+            set_variable = { name = gacha_rng_ri_last value = 0 }
+            set_variable = { name = gacha_rng_ri_rolls value = 0 }
+
+            remove_variable = gacha_rng_lcg_state
+            set_variable = { name = gacha_rng_lcg_rolls value = 0 }
+
+            trigger_event_non_silently = { id = gacha_events.900 }
+        }
+    }
+
+    option = {
+        name = gacha_events.900.back
+        hidden_effect = { trigger_event_non_silently = { id = gacha_events.1 } }
     }
 }

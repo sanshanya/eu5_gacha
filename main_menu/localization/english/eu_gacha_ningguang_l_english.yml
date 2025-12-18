@@ -1,0 +1,82 @@
+﻿l_english:
+  # ============================================================
+  # Character - Ningguang
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_ningguang: "Ningguang"
+  gacha_last_name_ningguang: "Tianquan"
+
+  # === Traits ===
+  gacha_ningguang_origin_trait: "Mistress of the Jade Chamber"
+  desc_gacha_ningguang_origin_trait: "“The Jade Chamber once stood as Liyue’s measure of wealth and power. It has fallen before—but I never treat a loss as the end. Clear the bottlenecks, rewrite the books, and the money will return.”"
+
+  gacha_ningguang_awakened_trait: "Tianquan’s Verdict"
+  desc_gacha_ningguang_awakened_trait: "“Negotiation is not a plea—it is a settlement.”"
+
+  gacha_ningguang_transcended_trait: "Uncrowned Queen of Liyue"
+  desc_gacha_ningguang_transcended_trait: "“I do not need a crown. The ledger speaks for me.”"
+
+  gacha_ningguang_c2_trait: "Golden Rule"
+  desc_gacha_ningguang_c2_trait: "“Whoever can pay the bill gets to write the terms.”"
+
+  gacha_ningguang_c4_trait: "Head of the Qixing"
+  desc_gacha_ningguang_c4_trait: "“Information has a price. Before the wind rises, I will hear it first.”"
+
+  gacha_ningguang_c6_trait: "Tianquan Descends"
+  desc_gacha_ningguang_c6_trait: "“This time, the new Jade Chamber will never fall.”"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_ningguang_modifier: "Tianquan’s Investment"
+  STATIC_MODIFIER_DESC_gacha_ningguang_modifier: "“This deal—I will not pull out.”"
+  gacha_ningguang_modifier: "Helmswoman of the Jade Chamber"
+  gacha_ningguang_modifier_desc: "Wealth and order are repriced under Tianquan’s gaze."
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_ningguang_c0_modifier: "Constellation: 0"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c1_modifier: "Liyue Chamber of Commerce Branch"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c2_modifier: "Rewrite the Contract"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c3_modifier: "Moonlit Game"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c4_modifier: "Web of Intelligence"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c5_modifier: "Talent Reserve"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c6_modifier: "Final Stake"
+
+  # Country modifiers
+  STATIC_MODIFIER_NAME_gacha_ningguang_country_modifier: "Mistress of the Jade Chamber"
+  STATIC_MODIFIER_DESC_gacha_ningguang_country_modifier: "Trade routes are cleared; ledgers are rewritten."
+  STATIC_MODIFIER_NAME_gacha_ningguang_c1_country_modifier: "Commerce Branch"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c1_country_modifier: "Old partners set up shop under strict rules."
+  STATIC_MODIFIER_NAME_gacha_ningguang_c2_country_modifier: "Golden Rule"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c2_country_modifier: "Contracts and penalties are rewritten."
+  STATIC_MODIFIER_NAME_gacha_ningguang_c4_country_modifier: "Head of the Qixing"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c4_country_modifier: "Head of the Qixing."
+  STATIC_MODIFIER_NAME_gacha_ningguang_c5_country_modifier: "Talent Reserve"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c5_country_modifier: "Selection systems reduce waste."
+  STATIC_MODIFIER_NAME_gacha_ningguang_c6_country_modifier: "Tianquan Descends"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c6_country_modifier: "A new Jade Chamber rises."
+
+  # === Events ===
+  gacha_ningguang_events.1.title: "Tianquan: Ningguang"
+  gacha_ningguang_events.1.desc: "Gold-lit scripture runs along the wishing array. A sphere of amber light condenses order from chaos.\n\n“I am Ningguang, Tianquan of the Liyue Qixing—keeper of commerce and contracts. Consider this a venture investment.”"
+  gacha_ningguang_events.1.a: "Sign the contract"
+
+  gacha_ningguang_events.13.title: "Commerce Branch"
+  gacha_ningguang_events.13.desc: "“My old partners will operate here under Liyue Chamber of Commerce rules.”"
+  gacha_ningguang_events.13.a: "Proceed"
+
+  gacha_ningguang_events.11.title: "Rewrite the Contract"
+  gacha_ningguang_events.11.desc: "“Every deal has a price. Every breach has a penalty.”"
+  gacha_ningguang_events.11.a: "Rewrite"
+
+  gacha_ningguang_events.12.title: "Web of Intelligence"
+  gacha_ningguang_events.12.desc: "“Information has a price. This web now covers your realm.”"
+  gacha_ningguang_events.12.a: "Price it"
+
+  gacha_ningguang_events.14.title: "Talent Reserve"
+  gacha_ningguang_events.14.desc: "“Talent is an asset; mediocrity a liability.”"
+  gacha_ningguang_events.14.a: "Invest"
+
+  gacha_ningguang_events.4.title: "Final Stake"
+  gacha_ningguang_events.4.desc: "“This time, the new Jade Chamber will never fall.”"
+  gacha_ningguang_events.4.a: "Do not withdraw"
+

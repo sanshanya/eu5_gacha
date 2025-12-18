@@ -7,6 +7,7 @@
   gacha_hutao_dynasty: "Wangsheng"
   gacha_klee_dynasty: "Spark Knight"
   gacha_nahida_dynasty: "Buer"
+  gacha_ningguang_dynasty: "Tianquan"
 
   # Backwards compatibility (early Liyue test key)
   gacha_yuheng_dynasty: "Yuheng"

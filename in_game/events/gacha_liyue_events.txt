@@ -1,0 +1,29 @@
+﻿namespace = gacha_liyue_events
+
+# ==============================================================================
+# Liyue - Auto Recruitment (AI)
+# 说明：
+# - 由 situation:gacha_liyue_auto_recruitment 每年触发一次（建国后满 1 年开始）
+# - 该事件必须以 country 作为 root 执行（避免 situation root 破坏 gacha_register_new_character）
+# ==============================================================================
+
+gacha_liyue_events.1 = {
+    type = country_event
+    title = gacha_liyue_events.1.title
+    desc  = gacha_liyue_events.1.desc
+    hide_portraits = yes
+
+    trigger = {
+        is_ai = yes
+        has_global_variable = gacha_liyue_pool_unlocked
+        country_exists = c:GL1
+    }
+
+    immediate = {
+        gacha_liyue_ai_recruit_liyue_pool_once = yes
+    }
+
+    option = {
+        name = gacha_liyue_events.1.a
+    }
+}
