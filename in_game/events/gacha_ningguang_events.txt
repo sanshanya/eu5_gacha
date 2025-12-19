@@ -6,7 +6,7 @@ gacha_ningguang_events.1 = {
     title = gacha_ningguang_events.1.title
     desc = gacha_ningguang_events.1.desc
     hide_portraits = yes
-    image = "gfx/event_pictures/gecha_LiY.dds"
+    image = "gfx/event_pictures/gacha_ningguang_intro_special.dds"
     option = { name = gacha_ningguang_events.1.a }
 }
 
