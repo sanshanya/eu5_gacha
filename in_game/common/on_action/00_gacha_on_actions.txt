@@ -47,15 +47,15 @@ gacha_yearly_rotation_action = {
     change_global_variable = { name = gacha_current_up_idx add = 1 }
 
     # Wrap around
-    # - default roster: 0-7
-    # - after Liyue pool unlock: 0-8 (adds Ningguang)
-    if = {
-      limit = { has_global_variable = gacha_liyue_pool_unlocked }
-      if = {
-        limit = { global_var:gacha_current_up_idx >= 9 }
-        set_global_variable = { name = gacha_current_up_idx value = 0 }
-      }
-    }
+        # - default roster: 0-7
+        # - after Liyue pool unlock: 0-10 (adds Ningguang + Ganyu + Beidou)
+        if = {
+            limit = { has_global_variable = gacha_liyue_pool_unlocked }
+            if = {
+                limit = { global_var:gacha_current_up_idx >= 11 }
+                set_global_variable = { name = gacha_current_up_idx value = 0 }
+            }
+        }
     else = {
       if = {
         limit = { global_var:gacha_current_up_idx >= 8 }
@@ -196,11 +196,29 @@ gacha_on_game_start_initialize_action = {
     }
     else = { remove_global_variable = gacha_nahida_is_summoned }
 
-    if = {
-      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_ningguang_modifier } } }
-      set_global_variable = { name = gacha_ningguang_is_summoned value = 1 }
-    }
-    else = { remove_global_variable = gacha_ningguang_is_summoned }
+		        if = {
+		            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_ningguang_modifier } } }
+		            set_global_variable = { name = gacha_ningguang_is_summoned value = 1 }
+		        }
+		        else = { remove_global_variable = gacha_ningguang_is_summoned }
+
+		        if = {
+		            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_ganyu_modifier } } }
+		            set_global_variable = { name = gacha_ganyu_is_summoned value = 1 }
+		        }
+		        else = { remove_global_variable = gacha_ganyu_is_summoned }
+
+		        if = {
+		            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_beidou_modifier } } }
+		            set_global_variable = { name = gacha_beidou_is_summoned value = 1 }
+		        }
+		        else = { remove_global_variable = gacha_beidou_is_summoned }
+
+		        if = {
+		            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_zhongli_modifier } } }
+		            set_global_variable = { name = gacha_zhongli_is_summoned value = 1 }
+		        }
+		        else = { remove_global_variable = gacha_zhongli_is_summoned }
 
     # 迁移/兜底：禁止 AI 持有“神之眷属”（旧存档/其他脚本可能强行 make_subject_of）
     every_country = {

@@ -31,9 +31,11 @@ class EU5GachaSimulation:
         "Nahida",  # 7
     ]
 
-    # 解锁“璃月池”后追加（0-8）
+    # 解锁“璃月池”后追加（0-10）
     LIYUE_EXTRA_ROSTER = [
         "Ningguang",  # 8
+        "Ganyu",  # 9
+        "Beidou",  # 10
     ]
 
     @classmethod

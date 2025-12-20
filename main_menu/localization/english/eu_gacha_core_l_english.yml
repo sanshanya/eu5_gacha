@@ -61,12 +61,15 @@
   gacha_up_name_6: "\n#bold Featured:#! #color_yellow Klee#!"
   gacha_up_name_7: "\n#bold Featured:#! #color_yellow Nahida#!"
   gacha_up_name_8: "\n#bold Featured:#! #color_yellow Ningguang#!"
+  gacha_up_name_9: "\n#bold Featured:#! #color_yellow Ganyu#!"
+  gacha_up_name_10: "\n#bold Featured:#! #color_yellow Beidou#!"
   gacha_up_name_unknown: "\n#bold Featured:#! Unknown"
 
   # === Liyue: Auto Recruitment (AI) ===
   gacha_liyue_events.1.title: "Contract of the Jade Chamber"
   gacha_liyue_events.1.desc: "Liyue’s wealth and order are being rebuilt. By the terms of the contract, Liyue will attempt to recruit one hero from the \"Liyue Pool\" each year to strengthen constellations and statecraft.\n\n(This event is AI logic and should not normally appear to players.)"
   gacha_liyue_events.1.a: "Continue"
+  gacha_liyue_events.2.a: "Continue"
 
   # === Buildings: Liyue ===
   gacha_liyue_harbor: "Port of Liyue"
@@ -124,6 +127,8 @@
   MODIFIER_TYPE_DESC_gacha_electro_godeye: "A lightning-mark from Inazuma itself, signifying the Electro element’s recognition."
   MODIFIER_TYPE_NAME_gacha_water_godeye: "Hydro Vision"
   MODIFIER_TYPE_DESC_gacha_water_godeye: "A blessing from the god of water, symbolizing flow and healing."
+  MODIFIER_TYPE_NAME_gacha_ice_godeye: "Cryo Vision"
+  MODIFIER_TYPE_DESC_gacha_ice_godeye: "A mark of frost, symbolizing calm and restraint."
   MODIFIER_TYPE_NAME_gacha_fire_godeye: "Pyro Vision"
   MODIFIER_TYPE_DESC_gacha_fire_godeye: "A mark bestowed by the god of flame, symbolizing passion and burning will."
   MODIFIER_TYPE_NAME_gacha_grass_godeye: "Dendro Vision"

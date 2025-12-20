@@ -8,6 +8,9 @@
   gacha_klee_dynasty: "火花骑士"
   gacha_nahida_dynasty: "布耶尔"
   gacha_ningguang_dynasty: "天权"
+  gacha_ganyu_dynasty: "麒麟"
+  gacha_beidou_dynasty: "南十字"
+  gacha_zhongli_dynasty: "听书人"
 
   # 兼容旧 key（早期璃月测试用）
   gacha_yuheng_dynasty: "玉衡"

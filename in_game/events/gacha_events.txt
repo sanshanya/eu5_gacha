@@ -38,6 +38,8 @@ gacha_events.1 = {
             triggered_desc = { trigger = { global_var:gacha_current_up_idx = 6 } desc = gacha_up_name_6 }
             triggered_desc = { trigger = { global_var:gacha_current_up_idx = 7 } desc = gacha_up_name_7 }
             triggered_desc = { trigger = { global_var:gacha_current_up_idx = 8 } desc = gacha_up_name_8 }
+            triggered_desc = { trigger = { global_var:gacha_current_up_idx = 9 } desc = gacha_up_name_9 }
+            triggered_desc = { trigger = { global_var:gacha_current_up_idx = 10 } desc = gacha_up_name_10 }
             triggered_desc = { desc = gacha_up_name_unknown }
         }
     }

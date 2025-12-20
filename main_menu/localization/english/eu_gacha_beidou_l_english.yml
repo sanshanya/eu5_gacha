@@ -1,0 +1,81 @@
+﻿l_english:
+  # ============================================================
+  # Character - Beidou
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_beidou: "Beidou"
+  gacha_last_name_beidou: "Crux"
+
+  # === Traits ===
+  gacha_beidou_origin_trait: "Banner of the Crux"
+  desc_gacha_beidou_origin_trait: "“At sea, the most valuable thing isn’t firepower—it’s reputation. When the Crux flag rises, the wise know to yield or pay toll. Want to rule the waves? Make them fear this banner first.”"
+
+  gacha_beidou_awakened_trait: "Wavecleaver"
+  desc_gacha_beidou_awakened_trait: "“Storms? I’ve seen worse. A ship’s toughness isn’t theory—it’s whether you dare to take her into the breakers. Don’t tell me ‘too dangerous.’ There are only ships that aren’t strong enough.”"
+
+  gacha_beidou_transcended_trait: "Unruly Captain"
+  desc_gacha_beidou_transcended_trait: "“I don’t manage people with frills. A hothead gets a night on deck in the wind, and they learn to talk. Your troublemakers? Hand them to me. I believe in loyalty—and in fists.”"
+
+  gacha_beidou_c2_trait: "Raging Tide"
+  desc_gacha_beidou_c2_trait: "“They say they’ve got a real fleet? Won’t be long before our flag flies on those masts.”"
+
+  gacha_beidou_c4_trait: "Whale-Severing Wake"
+  desc_gacha_beidou_c4_trait: "“When I cleaved the sea monster, the whole crew thought I’d lost it. I told them: there’s something scarier than a beast—and it’s Beidou.”"
+
+  gacha_beidou_c6_trait: "Queen of the Seas"
+  desc_gacha_beidou_c6_trait: "“Beidou. Captain of the Crux Fleet.\n\nSea folk talk too much. They love giving me nicknames.\n\nThey call me mad, call me vicious, say I’ll capsize one day.\n\nI’ve heard it all—and laughed.\n\nI live by one rule:\n\nIf you show me loyalty, I pay it back with my life. If you touch my brothers, I’ll feed you to the sea.\n\nThe first time we drank, the cups rang loud.\n\nLater, on a storm night, not many stayed on deck.\n\nI remember that wave.\n\nFrom now on, the Crux rudder is in my hands.\n\nBut this course? We set it together.\n\nYou didn’t conquer me.\n\nI, Beidou, chose this.”"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_beidou_modifier: "Captain of the Crux"
+  STATIC_MODIFIER_DESC_gacha_beidou_modifier: "“I’ll take this job. But remember—it’s my choice, not your conquest.”"
+  gacha_beidou_modifier: "Sea Queen"
+  gacha_beidou_modifier_desc: "Beidou rules Liyue’s waters with loyalty and steel." 
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_beidou_c0_modifier: "Crux Constellation · 0"
+  STATIC_MODIFIER_NAME_gacha_beidou_c1_modifier: "Old Brothers"
+  STATIC_MODIFIER_NAME_gacha_beidou_c2_modifier: "Black Sails Descend"
+  STATIC_MODIFIER_NAME_gacha_beidou_c3_modifier: "Moon on the Deck"
+  STATIC_MODIFIER_NAME_gacha_beidou_c4_modifier: "Sea Beast Returns"
+  STATIC_MODIFIER_NAME_gacha_beidou_c5_modifier: "Liyue’s Rules"
+  STATIC_MODIFIER_NAME_gacha_beidou_c6_modifier: "Bound in the Same Boat"
+
+  # Beidou - Country modifiers
+  STATIC_MODIFIER_NAME_gacha_beidou_country_modifier: "Banner of the Crux"
+  STATIC_MODIFIER_DESC_gacha_beidou_country_modifier: "Her name and sails turn the sea into a warning." 
+  STATIC_MODIFIER_NAME_gacha_beidou_c1_country_modifier: "Old Brothers"
+  STATIC_MODIFIER_DESC_gacha_beidou_c1_country_modifier: "The Crux crew gathers at her call." 
+  STATIC_MODIFIER_NAME_gacha_beidou_c2_country_modifier: "Black Sails Descend"
+  STATIC_MODIFIER_DESC_gacha_beidou_c2_country_modifier: "Naval morale and privateering prowess surge." 
+  STATIC_MODIFIER_NAME_gacha_beidou_c4_country_modifier: "Sea Beast Returns"
+  STATIC_MODIFIER_DESC_gacha_beidou_c4_country_modifier: "Storms can’t shake your fleet." 
+  STATIC_MODIFIER_NAME_gacha_beidou_c5_country_modifier: "Liyue’s Rules"
+  STATIC_MODIFIER_DESC_gacha_beidou_c5_country_modifier: "Trade and privateering move to her price." 
+  STATIC_MODIFIER_NAME_gacha_beidou_c6_country_modifier: "Bound in the Same Boat"
+  STATIC_MODIFIER_DESC_gacha_beidou_c6_country_modifier: "The course is set together, no matter the storm." 
+
+  # === Events ===
+  gacha_beidou_events.1.title: "Captain of the Crux Fleet · Beidou"
+  gacha_beidou_events.1.desc: "At the center of the prayer array, golden scriptures glide along carved lines.\n\nA briny smell spreads in the air—the scent left by waves withdrawing from rock, mixed with a hint of strong liquor.\n\nThe air above the array twists, and the sound of water is squeezed out of nothing.\n\nA translucent sphere of tide swells in the center, ripples curling inside as if a stretch of sea were sealed in glass. The outer runes spin slow but steady.\n\nA compass wobbles in midair, its needle twitching twice.\n\nA nautical chart unfurls; damp curls its corners.\n\nCoins float up and fall, clinking softly.\n\nA tiny ship model rocks with the swell.\n\nInside the sphere, a figure reclines—legs crossed, boot tips tapping the wall. One hand presses a chart; the other rests loose on a hardbound logbook.\n\nEyes closed, a faint smile on her lips.\n\nA droplet slides down the glass and taps her nose.\n\nShe frowns.\n\nWith a flick of a finger, a coin flips out of the tide and strikes the sphere—ding.\n\nThe sphere bursts.\n\nWaterlight scatters; a cold, wet wind hits your face.\n\nHer heel lands on the array—clack, like a nail driven into a deck.\n\nShe stretches, rolls her shoulders until the joints crack, and pats the logbook like it picked up dust.\n\n“Yo.”\n\nShe glances around: arches, stone pillars, golden runes. Impressive, but no sea.\n\n“Place has taste.”\n\nShe nudges a damp chart with her toe.\n\nThe compass steadies, needle pointing straight at you.\n\nShe follows it.\n\n“So that’s the direction.”\n\nShe rolls the chart and tucks it away.\n\n“Beidou. Captain of the Crux Fleet.”\n\nShe looks you up and down, unflinching.\n\n“Call me here for a big job?”\n\n“Just know this: I kneel to no one, I call no one ‘master.’”\n\nShe catches a spinning coin, rubs it with her thumb.\n\n“But if you’ve got guts—and loyalty.”\n\nShe pats the greatsword at her hip.\n\n“This blade and my entire fleet are yours to borrow.”\n\nShe flicks the coin to you—slow, but dead accurate.\n\n“Here. Catch.”\n\n“Care to share a drink and tell me what you want done?”"
+  gacha_beidou_events.1.a: "Catch it"
+
+  gacha_beidou_events.13.title: "Old Brothers"
+  gacha_beidou_events.13.desc: "The harbor grows loud. Old flags take new knots, sailors bump shoulders on the docks. Beidou shoves a flask into your hand: “I spread the word—there’s a big job here.” She jerks her chin toward the port. “See? They came.”"
+  gacha_beidou_events.13.a: "Welcome them"
+
+  gacha_beidou_events.11.title: "Black Sails Descend"
+  gacha_beidou_events.11.desc: "Night turns the sea to ink. One by one, enemy lights go dark. Beidou stands at the bow, cloak snapping in the wind. “Heard they’ve got a proper fleet?” She hoists her blade onto her shoulder. “Won’t be long before our flag’s on those masts. I’ll pick the pricey cargo first.”"
+  gacha_beidou_events.11.a: "Take the spoils"
+
+  gacha_beidou_events.12.title: "Sea Beast Returns"
+  gacha_beidou_events.12.desc: "In the storm, waves rise three stories high. The hull groans; sailors grip the ropes. Beidou stands on deck: “When I cleaved the sea monster, everyone thought I’d gone mad.” She points at the crest. “I told them the truth—there’s something scarier than a beast, and it’s Beidou.”"
+  gacha_beidou_events.12.a: "Hold the course"
+
+  gacha_beidou_events.14.title: "Liyue’s Rules"
+  gacha_beidou_events.14.desc: "Merchants learn to look twice at the flag before setting sail. Smugglers step back when your people appear. Beidou spins the helm: “Rules on Liyue’s seas? Mine. Want your trade lines calm? I’ll ‘patrol’ a few rounds. Calm seas come after a few people learn fear.”"
+  gacha_beidou_events.14.a: "Leave it to you"
+
+  gacha_beidou_events.4.title: "Bound in the Same Boat"
+  gacha_beidou_events.4.desc: "She rummages for liquor in the cabin. When you enter, two cups are already set and filled. She slides one to you. “I’ve figured something out, running with you this long: you keep your word.” She clinks cups. “Alright. From now on, your enemies are my enemies. I’m betting this life on you.”"
+  gacha_beidou_events.4.a: "Side by side"

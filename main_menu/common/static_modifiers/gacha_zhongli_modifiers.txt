@@ -1,0 +1,53 @@
+﻿# Generated Modifiers for zhongli (V3) "听书人 · 钟离"
+
+# 角色标识：钟离本体
+gacha_zhongli_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    gacha_stone_godeye = yes
+}
+
+# 命之座等级展示（0-6）
+gacha_zhongli_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_zhongli_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_zhongli_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_zhongli_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_zhongli_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_zhongli_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_zhongli_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（行政效率+10% · 正统性+1.0/年）
+gacha_zhongli_country_modifier = {
+    game_data = { category = country decaying = no }
+    country_cabinet_efficiency = 0.10
+    monthly_legitimacy = 0.08
+}
+
+# C2 光环升级（行政效率+20% · 正统性+2.0/年）
+gacha_zhongli_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    country_cabinet_efficiency = 0.20
+    monthly_legitimacy = 0.16
+}
+
+# C1 专属机制：秩序的契约（以内阁席位表现）
+gacha_zhongli_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    government_size = 1
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_zhongli_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：治理余裕（以国策槽位表现）
+gacha_zhongli_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    government_reform_slots = 1
+}
+
+# C6 国家级占位（主要属性在 Trait 中）
+gacha_zhongli_c6_country_modifier = {
+    game_data = { category = country decaying = no }
+}

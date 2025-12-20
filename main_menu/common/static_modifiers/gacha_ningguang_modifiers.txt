@@ -4,6 +4,7 @@
 gacha_ningguang_modifier = {
     game_data = { category = character decaying = no }
     gacha_core = yes
+    gacha_stone_godeye = yes
 }
 
 # 命之座等级展示（0-6）

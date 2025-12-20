@@ -218,8 +218,8 @@ gacha_liyue_ai_recruit_liyue_pool_once = {
 		# 持久索引：固定顺序（将来璃月池扩容只需在此追加分支）
 		if = { limit = { NOT = { has_variable = gacha_liyue_ai_pool_idx } } set_variable = { name = gacha_liyue_ai_pool_idx value = 0 } }
 
-		# 池大小（目前仅 1：凝光）
-		set_local_variable = { name = gacha_liyue_pool_size value = 1 }
+		# 池大小（目前 3：凝光、甘雨、北斗）
+		set_local_variable = { name = gacha_liyue_pool_size value = 3 }
 
 		# 试探一次：最多遍历池大小次，找到第一个“尚未被世界召唤”的角色
 		set_local_variable = { name = gacha_scan_tries value = 0 }
@@ -246,6 +246,26 @@ gacha_liyue_ai_recruit_liyue_pool_once = {
 					NOT = { has_global_variable = gacha_ningguang_is_summoned }
 				}
 				gacha_liyue_ai_force_c6_ningguang = yes
+				set_local_variable = { name = gacha_found_bool value = 1 }
+			}
+
+			# idx 1 -> Ganyu
+			if = {
+				limit = {
+					local_var:gacha_scan_idx = 1
+					NOT = { has_global_variable = gacha_ganyu_is_summoned }
+				}
+				gacha_liyue_ai_force_c6_ganyu = yes
+				set_local_variable = { name = gacha_found_bool value = 1 }
+			}
+
+			# idx 2 -> Beidou
+			if = {
+				limit = {
+					local_var:gacha_scan_idx = 2
+					NOT = { has_global_variable = gacha_beidou_is_summoned }
+				}
+				gacha_liyue_ai_force_c6_beidou = yes
 				set_local_variable = { name = gacha_found_bool value = 1 }
 			}
 
@@ -314,6 +334,171 @@ gacha_liyue_ai_force_c6_ningguang = {
 			}
 
 			set_global_variable = { name = gacha_ningguang_is_summoned value = 1 }
+			clear_saved_scope = new_char
+		}
+
+		# Avoid polluting UI saved scopes
+		clear_saved_scope = gacha_last_pulled_char
+		clear_saved_scope = gacha_c3_target_char
+	}
+}
+
+gacha_liyue_ai_force_c6_ganyu = {
+	# World-unique precondition: only create if she doesn't exist anywhere yet
+	if = {
+		limit = { NOT = { has_global_variable = gacha_ganyu_is_summoned } }
+
+		# AI 简化：直接创建并拉到满命（C6），不触发任何剧情事件
+		create_character = {
+			first_name = gacha_first_name_ganyu
+			last_name = gacha_last_name_ganyu
+			female = yes
+			age = 500
+			culture = culture:gacha_culture
+			religion = religion:sanjiao
+			birth_location = location:la_mothe_en_bassigny
+			estate = estate_type:gacha_estate
+			adm = { 90 100 }
+			dip = { 70 85 }
+			mil = { 60 75 }
+			create_in_limbo = yes
+			save_scope_as = new_char
+		}
+
+		if = {
+			limit = { exists = scope:new_char }
+			scope:new_char = {
+				# 1) Register at C0
+				gacha_register_new_character = { who = ganyu }
+
+				# 2) Ensure C0 trait state exists
+				gacha_ganyu_update_traits = yes
+
+				# 3) Upgrade to C6 (delta steps; no events)
+				while = {
+					limit = { var:gacha_constellation_lvl < 6 }
+					change_variable = { name = gacha_constellation_lvl add = 1 }
+					gacha_apply_constellation_stats_effect = { who = ganyu }
+					gacha_ganyu_update_traits = yes
+				}
+
+				# 4) Apply country modifiers (idempotent rebuild)
+				gacha_ganyu_apply_country_modifiers = yes
+			}
+
+			set_global_variable = { name = gacha_ganyu_is_summoned value = 1 }
+			clear_saved_scope = new_char
+		}
+
+		# Avoid polluting UI saved scopes
+		clear_saved_scope = gacha_last_pulled_char
+		clear_saved_scope = gacha_c3_target_char
+	}
+}
+
+gacha_liyue_ai_force_c6_beidou = {
+	# World-unique precondition: only create if she doesn't exist anywhere yet
+	if = {
+		limit = { NOT = { has_global_variable = gacha_beidou_is_summoned } }
+
+		# AI 简化：直接创建并拉到满命（C6），不触发任何剧情事件
+		create_character = {
+			first_name = gacha_first_name_beidou
+			last_name = gacha_last_name_beidou
+			female = yes
+			age = 500
+			culture = culture:gacha_culture
+			religion = religion:sanjiao
+			birth_location = location:la_mothe_en_bassigny
+			estate = estate_type:gacha_estate
+			adm = { 60 75 }
+			dip = { 70 85 }
+			mil = { 85 100 }
+			create_in_limbo = yes
+			save_scope_as = new_char
+		}
+
+		if = {
+			limit = { exists = scope:new_char }
+			scope:new_char = {
+				# 1) Register at C0
+				gacha_register_new_character = { who = beidou }
+
+				# 2) Ensure C0 trait state exists
+				gacha_beidou_update_traits = yes
+
+				# 3) Upgrade to C6 (delta steps; no events)
+				while = {
+					limit = { var:gacha_constellation_lvl < 6 }
+					change_variable = { name = gacha_constellation_lvl add = 1 }
+					gacha_apply_constellation_stats_effect = { who = beidou }
+					gacha_beidou_update_traits = yes
+				}
+
+				# 4) Apply country modifiers (idempotent rebuild)
+				gacha_beidou_apply_country_modifiers = yes
+			}
+
+			set_global_variable = { name = gacha_beidou_is_summoned value = 1 }
+			clear_saved_scope = new_char
+		}
+
+		# Avoid polluting UI saved scopes
+		clear_saved_scope = gacha_last_pulled_char
+		clear_saved_scope = gacha_c3_target_char
+	}
+}
+
+# ------------------------------------------------------------------------------
+# Liyue: Spawn Zhongli after 1 year (C6, world-unique)
+# ------------------------------------------------------------------------------
+gacha_liyue_spawn_zhongli_c6 = {
+	# Only for Liyue and only if not already summoned globally
+	if = {
+		limit = {
+			this = c:GL1
+			NOT = { has_global_variable = gacha_zhongli_is_summoned }
+		}
+
+		# Create Zhongli at C6, no story events
+		create_character = {
+			first_name = gacha_first_name_zhongli
+			last_name = gacha_last_name_zhongli
+			female = no
+			age = 500
+			culture = culture:gacha_culture
+			religion = religion:sanjiao
+			birth_location = location:la_mothe_en_bassigny
+			estate = estate_type:gacha_estate
+			adm = { 85 100 }
+			dip = { 80 95 }
+			mil = { 85 100 }
+			create_in_limbo = yes
+			save_scope_as = new_char
+		}
+
+		if = {
+			limit = { exists = scope:new_char }
+			scope:new_char = {
+				# 1) Register at C0
+				gacha_register_new_character = { who = zhongli }
+
+				# 2) Ensure C0 trait state exists
+				gacha_zhongli_update_traits = yes
+
+				# 3) Upgrade to C6 (delta steps; no events)
+				while = {
+					limit = { var:gacha_constellation_lvl < 6 }
+					change_variable = { name = gacha_constellation_lvl add = 1 }
+					gacha_apply_constellation_stats_effect = { who = zhongli }
+					gacha_zhongli_update_traits = yes
+				}
+
+				# 4) Apply country modifiers (idempotent rebuild)
+				gacha_zhongli_apply_country_modifiers = yes
+			}
+
+			set_global_variable = { name = gacha_zhongli_is_summoned value = 1 }
 			clear_saved_scope = new_char
 		}
 

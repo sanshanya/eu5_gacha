@@ -172,6 +172,40 @@ gacha_starlight_events.1 = {
             gacha_create_ningguang_effect = yes
         }
     }
+
+    option = {
+        name = gacha_starlight_events.1.ganyu
+        trigger = {
+            has_global_variable = gacha_liyue_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_ganyu_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_ganyu_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_ganyu_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.beidou
+        trigger = {
+            has_global_variable = gacha_liyue_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_beidou_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_beidou_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_beidou_effect = yes
+        }
+    }
     
     # 选项6：取消
     option = {

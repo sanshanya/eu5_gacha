@@ -1,0 +1,81 @@
+﻿l_english:
+  # ============================================================
+  # Character - Zhongli
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_zhongli: "Zhongli"
+  gacha_last_name_zhongli: "Storyteller"
+
+  # === Traits ===
+  gacha_zhongli_origin_trait: "Contract of Millennia"
+  desc_gacha_zhongli_origin_trait: "“A contract is order, and order endures.”"
+
+  gacha_zhongli_awakened_trait: "Basalt Bulwark"
+  desc_gacha_zhongli_awakened_trait: "“Only the unmoving ridges can guard the land.”"
+
+  gacha_zhongli_transcended_trait: "Storyteller’s Verdict"
+  desc_gacha_zhongli_transcended_trait: "“A long tale, and a settled end.”"
+
+  gacha_zhongli_c2_trait: "Oath of Gold and Stone"
+  desc_gacha_zhongli_c2_trait: "“Words once given are as firm as gold and stone.”"
+
+  gacha_zhongli_c4_trait: "Falling Star"
+  desc_gacha_zhongli_c4_trait: "“When the star descends, the land stands firm.”"
+
+  gacha_zhongli_c6_trait: "Stroll Through the Mortal World"
+  desc_gacha_zhongli_c6_trait: "“To walk the world is to witness it.”"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_zhongli_modifier: "Storyteller"
+  STATIC_MODIFIER_DESC_gacha_zhongli_modifier: "“Every tale has its cause.”"
+  gacha_zhongli_modifier: "Echo of the Geo Lord"
+  gacha_zhongli_modifier_desc: "Zhongli anchors Liyue with contracts and composure."
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_zhongli_c0_modifier: "Rex Lapis · 0"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c1_modifier: "Pact of Order"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c2_modifier: "Oath of Gold and Stone"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c3_modifier: "Ancient Stone Fragment"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c4_modifier: "Falling Star"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c5_modifier: "Eternal Pact"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c6_modifier: "Stroll Through the Mortal World"
+
+  # Zhongli - Country modifiers
+  STATIC_MODIFIER_NAME_gacha_zhongli_country_modifier: "Contract of Millennia"
+  STATIC_MODIFIER_DESC_gacha_zhongli_country_modifier: "Law and order settle into stone."
+  STATIC_MODIFIER_NAME_gacha_zhongli_c1_country_modifier: "Pact of Order"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c1_country_modifier: "Administration follows a firmer cadence."
+  STATIC_MODIFIER_NAME_gacha_zhongli_c2_country_modifier: "Oath of Gold and Stone"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c2_country_modifier: "Governing efficiency rises further."
+  STATIC_MODIFIER_NAME_gacha_zhongli_c4_country_modifier: "Falling Star"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c4_country_modifier: "Command grows steadier and more disciplined."
+  STATIC_MODIFIER_NAME_gacha_zhongli_c5_country_modifier: "Eternal Pact"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c5_country_modifier: "Additional policy slot."
+  STATIC_MODIFIER_NAME_gacha_zhongli_c6_country_modifier: "Stroll Through the Mortal World"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c6_country_modifier: "Prestige and governance endure."
+
+  # === Events ===
+  gacha_zhongli_events.1.title: "Storyteller · Zhongli"
+  gacha_zhongli_events.1.desc: "A guest in long robes approaches with a calm tone, as if he has already heard every tale in the world.\n\n“I am Zhongli. I know a few old stories.”"
+  gacha_zhongli_events.1.a: "An honor"
+
+  gacha_zhongli_events.13.title: "Pact of Order"
+  gacha_zhongli_events.13.desc: "“Once a contract is set, each shall keep their place.”"
+  gacha_zhongli_events.13.a: "By the pact"
+
+  gacha_zhongli_events.11.title: "Oath of Gold and Stone"
+  gacha_zhongli_events.11.desc: "“A vow must stand as gold and stone.”"
+  gacha_zhongli_events.11.a: "Remember"
+
+  gacha_zhongli_events.12.title: "Falling Star"
+  gacha_zhongli_events.12.desc: "“When the star falls, the land steadies.”"
+  gacha_zhongli_events.12.a: "Stand firm"
+
+  gacha_zhongli_events.14.title: "Eternal Pact"
+  gacha_zhongli_events.14.desc: "“Contracts outlive a single age.”"
+  gacha_zhongli_events.14.a: "Endure"
+
+  gacha_zhongli_events.4.title: "Stroll Through the Mortal World"
+  gacha_zhongli_events.4.desc: "“The mortal world has its own joys.”"
+  gacha_zhongli_events.4.a: "Walk together"

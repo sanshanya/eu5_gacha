@@ -1,0 +1,81 @@
+﻿l_english:
+  # ============================================================
+  # Character - Ganyu
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_ganyu: "Ganyu"
+  gacha_last_name_ganyu: "Yuehai Pavilion"
+
+  # === Traits ===
+  gacha_ganyu_origin_trait: "Millennia of Papers"
+  desc_gacha_ganyu_origin_trait: "“For three thousand years, the documents I have handled could fill all of Yujing Terrace. Every file is checked thrice, every number must be exact. Those habits… are carved into my bones.”"
+
+  gacha_ganyu_awakened_trait: "Descendant of the Qilin"
+  desc_gacha_ganyu_awakened_trait: "“A qilin does not kill… but to protect, I will not retreat. In the Archon War, I once swallowed an entire enemy regiment. I have eaten only plants for three millennia since, but that power remains.”"
+
+  gacha_ganyu_transcended_trait: "The Tireless Cog"
+  desc_gacha_ganyu_transcended_trait: "“Rex Lapis said Liyue must never stop. So I cannot stop either. As long as there is work, as long as someone needs me… I will keep turning.”"
+
+  gacha_ganyu_c2_trait: "Pillar of Yujing Terrace"
+  desc_gacha_ganyu_c2_trait: "“I have watched generations of the Qixing come and go—Ningguang, Keqing… all brilliant. I merely sit in a corner, sorting their files, ensuring everything runs as it should. That is enough.”"
+
+  gacha_ganyu_c4_trait: "Guardian of Frosted Arrows"
+  desc_gacha_ganyu_c4_trait: "“I do not like fighting. But when enemies tread this land, they will learn—qilin blood is not to be trifled with. Every arrow will find where it should go.”"
+
+  gacha_ganyu_c6_trait: "Sleepless One of Liyue"
+  desc_gacha_ganyu_c6_trait: "“I am Ganyu, secretary to the Liyue Qixing.\n\nFor three millennia, I told myself: as long as there is work, I have meaning.\n\nSo I kept writing, calculating, verifying—even as my eyes ached, even as my hands stiffened, even when all of Yujing Terrace went dark. I would light a single candle and continue.\n\nI was afraid.\n\nAfraid that if I stopped, I would find I was… nothing.\n\nNeither human nor adeptus.\n\nNeither Qixing nor an ordinary Liyue citizen.\n\nAnd yet…\n\nWatching you review memorials with such care, hearing you say, ‘Ganyu, rest early today’…\n\nI realized that meaning doesn’t have to be proved by work alone.\n\nPerhaps… if someone remembers me, if someone brings a warm cup of tea while I work…\n\nThen I am not nothing.\n\nSo, Your Majesty.\n\n#bold May I remain by your side?#!”"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_ganyu_modifier: "Yuehai Ledger"
+  STATIC_MODIFIER_DESC_gacha_ganyu_modifier: "“If there is any work… please just tell me.”"
+  gacha_ganyu_modifier: "Qilin Secretary"
+  gacha_ganyu_modifier_desc: "Ganyu sustains Liyue’s administration with quiet, exacting rhythm."
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_ganyu_c0_modifier: "Qilin Constellation · 0"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c1_modifier: "Candle Through the Night"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c2_modifier: "Overtime Unseen"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c3_modifier: "Dream of Qingxin"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c4_modifier: "Silent Arrowfall"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c5_modifier: "Archives of Three Millennia"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c6_modifier: "When the Papers Rest"
+
+  # Ganyu - Country modifiers
+  STATIC_MODIFIER_NAME_gacha_ganyu_country_modifier: "Millennia of Papers"
+  STATIC_MODIFIER_DESC_gacha_ganyu_country_modifier: "Decrees are executed with precision; administrative efficiency rises."
+  STATIC_MODIFIER_NAME_gacha_ganyu_c1_country_modifier: "Candle Through the Night"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c1_country_modifier: "Additional cabinet seat."
+  STATIC_MODIFIER_NAME_gacha_ganyu_c2_country_modifier: "Pillar of Yujing Terrace"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c2_country_modifier: "Administrative efficiency improves further."
+  STATIC_MODIFIER_NAME_gacha_ganyu_c4_country_modifier: "Guardian of Frosted Arrows"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c4_country_modifier: "Qilin vigilance steadies policy and command."
+  STATIC_MODIFIER_NAME_gacha_ganyu_c5_country_modifier: "Archives of Three Millennia"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c5_country_modifier: "Additional policy slot."
+  STATIC_MODIFIER_NAME_gacha_ganyu_c6_country_modifier: "Sleepless One of Liyue"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c6_country_modifier: "Liyue’s governance never sleeps."
+
+  # === Events ===
+  gacha_ganyu_events.1.title: "Secretary of the Qixing · Ganyu"
+  gacha_ganyu_events.1.desc: "At the prayer circle’s center, golden scriptures glide along etched lines.\n\nDocuments, seals, abacus tokens, and ink swirl above the array, wrapped in pale-blue frost rising from the center.\n\nWithin the crystal, snowflakes and dust of light drift, outlining a quiet, ancient aura. A young woman curls inside.\n\nSea-blue hair falls to her waist; her simple dress stirs in the chill. She clutches a stack of documents, resting against the icy wall, lashes trembling—as if she fell asleep after a very long night of work.\n\nA snowflake lands on her nose. She frowns; the ice melts.\n\nShe opens her eyes and steps lightly onto the array, instinctively straightening the documents—then freezes.\n\n“…This isn’t Yujing Terrace.”\n\nHer gaze moves from confusion to vigilance, then to a professional calm.\n\n“I am Ganyu, secretary to the Liyue Qixing. I handle… documentation, meeting minutes, edicts, tax ledgers, diplomatic copyediting…”\n\nShe pauses, realizing she is listing by habit.\n\n“…In short, errands.”\n\nShe looks at you, uncertain.\n\n“Is there anything you need me to handle?”\n\n“If so… please give the order. I’m used to it.”"
+  gacha_ganyu_events.1.a: "Please take care of it"
+
+  gacha_ganyu_events.13.title: "Candle Through the Night"
+  gacha_ganyu_events.13.desc: "“You asked why I always work late? Because… daytime isn’t enough. At night it’s quiet, no one disturbs me. I can finish everything slowly, on my own.”"
+  gacha_ganyu_events.13.a: "Remember to rest"
+
+  gacha_ganyu_events.11.title: "Overtime Unseen"
+  gacha_ganyu_events.11.desc: "“I have watched generations of the Qixing come and go. Ningguang, Keqing… all excellent. I sit in the corner, sorting their files, ensuring everything runs as it should. That is enough.”"
+  gacha_ganyu_events.11.a: "They rely on you"
+
+  gacha_ganyu_events.12.title: "Silent Arrowfall"
+  gacha_ganyu_events.12.desc: "“I dislike fighting. But when enemies step onto this land, I’ll show them—qilin blood is not weak. Every arrow will find its mark.”"
+  gacha_ganyu_events.12.a: "Leave it to you"
+
+  gacha_ganyu_events.14.title: "Archives of Three Millennia"
+  gacha_ganyu_events.14.desc: "“Every border shift and every claim is recorded. Open the right volume, and you’ll find the most lawful, effortless path to make it yours.”"
+  gacha_ganyu_events.14.a: "Open the archives"
+
+  gacha_ganyu_events.4.title: "When the Papers Rest"
+  gacha_ganyu_events.4.desc: "“Three thousand years… Can I rest a little? Not because the work is done—work is never done. But because… I want to try something not for work. Like… watching the sunset with you.”"
+  gacha_ganyu_events.4.a: "Let’s go"

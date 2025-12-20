@@ -166,7 +166,21 @@ gacha_resolve_5star_and_save_scope = {
 	    else_if = { limit = { global_var:gacha_current_up_idx = 5 } gacha_create_hutao_effect = yes }
 	    else_if = { limit = { global_var:gacha_current_up_idx = 6 } gacha_create_klee_effect = yes }
 	    else_if = { limit = { global_var:gacha_current_up_idx = 7 } gacha_create_nahida_effect = yes }
-	    else_if = { limit = { global_var:gacha_current_up_idx = 8 } gacha_create_ningguang_effect = yes }
+    else_if = { limit = { global_var:gacha_current_up_idx = 8 } gacha_create_ningguang_effect = yes }
+    else_if = {
+      limit = {
+        global_var:gacha_current_up_idx = 9
+        has_global_variable = gacha_liyue_pool_unlocked
+      }
+      gacha_create_ganyu_effect = yes
+    }
+    else_if = {
+      limit = {
+        global_var:gacha_current_up_idx = 10
+        has_global_variable = gacha_liyue_pool_unlocked
+      }
+      gacha_create_beidou_effect = yes
+    }
 	    # else = { debug_log = "Error: Invalid UP Index" }
 	  }
   else = {
@@ -179,7 +193,7 @@ gacha_resolve_5star_and_save_scope = {
     change_variable = { name = gacha_entropy_gold_amt add = 1 }
     change_variable = { name = gacha_entropy_gold_amt modulo = 10000 }
 
-	    # 1. 获取 0-7 的随机数 (池容量 8)
+	    # 1. 获取 0-9 的随机数 (池容量 10)
     set_local_variable = { name = gacha_standard_5_idx value = gacha_calc_standard_5_idx_sv }
 	
 	    # 2. 滑动窗口：如果随机数 >= 当前 UP 索引，则 +1 跳过 UP
@@ -191,7 +205,7 @@ gacha_resolve_5star_and_save_scope = {
 	      }
 	    }
 
-    # 3. 根据最终 Index 分发 (0-7, 但肯定不等于 current_up_idx)
+    # 3. 根据最终 Index 分发 (0-10, 但肯定不等于 current_up_idx)
     if = { limit = { local_var:gacha_standard_5_idx = 0 } gacha_create_xinhai_effect = yes }
     else_if = { limit = { local_var:gacha_standard_5_idx = 1 } gacha_create_fischl_effect = yes }
     else_if = { limit = { local_var:gacha_standard_5_idx = 2 } gacha_create_keqing_effect = yes }
@@ -201,6 +215,8 @@ gacha_resolve_5star_and_save_scope = {
     else_if = { limit = { local_var:gacha_standard_5_idx = 6 } gacha_create_klee_effect = yes }
     else_if = { limit = { local_var:gacha_standard_5_idx = 7 } gacha_create_nahida_effect = yes }
     else_if = { limit = { local_var:gacha_standard_5_idx = 8 } gacha_create_ningguang_effect = yes }
+    else_if = { limit = { local_var:gacha_standard_5_idx = 9 } gacha_create_ganyu_effect = yes }
+    else_if = { limit = { local_var:gacha_standard_5_idx = 10 } gacha_create_beidou_effect = yes }
   }
 
   # 补丁：无论新抽还是重复抽，统一确保归入自定义阶层

@@ -1,0 +1,81 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 北斗 (Beidou)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_beidou: "北斗"
+  gacha_last_name_beidou: "南十字"
+
+  # === 特质 (Traits) ===
+  gacha_beidou_origin_trait: "南十字的旗号"
+  desc_gacha_beidou_origin_trait: "「海上最值钱的不是炮，是名声。南十字一升旗，懂行的就知道：要么让道，要么交税。你要在海上横着走？行。先让他们学会怕这面旗。」"
+
+  gacha_beidou_awakened_trait: "斩浪者"
+  desc_gacha_beidou_awakened_trait: "「风浪？我见过更狠的。船硬不硬，得看你敢不敢把它开进浪里。别跟我说‘太危险’。只有船不够硬，没有浪太大。」"
+
+  gacha_beidou_transcended_trait: "不羁的船长"
+  desc_gacha_beidou_transcended_trait: "「我管人不靠花架子。刺头？让他上甲板扛一夜风，第二天就知道怎么说话了。你那些不听使唤的家伙，交给我。我讲义气，也讲拳头。」"
+
+  gacha_beidou_c2_trait: "怒海横行"
+  desc_gacha_beidou_c2_trait: "「听说他们有支像样的舰队？用不了多久，那些桅杆上就会挂上咱们的旗。」"
+
+  gacha_beidou_c4_trait: "踏海斩鲸"
+  desc_gacha_beidou_c4_trait: "「当年我斩海山的时候，全船的人都以为我疯了。可我告诉他们，比怪物更可怕的是我北斗。」"
+
+  gacha_beidou_c6_trait: "海上霸主"
+  desc_gacha_beidou_c6_trait: "「北斗。南十字船队船长。\n\n海上人嘴碎，喜欢给我起外号。\n\n说我疯，说我刺，说我早晚翻船。\n\n我听过，也笑过。\n\n我这辈子只认一个理：\n\n谁跟我讲义气，我就拿命回他；谁敢动我兄弟，我就让他下海喂鱼。\n\n第一次喝酒的时候，杯子碰得很响。\n\n后来有回风暴夜，甲板上站着的人不多。\n\n我记得那晚的浪。\n\n从今以后，南十字的舵在我手里。\n\n但这趟航线，我跟你一起定。\n\n不是你收服了我。\n\n是我北斗，自己选的。」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_beidou_modifier: "南十字的船长"
+  STATIC_MODIFIER_DESC_gacha_beidou_modifier: "「这趟买卖我接了。但记住，是我选的，不是你征服了我。」"
+  gacha_beidou_modifier: "海上女王"
+  gacha_beidou_modifier_desc: "北斗以义气与铁腕统合璃月海域。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_beidou_c0_modifier: "南十字座·零命"
+  STATIC_MODIFIER_NAME_gacha_beidou_c1_modifier: "老兄弟们"
+  STATIC_MODIFIER_NAME_gacha_beidou_c2_modifier: "黑帆压境"
+  STATIC_MODIFIER_NAME_gacha_beidou_c3_modifier: "甲板上的月亮"
+  STATIC_MODIFIER_NAME_gacha_beidou_c4_modifier: "海山再临"
+  STATIC_MODIFIER_NAME_gacha_beidou_c5_modifier: "璃月的规矩"
+  STATIC_MODIFIER_NAME_gacha_beidou_c6_modifier: "同舟共济"
+
+  # 北斗 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_beidou_country_modifier: "南十字的旗号"
+  STATIC_MODIFIER_DESC_gacha_beidou_country_modifier: "海上威名与私掠手段让舰队更具威慑。"
+  STATIC_MODIFIER_NAME_gacha_beidou_c1_country_modifier: "老兄弟们"
+  STATIC_MODIFIER_DESC_gacha_beidou_c1_country_modifier: "南十字的船员纷至沓来。"
+  STATIC_MODIFIER_NAME_gacha_beidou_c2_country_modifier: "黑帆压境"
+  STATIC_MODIFIER_DESC_gacha_beidou_c2_country_modifier: "海军士气与私掠成效大幅提升。"
+  STATIC_MODIFIER_NAME_gacha_beidou_c4_country_modifier: "海山再临"
+  STATIC_MODIFIER_DESC_gacha_beidou_c4_country_modifier: "风浪之中，舰队依旧稳健。"
+  STATIC_MODIFIER_NAME_gacha_beidou_c5_country_modifier: "璃月的规矩"
+  STATIC_MODIFIER_DESC_gacha_beidou_c5_country_modifier: "海上贸易与私掠秩序由她定价。"
+  STATIC_MODIFIER_NAME_gacha_beidou_c6_country_modifier: "同舟共济"
+  STATIC_MODIFIER_DESC_gacha_beidou_c6_country_modifier: "南十字的舵与这条航线，牢牢在你们手里。"
+
+  # === 事件 (Events) ===
+  gacha_beidou_events.1.title: "南十字船队船长 · 北斗"
+  gacha_beidou_events.1.desc: "祈愿阵中央，金色经文沿刻痕游走。\n\n空气里漫开一股海腥。潮水贴着礁石退开时留下的味道，混着一点烈酒。\n\n下一秒，法阵上方的空气像被拧了一下，水声从‘无’里挤出来。\n\n一颗半透明的潮汐之球在阵心鼓起，球壁里有浪纹翻卷，像把一段海面关进了玻璃。外侧的符文环转得不快，却稳。\n\n罗盘在半空微微摇摆，指针抖了两下。\n\n一卷海图摊开，纸角被湿气卷起。\n\n几枚金币浮起又落下，叮当作响。\n\n一艘小小的船模随波轻晃。\n\n潮汐之球里，有个人影。\n\n她半躺着，腿随意交叠，靴尖轻点着球壁；一只手压着海图，另一只手搭在膝上，指节松松地扣着一本硬封的航海册。\n\n眼睛闭着，嘴角挂着一点笑。\n\n一滴水珠沿着球壁滑下来，落在她鼻尖。\n\n她皱了皱眉。\n\n手指随意一弹，一枚金币从浪里翻出来，叮的一声撞在球壁上。\n\n潮汐之球像被那声脆响戳破。\n\n水光四散，湿冷的风扑面而来。\n\n靴跟踩在法阵上，咔一声，像甲板上钉子被敲进去。\n\n她伸了个懒腰，肩颈一转，骨节发出轻微的脆响。然后把手里那本册子拍了拍，像嫌它沾了点灰。\n\n「哟。」\n\n她抬头看了一圈。拱廊、石柱、金纹法阵。看着气派，但没有海。\n\n「这地方……挺讲排场的嘛。」\n\n她脚尖踢了踢散落的海图卷轴。\n\n罗盘还在空中晃，指针终于稳住，直直指向你。\n\n她顺着指针看过来：\n\n「我说怎么突然有方向了。」\n\n她抬手把海图卷起来，塞回怀里：\n\n「北斗。南十字船队的船长。」\n\n她上下扫你一眼，不躲不闪。\n\n「把我叫来，是有大买卖？」\n\n「先说好，我不跪任何人，也不喊任何人主子。」\n\n她抬手接住一枚还在空中旋转的金币，指腹搓了一下：\n\n「但要是你够有种，够讲义气。」\n\n她拍了拍腰间的大剑：\n\n「这把剑，还有我整支船队，都能借你使使。」\n\n她把那枚金币弹过来，速度不快，但很准：\n\n「来。接住。」\n\n「敢不敢跟我喝一杯，然后把你想干的事说清楚？」"
+  gacha_beidou_events.1.a: "接住"
+
+  gacha_beidou_events.13.title: "老兄弟们"
+  gacha_beidou_events.13.desc: "港口的风里多了喧哗声。旧旗换上新绳结，水手们在码头上互相撞肩。北斗把酒壶往你手里一塞：「我放出话了，说这边有大买卖。」她朝港口一抬下巴：「你看，人就来了。」"
+  gacha_beidou_events.13.a: "欢迎他们"
+
+  gacha_beidou_events.11.title: "黑帆压境"
+  gacha_beidou_events.11.desc: "夜里，海面黑得像墨。远处敌舰的灯火一盏盏熄掉。北斗站在船头，披风被风扯得猎猎作响：「听说他们有支像样的舰队？」她把剑往肩上一扛：「用不了多久，那些桅杆上就会挂上咱们的旗。值钱的货我先挑。」"
+  gacha_beidou_events.11.a: "收下战利品"
+
+  gacha_beidou_events.12.title: "海山再临"
+  gacha_beidou_events.12.desc: "风暴夜，浪有三层楼高。船身吱呀作响，水手们握紧绳索。北斗站在甲板上：「当年我斩海山的时候，全船的人都以为我疯了。」她抬手指向浪峰：「可我告诉他们，比怪物更可怕的是我北斗。」"
+  gacha_beidou_events.12.a: "稳住舵"
+
+  gacha_beidou_events.14.title: "璃月的规矩"
+  gacha_beidou_events.14.desc: "港口的商人开始学会在开船前多看一眼旗。走私贩见了你的人会先退半步。北斗把船舵一转：「璃月海上的规矩？我定的。你想让贸易线太平？我去‘巡视’几圈。风平浪静这种事，得先让几个人学会怕。」"
+  gacha_beidou_events.14.a: "交给你了"
+
+  gacha_beidou_events.4.title: "同舟共济"
+  gacha_beidou_events.4.desc: "她在船舱里翻酒。等你进门，她已经把两只杯子摆好，倒得很满。她把杯子往你面前一推：「跟你混了这么久，我算明白一件事。你这人，讲义气。」她抬杯和你碰了一下：「行。从今往后，你的敌人就是我的敌人。这条命，我押你这儿。」"
+  gacha_beidou_events.4.a: "并肩"

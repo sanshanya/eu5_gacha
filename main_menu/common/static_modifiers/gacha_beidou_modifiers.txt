@@ -1,0 +1,55 @@
+﻿# Generated Modifiers for beidou (V3) "南十字 · 北斗"
+
+# 角色标识：北斗本体
+gacha_beidou_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    gacha_electro_godeye = yes
+}
+
+# 命之座等级展示（0-6）
+gacha_beidou_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_beidou_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_beidou_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_beidou_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_beidou_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_beidou_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_beidou_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（海军士气+15%, 私掠耐久+20%）
+gacha_beidou_country_modifier = {
+    game_data = { category = country decaying = no }
+    naval_morale_modifier = 0.15
+    privateer_durability = 0.20
+}
+
+# C2 光环升级（海军士气+30%, 私掠耐久+40%, 俘获几率+15%）
+gacha_beidou_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    naval_morale_modifier = 0.30
+    privateer_durability = 0.40
+    ship_capture_chance = 0.15
+}
+
+# C1 专属机制：海军上限（以造船速度表现）
+gacha_beidou_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    ship_build_speed = 0.20
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_beidou_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：私掠效率/贸易引导（以耐久+贸易效率表现）
+gacha_beidou_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    privateer_durability = 0.25
+    trade_efficiency = 0.15
+}
+
+# C6 国家级占位（主要属性在 Trait 中）
+gacha_beidou_c6_country_modifier = {
+    game_data = { category = country decaying = no }
+}

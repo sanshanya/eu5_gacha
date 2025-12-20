@@ -218,6 +218,24 @@ gacha_remove_summoned_flag_for_character = {
     }
     root = { remove_global_variable = gacha_ningguang_is_summoned }
   }
+  if = {
+    limit = {
+      has_character_modifier = gacha_ganyu_modifier
+    }
+    root = { remove_global_variable = gacha_ganyu_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_beidou_modifier
+    }
+    root = { remove_global_variable = gacha_beidou_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_zhongli_modifier
+    }
+    root = { remove_global_variable = gacha_zhongli_is_summoned }
+  }
 }
 
 # ------------------------------------------------------------------------------

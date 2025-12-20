@@ -114,13 +114,13 @@ gacha_calc_entropy2_sv = {
 # --- 常驻 5 星池大小 ---
 # 说明：此处表示“歪常驻候选数”（不含当期UP）。
 # - 未解锁璃月池：7（8 名角色轮换中，排除当期UP）
-# - 解锁璃月池后：8（额外加入“凝光”等璃月池角色，测试阶段）
+# - 解锁璃月池后：10（额外加入“凝光/甘雨/北斗”等璃月池角色，测试阶段）
 gacha_pool_size_standard_5_sv = {
     value = 7
 
     if = {
         limit = { has_global_variable = gacha_liyue_pool_unlocked }
-        value = 8
+        value = 10
     }
 }
 
@@ -148,7 +148,7 @@ gacha_calc_standard_5_idx_sv = {
         }
     }
 
-    modulo = gacha_pool_size_standard_5_sv # Value is 7 or 8
+    modulo = gacha_pool_size_standard_5_sv # Value is 7 or 9
 }
 
 # --- 4 星奖励池大小 ---

@@ -27,3 +27,28 @@ gacha_liyue_events.1 = {
         name = gacha_liyue_events.1.a
     }
 }
+
+# ==============================================================================
+# Liyue - Zhongli spawn (hidden, once)
+# 说明：
+# - 由 situation:gacha_liyue_auto_recruitment 在建国满 1 年时触发
+# - 必须以 country 作为 root 执行（避免 situation root 破坏注册逻辑）
+# ==============================================================================
+gacha_liyue_events.2 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        country_exists = c:GL1
+        this = c:GL1
+        NOT = { has_global_variable = gacha_zhongli_is_summoned }
+    }
+
+    immediate = {
+        gacha_liyue_spawn_zhongli_c6 = yes
+    }
+
+    option = {
+        name = gacha_liyue_events.2.a
+    }
+}

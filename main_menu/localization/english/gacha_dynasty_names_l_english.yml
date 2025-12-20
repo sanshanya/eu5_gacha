@@ -8,6 +8,9 @@
   gacha_klee_dynasty: "Spark Knight"
   gacha_nahida_dynasty: "Buer"
   gacha_ningguang_dynasty: "Tianquan"
+  gacha_ganyu_dynasty: "Yuehai Pavilion"
+  gacha_beidou_dynasty: "Crux"
+  gacha_zhongli_dynasty: "Rex Lapis"
 
   # Backwards compatibility (early Liyue test key)
   gacha_yuheng_dynasty: "Yuheng"

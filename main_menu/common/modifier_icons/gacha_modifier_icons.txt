@@ -2,6 +2,14 @@
   positive = "gfx/interface/icons/modifier_types/gacha_water_godeye.dds"
 }
 
+gacha_stone_godeye = {
+  positive = "gfx/interface/icons/modifier_types/gacha_stone_godeye.dds"
+}
+
+gacha_ice_godeye = {
+  positive = "gfx/interface/icons/modifier_types/gacha_ice_godeye.dds"
+}
+
 gacha_electro_godeye = {
   positive = "gfx/interface/icons/modifier_types/gacha_electro_godeye.dds"
 }

@@ -6,6 +6,22 @@
   }
 }
 
+gacha_stone_godeye={
+  color=good
+  boolean=yes
+  game_data={
+    category=character
+  }
+}
+
+gacha_ice_godeye={
+  color=good
+  boolean=yes
+  game_data={
+    category=character
+  }
+}
+
 gacha_electro_godeye={
   color=good
   boolean=yes

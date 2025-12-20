@@ -1,0 +1,81 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 钟离 (Zhongli)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_zhongli: "钟离"
+  gacha_last_name_zhongli: "听书人"
+
+  # === 特质 (Traits) ===
+  gacha_zhongli_origin_trait: "千年契约"
+  desc_gacha_zhongli_origin_trait: "「契约即秩序，秩序即长存。」"
+
+  gacha_zhongli_awakened_trait: "岩脊守势"
+  desc_gacha_zhongli_awakened_trait: "「岩峦不动，方能镇守四方。」"
+
+  gacha_zhongli_transcended_trait: "听书人的定鼎"
+  desc_gacha_zhongli_transcended_trait: "「岁月流转，终有定鼎之时。」"
+
+  gacha_zhongli_c2_trait: "金石之约"
+  desc_gacha_zhongli_c2_trait: "「言出必践，金石为证。」"
+
+  gacha_zhongli_c4_trait: "天星坠落"
+  desc_gacha_zhongli_c4_trait: "「星落如岩，势不可挡。」"
+
+  gacha_zhongli_c6_trait: "尘世闲游"
+  desc_gacha_zhongli_c6_trait: "「行遍尘世，见证人间。」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_zhongli_modifier: "听书人"
+  STATIC_MODIFIER_DESC_gacha_zhongli_modifier: "「尘世故事，自有其因果。」"
+  gacha_zhongli_modifier: "听书人余韵"
+  gacha_zhongli_modifier_desc: "钟离以沉稳与契约维系璃月秩序。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_zhongli_c0_modifier: "听书人座·零命"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c1_modifier: "秩序之约"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c2_modifier: "金石之约"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c3_modifier: "古岩残章"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c4_modifier: "天星坠落"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c5_modifier: "万世之约"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c6_modifier: "尘世闲游"
+
+  # 钟离 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_zhongli_country_modifier: "千年契约"
+  STATIC_MODIFIER_DESC_gacha_zhongli_country_modifier: "律法与秩序更加稳固。"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c1_country_modifier: "秩序之约"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c1_country_modifier: "契约之下，政务更为严谨。"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c2_country_modifier: "金石之约"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c2_country_modifier: "治理效率进一步提升。"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c4_country_modifier: "天星坠落"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c4_country_modifier: "军略与纪律更为沉稳。"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c5_country_modifier: "万世之约"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c5_country_modifier: "国策余裕增加。"
+  STATIC_MODIFIER_NAME_gacha_zhongli_c6_country_modifier: "尘世闲游"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c6_country_modifier: "威望与治理得到长久支撑。"
+
+  # === 事件 (Events) ===
+  gacha_zhongli_events.1.title: "听书人 · 钟离"
+  gacha_zhongli_events.1.desc: "一位身着长衫的客人缓步而来，语调从容，仿佛早已听过这世上所有的故事。\n\n「在下钟离，略通旧事。」"
+  gacha_zhongli_events.1.a: "请多指教"
+
+  gacha_zhongli_events.13.title: "秩序之约"
+  gacha_zhongli_events.13.desc: "「契约既定，便各司其职。」"
+  gacha_zhongli_events.13.a: "遵循"
+
+  gacha_zhongli_events.11.title: "金石之约"
+  gacha_zhongli_events.11.desc: "「既是约定，便如金石。」"
+  gacha_zhongli_events.11.a: "谨记"
+
+  gacha_zhongli_events.12.title: "天星坠落"
+  gacha_zhongli_events.12.desc: "「天星一落，山河自稳。」"
+  gacha_zhongli_events.12.a: "稳如磐石"
+
+  gacha_zhongli_events.14.title: "万世之约"
+  gacha_zhongli_events.14.desc: "「契约不止一世。」"
+  gacha_zhongli_events.14.a: "持久"
+
+  gacha_zhongli_events.4.title: "尘世闲游"
+  gacha_zhongli_events.4.desc: "「尘世人间，自有其趣。」"
+  gacha_zhongli_events.4.a: "同行"

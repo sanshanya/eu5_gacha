@@ -1,0 +1,60 @@
+﻿# Zhongli Traits - V3 Design "听书人"
+
+# C0 初始三格（契约与秩序）
+
+# 1. 千年契约（光环）
+gacha_zhongli_origin_trait = {
+    category = ruler
+    allow = { always = no }
+    # 行政效率与正统性（由国家修正提供）
+    modifier = { gacha_country_aura = yes }
+}
+
+# 2. 岩脊守势（职业·陆军）
+gacha_zhongli_awakened_trait = {
+    category = general
+    allow = { always = no }
+    modifier = {
+        discipline = 0.05
+        army_initiative = 0.10
+    }
+}
+
+# 3. 听书人的定鼎（统治者）
+gacha_zhongli_transcended_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = {
+        monthly_prestige = 0.08
+        monthly_legitimacy = 0.08
+    }
+}
+
+# 命座进阶三格（从“讲述”到“见证”）
+
+# C2：金石之约（光环升级）
+gacha_zhongli_c2_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = { gacha_country_aura = yes }
+}
+
+# C4：天星坠落（职业升级）
+gacha_zhongli_c4_trait = {
+    category = general
+    allow = { always = no }
+    modifier = {
+        discipline = 0.10
+        army_initiative = 0.20
+    }
+}
+
+# C6：尘世闲游（统治者升级）
+gacha_zhongli_c6_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = {
+        country_cabinet_efficiency = 0.20
+        monthly_prestige = 0.16
+    }
+}

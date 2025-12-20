@@ -1,0 +1,81 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 甘雨 (Ganyu)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_ganyu: "甘雨"
+  gacha_last_name_ganyu: "麒麟"
+
+  # === 特质 (Traits) ===
+  gacha_ganyu_origin_trait: "三千年的秘书"
+  desc_gacha_ganyu_origin_trait: "「三千年来，我处理过的公文可以堆满整座玉京台。每一份都要核对三遍，每一个数字都不能出错。这些习惯……已经刻进骨头里了。」"
+
+  gacha_ganyu_awakened_trait: "麒麟的后裔"
+  desc_gacha_ganyu_awakened_trait: "「麒麟不杀生……但如果是为了守护，我不会退缩。魔神战争时，我曾一口吞下整支敌军。那之后我吃素了三千年，但那份力量还在。」"
+
+  gacha_ganyu_transcended_trait: "永不停歇的齿轮"
+  desc_gacha_ganyu_transcended_trait: "「帝君说过，璃月的运转不能停。所以我也不能停。只要还有工作，只要还有人需要我……我就会一直转下去。」"
+
+  gacha_ganyu_c2_trait: "玉京台的基石"
+  desc_gacha_ganyu_c2_trait: "「这些年，我看着一代代七星来来去去。凝光、刻晴……她们都很优秀。而我只是在角落里整理她们的文件，确保一切按部就班。这样就好。」"
+
+  gacha_ganyu_c4_trait: "霜华矢的守护"
+  desc_gacha_ganyu_c4_trait: "「我不喜欢战斗。但当敌人踏入这片土地时，我会让他们知道——麒麟的后裔，从不是好欺负的。每一支箭，都会找到它该去的地方。」"
+
+  gacha_ganyu_c6_trait: "璃月的不眠者"
+  desc_gacha_ganyu_c6_trait: "「我是甘雨，璃月七星的秘书。\n\n三千年来，我一直告诉自己：只要还有工作，我就有存在的意义。\n\n所以我不停地写，不停地算，不停地核对。哪怕眼睛酸涩，哪怕手指僵硬，哪怕整座玉京台都熄了灯——我还是会点起一盏烛火，继续做下去。\n\n因为我害怕。\n\n害怕一旦停下来，就会发现自己其实……什么都不是。\n\n不是人类，也不是仙兽。\n\n不是七星，也不是普通的璃月人。\n\n但是……\n\n看着您批阅奏章时认真的侧脸，听着您说“甘雨，今天早点休息”时温和的语气……\n\n我突然想，也许“存在的意义”这种东西，不一定要靠工作来证明。\n\n也许……只要有人记得我，有人愿意在我加班的时候端来一杯热茶……\n\n那我就不是“什么都不是”了。\n\n所以，陛下。\n\n#bold 能让我继续留在您身边吗？#!」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_ganyu_modifier: "麒麟的文书"
+  STATIC_MODIFIER_DESC_gacha_ganyu_modifier: "「如果有的话……请尽管吩咐。」"
+  gacha_ganyu_modifier: "麒麟的秘书"
+  gacha_ganyu_modifier_desc: "甘雨以沉默而精准的节奏维系着璃月政务。"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_ganyu_c0_modifier: "仙麟座·零命"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c1_modifier: "永夜的烛火"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c2_modifier: "无人知晓的加班"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c3_modifier: "梦中的清心花"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c4_modifier: "沉默的箭雨"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c5_modifier: "三千年的档案"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c6_modifier: "放下卷宗的那一刻"
+
+  # 甘雨 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_ganyu_country_modifier: "三千年的秘书"
+  STATIC_MODIFIER_DESC_gacha_ganyu_country_modifier: "政令精确执行，行政效率提升。"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c1_country_modifier: "永夜的烛火"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c1_country_modifier: "内阁席位增加。"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c2_country_modifier: "玉京台的基石"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c2_country_modifier: "行政效率进一步提升。"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c4_country_modifier: "霜华矢的守护"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c4_country_modifier: "麒麟的守护让政务与军令更稳。"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c5_country_modifier: "三千年的档案"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c5_country_modifier: "额外的国策槽位。"
+  STATIC_MODIFIER_NAME_gacha_ganyu_c6_country_modifier: "璃月的不眠者"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c6_country_modifier: "璃月政务进入不眠节奏。"
+
+  # === 事件 (Events) ===
+  gacha_ganyu_events.1.title: "璃月七星的秘书 · 甘雨"
+  gacha_ganyu_events.1.desc: "祈愿阵中央，金色经文沿刻痕游走。\n\n公文卷宗、璃月印信、算筹与笔墨在阵心上空翻卷，被一团自刻痕中央浮起的淡蓝冰霜轻柔包裹。\n\n冰晶内，雪片与光尘缓缓旋转，勾勒出某种静谧而古老的气息。\n一个少女蜷缩其中。\n\n湖蓝长发垂落腰际，素净的衣裙在冰光中微微起伏。她抱着一摞公文，靠在冰壁上，眼睫轻颤——像是在一场漫长的加班后终于睡着。\n\n一片雪花落在她的鼻尖。\n她皱了皱眉，冰壁悄然消融。\n\n少女睁眼，轻轻落在阵心，下意识地整理怀中的公文——然后愣住。\n\n「……这里不是玉京台。」\n\n她环顾四周，目光从困惑变为警觉，又从警觉变为某种职业性的冷静。\n\n「我是甘雨，璃月七星的秘书。负责……文书整理、会议记录、政令传达、税务核算、外交文件校对……」\n\n她顿了顿，似乎意识到自己在自动报菜名。\n\n「……总之，是打杂的。」\n\n她看向你，目光中带着一丝不确定：\n\n「请问，这里需要我处理什么工作吗？」\n\n「如果有的话……请尽管吩咐。我已经习惯了。」"
+  gacha_ganyu_events.1.a: "请多指教"
+
+  gacha_ganyu_events.13.title: "永夜的烛火"
+  gacha_ganyu_events.13.desc: "「您问我为什么总是加班？因为……白天的时间不够用。而且，夜里安静，没有人会来打扰。我可以一个人慢慢把所有事情做完。」"
+  gacha_ganyu_events.13.a: "注意休息"
+
+  gacha_ganyu_events.11.title: "无人知晓的加班"
+  gacha_ganyu_events.11.desc: "「这些年，我看着一代代七星来来去去。凝光、刻晴……她们都很优秀。而我只是在角落里整理她们的文件，确保一切按部就班。这样就好。」"
+  gacha_ganyu_events.11.a: "她们离不开你"
+
+  gacha_ganyu_events.12.title: "沉默的箭雨"
+  gacha_ganyu_events.12.desc: "「我不喜欢战斗。但当敌人踏入这片土地时，我会让他们知道——麒麟的后裔，从不是好欺负的。每一支箭，都会找到它该去的地方。」"
+  gacha_ganyu_events.12.a: "交给你了"
+
+  gacha_ganyu_events.14.title: "三千年的档案"
+  gacha_ganyu_events.14.desc: "「每一寸土地的归属，每一次边界的变动，我都有记录。只要翻开正确的卷宗，就能找到最合法、最省力的方式，让它成为您的领土。」"
+  gacha_ganyu_events.14.a: "翻开卷宗"
+
+  gacha_ganyu_events.4.title: "放下卷宗的那一刻"
+  gacha_ganyu_events.4.desc: "「三千年了。我终于可以……稍微休息一下了吗？不是因为工作做完了，工作永远做不完。而是因为……我想试着做一些，不是为了工作的事情。比如……和您一起看看日落。」"
+  gacha_ganyu_events.4.a: "一起去吧"

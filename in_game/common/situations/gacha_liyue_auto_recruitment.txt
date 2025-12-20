@@ -18,6 +18,15 @@
   on_start = {
     # 计数：从激活开始累计月数；12 个月触发一次“璃月池招募”
     set_variable = { name = gacha_liyue_recruit_months value = 0 }
+
+    # 初始化钟离招募计数（仅一次，保存在璃月国家作用域）
+    if = {
+      limit = { exists = var:target_country }
+      var:target_country = {
+        if = { limit = { NOT = { has_variable = gacha_liyue_zhongli_months } } set_variable = { name = gacha_liyue_zhongli_months value = 0 } }
+        if = { limit = { NOT = { has_variable = gacha_liyue_zhongli_spawned } } set_variable = { name = gacha_liyue_zhongli_spawned value = 0 } }
+      }
+    }
   }
 
   on_monthly = {
@@ -31,6 +40,35 @@
         end_situation = situation:gacha_liyue_auto_recruitment
       }
       else = {
+        # 钟离：璃月建国满 1 年后生成（仅一次，直接满命）
+        if = {
+          limit = { exists = var:target_country }
+          var:target_country = {
+            # 若世界已存在钟离，则标记为已生成，避免重复计数
+            if = {
+              limit = { has_global_variable = gacha_zhongli_is_summoned }
+              set_variable = { name = gacha_liyue_zhongli_spawned value = 1 }
+            }
+
+            if = {
+              limit = {
+                OR = {
+                  NOT = { has_variable = gacha_liyue_zhongli_spawned }
+                  var:gacha_liyue_zhongli_spawned = 0
+                }
+              }
+              if = { limit = { NOT = { has_variable = gacha_liyue_zhongli_months } } set_variable = { name = gacha_liyue_zhongli_months value = 0 } }
+              change_variable = { name = gacha_liyue_zhongli_months add = 1 }
+            if = {
+              limit = { var:gacha_liyue_zhongli_months >= 12 }
+              set_variable = { name = gacha_liyue_zhongli_spawned value = 1 }
+              # 通过 country_event 触发，确保 root=country（避免 situation root 破坏角色注册逻辑）
+              if = { limit = { NOT = { has_global_variable = gacha_zhongli_is_summoned } } trigger_event_non_silently = { id = gacha_liyue_events.2 } }
+            }
+          }
+        }
+        }
+
         # 月计数 +1
         change_variable = { name = gacha_liyue_recruit_months add = 1 }
 

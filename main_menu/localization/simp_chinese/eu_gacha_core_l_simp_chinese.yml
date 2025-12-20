@@ -61,12 +61,15 @@
   gacha_up_name_6: "\n#bold 当期UP:#!#color_yellow 可莉#!"
   gacha_up_name_7: "\n#bold 当期UP:#!#color_yellow 纳西妲#!"
   gacha_up_name_8: "\n#bold 当期UP:#!#color_yellow 凝光#!"
+  gacha_up_name_9: "\n#bold 当期UP:#!#color_yellow 甘雨#!"
+  gacha_up_name_10: "\n#bold 当期UP:#!#color_yellow 北斗#!"
   gacha_up_name_unknown: "\n#bold 当期UP:#!未知"
 
   # === 璃月：自动招募（AI）===
   gacha_liyue_events.1.title: "群玉阁的契约"
   gacha_liyue_events.1.desc: "璃月的财富与秩序正在重建。按既定契约，璃月将尝试招募一位来自「璃月池」的英雄，以巩固命座与国策。\n\n（此事件为 AI 逻辑用，正常情况下不会向玩家弹窗。）"
   gacha_liyue_events.1.a: "继续"
+  gacha_liyue_events.2.a: "继续"
 
   # === 建筑：璃月 ===
   gacha_liyue_harbor: "璃月港"
@@ -124,6 +127,8 @@
   MODIFIER_TYPE_DESC_gacha_electro_godeye: "来自稻妻的雷之印记，代表雷元素的认可。"
   MODIFIER_TYPE_NAME_gacha_water_godeye: "水元素神之眼"
   MODIFIER_TYPE_DESC_gacha_water_godeye: "来自水之神的祝福，象征流动与治愈。"
+  MODIFIER_TYPE_NAME_gacha_ice_godeye: "冰元素神之眼"
+  MODIFIER_TYPE_DESC_gacha_ice_godeye: "冰霜之力的印记，象征冷静与克制。"
   MODIFIER_TYPE_NAME_gacha_fire_godeye: "火元素神之眼"
   MODIFIER_TYPE_DESC_gacha_fire_godeye: "来自火之神的印记，象征热情与燃烧。"
   MODIFIER_TYPE_NAME_gacha_grass_godeye: "草元素神之眼"
