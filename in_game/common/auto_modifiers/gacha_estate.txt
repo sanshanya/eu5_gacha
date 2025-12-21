@@ -5,6 +5,7 @@
 		gacha_estate_blocked_from_cabinet = no
 
 		# Give it a baseline satisfaction & a visible power floor so面板能显示
-		gacha_estate_target_satisfaction = medium_permanent_target_satisfaction
+		gacha_estate_target_satisfaction = 1.0
+		gacha_estate_satisfaction_recovery = 1.0
 		global_gacha_estate_power = 5.0
 	}

@@ -5,6 +5,7 @@
 # 1. 南十字的旗号（光环）
 gacha_beidou_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 海军士气/私掠效率（由国家修正提供）
     modifier = { gacha_country_aura = yes }
@@ -13,6 +14,7 @@ gacha_beidou_origin_trait = {
 # 2. 斩浪者（职业·海军）
 gacha_beidou_awakened_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     # 海军上限/耐久的替代表现
     modifier = {
@@ -24,6 +26,7 @@ gacha_beidou_awakened_trait = {
 # 3. 不羁的船长（统治者）
 gacha_beidou_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 降低附庸不满与叛乱压力（替代“严苛镇压花费”）
     modifier = {
@@ -37,6 +40,7 @@ gacha_beidou_transcended_trait = {
 # C2：怒海横行（光环升级）
 gacha_beidou_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { gacha_country_aura = yes }
 }
@@ -44,6 +48,7 @@ gacha_beidou_c2_trait = {
 # C4：踏海斩鲸（职业升级）
 gacha_beidou_c4_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     modifier = {
         ship_build_speed = 0.20
@@ -55,6 +60,7 @@ gacha_beidou_c4_trait = {
 # C6：海上霸主（统治者升级）
 gacha_beidou_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = {
         subject_loyalty = 0.20

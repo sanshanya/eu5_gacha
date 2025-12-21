@@ -10,7 +10,7 @@ gacha_seven_archons_descent = {
   automation_tick = never
 
   potential = {
-    is_member_of_international_organization_of_type = { type = gacha_seven_archons }
+    scope:actor ?= { is_member_of_international_organization_of_type = { type = gacha_seven_archons } }
   }
 
   allow = {
@@ -310,7 +310,7 @@ gacha_seven_archons_descent = {
 
     if = {
       limit = { NOT = { country_exists = c:GS1 } }
-      location:arkhangelsk = {
+      location:okladnikova_sloboda = {
         add_core = c:GS1
         owner ?= { create_country_from_cores_in_our_locations = c:GS1 }
       }
@@ -324,11 +324,60 @@ gacha_seven_archons_descent = {
           limit = { NOT = { situation:gacha_snezhnaya_auto_recruitment = { situation_is_active = yes } } }
           activate_situation = situation:gacha_snezhnaya_auto_recruitment
         }
+        if = {
+          limit = { location:okladnikova_sloboda = { NOT = { owner = c:GS1 } } }
+          location:okladnikova_sloboda = { change_location_owner = c:GS1 }
+        }
+        location:nes = {
+          add_core = c:GS1
+          change_location_owner = c:GS1
+          change_raw_material = goods:iron
+        }
+        location:vizhas = {
+          add_core = c:GS1
+          change_location_owner = c:GS1
+          change_raw_material = goods:fiber_crops
+        }
+        location:kuloy = {
+          add_core = c:GS1
+          change_location_owner = c:GS1
+        }
+        location:koyda = {
+          add_core = c:GS1
+          change_location_owner = c:GS1
+          change_raw_material = goods:wild_game
+        }
+        if = {
+          limit = { location:okladnikova_sloboda = { owner = c:GS1 } }
+          location:okladnikova_sloboda = {
+            change_raw_material = goods:lumber
+            if = {
+              limit = { NOT = { has_location_modifier = gacha_divine_land } }
+              add_location_modifier = { modifier = gacha_divine_land years = 5 mode = add }
+              add_pop = {
+                type = pop_type:peasants
+                size = 7.5
+                culture = culture:snezhnaya_culture
+                religion = religion:orthodox
+              }
+              add_pop = {
+                type = pop_type:laborers
+                size = 7.5
+                culture = culture:snezhnaya_culture
+                religion = religion:orthodox
+              }
+            }
+            if = {
+              limit = { NOT = { has_building = building_type:gacha_snezhnaya_harbor } }
+              change_building_level_in_location = { building = building_type:gacha_snezhnaya_harbor value = 1 }
+            }
+          }
+        }
         c:GS1 = {
           set_country_rank_effect = { rank = country_rank:rank_kingdom }
           if = {
-            limit = { location:arkhangelsk = { owner = c:GS1 } }
-            set_capital = location:arkhangelsk
+            limit = { location:okladnikova_sloboda = { owner = c:GS1 } }
+            set_capital = location:okladnikova_sloboda
           }
           else = {
             ordered_owned_location = {
@@ -343,6 +392,9 @@ gacha_seven_archons_descent = {
           change_religion = religion:orthodox
           change_government_type = government_type:monarchy
           change_heir_selection = heir_selection:cognatic_primogeniture
+          add_accepted_culture = culture:pomor
+          add_accepted_culture = culture:bjarmian
+          add_accepted_culture = culture:nenets_culture
           add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
           gacha_join_seven_archons_io = yes
           if = {
@@ -402,6 +454,153 @@ gacha_seven_archons_descent = {
       }
     }
 
+    # Ensure Snezhnaya core location gets Divine Land and extra population (even if GS1 already existed)
+    if = {
+      limit = { country_exists = c:GS1 }
+      location:okladnikova_sloboda = {
+        if = {
+          limit = { NOT = { owner = c:GS1 } }
+          change_location_owner = c:GS1
+        }
+        change_raw_material = goods:lumber
+        if = {
+          limit = { NOT = { has_location_modifier = gacha_divine_land } }
+          add_location_modifier = { modifier = gacha_divine_land years = 5 mode = add }
+          add_pop = {
+            type = pop_type:peasants
+            size = 7.5
+            culture = culture:snezhnaya_culture
+            religion = religion:orthodox
+          }
+          add_pop = {
+            type = pop_type:laborers
+            size = 7.5
+            culture = culture:snezhnaya_culture
+            religion = religion:orthodox
+          }
+        }
+        if = {
+          limit = { NOT = { has_building = building_type:gacha_snezhnaya_harbor } }
+          change_building_level_in_location = { building = building_type:gacha_snezhnaya_harbor value = 1 }
+        }
+      }
+      location:nes = {
+        add_core = c:GS1
+        change_location_owner = c:GS1
+        change_raw_material = goods:iron
+      }
+      location:vizhas = {
+        add_core = c:GS1
+        change_location_owner = c:GS1
+        change_raw_material = goods:fiber_crops
+      }
+      location:kuloy = {
+        add_core = c:GS1
+        change_location_owner = c:GS1
+      }
+      location:koyda = {
+        add_core = c:GS1
+        change_location_owner = c:GS1
+        change_raw_material = goods:wild_game
+      }
+    }
+
+    # Ensure the 10-year foundation boom applies once for any existing Archon nations
+    if = {
+      limit = { country_exists = c:GL1 }
+      c:GL1 = {
+        if = {
+          limit = { NOT = { has_variable = gacha_foundation_boom_applied } }
+          if = {
+            limit = {
+              NOT = { has_country_modifier = gacha_liyue_foundation_boom_modifier }
+              NOT = { has_country_modifier = gacha_inazuma_foundation_boom_modifier }
+            }
+            add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          }
+          set_variable = { name = gacha_foundation_boom_applied value = 1 }
+        }
+      }
+    }
+    if = {
+      limit = { country_exists = c:GI1 }
+      c:GI1 = {
+        if = {
+          limit = { NOT = { has_variable = gacha_foundation_boom_applied } }
+          if = {
+            limit = { NOT = { has_country_modifier = gacha_inazuma_foundation_boom_modifier } }
+            add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          }
+          set_variable = { name = gacha_foundation_boom_applied value = 1 }
+        }
+      }
+    }
+    if = {
+      limit = { country_exists = c:GM1 }
+      c:GM1 = {
+        if = {
+          limit = { NOT = { has_variable = gacha_foundation_boom_applied } }
+          if = {
+            limit = { NOT = { has_country_modifier = gacha_inazuma_foundation_boom_modifier } }
+            add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          }
+          set_variable = { name = gacha_foundation_boom_applied value = 1 }
+        }
+      }
+    }
+    if = {
+      limit = { country_exists = c:GF1 }
+      c:GF1 = {
+        if = {
+          limit = { NOT = { has_variable = gacha_foundation_boom_applied } }
+          if = {
+            limit = { NOT = { has_country_modifier = gacha_inazuma_foundation_boom_modifier } }
+            add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          }
+          set_variable = { name = gacha_foundation_boom_applied value = 1 }
+        }
+      }
+    }
+    if = {
+      limit = { country_exists = c:GN1 }
+      c:GN1 = {
+        if = {
+          limit = { NOT = { has_variable = gacha_foundation_boom_applied } }
+          if = {
+            limit = { NOT = { has_country_modifier = gacha_inazuma_foundation_boom_modifier } }
+            add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          }
+          set_variable = { name = gacha_foundation_boom_applied value = 1 }
+        }
+      }
+    }
+    if = {
+      limit = { country_exists = c:GS1 }
+      c:GS1 = {
+        if = {
+          limit = { NOT = { has_variable = gacha_foundation_boom_applied } }
+          if = {
+            limit = { NOT = { has_country_modifier = gacha_inazuma_foundation_boom_modifier } }
+            add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          }
+          set_variable = { name = gacha_foundation_boom_applied value = 1 }
+        }
+      }
+    }
+    if = {
+      limit = { country_exists = c:GU1 }
+      c:GU1 = {
+        if = {
+          limit = { NOT = { has_variable = gacha_foundation_boom_applied } }
+          if = {
+            limit = { NOT = { has_country_modifier = gacha_inazuma_foundation_boom_modifier } }
+            add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          }
+          set_variable = { name = gacha_foundation_boom_applied value = 1 }
+        }
+      }
+    }
+
     custom_tooltip = gacha_seven_archons_descent_tt
   }
 
@@ -416,7 +615,7 @@ gacha_seven_archons_alliance = {
   automation_tick = never
 
   potential = {
-    is_member_of_international_organization_of_type = { type = gacha_seven_archons }
+    scope:actor ?= { is_member_of_international_organization_of_type = { type = gacha_seven_archons } }
   }
 
   allow = {

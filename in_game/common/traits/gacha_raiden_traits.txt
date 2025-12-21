@@ -5,6 +5,7 @@
 # 1. 鸣神岛·永恒静土（光环）
 gacha_raiden_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 战争厌倦度 -0.05/月 · 正统性 +0.08/月
     modifier = { gacha_country_aura = yes }
@@ -13,6 +14,7 @@ gacha_raiden_origin_trait = {
 # 2. 无想之一刀（职业 Trait：陆军）
 gacha_raiden_awakened_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     # 纪律+5% · 战场先手+15%
     modifier = {
@@ -24,6 +26,7 @@ gacha_raiden_awakened_trait = {
 # 3. 天下人之大权（统治者 Trait 基础加成）
 gacha_raiden_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 内政效率+30% · 战争厌倦度 -0.05/月
     modifier = {
@@ -37,6 +40,7 @@ gacha_raiden_transcended_trait = {
 # C2：祸津·稻光
 gacha_raiden_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 战争厌倦度 -0.10/月 · 建造时间 -10%
     modifier = { gacha_country_aura = yes }
@@ -45,6 +49,7 @@ gacha_raiden_c2_trait = {
 # C4：梦想·真说
 gacha_raiden_c4_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     # 纪律+10% · 先手+20% · 士气恢复+2%
     modifier = {
@@ -57,6 +62,7 @@ gacha_raiden_c4_trait = {
 # C6：源流·许愿星
 gacha_raiden_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 立法效率+15% · 威望+0.5/月 · 战争厌倦度 -0.10/月
     modifier = {

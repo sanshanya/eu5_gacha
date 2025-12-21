@@ -118,3 +118,27 @@
   MODIFIER_TYPE_DESC_gacha_inazuma_invest_200_price_cost_modifier: "用于调整「稻妻筹建」中「投入 200 金」选项的花费。"
   MODIFIER_TYPE_NAME_gacha_inazuma_invest_500_price_cost_modifier: "稻妻筹建花费（500 金）"
   MODIFIER_TYPE_DESC_gacha_inazuma_invest_500_price_cost_modifier: "用于调整「稻妻筹建」中「投入 500 金」选项的花费。"
+
+  # ==========================================================================
+  # 自动招募（七国）
+  # ==========================================================================
+  gacha_liyue_auto_recruitment: "璃月年度招募"
+  gacha_liyue_auto_recruitment_desc: "璃月每年尝试从璃月池招募一位角色，用于补全命座。"
+
+  gacha_inazuma_auto_recruitment: "稻妻年度招募"
+  gacha_inazuma_auto_recruitment_desc: "稻妻每年尝试从稻妻池招募一位角色，用于补全命座。"
+
+  gacha_mondstadt_auto_recruitment: "蒙德年度招募"
+  gacha_mondstadt_auto_recruitment_desc: "蒙德每年尝试从蒙德池招募一位角色，用于补全命座。"
+
+  gacha_fontaine_auto_recruitment: "枫丹年度招募"
+  gacha_fontaine_auto_recruitment_desc: "枫丹每年尝试从枫丹池招募一位角色，用于补全命座。"
+
+  gacha_natlan_auto_recruitment: "纳塔年度招募"
+  gacha_natlan_auto_recruitment_desc: "纳塔每年尝试从纳塔池招募一位角色，用于补全命座。"
+
+  gacha_snezhnaya_auto_recruitment: "至冬年度招募"
+  gacha_snezhnaya_auto_recruitment_desc: "至冬每年尝试从至冬池招募一位角色，用于补全命座。"
+
+  gacha_sumeru_auto_recruitment: "须弥年度招募"
+  gacha_sumeru_auto_recruitment_desc: "须弥每年尝试从须弥池招募一位角色，用于补全命座。"

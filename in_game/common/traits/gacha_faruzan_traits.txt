@@ -4,18 +4,21 @@
 
 gacha_faruzan_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { gacha_country_aura = yes }
 }
 
 gacha_faruzan_awakened_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }
 
 gacha_faruzan_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }
@@ -24,18 +27,21 @@ gacha_faruzan_transcended_trait = {
 
 gacha_faruzan_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { gacha_country_aura = yes }
 }
 
 gacha_faruzan_c4_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }
 
 gacha_faruzan_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }

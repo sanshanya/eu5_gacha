@@ -49,7 +49,7 @@ inazuma_culture = {
 }
 
 mondstadt_culture = {
-	language = german_language
+	language = low_german_dialect
 
 	color = rgb { 120 200 160 }
 
@@ -79,18 +79,17 @@ fontaine_culture = {
 }
 
 natlan_culture = {
-	language = arabic_language
+	language = nahuatl_language
 
 	color = rgb { 220 90 70 }
 
-	tags = { arabian_gfx middle_east_gfx }
+	tags = { aztec_gfx native_american_tag south_american_gfx american_gfx }
 
 	opinions = {
 	}
 	culture_groups = {
 		gacha_group
-		arabic_group
-		arabian_group
+		nahua_group
 	}
 }
 

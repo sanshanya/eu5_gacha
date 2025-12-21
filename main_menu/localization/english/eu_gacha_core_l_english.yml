@@ -77,6 +77,10 @@
   gacha_liyue_harbor: "Port of Liyue"
   gacha_liyue_harbor_desc: "The maritime gateway of Liyue and an anchor of contractual order.\n\nCan only be built in Guangzhou (Dongguan)."
 
+  # === Buildings: Snezhnaya ===
+  gacha_snezhnaya_harbor: "Port of Snezhnaya"
+  gacha_snezhnaya_harbor_desc: "The frozen maritime hub of Snezhnaya.\n\nCan only be built in Okladnikova Sloboda."
+
   # === Buildings: Inazuma ===
   gacha_inazuma_tenshukaku: "Tenshukaku"
   gacha_inazuma_tenshukaku_desc: "The shogunate's citadel and port anchor of Inazuma.\n\nCan only be built in Toshima-Kanto."
@@ -133,6 +137,8 @@
   MODIFIER_TYPE_DESC_gacha_electro_godeye: "A lightning-mark from Inazuma itself, signifying the Electro element’s recognition."
   MODIFIER_TYPE_NAME_gacha_water_godeye: "Hydro Vision"
   MODIFIER_TYPE_DESC_gacha_water_godeye: "A blessing from the god of water, symbolizing flow and healing."
+  MODIFIER_TYPE_NAME_gacha_stone_godeye: "Geo Vision"
+  MODIFIER_TYPE_DESC_gacha_stone_godeye: "A mark of stone and contracts, symbolizing solidity and resolve."
   MODIFIER_TYPE_NAME_gacha_ice_godeye: "Cryo Vision"
   MODIFIER_TYPE_DESC_gacha_ice_godeye: "A mark of frost, symbolizing calm and restraint."
   MODIFIER_TYPE_NAME_gacha_fire_godeye: "Pyro Vision"
@@ -267,6 +273,8 @@
   gacha_seven_archons_desc: "A council of the Archons presiding over the nations born of otherworldly covenants."
   diplomatic_status_gacha_seven_archons_name: "Seven Archons Council"
   diplomatic_status_gacha_seven_archons_tooltip: "Member of the Seven Archons Council."
+  io_opinion_gacha_seven_archons: "Seven Archons Council Opinion"
+  gacha_seven_archons_list_who_tt: "Member List"
   gacha_seven_archons_descent: "Descent of the Seven"
   gacha_seven_archons_descent_desc: "Can be initiated once the Seven Archons Council has at least 1 member. Current members break free from suzerainty; the remaining five nations descend immediately at their designated locations."
   gacha_tt_seven_archons_two_members: "The Seven Archons Council has at least 2 members."

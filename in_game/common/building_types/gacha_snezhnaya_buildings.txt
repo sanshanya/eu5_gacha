@@ -1,0 +1,45 @@
+﻿gacha_snezhnaya_harbor = {
+	is_foreign = no
+	max_levels = 1
+	pop_type = nobles
+
+	category = trade_category
+	employment_size = large_noble_employment
+
+	town = yes
+	city = yes
+
+	# Snezhnaya's unique harbor in Okladnikova Sloboda
+	icon = gacha_snezhnaya_harbor
+	expensive = yes
+	build_time = large_port_building_time
+
+	country_potential = {
+		this = c:GS1
+	}
+
+	location_potential = {
+		this = location:okladnikova_sloboda
+	}
+
+	# Remove if Snezhnaya loses Okladnikova Sloboda
+	remove_if = {
+		owner = { NOT = { this = c:GS1 } }
+	}
+
+	possible_production_methods = {
+		port_building_maintenance
+	}
+	construction_demand = gacha_snezhnaya_harbor_construction
+
+	modifier = {
+		local_market_access = 0.05
+		local_merchant_power = 5
+		local_trades_per_burgher = 0.5
+		merchant_capacity_from_building = 1.0
+		local_merchant_capacity = 3
+		harbor_suitability = 0.80
+    trade_range = 100
+	}
+
+}

@@ -116,3 +116,14 @@ Use Game Concepts to provide nested tooltips for complex terms.
 2.  **Split**: Break `eu_gacha_l_*.yml` into the modular files defined above.
 3.  **Refactor**: Rename keys to match the new convention (if necessary, but prioritize splitting first).
 4.  **Verify**: Ensure no missing keys.
+
+---
+
+## 7. Base File Patch Log (源文件修改登记)
+
+> [!IMPORTANT]
+> 仅在引擎**不支持注入/追加**时允许覆盖原文件，且必须在此登记原因与范围。
+
+- 2025-12-22：**已撤销** base 修改，改为在 mod 内覆盖文件：
+  - `in_game/common/customizable_localization/country_history.txt`
+  - 说明：以同名文件覆盖 `country_history` 列表（完整复制原版 + GS1 规则）。

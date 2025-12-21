@@ -5,6 +5,7 @@
 # 1. 净善宫的笼中鸟（光环）
 gacha_nahida_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 思潮传播+20% · 理念花费-5% (由 modifier 提供)
     modifier = { gacha_country_aura = yes }
@@ -13,6 +14,7 @@ gacha_nahida_origin_trait = {
 # 2. 摩耶之梦的解析者（职业 Trait：攻城/智将）
 gacha_nahida_awakened_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     # 围城能力+20% · 要塞防御+10%
     modifier = {
@@ -23,6 +25,7 @@ gacha_nahida_awakened_trait = {
 # 3. 小吉祥草王（统治者 Trait 基础加成）
 gacha_nahida_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 科研速度+5% · 行政容量+10%
     modifier = {
@@ -36,6 +39,7 @@ gacha_nahida_transcended_trait = {
 # C2：千朵玫瑰的早晨
 gacha_nahida_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 思潮传播+40% · 理念花费-10% · 接纳思潮花费-20% (由 modifier 提供)
     modifier = { gacha_country_aura = yes }
@@ -44,6 +48,7 @@ gacha_nahida_c2_trait = {
 # C4：蕴种印的锁死
 gacha_nahida_c4_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     # 围城能力+40% · 敌军损耗+1% · 炮兵伤害+10%
     modifier = {
@@ -55,6 +60,7 @@ gacha_nahida_c4_trait = {
 # C6：智慧主·布耶尔
 gacha_nahida_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 科研速度+15% · 全点数花费-10% · 顾问花费-20% (由 modifier 提供)
     modifier = {

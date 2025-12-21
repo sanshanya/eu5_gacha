@@ -27,6 +27,10 @@
   gacha_in_administration_desc: "Allows Otherworlders to enter the cabinet and take part in the highest affairs of state."
   gacha_command_positions: "Starlit Commanders"
   gacha_command_positions_desc: "Allows Otherworlders to serve as army and navy commanders, bringing otherworldly tactics to the field."
+  gacha_estate_celestial_patronage: "Celestial Patronage"
+  gacha_estate_celestial_patronage_desc: "Guarantees the Otherworlders’ standing with formal recognition and resources, raising their satisfaction equilibrium."
+  gacha_estate_starsworn_charter: "Starsworn Charter"
+  gacha_estate_starsworn_charter_desc: "Grants higher privileges and exemptions to secure lasting loyalty and stability."
 
   gacha_estate_privileges_interaction: "Grant Otherworlder Privileges"
   gacha_estate_privileges_interaction_desc: "Immediately unlocks cabinet and command privileges for the Otherworlders and applies the national Otherworlder modifier."

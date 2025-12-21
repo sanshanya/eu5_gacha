@@ -27,6 +27,10 @@
   gacha_in_administration_desc: "允许天外之人进入内阁，参与最高政务决策。"
   gacha_command_positions: "星辉统帅"
   gacha_command_positions_desc: "允许天外之人担任陆海军指挥官，发挥异界战术。"
+  gacha_estate_celestial_patronage: "天外礼遇"
+  gacha_estate_celestial_patronage_desc: "以礼制与资源保障天外之人的地位，提高其阶层满意度均衡点。"
+  gacha_estate_starsworn_charter: "星誓特许"
+  gacha_estate_starsworn_charter_desc: "授予天外之人更高的礼遇与豁免，以换取长期忠诚与稳定。"
 
   # 交互：授予特权
   gacha_estate_privileges_interaction: "授予天外之人特权"

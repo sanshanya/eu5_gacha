@@ -94,3 +94,7 @@ gacha_liyue_build_market_price_cost_modifier = { positive = "gfx/interface/icons
 gacha_liyue_invest_50_price_cost_modifier = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
 gacha_liyue_invest_200_price_cost_modifier = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
 gacha_liyue_invest_500_price_cost_modifier = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_inazuma_build_market_price_cost_modifier = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_inazuma_invest_50_price_cost_modifier = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_inazuma_invest_200_price_cost_modifier = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }
+gacha_inazuma_invest_500_price_cost_modifier = { positive = "gfx/interface/icons/modifier_types/gacha_intertwined_fate.dds" }

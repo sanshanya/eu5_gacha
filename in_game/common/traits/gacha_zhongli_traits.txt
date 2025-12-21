@@ -5,6 +5,7 @@
 # 1. 千年契约（光环）
 gacha_zhongli_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 行政效率与正统性（由国家修正提供）
     modifier = { gacha_country_aura = yes }
@@ -13,6 +14,7 @@ gacha_zhongli_origin_trait = {
 # 2. 岩脊守势（职业·陆军）
 gacha_zhongli_awakened_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     modifier = {
         discipline = 0.05
@@ -23,6 +25,7 @@ gacha_zhongli_awakened_trait = {
 # 3. 听书人的定鼎（统治者）
 gacha_zhongli_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = {
         monthly_prestige = 0.08
@@ -35,6 +38,7 @@ gacha_zhongli_transcended_trait = {
 # C2：金石之约（光环升级）
 gacha_zhongli_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { gacha_country_aura = yes }
 }
@@ -42,6 +46,7 @@ gacha_zhongli_c2_trait = {
 # C4：天星坠落（职业升级）
 gacha_zhongli_c4_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     modifier = {
         discipline = 0.10
@@ -52,6 +57,7 @@ gacha_zhongli_c4_trait = {
 # C6：尘世闲游（统治者升级）
 gacha_zhongli_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = {
         country_cabinet_efficiency = 0.20

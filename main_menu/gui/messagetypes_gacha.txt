@@ -1,0 +1,19 @@
+PERFORM_gacha_seven_archons_descent_ACTION={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+
+PERFORM_gacha_seven_archons_alliance_ACTION={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}

@@ -1,0 +1,24 @@
+locations = {
+  dongguan = {
+    define_pop = { type = peasants size = 0.01 culture = liyue_culture religion = mahayana }
+    define_pop = { type = peasants size = 0.01 culture = gacha_culture religion = mahayana }
+  }
+  toshima_kanto = {
+    define_pop = { type = peasants size = 0.01 culture = inazuma_culture religion = shinto }
+  }
+  bremen = {
+    define_pop = { type = peasants size = 0.01 culture = mondstadt_culture religion = catholic }
+  }
+  cherbourg = {
+    define_pop = { type = peasants size = 0.01 culture = fontaine_culture religion = catholic }
+  }
+  cihuatlan = {
+    define_pop = { type = peasants size = 0.01 culture = natlan_culture religion = nahuatl }
+  }
+  okladnikova_sloboda = {
+    define_pop = { type = peasants size = 0.01 culture = snezhnaya_culture religion = orthodox }
+  }
+  surat = {
+    define_pop = { type = peasants size = 0.01 culture = sumeru_culture religion = hindu }
+  }
+}

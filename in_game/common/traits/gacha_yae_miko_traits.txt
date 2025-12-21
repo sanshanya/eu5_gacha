@@ -4,18 +4,21 @@
 
 gacha_yae_miko_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { gacha_country_aura = yes }
 }
 
 gacha_yae_miko_awakened_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }
 
 gacha_yae_miko_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }
@@ -24,18 +27,21 @@ gacha_yae_miko_transcended_trait = {
 
 gacha_yae_miko_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { gacha_country_aura = yes }
 }
 
 gacha_yae_miko_c4_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }
 
 gacha_yae_miko_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }

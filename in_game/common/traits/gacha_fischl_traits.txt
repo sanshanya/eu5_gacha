@@ -5,6 +5,7 @@
 # 1. 幽夜的窥视之眼（光环）
 gacha_fischl_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 间谍网 +40% · 外交关系 +1 (由 modifier 提供)
     modifier = { gacha_country_aura = yes }
@@ -13,6 +14,7 @@ gacha_fischl_origin_trait = {
 # 2. 断罪雷影之弓（职业 Trait：陆军）
 gacha_fischl_awakened_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     # 炮兵伤害 +15% · 陆军损耗 -10%
     modifier = {
@@ -24,6 +26,7 @@ gacha_fischl_awakened_trait = {
 # 3. 净土的降临者（统治者 Trait 基础加成）
 gacha_fischl_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 正统性 +1.00/年 · 威望 +1.00/年
     modifier = {
@@ -37,6 +40,7 @@ gacha_fischl_transcended_trait = {
 # C2：极夜的真视界
 gacha_fischl_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 间谍网 +80% · 反间谍 +40% · 外交关系 +2 (由 modifier 提供)
     modifier = { gacha_country_aura = yes }
@@ -45,6 +49,7 @@ gacha_fischl_c2_trait = {
 # C4：皇女的幻梦庭
 gacha_fischl_c4_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     # 炮兵伤害 +30% · 攻城效率 +20% · 陆军损耗 -20% · 敌军损耗 +10%
     modifier = {
@@ -58,6 +63,7 @@ gacha_fischl_c4_trait = {
 # C6：永夜之主
 gacha_fischl_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 正统性 +2.00/年 · 造核花费 -20% · 侵略扩张 -20%
     modifier = {

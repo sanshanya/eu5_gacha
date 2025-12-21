@@ -97,6 +97,11 @@ gacha_on_game_start_initialize_action = {
     # 兜底：清理临时 scopes（避免旧存档/崩溃残留引用污染 UI）
     gacha_clear_gacha_saved_scopes = yes
 
+    # 兜底：初始化调试变量（避免“变量未设置”的启动日志）
+    every_country = {
+      if = { limit = { NOT = { has_variable = gacha_debug_enabled } } set_variable = { name = gacha_debug_enabled value = 0 } }
+    }
+
     # 兜底：确保全局 UP 索引存在（避免 UI/脚本首次读取时报错）
     if = {
       limit = { NOT = { has_global_variable = gacha_current_up_idx } }
@@ -136,6 +141,79 @@ gacha_on_game_start_initialize_action = {
           }
         }
         location:toshima_kanto = { change_building_level_in_location = { building = building_type:gacha_inazuma_tenshukaku value = 1 } }
+      }
+    }
+
+    # 开局兜底：若玩家选择至冬开局，则确保奥克拉德尼科瓦归属至冬（避免与 NOV 开局归属冲突）
+    if = {
+      limit = { country_exists = c:GS1 }
+      c:GS1 = {
+        location:okladnikova_sloboda = {
+          add_core = c:GS1
+          if = { limit = { NOT = { owner = c:GS1 } } change_location_owner = c:GS1 }
+        }
+        location:nes = {
+          add_core = c:GS1
+          change_location_owner = c:GS1
+        }
+        location:vizhas = {
+          add_core = c:GS1
+          change_location_owner = c:GS1
+        }
+        location:kuloy = {
+          add_core = c:GS1
+          change_location_owner = c:GS1
+        }
+        location:koyda = {
+          add_core = c:GS1
+          change_location_owner = c:GS1
+        }
+        set_capital = location:okladnikova_sloboda
+        add_accepted_culture = culture:pomor
+        add_accepted_culture = culture:bjarmian
+        add_accepted_culture = culture:nenets_culture
+        if = {
+          limit = { location:okladnikova_sloboda = { owner = c:GS1 } }
+          location:okladnikova_sloboda = {
+            if = {
+              limit = { NOT = { has_location_modifier = gacha_divine_land } }
+              add_location_modifier = { modifier = gacha_divine_land years = 5 mode = add }
+              add_pop = {
+                type = pop_type:peasants
+                size = 7.5
+                culture = culture:snezhnaya_culture
+                religion = religion:orthodox
+              }
+              add_pop = {
+                type = pop_type:laborers
+                size = 7.5
+                culture = culture:snezhnaya_culture
+                religion = religion:orthodox
+              }
+            }
+          }
+        }
+        if = {
+          limit = { location:okladnikova_sloboda = { owner = c:GS1 } }
+          location:okladnikova_sloboda = {
+            change_raw_material = goods:lumber
+            if = {
+              limit = { NOT = { has_building = building_type:gacha_snezhnaya_harbor } }
+              change_building_level_in_location = { building = building_type:gacha_snezhnaya_harbor value = 1 }
+            }
+          }
+        }
+        location:nes = { change_raw_material = goods:iron }
+        location:vizhas = { change_raw_material = goods:fiber_crops }
+        location:koyda = { change_raw_material = goods:wild_game }
+        if = {
+          limit = {
+            NOT = { has_variable = gacha_foundation_boom_applied }
+            NOT = { has_country_modifier = gacha_inazuma_foundation_boom_modifier }
+          }
+          add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          set_variable = { name = gacha_foundation_boom_applied value = 1 }
+        }
       }
     }
 
@@ -233,6 +311,21 @@ gacha_on_game_start_initialize_action = {
             is_alive = yes
             has_character_modifier = gacha_columbina_modifier
           }
+          # 开局直设为 C6，并同步国家修正（用于开局选择至冬的场景）
+          if = { limit = { NOT = { has_trait = gacha_core_trait } } add_trait = trait:gacha_core_trait }
+          if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+          if = { limit = { NOT = { has_variable = gacha_affinity_level } } set_variable = { name = gacha_affinity_level value = 0 } }
+
+          gacha_apply_constellation_stats_effect = { who = columbina }
+          gacha_columbina_update_traits = yes
+
+          while = {
+            limit = { var:gacha_constellation_lvl < 6 }
+            change_variable = { name = gacha_constellation_lvl add = 1 }
+            gacha_apply_constellation_stats_effect = { who = columbina }
+            gacha_columbina_update_traits = yes
+          }
+
           gacha_columbina_apply_country_modifiers = yes
         }
       }
@@ -333,6 +426,7 @@ gacha_on_game_start_initialize_action = {
       remove_variable = gacha_event_lock
       remove_variable = gacha_liyue_plan_lock
       remove_variable = gacha_inazuma_plan_lock
+
     }
 
     # 读档/开局自愈：世界唯一角色的“已召唤”标记应为全局变量；按实际存活角色重建

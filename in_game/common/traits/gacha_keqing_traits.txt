@@ -5,6 +5,7 @@
 # 1. 璃月千帆之繁（光环）
 gacha_keqing_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 建造时间-15% · 发展度提升花费-10% (由 modifier 提供)
     modifier = { gacha_country_aura = yes }
@@ -13,6 +14,7 @@ gacha_keqing_origin_trait = {
 # 2. 迅雷天街巡游（职业 Trait：陆军）
 gacha_keqing_awakened_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     # 陆军移动速度+20% · 训练度+5%
     modifier = {
@@ -24,6 +26,7 @@ gacha_keqing_awakened_trait = {
 # 3. 人治时代的开拓者（统治者 Trait 基础加成）
 gacha_keqing_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 理念花费-10% · 行政容量+10%
     modifier = {
@@ -37,6 +40,7 @@ gacha_keqing_transcended_trait = {
 # C2：黄金的土地
 gacha_keqing_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 建造时间-30% · 发展度花费-20% · 商品产出+10% (由 modifier 提供)
     modifier = { gacha_country_aura = yes }
@@ -45,6 +49,7 @@ gacha_keqing_c2_trait = {
 # C4：云来绝剑
 gacha_keqing_c4_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     # 移动速度+30% · 冲击伤害+15% · 增援速度+20%
     modifier = {
@@ -57,6 +62,7 @@ gacha_keqing_c4_trait = {
 # C6：玉衡治世
 gacha_keqing_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 行政效率+10% · 全点数花费-10% · 最大绝对主义+10 (由 modifier 提供)
     modifier = {

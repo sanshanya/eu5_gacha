@@ -5,6 +5,7 @@
 # 1. 欧庇克莱歌剧院（光环）
 gacha_furina_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 威望/正统性月度提升（由国家修正提供）
     modifier = { gacha_country_aura = yes }
@@ -13,6 +14,7 @@ gacha_furina_origin_trait = {
 # 2. 沙龙成员的下午茶（职业 Trait：海军）
 gacha_furina_awakened_trait = {
     category = admiral
+    flavor = personality
     allow = { always = no }
     # 海军士气+20% · 速度+20% · 耐久+10%
     modifier = {
@@ -25,6 +27,7 @@ gacha_furina_awakened_trait = {
 # 3. "众水之神"的假面（统治者 Trait 基础加成）
 gacha_furina_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 艺术家起始几率/质量，改善关系提升
     modifier = {
@@ -40,6 +43,7 @@ gacha_furina_transcended_trait = {
 # C2：谕示裁定枢机
 gacha_furina_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 威望+2.00/年 · 正统性+2.00/年 · 改革速度+20% (由 modifier 提供)
     modifier = { gacha_country_aura = yes }
@@ -48,6 +52,7 @@ gacha_furina_c2_trait = {
 # C4：万众狂欢之海
 gacha_furina_c4_trait = {
     category = admiral
+    flavor = personality
     allow = { always = no }
     # 海军士气+30% · 海军耐久+20% · 交战宽度+10%
     modifier = {
@@ -60,6 +65,7 @@ gacha_furina_c4_trait = {
 # C6：普世欢腾
 gacha_furina_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 普世欢腾：外交声誉/改善关系与艺术繁荣
     modifier = {

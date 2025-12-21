@@ -78,6 +78,10 @@
   gacha_liyue_harbor: "璃月港"
   gacha_liyue_harbor_desc: "璃月的海贸之门与契约秩序的锚点。\n\n只能在广州（东莞）修建。"
 
+  # === 建筑：至冬 ===
+  gacha_snezhnaya_harbor: "至冬港"
+  gacha_snezhnaya_harbor_desc: "至冬的寒海贸易中枢。\n\n只能在奥克拉德尼科瓦修建。"
+
   # === 建筑：稻妻 ===
   gacha_inazuma_tenshukaku: "天守阁"
   gacha_inazuma_tenshukaku_desc: "稻妻幕府的中枢与港口支点。\n\n只能在丰岛（关东）修建。"
@@ -134,6 +138,8 @@
   MODIFIER_TYPE_DESC_gacha_electro_godeye: "来自稻妻的雷之印记，代表雷元素的认可。"
   MODIFIER_TYPE_NAME_gacha_water_godeye: "水元素神之眼"
   MODIFIER_TYPE_DESC_gacha_water_godeye: "来自水之神的祝福，象征流动与治愈。"
+  MODIFIER_TYPE_NAME_gacha_stone_godeye: "岩元素神之眼"
+  MODIFIER_TYPE_DESC_gacha_stone_godeye: "岩之力的印记，象征坚固与契约。"
   MODIFIER_TYPE_NAME_gacha_ice_godeye: "冰元素神之眼"
   MODIFIER_TYPE_DESC_gacha_ice_godeye: "冰霜之力的印记，象征冷静与克制。"
   MODIFIER_TYPE_NAME_gacha_fire_godeye: "火元素神之眼"
@@ -279,6 +285,8 @@
   gacha_seven_archons_desc: "由七国执政组成的议会，统辖因天外契约而诞生的诸国。"
   diplomatic_status_gacha_seven_archons_name: "尘世七执政"
   diplomatic_status_gacha_seven_archons_tooltip: "作为成员国加入尘世七执政。"
+  io_opinion_gacha_seven_archons: "尘世七执政成员评价"
+  gacha_seven_archons_list_who_tt: "成员名单"
   gacha_seven_archons_descent: "七国降临"
   gacha_seven_archons_descent_desc: "当尘世七执政至少拥有 1 位成员时可启动。现有成员将脱离宗主独立，其余五国会在指定地点立即降临。"
   gacha_tt_seven_archons_two_members: "尘世七执政至少拥有 2 个成员。"
@@ -291,7 +299,6 @@
   gacha_seven_archons_alliance_tt: "尘世七执政已结成联盟，成员国开始获得月度增益。"
   gacha_tt_seven_archons_all_exist: "七国全部成立。"
 
-  gacha_liyue_events.2.title: "无声契约"
   STATIC_MODIFIER_NAME_gacha_liyue_trade_hub_modifier: "璃月商港"
   STATIC_MODIFIER_DESC_gacha_liyue_trade_hub_modifier: "以契约为骨、以商贸为血的港口国家。长期的贸易繁荣与城市建设为璃月提供稳定增长。"
 
@@ -329,3 +336,16 @@
   gacha_nation_events.21.a: "谨遵神谕"
 
   # 国家名称（见 gacha_country_names_l_simp_chinese.yml）
+
+  # 稻妻计划（交互）
+  gacha_raiden_inazuma_plan_interaction: "稻妻计划"
+  gacha_raiden_inazuma_plan_interaction_desc: "以雷电将军为核心，推进稻妻筹建的内阁行动。"
+  gacha_raiden_inazuma_plan_interaction_desc_specific: "启动稻妻筹建的关键交互。"
+  gacha_raiden_inazuma_plan_interaction_past: "已推动稻妻筹建"
+  gacha_raiden_inazuma_plan_interaction_act: "启动稻妻计划"
+  gacha_raiden_inazuma_plan_interaction_act_past: "已启动稻妻计划"
+
+  # 建造需求（施工）
+  gacha_liyue_harbor_construction: "璃月港施工需求"
+  gacha_inazuma_tenshukaku_construction: "天守阁施工需求"
+  gacha_snezhnaya_harbor_construction: "至冬港施工需求"

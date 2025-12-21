@@ -4,18 +4,21 @@
 
 gacha_neuvillette_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { gacha_country_aura = yes }
 }
 
 gacha_neuvillette_awakened_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }
 
 gacha_neuvillette_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }
@@ -24,18 +27,21 @@ gacha_neuvillette_transcended_trait = {
 
 gacha_neuvillette_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { gacha_country_aura = yes }
 }
 
 gacha_neuvillette_c4_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }
 
 gacha_neuvillette_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { }
 }

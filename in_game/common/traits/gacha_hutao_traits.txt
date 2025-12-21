@@ -5,6 +5,7 @@
 # 1. 往生堂业务拓展（光环）
 gacha_hutao_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 稳定度花费-10% · 疾病抗性+20% (由 modifier 提供)
     modifier = { gacha_country_aura = yes }
@@ -13,6 +14,7 @@ gacha_hutao_origin_trait = {
 # 2. 赤团开道（职业 Trait：陆军）
 gacha_hutao_awakened_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     # 陆军士气+10% · 敌军伤亡+10%
     modifier = {
@@ -24,6 +26,7 @@ gacha_hutao_awakened_trait = {
 # 3. 幽蝶的引路人（统治者 Trait 基础加成）
 gacha_hutao_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 威望+1.00/年 · 正统性+1.00/年
     modifier = {
@@ -37,6 +40,7 @@ gacha_hutao_transcended_trait = {
 # C2：边界的安魂曲
 gacha_hutao_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 稳定度花费-20% · 疾病抗性+40% · 人力恢复+10% (由 modifier 提供)
     modifier = { gacha_country_aura = yes }
@@ -45,6 +49,7 @@ gacha_hutao_c2_trait = {
 # C4：蝶火燎原
 gacha_hutao_c4_trait = {
     category = general
+    flavor = personality
     allow = { always = no }
     # 陆军士气+20% · 冲击伤害+20% · 火伤+10%
     modifier = {
@@ -57,6 +62,7 @@ gacha_hutao_c4_trait = {
 # C6：幽冥之主
 gacha_hutao_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 稳定度花费-40% · 叛乱-2 · 君主寿命+20% (由 modifier 提供)
     modifier = {

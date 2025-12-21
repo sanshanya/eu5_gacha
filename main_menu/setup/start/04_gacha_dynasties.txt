@@ -1,0 +1,6 @@
+dynasty_manager = {
+  gacha_columbina_dynasty = {
+    name = { name = gacha_columbina_dynasty }
+    home = okladnikova_sloboda
+  }
+}

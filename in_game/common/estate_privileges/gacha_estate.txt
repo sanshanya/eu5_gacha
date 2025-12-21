@@ -19,3 +19,24 @@ gacha_command_positions = {
 		global_gacha_estate_power = 0.1
 	}
 }
+
+# Extra privileges to raise Otherworlder satisfaction equilibrium
+gacha_estate_celestial_patronage = {
+	estate = gacha_estate
+
+	country_modifier = {
+		gacha_estate_target_satisfaction = 1.0
+		gacha_estate_satisfaction_recovery = 1.0
+		global_gacha_estate_power = 0.05
+	}
+}
+
+gacha_estate_starsworn_charter = {
+	estate = gacha_estate
+
+	country_modifier = {
+		gacha_estate_target_satisfaction = 1.0
+		gacha_estate_satisfaction_recovery = 1.0
+		global_gacha_estate_power = 0.05
+	}
+}

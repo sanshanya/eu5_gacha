@@ -299,6 +299,13 @@ gacha_register_new_character = {
     years = -1
     mode = add_and_extend
   }
+  # 兜底：确保天外之人阶层有基础满意度与政务权限
+  root = {
+    if = {
+      limit = { NOT = { has_country_modifier = gacha_estate_integration_modifier } }
+      add_country_modifier = { modifier = gacha_estate_integration_modifier years = -1 mode = add_and_extend }
+    }
+  }
   # === B. 挂载特质 (Traits) ===
   # 用于触发 2D 立绘显示
   remove_traits_of_category = ruler

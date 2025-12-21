@@ -5,6 +5,7 @@
 # 1. 群玉阁的主人（光环）
 gacha_ningguang_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 贸易效率/范围提升（由国家修正提供）
     modifier = { gacha_country_aura = yes }
@@ -13,6 +14,7 @@ gacha_ningguang_origin_trait = {
 # 2. 天权的裁决（职业·外交）
 gacha_ningguang_awakened_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 贸易范围提升（用于测试；可后续补充更贴合外交玩法的数值）
     modifier = {
@@ -23,6 +25,7 @@ gacha_ningguang_awakened_trait = {
 # 3. 璃月的无冕女王（统治者）
 gacha_ningguang_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 贸易范围提升（用于测试；可后续扩展为更多经济/外交维度）
     modifier = {
@@ -35,6 +38,7 @@ gacha_ningguang_transcended_trait = {
 # C2：黄金法则（光环升级）
 gacha_ningguang_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = { gacha_country_aura = yes }
 }
@@ -42,6 +46,7 @@ gacha_ningguang_c2_trait = {
 # C4：七星之首（职业升级）
 gacha_ningguang_c4_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = {
         trade_range = 20
@@ -51,9 +56,9 @@ gacha_ningguang_c4_trait = {
 # C6：天权临世（统治者升级）
 gacha_ningguang_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = {
         trade_range = 20
     }
 }
-

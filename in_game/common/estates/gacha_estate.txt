@@ -1,7 +1,8 @@
 ﻿gacha_estate = {
     color = map_gacha # align with custom culture color
     power_per_pop = 0.05
-    tax_per_pop = 0
+    # 保证可贿赂阈值与基础税基（天外之人 Pop 极小）
+    tax_per_pop = 20
     rival = 0
     alliance = 0
 		revolt_court_language = common_language

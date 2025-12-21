@@ -1,0 +1,36 @@
+character_db = {
+  gacha_columbina_start = {
+    first_name = { name = gacha_first_name_columbina }
+    last_name = { name = gacha_last_name_columbina }
+    female = yes
+    culture = snezhnaya_culture
+    religion = orthodox
+    adm = 90
+    dip = 95
+    mil = 70
+    birth_date = 1037.4.1
+    birth = okladnikova_sloboda
+    dynasty = gacha_columbina_dynasty
+    estate = crown_estate
+    tag = GS1
+
+    timed_modifier = {
+      modifier = gacha_core_modifier
+      start_date = 1337.4.1
+      date = 9999.1.1
+      size = 1
+    }
+    timed_modifier = {
+      modifier = gacha_columbina_modifier
+      start_date = 1337.4.1
+      date = 9999.1.1
+      size = 1
+    }
+    timed_modifier = {
+      modifier = block_marriage
+      start_date = 1337.4.1
+      date = 9999.1.1
+      size = 1
+    }
+  }
+}

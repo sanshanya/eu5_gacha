@@ -7,6 +7,7 @@
 # 1. 海祇岛珊瑚灯火
 gacha_xinhai_origin_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 疾病抗性 +40% · 荒废恢复 +0.06 · 阶层满意恢复 +0.02 (由 modifier 提供)
     modifier = { gacha_country_aura = yes }
@@ -15,6 +16,7 @@ gacha_xinhai_origin_trait = {
 # 2. 望泷村军师少女（职业 Trait：海军）
 gacha_xinhai_awakened_trait = {
     category = admiral
+    flavor = personality
     allow = { always = no }
     # 海军士气 +20% · 海军移动 +20% · 海军损耗 -20%
     modifier = {
@@ -27,6 +29,7 @@ gacha_xinhai_awakened_trait = {
 # 3. 现人神巫女之位（统治者 Trait 基础加成）
 gacha_xinhai_transcended_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 全局叛乱 -0.10 · 战争耗损 -0.10 · 纪律 +0.10 内阁0.25
     modifier = {
@@ -41,6 +44,7 @@ gacha_xinhai_transcended_trait = {
 # C2：白夜国 · 圣土潮音
 gacha_xinhai_c2_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 疾病抗性 +80% · 荒废恢复 +0.12 · 阶层满意恢复 +0.04 (由 modifier 提供)
     modifier = { gacha_country_aura = yes }
@@ -49,6 +53,7 @@ gacha_xinhai_c2_trait = {
 # C4：渊下宫 · 抗狩龙王
 gacha_xinhai_c4_trait = {
     category = admiral
+    flavor = personality
     allow = { always = no }
     # 海军士气 +40% · 海军移动 +40% · 海军损耗 -40% · 船耐久 +0.08
     modifier = {
@@ -62,6 +67,7 @@ gacha_xinhai_c4_trait = {
 # C6：奥罗巴斯 · 现人神
 gacha_xinhai_c6_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     # 叛乱 -0.20 · 战争耗损 -0.20 · 纪律 +0.20
     modifier = {

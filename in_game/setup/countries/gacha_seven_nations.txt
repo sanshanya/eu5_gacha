@@ -54,13 +54,13 @@ GS1 = { # Snezhnaya (至冬)
 	culture_definition = snezhnaya_culture
 	religion_definition = orthodox
 	description_category = military
-	# Not present at game start; spawned by Seven Archons Descent.
-	is_historic = yes
+	# 至冬现在可作为开局国家；不再标记为“历史国家”以避免启动警告。
+	is_historic = no
 }
 
 GU1 = { # Sumeru (须弥)
-	color = rgb { 90 180 90 }  # Dendro green
-	color2 = rgb { 90 180 90 }
+	color = rgb { 70 160 130 }  # Dendro green (unique)
+	color2 = rgb { 70 160 130 }
 	culture_definition = sumeru_culture
 	religion_definition = hindu
 	description_category = administrative

@@ -1,5 +1,6 @@
 ﻿gacha_core_trait = {
     category = ruler
+    flavor = personality
     allow = { always = no }
     modifier = {
         gacha_core = yes
