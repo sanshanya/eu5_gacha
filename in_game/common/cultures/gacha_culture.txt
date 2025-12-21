@@ -16,3 +16,112 @@ gacha_culture = {
 		confucian_group
 	}
 }
+
+liyue_culture = {
+	language = classical_chinese_language
+
+	color = rgb { 235 200 80 }
+
+	tags = { east_asian_gfx }
+
+	opinions = {
+	}
+	culture_groups = {
+		gacha_group
+		chinese_group
+		confucian_group
+	}
+}
+
+inazuma_culture = {
+	language = japanese_language
+
+	color = rgb { 170 110 220 }
+
+	tags = { japanese_gfx east_asian_gfx }
+
+	opinions = {
+	}
+	culture_groups = {
+		gacha_group
+		japanese_group
+	}
+}
+
+mondstadt_culture = {
+	language = german_language
+
+	color = rgb { 120 200 160 }
+
+	tags = { german_gfx western_european_gfx european_gfx }
+
+	opinions = {
+	}
+	culture_groups = {
+		gacha_group
+		german_group
+	}
+}
+
+fontaine_culture = {
+	language = french_language
+
+	color = rgb { 90 160 220 }
+
+	tags = { french_gfx western_european_gfx european_gfx }
+
+	opinions = {
+	}
+	culture_groups = {
+		gacha_group
+		french_group
+	}
+}
+
+natlan_culture = {
+	language = arabic_language
+
+	color = rgb { 220 90 70 }
+
+	tags = { arabian_gfx middle_east_gfx }
+
+	opinions = {
+	}
+	culture_groups = {
+		gacha_group
+		arabic_group
+		arabian_group
+	}
+}
+
+snezhnaya_culture = {
+	language = russian_dialect
+
+	color = rgb { 170 210 255 }
+
+	tags = { russian_gfx east_slavic_gfx slavic_gfx eastern_european_gfx european_gfx }
+
+	opinions = {
+	}
+	culture_groups = {
+		gacha_group
+		russian_group
+		slavic_group
+	}
+}
+
+sumeru_culture = {
+	language = gujarati_language
+
+	color = rgb { 120 180 90 }
+
+	tags = { indian_gfx }
+
+	opinions = {
+	}
+	culture_groups = {
+		gacha_group
+		indian_group
+		indo_aryan_group
+	}
+}

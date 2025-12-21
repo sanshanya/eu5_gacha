@@ -1,0 +1,162 @@
+﻿namespace = gacha_mavuika_events
+
+# ==============================================================================
+# Mavuika - Hidden spawn (Natlan auto recruitment)
+# ==============================================================================
+
+gacha_mavuika_events.2 = {
+    type = country_event
+    title = gacha_mavuika_events.2.title
+    hidden = yes
+
+    trigger = {
+        country_exists = c:GN1
+        this = c:GN1
+        NOT = { has_global_variable = gacha_mavuika_is_summoned }
+    }
+
+    immediate = {
+        gacha_natlan_spawn_mavuika_c6 = yes
+    }
+
+    option = {
+        name = gacha_mavuika_events.2.a
+    }
+}
+
+# ==============================================================================
+# Mavuika - Ruler (Seven Archons Descent)
+# ==============================================================================
+gacha_mavuika_events.3 = {
+    type = country_event
+    title = gacha_mavuika_events.3.title
+    hidden = yes
+
+    trigger = {
+        country_exists = c:GN1
+        this = c:GN1
+    }
+
+    immediate = {
+        gacha_natlan_spawn_mavuika_c6 = yes
+
+        clear_saved_scope = mavuika_char
+        random_character = {
+            limit = {
+                is_alive = yes
+                has_character_modifier = gacha_mavuika_modifier
+            }
+            save_scope_as = mavuika_char
+        }
+
+        if = {
+            limit = { exists = scope:mavuika_char }
+            if = {
+                limit = { NOT = { dynasty_exists = gacha_mavuika_dynasty } }
+                create_named_dynasty = gacha_mavuika_dynasty
+            }
+            ruler_or_regent ?= { save_scope_as = natlan_old_ruler }
+            scope:mavuika_char = {
+                change_dynasty = dynasty:gacha_mavuika_dynasty
+                change_character_estate = estate_type:crown_estate
+            }
+            set_new_ruler = scope:mavuika_char
+            scope:mavuika_char = { gacha_mavuika_apply_country_modifiers = yes }
+
+            if = {
+                limit = { exists = scope:natlan_old_ruler }
+                scope:natlan_old_ruler = {
+                    if = {
+                        limit = { this != scope:mavuika_char }
+                        kill_character_silently = { target = this reason = vanished }
+                    }
+                }
+                clear_saved_scope = natlan_old_ruler
+            }
+
+            if = {
+                limit = { NOT = { has_variable = gacha_natlan_placeholder_royals_cleaned } }
+                every_character = {
+                    limit = {
+                        is_alive = yes
+                        has_estate = estate_type:crown_estate
+                        NOT = { has_character_modifier = gacha_mavuika_modifier }
+                    }
+                    kill_character_silently = { target = this reason = vanished }
+                }
+                set_variable = { name = gacha_natlan_placeholder_royals_cleaned value = yes }
+            }
+        }
+
+        clear_saved_scope = mavuika_char
+    }
+
+    option = {
+        name = gacha_mavuika_events.3.a
+    }
+}
+
+# ==============================================================================
+# Mavuika - Story Events (TODO)
+# ==============================================================================
+
+# 1. Intro
+
+gacha_mavuika_events.1 = {
+    type = country_event
+    title = gacha_mavuika_events.1.title
+    desc = gacha_mavuika_events.1.desc
+    hide_portraits = yes
+    image = "gfx/event_pictures/gacha_inazuma.dds"
+    option = { name = gacha_mavuika_events.1.a }
+}
+
+# 4. C6
+
+gacha_mavuika_events.4 = {
+    type = country_event
+    title = gacha_mavuika_events.4.title
+    desc = gacha_mavuika_events.4.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_mavuika_events.4.a }
+}
+
+# 11. C2
+
+gacha_mavuika_events.11 = {
+    type = country_event
+    title = gacha_mavuika_events.11.title
+    desc = gacha_mavuika_events.11.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_mavuika_events.11.a }
+}
+
+# 12. C4
+
+gacha_mavuika_events.12 = {
+    type = country_event
+    title = gacha_mavuika_events.12.title
+    desc = gacha_mavuika_events.12.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_mavuika_events.12.a }
+}
+
+# 13. C1
+
+gacha_mavuika_events.13 = {
+    type = country_event
+    title = gacha_mavuika_events.13.title
+    desc = gacha_mavuika_events.13.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_mavuika_events.13.a }
+}
+
+# 14. C5
+
+gacha_mavuika_events.14 = {
+    type = country_event
+    title = gacha_mavuika_events.14.title
+    desc = gacha_mavuika_events.14.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_mavuika_events.14.a }
+}

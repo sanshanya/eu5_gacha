@@ -1,0 +1,261 @@
+﻿# ==============================================================================
+# Inazuma - Nation Creation / Setup Effects
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Create Inazuma (GI1) from the Inazuma Plan project.
+#
+# Scope:
+# - root = country (plan initiator)
+# ------------------------------------------------------------------------------
+gacha_create_inazuma_nation_from_plan = {
+	# The country that is running this effect (plan initiator)
+	save_scope_as = inazuma_overlord
+
+	# Preconditions (soft): only proceed when it makes sense
+	if = {
+		limit = {
+			is_ai = no
+			NOT = { country_exists = c:GI1 }
+			location:toshima_kanto = { owner = scope:inazuma_overlord }
+			# Toshima-Kanto must be the market location.
+			location:toshima_kanto = { this = market.location }
+		}
+
+		# Find Raiden for THIS overlord first (MP-safe; avoids picking other players' Raiden).
+		clear_saved_scope = raiden_char
+		scope:inazuma_overlord = {
+			random_character = {
+				limit = {
+					is_alive = yes
+					has_character_modifier = gacha_raiden_modifier
+				}
+				save_scope_as = raiden_char
+			}
+		}
+
+		# World-unique: Raiden must be owned by the overlord (no global fallback / no stealing in MP).
+		if = {
+			limit = { exists = scope:raiden_char }
+
+			# 1) Add core on Toshima-Kanto and create the country from our cores
+			location:toshima_kanto = { add_core = c:GI1 }
+			create_country_from_cores_in_our_locations = c:GI1
+
+			# Success path
+			if = {
+				limit = { country_exists = c:GI1 }
+
+				# Start hidden Inazuma auto-recruitment timer (Yae Miko after 1 year)
+				situation:gacha_inazuma_auto_recruitment ?= {
+					set_variable = { name = target_country value = c:GI1 }
+				}
+				if = {
+					limit = { NOT = { situation:gacha_inazuma_auto_recruitment = { situation_is_active = yes } } }
+					activate_situation = situation:gacha_inazuma_auto_recruitment
+				}
+
+			# Ensure Toshima-Kanto belongs to Inazuma (some setups may not auto-transfer)
+				if = {
+					limit = { location:toshima_kanto = { owner = scope:inazuma_overlord } }
+					location:toshima_kanto = { change_location_owner = c:GI1 }
+				}
+
+				# Transfer Raiden country modifiers away from the overlord (optional safety)
+				remove_country_modifier = gacha_raiden_country_modifier
+				remove_country_modifier = gacha_raiden_c1_country_modifier
+				remove_country_modifier = gacha_raiden_c2_country_modifier
+				remove_country_modifier = gacha_raiden_c4_country_modifier
+				remove_country_modifier = gacha_raiden_c5_country_modifier
+				remove_country_modifier = gacha_raiden_c6_country_modifier
+
+				# Configure Inazuma (government / capital / ruler)
+				c:GI1 = {
+					# Avoid showing as a low rank.
+					set_country_rank_effect = { rank = country_rank:rank_kingdom }
+
+					# Capital: Toshima-Kanto (hard requirement), fallback just in case
+					if = {
+						limit = { location:toshima_kanto = { owner = c:GI1 } }
+						set_capital = location:toshima_kanto
+					}
+					else = {
+						ordered_owned_location = {
+							order_by = development
+							max = 1
+							save_scope_as = inazuma_capital_loc
+						}
+						set_capital = scope:inazuma_capital_loc
+						clear_saved_scope = inazuma_capital_loc
+					}
+
+					# AI 很难主动建造（成本/需求/权重等），因此在稻妻建国时直接建好“天守阁”
+					if = {
+						limit = { location:toshima_kanto = { owner = c:GI1 } }
+						location:toshima_kanto = {
+							if = {
+								limit = { NOT = { has_building = building_type:gacha_inazuma_tenshukaku } }
+								change_building_level_in_location = { building = building_type:gacha_inazuma_tenshukaku value = 1 }
+							}
+						}
+					}
+
+					change_culture = culture:inazuma_culture
+					change_religion = religion:shinto
+					change_government_type = government_type:monarchy
+					change_heir_selection = heir_selection:cognatic_primogeniture
+
+					# Move Raiden to Inazuma first, then set as ruler (more stable)
+					if = {
+						limit = { exists = scope:raiden_char }
+						scope:raiden_char = { move_country = c:GI1 }
+					}
+
+					if = {
+						limit = { exists = scope:raiden_char }
+						# Dynasty: ensure it exists and Raiden belongs to it
+						if = {
+							limit = { NOT = { dynasty_exists = gacha_raiden_dynasty } }
+							create_named_dynasty = gacha_raiden_dynasty
+						}
+
+						# Replace the auto-generated monarch with Raiden
+						ruler_or_regent ?= { save_scope_as = inazuma_old_ruler }
+
+						scope:raiden_char = {
+							change_dynasty = dynasty:gacha_raiden_dynasty
+							change_character_estate = estate_type:crown_estate
+						}
+						set_new_ruler = scope:raiden_char
+						scope:raiden_char = { gacha_raiden_apply_country_modifiers = yes }
+
+						# Remove placeholder royals (avoid UI showing extra rulers).
+						if = {
+							limit = { exists = scope:inazuma_old_ruler }
+							scope:inazuma_old_ruler = {
+								if = {
+									limit = { this != scope:raiden_char }
+									kill_character_silently = { target = this reason = vanished }
+								}
+							}
+							clear_saved_scope = inazuma_old_ruler
+						}
+
+						if = {
+							limit = { NOT = { has_variable = gacha_inazuma_placeholder_royals_cleaned } }
+							every_character = {
+								limit = {
+									is_alive = yes
+									has_estate = estate_type:crown_estate
+									NOT = { has_character_modifier = gacha_raiden_modifier }
+								}
+								kill_character_silently = { target = this reason = vanished }
+							}
+							set_variable = { name = gacha_inazuma_placeholder_royals_cleaned value = yes }
+						}
+					}
+
+					# Temporary population/food/production/development surge
+					add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+
+					# Join Seven Archons Council (international organization)
+					gacha_join_seven_archons_io = yes
+
+					# Default: Inazuma becomes a subject of the plan initiator.
+					# If Seven Archons Descent is active, Inazuma stays independent.
+					if = {
+						limit = { NOT = { has_global_variable = gacha_seven_archons_descent_active } }
+						make_subject_of = {
+							target = scope:inazuma_overlord
+							type = subject_type:gacha_archon_vassal
+						}
+					}
+				}
+
+				# Cleanup
+				clear_saved_scope = raiden_char
+
+				# Notify the overlord
+				trigger_event_non_silently = gacha_nation_events.3
+			}
+			# Failure path (throttled to avoid monthly spam)
+			else = {
+				if = {
+					limit = { NOT = { has_variable = gacha_inazuma_create_failed_notice_lock } }
+					set_variable = { name = gacha_inazuma_create_failed_notice_lock months = 1 }
+					trigger_event_non_silently = gacha_nation_events.4
+				}
+				clear_saved_scope = raiden_char
+			}
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_variable = gacha_inazuma_create_failed_notice_lock } }
+				set_variable = { name = gacha_inazuma_create_failed_notice_lock months = 1 }
+				trigger_event_non_silently = gacha_nation_events.4
+			}
+			clear_saved_scope = raiden_char
+		}
+	}
+
+	clear_saved_scope = inazuma_overlord
+}
+
+# ------------------------------------------------------------------------------
+# Inazuma: Spawn Yae Miko after 1 year (C6, world-unique)
+# ------------------------------------------------------------------------------
+gacha_inazuma_spawn_yae_miko_c6 = {
+	# Only for Inazuma and only if not already summoned globally
+	if = {
+		limit = {
+			this = c:GI1
+			NOT = { has_global_variable = gacha_yae_miko_is_summoned }
+		}
+
+		# Create Yae Miko at C6, no story events
+		create_character = {
+			first_name = gacha_first_name_yae_miko
+			last_name = gacha_last_name_yae_miko
+			female = yes
+			age = 500
+			culture = culture:inazuma_culture
+			religion = religion:shinto
+			birth_location = location:toshima_kanto
+			estate = estate_type:gacha_estate
+			adm = { 80 95 }
+			dip = { 85 100 }
+			mil = { 60 75 }
+			create_in_limbo = yes
+			save_scope_as = new_char
+		}
+
+		if = {
+			limit = { exists = scope:new_char }
+			scope:new_char = {
+				# 1) Register at C0
+				gacha_register_new_character = { who = yae_miko }
+
+				# 2) Ensure C0 trait state exists
+				gacha_yae_miko_update_traits = yes
+
+				# 3) Upgrade to C6 (delta steps; no events)
+				while = {
+					limit = { var:gacha_constellation_lvl < 6 }
+					change_variable = { name = gacha_constellation_lvl add = 1 }
+					gacha_apply_constellation_stats_effect = { who = yae_miko }
+					gacha_yae_miko_update_traits = yes
+				}
+
+				# 4) Apply country modifiers (idempotent rebuild)
+				gacha_yae_miko_apply_country_modifiers = yes
+			}
+
+			set_global_variable = { name = gacha_yae_miko_is_summoned value = 1 }
+			clear_saved_scope = new_char
+		}
+
+		# Avoid polluting UI saved scopes
+		clear_saved_scope = gacha_last_pulled_char
+		clear_saved_scope = gacha_c3_target_char
+	}
+}

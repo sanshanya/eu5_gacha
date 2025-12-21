@@ -28,3 +28,10 @@ gacha_estate_integration_modifier = {
   gacha_estate_blocked_from_cabinet = no
   global_gacha_estate_power = 5.0
 }
+
+# Seven Archons Alliance (Country-wide monthly gains)
+gacha_seven_archons_alliance_member_modifier = {
+  game_data = { category = country decaying = no }
+  monthly_prestige = 1
+  monthly_legitimacy = 1
+}

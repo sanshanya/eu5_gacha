@@ -6,6 +6,7 @@
   # === Name ===
   gacha_first_name_raiden: "Shogun"
   gacha_last_name_raiden: "Raiden"
+  gacha_raiden_inazuma_plan_select: "Begin the \"Inazuma Plan\""
 
   # === Traits ===
   gacha_raiden_origin_trait: "Narukami Island · Still Land of Eternity"

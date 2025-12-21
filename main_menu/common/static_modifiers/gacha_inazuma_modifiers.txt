@@ -1,0 +1,14 @@
+﻿# Inazuma (稻妻) - Nation Modifiers
+
+# 建国后 10 年：人口、粮食、生产、发展侧重的爆发期
+# 数值参考：强调“超强”但避免过度偏离基础框架
+gacha_inazuma_foundation_boom_modifier = {
+    game_data = { category = country decaying = no }
+    monthly_gold_income = 240
+    global_population_capacity_modifier = 1
+    global_monthly_food_modifier = 2
+    global_production_efficiency = 0.5
+    global_monthly_development = 0.1
+    country_cabinet_efficiency = 10
+    global_construction_speed = 10
+}

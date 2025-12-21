@@ -58,3 +58,63 @@
   MODIFIER_TYPE_DESC_gacha_liyue_invest_200_price_cost_modifier: "Cost modifier for the 200 gold investment option in Liyue Preparations."
   MODIFIER_TYPE_NAME_gacha_liyue_invest_500_price_cost_modifier: "Liyue Preparations Cost (500)"
   MODIFIER_TYPE_DESC_gacha_liyue_invest_500_price_cost_modifier: "Cost modifier for the 500 gold investment option in Liyue Preparations."
+
+  # ==========================================================================
+  # Situations (Inazuma)
+  # ==========================================================================
+  gacha_inazuma_reconstruction: "Inazuma Preparations"
+  gacha_inazuma_reconstruction_desc: "The Raiden Shogun has laid out Inazuma's codes and harbor plans. Whether Inazuma can be founded in Toshima-Kanto now depends on our preparations in the port, order, and trade.\n\nStart the Cabinet Action: $gacha_create_inazuma_nation$, then take the Situation Action: $gacha_inazuma_build_market$ (required).\n\nOnce Toshima-Kanto becomes a Market location, preparations advance at a base rate of 5 per month (scaled by Cabinet Efficiency), and you may invest gold to accelerate. When progress reaches 100, Inazuma will be founded immediately."
+
+  gacha_inazuma_reconstruction_toshima_tt: "Toshima-Kanto is the staging ground for rebuilding Inazuma."
+
+  gacha_inazuma_reconstruction_overview_title: "Requirements"
+  gacha_inazuma_reconstruction_overview_desc: "Start the Cabinet Action: $gacha_create_inazuma_nation$, then take the Situation Action: $gacha_inazuma_build_market$ (required). Invest gold to accelerate. When progress reaches 100, Inazuma will be founded immediately."
+
+  gacha_inazuma_reconstruction_status_title: "Status"
+  gacha_inazuma_reconstruction_status_tt: "#bold Preparation Progress:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_inazuma_progress').GetValue|Y0]/100\n#bold Monthly Progress:#! +[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_inazuma_monthly_progress').GetValue|Y1]\n#bold Invested:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_inazuma_investment').GetValue|Y0] Gold"
+  gacha_tt_inazuma_plan_unlocked: "The “Inazuma Plan” is unlocked."
+  gacha_tt_inazuma_not_established_yet: "Inazuma has not been founded yet."
+  gacha_tt_inazuma_requires_raiden_alive: "Raiden Shogun is alive."
+  gacha_tt_inazuma_not_already_completed: "Inazuma Preparations are not yet completed."
+  gacha_tt_inazuma_requires_cabinet_action_started: "You must first start the Cabinet Action “$gacha_create_inazuma_nation$”."
+  gacha_tt_inazuma_situation_is_ours: "This situation is assigned to us."
+  gacha_tt_toshima_owned_by_us: "Toshima-Kanto is owned by us."
+  gacha_tt_toshima_not_independent_market_yet: "Toshima-Kanto does not yet have an independent Market (it still belongs to the Kanto Market)."
+  gacha_tt_toshima_no_market_construction: "No Market is currently being constructed in Toshima-Kanto."
+  gacha_tt_toshima_own_market_required: "Toshima-Kanto must have its own Market (it must not be part of the Kanto Market)."
+  gacha_tt_inazuma_build_market_effect: "We begin establishing an independent Market in Toshima-Kanto."
+  gacha_tt_inazuma_invest_50_effect: "Invest 50 Gold: +5 preparation progress."
+  gacha_tt_inazuma_invest_200_effect: "Invest 200 Gold: +20 preparation progress."
+  gacha_tt_inazuma_invest_500_effect: "Invest 500 Gold: +55 preparation progress."
+
+  # Action group title (exclusive_group = gacha_inazuma_preparation_actions)
+  GACHA_INAZUMA_PREPARATION_ACTIONS: "Inazuma Preparation Actions"
+
+  # ==========================================================================
+  # Situation Actions (Inazuma)
+  # ==========================================================================
+  gacha_inazuma_build_market: "Establish an Independent Market in Toshima-Kanto"
+  gacha_inazuma_build_market_desc: "Begin Market construction in Toshima-Kanto, making it an independent Market location (no longer part of the Kanto Market). This is required to rebuild Inazuma."
+  gacha_inazuma_build_market_price: "Establish an Independent Market (500 Gold)"
+
+  gacha_inazuma_invest_50: "Invest 50 Gold"
+  gacha_inazuma_invest_50_desc: "A small investment to improve Toshima-Kanto's port and order, advancing preparations."
+  gacha_inazuma_invest_50_price: "Inazuma Preparations (50 Gold)"
+
+  gacha_inazuma_invest_200: "Invest 200 Gold"
+  gacha_inazuma_invest_200_desc: "A substantial investment to accelerate preparations."
+  gacha_inazuma_invest_200_price: "Inazuma Preparations (200 Gold)"
+
+  gacha_inazuma_invest_500: "Invest 500 Gold"
+  gacha_inazuma_invest_500_desc: "A major investment to rapidly advance preparations."
+  gacha_inazuma_invest_500_price: "Inazuma Preparations (500 Gold)"
+
+  # Modifier types (price)
+  MODIFIER_TYPE_NAME_gacha_inazuma_build_market_price_cost_modifier: "Independent Market Cost"
+  MODIFIER_TYPE_DESC_gacha_inazuma_build_market_price_cost_modifier: "Adjusts the cost of \"Establish an Independent Market in Toshima-Kanto\" in the Inazuma Preparations situation."
+  MODIFIER_TYPE_NAME_gacha_inazuma_invest_50_price_cost_modifier: "Inazuma Preparations Cost (50 Gold)"
+  MODIFIER_TYPE_DESC_gacha_inazuma_invest_50_price_cost_modifier: "Adjusts the cost of \"Invest 50 Gold\" in the Inazuma Preparations situation."
+  MODIFIER_TYPE_NAME_gacha_inazuma_invest_200_price_cost_modifier: "Inazuma Preparations Cost (200 Gold)"
+  MODIFIER_TYPE_DESC_gacha_inazuma_invest_200_price_cost_modifier: "Adjusts the cost of \"Invest 200 Gold\" in the Inazuma Preparations situation."
+  MODIFIER_TYPE_NAME_gacha_inazuma_invest_500_price_cost_modifier: "Inazuma Preparations Cost (500 Gold)"
+  MODIFIER_TYPE_DESC_gacha_inazuma_invest_500_price_cost_modifier: "Adjusts the cost of \"Invest 500 Gold\" in the Inazuma Preparations situation."

@@ -1,4 +1,4 @@
-gacha_zhongli_portrait = {
+﻿gacha_zhongli_portrait = {
   usage    = game
   priority = 100
 

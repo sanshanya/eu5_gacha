@@ -1,0 +1,7 @@
+﻿gacha_yae_miko_01 = {
+  entity = {
+    required_tags      = ""
+    shared_pose_entity = head
+    entity             = "gacha_yae_miko_01_entity"
+  }
+}

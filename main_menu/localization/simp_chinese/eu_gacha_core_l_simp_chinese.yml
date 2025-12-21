@@ -69,11 +69,18 @@
   gacha_liyue_events.1.title: "群玉阁的契约"
   gacha_liyue_events.1.desc: "璃月的财富与秩序正在重建。按既定契约，璃月将尝试招募一位来自「璃月池」的英雄，以巩固命座与国策。\n\n（此事件为 AI 逻辑用，正常情况下不会向玩家弹窗。）"
   gacha_liyue_events.1.a: "继续"
+  gacha_liyue_events.2.title: "璃月的契约"
   gacha_liyue_events.2.a: "继续"
+  gacha_liyue_events.3.title: "璃月的契约"
+  gacha_liyue_events.3.a: "继续"
 
   # === 建筑：璃月 ===
   gacha_liyue_harbor: "璃月港"
   gacha_liyue_harbor_desc: "璃月的海贸之门与契约秩序的锚点。\n\n只能在广州（东莞）修建。"
+
+  # === 建筑：稻妻 ===
+  gacha_inazuma_tenshukaku: "天守阁"
+  gacha_inazuma_tenshukaku_desc: "稻妻幕府的中枢与港口支点。\n\n只能在丰岛（关东）修建。"
 
   # === 结果:凡铁/蓝光 (.2) ===
   gacha_events.2.title: "祈愿结果:寂静星空"
@@ -250,10 +257,41 @@
   gacha_create_liyue_nation_action_progress: "[Cabinet.GetActionNumProgress|%]"
   gacha_create_liyue_nation_action_progress_wordier: "筹建进度：[Cabinet.GetActionNumProgress|%]"
   gacha_create_liyue_nation_action_progress_tooltip: "再造璃月的筹建进度。进度达到 100% 后将立即建国。"
+  gacha_create_inazuma_nation: "再造稻妻"
+  gacha_create_inazuma_nation_desc: "在丰岛再造稻妻国，雷霆与永恒之国。"
+  gacha_create_inazuma_nation_active: "正在再造稻妻..."
+  gacha_create_inazuma_nation_action: "在此地再造稻妻"
+  gacha_create_inazuma_nation_action_progress: "[Cabinet.GetActionNumProgress|%]"
+  gacha_create_inazuma_nation_action_progress_wordier: "筹建进度：[Cabinet.GetActionNumProgress|%]"
+  gacha_create_inazuma_nation_action_progress_tooltip: "再造稻妻的筹建进度。进度达到 100% 后将立即建国。"
 
   # 璃月 - 国家修正
   STATIC_MODIFIER_NAME_gacha_liyue_foundation_boom_modifier: "璃月新生:千帆竞发"
   STATIC_MODIFIER_DESC_gacha_liyue_foundation_boom_modifier: "建国后的黄金十年，港口与商路被迅速重整，合约与财政体系高速运转，生产与建设全面起飞。"
+
+  STATIC_MODIFIER_NAME_gacha_inazuma_foundation_boom_modifier: "稻妻新生：永恒之势"
+  STATIC_MODIFIER_DESC_gacha_inazuma_foundation_boom_modifier: "建国后的十年重整期，人口承载扩张、粮仓充盈、生产加速、发展提速。"
+  STATIC_MODIFIER_NAME_gacha_seven_archons_alliance_member_modifier: "七国联盟"
+  STATIC_MODIFIER_DESC_gacha_seven_archons_alliance_member_modifier: "七国联盟的成员国每月获得 +1 稳定度、+1 威望、+1 正统。"
+
+  # === 国际组织 ===
+  gacha_seven_archons: "尘世七执政"
+  gacha_seven_archons_desc: "由七国执政组成的议会，统辖因天外契约而诞生的诸国。"
+  diplomatic_status_gacha_seven_archons_name: "尘世七执政"
+  diplomatic_status_gacha_seven_archons_tooltip: "作为成员国加入尘世七执政。"
+  gacha_seven_archons_descent: "七国降临"
+  gacha_seven_archons_descent_desc: "当尘世七执政至少拥有 1 位成员时可启动。现有成员将脱离宗主独立，其余五国会在指定地点立即降临。"
+  gacha_tt_seven_archons_two_members: "尘世七执政至少拥有 2 个成员。"
+  gacha_tt_seven_archons_one_member: "尘世七执政至少拥有 1 个成员。"
+  gacha_tt_seven_archons_descent_unused: "尚未启动「七国降临」。"
+  gacha_seven_archons_descent_tt: "尘世七执政成员已脱离宗主独立，剩余五国已降临。"
+  gacha_seven_archons_alliance: "七国联盟"
+  gacha_seven_archons_alliance_desc: "当七国全部成立后可启动。联盟生效期间，成员国每月获得 +1 稳定度、+1 威望、+1 正统。"
+  gacha_tt_seven_archons_alliance_unused: "尚未启动「七国联盟」。"
+  gacha_seven_archons_alliance_tt: "尘世七执政已结成联盟，成员国开始获得月度增益。"
+  gacha_tt_seven_archons_all_exist: "七国全部成立。"
+
+  gacha_liyue_events.2.title: "无声契约"
   STATIC_MODIFIER_NAME_gacha_liyue_trade_hub_modifier: "璃月商港"
   STATIC_MODIFIER_DESC_gacha_liyue_trade_hub_modifier: "以契约为骨、以商贸为血的港口国家。长期的贸易繁荣与城市建设为璃月提供稳定增长。"
 
@@ -267,6 +305,12 @@
   gacha_nation_events.2.title: "璃月筹建受阻"
   gacha_nation_events.2.desc: "某些条件阻止我们立即建立璃月。\n\n请确认：\n- 你仍拥有东莞\n- 东莞已建立市场（东莞是市场所在地）\n\n若仍无法建立，请查看错误日志中与 create_country_from_cores_in_our_locations 相关的报错信息。"
   gacha_nation_events.2.a: "明白了。"
+  gacha_nation_events.3.title: "稻妻建国"
+  gacha_nation_events.3.desc: "在雷光与庄严的旗帜之下，丰岛诞生了一个新的国度。稻妻幕府的秩序将在这片土地上延续，永恒之名将成为它的根基。\n\n作为宗主，您获得了稻妻的效忠。"
+  gacha_nation_events.3.a: "永恒长存。"
+  gacha_nation_events.4.title: "稻妻筹建受阻"
+  gacha_nation_events.4.desc: "某些条件阻止我们立即建立稻妻。\n\n请确认：\n- 你仍拥有丰岛\n- 丰岛已建立市场（丰岛是市场所在地）\n\n若仍无法建立，请查看错误日志中与 create_country_from_cores_in_our_locations 相关的报错信息。"
+  gacha_nation_events.4.a: "明白了。"
 
   gacha_nation_events.10.title: "璃月计划"
   gacha_nation_events.10.desc: "#ZG 新年夜。窗外烟火正盛。\n刻晴背对灯火，将图纸铺满案头。她没有看烟花。\n刻晴指尖的紫电照亮了图纸上密密麻麻的批注。#!\n刻晴:「陛下，璃月的理想并非神明赐予，而是由人亲手缔造。」\n#ZG 她顿了顿，目光掠过窗外升空的孔明灯，和霄灯很像。#!\n刻晴:「若您愿意兑现那句『再造璃月』的承诺，我将以玉衡之名接手港口，商路、矿脉、城建、契约，皆会在最短时间内重整。」\n#ZG 你望向少女的脸庞，由于祈愿之力，少女的外貌与第一次见面时无异。\n眼神却不复当初稚嫩...\n倒映着窗外那些越飘越远的光点。#!"
@@ -276,5 +320,12 @@
   gacha_nation_events.11.desc: "刻晴:「……定不负君所托。」\n#ZG 刻晴将璃月港蓝图铺开在桌面邀请你一同查看。#!\n\n#bold 解锁内阁行动:#!#bold;color_yellow $gacha_create_liyue_nation$#!\n#bold 启动局势:#!#bold;color_yellow $gacha_liyue_reconstruction$#!"
   gacha_nation_events.12.desc: "#ZG 刻晴点点头，将图纸收起。#!\n刻晴:「是我操之过急了。此事不论早晚，等您决定，我会把方案保持在可启动状态。」\n#ZG 她转身看向窗外的烟火，没有再说话。#!"
   gacha_nation_events.11.a: "这一天不会太远"
+  gacha_nation_events.20.title: "稻妻计划"
+  gacha_nation_events.20.desc: "#ZG 榻榻米上散着未收的图纸。门外，暴雨砸碎海面，长桥尽头的旗幡被风扯成水平。#!#ZG 雷光劈下。港口白了一瞬。#!\n#ZG 那道光里走出一个人。#!\n#ZG 步伐不快。你却觉得不是她在走——是江户在向她倾斜。#!\n#ZG 第二道雷落时，她已立在桥心。紫电贴着衣摆游走，雨水在她周身三尺外折向两侧，肩头干燥。#!\n#ZG 她抬眼。视线掠过你，先落在港湾、堆栈、城町的制高点。#!\n雷电将军:「此地可立天守阁。」\n雷电将军:「我行至此，见此地能承法度。」\n雷电将军:「从今天起，它不再只是丰岛。」\n雷电将军:「它是稻妻的起点。」"
+  gacha_nation_events.20.a: "让永恒在此扎根。"
+  gacha_nation_events.20.b: "再议。"
+  gacha_nation_events.21.desc: "雷电将军:「稻妻不靠祈求存在。」\n雷电将军:「靠法度。靠秩序。靠不容更改的边界。」\n雷电将军:「此地成为独立的市场中枢。税赋、仓储、航道、治安，从今日起不再依附旧制。」\n雷电将军:「你负责执行。」\n雷电将军:「我负责让稻妻成立。」\n\n#bold 解锁内阁行动:#!#bold;color_yellow $gacha_create_inazuma_nation$#!\n#bold 启动局势:#!#bold;color_yellow $gacha_inazuma_reconstruction$#!"
+  gacha_nation_events.22.desc: "#ZG 她合上文书。#!\n雷电将军:「当你决定之时，我会准备好一切。」\n#ZG 雷鸣远去，夜色重归寂静。#!"
+  gacha_nation_events.21.a: "谨遵神谕"
 
   # 国家名称（见 gacha_country_names_l_simp_chinese.yml）

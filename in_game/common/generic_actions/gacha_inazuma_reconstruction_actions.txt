@@ -1,0 +1,369 @@
+﻿# ------------------------------------------------------------------------------
+# Inazuma Reconstruction - Situation Actions
+# ------------------------------------------------------------------------------
+
+gacha_inazuma_build_market = {
+  type = situation
+
+  # Suppress messages to avoid missing message_types noise.
+  show_message = no
+  # Use a vanilla message type to avoid missing PERFORM_<action>_ACTION.
+  message = national_church_action
+
+  ai_tick = never
+  automation_tick = never
+
+  exclusive_group = gacha_inazuma_preparation_actions
+
+  allow = {
+    custom_tooltip = {
+      text = gacha_tt_inazuma_requires_cabinet_action_started
+      scope:actor ?= { has_variable = gacha_inazuma_reconstruction_in_progress }
+    }
+
+    location:toshima_kanto = {
+      custom_tooltip = {
+        text = gacha_tt_toshima_owned_by_us
+        owner = scope:actor
+      }
+      custom_tooltip = {
+        text = gacha_tt_toshima_not_independent_market_yet
+        NOT = { this = market.location }
+      }
+      custom_tooltip = {
+        text = gacha_tt_toshima_no_market_construction
+        has_market_construction = no
+      }
+    }
+
+    custom_tooltip = {
+      text = gacha_tt_inazuma_situation_is_ours
+      scope:recipient ?= {
+        exists = var:target_country
+        trigger_if = {
+          limit = { exists = var:target_country }
+          var:target_country = scope:actor
+        }
+      }
+    }
+  }
+
+  # This action creates market construction; price is for cancel/restore only.
+  should_execute_price = no
+  # Use a fixed price to avoid large decimals from create_market.
+  price = price:gacha_inazuma_build_market_price
+  price_modifier = { add = 0 }
+
+  select_trigger = {
+    looking_for_a = situation
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:gacha_inazuma_reconstruction = this
+      situation_is_active = yes
+    }
+  }
+
+  effect = {
+    custom_tooltip = gacha_tt_inazuma_build_market_effect
+    hidden_effect = {
+      create_market = {
+        builder = scope:actor
+        location = location:toshima_kanto
+        price = scope:price
+        price_modifier = scope:price_modifier
+      }
+    }
+  }
+
+  ai_will_do = { value = 0 }
+}
+
+gacha_inazuma_invest_50 = {
+  type = situation
+
+  # Suppress messages to avoid missing message_types noise.
+  show_message = no
+  # Use a vanilla message type to avoid missing PERFORM_<action>_ACTION.
+  message = national_church_action
+
+  ai_tick = never
+  automation_tick = never
+
+  exclusive_group = gacha_inazuma_preparation_actions
+
+  allow = {
+    custom_tooltip = {
+      text = gacha_tt_inazuma_requires_cabinet_action_started
+      scope:actor ?= { has_variable = gacha_inazuma_reconstruction_in_progress }
+    }
+
+    location:toshima_kanto = {
+      custom_tooltip = {
+        text = gacha_tt_toshima_owned_by_us
+        owner = scope:actor
+      }
+      # Toshima-Kanto must be the market location.
+      custom_tooltip = {
+        text = gacha_tt_toshima_own_market_required
+        this = market.location
+      }
+    }
+
+    custom_tooltip = {
+      text = gacha_tt_inazuma_situation_is_ours
+      scope:recipient ?= {
+        exists = var:target_country
+        trigger_if = {
+          limit = { exists = var:target_country }
+          var:target_country = scope:actor
+        }
+      }
+    }
+  }
+
+  price = price:gacha_inazuma_invest_50_price
+
+  select_trigger = {
+    looking_for_a = situation
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:gacha_inazuma_reconstruction = this
+      situation_is_active = yes
+    }
+  }
+
+  effect = {
+    custom_tooltip = gacha_tt_inazuma_invest_50_effect
+    hidden_effect = {
+      scope:recipient ?= {
+        change_variable = { name = gacha_inazuma_investment add = 50 }
+        change_variable = { name = gacha_inazuma_progress add = 5 }
+        if = {
+          limit = { var:gacha_inazuma_progress > 100 }
+          set_variable = { name = gacha_inazuma_progress value = 100 }
+        }
+      }
+      scope:actor ?= {
+        change_variable = { name = gacha_inazuma_investment_total add = 50 }
+      }
+
+      # At 100: attempt to create the country immediately.
+      if = {
+        limit = {
+          scope:recipient ?= { var:gacha_inazuma_progress >= 100 }
+          exists = scope:recipient.var:target_country
+        }
+
+        if = {
+          limit = { NOT = { country_exists = c:GI1 } }
+          scope:recipient.var:target_country = { gacha_create_inazuma_nation_from_plan = yes }
+        }
+
+        # Success: end the situation and complete the cabinet action.
+        if = {
+          limit = { country_exists = c:GI1 }
+          scope:recipient.var:target_country = { set_variable = { name = gacha_inazuma_preparations_complete value = yes } }
+          scope:recipient = { end_situation = this }
+        }
+      }
+    }
+  }
+
+  ai_will_do = { value = 0 }
+}
+
+gacha_inazuma_invest_200 = {
+  type = situation
+
+  # Suppress messages to avoid missing message_types noise.
+  show_message = no
+  # Use a vanilla message type to avoid missing PERFORM_<action>_ACTION.
+  message = national_church_action
+
+  ai_tick = never
+  automation_tick = never
+
+  exclusive_group = gacha_inazuma_preparation_actions
+
+  allow = {
+    custom_tooltip = {
+      text = gacha_tt_inazuma_requires_cabinet_action_started
+      scope:actor ?= { has_variable = gacha_inazuma_reconstruction_in_progress }
+    }
+
+    location:toshima_kanto = {
+      custom_tooltip = {
+        text = gacha_tt_toshima_owned_by_us
+        owner = scope:actor
+      }
+      # Toshima-Kanto must be the market location.
+      custom_tooltip = {
+        text = gacha_tt_toshima_own_market_required
+        this = market.location
+      }
+    }
+
+    custom_tooltip = {
+      text = gacha_tt_inazuma_situation_is_ours
+      scope:recipient ?= {
+        exists = var:target_country
+        trigger_if = {
+          limit = { exists = var:target_country }
+          var:target_country = scope:actor
+        }
+      }
+    }
+  }
+
+  price = price:gacha_inazuma_invest_200_price
+
+  select_trigger = {
+    looking_for_a = situation
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:gacha_inazuma_reconstruction = this
+      situation_is_active = yes
+    }
+  }
+
+  effect = {
+    custom_tooltip = gacha_tt_inazuma_invest_200_effect
+    hidden_effect = {
+      scope:recipient ?= {
+        change_variable = { name = gacha_inazuma_investment add = 200 }
+        change_variable = { name = gacha_inazuma_progress add = 20 }
+        if = {
+          limit = { var:gacha_inazuma_progress > 100 }
+          set_variable = { name = gacha_inazuma_progress value = 100 }
+        }
+      }
+      scope:actor ?= {
+        change_variable = { name = gacha_inazuma_investment_total add = 200 }
+      }
+
+      # At 100: attempt to create the country immediately.
+      if = {
+        limit = {
+          scope:recipient ?= { var:gacha_inazuma_progress >= 100 }
+          exists = scope:recipient.var:target_country
+        }
+
+        if = {
+          limit = { NOT = { country_exists = c:GI1 } }
+          scope:recipient.var:target_country = { gacha_create_inazuma_nation_from_plan = yes }
+        }
+
+        # Success: end the situation and complete the cabinet action.
+        if = {
+          limit = { country_exists = c:GI1 }
+          scope:recipient.var:target_country = { set_variable = { name = gacha_inazuma_preparations_complete value = yes } }
+          scope:recipient = { end_situation = this }
+        }
+      }
+    }
+  }
+
+  ai_will_do = { value = 0 }
+}
+
+gacha_inazuma_invest_500 = {
+  type = situation
+
+  # Suppress messages to avoid missing message_types noise.
+  show_message = no
+  # Use a vanilla message type to avoid missing PERFORM_<action>_ACTION.
+  message = national_church_action
+
+  ai_tick = never
+  automation_tick = never
+
+  exclusive_group = gacha_inazuma_preparation_actions
+
+  allow = {
+    custom_tooltip = {
+      text = gacha_tt_inazuma_requires_cabinet_action_started
+      scope:actor ?= { has_variable = gacha_inazuma_reconstruction_in_progress }
+    }
+
+    location:toshima_kanto = {
+      custom_tooltip = {
+        text = gacha_tt_toshima_owned_by_us
+        owner = scope:actor
+      }
+      # Toshima-Kanto must be the market location.
+      custom_tooltip = {
+        text = gacha_tt_toshima_own_market_required
+        this = market.location
+      }
+    }
+
+    custom_tooltip = {
+      text = gacha_tt_inazuma_situation_is_ours
+      scope:recipient ?= {
+        exists = var:target_country
+        trigger_if = {
+          limit = { exists = var:target_country }
+          var:target_country = scope:actor
+        }
+      }
+    }
+  }
+
+  price = price:gacha_inazuma_invest_500_price
+
+  select_trigger = {
+    looking_for_a = situation
+    target_flag = recipient
+    name = "choose_situation"
+    column = { data = name }
+    visible = {
+      situation:gacha_inazuma_reconstruction = this
+      situation_is_active = yes
+    }
+  }
+
+  effect = {
+    custom_tooltip = gacha_tt_inazuma_invest_500_effect
+    hidden_effect = {
+      scope:recipient ?= {
+        change_variable = { name = gacha_inazuma_investment add = 500 }
+        change_variable = { name = gacha_inazuma_progress add = 55 }
+        if = {
+          limit = { var:gacha_inazuma_progress > 100 }
+          set_variable = { name = gacha_inazuma_progress value = 100 }
+        }
+      }
+      scope:actor ?= {
+        change_variable = { name = gacha_inazuma_investment_total add = 500 }
+      }
+
+      # At 100: attempt to create the country immediately.
+      if = {
+        limit = {
+          scope:recipient ?= { var:gacha_inazuma_progress >= 100 }
+          exists = scope:recipient.var:target_country
+        }
+
+        if = {
+          limit = { NOT = { country_exists = c:GI1 } }
+          scope:recipient.var:target_country = { gacha_create_inazuma_nation_from_plan = yes }
+        }
+
+        # Success: end the situation and complete the cabinet action.
+        if = {
+          limit = { country_exists = c:GI1 }
+          scope:recipient.var:target_country = { set_variable = { name = gacha_inazuma_preparations_complete value = yes } }
+          scope:recipient = { end_situation = this }
+        }
+      }
+    }
+  }
+
+  ai_will_do = { value = 0 }
+}

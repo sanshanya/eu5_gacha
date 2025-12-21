@@ -96,9 +96,9 @@ gacha_create_raiden_effect = {
             last_name = gacha_last_name_raiden
             female = yes
             age = 500
-            culture = culture:gacha_culture
-            religion = religion:sanjiao
-            birth_location = location:la_mothe_en_bassigny
+            culture = culture:inazuma_culture
+            religion = religion:shinto
+            birth_location = location:toshima_kanto
             estate = estate_type:gacha_estate # Removed - managed by gacha_register_new_character
             adm = { 90 100 }
             dip = { 70 90 }
@@ -255,22 +255,32 @@ gacha_raiden_apply_country_modifiers = {
         # Safety Init
         if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
 
+        # [Idempotent] 清空旧的国家修正，支持迁国/建国转移
+        employer = {
+            remove_country_modifier = gacha_raiden_country_modifier
+            remove_country_modifier = gacha_raiden_c1_country_modifier
+            remove_country_modifier = gacha_raiden_c2_country_modifier
+            remove_country_modifier = gacha_raiden_c4_country_modifier
+            remove_country_modifier = gacha_raiden_c5_country_modifier
+            remove_country_modifier = gacha_raiden_c6_country_modifier
+        }
+
         # Level 0 (Init): Base Modifier (叛乱-2.00, 正统性+1.00)
         if = {
             limit = { var:gacha_constellation_lvl = 0 }
-            root = { add_country_modifier = { modifier = gacha_raiden_country_modifier years = -1 mode = add_and_extend } }
+            employer = { add_country_modifier = { modifier = gacha_raiden_country_modifier years = -1 mode = add_and_extend } }
         }
 
         # Level 1: Add C1 (军事点+1/月)
         else_if = {
             limit = { var:gacha_constellation_lvl = 1 }
-            root = { add_country_modifier = { modifier = gacha_raiden_c1_country_modifier years = -1 mode = add_and_extend } }
+            employer = { add_country_modifier = { modifier = gacha_raiden_c1_country_modifier years = -1 mode = add_and_extend } }
         }
 
         # Level 2: Remove Base, Add C2 (叛乱-4.00, 分离主义-10年, 造核-10%)
         else_if = {
             limit = { var:gacha_constellation_lvl = 2 }
-            root = { 
+            employer = { 
                 remove_country_modifier = gacha_raiden_country_modifier
                 add_country_modifier = { modifier = gacha_raiden_c2_country_modifier years = -1 mode = add_and_extend } 
             }
@@ -279,19 +289,19 @@ gacha_raiden_apply_country_modifiers = {
         # Level 4: Add C4 (占位)
         else_if = {
             limit = { var:gacha_constellation_lvl = 4 }
-            root = { add_country_modifier = { modifier = gacha_raiden_c4_country_modifier years = -1 mode = add_and_extend } }
+            employer = { add_country_modifier = { modifier = gacha_raiden_c4_country_modifier years = -1 mode = add_and_extend } }
         }
 
         # Level 5: Add C5 (行政容量+20%)
         else_if = {
             limit = { var:gacha_constellation_lvl = 5 }
-            root = { add_country_modifier = { modifier = gacha_raiden_c5_country_modifier years = -1 mode = add_and_extend } }
+            employer = { add_country_modifier = { modifier = gacha_raiden_c5_country_modifier years = -1 mode = add_and_extend } }
         }
 
         # Level 6: Add C6 (绝对主义+40, 行政效率+15%, AE-20%)
         else_if = {
             limit = { var:gacha_constellation_lvl = 6 }
-            root = { add_country_modifier = { modifier = gacha_raiden_c6_country_modifier years = -1 mode = add_and_extend } }
+            employer = { add_country_modifier = { modifier = gacha_raiden_c6_country_modifier years = -1 mode = add_and_extend } }
         }
     }
 }

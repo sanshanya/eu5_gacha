@@ -1,0 +1,86 @@
+﻿l_english:
+  # ============================================================
+  # Character - Mavuika
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_mavuika: "Mavuika"
+  gacha_last_name_mavuika: "Blaze"
+
+  # === Traits ===
+  gacha_mavuika_origin_trait: "Mavuika - Origin"
+  desc_gacha_mavuika_origin_trait: "TODO"
+
+  gacha_mavuika_awakened_trait: "Mavuika - Awakened"
+  desc_gacha_mavuika_awakened_trait: "TODO"
+
+  gacha_mavuika_transcended_trait: "Mavuika - Transcended"
+  desc_gacha_mavuika_transcended_trait: "TODO"
+
+  gacha_mavuika_c2_trait: "Mavuika - C2"
+  desc_gacha_mavuika_c2_trait: "TODO"
+
+  gacha_mavuika_c4_trait: "Mavuika - C4"
+  desc_gacha_mavuika_c4_trait: "TODO"
+
+  gacha_mavuika_c6_trait: "Mavuika - C6"
+  desc_gacha_mavuika_c6_trait: "TODO"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_mavuika_modifier: "Blazing Oath"
+  STATIC_MODIFIER_DESC_gacha_mavuika_modifier: "TODO"
+  gacha_mavuika_modifier: "Mavuika's Echo"
+  gacha_mavuika_modifier_desc: "TODO"
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_mavuika_c0_modifier: "Mavuika - C0"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c1_modifier: "Mavuika - C1"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c2_modifier: "Mavuika - C2"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c3_modifier: "Mavuika - C3"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c4_modifier: "Mavuika - C4"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c5_modifier: "Mavuika - C5"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c6_modifier: "Mavuika - C6"
+
+  # Mavuika - Country Modifiers
+  STATIC_MODIFIER_NAME_gacha_mavuika_country_modifier: "Mavuika - Aura"
+  STATIC_MODIFIER_DESC_gacha_mavuika_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c1_country_modifier: "Mavuika - C1"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c2_country_modifier: "Mavuika - C2"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c4_country_modifier: "Mavuika - C4"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c5_country_modifier: "Mavuika - C5"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c6_country_modifier: "Mavuika - C6"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c6_country_modifier: "TODO"
+
+  # === Events ===
+  gacha_mavuika_events.1.title: "Mavuika"
+  gacha_mavuika_events.1.desc: "TODO"
+  gacha_mavuika_events.1.a: "..."
+
+  gacha_mavuika_events.2.title: "Mavuika"
+  gacha_mavuika_events.2.a: "Continue"
+  gacha_mavuika_events.3.title: "Mavuika"
+  gacha_mavuika_events.3.a: "Continue"
+
+  gacha_mavuika_events.13.title: "Mavuika - C1"
+  gacha_mavuika_events.13.desc: "TODO"
+  gacha_mavuika_events.13.a: "..."
+
+  gacha_mavuika_events.11.title: "Mavuika - C2"
+  gacha_mavuika_events.11.desc: "TODO"
+  gacha_mavuika_events.11.a: "..."
+
+  gacha_mavuika_events.12.title: "Mavuika - C4"
+  gacha_mavuika_events.12.desc: "TODO"
+  gacha_mavuika_events.12.a: "..."
+
+  gacha_mavuika_events.14.title: "Mavuika - C5"
+  gacha_mavuika_events.14.desc: "TODO"
+  gacha_mavuika_events.14.a: "..."
+
+  gacha_mavuika_events.4.title: "Mavuika - C6"
+  gacha_mavuika_events.4.desc: "TODO"
+  gacha_mavuika_events.4.a: "..."

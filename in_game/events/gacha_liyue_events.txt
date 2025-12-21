@@ -36,6 +36,7 @@ gacha_liyue_events.1 = {
 # ==============================================================================
 gacha_liyue_events.2 = {
     type = country_event
+    title = gacha_liyue_events.2.title
     hidden = yes
 
     trigger = {
@@ -50,5 +51,80 @@ gacha_liyue_events.2 = {
 
     option = {
         name = gacha_liyue_events.2.a
+    }
+}
+
+# ==============================================================================
+# Liyue - Zhongli ruler (Seven Archons Descent)
+# 说明：
+# - 由“七国降临”触发，确保钟离成为璃月统治者
+# - 必须以 country 作为 root 执行
+# ==============================================================================
+gacha_liyue_events.3 = {
+    type = country_event
+    title = gacha_liyue_events.3.title
+    hidden = yes
+
+    trigger = {
+        country_exists = c:GL1
+        this = c:GL1
+    }
+
+    immediate = {
+        gacha_liyue_spawn_zhongli_c6 = yes
+
+        clear_saved_scope = zhongli_char
+        random_character = {
+            limit = {
+                is_alive = yes
+                has_character_modifier = gacha_zhongli_modifier
+            }
+            save_scope_as = zhongli_char
+        }
+
+        if = {
+            limit = { exists = scope:zhongli_char }
+            if = {
+                limit = { NOT = { dynasty_exists = gacha_zhongli_dynasty } }
+                create_named_dynasty = gacha_zhongli_dynasty
+            }
+            ruler_or_regent ?= { save_scope_as = liyue_old_ruler }
+            scope:zhongli_char = {
+                change_dynasty = dynasty:gacha_zhongli_dynasty
+                change_character_estate = estate_type:crown_estate
+            }
+            set_new_ruler = scope:zhongli_char
+            scope:zhongli_char = { gacha_zhongli_apply_country_modifiers = yes }
+
+            if = {
+                limit = { exists = scope:liyue_old_ruler }
+                scope:liyue_old_ruler = {
+                    if = {
+                        limit = { this != scope:zhongli_char }
+                        kill_character_silently = { target = this reason = vanished }
+                    }
+                }
+                clear_saved_scope = liyue_old_ruler
+            }
+
+            if = {
+                limit = { NOT = { has_variable = gacha_liyue_placeholder_royals_cleaned } }
+                every_character = {
+                    limit = {
+                        is_alive = yes
+                        has_estate = estate_type:crown_estate
+                        NOT = { has_character_modifier = gacha_zhongli_modifier }
+                    }
+                    kill_character_silently = { target = this reason = vanished }
+                }
+                set_variable = { name = gacha_liyue_placeholder_royals_cleaned value = yes }
+            }
+        }
+
+        clear_saved_scope = zhongli_char
+    }
+
+    option = {
+        name = gacha_liyue_events.3.a
     }
 }

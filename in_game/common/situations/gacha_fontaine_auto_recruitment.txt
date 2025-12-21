@@ -1,0 +1,68 @@
+﻿gacha_fontaine_auto_recruitment = {
+  # 仅通过脚本强制激活（不会自然出现）
+  monthly_spawn_chance = 0
+
+  can_start = { always = no }
+
+  # 不显示在 UI（纯逻辑用）
+  visible = { always = no }
+
+  # 目标国家不存在/枫丹不存在时结束（避免残留）
+  can_end = {
+    OR = {
+      NOT = { exists = var:target_country }
+      NOT = { country_exists = c:GF1 }
+    }
+  }
+
+  on_start = {
+    # 初始化那维莱特招募计数（仅一次，保存在枫丹国家作用域）
+    if = {
+      limit = { exists = var:target_country }
+      var:target_country = {
+        if = { limit = { NOT = { has_variable = gacha_fontaine_neuvillette_months } } set_variable = { name = gacha_fontaine_neuvillette_months value = 0 } }
+        if = { limit = { NOT = { has_variable = gacha_fontaine_neuvillette_spawned } } set_variable = { name = gacha_fontaine_neuvillette_spawned value = 0 } }
+      }
+    }
+  }
+
+  on_monthly = {
+    # 目标国家不存在时不再推进（can_end 会结束）
+    if = {
+      limit = { exists = var:target_country }
+
+      # 若枫丹不存在则结束（防止被吞并/灭国后持续运行）
+      if = {
+        limit = { NOT = { country_exists = c:GF1 } }
+        end_situation = situation:gacha_fontaine_auto_recruitment
+      }
+      else = {
+        # 那维莱特：枫丹建国满 1 年后生成（仅一次，直接满命）
+        var:target_country = {
+          # 若世界已存在那维莱特，则标记为已生成，避免重复计数
+          if = {
+            limit = { has_global_variable = gacha_neuvillette_is_summoned }
+            set_variable = { name = gacha_fontaine_neuvillette_spawned value = 1 }
+          }
+
+          if = {
+            limit = {
+              OR = {
+                NOT = { has_variable = gacha_fontaine_neuvillette_spawned }
+                var:gacha_fontaine_neuvillette_spawned = 0
+              }
+            }
+            if = { limit = { NOT = { has_variable = gacha_fontaine_neuvillette_months } } set_variable = { name = gacha_fontaine_neuvillette_months value = 0 } }
+            change_variable = { name = gacha_fontaine_neuvillette_months add = 1 }
+            if = {
+              limit = { var:gacha_fontaine_neuvillette_months >= 12 }
+              set_variable = { name = gacha_fontaine_neuvillette_spawned value = 1 }
+              # 通过 country_event 触发，确保 root=country（避免 situation root 破坏角色注册逻辑）
+              if = { limit = { NOT = { has_global_variable = gacha_neuvillette_is_summoned } } trigger_event_non_silently = { id = gacha_neuvillette_events.2 } }
+            }
+          }
+        }
+      }
+    }
+  }
+}

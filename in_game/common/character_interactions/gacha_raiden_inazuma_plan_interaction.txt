@@ -1,0 +1,58 @@
+﻿gacha_raiden_inazuma_plan_interaction = {
+  message = no
+  is_consort_action = no
+  on_own_nation = yes
+  ai_tick = never
+  context_menu_click_mode = click
+
+  # actor = country
+  potential = {
+    scope:actor = {
+      is_ai = no
+      has_ruler = yes
+      NOT = { country_exists = c:GI1 }
+    }
+  }
+
+  # Disable button when:
+  # - already unlocked (one-time)
+  # - event lock active (prevents duplicate firing)
+  # - actor does not own Toshima-Kanto
+  allow = {
+    scope:actor = {
+      is_ai = no
+      location:toshima_kanto = { owner = scope:actor }
+      NOT = { has_variable = gacha_inazuma_plan_unlocked }
+      NOT = { has_variable = gacha_inazuma_plan_lock }
+    }
+  }
+
+  # Target selection: Raiden Shogun only.
+  select_trigger = {
+    looking_for_a = character
+    source = actor
+    target_flag = recipient
+    name = "gacha_raiden_inazuma_plan_select"
+    column = { data = name }
+    visible = {
+      is_alive = yes
+      owner = scope:actor
+      has_character_modifier = gacha_raiden_modifier
+    }
+  }
+
+  effect = {
+    # Keep heavy logic out of tooltip pre-evaluation.
+    hidden_effect = {
+      scope:actor = {
+        # Lock immediately to prevent multiple event instances.
+        set_variable = { name = gacha_inazuma_plan_lock value = yes }
+
+        # Unlock the Cabinet Action via event.
+        trigger_event_non_silently = gacha_nation_events.20
+      }
+    }
+  }
+
+  ai_will_do = { value = 0 }
+}

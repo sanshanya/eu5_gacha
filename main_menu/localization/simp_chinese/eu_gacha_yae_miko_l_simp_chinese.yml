@@ -1,0 +1,86 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 八重神子 (Yae Miko)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_yae_miko: "八重神子"
+  gacha_last_name_yae_miko: "鸣神"
+
+  # === 特质 (Traits) ===
+  gacha_yae_miko_origin_trait: "鸣神大社的宫司"
+  desc_gacha_yae_miko_origin_trait: "TODO"
+
+  gacha_yae_miko_awakened_trait: "神樱的守望"
+  desc_gacha_yae_miko_awakened_trait: "TODO"
+
+  gacha_yae_miko_transcended_trait: "御影的箴言"
+  desc_gacha_yae_miko_transcended_trait: "TODO"
+
+  gacha_yae_miko_c2_trait: "真识的奉行"
+  desc_gacha_yae_miko_c2_trait: "TODO"
+
+  gacha_yae_miko_c4_trait: "鸣神的狐影"
+  desc_gacha_yae_miko_c4_trait: "TODO"
+
+  gacha_yae_miko_c6_trait: "秘典的引路人"
+  desc_gacha_yae_miko_c6_trait: "TODO"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_yae_miko_modifier: "鸣神宫司"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_modifier: "TODO"
+  gacha_yae_miko_modifier: "八重神子的余韵"
+  gacha_yae_miko_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c0_modifier: "神樱座·零命"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c1_modifier: "狐语·初信"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c2_modifier: "巫祝·真识"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c3_modifier: "御影·密约"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c4_modifier: "鸣神·狐影"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c5_modifier: "神樱·残辉"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c6_modifier: "秘典·引路"
+
+  # 八重神子 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_yae_miko_country_modifier: "鸣神宫司"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c1_country_modifier: "狐语·初信"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c2_country_modifier: "巫祝·真识"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c4_country_modifier: "鸣神·狐影"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c5_country_modifier: "神樱·残辉"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c6_country_modifier: "秘典·引路"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c6_country_modifier: "TODO"
+
+  # === 事件 (Events) ===
+  gacha_yae_miko_events.1.title: "八重神子"
+  gacha_yae_miko_events.1.desc: "TODO"
+  gacha_yae_miko_events.1.a: "……"
+
+  gacha_yae_miko_events.2.title: "八重神子"
+  gacha_yae_miko_events.2.a: "继续"
+  gacha_yae_miko_events.3.title: "八重神子"
+  gacha_yae_miko_events.3.a: "继续"
+
+  gacha_yae_miko_events.13.title: "狐语·初信"
+  gacha_yae_miko_events.13.desc: "TODO"
+  gacha_yae_miko_events.13.a: "……"
+
+  gacha_yae_miko_events.11.title: "巫祝·真识"
+  gacha_yae_miko_events.11.desc: "TODO"
+  gacha_yae_miko_events.11.a: "……"
+
+  gacha_yae_miko_events.12.title: "鸣神·狐影"
+  gacha_yae_miko_events.12.desc: "TODO"
+  gacha_yae_miko_events.12.a: "……"
+
+  gacha_yae_miko_events.14.title: "神樱·残辉"
+  gacha_yae_miko_events.14.desc: "TODO"
+  gacha_yae_miko_events.14.a: "……"
+
+  gacha_yae_miko_events.4.title: "秘典·引路"
+  gacha_yae_miko_events.4.desc: "TODO"
+  gacha_yae_miko_events.4.a: "……"

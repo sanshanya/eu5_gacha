@@ -1,0 +1,149 @@
+﻿gacha_inazuma_reconstruction = {
+  # Activated by script only.
+  monthly_spawn_chance = 0
+
+  can_start = {
+    # Activated by gacha_nation_events.21 (player choice)
+    always = no
+  }
+
+  # Scripted end conditions (fail-safe):
+  # - target country missing
+  # - Inazuma already exists
+  can_end = {
+    OR = {
+      NOT = { exists = var:target_country }
+      country_exists = c:GI1
+    }
+  }
+
+  # Visibility: only the target country sees this situation.
+  visible = {
+    exists = situation:gacha_inazuma_reconstruction.var:target_country
+    trigger_if = {
+      limit = { exists = situation:gacha_inazuma_reconstruction.var:target_country }
+      this = situation:gacha_inazuma_reconstruction.var:target_country
+    }
+  }
+
+  on_start = {
+    set_variable = { name = gacha_inazuma_progress value = 0 }
+    set_variable = { name = gacha_inazuma_investment value = 0 }
+    set_variable = { name = gacha_inazuma_monthly_progress value = 0 }
+  }
+
+  on_monthly = {
+    # Stop advancing if the target country is missing (can_end will resolve).
+    if = {
+      limit = { exists = var:target_country }
+
+      # Default: no progress until requirements are met.
+      set_variable = { name = gacha_inazuma_monthly_progress value = 0 }
+
+      # Progress requirements:
+      # - Cabinet action started
+      # - Toshima-Kanto owned
+      # - Toshima-Kanto is the market location
+      if = {
+        limit = {
+          var:target_country ?= { has_variable = gacha_inazuma_reconstruction_in_progress }
+          # Use root.var:target_country inside location scope.
+          location:toshima_kanto = { owner = root.var:target_country }
+          location:toshima_kanto = { this = market.location }
+        }
+
+        # Base progress: 5/month (scaled by cabinet efficiency; investment adds more).
+        set_variable = {
+          name = gacha_inazuma_monthly_progress
+          value = {
+            value = 5
+            multiply = {
+              value = 1
+              add = { value = var:target_country.modifier:country_cabinet_efficiency }
+              min = 0.1
+            }
+            add = { value = var:gacha_inazuma_investment divide = 200 }
+            min = 0
+          }
+        }
+
+        change_variable = { name = gacha_inazuma_progress add = var:gacha_inazuma_monthly_progress }
+
+        if = {
+          limit = { var:gacha_inazuma_progress > 100 }
+          set_variable = { name = gacha_inazuma_progress value = 100 }
+        }
+      }
+
+      # At 100: attempt to create the country immediately.
+      if = {
+        limit = {
+          var:gacha_inazuma_progress >= 100
+          exists = var:target_country
+          NOT = { country_exists = c:GI1 }
+        }
+        var:target_country = { gacha_create_inazuma_nation_from_plan = yes }
+      }
+
+      # Success: end the situation and complete the cabinet action.
+      if = {
+        limit = {
+          var:gacha_inazuma_progress >= 100
+          country_exists = c:GI1
+        }
+        if = {
+          limit = { var:target_country ?= { NOT = { has_variable = gacha_inazuma_preparations_complete } } }
+          var:target_country = { set_variable = { name = gacha_inazuma_preparations_complete value = yes } }
+        }
+        end_situation = situation:gacha_inazuma_reconstruction
+      }
+    }
+  }
+
+  on_ending = {
+    # On success, store investment tier on the target country.
+    if = {
+      limit = {
+        exists = var:target_country
+        var:gacha_inazuma_progress >= 100
+      }
+      var:target_country = {
+        # Record investment tier for future scaling.
+        if = {
+          limit = { var:gacha_inazuma_investment_total >= 1000 }
+          set_variable = { name = gacha_inazuma_investment_tier value = 3 }
+        }
+        else_if = {
+          limit = { var:gacha_inazuma_investment_total >= 500 }
+          set_variable = { name = gacha_inazuma_investment_tier value = 2 }
+        }
+        else = {
+          set_variable = { name = gacha_inazuma_investment_tier value = 1 }
+        }
+      }
+    }
+  }
+
+  on_ended = {
+    # Cleanup situation variables.
+    remove_variable = gacha_inazuma_progress
+    remove_variable = gacha_inazuma_investment
+    remove_variable = gacha_inazuma_monthly_progress
+    remove_variable = target_country
+  }
+
+  # Data map highlight for Toshima-Kanto.
+  is_data_map = yes
+  map_color = {
+    if = {
+      limit = { this = location:toshima_kanto }
+      value = rgb { 150 90 220 }
+    }
+  }
+  tooltip = {
+    if = {
+      limit = { this = location:toshima_kanto }
+      custom_tooltip = gacha_inazuma_reconstruction_toshima_tt
+    }
+  }
+}

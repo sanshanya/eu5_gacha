@@ -1,0 +1,3 @@
+﻿io_opinion_gacha_seven_archons = {
+    value = 20
+}

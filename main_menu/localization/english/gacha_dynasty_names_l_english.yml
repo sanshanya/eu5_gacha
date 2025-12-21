@@ -3,6 +3,7 @@
   gacha_fischl_dynasty: "of the Night"
   gacha_keqing_dynasty: "Yuheng"
   gacha_raiden_dynasty: "Raiden"
+  gacha_yae_miko_dynasty: "Narukami"
   gacha_furina_dynasty: "de Fontaine"
   gacha_hutao_dynasty: "Wangsheng"
   gacha_klee_dynasty: "Spark Knight"
@@ -11,6 +12,11 @@
   gacha_ganyu_dynasty: "Yuehai Pavilion"
   gacha_beidou_dynasty: "Crux"
   gacha_zhongli_dynasty: "Rex Lapis"
+  gacha_albedo_dynasty: "Chalk"
+  gacha_faruzan_dynasty: "Haravatat"
+  gacha_mavuika_dynasty: "Blaze"
+  gacha_neuvillette_dynasty: "Iudex"
+  gacha_columbina_dynasty: "Damsel"
 
   # Backwards compatibility (early Liyue test key)
   gacha_yuheng_dynasty: "Yuheng"

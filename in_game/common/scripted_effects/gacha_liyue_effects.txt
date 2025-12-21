@@ -6,10 +6,10 @@
 # Create Liyue (GL1) from the Liyue Plan project.
 #
 # Scope:
-# - root = country (the overlord / player country)
+# - root = country (plan initiator)
 # ------------------------------------------------------------------------------
 gacha_create_liyue_nation_from_plan = {
-	# The country that is running this effect (the overlord / player country)
+	# The country that is running this effect (plan initiator)
 	save_scope_as = liyue_overlord
 
 	# Preconditions (soft): only proceed when it makes sense
@@ -73,7 +73,7 @@ gacha_create_liyue_nation_from_plan = {
 			remove_country_modifier = gacha_keqing_c5_country_modifier
 			remove_country_modifier = gacha_keqing_c6_country_modifier
 
-			# Configure Liyue (government / capital / ruler / subject)
+			# Configure Liyue (government / capital / ruler)
 			c:GL1 = {
 				# Avoid showing as a low rank like “伯国”
 				set_country_rank_effect = { rank = country_rank:rank_kingdom }
@@ -104,7 +104,7 @@ gacha_create_liyue_nation_from_plan = {
 					}
 				}
 
-				change_culture = culture:yuehai_culture
+				change_culture = culture:liyue_culture
 				change_religion = religion:sanjiao
 				change_government_type = government_type:monarchy
 				change_heir_selection = heir_selection:cognatic_primogeniture
@@ -162,10 +162,17 @@ gacha_create_liyue_nation_from_plan = {
 				# Temporary economic boons
 				add_country_modifier = { modifier = gacha_liyue_foundation_boom_modifier years = 10 mode = add }
 
-				# Make Liyue our subject (player-only safeguards exist in subject type)
-				make_subject_of = {
-					target = scope:liyue_overlord
-					type = subject_type:gacha_archon_vassal
+				# Join Seven Archons Council (international organization)
+				gacha_join_seven_archons_io = yes
+
+				# Default: Liyue becomes a subject of the plan initiator.
+				# If Seven Archons Descent is active, Liyue stays independent.
+				if = {
+					limit = { NOT = { has_global_variable = gacha_seven_archons_descent_active } }
+					make_subject_of = {
+						target = scope:liyue_overlord
+						type = subject_type:gacha_archon_vassal
+					}
 				}
 			}
 
@@ -301,9 +308,9 @@ gacha_liyue_ai_force_c6_ningguang = {
 			last_name = gacha_last_name_ningguang
 			female = yes
 			age = 500
-			culture = culture:gacha_culture
+			culture = culture:liyue_culture
 			religion = religion:sanjiao
-			birth_location = location:la_mothe_en_bassigny
+			birth_location = location:dongguan
 			estate = estate_type:gacha_estate
 			adm = { 80 90 }
 			dip = { 90 100 }
@@ -354,9 +361,9 @@ gacha_liyue_ai_force_c6_ganyu = {
 			last_name = gacha_last_name_ganyu
 			female = yes
 			age = 500
-			culture = culture:gacha_culture
+			culture = culture:liyue_culture
 			religion = religion:sanjiao
-			birth_location = location:la_mothe_en_bassigny
+			birth_location = location:dongguan
 			estate = estate_type:gacha_estate
 			adm = { 90 100 }
 			dip = { 70 85 }
@@ -407,9 +414,9 @@ gacha_liyue_ai_force_c6_beidou = {
 			last_name = gacha_last_name_beidou
 			female = yes
 			age = 500
-			culture = culture:gacha_culture
+			culture = culture:liyue_culture
 			religion = religion:sanjiao
-			birth_location = location:la_mothe_en_bassigny
+			birth_location = location:dongguan
 			estate = estate_type:gacha_estate
 			adm = { 60 75 }
 			dip = { 70 85 }
@@ -466,9 +473,9 @@ gacha_liyue_spawn_zhongli_c6 = {
 			last_name = gacha_last_name_zhongli
 			female = no
 			age = 500
-			culture = culture:gacha_culture
+			culture = culture:liyue_culture
 			religion = religion:sanjiao
-			birth_location = location:la_mothe_en_bassigny
+			birth_location = location:dongguan
 			estate = estate_type:gacha_estate
 			adm = { 85 100 }
 			dip = { 80 95 }

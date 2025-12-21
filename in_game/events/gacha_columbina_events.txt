@@ -1,0 +1,162 @@
+﻿namespace = gacha_columbina_events
+
+# ==============================================================================
+# Columbina - Hidden spawn (Snezhnaya auto recruitment)
+# ==============================================================================
+
+gacha_columbina_events.2 = {
+    type = country_event
+    title = gacha_columbina_events.2.title
+    hidden = yes
+
+    trigger = {
+        country_exists = c:GS1
+        this = c:GS1
+        NOT = { has_global_variable = gacha_columbina_is_summoned }
+    }
+
+    immediate = {
+        gacha_snezhnaya_spawn_columbina_c6 = yes
+    }
+
+    option = {
+        name = gacha_columbina_events.2.a
+    }
+}
+
+# ==============================================================================
+# Columbina - Ruler (Seven Archons Descent)
+# ==============================================================================
+gacha_columbina_events.3 = {
+    type = country_event
+    title = gacha_columbina_events.3.title
+    hidden = yes
+
+    trigger = {
+        country_exists = c:GS1
+        this = c:GS1
+    }
+
+    immediate = {
+        gacha_snezhnaya_spawn_columbina_c6 = yes
+
+        clear_saved_scope = columbina_char
+        random_character = {
+            limit = {
+                is_alive = yes
+                has_character_modifier = gacha_columbina_modifier
+            }
+            save_scope_as = columbina_char
+        }
+
+        if = {
+            limit = { exists = scope:columbina_char }
+            if = {
+                limit = { NOT = { dynasty_exists = gacha_columbina_dynasty } }
+                create_named_dynasty = gacha_columbina_dynasty
+            }
+            ruler_or_regent ?= { save_scope_as = snezhnaya_old_ruler }
+            scope:columbina_char = {
+                change_dynasty = dynasty:gacha_columbina_dynasty
+                change_character_estate = estate_type:crown_estate
+            }
+            set_new_ruler = scope:columbina_char
+            scope:columbina_char = { gacha_columbina_apply_country_modifiers = yes }
+
+            if = {
+                limit = { exists = scope:snezhnaya_old_ruler }
+                scope:snezhnaya_old_ruler = {
+                    if = {
+                        limit = { this != scope:columbina_char }
+                        kill_character_silently = { target = this reason = vanished }
+                    }
+                }
+                clear_saved_scope = snezhnaya_old_ruler
+            }
+
+            if = {
+                limit = { NOT = { has_variable = gacha_snezhnaya_placeholder_royals_cleaned } }
+                every_character = {
+                    limit = {
+                        is_alive = yes
+                        has_estate = estate_type:crown_estate
+                        NOT = { has_character_modifier = gacha_columbina_modifier }
+                    }
+                    kill_character_silently = { target = this reason = vanished }
+                }
+                set_variable = { name = gacha_snezhnaya_placeholder_royals_cleaned value = yes }
+            }
+        }
+
+        clear_saved_scope = columbina_char
+    }
+
+    option = {
+        name = gacha_columbina_events.3.a
+    }
+}
+
+# ==============================================================================
+# Columbina - Story Events (TODO)
+# ==============================================================================
+
+# 1. Intro
+
+gacha_columbina_events.1 = {
+    type = country_event
+    title = gacha_columbina_events.1.title
+    desc = gacha_columbina_events.1.desc
+    hide_portraits = yes
+    image = "gfx/event_pictures/gacha_inazuma.dds"
+    option = { name = gacha_columbina_events.1.a }
+}
+
+# 4. C6
+
+gacha_columbina_events.4 = {
+    type = country_event
+    title = gacha_columbina_events.4.title
+    desc = gacha_columbina_events.4.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_columbina_events.4.a }
+}
+
+# 11. C2
+
+gacha_columbina_events.11 = {
+    type = country_event
+    title = gacha_columbina_events.11.title
+    desc = gacha_columbina_events.11.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_columbina_events.11.a }
+}
+
+# 12. C4
+
+gacha_columbina_events.12 = {
+    type = country_event
+    title = gacha_columbina_events.12.title
+    desc = gacha_columbina_events.12.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_columbina_events.12.a }
+}
+
+# 13. C1
+
+gacha_columbina_events.13 = {
+    type = country_event
+    title = gacha_columbina_events.13.title
+    desc = gacha_columbina_events.13.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_columbina_events.13.a }
+}
+
+# 14. C5
+
+gacha_columbina_events.14 = {
+    type = country_event
+    title = gacha_columbina_events.14.title
+    desc = gacha_columbina_events.14.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_columbina_events.14.a }
+}

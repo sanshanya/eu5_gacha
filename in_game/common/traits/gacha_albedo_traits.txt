@@ -1,0 +1,41 @@
+﻿# Albedo Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_albedo_origin_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = { gacha_country_aura = yes }
+}
+
+gacha_albedo_awakened_trait = {
+    category = general
+    allow = { always = no }
+    modifier = { }
+}
+
+gacha_albedo_transcended_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = { }
+}
+
+# Constellation upgrades
+
+gacha_albedo_c2_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = { gacha_country_aura = yes }
+}
+
+gacha_albedo_c4_trait = {
+    category = general
+    allow = { always = no }
+    modifier = { }
+}
+
+gacha_albedo_c6_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = { }
+}

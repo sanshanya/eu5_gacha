@@ -1,4 +1,4 @@
-namespace = gacha_beidou_events
+﻿namespace = gacha_beidou_events
 
 # 1. Intro: "Beidou"
 gacha_beidou_events.1 = {

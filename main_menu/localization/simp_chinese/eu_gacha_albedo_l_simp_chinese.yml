@@ -1,0 +1,86 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 阿贝多 (Albedo)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_albedo: "阿贝多"
+  gacha_last_name_albedo: "白垩"
+
+  # === 特质 (Traits) ===
+  gacha_albedo_origin_trait: "阿贝多·初始"
+  desc_gacha_albedo_origin_trait: "TODO"
+
+  gacha_albedo_awakened_trait: "阿贝多·觉醒"
+  desc_gacha_albedo_awakened_trait: "TODO"
+
+  gacha_albedo_transcended_trait: "阿贝多·超越"
+  desc_gacha_albedo_transcended_trait: "TODO"
+
+  gacha_albedo_c2_trait: "阿贝多·C2"
+  desc_gacha_albedo_c2_trait: "TODO"
+
+  gacha_albedo_c4_trait: "阿贝多·C4"
+  desc_gacha_albedo_c4_trait: "TODO"
+
+  gacha_albedo_c6_trait: "阿贝多·C6"
+  desc_gacha_albedo_c6_trait: "TODO"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_albedo_modifier: "白垩之子"
+  STATIC_MODIFIER_DESC_gacha_albedo_modifier: "TODO"
+  gacha_albedo_modifier: "阿贝多的余韵"
+  gacha_albedo_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_albedo_c0_modifier: "阿贝多·C0"
+  STATIC_MODIFIER_NAME_gacha_albedo_c1_modifier: "阿贝多·C1"
+  STATIC_MODIFIER_NAME_gacha_albedo_c2_modifier: "阿贝多·C2"
+  STATIC_MODIFIER_NAME_gacha_albedo_c3_modifier: "阿贝多·C3"
+  STATIC_MODIFIER_NAME_gacha_albedo_c4_modifier: "阿贝多·C4"
+  STATIC_MODIFIER_NAME_gacha_albedo_c5_modifier: "阿贝多·C5"
+  STATIC_MODIFIER_NAME_gacha_albedo_c6_modifier: "阿贝多·C6"
+
+  # 阿贝多 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_albedo_country_modifier: "阿贝多·光环"
+  STATIC_MODIFIER_DESC_gacha_albedo_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_albedo_c1_country_modifier: "阿贝多·C1"
+  STATIC_MODIFIER_DESC_gacha_albedo_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_albedo_c2_country_modifier: "阿贝多·C2"
+  STATIC_MODIFIER_DESC_gacha_albedo_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_albedo_c4_country_modifier: "阿贝多·C4"
+  STATIC_MODIFIER_DESC_gacha_albedo_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_albedo_c5_country_modifier: "阿贝多·C5"
+  STATIC_MODIFIER_DESC_gacha_albedo_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_albedo_c6_country_modifier: "阿贝多·C6"
+  STATIC_MODIFIER_DESC_gacha_albedo_c6_country_modifier: "TODO"
+
+  # === 事件 (Events) ===
+  gacha_albedo_events.1.title: "阿贝多"
+  gacha_albedo_events.1.desc: "TODO"
+  gacha_albedo_events.1.a: "……"
+
+  gacha_albedo_events.2.title: "阿贝多"
+  gacha_albedo_events.2.a: "继续"
+  gacha_albedo_events.3.title: "阿贝多"
+  gacha_albedo_events.3.a: "继续"
+
+  gacha_albedo_events.13.title: "阿贝多·C1"
+  gacha_albedo_events.13.desc: "TODO"
+  gacha_albedo_events.13.a: "……"
+
+  gacha_albedo_events.11.title: "阿贝多·C2"
+  gacha_albedo_events.11.desc: "TODO"
+  gacha_albedo_events.11.a: "……"
+
+  gacha_albedo_events.12.title: "阿贝多·C4"
+  gacha_albedo_events.12.desc: "TODO"
+  gacha_albedo_events.12.a: "……"
+
+  gacha_albedo_events.14.title: "阿贝多·C5"
+  gacha_albedo_events.14.desc: "TODO"
+  gacha_albedo_events.14.a: "……"
+
+  gacha_albedo_events.4.title: "阿贝多·C6"
+  gacha_albedo_events.4.desc: "TODO"
+  gacha_albedo_events.4.a: "……"

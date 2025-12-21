@@ -70,10 +70,16 @@
   gacha_liyue_events.1.desc: "Liyue’s wealth and order are being rebuilt. By the terms of the contract, Liyue will attempt to recruit one hero from the \"Liyue Pool\" each year to strengthen constellations and statecraft.\n\n(This event is AI logic and should not normally appear to players.)"
   gacha_liyue_events.1.a: "Continue"
   gacha_liyue_events.2.a: "Continue"
+  gacha_liyue_events.3.title: "A Silent Contract"
+  gacha_liyue_events.3.a: "Continue"
 
   # === Buildings: Liyue ===
   gacha_liyue_harbor: "Port of Liyue"
   gacha_liyue_harbor_desc: "The maritime gateway of Liyue and an anchor of contractual order.\n\nCan only be built in Guangzhou (Dongguan)."
+
+  # === Buildings: Inazuma ===
+  gacha_inazuma_tenshukaku: "Tenshukaku"
+  gacha_inazuma_tenshukaku_desc: "The shogunate's citadel and port anchor of Inazuma.\n\nCan only be built in Toshima-Kanto."
 
   # === Result: 3-star / Blue (.2) ===
   gacha_events.2.title: "Wishing Result: Silent Stars"
@@ -239,10 +245,41 @@
   gacha_create_liyue_nation_action_progress: "[Cabinet.GetActionNumProgress|%]"
   gacha_create_liyue_nation_action_progress_wordier: "Preparations: [Cabinet.GetActionNumProgress|%]"
   gacha_create_liyue_nation_action_progress_tooltip: "Progress towards rebuilding Liyue. Reach 100% to found Liyue."
+  gacha_create_inazuma_nation: "Rebuild Inazuma"
+  gacha_create_inazuma_nation_desc: "Rebuild the nation of Inazuma in Toshima-Kanto, the land of thunder and eternity."
+  gacha_create_inazuma_nation_active: "Rebuilding Inazuma..."
+  gacha_create_inazuma_nation_action: "Rebuild Inazuma Here"
+  gacha_create_inazuma_nation_action_progress: "[Cabinet.GetActionNumProgress|%]"
+  gacha_create_inazuma_nation_action_progress_wordier: "Preparations: [Cabinet.GetActionNumProgress|%]"
+  gacha_create_inazuma_nation_action_progress_tooltip: "Progress towards rebuilding Inazuma. Reach 100% to found Inazuma."
 
   # Liyue - Country Modifiers
   STATIC_MODIFIER_NAME_gacha_liyue_foundation_boom_modifier: "Liyue Reborn: A Thousand Sails"
   STATIC_MODIFIER_DESC_gacha_liyue_foundation_boom_modifier: "A golden decade after the founding: the harbor and trade routes are rapidly restored, contracts and finances run at full speed, and production and construction surge."
+
+  STATIC_MODIFIER_NAME_gacha_inazuma_foundation_boom_modifier: "Inazuma Reborn: Eternal Surge"
+  STATIC_MODIFIER_DESC_gacha_inazuma_foundation_boom_modifier: "A decade of focused reconstruction: population capacity expands, granaries overflow, workshops roar, and development accelerates."
+  STATIC_MODIFIER_NAME_gacha_seven_archons_alliance_member_modifier: "Seven Nations Alliance"
+  STATIC_MODIFIER_DESC_gacha_seven_archons_alliance_member_modifier: "Members of the Seven Nations Alliance gain +1 Stability, +1 Prestige, and +1 Legitimacy per month."
+
+  # === International Organization ===
+  gacha_seven_archons: "Seven Archons of Teyvat"
+  gacha_seven_archons_desc: "A council of the Archons presiding over the nations born of otherworldly covenants."
+  diplomatic_status_gacha_seven_archons_name: "Seven Archons Council"
+  diplomatic_status_gacha_seven_archons_tooltip: "Member of the Seven Archons Council."
+  gacha_seven_archons_descent: "Descent of the Seven"
+  gacha_seven_archons_descent_desc: "Can be initiated once the Seven Archons Council has at least 1 member. Current members break free from suzerainty; the remaining five nations descend immediately at their designated locations."
+  gacha_tt_seven_archons_two_members: "The Seven Archons Council has at least 2 members."
+  gacha_tt_seven_archons_one_member: "The Seven Archons Council has at least 1 member."
+  gacha_tt_seven_archons_descent_unused: "\"Descent of the Seven\" has not been triggered yet."
+  gacha_seven_archons_descent_tt: "Seven Archons Council members are now independent, and the remaining five nations have descended."
+  gacha_seven_archons_alliance: "Seven Nations Alliance"
+  gacha_seven_archons_alliance_desc: "Can be initiated once all seven nations exist. While the alliance stands, members gain +1 Stability, +1 Prestige, and +1 Legitimacy per month."
+  gacha_tt_seven_archons_alliance_unused: "\"Seven Nations Alliance\" has not been triggered yet."
+  gacha_seven_archons_alliance_tt: "The Seven Archons Council has formed an alliance, granting monthly benefits to its members."
+  gacha_tt_seven_archons_all_exist: "All seven nations have been established."
+
+  gacha_liyue_events.2.title: "A Silent Contract"
   STATIC_MODIFIER_NAME_gacha_liyue_trade_hub_modifier: "Liyue Trade Hub"
   STATIC_MODIFIER_DESC_gacha_liyue_trade_hub_modifier: "A port nation built on contracts and commerce. Lasting trade prosperity and steady construction sustain Liyue's growth."
 
@@ -256,6 +293,12 @@
   gacha_nation_events.2.title: "The Liyue Plan Stalls"
   gacha_nation_events.2.desc: "Something prevents Liyue from being founded right now.\\n\\nPlease double-check the prerequisites (you own Dongguan, and Dongguan is the location of a Market), then try again.\\n\\nIf the issue persists, check the error log for messages related to #bold create_country_from_cores_in_our_locations#!."
   gacha_nation_events.2.a: "Understood."
+  gacha_nation_events.3.title: "The Founding of Inazuma"
+  gacha_nation_events.3.desc: "Amidst thunder and solemn banners, a new nation is born in Toshima-Kanto. The Shogunate's order shall endure in this land of eternity.\\n\\nAs suzerain, you have received Inazuma's allegiance."
+  gacha_nation_events.3.a: "Eternity endures."
+  gacha_nation_events.4.title: "The Inazuma Plan Stalls"
+  gacha_nation_events.4.desc: "Something prevents Inazuma from being founded right now.\\n\\nPlease double-check the prerequisites (you own Toshima-Kanto, and Toshima-Kanto is the location of a Market), then try again.\\n\\nIf the issue persists, check the error log for messages related to #bold create_country_from_cores_in_our_locations#!."
+  gacha_nation_events.4.a: "Understood."
   
   gacha_nation_events.10.title: "The Liyue Plan"
   gacha_nation_events.10.desc: "New Year's night. Fireworks blaze outside the window. Keqing turns her back to the lights and covers the desk with blueprints. She does not watch the fireworks.\\n\\nViolet lightning at her fingertips illuminates the dense notes on the plans.\\n\\n#bold Keqing#!: Your Majesty, the ideal of Liyue is not a gift from the gods—it is forged by human hands.\\n\\nShe pauses, her gaze passing over the lanterns rising into the sky outside the window—so much like Xiao Lanterns.\\n\\n#bold Keqing#!: If you will honor your promise to rebuild Liyue, then in the name of the Yuheng I will take charge of the harbor. Trade routes, mines, urban works, and contracts—everything will be restored in the shortest time.\\n\\nYou look at the young woman's face. By the power of the wish, her appearance is unchanged from your first meeting.\\n\\nYet her eyes are no longer naïve, reflecting the lights drifting ever farther into the night."
@@ -265,5 +308,12 @@
   gacha_nation_events.11.desc: "#bold Keqing#!: ...I will not fail your trust.\\n\\n#bold Unlocks Cabinet Action:#! #bold;color_yellow $gacha_create_liyue_nation$#!\\n#bold Starts Situation:#! #bold;color_yellow $gacha_liyue_reconstruction$#!"
   gacha_nation_events.12.desc: "Keqing nods and gathers the plans.\\n\\n#bold Keqing#!: I was too hasty. Whenever you decide, I'll keep the proposal ready to be put into motion.\\n\\nShe turns to the fireworks outside the window, and says no more."
   gacha_nation_events.11.a: "That day won't be far."
+  gacha_nation_events.20.title: "The Inazuma Plan"
+  gacha_nation_events.20.desc: "Night. Thunder rumbles beyond the eaves. The Raiden Shogun lays a lacquered scroll across the table—codes of governance, harbor plans, and the formal seals of Inazuma.\\n\\n#bold Raiden Shogun#!: Eternity is not a slogan. It is an order that must run without pause.\\n\\nShe taps the map at Toshima-Kanto.\\n\\n#bold Raiden Shogun#!: Establish the seat here. If you will allow it, I will restore the Shogunate's rule and enforce the laws of Inazuma.\\n\\nHer gaze does not waver, as if the thunder itself had taken shape."
+  gacha_nation_events.20.a: "Then let eternity take root."
+  gacha_nation_events.20.b: "Not yet."
+  gacha_nation_events.21.desc: "#bold Raiden Shogun#!: ...I shall see it done.\\n\\n#bold Unlocks Cabinet Action:#! #bold;color_yellow $gacha_create_inazuma_nation$#!\\n#bold Starts Situation:#! #bold;color_yellow $gacha_inazuma_reconstruction$#!"
+  gacha_nation_events.22.desc: "The Shogun nods and withdraws the scroll.\\n\\n#bold Raiden Shogun#!: When you decide, I will be ready.\\n\\nThunder rolls once, then fades into the night."
+  gacha_nation_events.21.a: "We will move soon."
 
   # Country Names (see gacha_country_names_l_english.yml)

@@ -3,3 +3,13 @@
     has_trait = gacha_core_trait
   }
 }
+
+gacha_all_seven_archons_countries_exist = {
+  country_exists = c:GL1
+  country_exists = c:GI1
+  country_exists = c:GM1
+  country_exists = c:GF1
+  country_exists = c:GN1
+  country_exists = c:GS1
+  country_exists = c:GU1
+}

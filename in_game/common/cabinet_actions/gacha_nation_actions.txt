@@ -120,3 +120,121 @@ gacha_create_liyue_nation = {
 
     ai_will_do = { value = 0 }
 }
+
+# ------------------------------------------------------------------------------
+# 稻妻 (Inazuma) - 计划原型
+# 首都: 丰岛 (toshima_kanto / 9221)
+# 注意：此版本使用静态 TAG（GI1），便于自定义颜色/旗帜/名字
+# ------------------------------------------------------------------------------
+gacha_create_inazuma_nation = {
+    ability = dip
+
+    allow_multiple = no
+
+    # 显示条件：玩家已在「稻妻计划」中立约
+    potential = {
+        # 需要先通过雷电将军角色交互解锁（避免内阁列表常驻过于碍眼）
+        has_variable = gacha_inazuma_plan_unlocked
+        NOT = { country_exists = c:GI1 }
+        NOT = { has_variable = gacha_inazuma_preparations_complete }
+    }
+
+    # 启动条件：
+    # - 已解锁「稻妻计划」
+    # - 仍拥有丰岛
+    # 说明：
+    # - 启动后会同时激活「稻妻筹建」局势
+    # - 局势每月基础推进 5（受内阁效率影响），但必须先在丰岛建立独立市场才会开始推进
+    allow = {
+        custom_tooltip = {
+            text = gacha_tt_inazuma_plan_unlocked
+            has_variable = gacha_inazuma_plan_unlocked
+        }
+        custom_tooltip = {
+            text = gacha_tt_inazuma_not_established_yet
+            NOT = { country_exists = c:GI1 }
+        }
+        custom_tooltip = {
+            text = gacha_tt_toshima_owned_by_us
+            location:toshima_kanto = { owner = root }
+        }
+        custom_tooltip = {
+            text = gacha_tt_inazuma_requires_raiden_alive
+            any_country = {
+                any_character = {
+                    is_alive = yes
+                    has_character_modifier = gacha_raiden_modifier
+                }
+            }
+        }
+        custom_tooltip = {
+            text = gacha_tt_inazuma_not_already_completed
+            NOT = { has_variable = gacha_inazuma_preparations_complete }
+        }
+    }
+
+    # 进度展示：读取局势变量
+    progress = {
+        value = 0
+        if = {
+            limit = {
+                situation:gacha_inazuma_reconstruction = {
+                    situation_is_active = yes
+                    exists = var:target_country
+                    trigger_if = {
+                        limit = { exists = var:target_country }
+                        var:target_country = scope:actor
+                    }
+                }
+            }
+            value = {
+                value = situation:gacha_inazuma_reconstruction.var:gacha_inazuma_progress
+                divide = 100
+                min = 0
+                max = 1
+            }
+        }
+    }
+
+    # 完成条件：局势推进到 100（由局势脚本写入 gacha_inazuma_preparations_complete）
+    is_finished = {
+        has_variable = gacha_inazuma_preparations_complete
+    }
+
+    on_activate = {
+        scope:actor = {
+            set_variable = { name = gacha_inazuma_reconstruction_in_progress value = yes }
+            # 记录总投入（用于局势结束时换算档位/收益；初始化避免“变量未设置”警告）
+            set_variable = { name = gacha_inazuma_investment_total value = 0 }
+        }
+        # 绑定局势到本国（事件已做一次；这里做容错）
+        situation:gacha_inazuma_reconstruction ?= {
+            if = {
+                limit = { NOT = { exists = var:target_country } }
+                set_variable = { name = target_country value = scope:actor }
+            }
+        }
+        # 若局势未激活，则激活（避免重复激活导致重置）
+        if = {
+            limit = {
+                NOT = {
+                    situation:gacha_inazuma_reconstruction = { situation_is_active = yes }
+                }
+            }
+            activate_situation = situation:gacha_inazuma_reconstruction
+        }
+    }
+
+    on_deactivate = {
+        scope:actor = {
+            remove_variable = gacha_inazuma_reconstruction_in_progress
+        }
+    }
+
+    # 地图标记
+    map_marker = {
+        show_for_owner = yes
+    }
+
+    ai_will_do = { value = 0 }
+}

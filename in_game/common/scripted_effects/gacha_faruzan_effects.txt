@@ -1,0 +1,343 @@
+﻿# ==============================================================================
+# Faruzan Character Logic - V3 Architecture (placeholder)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Main Entry Point
+# ------------------------------------------------------------------------------
+gacha_create_faruzan_effect = {
+    # === A. Duplicate Logic (Upgrade) ===
+    if = {
+        limit = { has_global_variable = gacha_faruzan_is_summoned }
+
+        clear_saved_scope = existing_char
+
+        # Prefer: find Faruzan in this country first
+        random_character = {
+            limit = {
+                is_alive = yes
+                has_character_modifier = gacha_faruzan_modifier
+            }
+            save_scope_as = existing_char
+        }
+
+        # Fallback: global search (world-unique)
+        if = {
+            limit = { NOT = { exists = scope:existing_char } }
+            random_country = {
+                limit = {
+                    any_character = {
+                        is_alive = yes
+                        has_character_modifier = gacha_faruzan_modifier
+                    }
+                }
+                random_character = {
+                    limit = {
+                        is_alive = yes
+                        has_character_modifier = gacha_faruzan_modifier
+                    }
+                    save_scope_as = existing_char
+                }
+            }
+        }
+
+        if = {
+            limit = { exists = scope:existing_char }
+
+            scope:existing_char = {
+                if = {
+                    limit = { employer = root }
+                    # Standardize identity (estate/dynasty)
+                    gacha_standardize_character_identity = { who = faruzan }
+
+                    # Save scope for UI
+                    save_scope_as = gacha_last_pulled_char
+
+                    # Check for C6 overflow
+                    if = {
+                        limit = {
+                            has_variable = gacha_constellation_lvl
+                            var:gacha_constellation_lvl >= 6
+                        }
+                        # Overflow: Starlight
+                        root = {
+                            change_variable = { name = gacha_starlight add = 1 }
+                            trigger_event_non_silently = { id = gacha_events.30 }
+                        }
+                    }
+                    else = {
+                        # Normal Upgrade
+                        if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+                        change_variable = { name = gacha_constellation_lvl add = 1 }
+
+                        gacha_apply_constellation_stats_effect = { who = faruzan }
+                        gacha_faruzan_apply_country_modifiers = yes
+                        gacha_faruzan_update_traits = yes
+
+                        gacha_faruzan_trigger_event = yes
+                    }
+                }
+                else = {
+                    # World-unique: the character exists elsewhere; do not steal or upgrade.
+                    root = {
+                        change_variable = { name = gacha_starlight add = 1 }
+                        trigger_event_non_silently = { id = gacha_events.31 }
+                    }
+                }
+            }
+
+            clear_saved_scope = existing_char
+        }
+        else = {
+            # Error fallback: Owned but not found (Dead/Dismissed)?
+            remove_global_variable = gacha_faruzan_is_summoned
+        }
+    }
+
+    # === B. New Creation Logic ===
+    if = {
+        limit = { NOT = { has_global_variable = gacha_faruzan_is_summoned } }
+        create_character = {
+            first_name = gacha_first_name_faruzan
+            last_name = gacha_last_name_faruzan
+            female = yes
+            age = 120
+            culture = culture:sumeru_culture
+            religion = religion:hindu
+            birth_location = location:surat
+            estate = estate_type:gacha_estate
+            adm = { 80 95 }
+            dip = { 85 100 }
+            mil = { 60 75 }
+            create_in_limbo = yes
+            save_scope_as = new_char
+        }
+
+        if = {
+            limit = { exists = scope:new_char }
+            scope:new_char = {
+                # 1. Register & Init
+                gacha_register_new_character = { who = faruzan }
+                set_variable = { name = gacha_constellation_lvl value = 0 }
+
+                # 2. Apply Initial State (Level 0)
+                gacha_faruzan_update_traits = yes
+                gacha_faruzan_apply_country_modifiers = yes
+
+                # 3. Trigger Intro Event
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { has_variable = gacha_is_suppress_events_bool }
+                            var:gacha_is_suppress_events_bool = 0
+                        }
+                    }
+                    root = { trigger_event_non_silently = { id = gacha_faruzan_events.1 } }
+                }
+            }
+        }
+
+        set_global_variable = { name = gacha_faruzan_is_summoned value = 1 }
+        clear_saved_scope = new_char
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 2. Trait Management Helper (Delta Logic)
+# ------------------------------------------------------------------------------
+gacha_faruzan_update_traits = {
+    # Safety Init
+    if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+
+    # Level 0 (Init): Awakened + Transcended
+    if = {
+        limit = { var:gacha_constellation_lvl = 0 }
+        add_trait = trait:gacha_faruzan_awakened_trait
+        add_trait = trait:gacha_faruzan_transcended_trait
+    }
+
+    # Level 1: Add Origin
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 1 }
+        add_trait = trait:gacha_faruzan_origin_trait
+    }
+
+    # Level 2: Remove Origin, Add C2
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 2 }
+        remove_trait = trait:gacha_faruzan_origin_trait
+        add_trait = trait:gacha_faruzan_c2_trait
+    }
+
+    # Level 4: Remove Awakened, Add C4
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 4 }
+        remove_trait = trait:gacha_faruzan_awakened_trait
+        add_trait = trait:gacha_faruzan_c4_trait
+    }
+
+    # Level 6: Remove Transcended, Add C6
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 6 }
+        remove_trait = trait:gacha_faruzan_transcended_trait
+        add_trait = trait:gacha_faruzan_c6_trait
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 3. Event Trigger Helper
+# ------------------------------------------------------------------------------
+gacha_faruzan_trigger_event = {
+    if = {
+        limit = { NOT = { has_variable = gacha_constellation_lvl } }
+    }
+    else = {
+        if = {
+            limit = {
+                OR = {
+                    NOT = { has_variable = gacha_is_suppress_events_bool }
+                    var:gacha_is_suppress_events_bool = 0
+                }
+            }
+            if = {
+                limit = { var:gacha_constellation_lvl >= 6 }
+                root = { trigger_event_non_silently = { id = gacha_faruzan_events.4 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 5 }
+                root = { trigger_event_non_silently = { id = gacha_faruzan_events.14 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 4 }
+                root = { trigger_event_non_silently = { id = gacha_faruzan_events.12 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 3 }
+                # C3 story not implemented yet (skip)
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 2 }
+                root = { trigger_event_non_silently = { id = gacha_faruzan_events.11 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 1 }
+                root = { trigger_event_non_silently = { id = gacha_faruzan_events.13 } }
+            }
+        }
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 4. Country Modifier Helper (Idempotent Rebuild)
+# ------------------------------------------------------------------------------
+gacha_faruzan_apply_country_modifiers = {
+    if = {
+        limit = { exists = this }
+
+        if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+
+        employer = {
+            remove_country_modifier = gacha_faruzan_country_modifier
+            remove_country_modifier = gacha_faruzan_c1_country_modifier
+            remove_country_modifier = gacha_faruzan_c2_country_modifier
+            remove_country_modifier = gacha_faruzan_c4_country_modifier
+            remove_country_modifier = gacha_faruzan_c5_country_modifier
+            remove_country_modifier = gacha_faruzan_c6_country_modifier
+        }
+
+        # C0: Base aura (C0/C1 active; replaced by C2 from C2+)
+        if = {
+            limit = { var:gacha_constellation_lvl < 2 }
+            employer = { add_country_modifier = { modifier = gacha_faruzan_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # C1: Cabinet +1
+        if = {
+            limit = { var:gacha_constellation_lvl >= 1 }
+            employer = { add_country_modifier = { modifier = gacha_faruzan_c1_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # C2: Aura upgrade
+        if = {
+            limit = { var:gacha_constellation_lvl >= 2 }
+            employer = { add_country_modifier = { modifier = gacha_faruzan_c2_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # C4: Country placeholder (main stats in trait)
+        if = {
+            limit = { var:gacha_constellation_lvl >= 4 }
+            employer = { add_country_modifier = { modifier = gacha_faruzan_c4_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # C5: Policy slot +1
+        if = {
+            limit = { var:gacha_constellation_lvl >= 5 }
+            employer = { add_country_modifier = { modifier = gacha_faruzan_c5_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # C6: Country placeholder (main stats in trait)
+        if = {
+            limit = { var:gacha_constellation_lvl >= 6 }
+            employer = { add_country_modifier = { modifier = gacha_faruzan_c6_country_modifier years = -1 mode = add_and_extend } }
+        }
+    }
+}
+
+# ------------------------------------------------------------------------------
+# Sumeru: Spawn Faruzan after 1 year (C6, world-unique)
+# ------------------------------------------------------------------------------
+gacha_sumeru_spawn_faruzan_c6 = {
+    # Only for Sumeru and only if not already summoned globally
+    if = {
+        limit = {
+            this = c:GU1
+            NOT = { has_global_variable = gacha_faruzan_is_summoned }
+        }
+
+        # Create Faruzan at C6, no story events
+        create_character = {
+            first_name = gacha_first_name_faruzan
+            last_name = gacha_last_name_faruzan
+            female = yes
+            age = 120
+            culture = culture:sumeru_culture
+            religion = religion:hindu
+            birth_location = location:surat
+            estate = estate_type:gacha_estate
+            adm = { 80 95 }
+            dip = { 85 100 }
+            mil = { 60 75 }
+            create_in_limbo = yes
+            save_scope_as = new_char
+        }
+
+        if = {
+            limit = { exists = scope:new_char }
+            scope:new_char = {
+                # 1) Register at C0
+                gacha_register_new_character = { who = faruzan }
+
+                # 2) Ensure C0 trait state exists
+                gacha_faruzan_update_traits = yes
+
+                # 3) Upgrade to C6 (delta steps; no events)
+                while = {
+                    limit = { var:gacha_constellation_lvl < 6 }
+                    change_variable = { name = gacha_constellation_lvl add = 1 }
+                    gacha_apply_constellation_stats_effect = { who = faruzan }
+                    gacha_faruzan_update_traits = yes
+                }
+
+                # 4) Apply country modifiers (idempotent rebuild)
+                gacha_faruzan_apply_country_modifiers = yes
+            }
+
+            set_global_variable = { name = gacha_faruzan_is_summoned value = 1 }
+            clear_saved_scope = new_char
+        }
+
+        # Avoid polluting UI saved scopes
+        clear_saved_scope = gacha_last_pulled_char
+        clear_saved_scope = gacha_c3_target_char
+    }
+}

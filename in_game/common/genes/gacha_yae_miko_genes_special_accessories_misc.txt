@@ -1,0 +1,16 @@
+﻿accessory_genes = {
+  gacha_yae_miko_props_1 = {
+    gene_yae_miko_blank_1 = { index = 0 }
+
+    gacha_yae_miko_01 = {
+      index = 1
+      male   = { 1 = gacha_yae_miko_01 }
+      female = male
+      boy    = male
+      girl   = male
+      adolescent_boy  = male
+      adolescent_girl = male
+      infant = male
+    }
+  }
+}

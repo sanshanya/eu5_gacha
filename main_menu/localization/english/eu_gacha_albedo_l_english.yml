@@ -1,0 +1,86 @@
+﻿l_english:
+  # ============================================================
+  # Character - Albedo
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_albedo: "Albedo"
+  gacha_last_name_albedo: "Chalk"
+
+  # === Traits ===
+  gacha_albedo_origin_trait: "Albedo - Origin"
+  desc_gacha_albedo_origin_trait: "TODO"
+
+  gacha_albedo_awakened_trait: "Albedo - Awakened"
+  desc_gacha_albedo_awakened_trait: "TODO"
+
+  gacha_albedo_transcended_trait: "Albedo - Transcended"
+  desc_gacha_albedo_transcended_trait: "TODO"
+
+  gacha_albedo_c2_trait: "Albedo - C2"
+  desc_gacha_albedo_c2_trait: "TODO"
+
+  gacha_albedo_c4_trait: "Albedo - C4"
+  desc_gacha_albedo_c4_trait: "TODO"
+
+  gacha_albedo_c6_trait: "Albedo - C6"
+  desc_gacha_albedo_c6_trait: "TODO"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_albedo_modifier: "Kreideprinz"
+  STATIC_MODIFIER_DESC_gacha_albedo_modifier: "TODO"
+  gacha_albedo_modifier: "Albedo's Echo"
+  gacha_albedo_modifier_desc: "TODO"
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_albedo_c0_modifier: "Albedo - C0"
+  STATIC_MODIFIER_NAME_gacha_albedo_c1_modifier: "Albedo - C1"
+  STATIC_MODIFIER_NAME_gacha_albedo_c2_modifier: "Albedo - C2"
+  STATIC_MODIFIER_NAME_gacha_albedo_c3_modifier: "Albedo - C3"
+  STATIC_MODIFIER_NAME_gacha_albedo_c4_modifier: "Albedo - C4"
+  STATIC_MODIFIER_NAME_gacha_albedo_c5_modifier: "Albedo - C5"
+  STATIC_MODIFIER_NAME_gacha_albedo_c6_modifier: "Albedo - C6"
+
+  # Albedo - Country Modifiers
+  STATIC_MODIFIER_NAME_gacha_albedo_country_modifier: "Albedo - Aura"
+  STATIC_MODIFIER_DESC_gacha_albedo_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_albedo_c1_country_modifier: "Albedo - C1"
+  STATIC_MODIFIER_DESC_gacha_albedo_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_albedo_c2_country_modifier: "Albedo - C2"
+  STATIC_MODIFIER_DESC_gacha_albedo_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_albedo_c4_country_modifier: "Albedo - C4"
+  STATIC_MODIFIER_DESC_gacha_albedo_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_albedo_c5_country_modifier: "Albedo - C5"
+  STATIC_MODIFIER_DESC_gacha_albedo_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_albedo_c6_country_modifier: "Albedo - C6"
+  STATIC_MODIFIER_DESC_gacha_albedo_c6_country_modifier: "TODO"
+
+  # === Events ===
+  gacha_albedo_events.1.title: "Albedo"
+  gacha_albedo_events.1.desc: "TODO"
+  gacha_albedo_events.1.a: "..."
+
+  gacha_albedo_events.2.title: "Albedo"
+  gacha_albedo_events.2.a: "Continue"
+  gacha_albedo_events.3.title: "Albedo"
+  gacha_albedo_events.3.a: "Continue"
+
+  gacha_albedo_events.13.title: "Albedo - C1"
+  gacha_albedo_events.13.desc: "TODO"
+  gacha_albedo_events.13.a: "..."
+
+  gacha_albedo_events.11.title: "Albedo - C2"
+  gacha_albedo_events.11.desc: "TODO"
+  gacha_albedo_events.11.a: "..."
+
+  gacha_albedo_events.12.title: "Albedo - C4"
+  gacha_albedo_events.12.desc: "TODO"
+  gacha_albedo_events.12.a: "..."
+
+  gacha_albedo_events.14.title: "Albedo - C5"
+  gacha_albedo_events.14.desc: "TODO"
+  gacha_albedo_events.14.a: "..."
+
+  gacha_albedo_events.4.title: "Albedo - C6"
+  gacha_albedo_events.4.desc: "TODO"
+  gacha_albedo_events.4.a: "..."

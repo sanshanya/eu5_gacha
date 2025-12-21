@@ -1,0 +1,86 @@
+﻿l_english:
+  # ============================================================
+  # Character - Neuvillette
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_neuvillette: "Neuvillette"
+  gacha_last_name_neuvillette: "Iudex"
+
+  # === Traits ===
+  gacha_neuvillette_origin_trait: "Neuvillette - Origin"
+  desc_gacha_neuvillette_origin_trait: "TODO"
+
+  gacha_neuvillette_awakened_trait: "Neuvillette - Awakened"
+  desc_gacha_neuvillette_awakened_trait: "TODO"
+
+  gacha_neuvillette_transcended_trait: "Neuvillette - Transcended"
+  desc_gacha_neuvillette_transcended_trait: "TODO"
+
+  gacha_neuvillette_c2_trait: "Neuvillette - C2"
+  desc_gacha_neuvillette_c2_trait: "TODO"
+
+  gacha_neuvillette_c4_trait: "Neuvillette - C4"
+  desc_gacha_neuvillette_c4_trait: "TODO"
+
+  gacha_neuvillette_c6_trait: "Neuvillette - C6"
+  desc_gacha_neuvillette_c6_trait: "TODO"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_neuvillette_modifier: "Iudex of Fontaine"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_modifier: "TODO"
+  gacha_neuvillette_modifier: "Neuvillette's Echo"
+  gacha_neuvillette_modifier_desc: "TODO"
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c0_modifier: "Neuvillette - C0"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c1_modifier: "Neuvillette - C1"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c2_modifier: "Neuvillette - C2"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c3_modifier: "Neuvillette - C3"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c4_modifier: "Neuvillette - C4"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c5_modifier: "Neuvillette - C5"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c6_modifier: "Neuvillette - C6"
+
+  # Neuvillette - Country Modifiers
+  STATIC_MODIFIER_NAME_gacha_neuvillette_country_modifier: "Neuvillette - Aura"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c1_country_modifier: "Neuvillette - C1"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c2_country_modifier: "Neuvillette - C2"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c4_country_modifier: "Neuvillette - C4"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c5_country_modifier: "Neuvillette - C5"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c6_country_modifier: "Neuvillette - C6"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c6_country_modifier: "TODO"
+
+  # === Events ===
+  gacha_neuvillette_events.1.title: "Neuvillette"
+  gacha_neuvillette_events.1.desc: "TODO"
+  gacha_neuvillette_events.1.a: "..."
+
+  gacha_neuvillette_events.2.title: "Neuvillette"
+  gacha_neuvillette_events.2.a: "Continue"
+  gacha_neuvillette_events.3.title: "Neuvillette"
+  gacha_neuvillette_events.3.a: "Continue"
+
+  gacha_neuvillette_events.13.title: "Neuvillette - C1"
+  gacha_neuvillette_events.13.desc: "TODO"
+  gacha_neuvillette_events.13.a: "..."
+
+  gacha_neuvillette_events.11.title: "Neuvillette - C2"
+  gacha_neuvillette_events.11.desc: "TODO"
+  gacha_neuvillette_events.11.a: "..."
+
+  gacha_neuvillette_events.12.title: "Neuvillette - C4"
+  gacha_neuvillette_events.12.desc: "TODO"
+  gacha_neuvillette_events.12.a: "..."
+
+  gacha_neuvillette_events.14.title: "Neuvillette - C5"
+  gacha_neuvillette_events.14.desc: "TODO"
+  gacha_neuvillette_events.14.a: "..."
+
+  gacha_neuvillette_events.4.title: "Neuvillette - C6"
+  gacha_neuvillette_events.4.desc: "TODO"
+  gacha_neuvillette_events.4.a: "..."

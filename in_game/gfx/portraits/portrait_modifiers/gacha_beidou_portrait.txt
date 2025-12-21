@@ -1,4 +1,4 @@
-gacha_beidou_portrait = {
+﻿gacha_beidou_portrait = {
   usage    = game
   priority = 100
 

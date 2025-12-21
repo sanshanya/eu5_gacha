@@ -8,3 +8,9 @@ gacha_liyue_harbor_construction = {
 	masonry = 0.1
 	category = building_construction
 }
+
+# “天守阁”专用建造需求：仅消耗砖石（masonry）
+gacha_inazuma_tenshukaku_construction = {
+	masonry = 0.1
+	category = building_construction
+}

@@ -81,6 +81,7 @@
       if = {
         limit = {
           var:gacha_liyue_progress >= 100
+          exists = var:target_country
           NOT = { country_exists = c:GL1 }
         }
         var:target_country = { gacha_create_liyue_nation_from_plan = yes }

@@ -1,0 +1,51 @@
+﻿# Gacha - Seven Archons Council
+
+gacha_seven_archons = {
+    has_target = no
+    unique = yes
+
+    show_leave_message = no
+    use_laws_as_join_reason = no
+
+    has_leader_country = no
+    leader_type = none
+    disband_if_no_leader = no
+
+    # No manual creation/invite/join from diplomacy UI
+    create_visible_trigger = { always = no }
+    create_enabled_trigger = { always = no }
+    invite_visible_trigger = { always = no }
+    invite_enabled_trigger = { always = no }
+    join_visible_trigger = { always = no }
+    join_enabled_trigger = { always = no }
+
+    can_join_trigger = { always = yes }
+    can_leave_trigger = { always = no }
+
+    on_left = {
+        if = {
+            limit = { has_country_modifier = gacha_seven_archons_alliance_member_modifier }
+            remove_country_modifier = gacha_seven_archons_alliance_member_modifier
+        }
+    }
+
+    monthly_effect = {
+        if = {
+            limit = {
+                has_global_variable = gacha_seven_archons_alliance_active
+                gacha_all_seven_archons_countries_exist = yes
+            }
+            every_international_organization_member = {
+                if = {
+                    limit = { NOT = { has_country_modifier = gacha_seven_archons_alliance_member_modifier } }
+                    add_country_modifier = {
+                        modifier = gacha_seven_archons_alliance_member_modifier
+                        years = -1
+                        mode = add_and_extend
+                    }
+                }
+                add_stability = 1
+            }
+        }
+    }
+}

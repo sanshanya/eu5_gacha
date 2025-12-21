@@ -6,6 +6,7 @@
   # === 姓名 ===
   gacha_first_name_raiden: "将军"
   gacha_last_name_raiden: "雷电"
+  gacha_raiden_inazuma_plan_select: "启动「稻妻计划」"
 
   # === 特质 (Traits) ===
   gacha_raiden_origin_trait: "鸣神岛·永恒静土"

@@ -1,0 +1,469 @@
+﻿# ------------------------------------------------------------------------------
+# Seven Archons Council - Actions
+# ------------------------------------------------------------------------------
+
+gacha_seven_archons_descent = {
+  type = internationalorganization
+  show_message = no
+
+  ai_tick = never
+  automation_tick = never
+
+  potential = {
+    is_member_of_international_organization_of_type = { type = gacha_seven_archons }
+  }
+
+  allow = {
+  }
+
+  select_trigger = {
+    looking_for_a = international_organization
+    source = actor
+    target_flag = recipient
+    name = "choose_international_organization"
+    none_available_msg_key = "no_valid_international_organizations"
+    column = { data = name }
+    visible = {
+      international_organization_type = international_organization_type:gacha_seven_archons
+      scope:actor = { is_member_of_international_organization = root }
+    }
+    enabled = {
+      custom_tooltip = {
+        text = gacha_tt_seven_archons_one_member
+        total_members >= 1
+      }
+      custom_tooltip = {
+        text = gacha_tt_seven_archons_descent_unused
+        NOT = { has_global_variable = gacha_seven_archons_descent_active }
+      }
+    }
+  }
+
+  effect = {
+    set_global_variable = { name = gacha_seven_archons_descent_active value = 1 }
+    if = {
+      limit = { exists = scope:recipient }
+      scope:recipient = {
+        every_international_organization_member = {
+          limit = { is_subject_type = gacha_archon_vassal }
+          overlord = { cancel_subject = prev }
+        }
+      }
+    }
+
+    # Spawn any missing Archon nations immediately (Liyue / Inazuma / Mondstadt / Fontaine / Natlan / Snezhnaya / Sumeru).
+    if = {
+      limit = { NOT = { country_exists = c:GL1 } }
+      location:dongguan = {
+        add_core = c:GL1
+        owner ?= { create_country_from_cores_in_our_locations = c:GL1 }
+      }
+      if = {
+        limit = { country_exists = c:GL1 }
+        set_global_variable = { name = gacha_liyue_pool_unlocked value = 1 }
+        # Start hidden Liyue auto-recruitment timer (AI pool + Zhongli fallback)
+        situation:gacha_liyue_auto_recruitment ?= {
+          set_variable = { name = target_country value = c:GL1 }
+          set_variable = { name = gacha_liyue_recruit_months value = 0 }
+        }
+        if = {
+          limit = { NOT = { situation:gacha_liyue_auto_recruitment = { situation_is_active = yes } } }
+          activate_situation = situation:gacha_liyue_auto_recruitment
+        }
+        c:GL1 = {
+          set_country_rank_effect = { rank = country_rank:rank_kingdom }
+          if = {
+            limit = { location:dongguan = { owner = c:GL1 } }
+            set_capital = location:dongguan
+          }
+          else = {
+            ordered_owned_location = {
+              order_by = development
+              max = 1
+              save_scope_as = liyue_capital_loc
+            }
+            set_capital = scope:liyue_capital_loc
+            clear_saved_scope = liyue_capital_loc
+          }
+          if = {
+            limit = { location:dongguan = { owner = c:GL1 } }
+            location:dongguan = {
+              if = {
+                limit = { NOT = { has_building = building_type:gacha_liyue_harbor } }
+                change_building_level_in_location = { building = building_type:gacha_liyue_harbor value = 1 }
+              }
+            }
+          }
+          change_culture = culture:liyue_culture
+          change_religion = religion:sanjiao
+          change_government_type = government_type:monarchy
+          change_heir_selection = heir_selection:cognatic_primogeniture
+          add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          gacha_join_seven_archons_io = yes
+          if = {
+            limit = { is_subject = yes }
+            overlord = { cancel_subject = prev }
+          }
+        }
+        # Zhongli becomes the ruler when Liyue is created via Descent (country-scoped event)
+        c:GL1 = { trigger_event_non_silently = { id = gacha_liyue_events.3 } }
+      }
+    }
+
+    if = {
+      limit = { NOT = { country_exists = c:GI1 } }
+      location:toshima_kanto = {
+        add_core = c:GI1
+        owner ?= { create_country_from_cores_in_our_locations = c:GI1 }
+      }
+      if = {
+        limit = { country_exists = c:GI1 }
+        # Start hidden Inazuma auto-recruitment timer (Yae Miko after 1 year)
+        situation:gacha_inazuma_auto_recruitment ?= {
+          set_variable = { name = target_country value = c:GI1 }
+        }
+        if = {
+          limit = { NOT = { situation:gacha_inazuma_auto_recruitment = { situation_is_active = yes } } }
+          activate_situation = situation:gacha_inazuma_auto_recruitment
+        }
+        c:GI1 = {
+          set_country_rank_effect = { rank = country_rank:rank_kingdom }
+          if = {
+            limit = { location:toshima_kanto = { owner = c:GI1 } }
+            set_capital = location:toshima_kanto
+          }
+          else = {
+            ordered_owned_location = {
+              order_by = development
+              max = 1
+              save_scope_as = inazuma_capital_loc
+            }
+            set_capital = scope:inazuma_capital_loc
+            clear_saved_scope = inazuma_capital_loc
+          }
+          if = {
+            limit = { location:toshima_kanto = { owner = c:GI1 } }
+            location:toshima_kanto = {
+              if = {
+                limit = { NOT = { has_building = building_type:gacha_inazuma_tenshukaku } }
+                change_building_level_in_location = { building = building_type:gacha_inazuma_tenshukaku value = 1 }
+              }
+            }
+          }
+          change_culture = culture:inazuma_culture
+          change_religion = religion:shinto
+          change_government_type = government_type:monarchy
+          change_heir_selection = heir_selection:cognatic_primogeniture
+          add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          gacha_join_seven_archons_io = yes
+          if = {
+            limit = { is_subject = yes }
+            overlord = { cancel_subject = prev }
+          }
+        }
+        # Yae Miko becomes the ruler when Inazuma is created via Descent (country-scoped event)
+        c:GI1 = { trigger_event_non_silently = { id = gacha_yae_miko_events.3 } }
+      }
+    }
+
+    # Spawn any missing Archon nations immediately (Liyue / Inazuma / Mondstadt / Fontaine / Natlan / Snezhnaya / Sumeru).
+    if = {
+      limit = { NOT = { country_exists = c:GM1 } }
+      location:bremen = {
+        add_core = c:GM1
+        owner ?= { create_country_from_cores_in_our_locations = c:GM1 }
+      }
+      if = {
+        limit = { country_exists = c:GM1 }
+        # Start hidden Mondstadt auto-recruitment timer (Albedo after 1 year)
+        situation:gacha_mondstadt_auto_recruitment ?= {
+          set_variable = { name = target_country value = c:GM1 }
+        }
+        if = {
+          limit = { NOT = { situation:gacha_mondstadt_auto_recruitment = { situation_is_active = yes } } }
+          activate_situation = situation:gacha_mondstadt_auto_recruitment
+        }
+        c:GM1 = {
+          set_country_rank_effect = { rank = country_rank:rank_kingdom }
+          if = {
+            limit = { location:bremen = { owner = c:GM1 } }
+            set_capital = location:bremen
+          }
+          else = {
+            ordered_owned_location = {
+              order_by = development
+              max = 1
+              save_scope_as = mondstadt_capital_loc
+            }
+            set_capital = scope:mondstadt_capital_loc
+            clear_saved_scope = mondstadt_capital_loc
+          }
+          change_culture = culture:mondstadt_culture
+          change_religion = religion:catholic
+          change_government_type = government_type:monarchy
+          change_heir_selection = heir_selection:cognatic_primogeniture
+          add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          gacha_join_seven_archons_io = yes
+          if = {
+            limit = { is_subject = yes }
+            overlord = { cancel_subject = prev }
+          }
+        }
+        # Albedo becomes the ruler when Mondstadt is created via Descent (country-scoped event)
+        c:GM1 = { trigger_event_non_silently = { id = gacha_albedo_events.3 } }
+      }
+    }
+
+    if = {
+      limit = { NOT = { country_exists = c:GF1 } }
+      location:cherbourg = {
+        add_core = c:GF1
+        owner ?= { create_country_from_cores_in_our_locations = c:GF1 }
+      }
+      if = {
+        limit = { country_exists = c:GF1 }
+        # Start hidden Fontaine auto-recruitment timer (Neuvillette after 1 year)
+        situation:gacha_fontaine_auto_recruitment ?= {
+          set_variable = { name = target_country value = c:GF1 }
+        }
+        if = {
+          limit = { NOT = { situation:gacha_fontaine_auto_recruitment = { situation_is_active = yes } } }
+          activate_situation = situation:gacha_fontaine_auto_recruitment
+        }
+        c:GF1 = {
+          set_country_rank_effect = { rank = country_rank:rank_kingdom }
+          if = {
+            limit = { location:cherbourg = { owner = c:GF1 } }
+            set_capital = location:cherbourg
+          }
+          else = {
+            ordered_owned_location = {
+              order_by = development
+              max = 1
+              save_scope_as = fontaine_capital_loc
+            }
+            set_capital = scope:fontaine_capital_loc
+            clear_saved_scope = fontaine_capital_loc
+          }
+          change_culture = culture:fontaine_culture
+          change_religion = religion:catholic
+          change_government_type = government_type:monarchy
+          change_heir_selection = heir_selection:cognatic_primogeniture
+          add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          gacha_join_seven_archons_io = yes
+          if = {
+            limit = { is_subject = yes }
+            overlord = { cancel_subject = prev }
+          }
+        }
+        # Neuvillette becomes the ruler when Fontaine is created via Descent (country-scoped event)
+        c:GF1 = { trigger_event_non_silently = { id = gacha_neuvillette_events.3 } }
+      }
+    }
+
+    if = {
+      limit = { NOT = { country_exists = c:GN1 } }
+      location:cihuatlan = {
+        add_core = c:GN1
+        owner ?= { create_country_from_cores_in_our_locations = c:GN1 }
+      }
+      if = {
+        limit = { country_exists = c:GN1 }
+        # Start hidden Natlan auto-recruitment timer (Mavuika after 1 year)
+        situation:gacha_natlan_auto_recruitment ?= {
+          set_variable = { name = target_country value = c:GN1 }
+        }
+        if = {
+          limit = { NOT = { situation:gacha_natlan_auto_recruitment = { situation_is_active = yes } } }
+          activate_situation = situation:gacha_natlan_auto_recruitment
+        }
+        c:GN1 = {
+          set_country_rank_effect = { rank = country_rank:rank_kingdom }
+          if = {
+            limit = { location:cihuatlan = { owner = c:GN1 } }
+            set_capital = location:cihuatlan
+          }
+          else = {
+            ordered_owned_location = {
+              order_by = development
+              max = 1
+              save_scope_as = natlan_capital_loc
+            }
+            set_capital = scope:natlan_capital_loc
+            clear_saved_scope = natlan_capital_loc
+          }
+          change_culture = culture:natlan_culture
+          change_religion = religion:nahuatl
+          change_government_type = government_type:monarchy
+          change_heir_selection = heir_selection:cognatic_primogeniture
+          add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          gacha_join_seven_archons_io = yes
+          if = {
+            limit = { is_subject = yes }
+            overlord = { cancel_subject = prev }
+          }
+        }
+        # Mavuika becomes the ruler when Natlan is created via Descent (country-scoped event)
+        c:GN1 = { trigger_event_non_silently = { id = gacha_mavuika_events.3 } }
+      }
+    }
+
+    if = {
+      limit = { NOT = { country_exists = c:GS1 } }
+      location:arkhangelsk = {
+        add_core = c:GS1
+        owner ?= { create_country_from_cores_in_our_locations = c:GS1 }
+      }
+      if = {
+        limit = { country_exists = c:GS1 }
+        # Start hidden Snezhnaya auto-recruitment timer (Columbina after 1 year)
+        situation:gacha_snezhnaya_auto_recruitment ?= {
+          set_variable = { name = target_country value = c:GS1 }
+        }
+        if = {
+          limit = { NOT = { situation:gacha_snezhnaya_auto_recruitment = { situation_is_active = yes } } }
+          activate_situation = situation:gacha_snezhnaya_auto_recruitment
+        }
+        c:GS1 = {
+          set_country_rank_effect = { rank = country_rank:rank_kingdom }
+          if = {
+            limit = { location:arkhangelsk = { owner = c:GS1 } }
+            set_capital = location:arkhangelsk
+          }
+          else = {
+            ordered_owned_location = {
+              order_by = development
+              max = 1
+              save_scope_as = snezhnaya_capital_loc
+            }
+            set_capital = scope:snezhnaya_capital_loc
+            clear_saved_scope = snezhnaya_capital_loc
+          }
+          change_culture = culture:snezhnaya_culture
+          change_religion = religion:orthodox
+          change_government_type = government_type:monarchy
+          change_heir_selection = heir_selection:cognatic_primogeniture
+          add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          gacha_join_seven_archons_io = yes
+          if = {
+            limit = { is_subject = yes }
+            overlord = { cancel_subject = prev }
+          }
+        }
+        # Columbina becomes the ruler when Snezhnaya is created via Descent (country-scoped event)
+        c:GS1 = { trigger_event_non_silently = { id = gacha_columbina_events.3 } }
+      }
+    }
+
+    if = {
+      limit = { NOT = { country_exists = c:GU1 } }
+      location:surat = {
+        add_core = c:GU1
+        owner ?= { create_country_from_cores_in_our_locations = c:GU1 }
+      }
+      if = {
+        limit = { country_exists = c:GU1 }
+        # Start hidden Sumeru auto-recruitment timer (Faruzan after 1 year)
+        situation:gacha_sumeru_auto_recruitment ?= {
+          set_variable = { name = target_country value = c:GU1 }
+        }
+        if = {
+          limit = { NOT = { situation:gacha_sumeru_auto_recruitment = { situation_is_active = yes } } }
+          activate_situation = situation:gacha_sumeru_auto_recruitment
+        }
+        c:GU1 = {
+          set_country_rank_effect = { rank = country_rank:rank_kingdom }
+          if = {
+            limit = { location:surat = { owner = c:GU1 } }
+            set_capital = location:surat
+          }
+          else = {
+            ordered_owned_location = {
+              order_by = development
+              max = 1
+              save_scope_as = sumeru_capital_loc
+            }
+            set_capital = scope:sumeru_capital_loc
+            clear_saved_scope = sumeru_capital_loc
+          }
+          change_culture = culture:sumeru_culture
+          change_religion = religion:hindu
+          change_government_type = government_type:monarchy
+          change_heir_selection = heir_selection:cognatic_primogeniture
+          add_country_modifier = { modifier = gacha_inazuma_foundation_boom_modifier years = 10 mode = add }
+          gacha_join_seven_archons_io = yes
+          if = {
+            limit = { is_subject = yes }
+            overlord = { cancel_subject = prev }
+          }
+        }
+        # Faruzan becomes the ruler when Sumeru is created via Descent (country-scoped event)
+        c:GU1 = { trigger_event_non_silently = { id = gacha_faruzan_events.3 } }
+      }
+    }
+
+    custom_tooltip = gacha_seven_archons_descent_tt
+  }
+
+  ai_will_do = { value = 0 }
+}
+
+gacha_seven_archons_alliance = {
+  type = internationalorganization
+  show_message = no
+
+  ai_tick = never
+  automation_tick = never
+
+  potential = {
+    is_member_of_international_organization_of_type = { type = gacha_seven_archons }
+  }
+
+  allow = {
+  }
+
+  select_trigger = {
+    looking_for_a = international_organization
+    source = actor
+    target_flag = recipient
+    name = "choose_international_organization"
+    none_available_msg_key = "no_valid_international_organizations"
+    column = { data = name }
+    visible = {
+      international_organization_type = international_organization_type:gacha_seven_archons
+      scope:actor = { is_member_of_international_organization = root }
+    }
+    enabled = {
+      custom_tooltip = {
+        text = gacha_tt_seven_archons_all_exist
+        gacha_all_seven_archons_countries_exist = yes
+      }
+      custom_tooltip = {
+        text = gacha_tt_seven_archons_alliance_unused
+        NOT = { has_global_variable = gacha_seven_archons_alliance_active }
+      }
+    }
+  }
+
+  effect = {
+    set_global_variable = { name = gacha_seven_archons_alliance_active value = 1 }
+    if = {
+      limit = { exists = scope:recipient }
+      scope:recipient = {
+        every_international_organization_member = {
+          if = {
+            limit = { NOT = { has_country_modifier = gacha_seven_archons_alliance_member_modifier } }
+            add_country_modifier = {
+              modifier = gacha_seven_archons_alliance_member_modifier
+              years = -1
+              mode = add_and_extend
+            }
+          }
+        }
+      }
+    }
+    custom_tooltip = gacha_seven_archons_alliance_tt
+  }
+
+  ai_will_do = { value = 0 }
+}

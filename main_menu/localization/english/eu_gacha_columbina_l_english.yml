@@ -1,0 +1,86 @@
+﻿l_english:
+  # ============================================================
+  # Character - Columbina
+  # ============================================================
+
+  # === Name ===
+  gacha_first_name_columbina: "Columbina"
+  gacha_last_name_columbina: "Damsel"
+
+  # === Traits ===
+  gacha_columbina_origin_trait: "Columbina - Origin"
+  desc_gacha_columbina_origin_trait: "TODO"
+
+  gacha_columbina_awakened_trait: "Columbina - Awakened"
+  desc_gacha_columbina_awakened_trait: "TODO"
+
+  gacha_columbina_transcended_trait: "Columbina - Transcended"
+  desc_gacha_columbina_transcended_trait: "TODO"
+
+  gacha_columbina_c2_trait: "Columbina - C2"
+  desc_gacha_columbina_c2_trait: "TODO"
+
+  gacha_columbina_c4_trait: "Columbina - C4"
+  desc_gacha_columbina_c4_trait: "TODO"
+
+  gacha_columbina_c6_trait: "Columbina - C6"
+  desc_gacha_columbina_c6_trait: "TODO"
+
+  # === Modifiers ===
+  STATIC_MODIFIER_NAME_gacha_columbina_modifier: "Damsel of Snezhnaya"
+  STATIC_MODIFIER_DESC_gacha_columbina_modifier: "TODO"
+  gacha_columbina_modifier: "Columbina's Echo"
+  gacha_columbina_modifier_desc: "TODO"
+
+  # === Constellations ===
+  STATIC_MODIFIER_NAME_gacha_columbina_c0_modifier: "Columbina - C0"
+  STATIC_MODIFIER_NAME_gacha_columbina_c1_modifier: "Columbina - C1"
+  STATIC_MODIFIER_NAME_gacha_columbina_c2_modifier: "Columbina - C2"
+  STATIC_MODIFIER_NAME_gacha_columbina_c3_modifier: "Columbina - C3"
+  STATIC_MODIFIER_NAME_gacha_columbina_c4_modifier: "Columbina - C4"
+  STATIC_MODIFIER_NAME_gacha_columbina_c5_modifier: "Columbina - C5"
+  STATIC_MODIFIER_NAME_gacha_columbina_c6_modifier: "Columbina - C6"
+
+  # Columbina - Country Modifiers
+  STATIC_MODIFIER_NAME_gacha_columbina_country_modifier: "Columbina - Aura"
+  STATIC_MODIFIER_DESC_gacha_columbina_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_columbina_c1_country_modifier: "Columbina - C1"
+  STATIC_MODIFIER_DESC_gacha_columbina_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_columbina_c2_country_modifier: "Columbina - C2"
+  STATIC_MODIFIER_DESC_gacha_columbina_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_columbina_c4_country_modifier: "Columbina - C4"
+  STATIC_MODIFIER_DESC_gacha_columbina_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_columbina_c5_country_modifier: "Columbina - C5"
+  STATIC_MODIFIER_DESC_gacha_columbina_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_columbina_c6_country_modifier: "Columbina - C6"
+  STATIC_MODIFIER_DESC_gacha_columbina_c6_country_modifier: "TODO"
+
+  # === Events ===
+  gacha_columbina_events.1.title: "Columbina"
+  gacha_columbina_events.1.desc: "TODO"
+  gacha_columbina_events.1.a: "..."
+
+  gacha_columbina_events.2.title: "Columbina"
+  gacha_columbina_events.2.a: "Continue"
+  gacha_columbina_events.3.title: "Columbina"
+  gacha_columbina_events.3.a: "Continue"
+
+  gacha_columbina_events.13.title: "Columbina - C1"
+  gacha_columbina_events.13.desc: "TODO"
+  gacha_columbina_events.13.a: "..."
+
+  gacha_columbina_events.11.title: "Columbina - C2"
+  gacha_columbina_events.11.desc: "TODO"
+  gacha_columbina_events.11.a: "..."
+
+  gacha_columbina_events.12.title: "Columbina - C4"
+  gacha_columbina_events.12.desc: "TODO"
+  gacha_columbina_events.12.a: "..."
+
+  gacha_columbina_events.14.title: "Columbina - C5"
+  gacha_columbina_events.14.desc: "TODO"
+  gacha_columbina_events.14.a: "..."
+
+  gacha_columbina_events.4.title: "Columbina - C6"
+  gacha_columbina_events.4.desc: "TODO"
+  gacha_columbina_events.4.a: "..."

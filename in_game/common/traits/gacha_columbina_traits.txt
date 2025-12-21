@@ -1,0 +1,41 @@
+﻿# Columbina Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_columbina_origin_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = { gacha_country_aura = yes }
+}
+
+gacha_columbina_awakened_trait = {
+    category = general
+    allow = { always = no }
+    modifier = { }
+}
+
+gacha_columbina_transcended_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = { }
+}
+
+# Constellation upgrades
+
+gacha_columbina_c2_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = { gacha_country_aura = yes }
+}
+
+gacha_columbina_c4_trait = {
+    category = general
+    allow = { always = no }
+    modifier = { }
+}
+
+gacha_columbina_c6_trait = {
+    category = ruler
+    allow = { always = no }
+    modifier = { }
+}

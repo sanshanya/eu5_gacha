@@ -58,3 +58,63 @@
   MODIFIER_TYPE_DESC_gacha_liyue_invest_200_price_cost_modifier: "用于调整「璃月筹建」中「投入 200 金」选项的花费。"
   MODIFIER_TYPE_NAME_gacha_liyue_invest_500_price_cost_modifier: "璃月筹建花费（500 金）"
   MODIFIER_TYPE_DESC_gacha_liyue_invest_500_price_cost_modifier: "用于调整「璃月筹建」中「投入 500 金」选项的花费。"
+
+  # ==========================================================================
+  # 局势（稻妻）
+  # ==========================================================================
+  gacha_inazuma_reconstruction: "稻妻筹建"
+  gacha_inazuma_reconstruction_desc: "雷电将军已将稻妻的法度与港湾图铺开。接下来，稻妻能否在丰岛落成，取决于我们在港口、秩序与贸易上的投入与准备。\n\n先启动内阁行动：$gacha_create_inazuma_nation$，再执行局势行动：$gacha_inazuma_build_market$（必做）。\n\n当丰岛成为市场所在地后，筹建将以 5/月 的基础速度推进（受内阁效率影响），并可通过投入资金加速。进度达到 100 后将立刻建国。"
+
+  gacha_inazuma_reconstruction_toshima_tt: "丰岛是再造稻妻的筹备核心。"
+
+  gacha_inazuma_reconstruction_overview_title: "解锁条件"
+  gacha_inazuma_reconstruction_overview_desc: "○ 启动内阁行动：#color_yellow $gacha_create_inazuma_nation$ #!\n○ 执行局势行动：#color_yellow $gacha_inazuma_build_market$ #!\n○ 投入资金以加速筹建\n○ 进度达到 100 后将立刻建国"
+
+  gacha_inazuma_reconstruction_status_title: "状态"
+  gacha_inazuma_reconstruction_status_tt: "#bold 筹建进度:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_inazuma_progress').GetValue|Y0]/100\n#bold 每月进度:#! +[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_inazuma_monthly_progress').GetValue|Y1]\n#bold 已投入:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_inazuma_investment').GetValue|Y0] 金"
+  gacha_tt_inazuma_plan_unlocked: "已解锁「稻妻计划」。"
+  gacha_tt_inazuma_not_established_yet: "稻妻尚未建立。"
+  gacha_tt_inazuma_requires_raiden_alive: "雷电将军仍在世。"
+  gacha_tt_inazuma_not_already_completed: "稻妻筹建尚未完成。"
+  gacha_tt_inazuma_requires_cabinet_action_started: "需要先启动内阁行动「$gacha_create_inazuma_nation$」。"
+  gacha_tt_inazuma_situation_is_ours: "该局势属于我们。"
+  gacha_tt_toshima_owned_by_us: "丰岛归属于我们。"
+  gacha_tt_toshima_not_independent_market_yet: "丰岛尚未拥有独立市场（仍属于关东市场）。"
+  gacha_tt_toshima_no_market_construction: "丰岛未在建设市场。"
+  gacha_tt_toshima_own_market_required: "丰岛需建立独立市场（不能属于关东市场）。"
+  gacha_tt_inazuma_build_market_effect: "我们开始在丰岛建立独立市场。"
+  gacha_tt_inazuma_invest_50_effect: "投入 50 金：筹建进度 +5。"
+  gacha_tt_inazuma_invest_200_effect: "投入 200 金：筹建进度 +20。"
+  gacha_tt_inazuma_invest_500_effect: "投入 500 金：筹建进度 +55。"
+
+  # 行动分组标题（exclusive_group = gacha_inazuma_preparation_actions）
+  GACHA_INAZUMA_PREPARATION_ACTIONS: "稻妻筹备行动"
+
+  # ==========================================================================
+  # 局势行动（稻妻）
+  # ==========================================================================
+  gacha_inazuma_build_market: "在丰岛建立独立市场"
+  gacha_inazuma_build_market_desc: "在丰岛启动市场建设，使其成为独立的市场所在地（不再属于关东市场）。这是再造稻妻的必要步骤。"
+  gacha_inazuma_build_market_price: "建立独立市场（500 金）"
+
+  gacha_inazuma_invest_50: "投入 50 金"
+  gacha_inazuma_invest_50_desc: "以小额投入完善丰岛港口与秩序，推进筹建。"
+  gacha_inazuma_invest_50_price: "稻妻筹建投入（50 金）"
+
+  gacha_inazuma_invest_200: "投入 200 金"
+  gacha_inazuma_invest_200_desc: "以显著投入加速筹建进度。"
+  gacha_inazuma_invest_200_price: "稻妻筹建投入（200 金）"
+
+  gacha_inazuma_invest_500: "投入 500 金"
+  gacha_inazuma_invest_500_desc: "以大额投入快速推动筹建。"
+  gacha_inazuma_invest_500_price: "稻妻筹建投入（500 金）"
+
+  # 修正类型（价格）
+  MODIFIER_TYPE_NAME_gacha_inazuma_build_market_price_cost_modifier: "建立独立市场花费"
+  MODIFIER_TYPE_DESC_gacha_inazuma_build_market_price_cost_modifier: "用于调整「稻妻筹建」中「在丰岛建立独立市场」选项的花费。"
+  MODIFIER_TYPE_NAME_gacha_inazuma_invest_50_price_cost_modifier: "稻妻筹建花费（50 金）"
+  MODIFIER_TYPE_DESC_gacha_inazuma_invest_50_price_cost_modifier: "用于调整「稻妻筹建」中「投入 50 金」选项的花费。"
+  MODIFIER_TYPE_NAME_gacha_inazuma_invest_200_price_cost_modifier: "稻妻筹建花费（200 金）"
+  MODIFIER_TYPE_DESC_gacha_inazuma_invest_200_price_cost_modifier: "用于调整「稻妻筹建」中「投入 200 金」选项的花费。"
+  MODIFIER_TYPE_NAME_gacha_inazuma_invest_500_price_cost_modifier: "稻妻筹建花费（500 金）"
+  MODIFIER_TYPE_DESC_gacha_inazuma_invest_500_price_cost_modifier: "用于调整「稻妻筹建」中「投入 500 金」选项的花费。"

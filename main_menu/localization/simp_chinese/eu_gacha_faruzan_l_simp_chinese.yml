@@ -1,0 +1,86 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 珐露珊 (Faruzan)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_faruzan: "珐露珊"
+  gacha_last_name_faruzan: "百解"
+
+  # === 特质 (Traits) ===
+  gacha_faruzan_origin_trait: "珐露珊·初始"
+  desc_gacha_faruzan_origin_trait: "TODO"
+
+  gacha_faruzan_awakened_trait: "珐露珊·觉醒"
+  desc_gacha_faruzan_awakened_trait: "TODO"
+
+  gacha_faruzan_transcended_trait: "珐露珊·超越"
+  desc_gacha_faruzan_transcended_trait: "TODO"
+
+  gacha_faruzan_c2_trait: "珐露珊·C2"
+  desc_gacha_faruzan_c2_trait: "TODO"
+
+  gacha_faruzan_c4_trait: "珐露珊·C4"
+  desc_gacha_faruzan_c4_trait: "TODO"
+
+  gacha_faruzan_c6_trait: "珐露珊·C6"
+  desc_gacha_faruzan_c6_trait: "TODO"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_faruzan_modifier: "百解学者"
+  STATIC_MODIFIER_DESC_gacha_faruzan_modifier: "TODO"
+  gacha_faruzan_modifier: "珐露珊的余韵"
+  gacha_faruzan_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_faruzan_c0_modifier: "珐露珊·C0"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c1_modifier: "珐露珊·C1"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c2_modifier: "珐露珊·C2"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c3_modifier: "珐露珊·C3"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c4_modifier: "珐露珊·C4"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c5_modifier: "珐露珊·C5"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c6_modifier: "珐露珊·C6"
+
+  # 珐露珊 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_faruzan_country_modifier: "珐露珊·光环"
+  STATIC_MODIFIER_DESC_gacha_faruzan_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c1_country_modifier: "珐露珊·C1"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c2_country_modifier: "珐露珊·C2"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c4_country_modifier: "珐露珊·C4"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c5_country_modifier: "珐露珊·C5"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c6_country_modifier: "珐露珊·C6"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c6_country_modifier: "TODO"
+
+  # === 事件 (Events) ===
+  gacha_faruzan_events.1.title: "珐露珊"
+  gacha_faruzan_events.1.desc: "TODO"
+  gacha_faruzan_events.1.a: "……"
+
+  gacha_faruzan_events.2.title: "珐露珊"
+  gacha_faruzan_events.2.a: "继续"
+  gacha_faruzan_events.3.title: "珐露珊"
+  gacha_faruzan_events.3.a: "继续"
+
+  gacha_faruzan_events.13.title: "珐露珊·C1"
+  gacha_faruzan_events.13.desc: "TODO"
+  gacha_faruzan_events.13.a: "……"
+
+  gacha_faruzan_events.11.title: "珐露珊·C2"
+  gacha_faruzan_events.11.desc: "TODO"
+  gacha_faruzan_events.11.a: "……"
+
+  gacha_faruzan_events.12.title: "珐露珊·C4"
+  gacha_faruzan_events.12.desc: "TODO"
+  gacha_faruzan_events.12.a: "……"
+
+  gacha_faruzan_events.14.title: "珐露珊·C5"
+  gacha_faruzan_events.14.desc: "TODO"
+  gacha_faruzan_events.14.a: "……"
+
+  gacha_faruzan_events.4.title: "珐露珊·C6"
+  gacha_faruzan_events.4.desc: "TODO"
+  gacha_faruzan_events.4.a: "……"

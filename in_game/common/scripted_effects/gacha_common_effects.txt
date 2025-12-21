@@ -190,6 +190,12 @@ gacha_remove_summoned_flag_for_character = {
   }
   if = {
     limit = {
+      has_character_modifier = gacha_yae_miko_modifier
+    }
+    root = { remove_global_variable = gacha_yae_miko_is_summoned }
+  }
+  if = {
+    limit = {
       has_character_modifier = gacha_furina_modifier
     }
     root = { remove_global_variable = gacha_furina_is_summoned }
@@ -211,6 +217,36 @@ gacha_remove_summoned_flag_for_character = {
       has_character_modifier = gacha_nahida_modifier
     }
     root = { remove_global_variable = gacha_nahida_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_albedo_modifier
+    }
+    root = { remove_global_variable = gacha_albedo_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_neuvillette_modifier
+    }
+    root = { remove_global_variable = gacha_neuvillette_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_mavuika_modifier
+    }
+    root = { remove_global_variable = gacha_mavuika_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_columbina_modifier
+    }
+    root = { remove_global_variable = gacha_columbina_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_faruzan_modifier
+    }
+    root = { remove_global_variable = gacha_faruzan_is_summoned }
   }
   if = {
     limit = {
@@ -270,19 +306,240 @@ gacha_register_new_character = {
   add_trait = trait:gacha_$who$_origin_trait
   # === C. 系统管理 (System) ===
   # 统一文化与宗教，以自定义文化/宗教标识天外之人
-  change_character_culture = culture:gacha_culture
-  change_character_religion = religion:sanjiao
-  # 新角色首次抵达：在首都添加少量天外之人 Pop (约一人)
-  root = {
-    random_owned_location = {
-      limit = {
-        is_capital = yes
+  if = {
+    limit = {
+      OR = {
+        has_character_modifier = gacha_raiden_modifier
+        has_character_modifier = gacha_xinhai_modifier
+        has_character_modifier = gacha_yae_miko_modifier
       }
-      add_pop = {
-        type = pop_type:gacha
-        size = 0.001
-        culture = culture:gacha_culture
-        religion = religion:sanjiao
+    }
+    change_character_culture = culture:inazuma_culture
+    change_character_religion = religion:shinto
+  }
+  else_if = {
+    limit = {
+      OR = {
+        has_character_modifier = gacha_keqing_modifier
+        has_character_modifier = gacha_hutao_modifier
+        has_character_modifier = gacha_ningguang_modifier
+        has_character_modifier = gacha_ganyu_modifier
+        has_character_modifier = gacha_beidou_modifier
+        has_character_modifier = gacha_zhongli_modifier
+      }
+    }
+    change_character_culture = culture:liyue_culture
+    change_character_religion = religion:sanjiao
+  }
+  else_if = {
+    limit = {
+      OR = {
+        has_character_modifier = gacha_klee_modifier
+        has_character_modifier = gacha_fischl_modifier
+        has_character_modifier = gacha_albedo_modifier
+      }
+    }
+    change_character_culture = culture:mondstadt_culture
+    change_character_religion = religion:catholic
+  }
+  else_if = {
+    limit = {
+      OR = {
+        has_character_modifier = gacha_furina_modifier
+        has_character_modifier = gacha_neuvillette_modifier
+      }
+    }
+    change_character_culture = culture:fontaine_culture
+    change_character_religion = religion:catholic
+  }
+  else_if = {
+    limit = {
+      OR = {
+        has_character_modifier = gacha_nahida_modifier
+        has_character_modifier = gacha_faruzan_modifier
+      }
+    }
+    change_character_culture = culture:sumeru_culture
+    change_character_religion = religion:hindu
+  }
+  else_if = {
+    limit = {
+      has_character_modifier = gacha_mavuika_modifier
+    }
+    change_character_culture = culture:natlan_culture
+    change_character_religion = religion:nahuatl
+  }
+  else_if = {
+    limit = {
+      has_character_modifier = gacha_columbina_modifier
+    }
+    change_character_culture = culture:snezhnaya_culture
+    change_character_religion = religion:orthodox
+  }
+  else = {
+    change_character_culture = culture:gacha_culture
+    change_character_religion = religion:sanjiao
+  }
+  # 新角色首次抵达：在首都添加少量天外之人 Pop (约一人)
+  if = {
+    limit = {
+      OR = {
+        has_character_modifier = gacha_raiden_modifier
+        has_character_modifier = gacha_xinhai_modifier
+        has_character_modifier = gacha_yae_miko_modifier
+      }
+    }
+    root = {
+      random_owned_location = {
+        limit = {
+          is_capital = yes
+        }
+        add_pop = {
+          type = pop_type:gacha
+          size = 0.001
+          culture = culture:inazuma_culture
+          religion = religion:shinto
+        }
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      OR = {
+        has_character_modifier = gacha_keqing_modifier
+        has_character_modifier = gacha_hutao_modifier
+        has_character_modifier = gacha_ningguang_modifier
+        has_character_modifier = gacha_ganyu_modifier
+        has_character_modifier = gacha_beidou_modifier
+        has_character_modifier = gacha_zhongli_modifier
+      }
+    }
+    root = {
+      random_owned_location = {
+        limit = {
+          is_capital = yes
+        }
+        add_pop = {
+          type = pop_type:gacha
+          size = 0.001
+          culture = culture:liyue_culture
+          religion = religion:sanjiao
+        }
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      OR = {
+        has_character_modifier = gacha_klee_modifier
+        has_character_modifier = gacha_fischl_modifier
+        has_character_modifier = gacha_albedo_modifier
+      }
+    }
+    root = {
+      random_owned_location = {
+        limit = {
+          is_capital = yes
+        }
+        add_pop = {
+          type = pop_type:gacha
+          size = 0.001
+          culture = culture:mondstadt_culture
+          religion = religion:catholic
+        }
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      OR = {
+        has_character_modifier = gacha_furina_modifier
+        has_character_modifier = gacha_neuvillette_modifier
+      }
+    }
+    root = {
+      random_owned_location = {
+        limit = {
+          is_capital = yes
+        }
+        add_pop = {
+          type = pop_type:gacha
+          size = 0.001
+          culture = culture:fontaine_culture
+          religion = religion:catholic
+        }
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      OR = {
+        has_character_modifier = gacha_nahida_modifier
+        has_character_modifier = gacha_faruzan_modifier
+      }
+    }
+    root = {
+      random_owned_location = {
+        limit = {
+          is_capital = yes
+        }
+        add_pop = {
+          type = pop_type:gacha
+          size = 0.001
+          culture = culture:sumeru_culture
+          religion = religion:hindu
+        }
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      has_character_modifier = gacha_mavuika_modifier
+    }
+    root = {
+      random_owned_location = {
+        limit = {
+          is_capital = yes
+        }
+        add_pop = {
+          type = pop_type:gacha
+          size = 0.001
+          culture = culture:natlan_culture
+          religion = religion:nahuatl
+        }
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      has_character_modifier = gacha_columbina_modifier
+    }
+    root = {
+      random_owned_location = {
+        limit = {
+          is_capital = yes
+        }
+        add_pop = {
+          type = pop_type:gacha
+          size = 0.001
+          culture = culture:snezhnaya_culture
+          religion = religion:orthodox
+        }
+      }
+    }
+  }
+  else = {
+    root = {
+      random_owned_location = {
+        limit = {
+          is_capital = yes
+        }
+        add_pop = {
+          type = pop_type:gacha
+          size = 0.001
+          culture = culture:gacha_culture
+          religion = religion:sanjiao
+        }
       }
     }
   }
@@ -327,8 +584,80 @@ gacha_assign_to_gacha_estate = {
       is_ruler = no			# 七国君主等不应被强制归回自定义阶层
     }
     # 确保天外之人身份信息完备
-    change_character_culture = culture:gacha_culture
-    change_character_religion = religion:sanjiao
+    if = {
+      limit = {
+        OR = {
+          has_character_modifier = gacha_raiden_modifier
+          has_character_modifier = gacha_xinhai_modifier
+          has_character_modifier = gacha_yae_miko_modifier
+        }
+      }
+      change_character_culture = culture:inazuma_culture
+      change_character_religion = religion:shinto
+    }
+    else_if = {
+      limit = {
+        OR = {
+          has_character_modifier = gacha_keqing_modifier
+          has_character_modifier = gacha_hutao_modifier
+          has_character_modifier = gacha_ningguang_modifier
+          has_character_modifier = gacha_ganyu_modifier
+          has_character_modifier = gacha_beidou_modifier
+          has_character_modifier = gacha_zhongli_modifier
+        }
+      }
+      change_character_culture = culture:liyue_culture
+      change_character_religion = religion:sanjiao
+    }
+    else_if = {
+      limit = {
+        OR = {
+          has_character_modifier = gacha_klee_modifier
+          has_character_modifier = gacha_fischl_modifier
+          has_character_modifier = gacha_albedo_modifier
+        }
+      }
+      change_character_culture = culture:mondstadt_culture
+      change_character_religion = religion:catholic
+    }
+    else_if = {
+      limit = {
+        OR = {
+          has_character_modifier = gacha_furina_modifier
+          has_character_modifier = gacha_neuvillette_modifier
+        }
+      }
+      change_character_culture = culture:fontaine_culture
+      change_character_religion = religion:catholic
+    }
+    else_if = {
+      limit = {
+        OR = {
+          has_character_modifier = gacha_nahida_modifier
+          has_character_modifier = gacha_faruzan_modifier
+        }
+      }
+      change_character_culture = culture:sumeru_culture
+      change_character_religion = religion:hindu
+    }
+    else_if = {
+      limit = {
+        has_character_modifier = gacha_mavuika_modifier
+      }
+      change_character_culture = culture:natlan_culture
+      change_character_religion = religion:nahuatl
+    }
+    else_if = {
+      limit = {
+        has_character_modifier = gacha_columbina_modifier
+      }
+      change_character_culture = culture:snezhnaya_culture
+      change_character_religion = religion:orthodox
+    }
+    else = {
+      change_character_culture = culture:gacha_culture
+      change_character_religion = religion:sanjiao
+    }
     change_character_estate = estate_type:gacha_estate
   }
 }
@@ -345,8 +674,80 @@ gacha_standardize_character_identity = {
       exists = this
     }
     # 文化/宗教统一（兜底）
-    change_character_culture = culture:gacha_culture
-    change_character_religion = religion:sanjiao
+    if = {
+      limit = {
+        OR = {
+          has_character_modifier = gacha_raiden_modifier
+          has_character_modifier = gacha_xinhai_modifier
+          has_character_modifier = gacha_yae_miko_modifier
+        }
+      }
+      change_character_culture = culture:inazuma_culture
+      change_character_religion = religion:shinto
+    }
+    else_if = {
+      limit = {
+        OR = {
+          has_character_modifier = gacha_keqing_modifier
+          has_character_modifier = gacha_hutao_modifier
+          has_character_modifier = gacha_ningguang_modifier
+          has_character_modifier = gacha_ganyu_modifier
+          has_character_modifier = gacha_beidou_modifier
+          has_character_modifier = gacha_zhongli_modifier
+        }
+      }
+      change_character_culture = culture:liyue_culture
+      change_character_religion = religion:sanjiao
+    }
+    else_if = {
+      limit = {
+        OR = {
+          has_character_modifier = gacha_klee_modifier
+          has_character_modifier = gacha_fischl_modifier
+          has_character_modifier = gacha_albedo_modifier
+        }
+      }
+      change_character_culture = culture:mondstadt_culture
+      change_character_religion = religion:catholic
+    }
+    else_if = {
+      limit = {
+        OR = {
+          has_character_modifier = gacha_furina_modifier
+          has_character_modifier = gacha_neuvillette_modifier
+        }
+      }
+      change_character_culture = culture:fontaine_culture
+      change_character_religion = religion:catholic
+    }
+    else_if = {
+      limit = {
+        OR = {
+          has_character_modifier = gacha_nahida_modifier
+          has_character_modifier = gacha_faruzan_modifier
+        }
+      }
+      change_character_culture = culture:sumeru_culture
+      change_character_religion = religion:hindu
+    }
+    else_if = {
+      limit = {
+        has_character_modifier = gacha_mavuika_modifier
+      }
+      change_character_culture = culture:natlan_culture
+      change_character_religion = religion:nahuatl
+    }
+    else_if = {
+      limit = {
+        has_character_modifier = gacha_columbina_modifier
+      }
+      change_character_culture = culture:snezhnaya_culture
+      change_character_religion = religion:orthodox
+    }
+    else = {
+      change_character_culture = culture:gacha_culture
+      change_character_religion = religion:sanjiao
+    }
     # 宗族兜底：没有宗族就分配一个固定宗族
     if = {
       limit = {
@@ -377,3 +778,107 @@ gacha_standardize_character_identity = {
 # ------------------------------------------------------------------------------
 # 注意：角色专属 wrapper (如 gacha_create_xinhai_effect) 已移至各自的文件
 # ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Seven Archons Council (International Organization)
+# Scope: root = country
+# ------------------------------------------------------------------------------
+gacha_join_seven_archons_io = {
+  # Prefer explicit target_country when called from situation scope
+  if = {
+    limit = { exists = var:target_country }
+    var:target_country = { save_scope_as = gacha_io_joiner }
+  }
+  else = {
+    save_scope_as = gacha_io_joiner
+  }
+
+  if = {
+    limit = {
+      scope:gacha_io_joiner = {
+        NOT = { is_member_of_international_organization_of_type = { type = gacha_seven_archons } }
+      }
+    }
+    if = {
+      limit = { exists = international_organization:gacha_seven_archons }
+      international_organization:gacha_seven_archons = { add_country_to_international_organization = scope:gacha_io_joiner }
+    }
+    else = {
+      create_international_organization = {
+        type = international_organization_type:gacha_seven_archons
+        add_country_to_international_organization = scope:gacha_io_joiner
+      }
+    }
+  }
+
+  if = {
+    limit = {
+      has_global_variable = gacha_seven_archons_alliance_active
+      gacha_all_seven_archons_countries_exist = yes
+    }
+    scope:gacha_io_joiner = {
+      if = {
+        limit = { NOT = { has_country_modifier = gacha_seven_archons_alliance_member_modifier } }
+        add_country_modifier = {
+          modifier = gacha_seven_archons_alliance_member_modifier
+          years = -1
+          mode = add_and_extend
+        }
+      }
+    }
+  }
+
+  # Start hidden auto-recruitment timers for non-pool rulers (if applicable)
+  if = {
+    limit = { scope:gacha_io_joiner = { this = c:GM1 } }
+    situation:gacha_mondstadt_auto_recruitment ?= {
+      set_variable = { name = target_country value = c:GM1 }
+    }
+    if = {
+      limit = { NOT = { situation:gacha_mondstadt_auto_recruitment = { situation_is_active = yes } } }
+      activate_situation = situation:gacha_mondstadt_auto_recruitment
+    }
+  }
+  if = {
+    limit = { scope:gacha_io_joiner = { this = c:GF1 } }
+    situation:gacha_fontaine_auto_recruitment ?= {
+      set_variable = { name = target_country value = c:GF1 }
+    }
+    if = {
+      limit = { NOT = { situation:gacha_fontaine_auto_recruitment = { situation_is_active = yes } } }
+      activate_situation = situation:gacha_fontaine_auto_recruitment
+    }
+  }
+  if = {
+    limit = { scope:gacha_io_joiner = { this = c:GN1 } }
+    situation:gacha_natlan_auto_recruitment ?= {
+      set_variable = { name = target_country value = c:GN1 }
+    }
+    if = {
+      limit = { NOT = { situation:gacha_natlan_auto_recruitment = { situation_is_active = yes } } }
+      activate_situation = situation:gacha_natlan_auto_recruitment
+    }
+  }
+  if = {
+    limit = { scope:gacha_io_joiner = { this = c:GS1 } }
+    situation:gacha_snezhnaya_auto_recruitment ?= {
+      set_variable = { name = target_country value = c:GS1 }
+    }
+    if = {
+      limit = { NOT = { situation:gacha_snezhnaya_auto_recruitment = { situation_is_active = yes } } }
+      activate_situation = situation:gacha_snezhnaya_auto_recruitment
+    }
+  }
+  if = {
+    limit = { scope:gacha_io_joiner = { this = c:GU1 } }
+    situation:gacha_sumeru_auto_recruitment ?= {
+      set_variable = { name = target_country value = c:GU1 }
+    }
+    if = {
+      limit = { NOT = { situation:gacha_sumeru_auto_recruitment = { situation_is_active = yes } } }
+      activate_situation = situation:gacha_sumeru_auto_recruitment
+    }
+  }
+
+  clear_saved_scope = gacha_io_joiner
+}

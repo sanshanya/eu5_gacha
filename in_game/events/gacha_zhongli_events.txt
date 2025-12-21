@@ -1,4 +1,4 @@
-namespace = gacha_zhongli_events
+﻿namespace = gacha_zhongli_events
 
 # 1. Intro: "Zhongli"
 gacha_zhongli_events.1 = {

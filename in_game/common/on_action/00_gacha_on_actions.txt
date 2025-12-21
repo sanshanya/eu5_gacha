@@ -125,6 +125,131 @@ gacha_on_game_start_initialize_action = {
       }
     }
 
+    # 兜底：若稻妻已存在但“天守阁”不存在，则自动补建（AI 不一定会建）
+    if = {
+      limit = { country_exists = c:GI1 }
+      if = {
+        limit = {
+          location:toshima_kanto = {
+            owner = c:GI1
+            NOT = { has_building = building_type:gacha_inazuma_tenshukaku }
+          }
+        }
+        location:toshima_kanto = { change_building_level_in_location = { building = building_type:gacha_inazuma_tenshukaku value = 1 } }
+      }
+    }
+
+    # 读档兜底：已有七国自动加入“尘世七执政”
+    if = {
+      limit = { country_exists = c:GL1 }
+      c:GL1 = { gacha_join_seven_archons_io = yes }
+    }
+    if = {
+      limit = { country_exists = c:GI1 }
+      c:GI1 = { gacha_join_seven_archons_io = yes }
+    }
+    if = {
+      limit = { country_exists = c:GM1 }
+      c:GM1 = { gacha_join_seven_archons_io = yes }
+    }
+    if = {
+      limit = { country_exists = c:GF1 }
+      c:GF1 = { gacha_join_seven_archons_io = yes }
+    }
+    if = {
+      limit = { country_exists = c:GN1 }
+      c:GN1 = { gacha_join_seven_archons_io = yes }
+    }
+    if = {
+      limit = { country_exists = c:GS1 }
+      c:GS1 = { gacha_join_seven_archons_io = yes }
+    }
+    if = {
+      limit = { country_exists = c:GU1 }
+      c:GU1 = { gacha_join_seven_archons_io = yes }
+    }
+
+    # 读档兜底：若稻妻已存在且雷电将军在位，确保其国家修正生效
+    if = {
+      limit = { country_exists = c:GI1 }
+      c:GI1 = {
+        every_character = {
+          limit = {
+            is_alive = yes
+            has_character_modifier = gacha_raiden_modifier
+          }
+          gacha_raiden_apply_country_modifiers = yes
+        }
+        every_character = {
+          limit = {
+            is_alive = yes
+            has_character_modifier = gacha_yae_miko_modifier
+          }
+          gacha_yae_miko_apply_country_modifiers = yes
+        }
+      }
+    }
+    if = {
+      limit = { country_exists = c:GM1 }
+      c:GM1 = {
+        every_character = {
+          limit = {
+            is_alive = yes
+            has_character_modifier = gacha_albedo_modifier
+          }
+          gacha_albedo_apply_country_modifiers = yes
+        }
+      }
+    }
+    if = {
+      limit = { country_exists = c:GF1 }
+      c:GF1 = {
+        every_character = {
+          limit = {
+            is_alive = yes
+            has_character_modifier = gacha_neuvillette_modifier
+          }
+          gacha_neuvillette_apply_country_modifiers = yes
+        }
+      }
+    }
+    if = {
+      limit = { country_exists = c:GN1 }
+      c:GN1 = {
+        every_character = {
+          limit = {
+            is_alive = yes
+            has_character_modifier = gacha_mavuika_modifier
+          }
+          gacha_mavuika_apply_country_modifiers = yes
+        }
+      }
+    }
+    if = {
+      limit = { country_exists = c:GS1 }
+      c:GS1 = {
+        every_character = {
+          limit = {
+            is_alive = yes
+            has_character_modifier = gacha_columbina_modifier
+          }
+          gacha_columbina_apply_country_modifiers = yes
+        }
+      }
+    }
+    if = {
+      limit = { country_exists = c:GU1 }
+      c:GU1 = {
+        every_character = {
+          limit = {
+            is_alive = yes
+            has_character_modifier = gacha_faruzan_modifier
+          }
+          gacha_faruzan_apply_country_modifiers = yes
+        }
+      }
+    }
+
     # 兜底：若璃月已存在但“自动招募”局势未激活，则激活（用于旧存档/热更）
     if = {
       limit = {
@@ -137,6 +262,68 @@ gacha_on_game_start_initialize_action = {
       activate_situation = situation:gacha_liyue_auto_recruitment
     }
 
+    # 兜底：若稻妻已存在但“自动招募”局势未激活，则激活（用于旧存档/热更）
+    if = {
+      limit = {
+        country_exists = c:GI1
+        NOT = { situation:gacha_inazuma_auto_recruitment = { situation_is_active = yes } }
+      }
+      situation:gacha_inazuma_auto_recruitment ?= {
+        set_variable = { name = target_country value = c:GI1 }
+      }
+      activate_situation = situation:gacha_inazuma_auto_recruitment
+    }
+    if = {
+      limit = {
+        country_exists = c:GM1
+        NOT = { situation:gacha_mondstadt_auto_recruitment = { situation_is_active = yes } }
+      }
+      situation:gacha_mondstadt_auto_recruitment ?= {
+        set_variable = { name = target_country value = c:GM1 }
+      }
+      activate_situation = situation:gacha_mondstadt_auto_recruitment
+    }
+    if = {
+      limit = {
+        country_exists = c:GF1
+        NOT = { situation:gacha_fontaine_auto_recruitment = { situation_is_active = yes } }
+      }
+      situation:gacha_fontaine_auto_recruitment ?= {
+        set_variable = { name = target_country value = c:GF1 }
+      }
+      activate_situation = situation:gacha_fontaine_auto_recruitment
+    }
+    if = {
+      limit = {
+        country_exists = c:GN1
+        NOT = { situation:gacha_natlan_auto_recruitment = { situation_is_active = yes } }
+      }
+      situation:gacha_natlan_auto_recruitment ?= {
+        set_variable = { name = target_country value = c:GN1 }
+      }
+      activate_situation = situation:gacha_natlan_auto_recruitment
+    }
+    if = {
+      limit = {
+        country_exists = c:GS1
+        NOT = { situation:gacha_snezhnaya_auto_recruitment = { situation_is_active = yes } }
+      }
+      situation:gacha_snezhnaya_auto_recruitment ?= {
+        set_variable = { name = target_country value = c:GS1 }
+      }
+      activate_situation = situation:gacha_snezhnaya_auto_recruitment
+    }
+    if = {
+      limit = {
+        country_exists = c:GU1
+        NOT = { situation:gacha_sumeru_auto_recruitment = { situation_is_active = yes } }
+      }
+      situation:gacha_sumeru_auto_recruitment ?= {
+        set_variable = { name = target_country value = c:GU1 }
+      }
+      activate_situation = situation:gacha_sumeru_auto_recruitment
+    }
+
     # 开局/读档兜底：初始化玩家抽卡状态，避免 tooltip/触发器读取未初始化变量
     every_country = {
       limit = { is_ai = no }
@@ -145,6 +332,7 @@ gacha_on_game_start_initialize_action = {
       # 防止上一次崩溃/强退导致锁变量残留，使按钮永久变灰
       remove_variable = gacha_event_lock
       remove_variable = gacha_liyue_plan_lock
+      remove_variable = gacha_inazuma_plan_lock
     }
 
     # 读档/开局自愈：世界唯一角色的“已召唤”标记应为全局变量；按实际存活角色重建
@@ -173,6 +361,12 @@ gacha_on_game_start_initialize_action = {
     else = { remove_global_variable = gacha_raiden_is_summoned }
 
     if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_yae_miko_modifier } } }
+      set_global_variable = { name = gacha_yae_miko_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_yae_miko_is_summoned }
+
+    if = {
       limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_furina_modifier } } }
       set_global_variable = { name = gacha_furina_is_summoned value = 1 }
     }
@@ -195,6 +389,36 @@ gacha_on_game_start_initialize_action = {
       set_global_variable = { name = gacha_nahida_is_summoned value = 1 }
     }
     else = { remove_global_variable = gacha_nahida_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_albedo_modifier } } }
+      set_global_variable = { name = gacha_albedo_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_albedo_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_neuvillette_modifier } } }
+      set_global_variable = { name = gacha_neuvillette_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_neuvillette_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_mavuika_modifier } } }
+      set_global_variable = { name = gacha_mavuika_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_mavuika_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_columbina_modifier } } }
+      set_global_variable = { name = gacha_columbina_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_columbina_is_summoned }
+
+    if = {
+      limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_faruzan_modifier } } }
+      set_global_variable = { name = gacha_faruzan_is_summoned value = 1 }
+    }
+    else = { remove_global_variable = gacha_faruzan_is_summoned }
 
 		        if = {
 		            limit = { any_country = { any_character = { is_alive = yes has_character_modifier = gacha_ningguang_modifier } } }

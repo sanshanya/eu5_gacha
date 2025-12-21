@@ -1,0 +1,86 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 那维莱特 (Neuvillette)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_neuvillette: "那维莱特"
+  gacha_last_name_neuvillette: "审判官"
+
+  # === 特质 (Traits) ===
+  gacha_neuvillette_origin_trait: "那维莱特·初始"
+  desc_gacha_neuvillette_origin_trait: "TODO"
+
+  gacha_neuvillette_awakened_trait: "那维莱特·觉醒"
+  desc_gacha_neuvillette_awakened_trait: "TODO"
+
+  gacha_neuvillette_transcended_trait: "那维莱特·超越"
+  desc_gacha_neuvillette_transcended_trait: "TODO"
+
+  gacha_neuvillette_c2_trait: "那维莱特·C2"
+  desc_gacha_neuvillette_c2_trait: "TODO"
+
+  gacha_neuvillette_c4_trait: "那维莱特·C4"
+  desc_gacha_neuvillette_c4_trait: "TODO"
+
+  gacha_neuvillette_c6_trait: "那维莱特·C6"
+  desc_gacha_neuvillette_c6_trait: "TODO"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_neuvillette_modifier: "枫丹审判官"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_modifier: "TODO"
+  gacha_neuvillette_modifier: "那维莱特的余韵"
+  gacha_neuvillette_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c0_modifier: "那维莱特·C0"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c1_modifier: "那维莱特·C1"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c2_modifier: "那维莱特·C2"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c3_modifier: "那维莱特·C3"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c4_modifier: "那维莱特·C4"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c5_modifier: "那维莱特·C5"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c6_modifier: "那维莱特·C6"
+
+  # 那维莱特 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_neuvillette_country_modifier: "那维莱特·光环"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c1_country_modifier: "那维莱特·C1"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c2_country_modifier: "那维莱特·C2"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c4_country_modifier: "那维莱特·C4"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c5_country_modifier: "那维莱特·C5"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c6_country_modifier: "那维莱特·C6"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c6_country_modifier: "TODO"
+
+  # === 事件 (Events) ===
+  gacha_neuvillette_events.1.title: "那维莱特"
+  gacha_neuvillette_events.1.desc: "TODO"
+  gacha_neuvillette_events.1.a: "……"
+
+  gacha_neuvillette_events.2.title: "那维莱特"
+  gacha_neuvillette_events.2.a: "继续"
+  gacha_neuvillette_events.3.title: "那维莱特"
+  gacha_neuvillette_events.3.a: "继续"
+
+  gacha_neuvillette_events.13.title: "那维莱特·C1"
+  gacha_neuvillette_events.13.desc: "TODO"
+  gacha_neuvillette_events.13.a: "……"
+
+  gacha_neuvillette_events.11.title: "那维莱特·C2"
+  gacha_neuvillette_events.11.desc: "TODO"
+  gacha_neuvillette_events.11.a: "……"
+
+  gacha_neuvillette_events.12.title: "那维莱特·C4"
+  gacha_neuvillette_events.12.desc: "TODO"
+  gacha_neuvillette_events.12.a: "……"
+
+  gacha_neuvillette_events.14.title: "那维莱特·C5"
+  gacha_neuvillette_events.14.desc: "TODO"
+  gacha_neuvillette_events.14.a: "……"
+
+  gacha_neuvillette_events.4.title: "那维莱特·C6"
+  gacha_neuvillette_events.4.desc: "TODO"
+  gacha_neuvillette_events.4.a: "……"

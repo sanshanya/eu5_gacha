@@ -1,0 +1,86 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 少女·哥伦比娅 (Columbina)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_columbina: "哥伦比娅"
+  gacha_last_name_columbina: "少女"
+
+  # === 特质 (Traits) ===
+  gacha_columbina_origin_trait: "哥伦比娅·初始"
+  desc_gacha_columbina_origin_trait: "TODO"
+
+  gacha_columbina_awakened_trait: "哥伦比娅·觉醒"
+  desc_gacha_columbina_awakened_trait: "TODO"
+
+  gacha_columbina_transcended_trait: "哥伦比娅·超越"
+  desc_gacha_columbina_transcended_trait: "TODO"
+
+  gacha_columbina_c2_trait: "哥伦比娅·C2"
+  desc_gacha_columbina_c2_trait: "TODO"
+
+  gacha_columbina_c4_trait: "哥伦比娅·C4"
+  desc_gacha_columbina_c4_trait: "TODO"
+
+  gacha_columbina_c6_trait: "哥伦比娅·C6"
+  desc_gacha_columbina_c6_trait: "TODO"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_columbina_modifier: "至冬少女"
+  STATIC_MODIFIER_DESC_gacha_columbina_modifier: "TODO"
+  gacha_columbina_modifier: "哥伦比娅的余韵"
+  gacha_columbina_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_columbina_c0_modifier: "哥伦比娅·C0"
+  STATIC_MODIFIER_NAME_gacha_columbina_c1_modifier: "哥伦比娅·C1"
+  STATIC_MODIFIER_NAME_gacha_columbina_c2_modifier: "哥伦比娅·C2"
+  STATIC_MODIFIER_NAME_gacha_columbina_c3_modifier: "哥伦比娅·C3"
+  STATIC_MODIFIER_NAME_gacha_columbina_c4_modifier: "哥伦比娅·C4"
+  STATIC_MODIFIER_NAME_gacha_columbina_c5_modifier: "哥伦比娅·C5"
+  STATIC_MODIFIER_NAME_gacha_columbina_c6_modifier: "哥伦比娅·C6"
+
+  # 哥伦比娅 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_columbina_country_modifier: "哥伦比娅·光环"
+  STATIC_MODIFIER_DESC_gacha_columbina_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_columbina_c1_country_modifier: "哥伦比娅·C1"
+  STATIC_MODIFIER_DESC_gacha_columbina_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_columbina_c2_country_modifier: "哥伦比娅·C2"
+  STATIC_MODIFIER_DESC_gacha_columbina_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_columbina_c4_country_modifier: "哥伦比娅·C4"
+  STATIC_MODIFIER_DESC_gacha_columbina_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_columbina_c5_country_modifier: "哥伦比娅·C5"
+  STATIC_MODIFIER_DESC_gacha_columbina_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_columbina_c6_country_modifier: "哥伦比娅·C6"
+  STATIC_MODIFIER_DESC_gacha_columbina_c6_country_modifier: "TODO"
+
+  # === 事件 (Events) ===
+  gacha_columbina_events.1.title: "哥伦比娅"
+  gacha_columbina_events.1.desc: "TODO"
+  gacha_columbina_events.1.a: "……"
+
+  gacha_columbina_events.2.title: "哥伦比娅"
+  gacha_columbina_events.2.a: "继续"
+  gacha_columbina_events.3.title: "哥伦比娅"
+  gacha_columbina_events.3.a: "继续"
+
+  gacha_columbina_events.13.title: "哥伦比娅·C1"
+  gacha_columbina_events.13.desc: "TODO"
+  gacha_columbina_events.13.a: "……"
+
+  gacha_columbina_events.11.title: "哥伦比娅·C2"
+  gacha_columbina_events.11.desc: "TODO"
+  gacha_columbina_events.11.a: "……"
+
+  gacha_columbina_events.12.title: "哥伦比娅·C4"
+  gacha_columbina_events.12.desc: "TODO"
+  gacha_columbina_events.12.a: "……"
+
+  gacha_columbina_events.14.title: "哥伦比娅·C5"
+  gacha_columbina_events.14.desc: "TODO"
+  gacha_columbina_events.14.a: "……"
+
+  gacha_columbina_events.4.title: "哥伦比娅·C6"
+  gacha_columbina_events.4.desc: "TODO"
+  gacha_columbina_events.4.a: "……"

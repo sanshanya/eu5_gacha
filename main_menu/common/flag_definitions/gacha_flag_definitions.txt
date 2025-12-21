@@ -6,3 +6,51 @@
 	}
 }
 
+
+GI1 = { # Inazuma
+	flag_definition = {
+		coa = GI1
+		allow_overlord_canton = no
+		priority = 10000
+	}
+}
+
+GM1 = { # Mondstadt
+	flag_definition = {
+		coa = GM1
+		allow_overlord_canton = no
+		priority = 10000
+	}
+}
+
+GF1 = { # Fontaine
+	flag_definition = {
+		coa = GF1
+		allow_overlord_canton = no
+		priority = 10000
+	}
+}
+
+GN1 = { # Natlan
+	flag_definition = {
+		coa = GN1
+		allow_overlord_canton = no
+		priority = 10000
+	}
+}
+
+GS1 = { # Snezhnaya
+	flag_definition = {
+		coa = GS1
+		allow_overlord_canton = no
+		priority = 10000
+	}
+}
+
+GU1 = { # Sumeru
+	flag_definition = {
+		coa = GU1
+		allow_overlord_canton = no
+		priority = 10000
+	}
+}

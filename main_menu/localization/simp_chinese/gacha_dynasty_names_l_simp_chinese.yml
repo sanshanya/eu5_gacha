@@ -3,6 +3,7 @@
   gacha_fischl_dynasty: "幽夜"
   gacha_keqing_dynasty: "玉衡"
   gacha_raiden_dynasty: "雷电"
+  gacha_yae_miko_dynasty: "鸣神"
   gacha_furina_dynasty: "德·枫丹"
   gacha_hutao_dynasty: "往生堂"
   gacha_klee_dynasty: "火花骑士"
@@ -11,6 +12,11 @@
   gacha_ganyu_dynasty: "麒麟"
   gacha_beidou_dynasty: "南十字"
   gacha_zhongli_dynasty: "听书人"
+  gacha_albedo_dynasty: "白垩"
+  gacha_faruzan_dynasty: "百解"
+  gacha_mavuika_dynasty: "烈焰"
+  gacha_neuvillette_dynasty: "审判"
+  gacha_columbina_dynasty: "少女"
 
   # 兼容旧 key（早期璃月测试用）
   gacha_yuheng_dynasty: "玉衡"

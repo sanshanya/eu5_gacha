@@ -1,9 +1,69 @@
 ﻿GL1 = { # Liyue (璃月)
 	color = rgb { 255 215 0 }  # Gold
 	color2 = rgb { 255 215 0 }
-	culture_definition = yuehai_culture
+	culture_definition = liyue_culture
 	religion_definition = sanjiao
 	description_category = administrative
 	# Not present at game start; spawned by script (Keqing → Liyue Plan → Cabinet Action).
+	is_historic = yes
+}
+
+GI1 = { # Inazuma (稻妻)
+	color = rgb { 150 90 220 }  # Violet
+	color2 = rgb { 150 90 220 }
+	culture_definition = inazuma_culture
+	religion_definition = shinto
+	description_category = military
+	# Not present at game start; spawned by script (Raiden -> Inazuma Plan -> Cabinet Action).
+	is_historic = yes
+}
+
+GM1 = { # Mondstadt (蒙德)
+	color = rgb { 120 200 160 }  # Anemo green
+	color2 = rgb { 120 200 160 }
+	culture_definition = mondstadt_culture
+	religion_definition = catholic
+	description_category = diplomatic
+	# Not present at game start; spawned by Seven Archons Descent.
+	is_historic = yes
+}
+
+GF1 = { # Fontaine (枫丹)
+	color = rgb { 80 160 220 }  # Hydro blue
+	color2 = rgb { 80 160 220 }
+	culture_definition = fontaine_culture
+	religion_definition = catholic
+	description_category = administrative
+	# Not present at game start; spawned by Seven Archons Descent.
+	is_historic = yes
+}
+
+GN1 = { # Natlan (纳塔)
+	color = rgb { 220 80 60 }  # Pyro red
+	color2 = rgb { 220 80 60 }
+	culture_definition = natlan_culture
+	religion_definition = nahuatl
+	description_category = military
+	# Not present at game start; spawned by Seven Archons Descent.
+	is_historic = yes
+}
+
+GS1 = { # Snezhnaya (至冬)
+	color = rgb { 170 210 255 }  # Cryo blue
+	color2 = rgb { 170 210 255 }
+	culture_definition = snezhnaya_culture
+	religion_definition = orthodox
+	description_category = military
+	# Not present at game start; spawned by Seven Archons Descent.
+	is_historic = yes
+}
+
+GU1 = { # Sumeru (须弥)
+	color = rgb { 90 180 90 }  # Dendro green
+	color2 = rgb { 90 180 90 }
+	culture_definition = sumeru_culture
+	religion_definition = hindu
+	description_category = administrative
+	# Not present at game start; spawned by Seven Archons Descent.
 	is_historic = yes
 }

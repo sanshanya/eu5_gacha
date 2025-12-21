@@ -33,6 +33,38 @@ gacha_nation_events.2 = {
 }
 
 # ==============================================================================
+# 3. 稻妻建国成功通知
+# ==============================================================================
+gacha_nation_events.3 = {
+  type = country_event
+  title = gacha_nation_events.3.title
+  desc = gacha_nation_events.3.desc
+  hide_portraits = yes
+  image = "gfx/event_pictures/gacha_inazuma.dds"
+
+  immediate = {
+  }
+
+  option = {
+    name = gacha_nation_events.3.a
+    add_prestige = 50
+  }
+}
+
+# ==============================================================================
+# 4. 稻妻建国失败（兜底提示）
+# ==============================================================================
+gacha_nation_events.4 = {
+  type = country_event
+  title = gacha_nation_events.4.title
+  desc = gacha_nation_events.4.desc
+
+  option = {
+    name = gacha_nation_events.4.a
+  }
+}
+
+# ==============================================================================
 # 10. 「璃月计划」：第一幕（新年夜）
 # ==============================================================================
 gacha_nation_events.10 = {
@@ -95,5 +127,71 @@ gacha_nation_events.12 = {
 
   after = {
     remove_variable = gacha_liyue_plan_lock
+  }
+}
+
+# ==============================================================================
+# 20. 「稻妻计划」：第一幕（雷鸣夜）
+# ==============================================================================
+gacha_nation_events.20 = {
+  type = country_event
+  title = gacha_nation_events.20.title
+  desc = gacha_nation_events.20.desc
+  hide_portraits = yes
+  image = "gfx/event_pictures/gacha_inazuma2.dds"
+
+  option = {
+    name = gacha_nation_events.20.a
+    trigger_event_non_silently = { id = gacha_nation_events.21 }
+  }
+
+  option = {
+    name = gacha_nation_events.20.b
+    trigger_event_non_silently = { id = gacha_nation_events.22 }
+  }
+}
+
+# ==============================================================================
+# 21. 「稻妻计划」：第二幕（立约）
+# ==============================================================================
+gacha_nation_events.21 = {
+  type = country_event
+  title = gacha_nation_events.20.title
+  desc = gacha_nation_events.21.desc
+  hide_portraits = yes
+  image = "gfx/event_pictures/gacha_raiden_intro_special2.dds"
+
+  option = {
+    name = gacha_nation_events.21.a
+    set_variable = { name = gacha_inazuma_plan_unlocked value = yes }
+
+    # 初始化筹备数据（避免“变量未设置”告警）
+    remove_variable = gacha_inazuma_preparations_complete
+    remove_variable = gacha_inazuma_reconstruction_in_progress
+    set_variable = { name = gacha_inazuma_investment_total value = 0 }
+    remove_variable = gacha_inazuma_investment_tier
+  }
+
+  after = {
+    remove_variable = gacha_inazuma_plan_lock
+  }
+}
+
+# ==============================================================================
+# 22. 「稻妻计划」：第二幕（再议）
+# ==============================================================================
+gacha_nation_events.22 = {
+  type = country_event
+  title = gacha_nation_events.20.title
+  desc = gacha_nation_events.22.desc
+  hide_portraits = yes
+  image = "gfx/event_pictures/gacha_raiden_intro_special2.dds"
+
+  option = {
+    name = gacha_nation_events.21.a
+  }
+
+  after = {
+    remove_variable = gacha_inazuma_plan_lock
   }
 }

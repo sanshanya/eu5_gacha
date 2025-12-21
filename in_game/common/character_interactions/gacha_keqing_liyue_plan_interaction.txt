@@ -10,6 +10,7 @@
     scope:actor = {
       is_ai = no
       has_ruler = yes
+      NOT = { country_exists = c:GL1 }
     }
   }
 
