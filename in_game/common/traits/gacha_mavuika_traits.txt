@@ -6,21 +6,35 @@ gacha_mavuika_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 gacha_mavuika_awakened_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        global_manpower_modifier = 0.08
+        monthly_prestige = 0.07
+        stability_cost = -0.03
+    }
 }
 
 gacha_mavuika_transcended_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        monthly_war_exhaustion = -0.10
+        global_manpower_modifier = 0.10
+        country_cabinet_efficiency = 0.06
+        monthly_legitimacy = 0.07
+        stability_cost = -0.05
+    }
 }
 
 # Constellation upgrades
@@ -29,19 +43,33 @@ gacha_mavuika_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 gacha_mavuika_c4_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        global_manpower_modifier = 0.16
+        monthly_prestige = 0.14
+        stability_cost = -0.06
+    }
 }
 
 gacha_mavuika_c6_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        monthly_war_exhaustion = -0.20
+        global_manpower_modifier = 0.20
+        country_cabinet_efficiency = 0.12
+        monthly_legitimacy = 0.14
+        stability_cost = -0.10
+    }
 }

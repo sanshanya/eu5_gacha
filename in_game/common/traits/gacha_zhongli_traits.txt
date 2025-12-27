@@ -7,9 +7,12 @@ gacha_zhongli_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    # 行政效率与正统性（由国家修正提供）
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # 2. 岩脊守势（职业·陆军）
 gacha_zhongli_awakened_trait = {
@@ -40,8 +43,12 @@ gacha_zhongli_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # C4：天星坠落（职业升级）
 gacha_zhongli_c4_trait = {

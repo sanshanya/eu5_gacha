@@ -1,0 +1,929 @@
+{
+  "version": 1,
+  "nation": "fontaine",
+  "characters": [
+    {
+      "code": "charlotte",
+      "name": {
+        "first": "夏洛蒂",
+        "last": "记者"
+      },
+      "traits": {
+        "origin": {
+          "key": "gacha_charlotte_origin_trait",
+          "name": "蒸汽鸟报·头条猎手",
+          "desc": "「别担心，我不会写成歌颂你的颂词。我的工作只有一件事：把事实写出来——让所有人都看见。」\n\n她把『温亨廷先生』往桌上一放，镜头对准你的内阁与诸侯。谣言、贪污、走私与密约，会在第二天的头版上失去遮羞布。",
+          "aura_country_modifier": "gacha_charlotte_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.06,
+            "stability_cost": -0.06
+          }
+        },
+        "awakened": {
+          "key": "gacha_charlotte_awakened_trait",
+          "name": "战地取证·冷色快门",
+          "desc": "「战争从不缺故事，缺的是证据。」\n\n夏洛蒂会跟着军队走到最前线：记录补给线的断点、炮位的误差、军纪的裂缝。对外，它是动员的号角；对内，它是整肃的刀——用一张张画片逼迫所有人把事做对。",
+          "modifier": {
+            "trade_range": 5,
+            "trade_efficiency": 0.03
+          }
+        },
+        "transcended": {
+          "key": "gacha_charlotte_transcended_trait",
+          "name": "真相的定价权",
+          "desc": "「你以为舆论是风？不，它是方向盘。」\n\n当她开始掌控叙事的节奏，民心会更愿意忍受税收与改革；而那些把国家当私产的家伙，会发现自己突然『没有朋友』了。",
+          "modifier": {
+            "monthly_legitimacy": 0.05,
+            "monthly_prestige": 0.05,
+            "country_cabinet_efficiency": 0.04,
+            "legislative_efficiency": 0.03
+          }
+        },
+        "c2": {
+          "key": "gacha_charlotte_c2_trait",
+          "name": "核实·内阁监督",
+          "desc": "「我不需要你许诺清白——我只要你允许我查账。」\n\n她把核对流程嵌进政务：每一次拨款、每一份军需、每一份封地文书都要留下可追溯的证据链。腐败与拖延不再是『习惯』，而会变成可被公开处置的罪名。",
+          "aura_country_modifier": "gacha_charlotte_c2_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "country_cabinet_efficiency": 0.08,
+            "legislative_efficiency": 0.06,
+            "stability_cost": -0.04
+          }
+        },
+        "c4": {
+          "key": "gacha_charlotte_c4_trait",
+          "name": "督促·边境快讯",
+          "desc": "「边境的风向变了——我已经写好了标题。」\n\n她的线人、报童与印刷点像毛细血管一样延伸到前线与港口：你更早得到敌国集结、叛乱风声与贸易异动的情报，并能在消息扩散前先一步定调。",
+          "modifier": {
+            "max_diplomats": 1,
+            "trade_range": 10,
+            "trade_efficiency": 0.06
+          }
+        },
+        "c6": {
+          "key": "gacha_charlotte_c6_trait",
+          "name": "要义·国家叙事",
+          "desc": "「一座国家也需要故事：告诉人民他们是谁，以及为什么值得赢。」\n\n当战争与改革进入最艰难的阶段，她会把混乱剪成一条清晰的主线——把牺牲解释成必然，把胜利塑造成共同的荣耀。人们未必爱你，但他们会愿意相信『这条路走得通』。",
+          "modifier": {
+            "monthly_legitimacy": 0.1,
+            "monthly_prestige": 0.1,
+            "country_cabinet_efficiency": 0.08,
+            "legislative_efficiency": 0.06
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "真视镜座·零命",
+          "desc": "记者并非旁观者：你获得一条更可靠的『事实链』，更容易发现腐败与谣言的源头。"
+        },
+        "c1": {
+          "name": "以核实为约束",
+          "desc": "『先核对，再下令。』行政命令的执行更少偏差，内部治理更稳定。"
+        },
+        "c2": {
+          "name": "以求真为职守",
+          "desc": "她会追着问题跑到最后一行账本。揭露阴影后，改革与整肃更容易被公众接受。"
+        },
+        "c3": {
+          "name": "以独立为先决",
+          "desc": "不受任何派系收编的笔锋，让你在处理贵族/阶层博弈时更有回旋余地。"
+        },
+        "c4": {
+          "name": "以督促为责任",
+          "desc": "把拖延写成丑闻，把渎职写成罪名。官僚效率提升，军需与工程更少被层层截留。"
+        },
+        "c5": {
+          "name": "以良知为原则",
+          "desc": "她会把『底线』写进制度：对滥权与酷刑的容忍度下降，民心更不易崩塌。"
+        },
+        "c6": {
+          "name": "以有趣相关为要义",
+          "desc": "当叙事与事实被她同时握在手里，你能更灵活地动员社会：宣传、情报与治安形成闭环。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_charlotte_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_charlotte_c0_modifier",
+          "c1": "gacha_charlotte_c1_modifier",
+          "c2": "gacha_charlotte_c2_modifier",
+          "c3": "gacha_charlotte_c3_modifier",
+          "c4": "gacha_charlotte_c4_modifier",
+          "c5": "gacha_charlotte_c5_modifier",
+          "c6": "gacha_charlotte_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_charlotte_country_modifier",
+          "c1": "gacha_charlotte_c1_country_modifier",
+          "c2": "gacha_charlotte_c2_country_modifier",
+          "c4": "gacha_charlotte_c4_country_modifier",
+          "c5": "gacha_charlotte_c5_country_modifier",
+          "c6": "gacha_charlotte_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_charlotte_modifier": {
+          "gacha_core": "yes",
+          "gacha_ice_godeye": "yes"
+        },
+        "gacha_charlotte_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_charlotte_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_charlotte_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_charlotte_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_charlotte_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_charlotte_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_charlotte_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_charlotte_country_modifier": {},
+        "gacha_charlotte_c1_country_modifier": {
+          "hire_advisor_cost_modifier": -0.1,
+          "global_estate_satisfaction_recovery": 0.04
+        },
+        "gacha_charlotte_c2_country_modifier": {},
+        "gacha_charlotte_c4_country_modifier": {
+          "max_diplomats": 1,
+          "trade_range": 10,
+          "trade_efficiency": 0.06
+        },
+        "gacha_charlotte_c5_country_modifier": {
+          "monthly_prestige": 0.12,
+          "stability_cost": -0.04
+        },
+        "gacha_charlotte_c6_country_modifier": {
+          "monthly_legitimacy": 0.1,
+          "monthly_prestige": 0.1,
+          "country_cabinet_efficiency": 0.08,
+          "legislative_efficiency": 0.06
+        }
+      },
+      "story_mode": "default",
+      "nation": "fontaine",
+      "pool": {
+        "in_pool": true,
+        "group": "fontaine"
+      },
+      "starlight_shop": true
+    },
+    {
+      "code": "furina",
+      "name": {
+        "first": "芙宁娜",
+        "last": "德·枫丹"
+      },
+      "traits": {
+        "origin": {
+          "key": "gacha_furina_origin_trait",
+          "name": "欧庇克莱歌剧院",
+          "desc": "「看吧，哪怕我不发一言，只要站在那里，人们的目光就会聚集过来。这就叫『明星效应』。你的国家死气沉沉太久了，需要一点戏剧性的转折来提振民心。交给我吧，我会让你的国民重新学会欢呼。」",
+          "aura_country_modifier": "gacha_furina_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "monthly_prestige": 0.12,
+            "monthly_legitimacy": 0.1,
+            "num_possible_artists": 1
+          }
+        },
+        "awakened": {
+          "key": "gacha_furina_awakened_trait",
+          "name": "沙龙成员的下午茶",
+          "desc": "「乌瑟勋爵，谢贝蕾妲小姐，还有海薇玛夫人……虽然它们只是我不成熟的幻想朋友，但在海上，它们可是很可靠的哦？指挥舰队就像指挥乐队，只要节奏对了，连惊涛骇浪也会跟着起舞。」",
+          "modifier": {
+            "naval_morale_modifier": 0.2,
+            "navy_movement_speed": 0.2,
+            "naval_damage_taken": -0.1
+          }
+        },
+        "transcended": {
+          "key": "gacha_furina_transcended_trait",
+          "name": "\"众水之神\"的假面",
+          "desc": "「虽然我已不再是神，但这副扮演了五百年的架子还在。虚张声势、外交辞令、在列强面前维持尊严……这些我最擅长了。只要我不怯场，就没有人敢轻视这个国家。」",
+          "modifier": {
+            "artist_monthly_start_chance": 0.15,
+            "improve_relation_impact": 0.25,
+            "skill_of_new_artists": 0.2,
+            "global_monthly_art_start_chance": 0.15
+          }
+        },
+        "c2": {
+          "key": "gacha_furina_c2_trait",
+          "name": "谕示裁定枢机",
+          "desc": "「看啊，人们在欢呼！他们需要的不仅仅是面包，还有『正义』的演出。我稍稍修改了一下你的律法条文，让它们读起来更像诗歌。现在，变革的阻力变小了，因为大家都想看看下一幕会发生什么。」",
+          "aura_country_modifier": "gacha_furina_c2_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.12,
+            "stability_cost": -0.06,
+            "monthly_prestige": 0.08
+          }
+        },
+        "c4": {
+          "key": "gacha_furina_c4_trait",
+          "name": "万众狂欢之海",
+          "desc": "「现在的海面，就像是我的舞台！在此刻，全世界的灯光都聚焦于你的舰队！不要畏惧风暴，那是高潮前的伴奏！让敌人在我们的狂欢中退场吧，这就叫——压轴好戏！」",
+          "modifier": {
+            "naval_morale_modifier": 0.4,
+            "naval_damage_taken": -0.2,
+            "navy_movement_speed": 0.4
+          }
+        },
+        "c6": {
+          "key": "gacha_furina_c6_trait",
+          "name": "普世欢腾",
+          "desc": "「五百年了……我曾以为『统治』就是无尽的孤独与受难。但在这里，看着你的背影，我发现统治也可以是一场所有人共同参与的盛大舞会。我不做神了，现在的我，只是这片乐土上最自由的……人。」",
+          "modifier": {
+            "diplomatic_reputation": 10,
+            "improve_relation_impact": 0.5,
+            "artist_monthly_start_chance": 0.3,
+            "skill_of_new_artists": 0.4,
+            "global_monthly_art_start_chance": 0.3,
+            "monthly_prestige": 0.16,
+            "monthly_legitimacy": 0.16
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "独舞座·零命",
+          "desc": "舞台搭起，聚光灯亮起：民心更容易被激励，国家更擅长在危机中『稳住场面』。"
+        },
+        "c1": {
+          "name": "剧团新成员",
+          "desc": "她会把官僚系统当作剧团排练：流程更顺，失误更少，关键岗位更容易找到『能演的人』。"
+        },
+        "c2": {
+          "name": "正义审判",
+          "desc": "把审判写成戏剧，把秩序变成共识：改革阻力下降，社会冲突更易被化解。"
+        },
+        "c3": {
+          "name": "后台卸妆",
+          "desc": "卸下浮夸的妆容，露出真正的疲惫：在长期战争或财政压力下，民心更不易崩溃。"
+        },
+        "c4": {
+          "name": "海洋交响",
+          "desc": "把舰队当作乐团：海军行动更协调，海上机动与登陆作战更可靠。"
+        },
+        "c5": {
+          "name": "万国来朝",
+          "desc": "她擅长让各国『愿意来捧场』：外交场面更体面，谈判桌上更不易被轻视。"
+        },
+        "c6": {
+          "name": "凡人之舞",
+          "desc": "当她不再扮演神，而是与你共舞：国家叙事更真实，也更能凝聚长期的忠诚与韧性。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_furina_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_furina_c0_modifier",
+          "c1": "gacha_furina_c1_modifier",
+          "c2": "gacha_furina_c2_modifier",
+          "c3": "gacha_furina_c3_modifier",
+          "c4": "gacha_furina_c4_modifier",
+          "c5": "gacha_furina_c5_modifier",
+          "c6": "gacha_furina_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_furina_country_modifier",
+          "c1": "gacha_furina_c1_country_modifier",
+          "c2": "gacha_furina_c2_country_modifier",
+          "c4": "gacha_furina_c4_country_modifier",
+          "c5": "gacha_furina_c5_country_modifier",
+          "c6": "gacha_furina_c6_country_modifier"
+        },
+        "other_modifiers": [
+          "gacha_furina_co_star_modifier",
+          "gacha_furina_mortal_oath_modifier"
+        ]
+      },
+      "buff_values": {
+        "gacha_furina_modifier": {
+          "gacha_core": "yes",
+          "gacha_water_godeye": "yes"
+        },
+        "gacha_furina_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_furina_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_furina_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_furina_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_furina_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_furina_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_furina_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_furina_country_modifier": {},
+        "gacha_furina_c1_country_modifier": {
+          "num_possible_artists": 3,
+          "hire_advisor_cost_modifier": -0.1,
+          "legislative_efficiency": 0.05
+        },
+        "gacha_furina_c2_country_modifier": {},
+        "gacha_furina_c4_country_modifier": {
+          "naval_morale_modifier": 0.2,
+          "ship_build_speed": 0.15,
+          "ship_capture_chance": 0.1
+        },
+        "gacha_furina_c5_country_modifier": {
+          "max_diplomats": 1,
+          "monthly_prestige": 0.18,
+          "trade_efficiency": 0.08
+        },
+        "gacha_furina_c6_country_modifier": {
+          "country_cabinet_efficiency": 0.12,
+          "monthly_legitimacy": 0.12,
+          "monthly_prestige": 0.12,
+          "stability_cost": -0.08,
+          "global_estate_satisfaction_recovery": 0.05,
+          "num_possible_artists": 4
+        },
+        "gacha_furina_co_star_modifier": {
+          "num_possible_artists": 1
+        },
+        "gacha_furina_mortal_oath_modifier": {
+          "max_diplomats": 1
+        }
+      },
+      "story_mode": "custom",
+      "nation": "fontaine",
+      "pool": {
+        "in_pool": true,
+        "group": "standard"
+      },
+      "starlight_shop": true,
+      "story_ref": {
+        "event_file": "in_game/events/gacha_furina_events.txt",
+        "loc_prefix": "gacha_furina_events"
+      }
+    },
+    {
+      "code": "navia",
+      "name": {
+        "first": "娜维娅",
+        "last": "刺玫"
+      },
+      "traits": {
+        "origin": {
+          "key": "gacha_navia_origin_trait",
+          "name": "刺玫会·互助关系网",
+          "desc": "「贵族也好，工人也好，难处都是实打实的。」\n\n娜维娅把刺玫会的互助网络搬进你的城市：用慈善、调解与『能把人拉回正轨的工作』抹平冲突。她不会许诺乌托邦，但会让你少听到街头的怨声。",
+          "aura_country_modifier": "gacha_navia_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "global_construction_speed": 0.06,
+            "global_devastation_recovery": 0.12,
+            "global_estate_satisfaction_recovery": 0.04
+          }
+        },
+        "awakened": {
+          "key": "gacha_navia_awakened_trait",
+          "name": "铳柄伞·典仪晶火",
+          "desc": "「谈判桌上我会笑，战场上我也会笑——因为我知道该把铳口对准哪里。」\n\n她把工坊、矿料与炮兵的协作揉成一套『可复制的流程』：攻城、守城、火器改良都更像一门生意，能按期交付、按价结算。",
+          "modifier": {
+            "country_cabinet_efficiency": 0.03,
+            "stability_cost": -0.025,
+            "global_devastation_recovery": 0.05
+          }
+        },
+        "transcended": {
+          "key": "gacha_navia_transcended_trait",
+          "name": "金蔷薇的会长",
+          "desc": "「国家不是一张家徽，是一群愿意彼此托底的人。」\n\n当她被推到更高的位置，娜维娅会更像一名能上台面的政治家：把阶层之间的债与情算清楚，把城市的秩序与信任重新织起来。",
+          "modifier": {
+            "global_build_buildings_cost": -0.06,
+            "global_construction_speed": 0.03,
+            "country_cabinet_efficiency": 0.04,
+            "stability_cost": -0.025
+          }
+        },
+        "c2": {
+          "key": "gacha_navia_c2_trait",
+          "name": "总指挥的乘胜追击",
+          "desc": "「机会来了就别犹豫，犹豫会让代价翻倍。」\n\n她擅长把一次胜利滚成连续的战果：追击、围堵、夺取要塞与港口，像在谈一笔必须拿下的合同。",
+          "aura_country_modifier": "gacha_navia_c2_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "global_manpower_modifier": 0.08,
+            "global_production_efficiency": 0.06,
+            "trade_efficiency": 0.05
+          }
+        },
+        "c4": {
+          "key": "gacha_navia_c4_trait",
+          "name": "铭誓者的绝不姑息",
+          "desc": "「欺负弱者的人，最怕有人当众说：到此为止。」\n\n对叛乱、黑帮与走私，她的态度比想象中更硬：该封锁就封锁，该清剿就清剿——同时给愿意回头的人留一条路。",
+          "modifier": {
+            "country_cabinet_efficiency": 0.06,
+            "stability_cost": -0.05,
+            "global_devastation_recovery": 0.1
+          }
+        },
+        "c6": {
+          "key": "gacha_navia_c6_trait",
+          "name": "刺玫会长的灵活手腕",
+          "desc": "「我不喜欢被命运推着走，所以我学会了——在最坏的规则里，也能玩出最好的一手牌。」\n\n她把『灵活』用在国家上：财政周转、军需采购、危机救济都更有余地。你会发现，很多看似必然崩坏的局面，被她用一句『我来想办法』撑了过去。",
+          "modifier": {
+            "global_build_buildings_cost": -0.12,
+            "global_construction_speed": 0.06,
+            "country_cabinet_efficiency": 0.08,
+            "stability_cost": -0.05
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "野蔷薇座·零命",
+          "desc": "刺玫会的网络在你的城镇扎根：社会援助与治安协作更有效。"
+        },
+        "c1": {
+          "name": "淑女的距离感守则",
+          "desc": "她懂得保持分寸：能在贵族与市民之间斡旋，减少不必要的冲突。"
+        },
+        "c2": {
+          "name": "总指挥的乘胜追击",
+          "desc": "胜利不止在战场结束时：更擅长把优势转化为占领、赔款与谈判筹码。"
+        },
+        "c3": {
+          "name": "经营家的开阔视野",
+          "desc": "把城市当作产业链来经营：工坊与贸易的规划更清晰，投资回报更稳定。"
+        },
+        "c4": {
+          "name": "铭誓者的绝不姑息",
+          "desc": "对犯罪与叛乱更强硬：短期阵痛换来长期秩序，边境与港口更安稳。"
+        },
+        "c5": {
+          "name": "协商人的坚决谈判",
+          "desc": "谈判桌上的笑容背后是算清的账：更容易争取对己方有利的条款。"
+        },
+        "c6": {
+          "name": "刺玫会长的灵活手腕",
+          "desc": "财政与军需在危机中更有弹性：当局势急转直下，你更容易『挺过那一段』。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_navia_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_navia_c0_modifier",
+          "c1": "gacha_navia_c1_modifier",
+          "c2": "gacha_navia_c2_modifier",
+          "c3": "gacha_navia_c3_modifier",
+          "c4": "gacha_navia_c4_modifier",
+          "c5": "gacha_navia_c5_modifier",
+          "c6": "gacha_navia_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_navia_country_modifier",
+          "c1": "gacha_navia_c1_country_modifier",
+          "c2": "gacha_navia_c2_country_modifier",
+          "c4": "gacha_navia_c4_country_modifier",
+          "c5": "gacha_navia_c5_country_modifier",
+          "c6": "gacha_navia_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_navia_modifier": {
+          "gacha_core": "yes",
+          "gacha_stone_godeye": "yes"
+        },
+        "gacha_navia_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_navia_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_navia_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_navia_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_navia_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_navia_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_navia_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_navia_country_modifier": {},
+        "gacha_navia_c1_country_modifier": {
+          "trade_efficiency": 0.06,
+          "hire_advisor_cost_modifier": -0.1
+        },
+        "gacha_navia_c2_country_modifier": {},
+        "gacha_navia_c4_country_modifier": {
+          "country_cabinet_efficiency": 0.06,
+          "stability_cost": -0.05,
+          "global_devastation_recovery": 0.1
+        },
+        "gacha_navia_c5_country_modifier": {
+          "trade_range": 10,
+          "hire_advisor_cost_modifier": -0.1
+        },
+        "gacha_navia_c6_country_modifier": {
+          "global_build_buildings_cost": -0.12,
+          "global_construction_speed": 0.06,
+          "country_cabinet_efficiency": 0.08,
+          "stability_cost": -0.05
+        }
+      },
+      "story_mode": "default",
+      "nation": "fontaine",
+      "pool": {
+        "in_pool": true,
+        "group": "fontaine"
+      },
+      "starlight_shop": true
+    },
+    {
+      "code": "neuvillette",
+      "name": {
+        "first": "那维莱特",
+        "last": "审判官"
+      },
+      "traits": {
+        "origin": {
+          "key": "gacha_neuvillette_origin_trait",
+          "name": "沫芒宫·最高审判官",
+          "desc": "「律法并不关心你的出身，只关心你的行为。」\n\n那维莱特不抬高声音，却能让满朝沉默。你会发现：法条被重新解释，程序被重新整理，许多『惯例』在他面前失去合法性。",
+          "aura_country_modifier": "gacha_neuvillette_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.08,
+            "country_cabinet_efficiency": 0.06,
+            "stability_cost": -0.06,
+            "monthly_legitimacy": 0.1
+          }
+        },
+        "awakened": {
+          "key": "gacha_neuvillette_awakened_trait",
+          "name": "衡平推裁",
+          "desc": "「裁决不需要愤怒，只需要精确。」\n\n他会把军法与行政法一道压到最严：赏罚明确，贪墨与渎职的代价陡增。对外，他不会施压——他只会要求对方按条款履行，然后静静等待违约。",
+          "modifier": {
+            "global_devastation_recovery": 0.125,
+            "global_estate_satisfaction_recovery": 0.03,
+            "global_disease_resistance": 0.05
+          }
+        },
+        "transcended": {
+          "key": "gacha_neuvillette_transcended_trait",
+          "name": "潮涌之章·归权",
+          "desc": "「你所追求的秩序，若仅靠恐惧维系，终会崩塌。」\n\n当他不再只是审判官，而愿意为你的国家『承担更大的责任』时，法律开始成为一种可被信赖的公共品：社会更能容纳不同阶层的利益，而不是靠一次次镇压去压平。",
+          "modifier": {
+            "monthly_legitimacy": 0.075,
+            "country_cabinet_efficiency": 0.05,
+            "global_manpower_modifier": 0.05,
+            "stability_cost": -0.04
+          }
+        },
+        "c2": {
+          "key": "gacha_neuvillette_c2_trait",
+          "name": "律法的命诫",
+          "desc": "「把规则写清楚，是对弱者的保护，也是对强者的约束。」\n\n他推动成文法与判例体系：地方官的自由裁量被收束，中央的命令更容易落地。",
+          "aura_country_modifier": "gacha_neuvillette_c2_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.1,
+            "country_cabinet_efficiency": 0.08,
+            "stability_cost": -0.05
+          }
+        },
+        "c4": {
+          "key": "gacha_neuvillette_c4_trait",
+          "name": "悲悯的冠冕",
+          "desc": "「怜悯并非放纵，而是让人有改过的机会。」\n\n他会为战后地区设计『复归秩序』的路径：赦免、安置、复工与再分配并行，让仇恨不至于成为下一场叛乱的燃料。",
+          "modifier": {
+            "global_devastation_recovery": 0.25,
+            "global_estate_satisfaction_recovery": 0.06,
+            "global_disease_resistance": 0.1
+          }
+        },
+        "c6": {
+          "key": "gacha_neuvillette_c6_trait",
+          "name": "忿怒的报偿",
+          "desc": "「若有人以不义挑战公理，我将以洪流回应。」\n\n当红线被触碰，他的手段会异常直接：制裁、封锁、强制执行——一切都在条文之内，却让对手体会到『不可抗拒』。",
+          "modifier": {
+            "monthly_legitimacy": 0.15,
+            "country_cabinet_efficiency": 0.1,
+            "global_manpower_modifier": 0.1,
+            "stability_cost": -0.08
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "潮涌座·零命",
+          "desc": "法度被重新擦亮：治理更可预期，内部腐败更难藏身。"
+        },
+        "c1": {
+          "name": "尊荣的创定",
+          "desc": "确立权威与程序：重大决策更容易获得合法性与执行力。"
+        },
+        "c2": {
+          "name": "律法的命诫",
+          "desc": "规则更清晰，例外更少：地方擅权与随意加税更难发生。"
+        },
+        "c3": {
+          "name": "溯古的拟制",
+          "desc": "复盘旧案、重订条文：制度更新更平稳，改革成本更可控。"
+        },
+        "c4": {
+          "name": "悲悯的冠冕",
+          "desc": "战后治理更温和但不软弱：更容易恢复生产与秩序，减少报复循环。"
+        },
+        "c5": {
+          "name": "公理的决裁",
+          "desc": "在外交与审判上更具压迫感：对方更难用话术拖延或赖账。"
+        },
+        "c6": {
+          "name": "忿怒的报偿",
+          "desc": "当违约与叛乱越线，他会用『合法的强制』迅速终结局势。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_neuvillette_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_neuvillette_c0_modifier",
+          "c1": "gacha_neuvillette_c1_modifier",
+          "c2": "gacha_neuvillette_c2_modifier",
+          "c3": "gacha_neuvillette_c3_modifier",
+          "c4": "gacha_neuvillette_c4_modifier",
+          "c5": "gacha_neuvillette_c5_modifier",
+          "c6": "gacha_neuvillette_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_neuvillette_country_modifier",
+          "c1": "gacha_neuvillette_c1_country_modifier",
+          "c2": "gacha_neuvillette_c2_country_modifier",
+          "c4": "gacha_neuvillette_c4_country_modifier",
+          "c5": "gacha_neuvillette_c5_country_modifier",
+          "c6": "gacha_neuvillette_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_neuvillette_modifier": {
+          "gacha_core": "yes",
+          "gacha_water_godeye": "yes"
+        },
+        "gacha_neuvillette_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_neuvillette_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_neuvillette_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_neuvillette_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_neuvillette_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_neuvillette_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_neuvillette_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_neuvillette_country_modifier": {},
+        "gacha_neuvillette_c1_country_modifier": {
+          "hire_advisor_cost_modifier": -0.15,
+          "monthly_prestige": 0.1
+        },
+        "gacha_neuvillette_c2_country_modifier": {},
+        "gacha_neuvillette_c4_country_modifier": {
+          "global_devastation_recovery": 0.25,
+          "global_estate_satisfaction_recovery": 0.06,
+          "global_disease_resistance": 0.1
+        },
+        "gacha_neuvillette_c5_country_modifier": {
+          "max_diplomats": 1,
+          "trade_efficiency": 0.1,
+          "trade_range": 10
+        },
+        "gacha_neuvillette_c6_country_modifier": {
+          "monthly_legitimacy": 0.15,
+          "country_cabinet_efficiency": 0.1,
+          "global_manpower_modifier": 0.1,
+          "stability_cost": -0.08
+        }
+      },
+      "story_mode": "default",
+      "nation": "fontaine",
+      "pool": {
+        "in_pool": false,
+        "group": ""
+      },
+      "starlight_shop": false
+    },
+    {
+      "code": "wriothesley",
+      "name": {
+        "first": "莱欧斯利",
+        "last": "公爵"
+      },
+      "traits": {
+        "origin": {
+          "key": "gacha_wriothesley_origin_trait",
+          "name": "梅洛彼得堡·公爵",
+          "desc": "「监狱不该只是关人的地方——它必须产出秩序。」\n\n莱欧斯利把『水下堡垒』的管理经验带进你的国家：纪律、工坊与配给像齿轮一样咬合。你会得到更强的治安与更稳的生产，但也必须接受他对规则近乎冷酷的坚持。",
+          "aura_country_modifier": "gacha_wriothesley_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "global_production_efficiency": 0.06,
+            "global_manpower_modifier": 0.06,
+            "stability_cost": -0.05,
+            "country_cabinet_efficiency": 0.04
+          }
+        },
+        "awakened": {
+          "key": "gacha_wriothesley_awakened_trait",
+          "name": "铁拳与红茶",
+          "desc": "「别紧张，我先请你喝茶。喝完再谈——你要么签字，要么挨打。」\n\n他能用温和的礼貌压住最危险的地方势力：黑市、帮派、暴动苗头会被提前掐灭。必要时，他会亲自把『不懂规矩的人』送回规矩里。",
+          "modifier": {
+            "global_devastation_recovery": 0.1,
+            "global_estate_satisfaction_recovery": 0.025,
+            "global_manpower_modifier": 0.025
+          }
+        },
+        "transcended": {
+          "key": "gacha_wriothesley_transcended_trait",
+          "name": "水下秩序的铸造者",
+          "desc": "「统治者最怕两件事：看不见，管不动。」\n\n当他获得更高的权限，监狱系统会变成一张可控的安全网：收容、劳动、赎罪与情报并行。你会更容易压住内乱，也更容易在战争中维持后方运转。",
+          "modifier": {
+            "stability_cost": -0.04,
+            "country_cabinet_efficiency": 0.05,
+            "monthly_legitimacy": 0.05,
+            "global_estate_satisfaction_recovery": 0.03
+          }
+        },
+        "c2": {
+          "key": "gacha_wriothesley_c2_trait",
+          "name": "予骄暴者以镣锁",
+          "desc": "「强者若不受约束，弱者就会被逼到用火说话。」\n\n他擅长对『最会闹事的那一撮人』精准加压：减小地方豪强的破坏力，让税收与征兵不再被私权阻断。",
+          "aura_country_modifier": "gacha_wriothesley_c2_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "country_cabinet_efficiency": 0.08,
+            "global_manpower_modifier": 0.08,
+            "global_build_buildings_cost": -0.06
+          }
+        },
+        "c4": {
+          "key": "gacha_wriothesley_c4_trait",
+          "name": "予贞苦者以拯赎",
+          "desc": "「把人逼到绝路，得到的只会是反噬。」\n\n莱欧斯利会在强硬之外给出通道：劳动换减刑、战功换赦免、技能培训换岗位——你能更快把动荡人口重新编入生产与军队。",
+          "modifier": {
+            "global_devastation_recovery": 0.2,
+            "global_estate_satisfaction_recovery": 0.05,
+            "global_manpower_modifier": 0.05
+          }
+        },
+        "c6": {
+          "key": "gacha_wriothesley_c6_trait",
+          "name": "予无罪者以念抚",
+          "desc": "「我不需要恐惧维持秩序，我要的是——人们相信秩序值得。」\n\n当制度成熟，梅洛彼得堡的逻辑会反向作用于全国：少数人的恐惧，换成多数人的安全感。你的统治更稳，也更难被煽动与谣言撕裂。",
+          "modifier": {
+            "stability_cost": -0.08,
+            "country_cabinet_efficiency": 0.1,
+            "monthly_legitimacy": 0.1,
+            "global_estate_satisfaction_recovery": 0.06
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "守狱犬座·零命",
+          "desc": "以制度驯服混乱：治安更强，地下势力更难扩张。"
+        },
+        "c1": {
+          "name": "予行恶者以惩惧",
+          "desc": "对犯罪的惩戒更明确：叛乱与黑市更难滋生。"
+        },
+        "c2": {
+          "name": "予骄暴者以镣锁",
+          "desc": "精准打击地方豪强与帮派头目：更容易收回征税与征兵的控制权。"
+        },
+        "c3": {
+          "name": "予婪诈者以谴罚",
+          "desc": "对贪腐与欺诈的处理更有效：财政漏损减少，官僚更守规矩。"
+        },
+        "c4": {
+          "name": "予贞苦者以拯赎",
+          "desc": "提供赎罪与复归路径：战后恢复更快，社会矛盾更不易激化。"
+        },
+        "c5": {
+          "name": "予冤诉者以怜恕",
+          "desc": "让制度允许申诉与纠错：降低冤案带来的长期仇恨与报复。"
+        },
+        "c6": {
+          "name": "予无罪者以念抚",
+          "desc": "当秩序被多数人认可，你的国家在危机中更具韧性：更难被恐慌击穿。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_wriothesley_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_wriothesley_c0_modifier",
+          "c1": "gacha_wriothesley_c1_modifier",
+          "c2": "gacha_wriothesley_c2_modifier",
+          "c3": "gacha_wriothesley_c3_modifier",
+          "c4": "gacha_wriothesley_c4_modifier",
+          "c5": "gacha_wriothesley_c5_modifier",
+          "c6": "gacha_wriothesley_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_wriothesley_country_modifier",
+          "c1": "gacha_wriothesley_c1_country_modifier",
+          "c2": "gacha_wriothesley_c2_country_modifier",
+          "c4": "gacha_wriothesley_c4_country_modifier",
+          "c5": "gacha_wriothesley_c5_country_modifier",
+          "c6": "gacha_wriothesley_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_wriothesley_modifier": {
+          "gacha_core": "yes",
+          "gacha_ice_godeye": "yes"
+        },
+        "gacha_wriothesley_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_wriothesley_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_wriothesley_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_wriothesley_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_wriothesley_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_wriothesley_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_wriothesley_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_wriothesley_country_modifier": {},
+        "gacha_wriothesley_c1_country_modifier": {
+          "legislative_efficiency": 0.06,
+          "stability_cost": -0.04
+        },
+        "gacha_wriothesley_c2_country_modifier": {},
+        "gacha_wriothesley_c4_country_modifier": {
+          "global_devastation_recovery": 0.2,
+          "global_estate_satisfaction_recovery": 0.05,
+          "global_manpower_modifier": 0.05
+        },
+        "gacha_wriothesley_c5_country_modifier": {
+          "hire_advisor_cost_modifier": -0.1,
+          "monthly_prestige": 0.1,
+          "legislative_efficiency": 0.05
+        },
+        "gacha_wriothesley_c6_country_modifier": {
+          "stability_cost": -0.08,
+          "country_cabinet_efficiency": 0.1,
+          "monthly_legitimacy": 0.1,
+          "global_estate_satisfaction_recovery": 0.06
+        }
+      },
+      "story_mode": "default",
+      "nation": "fontaine",
+      "pool": {
+        "in_pool": true,
+        "group": "fontaine"
+      },
+      "starlight_shop": true
+    }
+  ]
+}

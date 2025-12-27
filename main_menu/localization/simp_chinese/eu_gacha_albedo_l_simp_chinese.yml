@@ -8,23 +8,23 @@
   gacha_last_name_albedo: "白垩"
 
   # === 特质 (Traits) ===
-  gacha_albedo_origin_trait: "阿贝多·初始"
-  desc_gacha_albedo_origin_trait: "TODO"
+  gacha_albedo_origin_trait: "白垩的素描本"
+  desc_gacha_albedo_origin_trait: "阿贝多：「这片大陆的矿脉走向与城防结构…很有意思。若允许我做些记录，我能把它们变成更稳固的城墙与更高效的工坊。」\n（他把纸笔放得很轻，仿佛连噪音都会干扰实验。）"
 
-  gacha_albedo_awakened_trait: "阿贝多·觉醒"
-  desc_gacha_albedo_awakened_trait: "TODO"
+  gacha_albedo_awakened_trait: "创生法·拟造阳华"
+  desc_gacha_albedo_awakened_trait: "阿贝多：「临时的高台、可重复的支点、可控的坍塌。攻城并不只靠蛮力——也可以靠几何。」\n（你发现工匠们开始照着他的“配方”加固炮台与城门。）"
 
-  gacha_albedo_transcended_trait: "阿贝多·超越"
-  desc_gacha_albedo_transcended_trait: "TODO"
+  gacha_albedo_transcended_trait: "诞生式·大地之潮"
+  desc_gacha_albedo_transcended_trait: "阿贝多：「当压力积累到某个阈值，结构会以最省力的方式崩解。战争也是如此。」\n他把战场当作一张可推演的图纸：哪里会裂，哪里会倒，都能提前写在边注里。"
 
-  gacha_albedo_c2_trait: "阿贝多·C2"
-  desc_gacha_albedo_c2_trait: "TODO"
+  gacha_albedo_c2_trait: "显生之宙"
+  desc_gacha_albedo_c2_trait: "阿贝多：「记录并非为了回忆，而是为了复现。一次胜利若无法复现，就只是侥幸。」\n（你获得了一套“生灭计数”：每一次攻守都被归档，下一次会更快、更准。）"
 
-  gacha_albedo_c4_trait: "阿贝多·C4"
-  desc_gacha_albedo_c4_trait: "TODO"
+  gacha_albedo_c4_trait: "神性之陨"
+  desc_gacha_albedo_c4_trait: "阿贝多：「高度差会放大冲击。把优势做成地形，让它自己工作。」\n（从此，突袭与强攻不再只是赌运气，而像一场被计算好的坠击。）"
 
-  gacha_albedo_c6_trait: "阿贝多·C6"
-  desc_gacha_albedo_c6_trait: "TODO"
+  gacha_albedo_c6_trait: "无垢之土"
+  desc_gacha_albedo_c6_trait: "阿贝多：「结晶不是装饰，是“容错”。当变量过多时，先给体系一层壳。」\n你看见军阵外沿泛起沉稳的岩光：混乱被隔在外面，秩序留在阵内。"
 
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_albedo_modifier: "白垩之子"
@@ -33,13 +33,20 @@
   gacha_albedo_modifier_desc: "TODO"
 
   # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_albedo_c0_modifier: "阿贝多·C0"
-  STATIC_MODIFIER_NAME_gacha_albedo_c1_modifier: "阿贝多·C1"
-  STATIC_MODIFIER_NAME_gacha_albedo_c2_modifier: "阿贝多·C2"
-  STATIC_MODIFIER_NAME_gacha_albedo_c3_modifier: "阿贝多·C3"
-  STATIC_MODIFIER_NAME_gacha_albedo_c4_modifier: "阿贝多·C4"
-  STATIC_MODIFIER_NAME_gacha_albedo_c5_modifier: "阿贝多·C5"
-  STATIC_MODIFIER_NAME_gacha_albedo_c6_modifier: "阿贝多·C6"
+  STATIC_MODIFIER_NAME_gacha_albedo_c0_modifier: "白垩座·零命"
+  STATIC_MODIFIER_DESC_gacha_albedo_c0_modifier: "“白垩之子”并不追求神迹，只追求可验证的答案。随他而来的，是一套把城市、矿脉与军需都写成公式的工作方法。"
+  STATIC_MODIFIER_NAME_gacha_albedo_c1_modifier: "伊甸之花"
+  STATIC_MODIFIER_DESC_gacha_albedo_c1_modifier: "每一朵“刹那之花”都像一次微型试验：让资源回流、让损耗可控。小收益被叠起来，最后变成稳定的优势。"
+  STATIC_MODIFIER_NAME_gacha_albedo_c2_modifier: "显生之宙"
+  STATIC_MODIFIER_DESC_gacha_albedo_c2_modifier: "他开始给战争“计数”：胜利不是结果，而是过程的总和。只要计数不断累积，下一次爆发就更接近必然。"
+  STATIC_MODIFIER_NAME_gacha_albedo_c3_modifier: "太阳之华"
+  STATIC_MODIFIER_DESC_gacha_albedo_c3_modifier: "阳华的构型被反复校正，工匠们甚至能照着图纸复刻。城防与工坊的效率，开始像日照一样稳定。"
+  STATIC_MODIFIER_NAME_gacha_albedo_c4_modifier: "神性之陨"
+  STATIC_MODIFIER_DESC_gacha_albedo_c4_modifier: "当高台升起，重力就成了盟友。哪怕敌人披甲固守，也会在一轮轮坠击与震荡里露出裂缝。"
+  STATIC_MODIFIER_NAME_gacha_albedo_c5_modifier: "冥古之潮"
+  STATIC_MODIFIER_DESC_gacha_albedo_c5_modifier: "更深的潮汐被唤醒：从地下到地表，整条补给链被重排。攻势不再断续，而是持续推进。"
+  STATIC_MODIFIER_NAME_gacha_albedo_c6_modifier: "无垢之土"
+  STATIC_MODIFIER_DESC_gacha_albedo_c6_modifier: "最理想的体系不是完美，而是能承受错误。结晶的护持让你的军队在混战、围城与灾荒中仍能保持队形与纪律。"
 
   # 阿贝多 - 国家修正
   STATIC_MODIFIER_NAME_gacha_albedo_country_modifier: "阿贝多·光环"

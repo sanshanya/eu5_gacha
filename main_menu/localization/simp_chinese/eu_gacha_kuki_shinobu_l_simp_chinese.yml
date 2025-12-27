@@ -1,0 +1,88 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 久岐忍 (kuki_shinobu)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_kuki_shinobu: "久岐忍"
+  gacha_last_name_kuki_shinobu: "久岐"
+
+  # === 特质 (Traits) ===
+  gacha_kuki_shinobu_origin_trait: "持证上岗"
+  desc_gacha_kuki_shinobu_origin_trait: "「先说好：不按规章办事，我不接。\n\n账目要对，合同要签，惩戒要写进条款——这样才不会把国家治理变成‘看谁嗓门大’。\n\n你缺的是能干活的人，不是会表态的人。把麻烦交给我，我会把它处理成流程。」"
+
+  gacha_kuki_shinobu_awakened_trait: "鬼之副手·整肃"
+  desc_gacha_kuki_shinobu_awakened_trait: "「市井的乱子，往往比战场更难。\n\n打仗靠火炮，治安靠执行。该抓的抓，该罚的罚——但每一笔都要有凭有据。\n\n你要的是‘可持续的威慑’，不是‘一时的恐吓’。」"
+
+  gacha_kuki_shinobu_transcended_trait: "律法与刀刃"
+  desc_gacha_kuki_shinobu_transcended_trait: "「我在璃月学过律法，也在稻妻见过奉行的手段。\n\n真正有效的统治，是让人知道：违法不划算，守法更省事。\n\n如果你愿意让我把制度落到每个郡县，我能让腐败和走私像失血一样慢慢停下来。」"
+
+  gacha_kuki_shinobu_c2_trait: "割舍侥幸之心"
+  desc_gacha_kuki_shinobu_c2_trait: "「靠‘运气’治理的国家，迟早会撞上必然的灾难。\n\n我会把风险拆开：粮、税、兵、路——每一条都做冗余。\n\n不一定最耀眼，但一定更不容易翻车。」"
+
+  gacha_kuki_shinobu_c4_trait: "越祓结界·后勤轮转"
+  desc_gacha_kuki_shinobu_c4_trait: "「前线需要的不是口号，是补给。\n\n我会让军需像钟表一样转起来：仓储、转运、医护、抚恤，全部有人负责，全部能追责。\n\n你只管决定打不打，剩下的我来保证‘打得动’。」"
+
+  gacha_kuki_shinobu_c6_trait: "割舍软弱之心"
+  desc_gacha_kuki_shinobu_c6_trait: "「我不是英雄。\n\n但当局面要崩的时候，我会站在最先裂开的地方，把那道口子补上。\n\n只要制度还在运转，国家就不会因为一次失误而倒下。」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_modifier: "久岐忍"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_modifier: "TODO"
+  gacha_kuki_shinobu_modifier: "久岐忍的余韵"
+  gacha_kuki_shinobu_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c0_modifier: "烦恼刈座·零命"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c0_modifier: "把“麻烦”变成“事务”：地方治理与治安处置更可控，流程开始取代拍脑袋。"
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c1_modifier: "割舍怜悯之心"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c1_modifier: "不被情绪牵着走：执法与惩戒更稳定，避免因徇私或软弱导致的反复动荡。"
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c2_modifier: "割舍侥幸之心"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c2_modifier: "不把国家押在运气上：财政与后勤的断点减少，边境更不容易被突袭打穿。"
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c3_modifier: "割舍痛苦之心"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c3_modifier: "把痛苦当作成本核算：战损与抚恤更制度化，民心更难被长期战争拖垮。"
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c4_modifier: "割舍封闭之心"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c4_modifier: "信息不再堵在上层：基层反馈更快回流，能更早发现腐败、走私与叛乱苗头。"
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c5_modifier: "割舍逢迎之心"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c5_modifier: "不靠讨好换支持：对权贵与阶层的管理更“硬”，但也更持久、更少反噬。"
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c6_modifier: "割舍软弱之心"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c6_modifier: "在最差的局面也能稳住：关键危机时更难被一波带走，国家更有“翻盘窗口”。"
+
+  # 久岐忍 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_country_modifier: "久岐忍·光环"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c1_country_modifier: "久岐忍·C1"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c2_country_modifier: "久岐忍·C2"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c4_country_modifier: "久岐忍·C4"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c5_country_modifier: "久岐忍·C5"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_kuki_shinobu_c6_country_modifier: "久岐忍·C6"
+  STATIC_MODIFIER_DESC_gacha_kuki_shinobu_c6_country_modifier: "TODO"
+
+  # === 事件 (Events) ===
+  gacha_kuki_shinobu_events.1.title: "久岐忍"
+  gacha_kuki_shinobu_events.1.desc: "TODO"
+  gacha_kuki_shinobu_events.1.a: "……"
+
+  gacha_kuki_shinobu_events.4.title: "久岐忍·C6"
+  gacha_kuki_shinobu_events.4.desc: "TODO"
+  gacha_kuki_shinobu_events.4.a: "……"
+
+  gacha_kuki_shinobu_events.11.title: "久岐忍·C2"
+  gacha_kuki_shinobu_events.11.desc: "TODO"
+  gacha_kuki_shinobu_events.11.a: "……"
+
+  gacha_kuki_shinobu_events.12.title: "久岐忍·C4"
+  gacha_kuki_shinobu_events.12.desc: "TODO"
+  gacha_kuki_shinobu_events.12.a: "……"
+
+  gacha_kuki_shinobu_events.13.title: "久岐忍·C1"
+  gacha_kuki_shinobu_events.13.desc: "TODO"
+  gacha_kuki_shinobu_events.13.a: "……"
+
+  gacha_kuki_shinobu_events.14.title: "久岐忍·C5"
+  gacha_kuki_shinobu_events.14.desc: "TODO"
+  gacha_kuki_shinobu_events.14.a: "……"

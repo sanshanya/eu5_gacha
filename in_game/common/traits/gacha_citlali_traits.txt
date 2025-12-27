@@ -1,0 +1,75 @@
+﻿# 茜特莅莉 Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_citlali_origin_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+
+
+
+gacha_citlali_awakened_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        global_manpower_modifier = 0.04
+        monthly_prestige = 0.05
+        monthly_war_exhaustion = -0.02
+    }
+}
+
+gacha_citlali_transcended_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        stability_cost = -0.05
+        country_cabinet_efficiency = 0.05
+        monthly_legitimacy = 0.05
+        monthly_prestige = 0.04
+    }
+}
+
+# Constellation upgrades
+
+gacha_citlali_c2_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+
+
+
+gacha_citlali_c4_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        global_manpower_modifier = 0.08
+        monthly_prestige = 0.10
+        monthly_war_exhaustion = -0.04
+    }
+}
+
+gacha_citlali_c6_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        stability_cost = -0.10
+        country_cabinet_efficiency = 0.10
+        monthly_legitimacy = 0.10
+        monthly_prestige = 0.08
+    }
+}

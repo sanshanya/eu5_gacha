@@ -1,0 +1,69 @@
+﻿# 莱欧斯利 Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_wriothesley_origin_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_wriothesley_awakened_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        global_devastation_recovery = 0.10
+        global_estate_satisfaction_recovery = 0.025
+        global_manpower_modifier = 0.025
+    }
+}
+
+gacha_wriothesley_transcended_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        stability_cost = -0.04
+        country_cabinet_efficiency = 0.05
+        monthly_legitimacy = 0.05
+        global_estate_satisfaction_recovery = 0.03
+    }
+}
+
+# Constellation upgrades
+
+gacha_wriothesley_c2_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_wriothesley_c4_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        global_devastation_recovery = 0.20
+        global_estate_satisfaction_recovery = 0.05
+        global_manpower_modifier = 0.05
+    }
+}
+
+gacha_wriothesley_c6_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        stability_cost = -0.08
+        country_cabinet_efficiency = 0.10
+        monthly_legitimacy = 0.10
+        global_estate_satisfaction_recovery = 0.06
+    }
+}

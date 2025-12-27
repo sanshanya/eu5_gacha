@@ -1,0 +1,88 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 温迪 (venti)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_venti: "温迪"
+  gacha_last_name_venti: "风吟"
+
+  # === 特质 (Traits) ===
+  gacha_venti_origin_trait: "酒馆的风吟"
+  desc_gacha_venti_origin_trait: "温迪：「别紧张嘛！给我一杯酒、一个舞台，我就能把你们的烦恼吹散一点点。」\n他用歌声安抚城镇的躁动，也用玩笑拆穿贵族的傲慢——不树旗、不称王，却总能让人相信“自由”。"
+
+  gacha_venti_awakened_trait: "高天之歌"
+  desc_gacha_venti_awakened_trait: "温迪：「路要走得轻快，心也要飞得更高。」\n风在军队前方开道：行军更顺，撤退更稳，连坏天气都像被他哄得没那么难受。"
+
+  gacha_venti_transcended_trait: "风神之诗"
+  desc_gacha_venti_transcended_trait: "温迪：「你以为我只是吟游诗人？嗯……那就继续这么以为吧。」\n当他认真起来，战场会起风。箭雨偏转、尘沙遮蔽、旗帜在暴风里重新聚拢——敌人很难判断真正的主攻方向。"
+
+  gacha_venti_c2_trait: "眷恋的泠风"
+  desc_gacha_venti_c2_trait: "温迪：「旧友的歌声会留下回响，哪怕隔着千年。」\n他的风像记忆一样贴近敌军护甲的缝隙：意志被削弱，防线也更容易松动。"
+
+  gacha_venti_c4_trait: "自由的凛风"
+  desc_gacha_venti_c4_trait: "温迪：「自由不是放任，是让人愿意自己站出来。」\n城镇与军队更愿意自发承担责任：你能感觉到自治的活力，而不是被迫的服从。"
+
+  gacha_venti_c6_trait: "抗争的暴风"
+  desc_gacha_venti_c6_trait: "温迪：「若有人要把风关进笼子，那我就把笼子吹散。」\n当敌人试图以强权压制，你的反击会更像暴风：来得快、范围广、而且难以阻挡。"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_venti_modifier: "温迪"
+  STATIC_MODIFIER_DESC_gacha_venti_modifier: "TODO"
+  gacha_venti_modifier: "温迪的余韵"
+  gacha_venti_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_venti_c0_modifier: "歌仙座·零命"
+  STATIC_MODIFIER_DESC_gacha_venti_c0_modifier: "他从不许诺统治，只许诺风：风会带来消息、带来酒香，也带来改变的可能。"
+  STATIC_MODIFIER_NAME_gacha_venti_c1_modifier: "弦发的苍风"
+  STATIC_MODIFIER_DESC_gacha_venti_c1_modifier: "琴弦一拨，苍风分裂成多道回音；战场上，你会发现“多一支箭”有时就够了。"
+  STATIC_MODIFIER_NAME_gacha_venti_c2_modifier: "眷恋的泠风"
+  STATIC_MODIFIER_DESC_gacha_venti_c2_modifier: "泠风把敌人的傲慢吹冷：士气与防备都会在不知不觉间下降。"
+  STATIC_MODIFIER_NAME_gacha_venti_c3_modifier: "千风的诗篇"
+  STATIC_MODIFIER_DESC_gacha_venti_c3_modifier: "诗篇越长，风越熟练。你能更频繁地把局势拉回自己习惯的节奏。"
+  STATIC_MODIFIER_NAME_gacha_venti_c4_modifier: "自由的凛风"
+  STATIC_MODIFIER_DESC_gacha_venti_c4_modifier: "获得风的馈赠的人，会更愿意奔跑、集结、再出发。"
+  STATIC_MODIFIER_NAME_gacha_venti_c5_modifier: "高天的协奏"
+  STATIC_MODIFIER_DESC_gacha_venti_c5_modifier: "协奏让“高天之歌”更干净利落：该抬升的抬升，该坠落的坠落。"
+  STATIC_MODIFIER_NAME_gacha_venti_c6_modifier: "抗争的暴风"
+  STATIC_MODIFIER_DESC_gacha_venti_c6_modifier: "当暴风之眼成形，抗争就不再是口号。敌人的防线像纸一样被撕开，而你的军心在风里越吹越亮。"
+
+  # 温迪 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_venti_country_modifier: "温迪·光环"
+  STATIC_MODIFIER_DESC_gacha_venti_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_venti_c1_country_modifier: "温迪·C1"
+  STATIC_MODIFIER_DESC_gacha_venti_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_venti_c2_country_modifier: "温迪·C2"
+  STATIC_MODIFIER_DESC_gacha_venti_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_venti_c4_country_modifier: "温迪·C4"
+  STATIC_MODIFIER_DESC_gacha_venti_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_venti_c5_country_modifier: "温迪·C5"
+  STATIC_MODIFIER_DESC_gacha_venti_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_venti_c6_country_modifier: "温迪·C6"
+  STATIC_MODIFIER_DESC_gacha_venti_c6_country_modifier: "TODO"
+
+  # === 事件 (Events) ===
+  gacha_venti_events.1.title: "温迪"
+  gacha_venti_events.1.desc: "TODO"
+  gacha_venti_events.1.a: "……"
+
+  gacha_venti_events.4.title: "温迪·C6"
+  gacha_venti_events.4.desc: "TODO"
+  gacha_venti_events.4.a: "……"
+
+  gacha_venti_events.11.title: "温迪·C2"
+  gacha_venti_events.11.desc: "TODO"
+  gacha_venti_events.11.a: "……"
+
+  gacha_venti_events.12.title: "温迪·C4"
+  gacha_venti_events.12.desc: "TODO"
+  gacha_venti_events.12.a: "……"
+
+  gacha_venti_events.13.title: "温迪·C1"
+  gacha_venti_events.13.desc: "TODO"
+  gacha_venti_events.13.a: "……"
+
+  gacha_venti_events.14.title: "温迪·C5"
+  gacha_venti_events.14.desc: "TODO"
+  gacha_venti_events.14.a: "……"

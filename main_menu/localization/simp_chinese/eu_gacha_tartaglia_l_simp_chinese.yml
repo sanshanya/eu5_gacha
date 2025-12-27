@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 达达利亚 (tartaglia)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_tartaglia: "达达利亚"
+  gacha_last_name_tartaglia: "公子"
+  # === 特质 (Traits) ===
+  gacha_tartaglia_origin_trait: "至冬的战士"
+  desc_gacha_tartaglia_origin_trait: "「陛下，给我一个敌人就行。最好强一点——弱的我没兴趣。」\n「我会听命令。只是打赢以后，记得把下一场也安排上。」"
+  gacha_tartaglia_awakened_trait: "魔王武装·狂澜"
+  desc_gacha_tartaglia_awakened_trait: "「你们的军官太谨慎了。」\n「冲锋要像潮水：先撕开缺口，再让洪流把整条阵线卷走。让我带前锋——只要我在，士气就不会掉。」"
+  gacha_tartaglia_transcended_trait: "永无谢幕"
+  desc_gacha_tartaglia_transcended_trait: "「别把胜利当终点，胜利只是开场的掌声。」\n「把你最敢打的那支军团交给我：训练、补给、轮换，我都要。我们会一直打到对手学会尊重你为止。」"
+  gacha_tartaglia_c2_trait: "暗流的猎手"
+  desc_gacha_tartaglia_c2_trait: "「正面会战当然痛快，但真正致命的，是让他们的粮草和银库先慌起来。」\n「海上也一样：你不必沉他们的船，只要让他们不敢出港。」"
+  gacha_tartaglia_c4_trait: "纷争涡源"
+  desc_gacha_tartaglia_c4_trait: "「你想多线作战？好啊。」\n「把地图摊开：我会让敌人以为每个方向都要被突破。等他们分兵——我们就挑最硬的那块狠狠干一拳。」"
+  gacha_tartaglia_c6_trait: "尽灭闪"
+  desc_gacha_tartaglia_c6_trait: "「我不喜欢拖泥带水。」\n「一场决定性的会战、一次彻底的追击、一个让他们再也组织不起第二条防线的结果——这才叫战争。」"
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_tartaglia_modifier: "达达利亚"
+  STATIC_MODIFIER_DESC_gacha_tartaglia_modifier: "TODO"
+  gacha_tartaglia_modifier: "达达利亚的余韵"
+  gacha_tartaglia_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_tartaglia_c0_modifier: "鲸天座·零命"
+  STATIC_MODIFIER_DESC_gacha_tartaglia_c0_modifier: "解锁「公子」的治国风味：偏向进攻、突击与海上主动权。"
+  STATIC_MODIFIER_NAME_gacha_tartaglia_c1_modifier: "魔王武装·遏浪"
+  STATIC_MODIFIER_DESC_gacha_tartaglia_c1_modifier: "进攻节奏更紧凑，冲锋与转换阵型更快；更适合连续推进。"
+  STATIC_MODIFIER_NAME_gacha_tartaglia_c2_modifier: "魔王武装·暗流"
+  STATIC_MODIFIER_DESC_gacha_tartaglia_c2_modifier: "袭扰补给线与私掠更高效；从战果中更快恢复士气与动能。"
+  STATIC_MODIFIER_NAME_gacha_tartaglia_c3_modifier: "深渊之灾·纷争涡源"
+  STATIC_MODIFIER_DESC_gacha_tartaglia_c3_modifier: "主力军团训练与精锐化更快，长期战争中优势更明显。"
+  STATIC_MODIFIER_NAME_gacha_tartaglia_c4_modifier: "深渊之灾·凝水盛放"
+  STATIC_MODIFIER_DESC_gacha_tartaglia_c4_modifier: "连续会战能力提升：作战间隔更短，疲惫累积更慢。"
+  STATIC_MODIFIER_NAME_gacha_tartaglia_c5_modifier: "极恶技·斩水斩雨"
+  STATIC_MODIFIER_DESC_gacha_tartaglia_c5_modifier: "火力协同更顺畅：炮兵/舰炮的压制更稳定，突破更容易形成。"
+  STATIC_MODIFIER_NAME_gacha_tartaglia_c6_modifier: "极恶技·天使灭尽"
+  STATIC_MODIFIER_DESC_gacha_tartaglia_c6_modifier: "关键胜利后更快发动下一波攻势，扩大胜果并逼迫敌人崩盘。"
+
+  gacha_tartaglia_events.1.title: "达达利亚"
+  gacha_tartaglia_events.1.desc: "TODO"
+  gacha_tartaglia_events.1.a: "……"
+  gacha_tartaglia_events.4.title: "达达利亚·C6"
+  gacha_tartaglia_events.4.desc: "TODO"
+  gacha_tartaglia_events.4.a: "……"
+  gacha_tartaglia_events.11.title: "达达利亚·C2"
+  gacha_tartaglia_events.11.desc: "TODO"
+  gacha_tartaglia_events.11.a: "……"
+  gacha_tartaglia_events.12.title: "达达利亚·C4"
+  gacha_tartaglia_events.12.desc: "TODO"
+  gacha_tartaglia_events.12.a: "……"
+  gacha_tartaglia_events.13.title: "达达利亚·C1"
+  gacha_tartaglia_events.13.desc: "TODO"
+  gacha_tartaglia_events.13.a: "……"
+  gacha_tartaglia_events.14.title: "达达利亚·C5"
+  gacha_tartaglia_events.14.desc: "TODO"
+  gacha_tartaglia_events.14.a: "……"

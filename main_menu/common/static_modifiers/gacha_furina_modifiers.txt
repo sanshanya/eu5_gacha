@@ -19,23 +19,25 @@ gacha_furina_c6_modifier = { game_data = { category = character decaying = no } 
 # C0 基础光环（威望+1.00/年, 正统性+1.00/年）
 gacha_furina_country_modifier = {
     game_data = { category = country decaying = no }
-    monthly_prestige = 0.08
-    monthly_legitimacy = 0.08
+    monthly_prestige = 0.12
+    monthly_legitimacy = 0.10
+    num_possible_artists = 1
 }
 
 # C2 光环升级（威望+2.00/年, 正统性+2.00/年, 改革速度+20%）
 gacha_furina_c2_country_modifier = {
     game_data = { category = country decaying = no }
-    monthly_prestige = 0.16
-    monthly_legitimacy = 0.16
-    legislative_efficiency = 0.25
+    legislative_efficiency = 0.12
+    stability_cost = -0.06
+    monthly_prestige = 0.08
 }
 
 # C1 专属机制：外交官+1，艺术家席位+2
 gacha_furina_c1_country_modifier = {
     game_data = { category = country decaying = no }
-    max_diplomats = 1
-    num_possible_artists = 2
+    num_possible_artists = 3
+    hire_advisor_cost_modifier = -0.10
+    legislative_efficiency = 0.05
 }
 
 # C4 国家级占位（主要属性在 Trait 中）
@@ -46,7 +48,9 @@ gacha_furina_c4_country_modifier = {
 # C5 专属机制：外交关系 +2
 gacha_furina_c5_country_modifier = {
     game_data = { category = country decaying = no }
-    num_possible_artists = 8
+    max_diplomats = 1
+    monthly_prestige = 0.18
+    trade_efficiency = 0.08
 }
 
 # C6 国家级机制

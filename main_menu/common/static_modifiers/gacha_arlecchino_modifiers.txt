@@ -1,0 +1,61 @@
+﻿# Generated Modifiers for arlecchino (V3)
+
+# 角色标识：阿蕾奇诺本体
+gacha_arlecchino_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    gacha_fire_godeye = yes
+}
+
+# 命之座等级展示（0-6）
+gacha_arlecchino_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_arlecchino_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_arlecchino_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_arlecchino_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_arlecchino_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_arlecchino_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_arlecchino_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（占位）
+gacha_arlecchino_country_modifier = {
+    game_data = { category = country decaying = no }
+    stability_cost = -0.02
+    country_cabinet_efficiency = 0.03
+    legislative_efficiency = 0.03
+    monthly_legitimacy = 0.02
+    monthly_prestige = 0.02
+}
+
+# C2 光环升级
+gacha_arlecchino_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    stability_cost = -0.05
+    country_cabinet_efficiency = 0.06
+    legislative_efficiency = 0.06
+    monthly_legitimacy = 0.04
+    monthly_prestige = 0.03
+}
+
+# C1 专属机制：内阁席位 +1
+gacha_arlecchino_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    government_size = 1
+    hire_advisor_cost_modifier = -0.10
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_arlecchino_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：国策槽位 +1
+gacha_arlecchino_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    government_reform_slots = 1
+    country_cabinet_efficiency = 0.06
+}
+
+# C6 国家级占位（主要属性在 Trait 中）
+gacha_arlecchino_c6_country_modifier = {
+    game_data = { category = country decaying = no }
+}

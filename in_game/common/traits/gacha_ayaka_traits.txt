@@ -1,0 +1,73 @@
+﻿# 神里绫华 Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_ayaka_origin_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_ayaka_awakened_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        land_morale_recovery = 0.04
+        land_morale = 0.04
+        land_unit_attrition = -0.025
+        army_maintenance_cost = -0.025
+    }
+}
+
+gacha_ayaka_transcended_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        legislative_efficiency = 0.06
+        country_cabinet_efficiency = 0.04
+        stability_cost = -0.04
+        global_estate_target_satisfaction = 0.025
+        monthly_legitimacy = 0.025
+    }
+}
+
+# Constellation upgrades
+
+gacha_ayaka_c2_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_ayaka_c4_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        land_morale_recovery = 0.08
+        land_morale = 0.08
+        land_unit_attrition = -0.05
+        army_maintenance_cost = -0.05
+    }
+}
+
+gacha_ayaka_c6_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        legislative_efficiency = 0.12
+        country_cabinet_efficiency = 0.08
+        stability_cost = -0.08
+        global_estate_target_satisfaction = 0.05
+        monthly_legitimacy = 0.05
+    }
+}

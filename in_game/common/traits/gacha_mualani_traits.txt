@@ -1,0 +1,77 @@
+﻿# 玛拉妮 Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_mualani_origin_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+
+
+
+gacha_mualani_awakened_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        privateer_durability = 0.14
+        ship_capture_chance = 0.06
+        trade_range = 5
+    }
+}
+
+gacha_mualani_transcended_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        monthly_war_exhaustion = -0.04
+        naval_morale_modifier = 0.11
+        privateer_durability = 0.10
+        trade_efficiency = 0.06
+        global_estate_satisfaction_recovery = 0.02
+    }
+}
+
+# Constellation upgrades
+
+gacha_mualani_c2_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+
+
+
+gacha_mualani_c4_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        privateer_durability = 0.28
+        ship_capture_chance = 0.12
+        trade_range = 10
+    }
+}
+
+gacha_mualani_c6_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        monthly_war_exhaustion = -0.08
+        naval_morale_modifier = 0.22
+        privateer_durability = 0.20
+        trade_efficiency = 0.12
+        global_estate_satisfaction_recovery = 0.04
+    }
+}

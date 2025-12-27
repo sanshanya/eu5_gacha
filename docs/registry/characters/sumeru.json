@@ -1,0 +1,924 @@
+{
+  "version": 1,
+  "nation": "sumeru",
+  "characters": [
+    {
+      "code": "alhaitham",
+      "name": {
+        "first": "艾尔海森",
+        "last": "书记官"
+      },
+      "traits": {
+        "origin": {
+          "name": "书记官的低耗法则",
+          "desc": "「你想让我出面？先说明：我对‘功名’没兴趣。\n\n把卷宗交给我。把职责划清。把多余的仪式删掉。\n\n剩下的，我会用最省力的方式让它运转起来——这不是忠诚，是效率。」",
+          "key": "gacha_alhaitham_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.03,
+            "country_cabinet_efficiency": 0.03,
+            "stability_cost": -0.02,
+            "monthly_legitimacy": 0.02
+          },
+          "aura_country_modifier": "gacha_alhaitham_country_modifier"
+        },
+        "awakened": {
+          "name": "逻辑的破阵",
+          "desc": "「城墙、补给线、部队轮换……战争不过是一道大型算题。\n\n你负责决定要不要打，我负责告诉你：从哪里推，最省人命、也最省时间。」",
+          "key": "gacha_alhaitham_awakened_trait",
+          "modifier": {
+            "country_cabinet_efficiency": 0.04,
+            "global_devastation_recovery": 0.1,
+            "stability_cost": -0.02
+          }
+        },
+        "transcended": {
+          "name": "代理贤者·必要之举",
+          "desc": "「我不喜欢领导别人——因为那意味着要为别人的错误买单。\n\n但若无人能把系统修好，那就只能我来。\n\n放心，我不会建立个人崇拜。我只会把规则写到你们再也无法装作看不见。」",
+          "key": "gacha_alhaitham_transcended_trait",
+          "modifier": {
+            "legislative_efficiency": 0.08,
+            "country_cabinet_efficiency": 0.07,
+            "stability_cost": -0.06,
+            "monthly_legitimacy": 0.05
+          }
+        },
+        "c2": {
+          "name": "审读与驳论",
+          "desc": "「在学者的世界里，最昂贵的不是知识，是错误。\n\n我会把错误的激励结构拆掉：谁制造混乱，谁付出代价；谁做出成果，谁得到资源。\n\n从此以后，官僚会学会‘把事情做完’。」",
+          "key": "gacha_alhaitham_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.06,
+            "country_cabinet_efficiency": 0.06,
+            "stability_cost": -0.05,
+            "monthly_legitimacy": 0.04
+          },
+          "aura_country_modifier": "gacha_alhaitham_c2_country_modifier"
+        },
+        "c4": {
+          "name": "静默的索引",
+          "desc": "「信息本身不会说谎，只有人会。\n\n把情报、账目、贸易与军需汇总成一张索引表——你会惊讶地发现，很多‘意外’其实都有轨迹。\n\n我不需要占卜，我只需要数据。」",
+          "key": "gacha_alhaitham_c4_trait",
+          "modifier": {
+            "country_cabinet_efficiency": 0.08,
+            "global_devastation_recovery": 0.2,
+            "stability_cost": -0.04
+          }
+        },
+        "c6": {
+          "name": "正理之治",
+          "desc": "「你想要一个不会自毁的帝国？那就别把它建立在某个‘伟人’身上。\n\n把权力锁进制度里，把制度写进每个人的利益里。\n\n至于我？我会在你不注意的时候，把最难的那部分做完，然后回去睡觉。」",
+          "key": "gacha_alhaitham_c6_trait",
+          "modifier": {
+            "legislative_efficiency": 0.16,
+            "country_cabinet_efficiency": 0.14,
+            "stability_cost": -0.12,
+            "monthly_legitimacy": 0.1
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "天隼座·零命",
+          "desc": "以理性整理政务，降低官僚内耗；当你推进改革时，阻力更小。"
+        },
+        "c1": {
+          "name": "直观",
+          "desc": "决策链条被压缩，内阁行动更迅捷；紧急状态下的反应更快。"
+        },
+        "c2": {
+          "name": "辩章",
+          "desc": "学术与行政被迫对齐：创新与制度传播更顺畅。"
+        },
+        "c3": {
+          "name": "遮诠",
+          "desc": "以“注释”修补漏洞：降低技术与制度的执行成本。"
+        },
+        "c4": {
+          "name": "义贯",
+          "desc": "将纪律写成条款：军队的组织度与围城效率提升。"
+        },
+        "c5": {
+          "name": "智度",
+          "desc": "学府与书库被系统化：顾问与学者更便宜，也更好用。"
+        },
+        "c6": {
+          "name": "正理",
+          "desc": "腐败与渎职更难藏匿：国家更稳定，扩张更可持续。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_alhaitham_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_alhaitham_c0_modifier",
+          "c1": "gacha_alhaitham_c1_modifier",
+          "c2": "gacha_alhaitham_c2_modifier",
+          "c3": "gacha_alhaitham_c3_modifier",
+          "c4": "gacha_alhaitham_c4_modifier",
+          "c5": "gacha_alhaitham_c5_modifier",
+          "c6": "gacha_alhaitham_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_alhaitham_country_modifier",
+          "c1": "gacha_alhaitham_c1_country_modifier",
+          "c2": "gacha_alhaitham_c2_country_modifier",
+          "c4": "gacha_alhaitham_c4_country_modifier",
+          "c5": "gacha_alhaitham_c5_country_modifier",
+          "c6": "gacha_alhaitham_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_alhaitham_modifier": {
+          "gacha_core": "yes",
+          "gacha_grass_godeye": "yes"
+        },
+        "gacha_alhaitham_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_alhaitham_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_alhaitham_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_alhaitham_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_alhaitham_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_alhaitham_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_alhaitham_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_alhaitham_country_modifier": {},
+        "gacha_alhaitham_c1_country_modifier": {
+          "government_size": 1,
+          "hire_advisor_cost_modifier": -0.1
+        },
+        "gacha_alhaitham_c2_country_modifier": {},
+        "gacha_alhaitham_c4_country_modifier": {
+          "country_cabinet_efficiency": 0.08,
+          "global_devastation_recovery": 0.2,
+          "stability_cost": -0.04
+        },
+        "gacha_alhaitham_c5_country_modifier": {
+          "government_reform_slots": 1,
+          "country_cabinet_efficiency": 0.06
+        },
+        "gacha_alhaitham_c6_country_modifier": {
+          "legislative_efficiency": 0.16,
+          "country_cabinet_efficiency": 0.14,
+          "stability_cost": -0.12,
+          "monthly_legitimacy": 0.1
+        }
+      },
+      "story_mode": "default",
+      "nation": "sumeru",
+      "pool": {
+        "in_pool": true,
+        "group": "sumeru"
+      },
+      "starlight_shop": true
+    },
+    {
+      "code": "cyno",
+      "name": {
+        "first": "赛诺",
+        "last": "风纪官"
+      },
+      "traits": {
+        "origin": {
+          "name": "风纪官的冷面裁决",
+          "desc": "「须弥有句老话：规则不严，聪明人就会把它当玩具。\n\n从今天起，你的法令不是‘建议’，是‘判决’。\n\n……别紧张，我也会讲笑话。只是它们通常会让人更沉默。」",
+          "key": "gacha_cyno_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.04,
+            "monthly_war_exhaustion": -0.03,
+            "monthly_legitimacy": 0.02,
+            "stability_cost": -0.02,
+            "country_cabinet_efficiency": 0.02
+          },
+          "aura_country_modifier": "gacha_cyno_country_modifier"
+        },
+        "awakened": {
+          "name": "渡荒之雷",
+          "desc": "「战场上的混乱，和审讯室里的谎言一样——都需要被迅速终结。\n\n当雷鸣响起，队列会知道该向哪里前进；敌人也会知道该在哪里倒下。」",
+          "key": "gacha_cyno_awakened_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.06,
+            "global_manpower_modifier": 0.06,
+            "monthly_prestige": 0.03
+          }
+        },
+        "transcended": {
+          "name": "大风纪官·律令",
+          "desc": "「你把权柄交给我，那就接受代价：贪腐会被清算，投机会被惩戒，越线的贵族会被当众打回去。\n\n秩序不是温柔的，它只是必要。」",
+          "key": "gacha_cyno_transcended_trait",
+          "modifier": {
+            "legislative_efficiency": 0.09,
+            "monthly_war_exhaustion": -0.08,
+            "monthly_legitimacy": 0.06,
+            "stability_cost": -0.06,
+            "country_cabinet_efficiency": 0.04
+          }
+        },
+        "c2": {
+          "name": "诘辩与缄口",
+          "desc": "「有人以‘传统’为名，掩盖罪行；有人以‘自由’为名，贩卖混乱。\n\n我不站队，我只负责把事实摁在桌面上。\n\n顺带一提：桌面很硬。」",
+          "key": "gacha_cyno_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.07,
+            "monthly_war_exhaustion": -0.06,
+            "monthly_legitimacy": 0.05,
+            "stability_cost": -0.05,
+            "country_cabinet_efficiency": 0.03
+          },
+          "aura_country_modifier": "gacha_cyno_c2_country_modifier"
+        },
+        "c4": {
+          "name": "誓裁·不赦",
+          "desc": "「军队需要的不是更多口号，而是更少例外。\n\n当纪律成为习惯，补给、行军、征税都会变得简单。\n\n——简单，就是强大。」",
+          "key": "gacha_cyno_c4_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.12,
+            "global_manpower_modifier": 0.12,
+            "monthly_prestige": 0.06
+          }
+        },
+        "c6": {
+          "name": "赤沙之狼",
+          "desc": "「你问我为何要亲自上阵？\n\n因为最好的威慑，是让对手知道：‘执法者’不只会写判词，也会写战史。\n\n放心，我会把结案陈词留到胜利之后。」",
+          "key": "gacha_cyno_c6_trait",
+          "modifier": {
+            "legislative_efficiency": 0.18,
+            "monthly_war_exhaustion": -0.16,
+            "monthly_legitimacy": 0.12,
+            "stability_cost": -0.12,
+            "country_cabinet_efficiency": 0.08
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "赤沙豺座·零命",
+          "desc": "强化治安与反腐，降低叛乱与地方掣肘。"
+        },
+        "c1": {
+          "name": "干涩笑话",
+          "desc": "在紧张时刻稳定军心；军队训练与作战节奏更连贯。"
+        },
+        "c2": {
+          "name": "诘辩",
+          "desc": "审计与侦缉更高效：间谍更难渗透，黑市更难滋生。"
+        },
+        "c3": {
+          "name": "刑律加注",
+          "desc": "法令执行力度上升：地方自治下降，国家集权更强。"
+        },
+        "c4": {
+          "name": "渡荒之雷",
+          "desc": "战斗与行军更有纪律：伤亡与战损更可控。"
+        },
+        "c5": {
+          "name": "裁决余烬",
+          "desc": "战争疲惫更易消散；在持久战中更能撑住。"
+        },
+        "c6": {
+          "name": "狼牙终式",
+          "desc": "关键战役爆发力提升：冲击更强，敌军更易溃散。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_cyno_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_cyno_c0_modifier",
+          "c1": "gacha_cyno_c1_modifier",
+          "c2": "gacha_cyno_c2_modifier",
+          "c3": "gacha_cyno_c3_modifier",
+          "c4": "gacha_cyno_c4_modifier",
+          "c5": "gacha_cyno_c5_modifier",
+          "c6": "gacha_cyno_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_cyno_country_modifier",
+          "c1": "gacha_cyno_c1_country_modifier",
+          "c2": "gacha_cyno_c2_country_modifier",
+          "c4": "gacha_cyno_c4_country_modifier",
+          "c5": "gacha_cyno_c5_country_modifier",
+          "c6": "gacha_cyno_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_cyno_modifier": {
+          "gacha_core": "yes",
+          "gacha_electro_godeye": "yes"
+        },
+        "gacha_cyno_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_cyno_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_cyno_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_cyno_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_cyno_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_cyno_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_cyno_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_cyno_country_modifier": {},
+        "gacha_cyno_c1_country_modifier": {
+          "government_size": 1,
+          "global_manpower_modifier": 0.08
+        },
+        "gacha_cyno_c2_country_modifier": {},
+        "gacha_cyno_c4_country_modifier": {
+          "monthly_war_exhaustion": -0.12,
+          "global_manpower_modifier": 0.12,
+          "monthly_prestige": 0.06
+        },
+        "gacha_cyno_c5_country_modifier": {
+          "government_reform_slots": 1,
+          "stability_cost": -0.06
+        },
+        "gacha_cyno_c6_country_modifier": {
+          "legislative_efficiency": 0.18,
+          "monthly_war_exhaustion": -0.16,
+          "monthly_legitimacy": 0.12,
+          "stability_cost": -0.12,
+          "country_cabinet_efficiency": 0.08
+        }
+      },
+      "story_mode": "default",
+      "nation": "sumeru",
+      "pool": {
+        "in_pool": true,
+        "group": "sumeru"
+      },
+      "starlight_shop": true
+    },
+    {
+      "code": "faruzan",
+      "name": {
+        "first": "珐露珊",
+        "last": "百解"
+      },
+      "traits": {
+        "origin": {
+          "name": "百解前辈的入门课",
+          "desc": "「先说清楚——叫我‘前辈’。\n\n你们的城墙与工坊布置，像是把齿轮随手丢进盒子里就指望它自己转。\n\n把图纸拿来，我会教你们：什么叫结构，什么叫受力，什么叫‘用最少的材料换最多的成果’。」",
+          "key": "gacha_faruzan_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.1
+          },
+          "aura_country_modifier": "gacha_faruzan_country_modifier"
+        },
+        "awakened": {
+          "name": "机巧·城防解构",
+          "desc": "「攻城并不浪漫。浪漫的是——在敌人以为自己坚不可摧的时候，你指出一根承重梁，然后让整段防线像积木一样倒下。\n\n别担心，我会把讲解写进教材里。」",
+          "key": "gacha_faruzan_awakened_trait",
+          "modifier": {
+            "global_construction_speed": 0.09,
+            "global_devastation_recovery": 0.15,
+            "stability_cost": -0.03
+          }
+        },
+        "transcended": {
+          "name": "百年风沙的答卷",
+          "desc": "「我在遗迹里困了太久，醒来后发现时代变了。\n\n但几何不会变，力学不会变，聪明人的偷懒也不会变。\n\n只要还需要把世界‘算清楚’，我就还能派上用场。」",
+          "key": "gacha_faruzan_transcended_trait",
+          "modifier": {
+            "global_construction_speed": 0.11,
+            "legislative_efficiency": 0.08,
+            "global_devastation_recovery": 0.175,
+            "country_cabinet_efficiency": 0.05
+          }
+        },
+        "c2": {
+          "name": "遗构·复原工程",
+          "desc": "「赤王的机关并非诅咒，而是被误解的设计。\n\n把它们拆开、归档、复原——你会得到一整套超越时代的工艺。\n\n当然，前提是别乱按按钮。」",
+          "key": "gacha_faruzan_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.2
+          },
+          "aura_country_modifier": "gacha_faruzan_c2_country_modifier"
+        },
+        "c4": {
+          "name": "风场·阵列校准",
+          "desc": "「风不是用来祈祷的，是用来校准的。\n\n让运输队走在最省力的路线，让炮兵站在最稳的地基，让建筑按最省材料的曲线生长。\n\n效率，会像风一样无处不在。」",
+          "key": "gacha_faruzan_c4_trait",
+          "modifier": {
+            "global_construction_speed": 0.18,
+            "global_devastation_recovery": 0.3,
+            "stability_cost": -0.06
+          }
+        },
+        "c6": {
+          "name": "万解归一",
+          "desc": "「当所有难题都被拆成零件，就没有‘不可解’。\n\n从城防到火器，从学府到工坊——我会把它们连成一条清晰的技术谱系。\n\n你只需要决定：把这个国家推向哪里。」",
+          "key": "gacha_faruzan_c6_trait",
+          "modifier": {
+            "global_construction_speed": 0.22,
+            "legislative_efficiency": 0.16,
+            "global_devastation_recovery": 0.35,
+            "country_cabinet_efficiency": 0.1
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "妙道合真座·零命",
+          "desc": "工程学体系化：建造与工坊效率提升，工程顾问更容易出现。"
+        },
+        "c1": {
+          "name": "忘形炼智",
+          "desc": "拆掉旧范式：改革成本降低，推进基础设施更顺。"
+        },
+        "c2": {
+          "name": "厌想催枯",
+          "desc": "让错误方案“自然枯萎”：减少浪费，围城与破城效率提升。"
+        },
+        "c3": {
+          "name": "漫行灵圃",
+          "desc": "把城镇当作实验田：发展与改良更快，增长更稳。"
+        },
+        "c4": {
+          "name": "神机明悟",
+          "desc": "机关学大成：要塞防御与炮兵校准更可靠。"
+        },
+        "c5": {
+          "name": "伽有迦那",
+          "desc": "遗迹知识转化为国力：科研与制度吸收提速。"
+        },
+        "c6": {
+          "name": "妙道合真",
+          "desc": "工程与学术形成闭环：大型工程、军工与经济改革协同增益。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_faruzan_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_faruzan_c0_modifier",
+          "c1": "gacha_faruzan_c1_modifier",
+          "c2": "gacha_faruzan_c2_modifier",
+          "c3": "gacha_faruzan_c3_modifier",
+          "c4": "gacha_faruzan_c4_modifier",
+          "c5": "gacha_faruzan_c5_modifier",
+          "c6": "gacha_faruzan_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_faruzan_country_modifier",
+          "c1": "gacha_faruzan_c1_country_modifier",
+          "c2": "gacha_faruzan_c2_country_modifier",
+          "c4": "gacha_faruzan_c4_country_modifier",
+          "c5": "gacha_faruzan_c5_country_modifier",
+          "c6": "gacha_faruzan_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_faruzan_modifier": {
+          "gacha_core": "yes",
+          "gacha_grass_godeye": "yes"
+        },
+        "gacha_faruzan_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_faruzan_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_faruzan_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_faruzan_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_faruzan_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_faruzan_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_faruzan_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_faruzan_country_modifier": {},
+        "gacha_faruzan_c1_country_modifier": {
+          "government_size": 1,
+          "global_construction_speed": 0.06
+        },
+        "gacha_faruzan_c2_country_modifier": {},
+        "gacha_faruzan_c4_country_modifier": {
+          "global_construction_speed": 0.18,
+          "global_devastation_recovery": 0.3,
+          "stability_cost": -0.06
+        },
+        "gacha_faruzan_c5_country_modifier": {
+          "government_reform_slots": 1,
+          "hire_advisor_cost_modifier": -0.12
+        },
+        "gacha_faruzan_c6_country_modifier": {
+          "global_construction_speed": 0.22,
+          "legislative_efficiency": 0.16,
+          "global_devastation_recovery": 0.35,
+          "country_cabinet_efficiency": 0.1
+        }
+      },
+      "story_mode": "default",
+      "nation": "sumeru",
+      "pool": {
+        "in_pool": false,
+        "group": ""
+      },
+      "starlight_shop": false
+    },
+    {
+      "code": "nahida",
+      "name": {
+        "first": "纳西妲",
+        "last": "布耶尔"
+      },
+      "traits": {
+        "origin": {
+          "name": "世界树的切片",
+          "desc": "「我不是被关在净善宫里的‘笼中鸟’——那是另一段被剪掉的故事。\n\n我记得自己从树上坠落的那一瞬，也记得那些不该被遗忘的名字。\n\n你的国家需要的不是神谕，而是一把能把知识分给每个人的钥匙。」",
+          "key": "gacha_nahida_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "global_institution_growth_modifier": 0.25,
+            "research_speed_modifier": 0.1
+          },
+          "aura_country_modifier": "gacha_nahida_country_modifier"
+        },
+        "awakened": {
+          "name": "摩耶之梦的解析者",
+          "desc": "「梦境与现实并不冲突，它们只是不同的模型。\n\n我会在梦里推演你的战线：补给、士气、要塞结构……\n\n醒来时，你会得到一份比占卜更可靠的答案。」",
+          "key": "gacha_nahida_awakened_trait",
+          "modifier": {
+            "siege_ability": 0.3
+          }
+        },
+        "transcended": {
+          "name": "小吉祥草王",
+          "desc": "「统治并非控制。真正的‘智慧’，是让每个人都能作出更好的选择。\n\n我会梳理你的官僚与学术体系，让知识流动起来。\n\n至于‘心’——那要由你来赢得。」",
+          "key": "gacha_nahida_transcended_trait",
+          "modifier": {
+            "research_speed_modifier": 0.2,
+            "country_cabinet_efficiency": 0.1
+          }
+        },
+        "c2": {
+          "name": "千朵玫瑰·早晨",
+          "desc": "「当知识不再被垄断，社会就会自己长出答案。\n\n我会把学府、工坊与市集连成网络，让最好的想法最快落地。\n\n黎明会更早到来，因为人们终于能看见路。」",
+          "key": "gacha_nahida_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "global_institution_growth_modifier": 0.5,
+            "research_speed_modifier": 0.2
+          },
+          "aura_country_modifier": "gacha_nahida_c2_country_modifier"
+        },
+        "c4": {
+          "name": "蕴种印·锁死",
+          "desc": "「所谓坚城，不过是复杂系统。\n\n我会在它最关键的节点上‘锁死’：桥梁、粮仓、城门与军械库。\n\n一旦节点崩溃，整条防线都会自己倒下——这比屠杀更干净。」",
+          "key": "gacha_nahida_c4_trait",
+          "modifier": {
+            "siege_ability": 0.6,
+            "army_artillery_power": 0.2
+          }
+        },
+        "c6": {
+          "name": "智慧主·布耶尔",
+          "desc": "「我不需要王座来证明自己。\n\n只要你愿意把这个文明推向未知，我就会为你点亮路径：科研、制度、语言与记忆。\n\n让我们把‘不可能’拆成可解的问题——直到世界树都无法再遮住我们的光。」",
+          "key": "gacha_nahida_c6_trait",
+          "modifier": {
+            "research_speed_modifier": 0.4,
+            "country_cabinet_efficiency": 0.4
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "智慧主座·零命",
+          "desc": "知识像水一样渗透：创新与制度传播更快，学术派系更合作。"
+        },
+        "c1": {
+          "name": "心景幻成",
+          "desc": "以“心景”安抚民心：稳定性更易维持，内乱概率下降。"
+        },
+        "c2": {
+          "name": "正觉善见",
+          "desc": "看穿谎言与偏见：顾问与官员更廉洁，腐败更难滋生。"
+        },
+        "c3": {
+          "name": "智慧主的苦行",
+          "desc": "把‘痛苦’当成本：为长期改革提供韧性，削弱政策反噬。"
+        },
+        "c4": {
+          "name": "比量破愚",
+          "desc": "用推理击碎迷信：科研与军工迭代更快，围城更有效。"
+        },
+        "c5": {
+          "name": "蕴种之式",
+          "desc": "在土地上播下方法论：发展与改良更高效，产出更稳定。"
+        },
+        "c6": {
+          "name": "大梦觉悟",
+          "desc": "把梦化作现实：重大改革与科技突破更容易触发，国家上限提升。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_nahida_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_nahida_c0_modifier",
+          "c1": "gacha_nahida_c1_modifier",
+          "c2": "gacha_nahida_c2_modifier",
+          "c3": "gacha_nahida_c3_modifier",
+          "c4": "gacha_nahida_c4_modifier",
+          "c5": "gacha_nahida_c5_modifier",
+          "c6": "gacha_nahida_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_nahida_country_modifier",
+          "c1": "gacha_nahida_c1_country_modifier",
+          "c2": "gacha_nahida_c2_country_modifier",
+          "c4": "gacha_nahida_c4_country_modifier",
+          "c5": "gacha_nahida_c5_country_modifier",
+          "c6": "gacha_nahida_c6_country_modifier"
+        },
+        "other_modifiers": [
+          "gacha_nahida_omniscient_aid_modifier",
+          "gacha_nahida_stellar_bond_modifier"
+        ]
+      },
+      "buff_values": {
+        "gacha_nahida_modifier": {
+          "gacha_core": "yes",
+          "gacha_grass_godeye": "yes"
+        },
+        "gacha_nahida_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_nahida_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_nahida_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_nahida_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_nahida_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_nahida_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_nahida_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_nahida_country_modifier": {},
+        "gacha_nahida_c1_country_modifier": {
+          "government_size": 1
+        },
+        "gacha_nahida_c2_country_modifier": {},
+        "gacha_nahida_c4_country_modifier": {
+          "legislative_efficiency": 0.15,
+          "global_devastation_recovery": 0.25,
+          "global_construction_speed": 0.08
+        },
+        "gacha_nahida_c5_country_modifier": {
+          "country_cabinet_efficiency": 0.1
+        },
+        "gacha_nahida_c6_country_modifier": {
+          "global_institution_growth_modifier": 0.75,
+          "research_speed_modifier": 0.25,
+          "country_cabinet_efficiency": 0.12,
+          "monthly_prestige": 0.1
+        },
+        "gacha_nahida_omniscient_aid_modifier": {
+          "research_speed_modifier": 0.05
+        },
+        "gacha_nahida_stellar_bond_modifier": {}
+      },
+      "story_mode": "custom",
+      "nation": "sumeru",
+      "pool": {
+        "in_pool": true,
+        "group": "standard"
+      },
+      "starlight_shop": true,
+      "story_ref": {
+        "event_file": "in_game/events/gacha_nahida_events.txt",
+        "loc_prefix": "gacha_nahida_events"
+      }
+    },
+    {
+      "code": "nilou",
+      "name": {
+        "first": "妮露",
+        "last": "祖拜尔"
+      },
+      "traits": {
+        "origin": {
+          "name": "祖拜尔剧场的领舞",
+          "desc": "「舞台上，每个人都需要自己的位置；舞台下，国家也是。\n\n若你愿意给平民一场能参与的节庆，他们就会把不满变成掌声。\n\n我不懂政治，但我懂人心的节奏。」",
+          "key": "gacha_nilou_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "monthly_prestige": 0.03,
+            "monthly_legitimacy": 0.02,
+            "stability_cost": -0.03,
+            "trade_efficiency": 0.02,
+            "global_estate_satisfaction_recovery": 0.02,
+            "monthly_war_exhaustion": -0.02
+          },
+          "aura_country_modifier": "gacha_nilou_country_modifier"
+        },
+        "awakened": {
+          "name": "莲舞·绽放之时",
+          "desc": "「有人说艺术无用。可当军队疲惫、城市饥饿时，一支舞能让人们记起：我们为何要活下去。\n\n让我把节庆变成制度，把欢呼变成凝聚。」",
+          "key": "gacha_nilou_awakened_trait",
+          "modifier": {
+            "naval_morale_modifier": 0.06,
+            "trade_efficiency": 0.05,
+            "monthly_war_exhaustion": -0.03
+          }
+        },
+        "transcended": {
+          "name": "花神的舞台",
+          "desc": "「把我推到王座上？我会害怕。\n\n但如果这能让更多人免于恐惧——我愿意学会如何统治。\n\n只是请记住：我希望这个国家，永远保留一盏给普通人的灯。」",
+          "key": "gacha_nilou_transcended_trait",
+          "modifier": {
+            "monthly_prestige": 0.07,
+            "monthly_legitimacy": 0.05,
+            "stability_cost": -0.07,
+            "trade_efficiency": 0.06,
+            "global_estate_satisfaction_recovery": 0.05,
+            "monthly_war_exhaustion": -0.05
+          }
+        },
+        "c2": {
+          "name": "清露与花冠",
+          "desc": "「让剧场不只属于城市。\n\n在港口、集市与村庄，我们都能搭起小小的舞台。\n\n当文化被分享，阶层就没那么尖锐；当节庆成为习惯，忠诚就会自然生长。」",
+          "key": "gacha_nilou_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "monthly_prestige": 0.06,
+            "monthly_legitimacy": 0.04,
+            "stability_cost": -0.06,
+            "trade_efficiency": 0.05,
+            "global_estate_satisfaction_recovery": 0.04,
+            "monthly_war_exhaustion": -0.04
+          },
+          "aura_country_modifier": "gacha_nilou_c2_country_modifier"
+        },
+        "c4": {
+          "name": "盈月的水镜",
+          "desc": "「海风会带走谣言，也会带来消息。\n\n在舰队启航前，为他们跳一支送行的舞吧——不是迷信，是仪式。\n\n仪式能让人相信胜利，而相信本身，就是力量。」",
+          "key": "gacha_nilou_c4_trait",
+          "modifier": {
+            "naval_morale_modifier": 0.12,
+            "trade_efficiency": 0.1,
+            "monthly_war_exhaustion": -0.06
+          }
+        },
+        "c6": {
+          "name": "永不落幕的谢幕",
+          "desc": "「如果有一天战争结束，你会不会也像观众一样离席？\n\n……不，我不该这么想。\n\n我会把‘和平’写进日常：让税收不再像惩罚，让法律不再像鞭子。\n\n等到那天，人们回望这一段历史时，会说：那是一场终于迎来谢幕的噩梦。」",
+          "key": "gacha_nilou_c6_trait",
+          "modifier": {
+            "monthly_prestige": 0.14,
+            "monthly_legitimacy": 0.1,
+            "stability_cost": -0.14,
+            "trade_efficiency": 0.12,
+            "global_estate_satisfaction_recovery": 0.1,
+            "monthly_war_exhaustion": -0.1
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "睡莲座·零命",
+          "desc": "文化凝聚：声望与民心上升，地方不满下降。"
+        },
+        "c1": {
+          "name": "却月的轻舞",
+          "desc": "节庆常态化：稳定成本降低，叛乱更难酝酿。"
+        },
+        "c2": {
+          "name": "莲台的祝祷",
+          "desc": "社群互助增强：发展更快，贫困地区恢复更迅速。"
+        },
+        "c3": {
+          "name": "剧场的幕布",
+          "desc": "文化产业兴盛：贸易与城市收入提升。"
+        },
+        "c4": {
+          "name": "水镜的回响",
+          "desc": "海军士气与补给更稳，远航更安全。"
+        },
+        "c5": {
+          "name": "花神的邀约",
+          "desc": "外交更柔和：文化亲和与结盟倾向提升。"
+        },
+        "c6": {
+          "name": "繁花谢幕",
+          "desc": "黄金时代的引子：全国范围繁荣与稳定的综合提升。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_nilou_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_nilou_c0_modifier",
+          "c1": "gacha_nilou_c1_modifier",
+          "c2": "gacha_nilou_c2_modifier",
+          "c3": "gacha_nilou_c3_modifier",
+          "c4": "gacha_nilou_c4_modifier",
+          "c5": "gacha_nilou_c5_modifier",
+          "c6": "gacha_nilou_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_nilou_country_modifier",
+          "c1": "gacha_nilou_c1_country_modifier",
+          "c2": "gacha_nilou_c2_country_modifier",
+          "c4": "gacha_nilou_c4_country_modifier",
+          "c5": "gacha_nilou_c5_country_modifier",
+          "c6": "gacha_nilou_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_nilou_modifier": {
+          "gacha_core": "yes",
+          "gacha_water_godeye": "yes"
+        },
+        "gacha_nilou_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_nilou_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_nilou_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_nilou_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_nilou_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_nilou_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_nilou_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_nilou_country_modifier": {},
+        "gacha_nilou_c1_country_modifier": {
+          "government_size": 1,
+          "monthly_prestige": 0.04
+        },
+        "gacha_nilou_c2_country_modifier": {},
+        "gacha_nilou_c4_country_modifier": {
+          "naval_morale_modifier": 0.12,
+          "trade_efficiency": 0.1,
+          "monthly_war_exhaustion": -0.06
+        },
+        "gacha_nilou_c5_country_modifier": {
+          "government_reform_slots": 1,
+          "max_diplomats": 1
+        },
+        "gacha_nilou_c6_country_modifier": {
+          "monthly_prestige": 0.14,
+          "monthly_legitimacy": 0.1,
+          "stability_cost": -0.14,
+          "trade_efficiency": 0.12,
+          "global_estate_satisfaction_recovery": 0.1,
+          "monthly_war_exhaustion": -0.1
+        }
+      },
+      "story_mode": "default",
+      "nation": "sumeru",
+      "pool": {
+        "in_pool": true,
+        "group": "sumeru"
+      },
+      "starlight_shop": true
+    }
+  ]
+}

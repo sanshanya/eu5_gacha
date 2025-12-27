@@ -6,26 +6,19 @@
   # === 姓名 ===
   gacha_first_name_mavuika: "玛薇卡"
   gacha_last_name_mavuika: "烈焰"
-
   # === 特质 (Traits) ===
-  gacha_mavuika_origin_trait: "玛薇卡·初始"
-  desc_gacha_mavuika_origin_trait: "TODO"
-
-  gacha_mavuika_awakened_trait: "玛薇卡·觉醒"
-  desc_gacha_mavuika_awakened_trait: "TODO"
-
-  gacha_mavuika_transcended_trait: "玛薇卡·超越"
-  desc_gacha_mavuika_transcended_trait: "TODO"
-
-  gacha_mavuika_c2_trait: "玛薇卡·C2"
-  desc_gacha_mavuika_c2_trait: "TODO"
-
-  gacha_mavuika_c4_trait: "玛薇卡·C4"
-  desc_gacha_mavuika_c4_trait: "TODO"
-
-  gacha_mavuika_c6_trait: "玛薇卡·C6"
-  desc_gacha_mavuika_c6_trait: "TODO"
-
+  gacha_mavuika_origin_trait: "永燃圣火·日冕"
+  desc_gacha_mavuika_origin_trait: "玛薇卡：「你的士兵在怕——不是怕敌人，是怕自己不够强。」\n「带他们去训练场，给他们一团能点亮夜色的火。只要他们敢直视火焰，就敢直视战场。」\n「别担心，我不会让他们白白流血。胜利，必须配得上牺牲。」"
+  gacha_mavuika_awakened_trait: "最强战士·锻军"
+  desc_gacha_mavuika_awakened_trait: "玛薇卡：「战术可以学，胆魄得锻出来。」\n「把最硬的那批人编成先锋，让他们在枪炮里跑、在烈焰里站稳。等他们学会不退，你的军队就再也不会散。」"
+  gacha_mavuika_transcended_trait: "不败阳焰·王权"
+  desc_gacha_mavuika_transcended_trait: "玛薇卡：「你要的是帝国？那就先给它一颗不会熄灭的心。」\n「我会替你立下战争与和平的尺度：该战时，诸部同火；该停时，诸部同誓。」\n「太阳不是命令——太阳是方向。」"
+  gacha_mavuika_c2_trait: "灰烬的代价·铭记"
+  desc_gacha_mavuika_c2_trait: "玛薇卡：「灰烬不是终点，是代价。」\n「把牺牲记在账上，把荣誉刻在碑上。让每一次征召都有归处，每一次阵亡都有名字。」"
+  gacha_mavuika_c4_trait: "领袖的觉悟·同火"
+  desc_gacha_mavuika_c4_trait: "玛薇卡：「领袖的觉悟？就是站在最前面，却不让任何人觉得孤单。」\n「当我举起圣火，你的旗帜就不会倒。跟上来，我们把黑暗推回去。」"
+  gacha_mavuika_c6_trait: "人之名·解放"
+  desc_gacha_mavuika_c6_trait: "玛薇卡：「神明的光太刺眼，容易让人忘了——是人自己在走路。」\n「如果你选择让人民抬头，我就把这团火交给他们。」\n「以‘人之名’，去开辟属于你们的未来。」"
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_mavuika_modifier: "烈焰之誓"
   STATIC_MODIFIER_DESC_gacha_mavuika_modifier: "TODO"
@@ -33,54 +26,40 @@
   gacha_mavuika_modifier_desc: "TODO"
 
   # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_mavuika_c0_modifier: "玛薇卡·C0"
-  STATIC_MODIFIER_NAME_gacha_mavuika_c1_modifier: "玛薇卡·C1"
-  STATIC_MODIFIER_NAME_gacha_mavuika_c2_modifier: "玛薇卡·C2"
-  STATIC_MODIFIER_NAME_gacha_mavuika_c3_modifier: "玛薇卡·C3"
-  STATIC_MODIFIER_NAME_gacha_mavuika_c4_modifier: "玛薇卡·C4"
-  STATIC_MODIFIER_NAME_gacha_mavuika_c5_modifier: "玛薇卡·C5"
-  STATIC_MODIFIER_NAME_gacha_mavuika_c6_modifier: "玛薇卡·C6"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c0_modifier: "不败阳焰座·零命"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c0_modifier: "圣火鼓舞军心：陆军士气与人力恢复提升。"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c1_modifier: "夜主的授记"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c1_modifier: "火中授记，军官更易成材：训练效率提升，将领更易脱颖而出。"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c2_modifier: "灰烬的代价"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c2_modifier: "把代价算清，战争更可控：厌战与战争疲劳更易压下。"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c3_modifier: "燃烧的太阳"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c3_modifier: "烈日压境，进攻更凶猛：冲击与攻城更强，胜利更易转化为威望。"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c4_modifier: "「领袖」的觉悟"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c4_modifier: "同火不退：纪律提升，战斗损耗降低。"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c5_modifier: "真实的含义"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c5_modifier: "胜利不止于战场：改革与制度推进更顺，稳定成本降低。"
+  STATIC_MODIFIER_NAME_gacha_mavuika_c6_modifier: "「人之名」解放"
+  STATIC_MODIFIER_DESC_gacha_mavuika_c6_modifier: "以人民之志延续太阳：叛乱风险显著下降，长期繁荣与凝聚力提升。"
 
-  # 玛薇卡 - 国家修正
-  STATIC_MODIFIER_NAME_gacha_mavuika_country_modifier: "玛薇卡·光环"
-  STATIC_MODIFIER_DESC_gacha_mavuika_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_mavuika_c1_country_modifier: "玛薇卡·C1"
-  STATIC_MODIFIER_DESC_gacha_mavuika_c1_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_mavuika_c2_country_modifier: "玛薇卡·C2"
-  STATIC_MODIFIER_DESC_gacha_mavuika_c2_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_mavuika_c4_country_modifier: "玛薇卡·C4"
-  STATIC_MODIFIER_DESC_gacha_mavuika_c4_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_mavuika_c5_country_modifier: "玛薇卡·C5"
-  STATIC_MODIFIER_DESC_gacha_mavuika_c5_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_mavuika_c6_country_modifier: "玛薇卡·C6"
-  STATIC_MODIFIER_DESC_gacha_mavuika_c6_country_modifier: "TODO"
-
-  # === 事件 (Events) ===
   gacha_mavuika_events.1.title: "玛薇卡"
   gacha_mavuika_events.1.desc: "TODO"
   gacha_mavuika_events.1.a: "……"
-
   gacha_mavuika_events.2.title: "玛薇卡"
   gacha_mavuika_events.2.a: "继续"
   gacha_mavuika_events.3.title: "玛薇卡"
   gacha_mavuika_events.3.a: "继续"
-
   gacha_mavuika_events.13.title: "玛薇卡·C1"
   gacha_mavuika_events.13.desc: "TODO"
   gacha_mavuika_events.13.a: "……"
-
   gacha_mavuika_events.11.title: "玛薇卡·C2"
   gacha_mavuika_events.11.desc: "TODO"
   gacha_mavuika_events.11.a: "……"
-
   gacha_mavuika_events.12.title: "玛薇卡·C4"
   gacha_mavuika_events.12.desc: "TODO"
   gacha_mavuika_events.12.a: "……"
-
   gacha_mavuika_events.14.title: "玛薇卡·C5"
   gacha_mavuika_events.14.desc: "TODO"
   gacha_mavuika_events.14.a: "……"
-
   gacha_mavuika_events.4.title: "玛薇卡·C6"
   gacha_mavuika_events.4.desc: "TODO"
   gacha_mavuika_events.4.a: "……"

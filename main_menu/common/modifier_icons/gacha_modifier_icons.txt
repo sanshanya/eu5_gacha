@@ -18,6 +18,10 @@ gacha_fire_godeye = {
   positive = "gfx/interface/icons/modifier_types/gacha_fire_godeye.dds"
 }
 
+gacha_wind_godeye = {
+  positive = "gfx/interface/icons/modifier_types/gacha_wind_godeye.dds"
+}
+
 gacha_grass_godeye = {
   positive = "gfx/interface/icons/modifier_types/gacha_grass_godeye.dds"
 }

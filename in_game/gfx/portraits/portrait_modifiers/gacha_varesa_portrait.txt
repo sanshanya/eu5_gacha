@@ -1,0 +1,22 @@
+﻿gacha_varesa_portrait = {
+  usage    = game
+  priority = 100
+
+  gacha_varesa_01 = {
+    dna_modifiers = {
+      accessory = {
+        mode     = replace
+        gene     = gacha_varesa_props_1
+        template = gacha_varesa_01
+        value    = 0.5
+      }
+    }
+    weight = {
+      base = 0
+      modifier = {
+        add = 255
+        has_character_modifier = gacha_varesa_modifier
+      }
+    }
+  }
+}

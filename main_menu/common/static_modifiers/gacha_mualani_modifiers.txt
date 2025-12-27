@@ -1,0 +1,62 @@
+﻿# Generated Modifiers for mualani (V3)
+
+# 角色标识：玛拉妮本体
+gacha_mualani_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    gacha_water_godeye = yes
+}
+
+# 命之座等级展示（0-6）
+gacha_mualani_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_mualani_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_mualani_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_mualani_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_mualani_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_mualani_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_mualani_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（占位）
+gacha_mualani_country_modifier = {
+    game_data = { category = country decaying = no }
+    monthly_war_exhaustion = -0.02
+    naval_morale_modifier = 0.04
+    privateer_durability = 0.04
+    trade_efficiency = 0.02
+    global_estate_satisfaction_recovery = 0.01
+}
+
+# C2 光环升级
+gacha_mualani_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    monthly_war_exhaustion = -0.03
+    naval_morale_modifier = 0.09
+    privateer_durability = 0.08
+    trade_efficiency = 0.05
+    global_estate_satisfaction_recovery = 0.02
+}
+
+# C1 专属机制：内阁席位 +1
+gacha_mualani_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    privateer_durability = 0.15
+    ship_build_speed = 0.10
+    monthly_war_exhaustion = -0.03
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_mualani_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：国策槽位 +1
+gacha_mualani_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    global_construction_speed = 0.06
+    trade_efficiency = 0.08
+}
+
+# C6 国家级占位（主要属性在 Trait 中）
+gacha_mualani_c6_country_modifier = {
+    game_data = { category = country decaying = no }
+}

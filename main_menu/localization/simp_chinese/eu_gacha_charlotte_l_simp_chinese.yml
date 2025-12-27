@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 夏洛蒂 (charlotte)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_charlotte: "夏洛蒂"
+  gacha_last_name_charlotte: "记者"
+  # === 特质 (Traits) ===
+  gacha_charlotte_origin_trait: "蒸汽鸟报·头条猎手"
+  desc_gacha_charlotte_origin_trait: "「别担心，我不会写成歌颂你的颂词。我的工作只有一件事：把事实写出来——让所有人都看见。」\n\n她把『温亨廷先生』往桌上一放，镜头对准你的内阁与诸侯。谣言、贪污、走私与密约，会在第二天的头版上失去遮羞布。"
+  gacha_charlotte_awakened_trait: "战地取证·冷色快门"
+  desc_gacha_charlotte_awakened_trait: "「战争从不缺故事，缺的是证据。」\n\n夏洛蒂会跟着军队走到最前线：记录补给线的断点、炮位的误差、军纪的裂缝。对外，它是动员的号角；对内，它是整肃的刀——用一张张画片逼迫所有人把事做对。"
+  gacha_charlotte_transcended_trait: "真相的定价权"
+  desc_gacha_charlotte_transcended_trait: "「你以为舆论是风？不，它是方向盘。」\n\n当她开始掌控叙事的节奏，民心会更愿意忍受税收与改革；而那些把国家当私产的家伙，会发现自己突然『没有朋友』了。"
+  gacha_charlotte_c2_trait: "核实·内阁监督"
+  desc_gacha_charlotte_c2_trait: "「我不需要你许诺清白——我只要你允许我查账。」\n\n她把核对流程嵌进政务：每一次拨款、每一份军需、每一份封地文书都要留下可追溯的证据链。腐败与拖延不再是『习惯』，而会变成可被公开处置的罪名。"
+  gacha_charlotte_c4_trait: "督促·边境快讯"
+  desc_gacha_charlotte_c4_trait: "「边境的风向变了——我已经写好了标题。」\n\n她的线人、报童与印刷点像毛细血管一样延伸到前线与港口：你更早得到敌国集结、叛乱风声与贸易异动的情报，并能在消息扩散前先一步定调。"
+  gacha_charlotte_c6_trait: "要义·国家叙事"
+  desc_gacha_charlotte_c6_trait: "「一座国家也需要故事：告诉人民他们是谁，以及为什么值得赢。」\n\n当战争与改革进入最艰难的阶段，她会把混乱剪成一条清晰的主线——把牺牲解释成必然，把胜利塑造成共同的荣耀。人们未必爱你，但他们会愿意相信『这条路走得通』。"
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_charlotte_modifier: "夏洛蒂"
+  STATIC_MODIFIER_DESC_gacha_charlotte_modifier: "TODO"
+  gacha_charlotte_modifier: "夏洛蒂的余韵"
+  gacha_charlotte_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_charlotte_c0_modifier: "真视镜座·零命"
+  STATIC_MODIFIER_DESC_gacha_charlotte_c0_modifier: "记者并非旁观者：你获得一条更可靠的『事实链』，更容易发现腐败与谣言的源头。"
+  STATIC_MODIFIER_NAME_gacha_charlotte_c1_modifier: "以核实为约束"
+  STATIC_MODIFIER_DESC_gacha_charlotte_c1_modifier: "『先核对，再下令。』行政命令的执行更少偏差，内部治理更稳定。"
+  STATIC_MODIFIER_NAME_gacha_charlotte_c2_modifier: "以求真为职守"
+  STATIC_MODIFIER_DESC_gacha_charlotte_c2_modifier: "她会追着问题跑到最后一行账本。揭露阴影后，改革与整肃更容易被公众接受。"
+  STATIC_MODIFIER_NAME_gacha_charlotte_c3_modifier: "以独立为先决"
+  STATIC_MODIFIER_DESC_gacha_charlotte_c3_modifier: "不受任何派系收编的笔锋，让你在处理贵族/阶层博弈时更有回旋余地。"
+  STATIC_MODIFIER_NAME_gacha_charlotte_c4_modifier: "以督促为责任"
+  STATIC_MODIFIER_DESC_gacha_charlotte_c4_modifier: "把拖延写成丑闻，把渎职写成罪名。官僚效率提升，军需与工程更少被层层截留。"
+  STATIC_MODIFIER_NAME_gacha_charlotte_c5_modifier: "以良知为原则"
+  STATIC_MODIFIER_DESC_gacha_charlotte_c5_modifier: "她会把『底线』写进制度：对滥权与酷刑的容忍度下降，民心更不易崩塌。"
+  STATIC_MODIFIER_NAME_gacha_charlotte_c6_modifier: "以有趣相关为要义"
+  STATIC_MODIFIER_DESC_gacha_charlotte_c6_modifier: "当叙事与事实被她同时握在手里，你能更灵活地动员社会：宣传、情报与治安形成闭环。"
+
+  gacha_charlotte_events.1.title: "夏洛蒂"
+  gacha_charlotte_events.1.desc: "TODO"
+  gacha_charlotte_events.1.a: "……"
+  gacha_charlotte_events.4.title: "夏洛蒂·C6"
+  gacha_charlotte_events.4.desc: "TODO"
+  gacha_charlotte_events.4.a: "……"
+  gacha_charlotte_events.11.title: "夏洛蒂·C2"
+  gacha_charlotte_events.11.desc: "TODO"
+  gacha_charlotte_events.11.a: "……"
+  gacha_charlotte_events.12.title: "夏洛蒂·C4"
+  gacha_charlotte_events.12.desc: "TODO"
+  gacha_charlotte_events.12.a: "……"
+  gacha_charlotte_events.13.title: "夏洛蒂·C1"
+  gacha_charlotte_events.13.desc: "TODO"
+  gacha_charlotte_events.13.a: "……"
+  gacha_charlotte_events.14.title: "夏洛蒂·C5"
+  gacha_charlotte_events.14.desc: "TODO"
+  gacha_charlotte_events.14.a: "……"

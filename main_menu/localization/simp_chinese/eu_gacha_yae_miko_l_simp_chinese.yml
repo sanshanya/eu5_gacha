@@ -9,22 +9,22 @@
 
   # === 特质 (Traits) ===
   gacha_yae_miko_origin_trait: "鸣神大社的宫司"
-  desc_gacha_yae_miko_origin_trait: "TODO"
+  desc_gacha_yae_miko_origin_trait: "「哎呀，陛下这座宫廷——故事可真多。\n\n信仰、谣言、野心、恐惧……这些东西比火炮更能改变国运。\n\n把纸和墨交给我吧。我会让你的臣民‘自愿’相信：你的统治，是他们最好的选择。」"
 
   gacha_yae_miko_awakened_trait: "神樱的守望"
-  desc_gacha_yae_miko_awakened_trait: "TODO"
+  desc_gacha_yae_miko_awakened_trait: "「神樱的根系延伸得很远，远到足以碰到每一条秘密。\n\n你想要情报？想要把反对者的‘正义’变成笑话？\n\n那就让我来。只要我轻轻一笑，很多人就会开始互相猜疑。」"
 
   gacha_yae_miko_transcended_trait: "御影的箴言"
-  desc_gacha_yae_miko_transcended_trait: "TODO"
+  desc_gacha_yae_miko_transcended_trait: "「治理国家嘛，无非三件事：让人敬畏、让人获利、让人习惯。\n\n敬畏交给神社与仪式，获利交给商路与许诺，习惯交给时间。\n\n至于不习惯的人？——他们会慢慢学会闭嘴的。」"
 
   gacha_yae_miko_c2_trait: "真识的奉行"
-  desc_gacha_yae_miko_c2_trait: "TODO"
+  desc_gacha_yae_miko_c2_trait: "「我不需要官职，但我能决定‘什么算真相’。\n\n让学者为你写史，让说书人为你润色，让流言替你惩罚敌人。\n\n陛下，只要叙事站在你这边，很多战争甚至不用开打。」"
 
   gacha_yae_miko_c4_trait: "鸣神的狐影"
-  desc_gacha_yae_miko_c4_trait: "TODO"
+  desc_gacha_yae_miko_c4_trait: "「你以为他们在地下结党？真可爱。\n\n我会让他们每一次密会都像被神明注视：一步踏错，就会连累所有同伙。\n\n当恐惧足够具体，忠诚就会显得更划算。」"
 
   gacha_yae_miko_c6_trait: "秘典的引路人"
-  desc_gacha_yae_miko_c6_trait: "TODO"
+  desc_gacha_yae_miko_c6_trait: "「来，陛下，把你的野心写下来。\n\n我会把它印成书、讲成戏、唱成歌，让整个国家在不知不觉间沿着你的方向走。\n\n等他们回过神来——路已经铺好了。」"
 
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_yae_miko_modifier: "鸣神宫司"
@@ -33,13 +33,20 @@
   gacha_yae_miko_modifier_desc: "TODO"
 
   # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_yae_miko_c0_modifier: "神樱座·零命"
-  STATIC_MODIFIER_NAME_gacha_yae_miko_c1_modifier: "狐语·初信"
-  STATIC_MODIFIER_NAME_gacha_yae_miko_c2_modifier: "巫祝·真识"
-  STATIC_MODIFIER_NAME_gacha_yae_miko_c3_modifier: "御影·密约"
-  STATIC_MODIFIER_NAME_gacha_yae_miko_c4_modifier: "鸣神·狐影"
-  STATIC_MODIFIER_NAME_gacha_yae_miko_c5_modifier: "神樱·残辉"
-  STATIC_MODIFIER_NAME_gacha_yae_miko_c6_modifier: "秘典·引路"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c0_modifier: "仙狐座·零命"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c0_modifier: "神社与出版的力量进入国策：舆论与信仰开始成为稳定器，也开始成为武器。"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c1_modifier: "野狐供真篇"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c1_modifier: "让人“自愿”供奉：宗教与仪式更容易凝聚共识，民心更不易被短期挫败击穿。"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c2_modifier: "望月吼哕声"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c2_modifier: "月下的谣言比刀更快：对外离间更有效，对内清洗更省力。"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c3_modifier: "七段妙变化"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c3_modifier: "多线叙事、多线布局：外交与间谍更像一张网，敌人拆掉一角还有另一角。"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c4_modifier: "绯樱引雷章"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c4_modifier: "把惩戒写成神罚：镇压叛乱更“名正言顺”，反对者更难获得同情。"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c5_modifier: "暴恶嗤笑面"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c5_modifier: "嘲笑会摧毁威望：敌对派系更容易内讧，强硬派更容易失去道德高地。"
+  STATIC_MODIFIER_NAME_gacha_yae_miko_c6_modifier: "大杀生咒禁"
+  STATIC_MODIFIER_DESC_gacha_yae_miko_c6_modifier: "当你决定不再容忍：一次行动更可能连根拔起整条暗线，让对手彻底失声。"
 
   # 八重神子 - 国家修正
   STATIC_MODIFIER_NAME_gacha_yae_miko_country_modifier: "鸣神宫司"

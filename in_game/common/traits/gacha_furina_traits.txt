@@ -8,7 +8,9 @@ gacha_furina_origin_trait = {
     flavor = personality
     allow = { always = no }
     # 威望/正统性月度提升（由国家修正提供）
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 # 2. 沙龙成员的下午茶（职业 Trait：海军）
@@ -46,7 +48,9 @@ gacha_furina_c2_trait = {
     flavor = personality
     allow = { always = no }
     # 威望+2.00/年 · 正统性+2.00/年 · 改革速度+20% (由 modifier 提供)
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 # C4：万众狂欢之海

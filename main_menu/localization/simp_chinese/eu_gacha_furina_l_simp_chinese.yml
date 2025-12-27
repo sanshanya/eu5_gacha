@@ -6,27 +6,19 @@
   # === 姓名 ===
   gacha_first_name_furina: "芙宁娜"
   gacha_last_name_furina: "德·枫丹"
-
   # === 特质 (Traits) ===
   gacha_furina_origin_trait: "欧庇克莱歌剧院"
   desc_gacha_furina_origin_trait: "「看吧，哪怕我不发一言，只要站在那里，人们的目光就会聚集过来。这就叫『明星效应』。你的国家死气沉沉太久了，需要一点戏剧性的转折来提振民心。交给我吧，我会让你的国民重新学会欢呼。」"
-
   gacha_furina_awakened_trait: "沙龙成员的下午茶"
   desc_gacha_furina_awakened_trait: "「乌瑟勋爵，谢贝蕾妲小姐，还有海薇玛夫人……虽然它们只是我不成熟的幻想朋友，但在海上，它们可是很可靠的哦？指挥舰队就像指挥乐队，只要节奏对了，连惊涛骇浪也会跟着起舞。」"
-
   gacha_furina_transcended_trait: "\"众水之神\"的假面"
   desc_gacha_furina_transcended_trait: "「虽然我已不再是神，但这副扮演了五百年的架子还在。虚张声势、外交辞令、在列强面前维持尊严……这些我最擅长了。只要我不怯场，就没有人敢轻视这个国家。」"
-
-  # 命座进阶 Traits
   gacha_furina_c2_trait: "谕示裁定枢机"
   desc_gacha_furina_c2_trait: "「看啊，人们在欢呼！他们需要的不仅仅是面包，还有『正义』的演出。我稍稍修改了一下你的律法条文，让它们读起来更像诗歌。现在，变革的阻力变小了，因为大家都想看看下一幕会发生什么。」"
-
   gacha_furina_c4_trait: "万众狂欢之海"
   desc_gacha_furina_c4_trait: "「现在的海面，就像是我的舞台！在此刻，全世界的灯光都聚焦于你的舰队！不要畏惧风暴，那是高潮前的伴奏！让敌人在我们的狂欢中退场吧，这就叫——压轴好戏！」"
-
   gacha_furina_c6_trait: "普世欢腾"
   desc_gacha_furina_c6_trait: "「五百年了……我曾以为『统治』就是无尽的孤独与受难。但在这里，看着你的背影，我发现统治也可以是一场所有人共同参与的盛大舞会。我不做神了，现在的我，只是这片乐土上最自由的……人。」"
-
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_furina_modifier: "舞台的呼唤"
   STATIC_MODIFIER_DESC_gacha_furina_modifier: "「世界不过是一场盛大的舞台剧，而我将是永远的主角。」"
@@ -35,102 +27,79 @@
 
   # === 命之座 (Constellations) ===
   STATIC_MODIFIER_NAME_gacha_furina_c0_modifier: "独舞座·零命"
+  STATIC_MODIFIER_DESC_gacha_furina_c0_modifier: "舞台搭起，聚光灯亮起：民心更容易被激励，国家更擅长在危机中『稳住场面』。"
   STATIC_MODIFIER_NAME_gacha_furina_c1_modifier: "剧团新成员"
+  STATIC_MODIFIER_DESC_gacha_furina_c1_modifier: "她会把官僚系统当作剧团排练：流程更顺，失误更少，关键岗位更容易找到『能演的人』。"
   STATIC_MODIFIER_NAME_gacha_furina_c2_modifier: "正义审判"
+  STATIC_MODIFIER_DESC_gacha_furina_c2_modifier: "把审判写成戏剧，把秩序变成共识：改革阻力下降，社会冲突更易被化解。"
   STATIC_MODIFIER_NAME_gacha_furina_c3_modifier: "后台卸妆"
+  STATIC_MODIFIER_DESC_gacha_furina_c3_modifier: "卸下浮夸的妆容，露出真正的疲惫：在长期战争或财政压力下，民心更不易崩溃。"
   STATIC_MODIFIER_NAME_gacha_furina_c4_modifier: "海洋交响"
+  STATIC_MODIFIER_DESC_gacha_furina_c4_modifier: "把舰队当作乐团：海军行动更协调，海上机动与登陆作战更可靠。"
   STATIC_MODIFIER_NAME_gacha_furina_c5_modifier: "万国来朝"
+  STATIC_MODIFIER_DESC_gacha_furina_c5_modifier: "她擅长让各国『愿意来捧场』：外交场面更体面，谈判桌上更不易被轻视。"
   STATIC_MODIFIER_NAME_gacha_furina_c6_modifier: "凡人之舞"
-  STATIC_MODIFIER_NAME_gacha_furina_co_star_modifier: "首席共演者"
-  STATIC_MODIFIER_DESC_gacha_furina_co_star_modifier: "你与芙宁娜共同执笔的新剧本开幕，外交声望与掌声一同回荡在宫廷。"
-  STATIC_MODIFIER_NAME_gacha_furina_mortal_oath_modifier: "凡人的誓约"
-  STATIC_MODIFIER_DESC_gacha_furina_mortal_oath_modifier: "卸下面具的誓约在夜色中达成，你的统治获得了朴素而稳固的信任。"
+  STATIC_MODIFIER_DESC_gacha_furina_c6_modifier: "当她不再扮演神，而是与你共舞：国家叙事更真实，也更能凝聚长期的忠诚与韧性。"
 
-  # 芙宁娜 - 国家修正
-  STATIC_MODIFIER_NAME_gacha_furina_country_modifier: "欧庇克莱歌剧院"
-  STATIC_MODIFIER_DESC_gacha_furina_country_modifier: "帷幕升起，威望与正统每月稳步积累。"
-  STATIC_MODIFIER_NAME_gacha_furina_c1_country_modifier: "沙龙成员的账本"
-  STATIC_MODIFIER_DESC_gacha_furina_c1_country_modifier: "沙龙排场打开知名度，外交官与艺术席位同时扩容。"
-  STATIC_MODIFIER_NAME_gacha_furina_c2_country_modifier: "谕示·裁定枢机"
-  STATIC_MODIFIER_DESC_gacha_furina_c2_country_modifier: "权威剧本加速立法进度，威望与正统双倍累积。"
-  STATIC_MODIFIER_NAME_gacha_furina_c5_country_modifier: "万国来朝"
-  STATIC_MODIFIER_DESC_gacha_furina_c5_country_modifier: "巡演规模再扩张，宫廷可容纳更多艺术家。"
-  STATIC_MODIFIER_NAME_gacha_furina_c6_country_modifier: "普世欢腾"
-  STATIC_MODIFIER_DESC_gacha_furina_c6_country_modifier: "普世欢腾，声望与镇国之力余韵不绝，艺坛也被彻底点燃。"
-
-  gacha_furina_origin_trait_die_desc: "失去“欧庇克莱歌剧院”初始加成。"
-  gacha_furina_awakened_trait_die_desc: "失去“沙龙成员的下午茶”职业加成。"
-  gacha_furina_transcended_trait_die_desc: "失去“众水之神的假面”统治者加成。"
-  gacha_furina_c2_trait_die_desc: "失去芙宁娜 C2 进阶加成。"
-  gacha_furina_c4_trait_die_desc: "失去芙宁娜 C4 进阶加成。"
-  gacha_furina_c6_trait_die_desc: "失去芙宁娜 C6 终阶加成。"
-
-  # === 事件 (Events) ===
   gacha_furina_events.1.title: "永不谢幕的独舞者·芙宁娜 —— 帘幕再启"
   gacha_furina_events.1.desc: "#ZG 祈愿阵中央，金色经文沿刻痕游走。\n原本堆积的判决书、法条汇编、华服碎片与破碎的面具，化作碎光，被一枚自阵心浮起的澄澈水泡温柔吞没。\n金色符文与淡蓝水纹交叠流转的泡壁内，一位少女蜷坐着。\n华丽的蓝白礼裙层叠如波浪，帽檐的羽饰垂落眉侧。\n她眼睫低垂，嘴角挂着一丝若有若无的笑意。\n随着一声轻响，泡壁悄然碎裂，水珠四散又被法阵的光收拢。#!\n少女睁开一只眼，轻巧落在阵心，裙摆与雾气一同扬起，仿佛舞台中央缓缓落下的帷幕。"
   gacha_furina_events.1.a: "上前查看"
-
   gacha_furina_events.10.title: "永不谢幕的独舞者·芙宁娜 —— 仅仅是……芙宁娜"
   gacha_furina_events.10.desc: "「哦呀？看来这里就是传说中的『异世舞台』吗？」\n「我是芙宁娜·德·枫丹。曾经的……算了，那些头衔已经不重要了。」\n「我也大致看了一眼你的『剧本』。啧啧，法条堆得像山，纠纷却像潮水一波接一波，枯燥、乏味，毫无美感！观众席上还挤满了等着看闹剧的人。」\n「既然契约已成，那我便勉为其难地接下这『首席艺术顾问』的职位吧。我会将秩序与欢愉带回这片土地。」\n「那么，舞台已就绪，聚光灯也该亮起来了——就由我来亲自执导这个国家的『第三幕』吧！」\n#ZG 她打开随身携带的化妆盒，对着镜子确认了完美的笑容，随即向你伸出手。#!\n「还愣着干什么？给导演准备的下午茶和蛋糕呢？」"
   gacha_furina_events.10.a: "欢迎来到舞台，芙宁娜大人"
-
   gacha_furina_events.2.title: "戏剧的高潮"
   gacha_furina_events.2.desc: "芙宁娜的力量得到了提升。她轻笑着说，这就像剧情进入下一幕。\n\n「看吧，故事才刚刚开始！」"
   gacha_furina_events.2.a: "继续表演吧！"
-
   gacha_furina_events.4.title: "以凡人之躯"
   gacha_furina_events.4.desc: "「我是芙宁娜。\n\n你知道吗？在过去的五百年里，我每天早晨醒来最害怕的事，就是照镜子。\n\n镜子里的那个人完美无缺，她是神明，是信仰，是整个枫丹的支柱。\n\n唯独不是『我』。\n\n我扮演着那个角色，独自在聚光灯下跳舞，脚下是刀尖，眼前是预言的洪水。\n\n我以为那场漫长的独角戏，直到我死都不会有人喝彩。\n\n但是，你找到了我。\n\n你把我带到了这个没有预言、没有诅咒的世界。\n\n你给我的剧本里，没有牺牲，没有悲剧，只有还没吃完的蛋糕和明天去哪里的烦恼。\n\n你让我明白，原来不需要扮演神明，仅仅是作为并不完美的芙宁娜，\n\n也有资格站在你的身边，治理这个国家。\n\n谢谢你，我的……首席观众。\n\n这出戏演到这里，我已经分不清哪里是舞台，哪里是现实了。\n\n但我不在乎。\n\n只要你会为我鼓掌，这支舞，我就愿意为你跳到时间的尽头。」"
   gacha_furina_events.4.a: "这才是真正的芙宁娜！"
-
   gacha_furina_events.11.title: "信仰与律法"
   gacha_furina_events.11.desc: "「看啊，人们在欢呼！他们需要的不仅仅是面包，还有『正义』的演出。我稍稍修改了一下你的律法条文，让它们读起来更像诗歌。现在，变革的阻力变小了，因为大家都想看看下一幕会发生什么。」"
   gacha_furina_events.11.a: "正义的舞台已经搭好。"
-
   gacha_furina_events.12.title: "潮汐的交响"
   gacha_furina_events.12.desc: "「现在的海面，就像是我的舞台！在此刻，全世界的灯光都聚焦于你的舰队！不要畏惧风暴，那是高潮前的伴奏！让敌人在我们的狂欢中退场吧，这就叫——压轴好戏！」"
   gacha_furina_events.12.a: "大海为我们欢呼！"
-
   gacha_furina_events.13.title: "剧团的新成员"
   gacha_furina_events.13.desc: "「你的宫廷太冷清了，我从枫丹……呃，从我的记忆里找了几个有趣的剧本。多设一个顾问席位吧，毕竟，一场精彩的歌剧怎么能只有主角，没有配角呢？……当然，你才是主角。」"
   gacha_furina_events.13.a: "增加一个席位。"
-
   gacha_furina_events.14.title: "万国来朝"
   gacha_furina_events.14.desc: "「越来越多的国家派来了使节……哼，看来本芙宁娜大人的魅力即便在异世界也无法阻挡。多结交些盟友吧，毕竟在谢幕致辞时，观众越多越好，不是吗？」"
   gacha_furina_events.14.a: "天下宾服。"
 
-  # === C3 好感事件：无人的安可曲 ===
-  gacha_furina_c3_title: "无人的安可曲"
-  gacha_furina_c3_scene_1_desc: "为了庆祝外交盟约的缔结，宫廷举办了一场盛大的晚宴。此刻喧嚣散去，宾客尽欢而散。\n\n你路过空荡的主舞台，听见银质餐具碰撞瓷盘的轻响，伴着几声压抑的叹息。\n\n帷幕低垂，吊灯熄了一半，只有月光透过高窗洒在舞台上，显得空旷而寂寥。"
-  gacha_furina_c3_scene_1_opt_a: "循声望去"
+  # === C3 好感事件：无观众的安可 ===
+  gacha_furina_c3_title: "无观众的安可"
+
+  gacha_furina_c3_scene_1_desc: "为庆祝外交同盟的签署，宫廷举办了盛大的宴会。如今喧嚣已散，宾客尽去。\n\n经过空旷的主舞台时，你听见银器碰瓷的细响，夹杂着几声压低的叹息。\n\n帷幕低垂，半数吊灯熄灭，只剩月光从高窗倾洒在舞台上，显得空阔而寂寥。"
+  gacha_furina_c3_scene_1_opt_a: "循声而去。"
   gacha_furina_c3_scene_1_opt_skip: "跳过剧情"
 
-  gacha_furina_c3_scene_2_desc: "聚光灯照不到的阴影里，芙宁娜踢掉高跟鞋，披着单薄的披肩坐在台阶上。\n\n她端着一块只剩一半的蛋糕，小口吃着，低声自语，复盘着今天的“演出”。\n\n芙宁娜：「……呼。今天的致辞……应该没有破绽吧？那个邻国的大使盯着我看的时候，我差点以为他发现了什么……」"
-  gacha_furina_c3_scene_2_opt_a: "靠近舞台"
+  gacha_furina_c3_scene_2_desc: "聚光灯照不到的角落里，芙宁娜早已踢掉高跟鞋，披着一条薄披肩坐在台阶上。\n\n她手里拿着一块蛋糕，已经吃到一半，小口小口地啃着，嘴里还在喃喃复盘今天的「演出」。\n\n芙宁娜：「……哈啊。今天的发言……应该没有瑕疵吧？那个邻国使节一直盯着我看，我差点以为他发现了什么……」"
+  gacha_furina_c3_scene_2_opt_a: "走近舞台。"
 
-  gacha_furina_c3_scene_3_desc: "你的脚步声在剧院里回响，她像只受惊的猫猛地转身。\n\n叉子掉在盘子上，她努力抬起下巴摆出架子，嘴角还沾着奶油。\n\n芙宁娜：「谁？！……啊，是、是陛下？！咳！我只是在……审判这块蛋糕的味道！」"
-  gacha_furina_c3_scene_3_opt_a: "停下脚步：对一块蛋糕进行审判？"
+  gacha_furina_c3_scene_3_desc: "你的脚步在空旷的剧场里回响，她像受惊的猫一样转过身。\n\n叉子碰到盘子发出清脆声响，她强抬下巴摆出架势——嘴角还沾着一点奶油。\n\n芙宁娜：「是谁？！……啊，陛、陛下？！咳咳！我只是……在审判这块蛋糕的味道！」"
+  gacha_furina_c3_scene_3_opt_a: "停下脚步：审判蛋糕？"
 
-  gacha_furina_c3_scene_4_desc: "她的防线薄得像纸，脸颊发红却还想维持“从容”。你决定如何接招。"
-  gacha_furina_c3_scene_4_opt_a: "配合演出：「对于这块蛋糕的罪行，大法官有何判决？」"
-  gacha_furina_c3_scene_4_opt_b: "温柔拆穿：「这里没有观众，芙宁娜。你不需要解释夜宵。」"
+  gacha_furina_c3_scene_4_desc: "她的防线薄如纸，脸颊微红，却仍努力维持「从容」。你决定如何回应。"
+  gacha_furina_c3_scene_4_opt_a: "顺着她演：「那高等审判官判这蛋糕何罪？」"
+  gacha_furina_c3_scene_4_opt_b: "温柔拆穿：「这里没有观众，芙宁娜。你不必为夜宵辩解。」"
 
-  gacha_furina_c3_scene_5_desc_a: "她愣了一下，随即“噗嗤”笑出声，用叉子指着蛋糕，语气恢复了那点傲娇的自信。\n\n芙宁娜：「哼……算你识相！本席宣判——这块蛋糕甜得过分，诱惑本大人在深夜进食，罪大恶极！必须立即执行『死刑』——也就是把它吃掉！」"
-  gacha_furina_c3_scene_5_desc_b: "她的动作彻底僵住，叉子在空中微颤，慢慢放下架子，低声喃喃。\n\n芙宁娜：「……非要说得这么直白吗？有时候，演戏是为了不让自己崩溃啊……」"
-  gacha_furina_c3_scene_5_desc_common: "她低头看着半块蛋糕，轻叹。\n\n芙宁娜：「刚才的庆功晚宴上，我一口都没吃。我怕一松懈，就露馅……就让他们发现，现在的我，其实什么都不是。」"
-  gacha_furina_c3_scene_5_opt_a: "坐到她身边：辛苦了。"
+  gacha_furina_c3_scene_5_desc_a: "她愣了一下，随即轻哼出笑，叉子指向蛋糕，惯常的傲气又回来了。\n\n芙宁娜：「哼……你倒是懂得配合。本庭宣判——此蛋糕甜度过盛，诱使我在此时进食，其罪甚重！应判处立即『执行』——也就是当场吃掉！」"
+  gacha_furina_c3_scene_5_desc_b: "她的动作彻底停住，叉子在空中微微颤抖。她慢慢放下那层伪装，低声呢喃。\n\n芙宁娜：「……你一定要这么直接吗？有时候，演下去，是我唯一不崩溃的方法……」"
+  gacha_furina_c3_scene_5_desc_common: "她低头望着那半块蛋糕，轻轻叹了口气。\n\n芙宁娜：「刚才的庆祝宴会上，我一口都没吃。我害怕自己哪怕放松一瞬间就会露出破绽……被人看出来，其实现在的我……什么都不是。」"
+  gacha_furina_c3_scene_5_opt_a: "坐到她身边：你已经很努力了。"
 
-  gacha_furina_c3_scene_6_desc: "她侧头看你，眼神黯淡。\n\n芙宁娜：「在这个世界，明明没有预言了，也没有必须扮演的角色了。」\n芙宁娜：「可是灯光一亮，我还是会下意识戴上面具。」\n\n她抬眼，紫色异瞳里闪着五百年孤独的痕迹。\n\n芙宁娜：「如果我不演那个大明星……如果我只是会偷吃、会怯场、会犯蠢的芙宁娜……您还会需要我吗？」"
-  gacha_furina_c3_scene_6_opt_a: "直视她的眼睛"
+  gacha_furina_c3_scene_6_desc: "她转过头看你，眼神有些黯淡。\n\n芙宁娜：「在这个世界，已经没有预言，也没有我必须扮演的角色。」\n芙宁娜：「可一旦灯光亮起，我还是会本能地戴上面具。」\n\n她抬起眼，紫色瞳孔里闪过五百年孤独的痕迹。\n\n芙宁娜：「如果我不再扮演那位大明星……如果我只是会偷吃、会怯场、会犯傻的芙宁娜……你还会需要我吗？」"
+  gacha_furina_c3_scene_6_opt_a: "直视她的眼睛。"
 
-  gacha_furina_c3_scene_7_desc: "漫长的扮演让她忘了如何做自己。她害怕卸妆后失去所有的爱与关注。\n\n你作为她唯一的“首席观众”，伸出手，给出答案。"
-  gacha_furina_c3_scene_7_opt_a: "发出邀约：「把这当成一场永不谢幕的新剧目，我做你的首席共演者。」"
-  gacha_furina_c3_scene_7_opt_b: "给予肯定：「我不需要虚假的神明，只要此刻与你一起吃蛋糕的你。」"
+  gacha_furina_c3_scene_7_desc: "演了太久，她几乎忘了怎样做回自己。她害怕卸妆之后，就会失去所有的爱与关注。\n\n作为她唯一的「首席观众」，你伸出手，给出你的回答。"
+  gacha_furina_c3_scene_7_opt_a: "发出邀请：「那就开一场永不落幕的新剧——我来当你的第一位搭档。」"
+  gacha_furina_c3_scene_7_opt_b: "给她肯定：「我不需要一个伪装的神。我只需要现在和我一起吃蛋糕的你。」"
 
-  gacha_furina_c3_scene_8_desc: "她先是怔住，随即眼角泛起释然的泪光，露出少女般清脆的笑声。\n\n芙宁娜：「……这种台词，比歌剧里还要犯规。」\n她把“罪大恶极”的蛋糕分给你一半，递到你嘴边。"
-  gacha_furina_c3_scene_8_opt_a: "张口接过：味道很甜。"
+  gacha_furina_c3_scene_8_desc: "她先是一怔，随即眼角泛起释然的泪光，清脆的少女笑声从唇边溢出。\n\n芙宁娜：「……这样的台词，比歌剧里的还要犯规。」\n她把那块「罪恶」蛋糕一分为二，把其中一半递到你的唇边。"
+  gacha_furina_c3_scene_8_opt_a: "咬一口：很甜。"
 
-  gacha_furina_c3_scene_9_desc_a: "芙宁娜站起身，向你伸出手，邀请在无人舞台上共舞。\n\n芙宁娜：「好吧！既然您诚心邀请，那本芙宁娜就勉为其难地继续闪耀吧！」\n芙宁娜：「这次，剧本由我们一起写。没有悲剧，没有牺牲，只有欢呼与掌声！」"
-  gacha_furina_c3_scene_9_opt_a: "大幕拉开"
+  gacha_furina_c3_scene_9_desc_a: "芙宁娜站起身，向你伸出手，邀请你在空荡的舞台上共舞。\n\n芙宁娜：「很好！既然你如此诚恳地邀请，我，芙宁娜，就『勉为其难』地继续闪耀吧！」\n芙宁娜：「这一次，我们一起写剧本。不再有悲剧、不再有牺牲——只有欢呼与掌声！」"
+  gacha_furina_c3_scene_9_opt_a: "让帷幕再度升起。"
 
-  gacha_furina_c3_scene_9_desc_b: "芙宁娜靠在你肩上，闭眼满足地低声重复：「仅仅是芙宁娜，就够了吗？」\n\n芙宁娜：「不想再演了，不想再彩排明天的表情。我只想这样待着，什么都不想。」\n芙宁娜：「您可不许反悔哦……我的首席观众。」"
-  gacha_furina_c3_scene_9_opt_b: "永不反悔"
+  gacha_furina_c3_scene_9_desc_b: "芙宁娜倚在你的肩上，闭着眼满足地呢喃：「只是做芙宁娜……也可以吗？」\n\n芙宁娜：「我不想再演下去了。我不想再排练明天的表情。我只想这样待着，什么都不去想。」\n芙宁娜：「你可不许反悔哦……我的首席观众。」"
+  gacha_furina_c3_scene_9_opt_b: "我不会反悔。"

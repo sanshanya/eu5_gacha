@@ -1,0 +1,88 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 宵宫 (yoimiya)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_yoimiya: "宵宫"
+  gacha_last_name_yoimiya: "长野原"
+
+  # === 特质 (Traits) ===
+  gacha_yoimiya_origin_trait: "长野原烟火铺"
+  desc_gacha_yoimiya_origin_trait: "「哇！这儿的人也会庆祝丰收吗？那可太好了！\n\n给我点硝石、纸张，还有一条安全的街道——我就能让整座城在夜里亮起来。\n\n别小看烟火哦，大家抬头看着同一片光的时候，就没那么容易去互相仇恨啦。」"
+
+  gacha_yoimiya_awakened_trait: "焰硝攻城术"
+  desc_gacha_yoimiya_awakened_trait: "「你说城墙很厚？嘿嘿，我懂我懂。\n\n烟火不是只能用来开心的——只要配方对，角度对，它也能把最顽固的门闩‘说服’。\n\n放心！我会让爆炸听起来像节庆，让敌人来不及害怕就已经结束啦！」"
+
+  gacha_yoimiya_transcended_trait: "夏祭的国度"
+  desc_gacha_yoimiya_transcended_trait: "「如果一个国家只剩下军号声，那大家迟早会喘不过气。\n\n我们也需要歌、灯笼、摊位、孩子们追着跑的笑声。\n\n我不擅长当大官，但我擅长让人们记得：活着本身就值得庆祝。」"
+
+  gacha_yoimiya_c2_trait: "万灯送火"
+  desc_gacha_yoimiya_c2_trait: "「把灯挂到每条街上吧！\n\n当夜路不再黑，人心就会更稳。商队敢走，工坊敢开，市集敢热闹。\n\n然后——税收也会自己变好啦！」"
+
+  gacha_yoimiya_c4_trait: "花火职人心得"
+  desc_gacha_yoimiya_c4_trait: "「配方、工序、仓储……这些我都能写成一本手册！\n\n只要照着做，损耗就会少很多，产出也会更漂亮。\n\n嗯？你问为什么我这么认真？因为我想让大家都安全地看到烟火呀。」"
+
+  gacha_yoimiya_c6_trait: "长野原龙势流星群"
+  desc_gacha_yoimiya_c6_trait: "「来啦来啦！压轴的——超级——流星群！\n\n让敌人以为天塌了，让我们的人以为希望落下来了。\n\n陛下，今晚的天空归我们，明天的城墙也归我们！」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_yoimiya_modifier: "宵宫"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_modifier: "TODO"
+  gacha_yoimiya_modifier: "宵宫的余韵"
+  gacha_yoimiya_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c0_modifier: "琉金座·零命"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c0_modifier: "把节庆变成国力：民心更容易被修复，城市更容易恢复活力。"
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c1_modifier: "赤玉琉金"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c1_modifier: "烟火点燃士气：短期内更容易形成“势头”，让进攻与动员更顺畅。"
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c2_modifier: "万灯送火"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c2_modifier: "灯火照亮商路：夜间治安与贸易活跃度更高，市集更不容易冷清。"
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c3_modifier: "鼠火戏法"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c3_modifier: "小把戏也能改变战局：骚扰、佯攻与爆破更有效，敌人会被迫分兵。"
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c4_modifier: "花火职人心得"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c4_modifier: "工坊标准化：军需与民用生产更省损耗，投入更容易变成稳定产出。"
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c5_modifier: "真夏宵祭锦绘"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c5_modifier: "盛会塑造认同：文化与合法性被持续巩固，长期压力下更不容易出现大规模不满。"
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c6_modifier: "长野原龙势流星群"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c6_modifier: "压轴爆发：关键攻城或会战时更容易打出“决定性的一波”，让对手直接失去组织力。"
+
+  # 宵宫 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_yoimiya_country_modifier: "宵宫·光环"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c1_country_modifier: "宵宫·C1"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c2_country_modifier: "宵宫·C2"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c4_country_modifier: "宵宫·C4"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c5_country_modifier: "宵宫·C5"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_yoimiya_c6_country_modifier: "宵宫·C6"
+  STATIC_MODIFIER_DESC_gacha_yoimiya_c6_country_modifier: "TODO"
+
+  # === 事件 (Events) ===
+  gacha_yoimiya_events.1.title: "宵宫"
+  gacha_yoimiya_events.1.desc: "TODO"
+  gacha_yoimiya_events.1.a: "……"
+
+  gacha_yoimiya_events.4.title: "宵宫·C6"
+  gacha_yoimiya_events.4.desc: "TODO"
+  gacha_yoimiya_events.4.a: "……"
+
+  gacha_yoimiya_events.11.title: "宵宫·C2"
+  gacha_yoimiya_events.11.desc: "TODO"
+  gacha_yoimiya_events.11.a: "……"
+
+  gacha_yoimiya_events.12.title: "宵宫·C4"
+  gacha_yoimiya_events.12.desc: "TODO"
+  gacha_yoimiya_events.12.a: "……"
+
+  gacha_yoimiya_events.13.title: "宵宫·C1"
+  gacha_yoimiya_events.13.desc: "TODO"
+  gacha_yoimiya_events.13.a: "……"
+
+  gacha_yoimiya_events.14.title: "宵宫·C5"
+  gacha_yoimiya_events.14.desc: "TODO"
+  gacha_yoimiya_events.14.a: "……"

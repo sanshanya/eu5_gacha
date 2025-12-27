@@ -1,0 +1,53 @@
+﻿# Generated Modifiers for noelle (V3)
+
+# 角色标识：诺艾尔本体
+gacha_noelle_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    gacha_stone_godeye = yes
+}
+
+# 命之座等级展示（0-6）
+gacha_noelle_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_noelle_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_noelle_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_noelle_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_noelle_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_noelle_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_noelle_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（占位）
+gacha_noelle_country_modifier = {
+    game_data = { category = country decaying = no }
+    land_morale_recovery = 0.05
+    global_devastation_recovery = 0.05
+}
+
+# C2 光环升级
+gacha_noelle_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    land_morale_recovery = 0.08
+    global_devastation_recovery = 0.08
+}
+
+# C1 专属机制：内阁席位 +1
+gacha_noelle_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    max_constructions_at_same_time = 1
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_noelle_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：国策槽位 +1
+gacha_noelle_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    tax_income_efficiency = 0.05
+}
+
+# C6 国家级占位（主要属性在 Trait 中）
+gacha_noelle_c6_country_modifier = {
+    game_data = { category = country decaying = no }
+}

@@ -7,9 +7,12 @@ gacha_hutao_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    # 稳定度花费-10% · 疾病抗性+20% (由 modifier 提供)
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # 2. 赤团开道（职业 Trait：陆军）
 gacha_hutao_awakened_trait = {
@@ -42,9 +45,12 @@ gacha_hutao_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    # 稳定度花费-20% · 疾病抗性+40% · 人力恢复+10% (由 modifier 提供)
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # C4：蝶火燎原
 gacha_hutao_c4_trait = {

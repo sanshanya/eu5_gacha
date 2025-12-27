@@ -205,18 +205,151 @@ gacha_resolve_5star_and_save_scope = {
 	      }
 	    }
 
-    # 3. 根据最终 Index 分发 (0-10, 但肯定不等于 current_up_idx)
-    if = { limit = { local_var:gacha_standard_5_idx = 0 } gacha_create_xinhai_effect = yes }
-    else_if = { limit = { local_var:gacha_standard_5_idx = 1 } gacha_create_fischl_effect = yes }
-    else_if = { limit = { local_var:gacha_standard_5_idx = 2 } gacha_create_keqing_effect = yes }
-    else_if = { limit = { local_var:gacha_standard_5_idx = 3 } gacha_create_raiden_effect = yes }
-    else_if = { limit = { local_var:gacha_standard_5_idx = 4 } gacha_create_furina_effect = yes }
-    else_if = { limit = { local_var:gacha_standard_5_idx = 5 } gacha_create_hutao_effect = yes }
-    else_if = { limit = { local_var:gacha_standard_5_idx = 6 } gacha_create_klee_effect = yes }
-    else_if = { limit = { local_var:gacha_standard_5_idx = 7 } gacha_create_nahida_effect = yes }
-    else_if = { limit = { local_var:gacha_standard_5_idx = 8 } gacha_create_ningguang_effect = yes }
-    else_if = { limit = { local_var:gacha_standard_5_idx = 9 } gacha_create_ganyu_effect = yes }
-    else_if = { limit = { local_var:gacha_standard_5_idx = 10 } gacha_create_beidou_effect = yes }
+    # 3. 根据最终 Index 分发（动态扩池）
+    set_local_variable = { name = gacha_pool_pick value = local_var:gacha_standard_5_idx }
+    set_local_variable = { name = gacha_pool_resolved value = 0 }
+
+    # Base roster (8)
+    if = {
+      limit = { local_var:gacha_pool_pick < 8 }
+      if = { limit = { local_var:gacha_pool_pick = 0 } gacha_create_xinhai_effect = yes }
+      else_if = { limit = { local_var:gacha_pool_pick = 1 } gacha_create_fischl_effect = yes }
+      else_if = { limit = { local_var:gacha_pool_pick = 2 } gacha_create_keqing_effect = yes }
+      else_if = { limit = { local_var:gacha_pool_pick = 3 } gacha_create_raiden_effect = yes }
+      else_if = { limit = { local_var:gacha_pool_pick = 4 } gacha_create_furina_effect = yes }
+      else_if = { limit = { local_var:gacha_pool_pick = 5 } gacha_create_hutao_effect = yes }
+      else_if = { limit = { local_var:gacha_pool_pick = 6 } gacha_create_klee_effect = yes }
+      else = { gacha_create_nahida_effect = yes }
+      set_local_variable = { name = gacha_pool_resolved value = 1 }
+    }
+    else = {
+      change_local_variable = { name = gacha_pool_pick subtract = 8 }
+    }
+
+    # Liyue pool (3)
+    if = {
+      limit = {
+        local_var:gacha_pool_resolved = 0
+        has_global_variable = gacha_liyue_pool_unlocked
+      }
+      if = {
+        limit = { local_var:gacha_pool_pick < 3 }
+        if = { limit = { local_var:gacha_pool_pick = 0 } gacha_create_ningguang_effect = yes }
+        else_if = { limit = { local_var:gacha_pool_pick = 1 } gacha_create_ganyu_effect = yes }
+        else = { gacha_create_beidou_effect = yes }
+        set_local_variable = { name = gacha_pool_resolved value = 1 }
+      }
+      else = {
+        change_local_variable = { name = gacha_pool_pick subtract = 3 }
+      }
+    }
+
+    # Inazuma pool (3)
+    if = {
+      limit = {
+        local_var:gacha_pool_resolved = 0
+        has_global_variable = gacha_inazuma_pool_unlocked
+      }
+      if = {
+        limit = { local_var:gacha_pool_pick < 3 }
+        if = { limit = { local_var:gacha_pool_pick = 0 } gacha_create_ayaka_effect = yes }
+        else_if = { limit = { local_var:gacha_pool_pick = 1 } gacha_create_yoimiya_effect = yes }
+        else = { gacha_create_kuki_shinobu_effect = yes }
+        set_local_variable = { name = gacha_pool_resolved value = 1 }
+      }
+      else = {
+        change_local_variable = { name = gacha_pool_pick subtract = 3 }
+      }
+    }
+
+    # Mondstadt pool (3)
+    if = {
+      limit = {
+        local_var:gacha_pool_resolved = 0
+        has_global_variable = gacha_mondstadt_pool_unlocked
+      }
+      if = {
+        limit = { local_var:gacha_pool_pick < 3 }
+        if = { limit = { local_var:gacha_pool_pick = 0 } gacha_create_venti_effect = yes }
+        else_if = { limit = { local_var:gacha_pool_pick = 1 } gacha_create_noelle_effect = yes }
+        else = { gacha_create_mona_effect = yes }
+        set_local_variable = { name = gacha_pool_resolved value = 1 }
+      }
+      else = {
+        change_local_variable = { name = gacha_pool_pick subtract = 3 }
+      }
+    }
+
+    # Sumeru pool (3)
+    if = {
+      limit = {
+        local_var:gacha_pool_resolved = 0
+        has_global_variable = gacha_sumeru_pool_unlocked
+      }
+      if = {
+        limit = { local_var:gacha_pool_pick < 3 }
+        if = { limit = { local_var:gacha_pool_pick = 0 } gacha_create_cyno_effect = yes }
+        else_if = { limit = { local_var:gacha_pool_pick = 1 } gacha_create_alhaitham_effect = yes }
+        else = { gacha_create_nilou_effect = yes }
+        set_local_variable = { name = gacha_pool_resolved value = 1 }
+      }
+      else = {
+        change_local_variable = { name = gacha_pool_pick subtract = 3 }
+      }
+    }
+
+    # Fontaine pool (3)
+    if = {
+      limit = {
+        local_var:gacha_pool_resolved = 0
+        has_global_variable = gacha_fontaine_pool_unlocked
+      }
+      if = {
+        limit = { local_var:gacha_pool_pick < 3 }
+        if = { limit = { local_var:gacha_pool_pick = 0 } gacha_create_charlotte_effect = yes }
+        else_if = { limit = { local_var:gacha_pool_pick = 1 } gacha_create_navia_effect = yes }
+        else = { gacha_create_wriothesley_effect = yes }
+        set_local_variable = { name = gacha_pool_resolved value = 1 }
+      }
+      else = {
+        change_local_variable = { name = gacha_pool_pick subtract = 3 }
+      }
+    }
+
+    # Natlan pool (3)
+    if = {
+      limit = {
+        local_var:gacha_pool_resolved = 0
+        has_global_variable = gacha_natlan_pool_unlocked
+      }
+      if = {
+        limit = { local_var:gacha_pool_pick < 3 }
+        if = { limit = { local_var:gacha_pool_pick = 0 } gacha_create_mualani_effect = yes }
+        else_if = { limit = { local_var:gacha_pool_pick = 1 } gacha_create_citlali_effect = yes }
+        else = { gacha_create_varesa_effect = yes }
+        set_local_variable = { name = gacha_pool_resolved value = 1 }
+      }
+      else = {
+        change_local_variable = { name = gacha_pool_pick subtract = 3 }
+      }
+    }
+
+    # Snezhnaya pool (Fatui, 2)
+    if = {
+      limit = {
+        local_var:gacha_pool_resolved = 0
+        has_global_variable = gacha_snezhnaya_pool_unlocked
+      }
+      if = {
+        limit = { local_var:gacha_pool_pick < 2 }
+        if = { limit = { local_var:gacha_pool_pick = 0 } gacha_create_arlecchino_effect = yes }
+        else = { gacha_create_tartaglia_effect = yes }
+        set_local_variable = { name = gacha_pool_resolved value = 1 }
+      }
+      else = {
+        change_local_variable = { name = gacha_pool_pick subtract = 2 }
+      }
+    }
   }
 
   # 补丁：无论新抽还是重复抽，统一确保归入自定义阶层

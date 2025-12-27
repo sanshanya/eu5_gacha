@@ -8,7 +8,9 @@ gacha_raiden_origin_trait = {
     flavor = personality
     allow = { always = no }
     # 战争厌倦度 -0.05/月 · 正统性 +0.08/月
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 # 2. 无想之一刀（职业 Trait：陆军）
@@ -43,7 +45,9 @@ gacha_raiden_c2_trait = {
     flavor = personality
     allow = { always = no }
     # 战争厌倦度 -0.10/月 · 建造时间 -10%
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 # C4：梦想·真说

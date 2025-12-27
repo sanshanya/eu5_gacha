@@ -1,0 +1,73 @@
+﻿# 久岐忍 Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_kuki_shinobu_origin_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_kuki_shinobu_awakened_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        army_maintenance_cost = -0.04
+        land_unit_attrition = -0.03
+        land_morale_recovery = 0.03
+        global_manpower_modifier = 0.025
+    }
+}
+
+gacha_kuki_shinobu_transcended_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        legislative_efficiency = 0.07
+        country_cabinet_efficiency = 0.05
+        counter_espionage = 0.125
+        stability_cost = -0.05
+        local_unrest = -0.15
+    }
+}
+
+# Constellation upgrades
+
+gacha_kuki_shinobu_c2_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_kuki_shinobu_c4_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        army_maintenance_cost = -0.08
+        land_unit_attrition = -0.06
+        land_morale_recovery = 0.06
+        global_manpower_modifier = 0.05
+    }
+}
+
+gacha_kuki_shinobu_c6_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        legislative_efficiency = 0.14
+        country_cabinet_efficiency = 0.10
+        counter_espionage = 0.25
+        stability_cost = -0.10
+        local_unrest = -0.30
+    }
+}

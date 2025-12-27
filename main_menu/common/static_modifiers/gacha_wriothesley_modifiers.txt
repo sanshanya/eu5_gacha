@@ -1,0 +1,59 @@
+﻿# Generated Modifiers for wriothesley (V3)
+
+# 角色标识：莱欧斯利本体
+gacha_wriothesley_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    gacha_ice_godeye = yes
+}
+
+# 命之座等级展示（0-6）
+gacha_wriothesley_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_wriothesley_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_wriothesley_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_wriothesley_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_wriothesley_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_wriothesley_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_wriothesley_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（占位）
+gacha_wriothesley_country_modifier = {
+    game_data = { category = country decaying = no }
+    global_production_efficiency = 0.06
+    global_manpower_modifier = 0.06
+    stability_cost = -0.05
+    country_cabinet_efficiency = 0.04
+}
+
+# C2 光环升级
+gacha_wriothesley_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    country_cabinet_efficiency = 0.08
+    global_manpower_modifier = 0.08
+    global_build_buildings_cost = -0.06
+}
+
+# C1 专属机制：内阁席位 +1
+gacha_wriothesley_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    legislative_efficiency = 0.06
+    stability_cost = -0.04
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_wriothesley_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：国策槽位 +1
+gacha_wriothesley_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    hire_advisor_cost_modifier = -0.10
+    monthly_prestige = 0.10
+    legislative_efficiency = 0.05
+}
+
+# C6 国家级占位（主要属性在 Trait 中）
+gacha_wriothesley_c6_country_modifier = {
+    game_data = { category = country decaying = no }
+}

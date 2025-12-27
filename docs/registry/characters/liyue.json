@@ -1,0 +1,1089 @@
+{
+  "version": 1,
+  "nation": "liyue",
+  "characters": [
+    {
+      "code": "beidou",
+      "name": {
+        "first": "北斗",
+        "last": "南十字"
+      },
+      "traits": {
+        "origin": {
+          "name": "南十字的旗号",
+          "desc": "「海上最值钱的不是炮，是名声。南十字一升旗，懂行的就知道：要么让道，要么交税。你要在海上横着走？行。先让他们学会怕这面旗。」",
+          "key": "gacha_beidou_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "naval_morale_modifier": 0.15,
+            "privateer_durability": 0.2
+          },
+          "aura_country_modifier": "gacha_beidou_country_modifier"
+        },
+        "awakened": {
+          "name": "斩浪者",
+          "desc": "「风浪？我见过更狠的。船硬不硬，得看你敢不敢把它开进浪里。别跟我说‘太危险’。只有船不够硬，没有浪太大。」",
+          "key": "gacha_beidou_awakened_trait",
+          "modifier": {
+            "ship_build_speed": 0.1,
+            "naval_damage_taken": -0.1
+          }
+        },
+        "transcended": {
+          "name": "不羁的船长",
+          "desc": "「我管人不靠花架子。刺头？让他上甲板扛一夜风，第二天就知道怎么说话了。你那些不听使唤的家伙，交给我。我讲义气，也讲拳头。」",
+          "key": "gacha_beidou_transcended_trait",
+          "modifier": {
+            "subject_loyalty": 0.1,
+            "monthly_rebel_growth": -0.1
+          }
+        },
+        "c2": {
+          "name": "怒海横行",
+          "desc": "「听说他们有支像样的舰队？用不了多久，那些桅杆上就会挂上咱们的旗。」",
+          "key": "gacha_beidou_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "naval_morale_modifier": 0.3,
+            "privateer_durability": 0.4,
+            "ship_capture_chance": 0.15
+          },
+          "aura_country_modifier": "gacha_beidou_c2_country_modifier"
+        },
+        "c4": {
+          "name": "踏海斩鲸",
+          "desc": "「当年我斩海山的时候，全船的人都以为我疯了。可我告诉他们，比怪物更可怕的是我北斗。」",
+          "key": "gacha_beidou_c4_trait",
+          "modifier": {
+            "ship_build_speed": 0.2,
+            "naval_damage_taken": -0.2,
+            "naval_unit_attrition": -0.25
+          }
+        },
+        "c6": {
+          "name": "海上霸主",
+          "desc": "「北斗。南十字船队船长。\n\n海上人嘴碎，喜欢给我起外号。\n\n说我疯，说我刺，说我早晚翻船。\n\n我听过，也笑过。\n\n我这辈子只认一个理：\n\n谁跟我讲义气，我就拿命回他；谁敢动我兄弟，我就让他下海喂鱼。\n\n第一次喝酒的时候，杯子碰得很响。\n\n后来有回风暴夜，甲板上站着的人不多。\n\n我记得那晚的浪。\n\n从今以后，南十字的舵在我手里。\n\n但这趟航线，我跟你一起定。\n\n不是你收服了我。\n\n是我北斗，自己选的。」",
+          "key": "gacha_beidou_c6_trait",
+          "modifier": {
+            "subject_loyalty": 0.2,
+            "naval_morale_modifier": 0.15,
+            "monthly_prestige": 0.08
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "南十字座·零命",
+          "desc": "「先把旗升起来。海上很多事，不用开炮就能谈成。」\n南十字的名声开始在港口流传：对手更谨慎，商船更愿意靠你的码头。"
+        },
+        "c1": {
+          "name": "老兄弟们",
+          "desc": "「船是木头，命是兄弟。」\n她把老水手的规矩带进你的军队：赏罚分明、分赃讲信用，队伍更稳，也更耐打。"
+        },
+        "c2": {
+          "name": "黑帆压境",
+          "desc": "「黑帆一到，海面就安静了。」\n她擅长把威慑变成收益：封锁、劫掠、收税一条龙，让敌人的海路像被掐住喉咙。"
+        },
+        "c3": {
+          "name": "甲板上的月亮",
+          "desc": "「月亮照得清楚，谁在偷懒我一眼就看见。」\n夜航与突袭成了常态：你更容易抓住对手松懈的窗口，在海上先下一城。"
+        },
+        "c4": {
+          "name": "海山再临",
+          "desc": "「他们以为那是传说？那就让他们再信一次。」\n当战局胶着，她会用最野的打法打开缺口：哪怕面对强敌，也敢逼到近身决胜。"
+        },
+        "c5": {
+          "name": "璃月的规矩",
+          "desc": "「港口不是谁都能撒野的地方。」\n她不爱官话，但讲行规：走私、拖欠、两头吃的商人会被“请上船谈谈”，港口秩序随之变硬。"
+        },
+        "c6": {
+          "name": "同舟共济",
+          "desc": "「这趟航线，你我一人一半。」\n她不说效忠，却会把后背交给你：主力舰队的士气与凝聚力显著提升，海战成了你的王牌。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_beidou_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_beidou_c0_modifier",
+          "c1": "gacha_beidou_c1_modifier",
+          "c2": "gacha_beidou_c2_modifier",
+          "c3": "gacha_beidou_c3_modifier",
+          "c4": "gacha_beidou_c4_modifier",
+          "c5": "gacha_beidou_c5_modifier",
+          "c6": "gacha_beidou_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_beidou_country_modifier",
+          "c1": "gacha_beidou_c1_country_modifier",
+          "c2": "gacha_beidou_c2_country_modifier",
+          "c4": "gacha_beidou_c4_country_modifier",
+          "c5": "gacha_beidou_c5_country_modifier",
+          "c6": "gacha_beidou_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_beidou_modifier": {
+          "gacha_core": "yes",
+          "gacha_electro_godeye": "yes"
+        },
+        "gacha_beidou_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_beidou_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_beidou_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_beidou_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_beidou_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_beidou_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_beidou_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_beidou_country_modifier": {},
+        "gacha_beidou_c1_country_modifier": {
+          "ship_build_speed": 0.2,
+          "naval_morale_modifier": 0.05
+        },
+        "gacha_beidou_c2_country_modifier": {},
+        "gacha_beidou_c4_country_modifier": {
+          "navy_movement_speed": 0.06,
+          "naval_range_modifier": 0.15,
+          "naval_unit_attrition": -0.1,
+          "own_coast_naval_combat_bonus": 0.1
+        },
+        "gacha_beidou_c5_country_modifier": {
+          "privateer_durability": 0.25,
+          "trade_efficiency": 0.12,
+          "hire_privateer_cost_modifier": -0.15,
+          "dismiss_privateer_cost_modifier": -0.15
+        },
+        "gacha_beidou_c6_country_modifier": {
+          "naval_morale_modifier": 0.15,
+          "navy_heavy_ship_power": 0.1,
+          "navy_light_ship_power": 0.1,
+          "prestige_from_naval_battle": 0.25,
+          "ship_capture_chance": 0.1
+        }
+      },
+      "story_mode": "custom",
+      "nation": "liyue",
+      "pool": {
+        "in_pool": true,
+        "group": "liyue"
+      },
+      "starlight_shop": true,
+      "story_ref": {
+        "event_file": "in_game/events/gacha_beidou_events.txt",
+        "loc_prefix": "gacha_beidou_events"
+      }
+    },
+    {
+      "code": "ganyu",
+      "name": {
+        "first": "甘雨",
+        "last": "麒麟"
+      },
+      "traits": {
+        "origin": {
+          "name": "三千年的秘书",
+          "desc": "「三千年来，我处理过的公文可以堆满整座玉京台。每一份都要核对三遍，每一个数字都不能出错。这些习惯……已经刻进骨头里了。」",
+          "key": "gacha_ganyu_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.1
+          },
+          "aura_country_modifier": "gacha_ganyu_country_modifier"
+        },
+        "awakened": {
+          "name": "麒麟的后裔",
+          "desc": "「麒麟不杀生……但如果是为了守护，我不会退缩。魔神战争时，我曾一口吞下整支敌军。那之后我吃素了三千年，但那份力量还在。」",
+          "key": "gacha_ganyu_awakened_trait",
+          "modifier": {
+            "global_defensive": 0.05,
+            "land_morale_recovery": 0.03,
+            "land_morale": 0.02
+          }
+        },
+        "transcended": {
+          "name": "永不停歇的齿轮",
+          "desc": "「帝君说过，璃月的运转不能停。所以我也不能停。只要还有工作，只要还有人需要我……我就会一直转下去。」",
+          "key": "gacha_ganyu_transcended_trait",
+          "modifier": {
+            "monthly_legitimacy": 0.04,
+            "stability_cost": -0.05,
+            "global_devastation_recovery": 0.05,
+            "land_morale_recovery": 0.03
+          }
+        },
+        "c2": {
+          "name": "玉京台的基石",
+          "desc": "「这些年，我看着一代代七星来来去去。凝光、刻晴……她们都很优秀。而我只是在角落里整理她们的文件，确保一切按部就班。这样就好。」",
+          "key": "gacha_ganyu_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.2
+          },
+          "aura_country_modifier": "gacha_ganyu_c2_country_modifier"
+        },
+        "c4": {
+          "name": "霜华矢的守护",
+          "desc": "「我不喜欢战斗。但当敌人踏入这片土地时，我会让他们知道——麒麟的后裔，从不是好欺负的。每一支箭，都会找到它该去的地方。」",
+          "key": "gacha_ganyu_c4_trait",
+          "modifier": {
+            "global_defensive": 0.1,
+            "land_morale_recovery": 0.06,
+            "land_morale": 0.04
+          }
+        },
+        "c6": {
+          "name": "璃月的不眠者",
+          "desc": "「我是甘雨，璃月七星的秘书。\n\n三千年来，我一直告诉自己：只要还有工作，我就有存在的意义。\n\n所以我不停地写，不停地算，不停地核对。哪怕眼睛酸涩，哪怕手指僵硬，哪怕整座玉京台都熄了灯——我还是会点起一盏烛火，继续做下去。\n\n因为我害怕。\n\n害怕一旦停下来，就会发现自己其实……什么都不是。\n\n不是人类，也不是仙兽。\n\n不是七星，也不是普通的璃月人。\n\n但是……\n\n看着您批阅奏章时认真的侧脸，听着您说“甘雨，今天早点休息”时温和的语气……\n\n我突然想，也许“存在的意义”这种东西，不一定要靠工作来证明。\n\n也许……只要有人记得我，有人愿意在我加班的时候端来一杯热茶……\n\n那我就不是“什么都不是”了。\n\n所以，陛下。\n\n#bold 能让我继续留在您身边吗？#!」",
+          "key": "gacha_ganyu_c6_trait",
+          "modifier": {
+            "monthly_legitimacy": 0.08,
+            "stability_cost": -0.1,
+            "global_devastation_recovery": 0.1,
+            "land_morale_recovery": 0.06
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "仙麟座·零命",
+          "desc": "「我会把一切整理好。」\n她把璃月式的严谨带到你的朝廷：账目更清、流程更顺，国家机器开始“少出错”。"
+        },
+        "c1": {
+          "name": "永夜的烛火",
+          "desc": "「再核对一遍……这样才放心。」\n烛火点到深夜：行政细节被反复校验，腐败与浪费更难藏身，但她自己也更疲惫。"
+        },
+        "c2": {
+          "name": "无人知晓的加班",
+          "desc": "「这份我来补。」\n当制度出现缺口，她总能悄悄补上：临时征税、紧急军需、灾后重建都能更快回到正轨。"
+        },
+        "c3": {
+          "name": "梦中的清心花",
+          "desc": "「偶尔……也该喘口气。」\n难得的片刻安宁让她更像“人”：长期的紧绷有所缓和，朝廷的情绪也更稳定。"
+        },
+        "c4": {
+          "name": "沉默的箭雨",
+          "desc": "「请退后。」\n当你不得不战，她会用最少的言语做最干净的防守：守城、据点、要道的损失显著降低。"
+        },
+        "c5": {
+          "name": "三千年的档案",
+          "desc": "「档案不会说谎。」\n她把经验写成制度：旧案可查、先例可依，新来的官员也能更快上手，行政能力整体上扬。"
+        },
+        "c6": {
+          "name": "放下卷宗的那一刻",
+          "desc": "「如果有人需要我，那我就不是多余的。」\n她终于敢停一下：不再用工作证明自己，而是用“留下来”证明羁绊。你获得的是一位真正愿意陪你走到底的支柱。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_ganyu_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_ganyu_c0_modifier",
+          "c1": "gacha_ganyu_c1_modifier",
+          "c2": "gacha_ganyu_c2_modifier",
+          "c3": "gacha_ganyu_c3_modifier",
+          "c4": "gacha_ganyu_c4_modifier",
+          "c5": "gacha_ganyu_c5_modifier",
+          "c6": "gacha_ganyu_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_ganyu_country_modifier",
+          "c1": "gacha_ganyu_c1_country_modifier",
+          "c2": "gacha_ganyu_c2_country_modifier",
+          "c4": "gacha_ganyu_c4_country_modifier",
+          "c5": "gacha_ganyu_c5_country_modifier",
+          "c6": "gacha_ganyu_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_ganyu_modifier": {
+          "gacha_core": "yes",
+          "gacha_ice_godeye": "yes"
+        },
+        "gacha_ganyu_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_ganyu_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_ganyu_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_ganyu_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_ganyu_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_ganyu_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_ganyu_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_ganyu_country_modifier": {},
+        "gacha_ganyu_c1_country_modifier": {
+          "building_upkeep_costs": -0.05,
+          "stability_cost": -0.05
+        },
+        "gacha_ganyu_c2_country_modifier": {},
+        "gacha_ganyu_c4_country_modifier": {
+          "global_defensive": 0.1,
+          "land_morale_recovery": 0.06,
+          "land_morale": 0.04
+        },
+        "gacha_ganyu_c5_country_modifier": {
+          "government_reform_slots": 1,
+          "hire_advisor_cost_modifier": -0.1
+        },
+        "gacha_ganyu_c6_country_modifier": {
+          "monthly_legitimacy": 0.08,
+          "stability_cost": -0.1,
+          "global_devastation_recovery": 0.1,
+          "land_morale_recovery": 0.06
+        }
+      },
+      "story_mode": "custom",
+      "nation": "liyue",
+      "pool": {
+        "in_pool": true,
+        "group": "liyue"
+      },
+      "starlight_shop": true,
+      "story_ref": {
+        "event_file": "in_game/events/gacha_ganyu_events.txt",
+        "loc_prefix": "gacha_ganyu_events"
+      }
+    },
+    {
+      "code": "hutao",
+      "name": {
+        "first": "胡桃",
+        "last": "往生堂"
+      },
+      "traits": {
+        "origin": {
+          "name": "往生堂业务拓展",
+          "desc": "「您国家的人好像很怕死？这可不行，越怕越容易乱。生老病死是自然规律，像呼吸一样自然。让我来帮您宣传一下『往生』的理念吧，大家心里踏实了，日子才能过得安稳嘛。」",
+          "key": "gacha_hutao_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "stability_cost": -0.1,
+            "global_disease_resistance": 0.1
+          },
+          "aura_country_modifier": "gacha_hutao_country_modifier"
+        },
+        "awakened": {
+          "name": "赤团开道",
+          "desc": "「打仗我不在行？哎呀，您可别小看我。只有见过最多生死的人，才知道怎么最快地送敌人上路。放心，不管是敌是友，只要倒下了，往生堂都会公平地给他们留个位置。」",
+          "key": "gacha_hutao_awakened_trait",
+          "modifier": {
+            "land_morale_modifier": 0.15,
+            "army_losses_in_war_cost_modifier": -0.15
+          }
+        },
+        "transcended": {
+          "name": "幽蝶的引路人",
+          "desc": "「这就让我坐上王座啦？嘿嘿，也好。在我的治下，阴阳有序，生死两安。活着的时候热热闹闹，走了以后体体面面。这难道不是最完美的盛世吗？」",
+          "key": "gacha_hutao_transcended_trait",
+          "modifier": {
+            "monthly_prestige": 0.08,
+            "monthly_legitimacy": 0.08
+          }
+        },
+        "c2": {
+          "name": "边界·安魂曲",
+          "desc": "「阴阳有序，万物生息。我已在这片国土的四方立下了界碑。亡者安息于地下，化作春泥；生者无畏于战火，生生不息。听，那是灵魂归乡的歌谣，也是国家强盛的脉搏。」",
+          "key": "gacha_hutao_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "stability_cost": -0.2,
+            "global_disease_resistance": 0.2,
+            "global_manpower_modifier": 0.1
+          },
+          "aura_country_modifier": "gacha_hutao_c2_country_modifier"
+        },
+        "c4": {
+          "name": "赤团·蝶火燎原",
+          "desc": "「既然言语无法劝退恶鬼，那就用火来净化吧！我的蝴蝶会飞过战场，每一朵火焰绽放，都是为了送敌人前往彼岸。别眨眼，这可是名为『毁灭』的盛大葬仪！」",
+          "key": "gacha_hutao_c4_trait",
+          "modifier": {
+            "land_morale_modifier": 0.3,
+            "army_losses_in_war_cost_modifier": -0.3,
+            "army_reinforce_cost": -0.1
+          }
+        },
+        "c6": {
+          "name": "幽冥之主·轮回",
+          "desc": "「坐在这个位置上，我看得到更多的生离死别。但正因如此，生命才显得可贵，不是吗？无需畏惧终结，因为我是守门人。只要我在，这国家的命数……便还没到尽头。尽情地闹腾吧，陛下！」",
+          "key": "gacha_hutao_c6_trait",
+          "modifier": {
+            "monthly_prestige": 0.16,
+            "monthly_legitimacy": 0.16,
+            "global_life_expectancy": 8
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "彼岸座·零命",
+          "desc": "「不必怕死，怕活得不痛快才对。」\n她用玩笑与仪式把恐惧拆开：民心更稳，谣言与恐慌更难发酵。"
+        },
+        "c1": {
+          "name": "赤转蝶舞",
+          "desc": "「蝶一转，路就开了。」\n她的行动像火星：在关键节点迅速点燃士气，让你的军队更敢冲、更敢追。"
+        },
+        "c2": {
+          "name": "最不安神",
+          "desc": "「安不安神不重要，重要的是——别自乱阵脚。」\n她擅长处理“边界上的事”：战乱、瘟疫、饥荒带来的恐惧被更快压下。"
+        },
+        "c3": {
+          "name": "临别在世",
+          "desc": "「临别之前，总得把话说清楚。」\n她把告别写成制度：伤亡、抚恤、继承与收尾更有章法，军队的怨气更少。"
+        },
+        "c4": {
+          "name": "花好月圆",
+          "desc": "「办喜事也好，办丧事也罢——都要热闹。」\n她把仪式变成治理工具：节庆与葬仪都能凝聚人心，让国家更容易从动荡中恢复。"
+        },
+        "c5": {
+          "name": "红尘客栈",
+          "desc": "「消息嘛，来来往往，顺手就听到了。」\n往生堂的“客户网络”延伸成情报与人脉：你更容易摸清各国的底气与软肋。"
+        },
+        "c6": {
+          "name": "幽蝶殊途",
+          "desc": "「生者走生路，死者走死路——但国家要走活路。」\n她把“终结”驯服成秩序：在最坏的年份，崩溃被推迟，反击被提前。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_hutao_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_hutao_c0_modifier",
+          "c1": "gacha_hutao_c1_modifier",
+          "c2": "gacha_hutao_c2_modifier",
+          "c3": "gacha_hutao_c3_modifier",
+          "c4": "gacha_hutao_c4_modifier",
+          "c5": "gacha_hutao_c5_modifier",
+          "c6": "gacha_hutao_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_hutao_country_modifier",
+          "c1": "gacha_hutao_c1_country_modifier",
+          "c2": "gacha_hutao_c2_country_modifier",
+          "c4": "gacha_hutao_c4_country_modifier",
+          "c5": "gacha_hutao_c5_country_modifier",
+          "c6": "gacha_hutao_c6_country_modifier"
+        },
+        "other_modifiers": [
+          "gacha_hutao_gravestone_modifier",
+          "gacha_hutao_midnight_carnival_modifier"
+        ]
+      },
+      "buff_values": {
+        "gacha_hutao_modifier": {
+          "gacha_core": "yes",
+          "gacha_fire_godeye": "yes"
+        },
+        "gacha_hutao_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_hutao_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_hutao_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_hutao_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_hutao_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_hutao_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_hutao_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_hutao_country_modifier": {},
+        "gacha_hutao_c1_country_modifier": {
+          "hire_advisor_cost_modifier": -0.2,
+          "land_morale": 0.04
+        },
+        "gacha_hutao_c2_country_modifier": {},
+        "gacha_hutao_c4_country_modifier": {
+          "siege_ability": 0.1,
+          "land_morale": 0.07,
+          "land_morale_recovery": 0.05
+        },
+        "gacha_hutao_c5_country_modifier": {
+          "building_missionary_effort_modifier": 0.01,
+          "spy_network_construction": 0.15,
+          "max_diplomats": 1
+        },
+        "gacha_hutao_c6_country_modifier": {
+          "max_war_exhaustion": 1,
+          "monthly_war_exhaustion": -0.03,
+          "global_devastation_recovery": 0.15,
+          "land_morale_recovery": 0.07
+        },
+        "gacha_hutao_gravestone_modifier": {
+          "stability_cost": -0.05
+        },
+        "gacha_hutao_midnight_carnival_modifier": {}
+      },
+      "story_mode": "custom",
+      "nation": "liyue",
+      "pool": {
+        "in_pool": true,
+        "group": "standard"
+      },
+      "starlight_shop": true,
+      "story_ref": {
+        "event_file": "in_game/events/gacha_hutao_events.txt",
+        "loc_prefix": "gacha_hutao_events"
+      }
+    },
+    {
+      "code": "keqing",
+      "name": {
+        "first": "刻晴",
+        "last": "玉衡"
+      },
+      "traits": {
+        "origin": {
+          "name": "璃月千帆之繁",
+          "desc": "「在此地驻足片刻，我仿佛看到了璃月港千帆竞发的景象……不对，这里的基础设施太差了。想要富国，先要修路、通商、整顿市集。把图纸给我，我会让这片土地焕发出黄金般的光泽。」",
+          "key": "gacha_keqing_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "global_construction_speed": 0.1,
+            "global_monthly_food_modifier": 0.1
+          },
+          "aura_country_modifier": "gacha_keqing_country_modifier"
+        },
+        "awakened": {
+          "name": "迅雷天街巡游",
+          "desc": "「兵贵神速。在那群臃肿的敌军还在整队时，我的剑锋（雷楔）早已在他们的后方炸响。无论是平叛还是远征，只要速度够快，就没有斩不断的阻碍。出发！」",
+          "key": "gacha_keqing_awakened_trait",
+          "modifier": {
+            "army_movement_speed": 0.3,
+            "discipline": 0.05
+          }
+        },
+        "transcended": {
+          "name": "人治时代的开拓者",
+          "desc": "「不要总是指望神迹或天命。历史是由人类的双脚走出来的。如果你敢于打破陈规，我就敢为你制定新的律法。在这个时代，我们要用自己的手，去书写不属于神的未来。」",
+          "key": "gacha_keqing_transcended_trait",
+          "modifier": {
+            "research_speed_modifier": 0.1,
+            "country_cabinet_efficiency": 0.2
+          }
+        },
+        "c2": {
+          "name": "黄金的土地",
+          "desc": "「一砖一瓦，皆是未来的基石。在我的规划下，这座城市的效率已达极致。无论是农田还是工坊，都在以惊人的速度生长。看吧，这片土地正在回应我们的汗水，它将变得寸土寸金。」",
+          "key": "gacha_keqing_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "global_construction_speed": 0.2,
+            "global_monthly_food_modifier": 0.2,
+            "global_production_efficiency": 0.05
+          },
+          "aura_country_modifier": "gacha_keqing_c2_country_modifier"
+        },
+        "c4": {
+          "name": "云来·绝剑",
+          "desc": "「战场之上，唯快不破。我的剑光就是进军的号角。敌人的阵型在我眼中充满了破绽，我将化作雷霆，在他们反应过来之前，穿梭于万军之中，斩下胜利的果实。」",
+          "key": "gacha_keqing_c4_trait",
+          "modifier": {
+            "army_movement_speed": 0.6,
+            "discipline": 0.1,
+            "regiment_reinforcement_speed": 0.2
+          }
+        },
+        "c6": {
+          "name": "玉衡·治世",
+          "desc": "「神明的时代已经远去，如今是人治的黎明。我已将所有冗余的陈规旧律斩断，国家机器将在最高的效率下轰鸣运转。只要你我意志坚定，凡人的智慧，亦可超越神迹。」",
+          "key": "gacha_keqing_c6_trait",
+          "modifier": {
+            "research_speed_modifier": 0.2,
+            "country_cabinet_efficiency": 0.2,
+            "global_construction_speed": 0.15
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "金紫座·零命",
+          "desc": "「先修路，再谈盛世。」\n她把“发展”当第一优先级：工坊、城建、商路都开始按计划推进。"
+        },
+        "c1": {
+          "name": "雷厉风行",
+          "desc": "「能今天做完的事，就别拖到明天。」\n命令更干脆、执行更迅速：行军调度、工程排期与改革推进都变快。"
+        },
+        "c2": {
+          "name": "苛刻的监工",
+          "desc": "「偷工减料？那就返工。」\n她对官僚与承包者的容忍度极低：浪费被压缩，效率被榨出来，但抱怨也会变多。"
+        },
+        "c3": {
+          "name": "登楼",
+          "desc": "「站得高，才能看清全局。」\n她开始从“做事的人”变成“定局的人”：更善于把资源集中到关键城市与关键产业。"
+        },
+        "c4": {
+          "name": "调律",
+          "desc": "「制度要像钟表一样精准。」\n税制、征召、商规被重新校准：国家运转更稳，突然的失控更少。"
+        },
+        "c5": {
+          "name": "移灯",
+          "desc": "「把灯移到该照亮的地方。」\n她擅长把投资从低效处抽走，投向最能产出的位置：繁荣会更集中、更锐利。"
+        },
+        "c6": {
+          "name": "廉贞",
+          "desc": "「人治的底线，是清明。」\n她用纪律立住底线：贪腐更难滋生，改革阻力更小——国家像被雷电洗过一遍。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_keqing_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_keqing_c0_modifier",
+          "c1": "gacha_keqing_c1_modifier",
+          "c2": "gacha_keqing_c2_modifier",
+          "c3": "gacha_keqing_c3_modifier",
+          "c4": "gacha_keqing_c4_modifier",
+          "c5": "gacha_keqing_c5_modifier",
+          "c6": "gacha_keqing_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_keqing_country_modifier",
+          "c1": "gacha_keqing_c1_country_modifier",
+          "c2": "gacha_keqing_c2_country_modifier",
+          "c4": "gacha_keqing_c4_country_modifier",
+          "c5": "gacha_keqing_c5_country_modifier",
+          "c6": "gacha_keqing_c6_country_modifier"
+        },
+        "other_modifiers": [
+          "gacha_keqing_aid_modifier",
+          "gacha_keqing_gentle_expectation_modifier"
+        ]
+      },
+      "buff_values": {
+        "gacha_keqing_modifier": {
+          "gacha_core": "yes",
+          "gacha_electro_godeye": "yes"
+        },
+        "gacha_keqing_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_keqing_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_keqing_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_keqing_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_keqing_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_keqing_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_keqing_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_keqing_country_modifier": {},
+        "gacha_keqing_c1_country_modifier": {
+          "global_construction_speed": 0.1,
+          "army_movement_speed": 0.03
+        },
+        "gacha_keqing_c2_country_modifier": {},
+        "gacha_keqing_c4_country_modifier": {
+          "army_movement_speed": 0.06,
+          "discipline": 0.03,
+          "siege_ability": 0.05
+        },
+        "gacha_keqing_c5_country_modifier": {
+          "global_build_buildings_cost": -0.2,
+          "global_production_efficiency": 0.04
+        },
+        "gacha_keqing_c6_country_modifier": {
+          "country_cabinet_efficiency": 0.08,
+          "legislative_efficiency": 0.08,
+          "stability_cost": -0.05
+        },
+        "gacha_keqing_aid_modifier": {
+          "global_construction_speed": 0.05
+        },
+        "gacha_keqing_gentle_expectation_modifier": {}
+      },
+      "story_mode": "custom",
+      "nation": "liyue",
+      "pool": {
+        "in_pool": true,
+        "group": "standard"
+      },
+      "starlight_shop": true,
+      "story_ref": {
+        "event_file": "in_game/events/gacha_keqing_events.txt",
+        "loc_prefix": "gacha_keqing_events"
+      }
+    },
+    {
+      "code": "ningguang",
+      "name": {
+        "first": "凝光",
+        "last": "天权"
+      },
+      "traits": {
+        "origin": {
+          "name": "群玉阁的主人",
+          "desc": "「群玉阁曾是璃月财富与权力的标尺。它坠落过——但我从不把一次损失当作结局。先把你的商路疏通：堵点清掉，账目重算，钱自然会回来。」",
+          "key": "gacha_ningguang_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "trade_efficiency": 0.1,
+            "trade_range": 10
+          },
+          "aura_country_modifier": "gacha_ningguang_country_modifier"
+        },
+        "awakened": {
+          "name": "天权的裁决",
+          "desc": "「谈判不是祈求，是结算。对方的底线、筹码与恐惧——只要价格算对，签字不过是走个过场。我会让他们明白，什么叫『天权的裁决』。」",
+          "key": "gacha_ningguang_awakened_trait",
+          "modifier": {
+            "trade_range": 10
+          }
+        },
+        "transcended": {
+          "name": "璃月的无冕女王",
+          "desc": "「治国与经商并无二致：让资源流向最高效的地方。我不需要王冠——账本上的每一行数字，都会替我说话。在我的注视下，每一枚铜板都无处遁形。」",
+          "key": "gacha_ningguang_transcended_trait",
+          "modifier": {
+            "trade_range": 10
+          }
+        },
+        "c2": {
+          "name": "黄金法则",
+          "desc": "「你们的贸易法规漏洞太多，像是把港口钥匙交给走私犯。现在开始，每一笔交易都有价，每一次违约都有罚。黄金法则？很简单，谁能付账，谁就能写条款。」",
+          "key": "gacha_ningguang_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "trade_efficiency": 0.2,
+            "trade_range": 20
+          },
+          "aura_country_modifier": "gacha_ningguang_c2_country_modifier"
+        },
+        "c4": {
+          "name": "七星之首",
+          "desc": "「你以为群玉阁只是宫殿？不。它是信息的定价中心，每个商人、每艘船、每句闲谈，都有标价。现在，这张网覆盖你的疆域。风起之前，我会先听见。」",
+          "key": "gacha_ningguang_c4_trait",
+          "modifier": {
+            "trade_range": 20
+          }
+        },
+        "c6": {
+          "name": "天权临世",
+          "desc": "「我曾亲手炸毁群玉阁，用毕生心血换取璃月的存续。那一刻我明白，真正的财富，不是金银珠宝，而是值得守护的东西。现在，我把新的答案放在你这里：你的国，就是我的新群玉阁。这一次，我会让它永不坠落。」",
+          "key": "gacha_ningguang_c6_trait",
+          "modifier": {
+            "trade_range": 20
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "天权座·零命",
+          "desc": "「先把账算清。」\n她一到，市场就开始“讲规则”：交易更透明，税收更稳定，钱会流向你能控制的地方。"
+        },
+        "c1": {
+          "name": "璃月商会分部",
+          "desc": "「商会不是装饰，是触角。」\n她把商人组织进网络：沿海与要道出现“分部”，你的贸易渗透更深，也更快。"
+        },
+        "c2": {
+          "name": "重订契约",
+          "desc": "「条款写得太软，就会被当作笑话。」\n违约成本被抬高：盟约、贷款、贸易协定更难被钻空子，你的信誉也更值钱。"
+        },
+        "c3": {
+          "name": "月下棋局",
+          "desc": "「你以为那是晚宴？那是开盘。」\n她把社交变成谈判：一场宴会能换来一条港口、一笔赔款或一次默许。"
+        },
+        "c4": {
+          "name": "情报之网",
+          "desc": "「信息比黄金更贵。」\n走私、宫廷八卦、军需价格都在她的网里：你更容易预判对手的动向，先手更多。"
+        },
+        "c5": {
+          "name": "人才储备",
+          "desc": "「聪明人要用在刀刃上。」\n她会从商会与学堂里挑人：更容易获得高质量的官员、顾问与工匠，国家上限被抬高。"
+        },
+        "c6": {
+          "name": "最后的筹码",
+          "desc": "「当对方以为你只剩一条路时，我会把第二条路摆在桌上。」\n她能用财富买时间、买军队、买盟友：在绝境里翻盘，靠的不是祈祷，是现金流。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_ningguang_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_ningguang_c0_modifier",
+          "c1": "gacha_ningguang_c1_modifier",
+          "c2": "gacha_ningguang_c2_modifier",
+          "c3": "gacha_ningguang_c3_modifier",
+          "c4": "gacha_ningguang_c4_modifier",
+          "c5": "gacha_ningguang_c5_modifier",
+          "c6": "gacha_ningguang_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_ningguang_country_modifier",
+          "c1": "gacha_ningguang_c1_country_modifier",
+          "c2": "gacha_ningguang_c2_country_modifier",
+          "c4": "gacha_ningguang_c4_country_modifier",
+          "c5": "gacha_ningguang_c5_country_modifier",
+          "c6": "gacha_ningguang_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_ningguang_modifier": {
+          "gacha_core": "yes",
+          "gacha_stone_godeye": "yes"
+        },
+        "gacha_ningguang_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_ningguang_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_ningguang_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_ningguang_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_ningguang_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_ningguang_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_ningguang_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_ningguang_country_modifier": {},
+        "gacha_ningguang_c1_country_modifier": {
+          "global_merchant_capacity_modifier": 0.2,
+          "trade_range_modifier": 0.1
+        },
+        "gacha_ningguang_c2_country_modifier": {},
+        "gacha_ningguang_c4_country_modifier": {
+          "spy_network_construction": 0.25,
+          "max_diplomats": 1
+        },
+        "gacha_ningguang_c5_country_modifier": {
+          "hire_advisor_cost_modifier": -0.3,
+          "government_reform_slots": 1
+        },
+        "gacha_ningguang_c6_country_modifier": {
+          "total_loan_capacity_modifier": 0.25,
+          "trade_income": 0.1,
+          "trade_efficiency": 0.08
+        }
+      },
+      "story_mode": "custom",
+      "nation": "liyue",
+      "pool": {
+        "in_pool": true,
+        "group": "liyue"
+      },
+      "starlight_shop": true,
+      "story_ref": {
+        "event_file": "in_game/events/gacha_ningguang_events.txt",
+        "loc_prefix": "gacha_ningguang_events"
+      }
+    },
+    {
+      "code": "zhongli",
+      "name": {
+        "first": "钟离",
+        "last": "听书人"
+      },
+      "traits": {
+        "origin": {
+          "name": "千年契约",
+          "desc": "「契约即秩序，秩序即长存。」",
+          "key": "gacha_zhongli_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "country_cabinet_efficiency": 0.1,
+            "monthly_legitimacy": 0.08
+          },
+          "aura_country_modifier": "gacha_zhongli_country_modifier"
+        },
+        "awakened": {
+          "name": "岩脊守势",
+          "desc": "「岩峦不动，方能镇守四方。」",
+          "key": "gacha_zhongli_awakened_trait",
+          "modifier": {
+            "discipline": 0.05,
+            "army_initiative": 0.1
+          }
+        },
+        "transcended": {
+          "name": "听书人的定鼎",
+          "desc": "「岁月流转，终有定鼎之时。」",
+          "key": "gacha_zhongli_transcended_trait",
+          "modifier": {
+            "monthly_prestige": 0.08,
+            "monthly_legitimacy": 0.08
+          }
+        },
+        "c2": {
+          "name": "金石之约",
+          "desc": "「言出必践，金石为证。」",
+          "key": "gacha_zhongli_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "country_cabinet_efficiency": 0.2,
+            "monthly_legitimacy": 0.16
+          },
+          "aura_country_modifier": "gacha_zhongli_c2_country_modifier"
+        },
+        "c4": {
+          "name": "天星坠落",
+          "desc": "「星落如岩，势不可挡。」",
+          "key": "gacha_zhongli_c4_trait",
+          "modifier": {
+            "discipline": 0.1,
+            "army_initiative": 0.2
+          }
+        },
+        "c6": {
+          "name": "尘世闲游",
+          "desc": "「行遍尘世，见证人间。」",
+          "key": "gacha_zhongli_c6_trait",
+          "modifier": {
+            "country_cabinet_efficiency": 0.2,
+            "monthly_prestige": 0.16
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "听书人座·零命",
+          "desc": "「故事听多了，就知道什么该守。」\n他不争权，却让秩序落地：你的法度更像“契约”，而不是纸面。"
+        },
+        "c1": {
+          "name": "秩序之约",
+          "desc": "「先立规矩，再谈仁慈。」\n当制度清晰，地方就不敢乱：治安与服从更稳定，内耗更少。"
+        },
+        "c2": {
+          "name": "金石之约",
+          "desc": "「言出必践。」\n外交与内政都更“可兑现”：承诺更可信，违约更昂贵，你的威望随之上升。"
+        },
+        "c3": {
+          "name": "古岩残章",
+          "desc": "「旧章不是束缚，是基座。」\n他擅长把古老法度重写成可用的条文：制度更耐久，短期风潮更难掀翻根基。"
+        },
+        "c4": {
+          "name": "天星坠落",
+          "desc": "「该落下的时候，就会落下。」\n当你决定用力一击，他会把“势”砸出来：攻坚与决战的效果更像定音锤。"
+        },
+        "c5": {
+          "name": "万世之约",
+          "desc": "「万世之约，不在口头。」\n他把承诺写进税制、军制与城防：国家韧性增强，动荡更难撼动你的统治。"
+        },
+        "c6": {
+          "name": "尘世闲游",
+          "desc": "「人间烟火，最值得珍惜。」\n当他选择留下，你得到的是“长治久安”的底色：不是爆发型的强，而是越打越稳、越久越强。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_zhongli_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_zhongli_c0_modifier",
+          "c1": "gacha_zhongli_c1_modifier",
+          "c2": "gacha_zhongli_c2_modifier",
+          "c3": "gacha_zhongli_c3_modifier",
+          "c4": "gacha_zhongli_c4_modifier",
+          "c5": "gacha_zhongli_c5_modifier",
+          "c6": "gacha_zhongli_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_zhongli_country_modifier",
+          "c1": "gacha_zhongli_c1_country_modifier",
+          "c2": "gacha_zhongli_c2_country_modifier",
+          "c4": "gacha_zhongli_c4_country_modifier",
+          "c5": "gacha_zhongli_c5_country_modifier",
+          "c6": "gacha_zhongli_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_zhongli_modifier": {
+          "gacha_core": "yes",
+          "gacha_stone_godeye": "yes"
+        },
+        "gacha_zhongli_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_zhongli_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_zhongli_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_zhongli_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_zhongli_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_zhongli_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_zhongli_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_zhongli_country_modifier": {},
+        "gacha_zhongli_c1_country_modifier": {
+          "government_size": 1,
+          "diplomatic_reputation": 1
+        },
+        "gacha_zhongli_c2_country_modifier": {},
+        "gacha_zhongli_c4_country_modifier": {
+          "siege_ability": 0.1,
+          "army_artillery_power": 0.05,
+          "discipline": 0.03
+        },
+        "gacha_zhongli_c5_country_modifier": {
+          "government_reform_slots": 1,
+          "global_defensive": 0.08
+        },
+        "gacha_zhongli_c6_country_modifier": {
+          "stability_cost": -0.1,
+          "global_devastation_recovery": 0.15,
+          "land_morale_recovery": 0.05,
+          "land_unit_attrition": -0.05
+        }
+      },
+      "story_mode": "custom",
+      "nation": "liyue",
+      "pool": {
+        "in_pool": false,
+        "group": ""
+      },
+      "starlight_shop": false,
+      "story_ref": {
+        "event_file": "in_game/events/gacha_zhongli_events.txt",
+        "loc_prefix": "gacha_zhongli_events"
+      }
+    }
+  ]
+}

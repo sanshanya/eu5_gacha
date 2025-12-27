@@ -38,6 +38,14 @@ gacha_fire_godeye={
   }
 }
 
+gacha_wind_godeye={
+  color=good
+  boolean=yes
+  game_data={
+    category=character
+  }
+}
+
 gacha_grass_godeye={
   color=good
   boolean=yes

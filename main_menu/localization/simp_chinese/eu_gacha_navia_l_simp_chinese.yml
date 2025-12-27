@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 娜维娅 (navia)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_navia: "娜维娅"
+  gacha_last_name_navia: "刺玫"
+  # === 特质 (Traits) ===
+  gacha_navia_origin_trait: "刺玫会·互助关系网"
+  desc_gacha_navia_origin_trait: "「贵族也好，工人也好，难处都是实打实的。」\n\n娜维娅把刺玫会的互助网络搬进你的城市：用慈善、调解与『能把人拉回正轨的工作』抹平冲突。她不会许诺乌托邦，但会让你少听到街头的怨声。"
+  gacha_navia_awakened_trait: "铳柄伞·典仪晶火"
+  desc_gacha_navia_awakened_trait: "「谈判桌上我会笑，战场上我也会笑——因为我知道该把铳口对准哪里。」\n\n她把工坊、矿料与炮兵的协作揉成一套『可复制的流程』：攻城、守城、火器改良都更像一门生意，能按期交付、按价结算。"
+  gacha_navia_transcended_trait: "金蔷薇的会长"
+  desc_gacha_navia_transcended_trait: "「国家不是一张家徽，是一群愿意彼此托底的人。」\n\n当她被推到更高的位置，娜维娅会更像一名能上台面的政治家：把阶层之间的债与情算清楚，把城市的秩序与信任重新织起来。"
+  gacha_navia_c2_trait: "总指挥的乘胜追击"
+  desc_gacha_navia_c2_trait: "「机会来了就别犹豫，犹豫会让代价翻倍。」\n\n她擅长把一次胜利滚成连续的战果：追击、围堵、夺取要塞与港口，像在谈一笔必须拿下的合同。"
+  gacha_navia_c4_trait: "铭誓者的绝不姑息"
+  desc_gacha_navia_c4_trait: "「欺负弱者的人，最怕有人当众说：到此为止。」\n\n对叛乱、黑帮与走私，她的态度比想象中更硬：该封锁就封锁，该清剿就清剿——同时给愿意回头的人留一条路。"
+  gacha_navia_c6_trait: "刺玫会长的灵活手腕"
+  desc_gacha_navia_c6_trait: "「我不喜欢被命运推着走，所以我学会了——在最坏的规则里，也能玩出最好的一手牌。」\n\n她把『灵活』用在国家上：财政周转、军需采购、危机救济都更有余地。你会发现，很多看似必然崩坏的局面，被她用一句『我来想办法』撑了过去。"
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_navia_modifier: "娜维娅"
+  STATIC_MODIFIER_DESC_gacha_navia_modifier: "TODO"
+  gacha_navia_modifier: "娜维娅的余韵"
+  gacha_navia_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_navia_c0_modifier: "野蔷薇座·零命"
+  STATIC_MODIFIER_DESC_gacha_navia_c0_modifier: "刺玫会的网络在你的城镇扎根：社会援助与治安协作更有效。"
+  STATIC_MODIFIER_NAME_gacha_navia_c1_modifier: "淑女的距离感守则"
+  STATIC_MODIFIER_DESC_gacha_navia_c1_modifier: "她懂得保持分寸：能在贵族与市民之间斡旋，减少不必要的冲突。"
+  STATIC_MODIFIER_NAME_gacha_navia_c2_modifier: "总指挥的乘胜追击"
+  STATIC_MODIFIER_DESC_gacha_navia_c2_modifier: "胜利不止在战场结束时：更擅长把优势转化为占领、赔款与谈判筹码。"
+  STATIC_MODIFIER_NAME_gacha_navia_c3_modifier: "经营家的开阔视野"
+  STATIC_MODIFIER_DESC_gacha_navia_c3_modifier: "把城市当作产业链来经营：工坊与贸易的规划更清晰，投资回报更稳定。"
+  STATIC_MODIFIER_NAME_gacha_navia_c4_modifier: "铭誓者的绝不姑息"
+  STATIC_MODIFIER_DESC_gacha_navia_c4_modifier: "对犯罪与叛乱更强硬：短期阵痛换来长期秩序，边境与港口更安稳。"
+  STATIC_MODIFIER_NAME_gacha_navia_c5_modifier: "协商人的坚决谈判"
+  STATIC_MODIFIER_DESC_gacha_navia_c5_modifier: "谈判桌上的笑容背后是算清的账：更容易争取对己方有利的条款。"
+  STATIC_MODIFIER_NAME_gacha_navia_c6_modifier: "刺玫会长的灵活手腕"
+  STATIC_MODIFIER_DESC_gacha_navia_c6_modifier: "财政与军需在危机中更有弹性：当局势急转直下，你更容易『挺过那一段』。"
+
+  gacha_navia_events.1.title: "娜维娅"
+  gacha_navia_events.1.desc: "TODO"
+  gacha_navia_events.1.a: "……"
+  gacha_navia_events.4.title: "娜维娅·C6"
+  gacha_navia_events.4.desc: "TODO"
+  gacha_navia_events.4.a: "……"
+  gacha_navia_events.11.title: "娜维娅·C2"
+  gacha_navia_events.11.desc: "TODO"
+  gacha_navia_events.11.a: "……"
+  gacha_navia_events.12.title: "娜维娅·C4"
+  gacha_navia_events.12.desc: "TODO"
+  gacha_navia_events.12.a: "……"
+  gacha_navia_events.13.title: "娜维娅·C1"
+  gacha_navia_events.13.desc: "TODO"
+  gacha_navia_events.13.a: "……"
+  gacha_navia_events.14.title: "娜维娅·C5"
+  gacha_navia_events.14.desc: "TODO"
+  gacha_navia_events.14.a: "……"

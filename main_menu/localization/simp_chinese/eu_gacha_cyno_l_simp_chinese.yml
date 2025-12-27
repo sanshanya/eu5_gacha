@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 赛诺 (cyno)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_cyno: "赛诺"
+  gacha_last_name_cyno: "风纪官"
+  # === 特质 (Traits) ===
+  gacha_cyno_origin_trait: "风纪官的冷面裁决"
+  desc_gacha_cyno_origin_trait: "「须弥有句老话：规则不严，聪明人就会把它当玩具。\n\n从今天起，你的法令不是‘建议’，是‘判决’。\n\n……别紧张，我也会讲笑话。只是它们通常会让人更沉默。」"
+  gacha_cyno_awakened_trait: "渡荒之雷"
+  desc_gacha_cyno_awakened_trait: "「战场上的混乱，和审讯室里的谎言一样——都需要被迅速终结。\n\n当雷鸣响起，队列会知道该向哪里前进；敌人也会知道该在哪里倒下。」"
+  gacha_cyno_transcended_trait: "大风纪官·律令"
+  desc_gacha_cyno_transcended_trait: "「你把权柄交给我，那就接受代价：贪腐会被清算，投机会被惩戒，越线的贵族会被当众打回去。\n\n秩序不是温柔的，它只是必要。」"
+  gacha_cyno_c2_trait: "诘辩与缄口"
+  desc_gacha_cyno_c2_trait: "「有人以‘传统’为名，掩盖罪行；有人以‘自由’为名，贩卖混乱。\n\n我不站队，我只负责把事实摁在桌面上。\n\n顺带一提：桌面很硬。」"
+  gacha_cyno_c4_trait: "誓裁·不赦"
+  desc_gacha_cyno_c4_trait: "「军队需要的不是更多口号，而是更少例外。\n\n当纪律成为习惯，补给、行军、征税都会变得简单。\n\n——简单，就是强大。」"
+  gacha_cyno_c6_trait: "赤沙之狼"
+  desc_gacha_cyno_c6_trait: "「你问我为何要亲自上阵？\n\n因为最好的威慑，是让对手知道：‘执法者’不只会写判词，也会写战史。\n\n放心，我会把结案陈词留到胜利之后。」"
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_cyno_modifier: "赛诺"
+  STATIC_MODIFIER_DESC_gacha_cyno_modifier: "TODO"
+  gacha_cyno_modifier: "赛诺的余韵"
+  gacha_cyno_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_cyno_c0_modifier: "赤沙豺座·零命"
+  STATIC_MODIFIER_DESC_gacha_cyno_c0_modifier: "强化治安与反腐，降低叛乱与地方掣肘。"
+  STATIC_MODIFIER_NAME_gacha_cyno_c1_modifier: "干涩笑话"
+  STATIC_MODIFIER_DESC_gacha_cyno_c1_modifier: "在紧张时刻稳定军心；军队训练与作战节奏更连贯。"
+  STATIC_MODIFIER_NAME_gacha_cyno_c2_modifier: "诘辩"
+  STATIC_MODIFIER_DESC_gacha_cyno_c2_modifier: "审计与侦缉更高效：间谍更难渗透，黑市更难滋生。"
+  STATIC_MODIFIER_NAME_gacha_cyno_c3_modifier: "刑律加注"
+  STATIC_MODIFIER_DESC_gacha_cyno_c3_modifier: "法令执行力度上升：地方自治下降，国家集权更强。"
+  STATIC_MODIFIER_NAME_gacha_cyno_c4_modifier: "渡荒之雷"
+  STATIC_MODIFIER_DESC_gacha_cyno_c4_modifier: "战斗与行军更有纪律：伤亡与战损更可控。"
+  STATIC_MODIFIER_NAME_gacha_cyno_c5_modifier: "裁决余烬"
+  STATIC_MODIFIER_DESC_gacha_cyno_c5_modifier: "战争疲惫更易消散；在持久战中更能撑住。"
+  STATIC_MODIFIER_NAME_gacha_cyno_c6_modifier: "狼牙终式"
+  STATIC_MODIFIER_DESC_gacha_cyno_c6_modifier: "关键战役爆发力提升：冲击更强，敌军更易溃散。"
+
+  gacha_cyno_events.1.title: "赛诺"
+  gacha_cyno_events.1.desc: "TODO"
+  gacha_cyno_events.1.a: "……"
+  gacha_cyno_events.4.title: "赛诺·C6"
+  gacha_cyno_events.4.desc: "TODO"
+  gacha_cyno_events.4.a: "……"
+  gacha_cyno_events.11.title: "赛诺·C2"
+  gacha_cyno_events.11.desc: "TODO"
+  gacha_cyno_events.11.a: "……"
+  gacha_cyno_events.12.title: "赛诺·C4"
+  gacha_cyno_events.12.desc: "TODO"
+  gacha_cyno_events.12.a: "……"
+  gacha_cyno_events.13.title: "赛诺·C1"
+  gacha_cyno_events.13.desc: "TODO"
+  gacha_cyno_events.13.a: "……"
+  gacha_cyno_events.14.title: "赛诺·C5"
+  gacha_cyno_events.14.desc: "TODO"
+  gacha_cyno_events.14.a: "……"

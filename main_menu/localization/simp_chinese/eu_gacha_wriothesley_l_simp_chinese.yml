@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 莱欧斯利 (wriothesley)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_wriothesley: "莱欧斯利"
+  gacha_last_name_wriothesley: "公爵"
+  # === 特质 (Traits) ===
+  gacha_wriothesley_origin_trait: "梅洛彼得堡·公爵"
+  desc_gacha_wriothesley_origin_trait: "「监狱不该只是关人的地方——它必须产出秩序。」\n\n莱欧斯利把『水下堡垒』的管理经验带进你的国家：纪律、工坊与配给像齿轮一样咬合。你会得到更强的治安与更稳的生产，但也必须接受他对规则近乎冷酷的坚持。"
+  gacha_wriothesley_awakened_trait: "铁拳与红茶"
+  desc_gacha_wriothesley_awakened_trait: "「别紧张，我先请你喝茶。喝完再谈——你要么签字，要么挨打。」\n\n他能用温和的礼貌压住最危险的地方势力：黑市、帮派、暴动苗头会被提前掐灭。必要时，他会亲自把『不懂规矩的人』送回规矩里。"
+  gacha_wriothesley_transcended_trait: "水下秩序的铸造者"
+  desc_gacha_wriothesley_transcended_trait: "「统治者最怕两件事：看不见，管不动。」\n\n当他获得更高的权限，监狱系统会变成一张可控的安全网：收容、劳动、赎罪与情报并行。你会更容易压住内乱，也更容易在战争中维持后方运转。"
+  gacha_wriothesley_c2_trait: "予骄暴者以镣锁"
+  desc_gacha_wriothesley_c2_trait: "「强者若不受约束，弱者就会被逼到用火说话。」\n\n他擅长对『最会闹事的那一撮人』精准加压：减小地方豪强的破坏力，让税收与征兵不再被私权阻断。"
+  gacha_wriothesley_c4_trait: "予贞苦者以拯赎"
+  desc_gacha_wriothesley_c4_trait: "「把人逼到绝路，得到的只会是反噬。」\n\n莱欧斯利会在强硬之外给出通道：劳动换减刑、战功换赦免、技能培训换岗位——你能更快把动荡人口重新编入生产与军队。"
+  gacha_wriothesley_c6_trait: "予无罪者以念抚"
+  desc_gacha_wriothesley_c6_trait: "「我不需要恐惧维持秩序，我要的是——人们相信秩序值得。」\n\n当制度成熟，梅洛彼得堡的逻辑会反向作用于全国：少数人的恐惧，换成多数人的安全感。你的统治更稳，也更难被煽动与谣言撕裂。"
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_wriothesley_modifier: "莱欧斯利"
+  STATIC_MODIFIER_DESC_gacha_wriothesley_modifier: "TODO"
+  gacha_wriothesley_modifier: "莱欧斯利的余韵"
+  gacha_wriothesley_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_wriothesley_c0_modifier: "守狱犬座·零命"
+  STATIC_MODIFIER_DESC_gacha_wriothesley_c0_modifier: "以制度驯服混乱：治安更强，地下势力更难扩张。"
+  STATIC_MODIFIER_NAME_gacha_wriothesley_c1_modifier: "予行恶者以惩惧"
+  STATIC_MODIFIER_DESC_gacha_wriothesley_c1_modifier: "对犯罪的惩戒更明确：叛乱与黑市更难滋生。"
+  STATIC_MODIFIER_NAME_gacha_wriothesley_c2_modifier: "予骄暴者以镣锁"
+  STATIC_MODIFIER_DESC_gacha_wriothesley_c2_modifier: "精准打击地方豪强与帮派头目：更容易收回征税与征兵的控制权。"
+  STATIC_MODIFIER_NAME_gacha_wriothesley_c3_modifier: "予婪诈者以谴罚"
+  STATIC_MODIFIER_DESC_gacha_wriothesley_c3_modifier: "对贪腐与欺诈的处理更有效：财政漏损减少，官僚更守规矩。"
+  STATIC_MODIFIER_NAME_gacha_wriothesley_c4_modifier: "予贞苦者以拯赎"
+  STATIC_MODIFIER_DESC_gacha_wriothesley_c4_modifier: "提供赎罪与复归路径：战后恢复更快，社会矛盾更不易激化。"
+  STATIC_MODIFIER_NAME_gacha_wriothesley_c5_modifier: "予冤诉者以怜恕"
+  STATIC_MODIFIER_DESC_gacha_wriothesley_c5_modifier: "让制度允许申诉与纠错：降低冤案带来的长期仇恨与报复。"
+  STATIC_MODIFIER_NAME_gacha_wriothesley_c6_modifier: "予无罪者以念抚"
+  STATIC_MODIFIER_DESC_gacha_wriothesley_c6_modifier: "当秩序被多数人认可，你的国家在危机中更具韧性：更难被恐慌击穿。"
+
+  gacha_wriothesley_events.1.title: "莱欧斯利"
+  gacha_wriothesley_events.1.desc: "TODO"
+  gacha_wriothesley_events.1.a: "……"
+  gacha_wriothesley_events.4.title: "莱欧斯利·C6"
+  gacha_wriothesley_events.4.desc: "TODO"
+  gacha_wriothesley_events.4.a: "……"
+  gacha_wriothesley_events.11.title: "莱欧斯利·C2"
+  gacha_wriothesley_events.11.desc: "TODO"
+  gacha_wriothesley_events.11.a: "……"
+  gacha_wriothesley_events.12.title: "莱欧斯利·C4"
+  gacha_wriothesley_events.12.desc: "TODO"
+  gacha_wriothesley_events.12.a: "……"
+  gacha_wriothesley_events.13.title: "莱欧斯利·C1"
+  gacha_wriothesley_events.13.desc: "TODO"
+  gacha_wriothesley_events.13.a: "……"
+  gacha_wriothesley_events.14.title: "莱欧斯利·C5"
+  gacha_wriothesley_events.14.desc: "TODO"
+  gacha_wriothesley_events.14.a: "……"

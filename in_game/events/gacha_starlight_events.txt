@@ -1,13 +1,12 @@
 ﻿namespace = gacha_starlight_events
 
 # ==========================================
-# 事件 1：星辉兑换主菜单
+# 事件 1：星辉兑换主菜单（国家选择）
 # ==========================================
 gacha_starlight_events.1 = {
     type = country_event
     title = gacha_starlight_events.1.title
     desc  = gacha_starlight_events.1.desc
-    
 
     immediate = {
         event_illustration_estate_effect = {
@@ -16,41 +15,169 @@ gacha_starlight_events.1 = {
         }
     }
 
-    # 选项1：兑换心海
     option = {
-        name = gacha_starlight_events.1.xinhai
+        name = gacha_starlight_events.1.mondstadt
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.2 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.liyue
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.3 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.inazuma
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.4 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.sumeru
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.5 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.fontaine
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.6 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.natlan
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.7 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.snezhnaya
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.8 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.cancel
+    }
+}
+
+# ==========================================
+# 事件 2：蒙德
+# ==========================================
+gacha_starlight_events.2 = {
+    type = country_event
+    title = gacha_starlight_events.2.title
+    desc  = gacha_starlight_events.2.desc
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.fischl
         trigger = {
             var:gacha_starlight >= 3
             OR = {
-                NOT = { has_global_variable = gacha_xinhai_is_summoned }
-                any_character = { is_alive = yes has_character_modifier = gacha_xinhai_modifier }
+                NOT = { has_global_variable = gacha_fischl_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_fischl_modifier }
             }
         }
-        
+
         hidden_effect = {
             change_variable = { name = gacha_starlight subtract = 3 }
-            gacha_create_xinhai_effect = yes
+            gacha_create_fischl_effect = yes
         }
     }
-    
-    # 选项2：兑换雷电将军
+
     option = {
-        name = gacha_starlight_events.1.raiden
+        name = gacha_starlight_events.1.klee
         trigger = {
             var:gacha_starlight >= 3
             OR = {
-                NOT = { has_global_variable = gacha_raiden_is_summoned }
-                any_character = { is_alive = yes has_character_modifier = gacha_raiden_modifier }
+                NOT = { has_global_variable = gacha_klee_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_klee_modifier }
             }
         }
-        
+
         hidden_effect = {
             change_variable = { name = gacha_starlight subtract = 3 }
-            gacha_create_raiden_effect = yes
+            gacha_create_klee_effect = yes
         }
     }
-    
-    # 选项3：兑换刻晴
+
+    option = {
+        name = gacha_starlight_events.1.venti
+        trigger = {
+            has_global_variable = gacha_mondstadt_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_venti_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_venti_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_venti_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.noelle
+        trigger = {
+            has_global_variable = gacha_mondstadt_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_noelle_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_noelle_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_noelle_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.mona
+        trigger = {
+            has_global_variable = gacha_mondstadt_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_mona_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_mona_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_mona_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.back
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.1 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.cancel
+    }
+}
+
+# ==========================================
+# 事件 3：璃月
+# ==========================================
+gacha_starlight_events.3 = {
+    type = country_event
+    title = gacha_starlight_events.3.title
+    desc  = gacha_starlight_events.3.desc
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+    }
+
     option = {
         name = gacha_starlight_events.1.keqing
         trigger = {
@@ -67,31 +194,13 @@ gacha_starlight_events.1 = {
                 }
             }
         }
-        
+
         hidden_effect = {
             change_variable = { name = gacha_starlight subtract = 3 }
             gacha_create_keqing_effect = yes
         }
     }
-    
-    # 选项4：兑换芙宁娜
-    option = {
-        name = gacha_starlight_events.1.furina
-        trigger = {
-            var:gacha_starlight >= 3
-            OR = {
-                NOT = { has_global_variable = gacha_furina_is_summoned }
-                any_character = { is_alive = yes has_character_modifier = gacha_furina_modifier }
-            }
-        }
-        
-        hidden_effect = {
-            change_variable = { name = gacha_starlight subtract = 3 }
-            gacha_create_furina_effect = yes
-        }
-    }
-    
-    # 选项5：兑换胡桃
+
     option = {
         name = gacha_starlight_events.1.hutao
         trigger = {
@@ -101,58 +210,10 @@ gacha_starlight_events.1 = {
                 any_character = { is_alive = yes has_character_modifier = gacha_hutao_modifier }
             }
         }
-        
+
         hidden_effect = {
             change_variable = { name = gacha_starlight subtract = 3 }
             gacha_create_hutao_effect = yes
-        }
-    }
-
-    option = {
-        name = gacha_starlight_events.1.fischl
-        trigger = {
-            var:gacha_starlight >= 3
-            OR = {
-                NOT = { has_global_variable = gacha_fischl_is_summoned }
-                any_character = { is_alive = yes has_character_modifier = gacha_fischl_modifier }
-            }
-        }
-        
-        hidden_effect = {
-            change_variable = { name = gacha_starlight subtract = 3 }
-            gacha_create_fischl_effect = yes
-        }
-    }
-
-    option = {
-        name = gacha_starlight_events.1.klee
-        trigger = {
-            var:gacha_starlight >= 3
-            OR = {
-                NOT = { has_global_variable = gacha_klee_is_summoned }
-                any_character = { is_alive = yes has_character_modifier = gacha_klee_modifier }
-            }
-        }
-        
-        hidden_effect = {
-            change_variable = { name = gacha_starlight subtract = 3 }
-            gacha_create_klee_effect = yes
-        }
-    }
-    
-    option = {
-        name = gacha_starlight_events.1.nahida
-        trigger = {
-            var:gacha_starlight >= 3
-            OR = {
-                NOT = { has_global_variable = gacha_nahida_is_summoned }
-                any_character = { is_alive = yes has_character_modifier = gacha_nahida_modifier }
-            }
-        }
-        
-        hidden_effect = {
-            change_variable = { name = gacha_starlight subtract = 3 }
-            gacha_create_nahida_effect = yes
         }
     }
 
@@ -206,10 +267,440 @@ gacha_starlight_events.1 = {
             gacha_create_beidou_effect = yes
         }
     }
-    
-    # 选项6：取消
+
+    option = {
+        name = gacha_starlight_events.back
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.1 } }
+    }
+
     option = {
         name = gacha_starlight_events.1.cancel
-        # 什么也不做
+    }
+}
+
+# ==========================================
+# 事件 4：稻妻
+# ==========================================
+gacha_starlight_events.4 = {
+    type = country_event
+    title = gacha_starlight_events.4.title
+    desc  = gacha_starlight_events.4.desc
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.xinhai
+        trigger = {
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_xinhai_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_xinhai_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_xinhai_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.raiden
+        trigger = {
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_raiden_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_raiden_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_raiden_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.ayaka
+        trigger = {
+            has_global_variable = gacha_inazuma_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_ayaka_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_ayaka_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_ayaka_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.yoimiya
+        trigger = {
+            has_global_variable = gacha_inazuma_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_yoimiya_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_yoimiya_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_yoimiya_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.kuki_shinobu
+        trigger = {
+            has_global_variable = gacha_inazuma_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_kuki_shinobu_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_kuki_shinobu_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_kuki_shinobu_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.back
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.1 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.cancel
+    }
+}
+
+# ==========================================
+# 事件 5：须弥
+# ==========================================
+gacha_starlight_events.5 = {
+    type = country_event
+    title = gacha_starlight_events.5.title
+    desc  = gacha_starlight_events.5.desc
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.nahida
+        trigger = {
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_nahida_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_nahida_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_nahida_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.cyno
+        trigger = {
+            has_global_variable = gacha_sumeru_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_cyno_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_cyno_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_cyno_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.alhaitham
+        trigger = {
+            has_global_variable = gacha_sumeru_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_alhaitham_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_alhaitham_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_alhaitham_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.nilou
+        trigger = {
+            has_global_variable = gacha_sumeru_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_nilou_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_nilou_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_nilou_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.back
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.1 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.cancel
+    }
+}
+
+# ==========================================
+# 事件 6：枫丹
+# ==========================================
+gacha_starlight_events.6 = {
+    type = country_event
+    title = gacha_starlight_events.6.title
+    desc  = gacha_starlight_events.6.desc
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.furina
+        trigger = {
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_furina_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_furina_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_furina_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.charlotte
+        trigger = {
+            has_global_variable = gacha_fontaine_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_charlotte_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_charlotte_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_charlotte_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.navia
+        trigger = {
+            has_global_variable = gacha_fontaine_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_navia_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_navia_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_navia_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.wriothesley
+        trigger = {
+            has_global_variable = gacha_fontaine_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_wriothesley_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_wriothesley_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_wriothesley_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.back
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.1 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.cancel
+    }
+}
+
+# ==========================================
+# 事件 7：纳塔
+# ==========================================
+gacha_starlight_events.7 = {
+    type = country_event
+    title = gacha_starlight_events.7.title
+    desc  = gacha_starlight_events.7.desc
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.mualani
+        trigger = {
+            has_global_variable = gacha_natlan_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_mualani_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_mualani_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_mualani_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.citlali
+        trigger = {
+            has_global_variable = gacha_natlan_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_citlali_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_citlali_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_citlali_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.varesa
+        trigger = {
+            has_global_variable = gacha_natlan_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_varesa_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_varesa_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_varesa_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.back
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.1 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.cancel
+    }
+}
+
+# ==========================================
+# 事件 8：至冬
+# ==========================================
+gacha_starlight_events.8 = {
+    type = country_event
+    title = gacha_starlight_events.8.title
+    desc  = gacha_starlight_events.8.desc
+
+    immediate = {
+        event_illustration_estate_effect = {
+            foreground = estate_type:clergy_estate
+            background = estate_type:clergy_estate
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.arlecchino
+        trigger = {
+            has_global_variable = gacha_snezhnaya_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_arlecchino_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_arlecchino_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_arlecchino_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.tartaglia
+        trigger = {
+            has_global_variable = gacha_snezhnaya_pool_unlocked
+            var:gacha_starlight >= 3
+            OR = {
+                NOT = { has_global_variable = gacha_tartaglia_is_summoned }
+                any_character = { is_alive = yes has_character_modifier = gacha_tartaglia_modifier }
+            }
+        }
+
+        hidden_effect = {
+            change_variable = { name = gacha_starlight subtract = 3 }
+            gacha_create_tartaglia_effect = yes
+        }
+    }
+
+    option = {
+        name = gacha_starlight_events.back
+        hidden_effect = { trigger_event_non_silently = { id = gacha_starlight_events.1 } }
+    }
+
+    option = {
+        name = gacha_starlight_events.1.cancel
     }
 }

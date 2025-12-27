@@ -1,0 +1,742 @@
+{
+  "version": 1,
+  "nation": "natlan",
+  "characters": [
+    {
+      "code": "citlali",
+      "name": {
+        "first": "茜特菈莉",
+        "last": "炽心"
+      },
+      "traits": {
+        "origin": {
+          "name": "谜烟与曜石",
+          "desc": "茜特菈莉：「你这王庭吵得像集市。把窗关上，火熄了——我只需要一面黑曜石镜。」\n「阴影里那些小把戏，会在镜面上起雾；我只要轻轻一划，就能知道是谁在替谁说话。」\n「……别叫我‘奶奶’。我只是懒得出门，不是老。」",
+          "key": "gacha_citlali_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "stability_cost": -0.02,
+            "country_cabinet_efficiency": 0.02,
+            "monthly_legitimacy": 0.02,
+            "monthly_prestige": 0.02
+          },
+          "aura_country_modifier": "gacha_citlali_country_modifier"
+        },
+        "awakened": {
+          "name": "石心镜阵·寒刻",
+          "desc": "茜特菈莉：「在边境埋几块镜片，再点一缕谜烟。敌人的密使踏进来，脚下就会结霜。」\n「他们以为自己在潜行，其实是在我的镜阵里绕圈。等他们回过神，军报早已摆在你案头。」",
+          "key": "gacha_citlali_awakened_trait",
+          "modifier": {
+            "global_manpower_modifier": 0.04,
+            "monthly_prestige": 0.05,
+            "monthly_war_exhaustion": -0.02
+          }
+        },
+        "transcended": {
+          "name": "大萨满的敕令",
+          "desc": "茜特菈莉：「统治不是吼出来的，是让所有人都‘知道’你会兑现承诺。」\n「把法令写清楚，赏罚算明白。我替你在每个誓词上压一块曜石——从此，背誓的人会先被自己的梦魇追上。」",
+          "key": "gacha_citlali_transcended_trait",
+          "modifier": {
+            "stability_cost": -0.05,
+            "country_cabinet_efficiency": 0.05,
+            "monthly_legitimacy": 0.05,
+            "monthly_prestige": 0.04
+          }
+        },
+        "c2": {
+          "name": "芒刃跃雪·破伪",
+          "desc": "茜特菈莉：「酒？……也不是不行。只是喝之前，先把那份盟约拿来。」\n「纸上写得漂亮，墨迹里却藏着刀。放心，我会把刀尖掰断，再还给他们一张‘看起来同样漂亮’的。」",
+          "key": "gacha_citlali_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "stability_cost": -0.04,
+            "country_cabinet_efficiency": 0.04,
+            "monthly_legitimacy": 0.04,
+            "monthly_prestige": 0.03
+          },
+          "aura_country_modifier": "gacha_citlali_c2_country_modifier"
+        },
+        "c4": {
+          "name": "四百星芒·钉命",
+          "desc": "茜特菈莉：「四百颗星里，总有一颗是为敌将亮的。」\n「等我把那颗星钉在他头顶，你的军队只要跟着那道光——就能找到胜利的路。」",
+          "key": "gacha_citlali_c4_trait",
+          "modifier": {
+            "global_manpower_modifier": 0.08,
+            "monthly_prestige": 0.1,
+            "monthly_war_exhaustion": -0.04
+          }
+        },
+        "c6": {
+          "name": "无瑕之献·终局",
+          "desc": "茜特菈莉：「我本来只想宅在家里看轻小说……可你把整个国家的命运递到了我面前。」\n「行吧。你要我出门，我就出门。」\n「从今天起，敢把你的疆土当成棋盘的人——我会让他们在镜里看见自己的终局。」",
+          "key": "gacha_citlali_c6_trait",
+          "modifier": {
+            "stability_cost": -0.1,
+            "country_cabinet_efficiency": 0.1,
+            "monthly_legitimacy": 0.1,
+            "monthly_prestige": 0.08
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "石心镜座·零命",
+          "desc": "黑曜石镜阵铺开，宫廷阴谋更难成形：稳定更易维持，间谍更难渗透。"
+        },
+        "c1": {
+          "name": "香韵奏者",
+          "desc": "以咒香为引，谣言与密语更易收束：谍报与外交行动更顺畅。"
+        },
+        "c2": {
+          "name": "芒刃跃雪",
+          "desc": "雪芒落处，暗线冻结：敌方渗透受挫，我方治安更稳。"
+        },
+        "c3": {
+          "name": "白燧夜炬",
+          "desc": "夜炬照账，文书与供给更严密：行政与军需损耗降低。"
+        },
+        "c4": {
+          "name": "四百星的芒刃",
+          "desc": "星芒标记敌将，战场决断更快：会战与追击更占上风。"
+        },
+        "c5": {
+          "name": "诸曜饬令",
+          "desc": "以星序整饬法度：政令推行阻力下降，地方更易服从。"
+        },
+        "c6": {
+          "name": "无瑕之献",
+          "desc": "以‘终局’震慑群心：动乱显著减少，国家凝聚力提升。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_citlali_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_citlali_c0_modifier",
+          "c1": "gacha_citlali_c1_modifier",
+          "c2": "gacha_citlali_c2_modifier",
+          "c3": "gacha_citlali_c3_modifier",
+          "c4": "gacha_citlali_c4_modifier",
+          "c5": "gacha_citlali_c5_modifier",
+          "c6": "gacha_citlali_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_citlali_country_modifier",
+          "c1": "gacha_citlali_c1_country_modifier",
+          "c2": "gacha_citlali_c2_country_modifier",
+          "c4": "gacha_citlali_c4_country_modifier",
+          "c5": "gacha_citlali_c5_country_modifier",
+          "c6": "gacha_citlali_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_citlali_modifier": {
+          "gacha_core": "yes",
+          "gacha_fire_godeye": "yes"
+        },
+        "gacha_citlali_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_citlali_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_citlali_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_citlali_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_citlali_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_citlali_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_citlali_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_citlali_country_modifier": {},
+        "gacha_citlali_c1_country_modifier": {
+          "max_diplomats": 1,
+          "hire_advisor_cost_modifier": -0.1
+        },
+        "gacha_citlali_c2_country_modifier": {},
+        "gacha_citlali_c4_country_modifier": {
+          "global_manpower_modifier": 0.08,
+          "monthly_prestige": 0.1,
+          "monthly_war_exhaustion": -0.04
+        },
+        "gacha_citlali_c5_country_modifier": {
+          "government_reform_slots": 1,
+          "legislative_efficiency": 0.06
+        },
+        "gacha_citlali_c6_country_modifier": {
+          "stability_cost": -0.1,
+          "country_cabinet_efficiency": 0.1,
+          "monthly_legitimacy": 0.1,
+          "monthly_prestige": 0.08
+        }
+      },
+      "story_mode": "default",
+      "nation": "natlan",
+      "pool": {
+        "in_pool": true,
+        "group": "natlan"
+      },
+      "starlight_shop": true
+    },
+    {
+      "code": "mavuika",
+      "name": {
+        "first": "玛薇卡",
+        "last": "烈焰"
+      },
+      "traits": {
+        "origin": {
+          "name": "永燃圣火·日冕",
+          "desc": "玛薇卡：「你的士兵在怕——不是怕敌人，是怕自己不够强。」\n「带他们去训练场，给他们一团能点亮夜色的火。只要他们敢直视火焰，就敢直视战场。」\n「别担心，我不会让他们白白流血。胜利，必须配得上牺牲。」",
+          "key": "gacha_mavuika_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.1
+          },
+          "aura_country_modifier": "gacha_mavuika_country_modifier"
+        },
+        "awakened": {
+          "name": "最强战士·锻军",
+          "desc": "玛薇卡：「战术可以学，胆魄得锻出来。」\n「把最硬的那批人编成先锋，让他们在枪炮里跑、在烈焰里站稳。等他们学会不退，你的军队就再也不会散。」",
+          "key": "gacha_mavuika_awakened_trait",
+          "modifier": {
+            "global_manpower_modifier": 0.08,
+            "monthly_prestige": 0.07,
+            "stability_cost": -0.03
+          }
+        },
+        "transcended": {
+          "name": "不败阳焰·王权",
+          "desc": "玛薇卡：「你要的是帝国？那就先给它一颗不会熄灭的心。」\n「我会替你立下战争与和平的尺度：该战时，诸部同火；该停时，诸部同誓。」\n「太阳不是命令——太阳是方向。」",
+          "key": "gacha_mavuika_transcended_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.1,
+            "global_manpower_modifier": 0.1,
+            "country_cabinet_efficiency": 0.06,
+            "monthly_legitimacy": 0.07,
+            "stability_cost": -0.05
+          }
+        },
+        "c2": {
+          "name": "灰烬的代价·铭记",
+          "desc": "玛薇卡：「灰烬不是终点，是代价。」\n「把牺牲记在账上，把荣誉刻在碑上。让每一次征召都有归处，每一次阵亡都有名字。」",
+          "key": "gacha_mavuika_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.2
+          },
+          "aura_country_modifier": "gacha_mavuika_c2_country_modifier"
+        },
+        "c4": {
+          "name": "领袖的觉悟·同火",
+          "desc": "玛薇卡：「领袖的觉悟？就是站在最前面，却不让任何人觉得孤单。」\n「当我举起圣火，你的旗帜就不会倒。跟上来，我们把黑暗推回去。」",
+          "key": "gacha_mavuika_c4_trait",
+          "modifier": {
+            "global_manpower_modifier": 0.16,
+            "monthly_prestige": 0.14,
+            "stability_cost": -0.06
+          }
+        },
+        "c6": {
+          "name": "人之名·解放",
+          "desc": "玛薇卡：「神明的光太刺眼，容易让人忘了——是人自己在走路。」\n「如果你选择让人民抬头，我就把这团火交给他们。」\n「以‘人之名’，去开辟属于你们的未来。」",
+          "key": "gacha_mavuika_c6_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.2,
+            "global_manpower_modifier": 0.2,
+            "country_cabinet_efficiency": 0.12,
+            "monthly_legitimacy": 0.14,
+            "stability_cost": -0.1
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "不败阳焰座·零命",
+          "desc": "圣火鼓舞军心：陆军士气与人力恢复提升。"
+        },
+        "c1": {
+          "name": "夜主的授记",
+          "desc": "火中授记，军官更易成材：训练效率提升，将领更易脱颖而出。"
+        },
+        "c2": {
+          "name": "灰烬的代价",
+          "desc": "把代价算清，战争更可控：厌战与战争疲劳更易压下。"
+        },
+        "c3": {
+          "name": "燃烧的太阳",
+          "desc": "烈日压境，进攻更凶猛：冲击与攻城更强，胜利更易转化为威望。"
+        },
+        "c4": {
+          "name": "「领袖」的觉悟",
+          "desc": "同火不退：纪律提升，战斗损耗降低。"
+        },
+        "c5": {
+          "name": "真实的含义",
+          "desc": "胜利不止于战场：改革与制度推进更顺，稳定成本降低。"
+        },
+        "c6": {
+          "name": "「人之名」解放",
+          "desc": "以人民之志延续太阳：叛乱风险显著下降，长期繁荣与凝聚力提升。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_mavuika_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_mavuika_c0_modifier",
+          "c1": "gacha_mavuika_c1_modifier",
+          "c2": "gacha_mavuika_c2_modifier",
+          "c3": "gacha_mavuika_c3_modifier",
+          "c4": "gacha_mavuika_c4_modifier",
+          "c5": "gacha_mavuika_c5_modifier",
+          "c6": "gacha_mavuika_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_mavuika_country_modifier",
+          "c1": "gacha_mavuika_c1_country_modifier",
+          "c2": "gacha_mavuika_c2_country_modifier",
+          "c4": "gacha_mavuika_c4_country_modifier",
+          "c5": "gacha_mavuika_c5_country_modifier",
+          "c6": "gacha_mavuika_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_mavuika_modifier": {
+          "gacha_core": "yes",
+          "gacha_fire_godeye": "yes"
+        },
+        "gacha_mavuika_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_mavuika_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_mavuika_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_mavuika_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_mavuika_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_mavuika_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_mavuika_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_mavuika_country_modifier": {},
+        "gacha_mavuika_c1_country_modifier": {
+          "hire_advisor_cost_modifier": -0.15,
+          "country_cabinet_efficiency": 0.06
+        },
+        "gacha_mavuika_c2_country_modifier": {},
+        "gacha_mavuika_c4_country_modifier": {
+          "global_manpower_modifier": 0.16,
+          "monthly_prestige": 0.14,
+          "stability_cost": -0.06
+        },
+        "gacha_mavuika_c5_country_modifier": {
+          "government_reform_slots": 1,
+          "legislative_efficiency": 0.1
+        },
+        "gacha_mavuika_c6_country_modifier": {
+          "monthly_war_exhaustion": -0.2,
+          "global_manpower_modifier": 0.2,
+          "country_cabinet_efficiency": 0.12,
+          "monthly_legitimacy": 0.14,
+          "stability_cost": -0.1
+        }
+      },
+      "story_mode": "default",
+      "nation": "natlan",
+      "pool": {
+        "in_pool": false,
+        "group": ""
+      },
+      "starlight_shop": false
+    },
+    {
+      "code": "mualani",
+      "name": {
+        "first": "玛拉妮",
+        "last": "潮声"
+      },
+      "traits": {
+        "origin": {
+          "name": "金牌向导·悠游豚豚",
+          "desc": "玛拉妮：「欢迎来到‘流泉之众’——哦不，是欢迎来到你的新海岸线！」\n「想要贸易兴旺，先让人愿意来。挑个‘幸运时刻’开港，我给你把最舒服的温泉、最安全的航线都标出来。」\n「放心啦，只要跟着我走，迷路的只会是坏天气！」",
+          "key": "gacha_mualani_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "monthly_war_exhaustion": -0.02,
+            "naval_morale_modifier": 0.04,
+            "privateer_durability": 0.04,
+            "trade_efficiency": 0.02,
+            "global_estate_satisfaction_recovery": 0.01
+          },
+          "aura_country_modifier": "gacha_mualani_country_modifier"
+        },
+        "awakened": {
+          "name": "浪尖突击·冲浪",
+          "desc": "玛拉妮：「海战也可以很快乐！你看，浪一起来，船就像在冲浪——冲到敌人脸上那种！」\n「把火炮摆稳，节奏跟上，剩下的交给海风和我。」",
+          "key": "gacha_mualani_awakened_trait",
+          "modifier": {
+            "privateer_durability": 0.14,
+            "ship_capture_chance": 0.06,
+            "trade_range": 5
+          }
+        },
+        "transcended": {
+          "name": "流泉节庆·安民",
+          "desc": "玛拉妮：「统治可不是把人都绷紧呀。」\n「让港口有音乐，让集市有笑声。人们心情好，税收就顺；水路通，消息也快。」\n「嗯？你问我为什么这么懂？因为我可是金牌向导嘛！」",
+          "key": "gacha_mualani_transcended_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.04,
+            "naval_morale_modifier": 0.11,
+            "privateer_durability": 0.1,
+            "trade_efficiency": 0.06,
+            "global_estate_satisfaction_recovery": 0.02
+          }
+        },
+        "c2": {
+          "name": "全力以赴·择潮",
+          "desc": "玛拉妮：「全力以赴，玛拉妮！——这句话不只是口号。」\n「当你决定出击，我会挑出最好的潮汐、最短的航程。敌人还在数浪花，你的人已经登陆了。」",
+          "key": "gacha_mualani_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "monthly_war_exhaustion": -0.03,
+            "naval_morale_modifier": 0.09,
+            "privateer_durability": 0.08,
+            "trade_efficiency": 0.05,
+            "global_estate_satisfaction_recovery": 0.02
+          },
+          "aura_country_modifier": "gacha_mualani_c2_country_modifier"
+        },
+        "c4": {
+          "name": "鲨影逐浪·断补给",
+          "desc": "玛拉妮：「鲨鲨主食是豚豚……所以啊，海上的坏家伙最怕的不是炮，是被追着跑！」\n「给我几艘快船，我能把他们的补给线咬得只剩泡沫。」",
+          "key": "gacha_mualani_c4_trait",
+          "modifier": {
+            "privateer_durability": 0.28,
+            "ship_capture_chance": 0.12,
+            "trade_range": 10
+          }
+        },
+        "c6": {
+          "name": "流泉之众·同游",
+          "desc": "玛拉妮：「旅途最重要的是快乐，其次是——别忘了带上同伴。」\n「当整个国家都学会在风浪里笑，你就不会被风浪打垮。」\n「来吧，把这片海变成我们的游乐场……和回家的路。」",
+          "key": "gacha_mualani_c6_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.08,
+            "naval_morale_modifier": 0.22,
+            "privateer_durability": 0.2,
+            "trade_efficiency": 0.12,
+            "global_estate_satisfaction_recovery": 0.04
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "浪海豹座·零命",
+          "desc": "流泉向导出手：舰队航速与海上补给提升，贸易更兴旺。"
+        },
+        "c1": {
+          "name": "悠闲的「梅兹特利」…",
+          "desc": "航海节奏更稳：海军维护压力降低，士气恢复更快。"
+        },
+        "c2": {
+          "name": "全力以赴玛拉妮！",
+          "desc": "择潮而击：登陆与海战冲击更强，突袭更有效。"
+        },
+        "c3": {
+          "name": "在欢乐海上冲浪",
+          "desc": "乘风破浪：机动与远航能力提升，探索与拓展更顺。"
+        },
+        "c4": {
+          "name": "鲨鲨主食是豚豚。",
+          "desc": "追猎补给线：私掠与封锁更强，敌方沿海更难安宁。"
+        },
+        "c5": {
+          "name": "同款冲浪板有售！",
+          "desc": "港口生意火爆：贸易收入与港口建设效率提升。"
+        },
+        "c6": {
+          "name": "「流泉之众」的精神",
+          "desc": "把海当家：厌战更易消退，民心更稳，海军与贸易双重增益。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_mualani_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_mualani_c0_modifier",
+          "c1": "gacha_mualani_c1_modifier",
+          "c2": "gacha_mualani_c2_modifier",
+          "c3": "gacha_mualani_c3_modifier",
+          "c4": "gacha_mualani_c4_modifier",
+          "c5": "gacha_mualani_c5_modifier",
+          "c6": "gacha_mualani_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_mualani_country_modifier",
+          "c1": "gacha_mualani_c1_country_modifier",
+          "c2": "gacha_mualani_c2_country_modifier",
+          "c4": "gacha_mualani_c4_country_modifier",
+          "c5": "gacha_mualani_c5_country_modifier",
+          "c6": "gacha_mualani_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_mualani_modifier": {
+          "gacha_core": "yes",
+          "gacha_water_godeye": "yes"
+        },
+        "gacha_mualani_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_mualani_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_mualani_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_mualani_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_mualani_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_mualani_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_mualani_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_mualani_country_modifier": {},
+        "gacha_mualani_c1_country_modifier": {
+          "privateer_durability": 0.15,
+          "ship_build_speed": 0.1,
+          "monthly_war_exhaustion": -0.03
+        },
+        "gacha_mualani_c2_country_modifier": {},
+        "gacha_mualani_c4_country_modifier": {
+          "privateer_durability": 0.28,
+          "ship_capture_chance": 0.12,
+          "trade_range": 10
+        },
+        "gacha_mualani_c5_country_modifier": {
+          "global_construction_speed": 0.06,
+          "trade_efficiency": 0.08
+        },
+        "gacha_mualani_c6_country_modifier": {
+          "monthly_war_exhaustion": -0.08,
+          "naval_morale_modifier": 0.22,
+          "privateer_durability": 0.2,
+          "trade_efficiency": 0.12,
+          "global_estate_satisfaction_recovery": 0.04
+        }
+      },
+      "story_mode": "default",
+      "nation": "natlan",
+      "pool": {
+        "in_pool": true,
+        "group": "natlan"
+      },
+      "starlight_shop": true
+    },
+    {
+      "code": "varesa",
+      "name": {
+        "first": "瓦雷莎",
+        "last": "炽鬃"
+      },
+      "traits": {
+        "origin": {
+          "name": "沃陆果园·丰沃",
+          "desc": "瓦雷莎：「咦？你们这儿的土看起来不错欸！要不要试试种点果树？我家的果园，能让最挑嘴的人都闭嘴。」\n「别看我慢吞吞的，做饭、搬货、护送队伍我都行。路上饿了？我还有备份点心。」",
+          "key": "gacha_varesa_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "monthly_legitimacy": 0.02,
+            "monthly_prestige": 0.02,
+            "global_manpower_modifier": 0.03,
+            "global_monthly_food_modifier": 0.03,
+            "global_devastation_recovery": 0.03
+          },
+          "aura_country_modifier": "gacha_varesa_country_modifier"
+        },
+        "awakened": {
+          "name": "面具英雄·雷光突进",
+          "desc": "瓦雷莎：「要打架？那我戴上面具就行。」\n「面具一扣，心跳就跟鼓点一样快——冲过去，撞开，摔倒，站起来。那些深渊的家伙？照样能被踢飞。」",
+          "key": "gacha_varesa_awakened_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.04,
+            "stability_cost": -0.03,
+            "global_estate_satisfaction_recovery": 0.02
+          }
+        },
+        "transcended": {
+          "name": "斗士假面·护路",
+          "desc": "瓦雷莎：「沃陆之邦的人啊，力气大，但不蛮。」\n「我会把巡逻、护送、征兵都安排得像货运一样准时。你给我一条路，我保证它天天有人走、天天有粮到。」",
+          "key": "gacha_varesa_transcended_trait",
+          "modifier": {
+            "monthly_legitimacy": 0.04,
+            "monthly_prestige": 0.05,
+            "global_manpower_modifier": 0.075,
+            "global_monthly_food_modifier": 0.075,
+            "global_devastation_recovery": 0.075
+          }
+        },
+        "c2": {
+          "name": "逾越天光·极限",
+          "desc": "瓦雷莎：「极限？那不就是再往前一步嘛！」\n「别怕摔，摔倒了爬起来继续跑。只要你敢推进，我就敢把队伍顶到最前面。」",
+          "key": "gacha_varesa_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "monthly_legitimacy": 0.03,
+            "monthly_prestige": 0.04,
+            "global_manpower_modifier": 0.06,
+            "global_monthly_food_modifier": 0.06,
+            "global_devastation_recovery": 0.06
+          },
+          "aura_country_modifier": "gacha_varesa_c2_country_modifier"
+        },
+        "c4": {
+          "name": "直面前路·勇气",
+          "desc": "瓦雷莎：「前路要是黑的，就用雷光照亮它。」\n「有人想退？我就把他们拽回来——不是靠吼，是靠让他们相信：我们能赢。」",
+          "key": "gacha_varesa_c4_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.08,
+            "stability_cost": -0.06,
+            "global_estate_satisfaction_recovery": 0.04
+          }
+        },
+        "c6": {
+          "name": "正义英雄·凯旋",
+          "desc": "瓦雷莎：「大家都说我像郊游的孩子……可真遇到魔物，我也会认真的。」\n「胜利之后，果园的甜味会回到每条路上。」\n「到那时，你就知道：我戴面具不是为了吓人，是为了守住笑声。」",
+          "key": "gacha_varesa_c6_trait",
+          "modifier": {
+            "monthly_legitimacy": 0.08,
+            "monthly_prestige": 0.1,
+            "global_manpower_modifier": 0.15,
+            "global_monthly_food_modifier": 0.15,
+            "global_devastation_recovery": 0.15
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "斗士假面座·零命",
+          "desc": "沃陆的丰沃成为国力：农业与人力上限提升。"
+        },
+        "c1": {
+          "name": "终始不熄的热诚",
+          "desc": "热诚不灭：陆军士气与士气恢复提升。"
+        },
+        "c2": {
+          "name": "逾越天光的极限",
+          "desc": "极限突进：行军速度提升，地形损耗降低。"
+        },
+        "c3": {
+          "name": "百折不摧的决意",
+          "desc": "越挫越勇：战斗韧性更强，关键会战更不易崩盘。"
+        },
+        "c4": {
+          "name": "直面前路的勇气",
+          "desc": "勇气压住恐惧：战争疲劳更易控制，动乱更少。"
+        },
+        "c5": {
+          "name": "暖风浮漾的心念",
+          "desc": "心念如暖风：治安与行政运转更顺畅。"
+        },
+        "c6": {
+          "name": "正义英雄的凯旋",
+          "desc": "凯旋之名凝聚人心：胜利带来更多声望与合法性，国家更易团结。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_varesa_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_varesa_c0_modifier",
+          "c1": "gacha_varesa_c1_modifier",
+          "c2": "gacha_varesa_c2_modifier",
+          "c3": "gacha_varesa_c3_modifier",
+          "c4": "gacha_varesa_c4_modifier",
+          "c5": "gacha_varesa_c5_modifier",
+          "c6": "gacha_varesa_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_varesa_country_modifier",
+          "c1": "gacha_varesa_c1_country_modifier",
+          "c2": "gacha_varesa_c2_country_modifier",
+          "c4": "gacha_varesa_c4_country_modifier",
+          "c5": "gacha_varesa_c5_country_modifier",
+          "c6": "gacha_varesa_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_varesa_modifier": {
+          "gacha_core": "yes",
+          "gacha_fire_godeye": "yes"
+        },
+        "gacha_varesa_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_varesa_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_varesa_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_varesa_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_varesa_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_varesa_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_varesa_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_varesa_country_modifier": {},
+        "gacha_varesa_c1_country_modifier": {
+          "monthly_war_exhaustion": -0.05,
+          "global_manpower_modifier": 0.05
+        },
+        "gacha_varesa_c2_country_modifier": {},
+        "gacha_varesa_c4_country_modifier": {
+          "monthly_war_exhaustion": -0.08,
+          "stability_cost": -0.06,
+          "global_estate_satisfaction_recovery": 0.04
+        },
+        "gacha_varesa_c5_country_modifier": {
+          "global_build_buildings_cost": -0.08,
+          "global_construction_speed": 0.06
+        },
+        "gacha_varesa_c6_country_modifier": {
+          "monthly_legitimacy": 0.08,
+          "monthly_prestige": 0.1,
+          "global_manpower_modifier": 0.15,
+          "global_monthly_food_modifier": 0.15,
+          "global_devastation_recovery": 0.15
+        }
+      },
+      "story_mode": "default",
+      "nation": "natlan",
+      "pool": {
+        "in_pool": true,
+        "group": "natlan"
+      },
+      "starlight_shop": true
+    }
+  ]
+}

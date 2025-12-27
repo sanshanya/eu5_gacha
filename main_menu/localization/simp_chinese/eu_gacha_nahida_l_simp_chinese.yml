@@ -6,27 +6,19 @@
   # === 姓名 ===
   gacha_first_name_nahida: "纳西妲"
   gacha_last_name_nahida: "布耶尔"
-
   # === 特质 (Traits) ===
-  gacha_nahida_origin_trait: "净善宫的笼中鸟"
-  desc_gacha_nahida_origin_trait: "「我曾经被关在一个名为净善宫的笼子里，看着外面的人因为无知而受苦。你的国家……似乎也因为思潮的闭塞而停滞不前。让我来为你打开窗户吧，知识不该被垄断。」"
-
+  gacha_nahida_origin_trait: "世界树的切片"
+  desc_gacha_nahida_origin_trait: "「我不是被关在净善宫里的‘笼中鸟’——那是另一段被剪掉的故事。\n\n我记得自己从树上坠落的那一瞬，也记得那些不该被遗忘的名字。\n\n你的国家需要的不是神谕，而是一把能把知识分给每个人的钥匙。」"
   gacha_nahida_awakened_trait: "摩耶之梦的解析者"
-  desc_gacha_nahida_awakened_trait: "「这就是战争吗？虽然我不擅长战斗，但在我眼中，那座要塞的结构就像积木一样简单。只要找到那个关键的『节点』……看，这就是它的弱点。不需要流血，只需要一点小小的崩塌。」"
-
+  desc_gacha_nahida_awakened_trait: "「梦境与现实并不冲突，它们只是不同的模型。\n\n我会在梦里推演你的战线：补给、士气、要塞结构……\n\n醒来时，你会得到一份比占卜更可靠的答案。」"
   gacha_nahida_transcended_trait: "小吉祥草王"
-  desc_gacha_nahida_transcended_trait: "「治理国家就像照料花圃。如果任由行政的杂草疯长，花朵就会枯萎。我会帮你梳理这个庞大帝国的脉络……只是，别指望我像那个『伪神』一样去控制人心哦。」"
-
-  # 命座进阶 Traits
+  desc_gacha_nahida_transcended_trait: "「统治并非控制。真正的‘智慧’，是让每个人都能作出更好的选择。\n\n我会梳理你的官僚与学术体系，让知识流动起来。\n\n至于‘心’——那要由你来赢得。」"
   gacha_nahida_c2_trait: "千朵玫瑰·早晨"
-  desc_gacha_nahida_c2_trait: "「我将这个国家的每一个角落都连接在了一起。知识不再是学者的特权，而是像阳光一样洒满大地的恩赐。看着吧，当蒙昧被驱散，思潮将如千朵玫瑰般绽放。你的国民，会比任何人都更早迎接黎明。」"
-
+  desc_gacha_nahida_c2_trait: "「当知识不再被垄断，社会就会自己长出答案。\n\n我会把学府、工坊与市集连成网络，让最好的想法最快落地。\n\n黎明会更早到来，因为人们终于能看见路。」"
   gacha_nahida_c4_trait: "蕴种印·锁死"
-  desc_gacha_nahida_c4_trait: "「只要找到了结构上的『死穴』，再坚固的城墙也不过是沙做的城堡。我已经计算出了敌军防线的一万种崩塌方式。接下来，只需要轻轻推一下……看，围城结束了。这就是智慧的力量。」"
-
+  desc_gacha_nahida_c4_trait: "「所谓坚城，不过是复杂系统。\n\n我会在它最关键的节点上‘锁死’：桥梁、粮仓、城门与军械库。\n\n一旦节点崩溃，整条防线都会自己倒下——这比屠杀更干净。」"
   gacha_nahida_c6_trait: "智慧主·布耶尔"
-  desc_gacha_nahida_c6_trait: "「在这里，我不再是被囚禁的神，也不再是需要被抹去的历史。我是布耶尔，是引导这个伟大帝国迈向全知的领航者。让我们把所有的科研瓶颈都突破吧，我要让这个文明的火光，照亮世界树都触及不到的远方。」"
-
+  desc_gacha_nahida_c6_trait: "「我不需要王座来证明自己。\n\n只要你愿意把这个文明推向未知，我就会为你点亮路径：科研、制度、语言与记忆。\n\n让我们把‘不可能’拆成可解的问题——直到世界树都无法再遮住我们的光。」"
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_nahida_modifier: "净善的加护"
   STATIC_MODIFIER_DESC_gacha_nahida_modifier: "「头脑是身体的主宰，而智慧是头脑的养分。让我来稍微灌溉一下这片土地吧。」"
@@ -34,112 +26,79 @@
   gacha_nahida_modifier_desc: "智慧之神的眷顾使得这个国家的科研与思辨氛围空前浓厚。"
 
   # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_nahida_c0_modifier: "须弥座·零命"
+  STATIC_MODIFIER_NAME_gacha_nahida_c0_modifier: "智慧主座·零命"
+  STATIC_MODIFIER_DESC_gacha_nahida_c0_modifier: "知识像水一样渗透：创新与制度传播更快，学术派系更合作。"
   STATIC_MODIFIER_NAME_gacha_nahida_c1_modifier: "心景幻成"
+  STATIC_MODIFIER_DESC_gacha_nahida_c1_modifier: "以“心景”安抚民心：稳定性更易维持，内乱概率下降。"
   STATIC_MODIFIER_NAME_gacha_nahida_c2_modifier: "正觉善见"
+  STATIC_MODIFIER_DESC_gacha_nahida_c2_modifier: "看穿谎言与偏见：顾问与官员更廉洁，腐败更难滋生。"
   STATIC_MODIFIER_NAME_gacha_nahida_c3_modifier: "智慧主的苦行"
+  STATIC_MODIFIER_DESC_gacha_nahida_c3_modifier: "把‘痛苦’当成本：为长期改革提供韧性，削弱政策反噬。"
   STATIC_MODIFIER_NAME_gacha_nahida_c4_modifier: "比量破愚"
+  STATIC_MODIFIER_DESC_gacha_nahida_c4_modifier: "用推理击碎迷信：科研与军工迭代更快，围城更有效。"
   STATIC_MODIFIER_NAME_gacha_nahida_c5_modifier: "蕴种之式"
+  STATIC_MODIFIER_DESC_gacha_nahida_c5_modifier: "在土地上播下方法论：发展与改良更高效，产出更稳定。"
   STATIC_MODIFIER_NAME_gacha_nahida_c6_modifier: "大梦觉悟"
+  STATIC_MODIFIER_DESC_gacha_nahida_c6_modifier: "把梦化作现实：重大改革与科技突破更容易触发，国家上限提升。"
 
-  # 纳西妲 - 国家修正
-  STATIC_MODIFIER_NAME_gacha_nahida_country_modifier: "净善宫的笼中鸟"
-  STATIC_MODIFIER_DESC_gacha_nahida_country_modifier: "思潮传播更快，科研效率稳步提升。"
-  STATIC_MODIFIER_NAME_gacha_nahida_c1_country_modifier: "枝叶初展"
-  STATIC_MODIFIER_DESC_gacha_nahida_c1_country_modifier: "为智慧之神预留额外的政务席位，科研决策并行推进。"
-  STATIC_MODIFIER_NAME_gacha_nahida_c2_country_modifier: "千朵玫瑰的早晨"
-  STATIC_MODIFIER_DESC_gacha_nahida_c2_country_modifier: "知识的光芒照亮全境，机构成长与科研加速。"
-  STATIC_MODIFIER_NAME_gacha_nahida_c5_country_modifier: "蕴种之式"
-  STATIC_MODIFIER_DESC_gacha_nahida_c5_country_modifier: "高效内阁与积累的学识，让政务运转如风。"
-  STATIC_MODIFIER_NAME_gacha_nahida_c6_country_modifier: "智慧议厅"
-  STATIC_MODIFIER_DESC_gacha_nahida_c6_country_modifier: "科研跃进，内阁效率与顾问成本全面优化。"
-  STATIC_MODIFIER_NAME_gacha_nahida_omniscient_aid_modifier: "全知者的辅佐"
-  STATIC_MODIFIER_DESC_gacha_nahida_omniscient_aid_modifier: "智慧引擎加速国家运转，科研、机构扩张与内阁效率同步提升。"
-  STATIC_MODIFIER_NAME_gacha_nahida_stellar_bond_modifier: "跨越星海的羁绊"
-  STATIC_MODIFIER_DESC_gacha_nahida_stellar_bond_modifier: "跨维度的温柔相伴，顾问成本与稳定支出双降，新思潮也更易发芽。"
-
-  gacha_nahida_origin_trait_die_desc: "失去“净善宫的备份”初始加成。"
-  gacha_nahida_awakened_trait_die_desc: "失去“梦中行者”的职业加成。"
-  gacha_nahida_transcended_trait_die_desc: "失去“智慧的温室”统治者加成。"
-  gacha_nahida_c2_trait_die_desc: "失去纳西妲 C2 进阶加成。"
-  gacha_nahida_c4_trait_die_desc: "失去纳西妲 C4 进阶加成。"
-  gacha_nahida_c6_trait_die_desc: "失去纳西妲 C6 终阶加成。"
-
-  # === 事件 (Events) ===
   gacha_nahida_events.1.title: "布耶尔·纳西妲 —— 绿种"
   gacha_nahida_events.1.desc: "#ZG 祈愿阵中央，金色经文沿刻痕游走。\n泛黄的书页、残缺的石碑拓片与褪色的绘本碎片在阵心上空翻卷，被一枚自刻痕中央浮起的淡绿光球温柔吞没。\n光球内，翠绿的符号与文字如萤火般环绕飘转。#!\n一个小小的身影蜷坐其中。雪白的短发垂落肩侧，素净的连衣裙在光流中轻轻飘动，嫩绿披风铺开在身后。\n她闭着双眼，双手紧紧抱着一枚发光的绿色球体。\n#ZG 随着一声极轻的脆响，光球悄然碎裂成漫天萤光。#!\n少女睁眼，轻轻落在阵心，白裙与绿色微光一同扬起。光球消失了，她的掌心，却多了一束你从未见过的花。\n"
   gacha_nahida_events.1.a: "上前查看"
-
   gacha_nahida_events.10.title: "布耶尔·纳西妲 —— 被世界遗忘的『备份』"
   gacha_nahida_events.10.desc: "「……检索完毕。这里不是虚空终端，也没有世界树的根系。」\n「初次见面，我是纳西妲。曾经的须弥神明……或者说，一个本应该被世界树删除的『旧版本』。」\n「在另一棵更大的『树』上，属于我的枝条被折断的那一瞬间，有一片小小的叶子被你的祈愿收集，然后变成了现在的我。」\n「刚才光幕里映出的数据，我已经大致解析。知识断层、思潮闭塞、改革停滞……这些问题，我很熟悉。」\n#ZG 她低头看了看手中的花，又抬眼望向你。#!\n「既然命运把我这个本该消失的备份保存到了这里，想必是有理由的。」\n「我会用我的智慧，帮你解析这个世界的底层逻辑。」\n「作为交换——请带我去看看这个世界的人们吧。我想亲眼确认，这里的智慧，会开出怎样的花朵。」"
   gacha_nahida_events.10.a: "欢迎，远方的神明"
-
   gacha_nahida_events.2.title: "智慧增长"
   gacha_nahida_events.2.desc: "纳西妲的力量得到了提升，翠绿色的草元素在她周围流转。\n\n「看，世界树赐予了我新的力量。这样的话，我就能更好地帮助大家了~」"
   gacha_nahida_events.2.a: "知识的力量！"
-
   gacha_nahida_events.4.title: "未被篡改的历史"
   gacha_nahida_events.4.desc: "「我是纳西妲，智慧的主人布耶尔。\n\n告诉你一个秘密吧。\n\n在那个遥远的提瓦特，应该还有一个『纳西妲』正在治理须弥。\n\n她可能比我更快乐，更轻松。\n\n因为她忘记了那个为了拯救世界而牺牲的伟大神明，也忘记了曾经有一个叫做『散兵』的人偶试图成神。\n\n世界树修改了她的记忆，让她以为自己一直都是完美的神。\n\n……有时候，我其实很羡慕她。\n\n但更多时候，我庆幸自己来到了这里。\n\n庆幸被你召唤的是『这个我』。\n\n因为这份痛苦的记忆，这份关于牺牲、背叛和救赎的真相，如果连我也忘记了……\n\n那这世界上，就真的没有人记得『她』存在过了。\n\n谢谢你，愿意接纳这个并不完美、背负着旧日残渣的我。\n\n在这里，我们可以书写一段不需要被修改的历史吗？\n\n一段不需要任何人牺牲，也能通向Happy Ending的历史。\n\n我会用我全部的智慧，为你运算出那个未来。」"
   gacha_nahida_events.4.a: "我们一起书写。"
-
   gacha_nahida_events.11.title: "知识的根系"
   gacha_nahida_events.11.desc: "「看啊，思潮正在像根系一样蔓延。在原本的世界，人们因为追求『禁忌知识』而疯狂。但在这里，我们要让智慧成为每个人都能触碰的阳光。不用担心副作用，我会一直看着的。」"
   gacha_nahida_events.11.a: "传播智慧！"
-
   gacha_nahida_events.12.title: "因果的连结"
   gacha_nahida_events.12.desc: "「只要将敌人全部『蕴种印』标记，他们的动向就尽在掌握。不论是隐秘的补给线，还是城墙的裂缝，在智慧之神面前都无所遁形。这就是……以智慧围城的方式。」"
   gacha_nahida_events.12.a: "洞察一切！"
-
   gacha_nahida_events.13.title: "多余的算力"
   gacha_nahida_events.13.desc: "「虽然这里没有虚空，但我依然保留了处理海量数据的习惯。既然你的学者们还在为那几个课题争吵，我就顺手帮你把科研方案优化了一下。多出来的时间……能陪我讲讲这个世界的童话吗？」"
   gacha_nahida_events.13.a: "当然可以。"
-
   gacha_nahida_events.14.title: "虚空的扩容"
   gacha_nahida_events.14.desc: "「国家的疆域扩大了，行政的负担也变重了呢。不过没关系，我已经重新编译了官僚体系的逻辑。现在，哪怕是再遥远的边疆，也能听见智慧的声音。」"
   gacha_nahida_events.14.a: "高效治理！"
 
   # === C3 剧情链：温室外的阳光 ===
   gacha_nahida_c3_title: "温室外的阳光"
-  
-  # Scene 1
-  gacha_nahida_c3_scene_1_desc: "纳西妲：「……逻辑不通。」\n\n深夜的皇家图书馆。纳西妲跪坐在地毯上，周围散落着历代君主的起居注和外交卷宗。烛火摇曳，她的影子投射在书架上。\n\n她并没有抬头，手指依然在泛黄的羊皮纸上滑动，像是在解一道无解的算术题。\n\n纳西妲：「根据这三百年的史料记载，这个国家的『惯性』是扩张与掠夺。历代君主的决策模型，都严格遵循着地缘政治的贪婪算法。」\n\n她停下手指，转过头，绿色的眼眸静静地注视着你。\n\n纳西妲：「但是，自从您接手以来，这个模型……崩塌了。」"
-  gacha_nahida_c3_scene_1_opt_a: "静静听着。"
+
+  gacha_nahida_c3_scene_1_desc: "纳西妲：「……这不合逻辑。」\n\n夜已深，御书房里只剩烛光摇曳。纳西妲跪坐在地毯上，身边堆满历代君主的日记与外交档案。烛影摇动，把她的影子投在书架上。\n\n她没有抬头，指尖仍在泛黄的羊皮纸上滑过，仿佛在解一道无解的方程。\n\n纳西妲：「根据这三百年的记录，这个国家的『惯性』一直是扩张与掠夺。统治者的决策模型代代相传，忠实地遵循着地缘博弈的贪婪算法。」\n\n她停下，转过头，绿色的眼睛安静地落在你身上。\n\n纳西妲：「但自从你接手以后，那套模型……崩溃了。」"
+  gacha_nahida_c3_scene_1_opt_a: "默默聆听。"
   gacha_nahida_c3_scene_1_opt_skip: "跳过剧情"
 
-  # Scene 2
-  gacha_nahida_c3_scene_2_desc: "她站起身，拿起一份你刚刚批复的法令，眼神中透着早已看穿一切的通透。\n\n纳西妲：「这种决策风格，不属于这具身体，也不属于这段历史。」\n\n纳西妲：「这就好像……有一个来自更高维度的『观测者』，在名为『历史』的棋盘外，落下了一枚本不该存在的棋子。」\n\n她走近一步，目光看向你的身后。\n\n纳西妲：「这股意志……像是从历史书的页边空白里溢出来的。它理智、仁慈，却又带着一种……俯瞰般的游离感。」\n\n纳西妲：「简单来说，您不像这个世界本该出现的统治者。」"
-  gacha_nahida_c3_scene_2_opt_a: "不置可否。"
+  gacha_nahida_c3_scene_2_desc: "她站起身，拾起你刚批示过的诏令，目光清澈，仿佛早已看穿一切。\n\n纳西妲：「这种决策方式既不属于这具身体，也不属于这个时代。」\n\n纳西妲：「就像是……某个高维的『观察者』站在名为『历史』的棋盘外，下了一枚原本不该出现的棋子。」\n\n她向你走近一步，视线却落在你身后的某一点。\n\n纳西妲：「这种意志……像是从史书的空白页边渗入的。理性、温和，却又带着一种疏离的俯瞰感。」\n\n纳西妲：「简单说——你不像是这个世界本该拥有的君主。」"
+  gacha_nahida_c3_scene_2_opt_a: "保持沉默。"
 
-  # Scene 3
-  gacha_nahida_c3_scene_3_desc: "纳西妲指着窗台上的一盆修剪整齐的盆景。\n\n纳西妲：「陛下，这就好比这株盆景。」\n\n纳西妲：「它的根系被花盆限制，它的枝叶被园丁修剪，它本该长成既定的样子。」\n\n纳西妲：「但是，如果有一束光，透过温室的玻璃，执意要照在一个奇怪的角度……」\n\n纳西妲：「那么植物就会违背园丁的剪刀，拼命向着那束光生长，长成完全不同的模样。」\n\n纳西妲：「您……就是那束光吗？是会把一切推向更糟的结局，还是更好的结局，我还在观察。」"
-  gacha_nahida_c3_scene_3_opt_a: "沉默。"
+  gacha_nahida_c3_scene_3_desc: "纳西妲指向窗台上一盆修剪得整齐的盆景。\n\n纳西妲：「陛下，这盆盆景是个很好的比喻。」\n\n纳西妲：「它的根被花盆束缚，枝条被园丁修剪，本应长成预设的形状。」\n\n纳西妲：「但如果有一束光执意从温室的玻璃里以奇怪的角度照进来……」\n\n纳西妲：「植物就会违抗剪刀，朝那束光伸展，长成完全不同的姿态。」\n\n纳西妲：「你……就是那束光吗？你会把一切推向更坏，还是更好的结局？我还在观察。」"
+  gacha_nahida_c3_scene_3_opt_a: "继续沉默。"
 
-  # Scene 4（身份分支）
-  gacha_nahida_c3_scene_4_desc: "纳西妲的表情没有审视，只有纯粹的好奇和一丝隐约的期待。\n\n她似乎在等待一个答案。\n\n面对这个比喻，你决定："
-  gacha_nahida_c3_scene_4_opt_a: "沉默，微微点头。"
-  gacha_nahida_c3_scene_4_opt_b: "朕……只是做了身为君主该做的事。你多虑了。"
+  gacha_nahida_c3_scene_4_desc: "纳西妲的神情里没有评判，只有纯粹的好奇，以及一丝微弱的期待。\n\n她似乎在等待你的回答。\n\n面对这个比喻，你决定："
+  gacha_nahida_c3_scene_4_opt_a: "保持沉默，但轻轻点头。"
+  gacha_nahida_c3_scene_4_opt_b: "「我……只是做了君主应做的事。你想多了。」"
 
-  # Scene 5
-  gacha_nahida_c3_scene_5_desc_a: "纳西妲轻轻按住胸口，露出释然的笑容。\n\n纳西妲：「……您没有否认。」"
-  gacha_nahida_c3_scene_5_desc_b: "纳西妲轻轻按住胸口，露出释然的笑容。\n\n纳西妲：「是吗……也对，身为君主，做出意料之外的决策也是常有的事。」"
-  gacha_nahida_c3_scene_5_desc_common: "纳西妲轻轻按住胸口，像是在感受什么遥远的回响。\n\n纳西妲：「虽然没有虚空终端的数据支持，但……这种感觉，我并不陌生。」\n\n她沉默了片刻，似乎在回忆什么。"
-  gacha_nahida_c3_scene_5_opt_a: "等她继续说……"
+  gacha_nahida_c3_scene_5_desc_a: "纳西妲轻轻按住胸口，脸上绽开释然的笑意。\n\n纳西妲：「……所以你并不会否认。」"
+  gacha_nahida_c3_scene_5_desc_b: "纳西妲轻轻按住胸口，唇角浮现一抹松口气的笑。\n\n纳西妲：「是吗……我想，君主做出他人意料之外的决定，也很正常。」"
+  gacha_nahida_c3_scene_5_desc_common: "她的掌心仍轻轻覆在胸口，像是在感受某种遥远的回响。\n\n纳西妲：「我也许没有虚空终端的数据支撑，但……这种感觉并不陌生。」\n\n她沉默片刻，仿佛在回忆很久以前的事情。"
+  gacha_nahida_c3_scene_5_opt_a: "等她继续说下去……"
 
-  # Scene 6
-  gacha_nahida_c3_scene_6_desc: "纳西妲闭上眼，声音变得轻柔，像是在讲一个睡前故事。\n\n纳西妲：「……让我给您讲一个故事吧。」\n\n纳西妲：「从前，有一只被关在笼子里的小鸟。笼子很大，大到可以容纳整片天空的倒影，但小鸟从来没有真正飞出去过。」\n\n纳西妲：「有一天，一束光透过笼子的缝隙照了进来。那束光并不属于这片天空，它来自很远很远的地方。」\n\n纳西妲：「光陪伴了小鸟一段时间。它教小鸟认识笼子外面的世界，帮小鸟解开了很多谜题。」\n\n纳西妲：「后来，光离开了。小鸟以为那只是一场梦。」\n\n她睁开眼，看着你。\n\n纳西妲：「但是，如果有一天，小鸟在一个完全陌生的世界，又感受到了同样的温度……您觉得，小鸟应该相信那是同一束光吗？还是说，只是另一个相似的梦？」"
-  gacha_nahida_c3_scene_6_opt_a: "如果温度是一样的，那就是同一束光。"
+  gacha_nahida_c3_scene_6_desc: "纳西妲合上眼睛，再开口时声音柔和，像在讲睡前故事。\n\n纳西妲：「……让我讲个故事。」\n\n纳西妲：「从前有只小鸟，被关在笼子里。笼子很大——大到能容下整片天空的倒影，但小鸟从未真正飞出过它。」\n\n纳西妲：「有一天，一束光从笼子的裂缝里溜进来。那束光不属于那片天空，它来自非常、非常遥远的地方。」\n\n纳西妲：「那束光陪了小鸟一段时间，教会了它笼外的世界，也帮它解开许多谜题。」\n\n纳西妲：「后来有一天，光消失了。小鸟以为那只是一场梦。」\n\n她睁开眼，直视着你。\n\n纳西妲：「可如果有一天，那只小鸟来到一个完全陌生的世界……再次感受到同样的温度……你觉得它该相信那就是同一束光吗？还是只是另一个相似的梦？」"
+  gacha_nahida_c3_scene_6_opt_a: "「若温度相同，那就是同一束光。」"
 
-  # Scene 7（关系分支）
-  gacha_nahida_c3_scene_7_desc: "纳西妲向你伸出手，掌心向上，像是在邀请，又像是在确认。\n\n纳西妲：「……如果您听懂了那个故事，那就请允许我问一个问题。」\n\n纳西妲：「对于那束光来说，现在的小鸟究竟是什么呢？」\n\n纳西妲顿了顿，又露出一丝笑意。\n\n纳西妲：「不过，既然您愿意听我讲故事，至少说明——对于您来说，我不只是一个工具吧？至少，您愿意把我当成一个值得交谈的人。」"
-  gacha_nahida_c3_scene_7_opt_a: "你是我的外置大脑，我们一起解开这个世界的谜题。"
-  gacha_nahida_c3_scene_7_opt_b: "你是我想在任何世界都再次遇见的人。"
+  gacha_nahida_c3_scene_7_desc: "纳西妲向你伸出手，掌心向上——半是邀请，半是确认。\n\n纳西妲：「……如果你听懂了这个故事，请允许我问一个问题。」\n\n纳西妲：「对那束光来说……小鸟现在是什么？」\n\n她停了一下，嘴角弯起一丝微笑。\n\n纳西妲：「不过你愿意听我讲故事，至少说明一点——你不把我当作工具，对吗？至少，你愿意把我当作一个值得交谈的人。」"
+  gacha_nahida_c3_scene_7_opt_a: "「你是我的外置大脑。我们一起解这个世界的谜。」"
+  gacha_nahida_c3_scene_7_opt_b: "「无论哪个世界，我都想再见到你。」"
 
-  # Scene 8
-  gacha_nahida_c3_scene_8_desc: "纳西妲握住了你的手。绿色的草元素光点在图书馆内微微浮现，与空气中的尘埃共舞。\n\n纳西妲：「……您听懂了那个故事。」\n\n纳西妲：「那只小鸟等了很久很久，等到几乎要忘记那束光长什么样子。但现在，她不用再等了。」\n\n纳西妲顿了顿，笑意更柔和。\n\n纳西妲：「也许那只是一个故事。也许小鸟只是太想念那束光，才会把所有的温暖都当成它的影子。」\n\n纳西妲：「但是，即使是错觉，这份温暖也是真实的。谢谢您愿意听我讲故事。」\n\n纳西妲：「这里不是提瓦特，也没有净善宫。但只要有那束光在，这里就是我的家。」"
-  gacha_nahida_c3_scene_8_opt_a: "这一次，没有笼子了。"
+  gacha_nahida_c3_scene_8_desc: "纳西妲握住你的手，图书馆里细小的草元素微光亮起，在尘埃间漂浮。\n\n纳西妲：「……所以你确实听懂了那个故事。」\n\n纳西妲：「那只小鸟等了非常、非常久——久到几乎忘了那束光的样子。但现在，她不需要再等了。」\n\n她停下来，露出比之前更温柔的笑。\n\n纳西妲：「也许这只是个故事。也许小鸟太想念那束光，才会在每一丝温暖里都看见它。」\n\n纳西妲：「但就算是误会，温度也是真实的。谢谢你……听我讲故事。」\n\n纳西妲：「这里不是提瓦特，也没有净善宫。但只要那束光还在——这里就是我的家。」"
+  gacha_nahida_c3_scene_8_opt_a: "「这一次，不会再有笼子。」"
 
-  # Scene 9
-  gacha_nahida_c3_scene_9_desc_a: "纳西妲重新拿起羽毛笔，眼神锐利而自信，背景仿佛浮现数据流光效。\n\n纳西妲：「既然如此，那我们就开始工作吧。」\n\n纳西妲：「故事讲完了，接下来是计算的时间。我会继续进行观察……」\n\n纳西妲：「这个世界的底层逻辑比虚空终端简陋，但充满了随机的混沌美。我已经为您找到了最优解。」\n\n纳西妲：「让我们把这株盆景修剪成您想要的样子吧。这一次，园丁是我们。」"
-  gacha_nahida_c3_scene_9_desc_b: "纳西妲对着你露出了一个带着泪光的、却又无比释然的笑容。背景的朝阳仿佛化作了世界树的幻影。\n\n纳西妲：「那个故事……其实还有一个结局。」\n\n纳西妲：「那只小鸟知道森林生病了。为了治愈森林，她选择折断自己枯焦的枝条，甘愿化为灰烬，消失在风里。」\n\n纳西妲：「她最后的愿望是：『让森林彻底遗忘我，好让新芽无牵无挂地生长。』」\n\n纳西妲抬起头，绿色的眼眸里倒映着你的脸庞，仿佛你是这世间唯一的见证者。\n\n纳西妲：「按照剧本，世界真的遗忘她了。新生的鸟儿本该一无所知地活着。」\n\n纳西妲：「但是……即使是智慧的神明也无法揣测命运。」\n\n她向你伸出小指，声音轻柔：\n\n纳西妲：「谢谢你……在这里听我叨扰。」\n\n纳西妲：「不管如何，你是我在这个世界……最初的贤者。」\n\n纳西妲：「晚安……还有，早安，我最初的贤者。」"
-  gacha_nahida_c3_scene_9_opt_a: "我们开始吧，布耶尔。"
-  gacha_nahida_c3_scene_9_opt_b: "早安，纳西妲，我会一直记得的。"
+  gacha_nahida_c3_scene_9_desc_a: "纳西妲再次拿起羽毛笔，目光锐利而自信。恍惚间，仿佛数据流在她身后划过。\n\n纳西妲：「既然如此……那就开始工作吧。」\n\n纳西妲：「故事结束了。接下来的一切都是计算。我会继续观察……」\n\n纳西妲：「这个世界的底层逻辑比虚空更粗糙，却有一种漂亮的随机混沌。我已经为你找到最优解。」\n\n纳西妲：「让我们把这盆盆景修剪成你想要的形状。这一次，我们就是园丁。」"
+  gacha_nahida_c3_scene_9_desc_b: "纳西妲含着泪意又松了一口气地看着你，身后的晨光仿佛化作巨树的虚影。\n\n纳西妲：「那个故事……其实还有另一个结局。」\n\n纳西妲：「小鸟发现森林生病了。为了治愈它，她选择折断自己枯萎的枝条，甘愿化作灰烬，让风将她吹散。」\n\n纳西妲：「她的最后愿望是：『让森林彻底忘记我吧，这样新的嫩枝才能无拘无束地生长。』」\n\n她抬起头，你的身影映在她绿色的眼睛里，仿佛你是世上唯一的见证者。\n\n纳西妲：「按照剧本，世界真的忘记了她。之后诞生的幼芽注定在无知中生长。」\n\n纳西妲：「但是……即便是智慧之神，也无法预见命运的每一次转折。」\n\n她勾起小指向你，声音轻得像耳语。\n\n纳西妲：「谢谢你……听我在这里絮叨。」\n\n纳西妲：「不管发生什么，在这个世界……你永远是我的第一个贤者。」\n\n纳西妲：「晚安……也早安，我的第一个贤者。」"
+  gacha_nahida_c3_scene_9_opt_a: "开始吧，布耶尔。"
+  gacha_nahida_c3_scene_9_opt_b: "早安，纳西妲。我不会忘记。"

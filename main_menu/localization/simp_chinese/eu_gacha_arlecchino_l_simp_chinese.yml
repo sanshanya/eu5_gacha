@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 阿蕾奇诺 (arlecchino)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_arlecchino: "阿蕾奇诺"
+  gacha_last_name_arlecchino: "仆人"
+  # === 特质 (Traits) ===
+  gacha_arlecchino_origin_trait: "壁炉之家·父亲"
+  desc_gacha_arlecchino_origin_trait: "「在至冬，孩子学会的第一件事不是祈祷，而是活下去。」\n「你需要能在阴影里办事的人——我这里有。把他们安置进你的宫廷、行会与军需体系：侍从、信使、账房、书记……他们会长大，成为你的眼与手。」"
+  gacha_arlecchino_awakened_trait: "血偿勒令"
+  desc_gacha_arlecchino_awakened_trait: "「纪律不是口号，是账。」\n「欠饷、拖税、阳奉阴违——都要被写得清清楚楚。赏要让人敢冲，罚要让人不敢试。我的『勒令』会让你的命令像火一样烫手。」"
+  gacha_arlecchino_transcended_trait: "红死之宴"
+  desc_gacha_arlecchino_transcended_trait: "「战场上，恐惧会传染；秩序也会。」\n「让最精锐的方阵在最关键的时刻亮旗、推进、接管节奏——敌人会以为你永远还有后备军。你不必靠人数取胜，只要让他们相信自己已经输了。」"
+  gacha_arlecchino_c2_trait: "清算之表"
+  desc_gacha_arlecchino_c2_trait: "「治理与惩戒是同一件事：把代价写在纸上，让所有人都看得懂。」\n「从今天起，地方的含糊、贵族的拖延、军官的敷衍——都会被折算成可执行的条款。你会发现，国家突然‘听话’了。」"
+  gacha_arlecchino_c4_trait: "炉火的家法"
+  desc_gacha_arlecchino_c4_trait: "「我不需要他们爱我。我只需要他们彼此守望。」\n「把最危险的岗位交给最信任的人，把最信任的人绑定在同一条责任链上。你的核心军团会更稳，你的宫廷会更安静。」"
+  gacha_arlecchino_c6_trait: "共飨新生"
+  desc_gacha_arlecchino_c6_trait: "「壁炉之家教孩子们两件事：第一，世界不仁慈；第二，我们可以自己建一个家。」\n「你要的是帝国，我要的是秩序——它们并不冲突。让旧的腐朽在火里烧尽，剩下的灰烬，会成为新制度的地基。」\n「别担心骂名。需要有人做脏活的时候，叫我就行。」"
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_arlecchino_modifier: "阿蕾奇诺"
+  STATIC_MODIFIER_DESC_gacha_arlecchino_modifier: "TODO"
+  gacha_arlecchino_modifier: "阿蕾奇诺的余韵"
+  gacha_arlecchino_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_arlecchino_c0_modifier: "净炼火座·零命"
+  STATIC_MODIFIER_DESC_gacha_arlecchino_c0_modifier: "解锁「仆人」的治国风味：以壁炉之家的体系强化治安、情报与行政执行。"
+  STATIC_MODIFIER_NAME_gacha_arlecchino_c1_modifier: "「所有的仇与债皆由我偿…」"
+  STATIC_MODIFIER_DESC_gacha_arlecchino_c1_modifier: "密探网络扩张更快，反间谍与暗线侦测更有效；敌国阴谋更难在你境内落地。"
+  STATIC_MODIFIER_NAME_gacha_arlecchino_c2_modifier: "「所有的赏与罚皆自我出…」"
+  STATIC_MODIFIER_DESC_gacha_arlecchino_c2_modifier: "赏罚链条更清晰：地方拖延与军纪涣散更少，命令更容易被贯彻到最后一层。"
+  STATIC_MODIFIER_NAME_gacha_arlecchino_c3_modifier: "「你将成为我们新的家人…」"
+  STATIC_MODIFIER_DESC_gacha_arlecchino_c3_modifier: "更擅长吸纳“边缘人”与外来人才进入官僚体系，减少阶层摩擦并提升办事效率。"
+  STATIC_MODIFIER_NAME_gacha_arlecchino_c4_modifier: "「此后，你们须相爱相护…」"
+  STATIC_MODIFIER_DESC_gacha_arlecchino_c4_modifier: "核心卫队与直属机构的凝聚力提升，危机时更不易溃散；在动荡中维持秩序。"
+  STATIC_MODIFIER_NAME_gacha_arlecchino_c5_modifier: "「我们已孑然一身，与死无异…」"
+  STATIC_MODIFIER_DESC_gacha_arlecchino_c5_modifier: "在高压与危局下仍能维持国家运转：对叛乱、恐慌与渗透的抗性提升。"
+  STATIC_MODIFIER_NAME_gacha_arlecchino_c6_modifier: "「自此以后，我们将共飨新生。」"
+  STATIC_MODIFIER_DESC_gacha_arlecchino_c6_modifier: "当国家处于改革/战争高压期，整合与动员能力显著增强，直到局势稳定。"
+
+  gacha_arlecchino_events.1.title: "阿蕾奇诺"
+  gacha_arlecchino_events.1.desc: "TODO"
+  gacha_arlecchino_events.1.a: "……"
+  gacha_arlecchino_events.4.title: "阿蕾奇诺·C6"
+  gacha_arlecchino_events.4.desc: "TODO"
+  gacha_arlecchino_events.4.a: "……"
+  gacha_arlecchino_events.11.title: "阿蕾奇诺·C2"
+  gacha_arlecchino_events.11.desc: "TODO"
+  gacha_arlecchino_events.11.a: "……"
+  gacha_arlecchino_events.12.title: "阿蕾奇诺·C4"
+  gacha_arlecchino_events.12.desc: "TODO"
+  gacha_arlecchino_events.12.a: "……"
+  gacha_arlecchino_events.13.title: "阿蕾奇诺·C1"
+  gacha_arlecchino_events.13.desc: "TODO"
+  gacha_arlecchino_events.13.a: "……"
+  gacha_arlecchino_events.14.title: "阿蕾奇诺·C5"
+  gacha_arlecchino_events.14.desc: "TODO"
+  gacha_arlecchino_events.14.a: "……"

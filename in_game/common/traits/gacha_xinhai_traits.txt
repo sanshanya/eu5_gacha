@@ -10,7 +10,9 @@ gacha_xinhai_origin_trait = {
     flavor = personality
     allow = { always = no }
     # 疾病抗性 +40% · 荒废恢复 +0.06 · 阶层满意恢复 +0.02 (由 modifier 提供)
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 # 2. 望泷村军师少女（职业 Trait：海军）
@@ -47,7 +49,9 @@ gacha_xinhai_c2_trait = {
     flavor = personality
     allow = { always = no }
     # 疾病抗性 +80% · 荒废恢复 +0.12 · 阶层满意恢复 +0.04 (由 modifier 提供)
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 # C4：渊下宫 · 抗狩龙王

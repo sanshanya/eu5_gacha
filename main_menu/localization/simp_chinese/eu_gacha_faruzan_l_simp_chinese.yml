@@ -6,26 +6,19 @@
   # === 姓名 ===
   gacha_first_name_faruzan: "珐露珊"
   gacha_last_name_faruzan: "百解"
-
   # === 特质 (Traits) ===
-  gacha_faruzan_origin_trait: "珐露珊·初始"
-  desc_gacha_faruzan_origin_trait: "TODO"
-
-  gacha_faruzan_awakened_trait: "珐露珊·觉醒"
-  desc_gacha_faruzan_awakened_trait: "TODO"
-
-  gacha_faruzan_transcended_trait: "珐露珊·超越"
-  desc_gacha_faruzan_transcended_trait: "TODO"
-
-  gacha_faruzan_c2_trait: "珐露珊·C2"
-  desc_gacha_faruzan_c2_trait: "TODO"
-
-  gacha_faruzan_c4_trait: "珐露珊·C4"
-  desc_gacha_faruzan_c4_trait: "TODO"
-
-  gacha_faruzan_c6_trait: "珐露珊·C6"
-  desc_gacha_faruzan_c6_trait: "TODO"
-
+  gacha_faruzan_origin_trait: "百解前辈的入门课"
+  desc_gacha_faruzan_origin_trait: "「先说清楚——叫我‘前辈’。\n\n你们的城墙与工坊布置，像是把齿轮随手丢进盒子里就指望它自己转。\n\n把图纸拿来，我会教你们：什么叫结构，什么叫受力，什么叫‘用最少的材料换最多的成果’。」"
+  gacha_faruzan_awakened_trait: "机巧·城防解构"
+  desc_gacha_faruzan_awakened_trait: "「攻城并不浪漫。浪漫的是——在敌人以为自己坚不可摧的时候，你指出一根承重梁，然后让整段防线像积木一样倒下。\n\n别担心，我会把讲解写进教材里。」"
+  gacha_faruzan_transcended_trait: "百年风沙的答卷"
+  desc_gacha_faruzan_transcended_trait: "「我在遗迹里困了太久，醒来后发现时代变了。\n\n但几何不会变，力学不会变，聪明人的偷懒也不会变。\n\n只要还需要把世界‘算清楚’，我就还能派上用场。」"
+  gacha_faruzan_c2_trait: "遗构·复原工程"
+  desc_gacha_faruzan_c2_trait: "「赤王的机关并非诅咒，而是被误解的设计。\n\n把它们拆开、归档、复原——你会得到一整套超越时代的工艺。\n\n当然，前提是别乱按按钮。」"
+  gacha_faruzan_c4_trait: "风场·阵列校准"
+  desc_gacha_faruzan_c4_trait: "「风不是用来祈祷的，是用来校准的。\n\n让运输队走在最省力的路线，让炮兵站在最稳的地基，让建筑按最省材料的曲线生长。\n\n效率，会像风一样无处不在。」"
+  gacha_faruzan_c6_trait: "万解归一"
+  desc_gacha_faruzan_c6_trait: "「当所有难题都被拆成零件，就没有‘不可解’。\n\n从城防到火器，从学府到工坊——我会把它们连成一条清晰的技术谱系。\n\n你只需要决定：把这个国家推向哪里。」"
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_faruzan_modifier: "百解学者"
   STATIC_MODIFIER_DESC_gacha_faruzan_modifier: "TODO"
@@ -33,54 +26,40 @@
   gacha_faruzan_modifier_desc: "TODO"
 
   # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_faruzan_c0_modifier: "珐露珊·C0"
-  STATIC_MODIFIER_NAME_gacha_faruzan_c1_modifier: "珐露珊·C1"
-  STATIC_MODIFIER_NAME_gacha_faruzan_c2_modifier: "珐露珊·C2"
-  STATIC_MODIFIER_NAME_gacha_faruzan_c3_modifier: "珐露珊·C3"
-  STATIC_MODIFIER_NAME_gacha_faruzan_c4_modifier: "珐露珊·C4"
-  STATIC_MODIFIER_NAME_gacha_faruzan_c5_modifier: "珐露珊·C5"
-  STATIC_MODIFIER_NAME_gacha_faruzan_c6_modifier: "珐露珊·C6"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c0_modifier: "妙道合真座·零命"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c0_modifier: "工程学体系化：建造与工坊效率提升，工程顾问更容易出现。"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c1_modifier: "忘形炼智"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c1_modifier: "拆掉旧范式：改革成本降低，推进基础设施更顺。"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c2_modifier: "厌想催枯"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c2_modifier: "让错误方案“自然枯萎”：减少浪费，围城与破城效率提升。"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c3_modifier: "漫行灵圃"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c3_modifier: "把城镇当作实验田：发展与改良更快，增长更稳。"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c4_modifier: "神机明悟"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c4_modifier: "机关学大成：要塞防御与炮兵校准更可靠。"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c5_modifier: "伽有迦那"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c5_modifier: "遗迹知识转化为国力：科研与制度吸收提速。"
+  STATIC_MODIFIER_NAME_gacha_faruzan_c6_modifier: "妙道合真"
+  STATIC_MODIFIER_DESC_gacha_faruzan_c6_modifier: "工程与学术形成闭环：大型工程、军工与经济改革协同增益。"
 
-  # 珐露珊 - 国家修正
-  STATIC_MODIFIER_NAME_gacha_faruzan_country_modifier: "珐露珊·光环"
-  STATIC_MODIFIER_DESC_gacha_faruzan_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_faruzan_c1_country_modifier: "珐露珊·C1"
-  STATIC_MODIFIER_DESC_gacha_faruzan_c1_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_faruzan_c2_country_modifier: "珐露珊·C2"
-  STATIC_MODIFIER_DESC_gacha_faruzan_c2_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_faruzan_c4_country_modifier: "珐露珊·C4"
-  STATIC_MODIFIER_DESC_gacha_faruzan_c4_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_faruzan_c5_country_modifier: "珐露珊·C5"
-  STATIC_MODIFIER_DESC_gacha_faruzan_c5_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_faruzan_c6_country_modifier: "珐露珊·C6"
-  STATIC_MODIFIER_DESC_gacha_faruzan_c6_country_modifier: "TODO"
-
-  # === 事件 (Events) ===
   gacha_faruzan_events.1.title: "珐露珊"
   gacha_faruzan_events.1.desc: "TODO"
   gacha_faruzan_events.1.a: "……"
-
   gacha_faruzan_events.2.title: "珐露珊"
   gacha_faruzan_events.2.a: "继续"
   gacha_faruzan_events.3.title: "珐露珊"
   gacha_faruzan_events.3.a: "继续"
-
   gacha_faruzan_events.13.title: "珐露珊·C1"
   gacha_faruzan_events.13.desc: "TODO"
   gacha_faruzan_events.13.a: "……"
-
   gacha_faruzan_events.11.title: "珐露珊·C2"
   gacha_faruzan_events.11.desc: "TODO"
   gacha_faruzan_events.11.a: "……"
-
   gacha_faruzan_events.12.title: "珐露珊·C4"
   gacha_faruzan_events.12.desc: "TODO"
   gacha_faruzan_events.12.a: "……"
-
   gacha_faruzan_events.14.title: "珐露珊·C5"
   gacha_faruzan_events.14.desc: "TODO"
   gacha_faruzan_events.14.a: "……"
-
   gacha_faruzan_events.4.title: "珐露珊·C6"
   gacha_faruzan_events.4.desc: "TODO"
   gacha_faruzan_events.4.a: "……"

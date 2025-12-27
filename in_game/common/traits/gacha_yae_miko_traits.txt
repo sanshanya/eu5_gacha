@@ -6,21 +6,32 @@ gacha_yae_miko_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 gacha_yae_miko_awakened_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        counter_espionage = 0.15
+        spy_network_construction = 0.125
+        local_unrest = -0.15
+    }
 }
 
 gacha_yae_miko_transcended_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        legislative_efficiency = 0.05
+        country_cabinet_efficiency = 0.04
+        stability_cost = -0.035
+        global_estate_target_satisfaction = 0.025
+    }
 }
 
 # Constellation upgrades
@@ -29,19 +40,31 @@ gacha_yae_miko_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 gacha_yae_miko_c4_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        counter_espionage = 0.30
+        spy_network_construction = 0.25
+        local_unrest = -0.30
+    }
 }
 
 gacha_yae_miko_c6_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        legislative_efficiency = 0.10
+        country_cabinet_efficiency = 0.08
+        stability_cost = -0.07
+        max_diplomats = 1
+        global_estate_target_satisfaction = 0.05
+    }
 }

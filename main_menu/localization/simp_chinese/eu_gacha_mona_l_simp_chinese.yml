@@ -1,0 +1,88 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 莫娜 (mona)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_mona: "莫娜"
+  gacha_last_name_mona: "占星"
+
+  # === 特质 (Traits) ===
+  gacha_mona_origin_trait: "水占盘的账本"
+  desc_gacha_mona_origin_trait: "莫娜：「命运的轨迹我可以解释，但不会替你篡改。至于咨询费——请按时结清。」\n她用水占盘照出港口潮汐、商路风向与宫廷流言：你不一定喜欢答案，但很难忽视它。"
+
+  gacha_mona_awakened_trait: "虚实流动"
+  desc_gacha_mona_awakened_trait: "莫娜：「想抓住我？那得先抓住水流。」\n她把护卫与信使安排得像一场魔术：刺客扑空、谣言失焦，关键时刻你总能比对手快半步。"
+
+  gacha_mona_transcended_trait: "星命定轨"
+  desc_gacha_mona_transcended_trait: "莫娜：「星异并非诅咒，是“标记”。当某个结局被标记，所有岔路都会向它靠拢。」\n你开始按她的星图选择宣战、议和与投资——像是在顺着潮水行船。"
+
+  gacha_mona_c2_trait: "星月的连珠"
+  desc_gacha_mona_c2_trait: "莫娜：「星与月不会只落下一次讯号。把每一次小预兆串起来，才是完整的预言。」\n她能在政策与战局之间快速转向，让“临时调整”变成习惯。"
+
+  gacha_mona_c4_trait: "灭绝的预言"
+  desc_gacha_mona_c4_trait: "莫娜：「当星图宣判‘败北’，敌人就会先在心里败一次。」\n被她点名的目标更容易出现裂痕：军心、盟约、甚至谈判桌上的底气。"
+
+  gacha_mona_c6_trait: "厄运的修辞"
+  desc_gacha_mona_c6_trait: "莫娜：「厄运不会因为你闭上眼就消失。把它写进檄文里，至少能让它服务于你。」\n她将预言化作话语：在最需要的时候，恐惧会沿着文字传播得比军队更快。"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_mona_modifier: "莫娜"
+  STATIC_MODIFIER_DESC_gacha_mona_modifier: "TODO"
+  gacha_mona_modifier: "莫娜的余韵"
+  gacha_mona_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_mona_c0_modifier: "映天座·零命"
+  STATIC_MODIFIER_DESC_gacha_mona_c0_modifier: "穷归穷，占星术士的原则从不打折：她只揭示命运，不替命运说谎。"
+  STATIC_MODIFIER_NAME_gacha_mona_c1_modifier: "沉没的预言"
+  STATIC_MODIFIER_DESC_gacha_mona_c1_modifier: "当她宣告某人“沉没”，连意外都会开始向那条轨迹聚拢。你看见敌军的失误越来越像连锁反应。"
+  STATIC_MODIFIER_NAME_gacha_mona_c2_modifier: "星月的连珠"
+  STATIC_MODIFIER_DESC_gacha_mona_c2_modifier: "星月的讯号连续闪烁：一次成功会引来下一次更快的成功。"
+  STATIC_MODIFIER_NAME_gacha_mona_c3_modifier: "不休的天象"
+  STATIC_MODIFIER_DESC_gacha_mona_c3_modifier: "天象被不断校准，星图细节更清晰。你在关键节点的判断失误明显减少。"
+  STATIC_MODIFIER_NAME_gacha_mona_c4_modifier: "灭绝的预言"
+  STATIC_MODIFIER_DESC_gacha_mona_c4_modifier: "她把敌人“标在星异里”，于是全军都知道该把压力与资源放在哪里。"
+  STATIC_MODIFIER_NAME_gacha_mona_c5_modifier: "命运的嘲弄"
+  STATIC_MODIFIER_DESC_gacha_mona_c5_modifier: "命运喜欢开玩笑——莫娜更喜欢把玩笑写成注脚。那些想靠侥幸翻盘的人，往往会被她先一步拆穿。"
+  STATIC_MODIFIER_NAME_gacha_mona_c6_modifier: "厄运的修辞"
+  STATIC_MODIFIER_DESC_gacha_mona_c6_modifier: "把厄运说出口，它就不再只是阴影。她的宣告像一道冷水，让恐慌、狂热与阴谋都显形。"
+
+  # 莫娜 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_mona_country_modifier: "莫娜·光环"
+  STATIC_MODIFIER_DESC_gacha_mona_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_mona_c1_country_modifier: "莫娜·C1"
+  STATIC_MODIFIER_DESC_gacha_mona_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_mona_c2_country_modifier: "莫娜·C2"
+  STATIC_MODIFIER_DESC_gacha_mona_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_mona_c4_country_modifier: "莫娜·C4"
+  STATIC_MODIFIER_DESC_gacha_mona_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_mona_c5_country_modifier: "莫娜·C5"
+  STATIC_MODIFIER_DESC_gacha_mona_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_mona_c6_country_modifier: "莫娜·C6"
+  STATIC_MODIFIER_DESC_gacha_mona_c6_country_modifier: "TODO"
+
+  # === 事件 (Events) ===
+  gacha_mona_events.1.title: "莫娜"
+  gacha_mona_events.1.desc: "TODO"
+  gacha_mona_events.1.a: "……"
+
+  gacha_mona_events.4.title: "莫娜·C6"
+  gacha_mona_events.4.desc: "TODO"
+  gacha_mona_events.4.a: "……"
+
+  gacha_mona_events.11.title: "莫娜·C2"
+  gacha_mona_events.11.desc: "TODO"
+  gacha_mona_events.11.a: "……"
+
+  gacha_mona_events.12.title: "莫娜·C4"
+  gacha_mona_events.12.desc: "TODO"
+  gacha_mona_events.12.a: "……"
+
+  gacha_mona_events.13.title: "莫娜·C1"
+  gacha_mona_events.13.desc: "TODO"
+  gacha_mona_events.13.a: "……"
+
+  gacha_mona_events.14.title: "莫娜·C5"
+  gacha_mona_events.14.desc: "TODO"
+  gacha_mona_events.14.a: "……"

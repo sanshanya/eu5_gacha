@@ -1,0 +1,7 @@
+﻿gacha_citlali_01 = {
+  entity = {
+    required_tags      = ""
+    shared_pose_entity = head
+    entity             = "gacha_citlali_01_entity"
+  }
+}

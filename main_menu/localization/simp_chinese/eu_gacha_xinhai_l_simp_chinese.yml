@@ -22,7 +22,7 @@
   desc_gacha_xinhai_c2_trait: "「听到了吗？那是圣土中涌动的潮音。我已将海祇的仪式融入了这片大地。瘟疫会被海水洗净，废墟会在潮汐中重生。只要这声音不停，各阶层的人心便不会干涸。请放心，这片土地正在呼吸。」"
 
   gacha_xinhai_c4_trait: "渊下宫·抗狩龙王"
-  desc_gacha_xinhai_c4_trait: "「我又梦见渊下宫的灯火了……映在水面上，像长出了鳞片。你的舰队在海上排开阵型的时候，我突然就知道该怎么做了。兵法之道，在于庙算于未雨绸缪之际……只是，我有点累了。」\n\n「我梦见过深海龙蜥的狩猎……那种在黑暗中潜游的压迫感。现在，我将这种战术赋予您的舰队。它们将如幽灵般迅捷，如礁石般坚固。在这片大海上，没有风浪能损耗您的意志——因为舵盘，在我手中。」"
+  desc_gacha_xinhai_c4_trait: "我梦见过深海龙蜥的狩猎……那种在黑暗中潜游的压迫感。现在，我将这种战术赋予您的舰队。它们将如幽灵般迅捷，如礁石般坚固。在这片大海上，没有风浪能损耗您的意志。」"
 
   gacha_xinhai_c6_trait: "奥罗巴斯·现人神"
   desc_gacha_xinhai_c6_trait: "「曾经，我视『现人神巫女』之位为一种不得不背负的责任。但如今……看着您的背影，我明白了『统治』的真意。不必担忧叛乱与疲惫，我会像奥罗巴斯守护海祇岛一样，用绝对的纪律与温柔，为您守住这万世太平。」"
@@ -49,12 +49,19 @@
 
   # === 命之座 (Constellations) ===
   STATIC_MODIFIER_NAME_gacha_xinhai_c0_modifier: "眠龙座·零命"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c0_modifier: "军师入座：战前推演更可靠，补给与动员更少出错，国家更不容易因小失误连锁崩坏。"
   STATIC_MODIFIER_NAME_gacha_xinhai_c1_modifier: "决水于溪"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c1_modifier: "从最细的支流开始修复：哪怕是偏远边地的粮线与税路，也更难被轻易掐断。"
   STATIC_MODIFIER_NAME_gacha_xinhai_c2_modifier: "波起云海"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c2_modifier: "海上调度更灵活：舰队机动与封锁更像潮汐，敌人很难抓到你的“固定节奏”。"
   STATIC_MODIFIER_NAME_gacha_xinhai_c3_modifier: "海渚月舟"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c3_modifier: "夜色成为优势：夜战、奇袭与绕后更容易成功，把“疲惫”留给对手。"
   STATIC_MODIFIER_NAME_gacha_xinhai_c4_modifier: "月摄千川"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c4_modifier: "民心如水可聚：在长期战争或改革期，更容易稳住各阶层情绪，减少无谓内耗。"
   STATIC_MODIFIER_NAME_gacha_xinhai_c5_modifier: "百川集海"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c5_modifier: "联盟像河流汇聚：更容易把盟友纳入共同计划，让协同不再只停留在口头。"
   STATIC_MODIFIER_NAME_gacha_xinhai_c6_modifier: "珊瑚一心"
+  STATIC_MODIFIER_DESC_gacha_xinhai_c6_modifier: "温柔与纪律并存：当你需要铁腕时她能执行，当你需要安抚时她也能托底。"
   STATIC_MODIFIER_NAME_gacha_xinhai_c6_country_modifier: "锦囊妙计之书"
   STATIC_MODIFIER_DESC_gacha_xinhai_c6_country_modifier: "心海的后勤体系拓展了中央政务空间，额外的席位让决策如潮水般流畅。"
 

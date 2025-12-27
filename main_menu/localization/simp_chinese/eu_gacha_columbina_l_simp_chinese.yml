@@ -6,26 +6,19 @@
   # === 姓名 ===
   gacha_first_name_columbina: "哥伦比娅"
   gacha_last_name_columbina: "少女"
-
   # === 特质 (Traits) ===
-  gacha_columbina_origin_trait: "哥伦比娅·初始"
-  desc_gacha_columbina_origin_trait: "TODO"
-
-  gacha_columbina_awakened_trait: "哥伦比娅·觉醒"
-  desc_gacha_columbina_awakened_trait: "TODO"
-
-  gacha_columbina_transcended_trait: "哥伦比娅·超越"
-  desc_gacha_columbina_transcended_trait: "TODO"
-
-  gacha_columbina_c2_trait: "哥伦比娅·C2"
-  desc_gacha_columbina_c2_trait: "TODO"
-
-  gacha_columbina_c4_trait: "哥伦比娅·C4"
-  desc_gacha_columbina_c4_trait: "TODO"
-
-  gacha_columbina_c6_trait: "哥伦比娅·C6"
-  desc_gacha_columbina_c6_trait: "TODO"
-
+  gacha_columbina_origin_trait: "静谧的圣歌"
+  desc_gacha_columbina_origin_trait: "她在雪夜里轻声哼唱，像在祝福，也像在送别。\n大厅里的争吵逐渐停下，连火炉都像是放轻了噼啪声。\n「……别急。」她说，「审判会来到的。」"
+  gacha_columbina_awakened_trait: "月下低语"
+  desc_gacha_columbina_awakened_trait: "她不争辩，只把手指按在地图的几处：港口、修道院、粮仓。\n几周后，那些地方的谣言自己消失了，反对的声音也变得稀薄。\n你问她做了什么，她只是笑：「我把话送到该听的人耳边。」"
+  gacha_columbina_transcended_trait: "无垢的注视"
+  desc_gacha_columbina_transcended_trait: "当她坐上高位，臣子不敢抬头。\n他们害怕的不是刑罚，而是自己的心思被看穿。\n你的法令执行得前所未有地顺畅——仿佛全境都在同一节拍里呼吸。"
+  gacha_columbina_c2_trait: "安魂回环"
+  desc_gacha_columbina_c2_trait: "「恐惧会制造暴民，暴民会制造更大的恐惧。」\n她让教堂的钟声、集市的歌谣、军营的号角统一节奏。\n民心像被抚平的水面，动荡的火种不再易燃。"
+  gacha_columbina_c4_trait: "无声的合唱"
+  desc_gacha_columbina_c4_trait: "她把彼此敌对的派系请进同一间厅堂，像排练一样让他们轮流发言。\n没有人被羞辱，也没有人被纵容。\n离开时，他们忽然学会了用同一种语气谈“国家”。"
+  gacha_columbina_c6_trait: "归乡之梦"
+  desc_gacha_columbina_c6_trait: "「我并不渴望王座。」\n她轻声说，「我只是想看到，风暴之后还有人能回家。」\n在她的歌声里，你的国土更不易崩裂：疲惫会被安抚，裂痕会被缝合。"
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_columbina_modifier: "至冬少女"
   STATIC_MODIFIER_DESC_gacha_columbina_modifier: "TODO"
@@ -33,54 +26,40 @@
   gacha_columbina_modifier_desc: "TODO"
 
   # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_columbina_c0_modifier: "哥伦比娅·C0"
-  STATIC_MODIFIER_NAME_gacha_columbina_c1_modifier: "哥伦比娅·C1"
-  STATIC_MODIFIER_NAME_gacha_columbina_c2_modifier: "哥伦比娅·C2"
-  STATIC_MODIFIER_NAME_gacha_columbina_c3_modifier: "哥伦比娅·C3"
-  STATIC_MODIFIER_NAME_gacha_columbina_c4_modifier: "哥伦比娅·C4"
-  STATIC_MODIFIER_NAME_gacha_columbina_c5_modifier: "哥伦比娅·C5"
-  STATIC_MODIFIER_NAME_gacha_columbina_c6_modifier: "哥伦比娅·C6"
+  STATIC_MODIFIER_NAME_gacha_columbina_c0_modifier: "空月座·零命"
+  STATIC_MODIFIER_DESC_gacha_columbina_c0_modifier: "解锁「少女」的治国风味：以“静默的影响”稳定宫廷与民心。（命之座为自拟占位）"
+  STATIC_MODIFIER_NAME_gacha_columbina_c1_modifier: "无声的聆听"
+  STATIC_MODIFIER_DESC_gacha_columbina_c1_modifier: "宫廷阴谋更难扩散，流言造成的动荡更易被压住。"
+  STATIC_MODIFIER_NAME_gacha_columbina_c2_modifier: "月下低语"
+  STATIC_MODIFIER_DESC_gacha_columbina_c2_modifier: "对叛乱与分裂的敏感度提升，提前发现并拆解风险。"
+  STATIC_MODIFIER_NAME_gacha_columbina_c3_modifier: "白羽的誓言"
+  STATIC_MODIFIER_DESC_gacha_columbina_c3_modifier: "外交场景更易占据道德高地，谈判阻力降低。"
+  STATIC_MODIFIER_NAME_gacha_columbina_c4_modifier: "安魂回环"
+  STATIC_MODIFIER_DESC_gacha_columbina_c4_modifier: "战争疲惫与社会撕裂的累积更慢，长期战争更可控。"
+  STATIC_MODIFIER_NAME_gacha_columbina_c5_modifier: "静海之梦"
+  STATIC_MODIFIER_DESC_gacha_columbina_c5_modifier: "在危机与灾荒时仍能维持秩序与生产，减少连锁崩坏。"
+  STATIC_MODIFIER_NAME_gacha_columbina_c6_modifier: "归乡的终曲"
+  STATIC_MODIFIER_DESC_gacha_columbina_c6_modifier: "当国家濒临失序时触发强力“稳定窗口”，为重整赢得时间。"
 
-  # 哥伦比娅 - 国家修正
-  STATIC_MODIFIER_NAME_gacha_columbina_country_modifier: "哥伦比娅·光环"
-  STATIC_MODIFIER_DESC_gacha_columbina_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_columbina_c1_country_modifier: "哥伦比娅·C1"
-  STATIC_MODIFIER_DESC_gacha_columbina_c1_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_columbina_c2_country_modifier: "哥伦比娅·C2"
-  STATIC_MODIFIER_DESC_gacha_columbina_c2_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_columbina_c4_country_modifier: "哥伦比娅·C4"
-  STATIC_MODIFIER_DESC_gacha_columbina_c4_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_columbina_c5_country_modifier: "哥伦比娅·C5"
-  STATIC_MODIFIER_DESC_gacha_columbina_c5_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_columbina_c6_country_modifier: "哥伦比娅·C6"
-  STATIC_MODIFIER_DESC_gacha_columbina_c6_country_modifier: "TODO"
-
-  # === 事件 (Events) ===
   gacha_columbina_events.1.title: "哥伦比娅"
   gacha_columbina_events.1.desc: "TODO"
   gacha_columbina_events.1.a: "……"
-
   gacha_columbina_events.2.title: "哥伦比娅"
   gacha_columbina_events.2.a: "继续"
   gacha_columbina_events.3.title: "哥伦比娅"
   gacha_columbina_events.3.a: "继续"
-
   gacha_columbina_events.13.title: "哥伦比娅·C1"
   gacha_columbina_events.13.desc: "TODO"
   gacha_columbina_events.13.a: "……"
-
   gacha_columbina_events.11.title: "哥伦比娅·C2"
   gacha_columbina_events.11.desc: "TODO"
   gacha_columbina_events.11.a: "……"
-
   gacha_columbina_events.12.title: "哥伦比娅·C4"
   gacha_columbina_events.12.desc: "TODO"
   gacha_columbina_events.12.a: "……"
-
   gacha_columbina_events.14.title: "哥伦比娅·C5"
   gacha_columbina_events.14.desc: "TODO"
   gacha_columbina_events.14.a: "……"
-
   gacha_columbina_events.4.title: "哥伦比娅·C6"
   gacha_columbina_events.4.desc: "TODO"
   gacha_columbina_events.4.a: "……"

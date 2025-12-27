@@ -33,13 +33,20 @@
   gacha_ningguang_modifier_desc: "天权的目光落在账本与契约之上，财富与秩序一并被重新定价。"
 
   # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_ningguang_c0_modifier: "命之座·零命"
+  STATIC_MODIFIER_NAME_gacha_ningguang_c0_modifier: "天权座·零命"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c0_modifier: "「先把账算清。」\n她一到，市场就开始“讲规则”：交易更透明，税收更稳定，钱会流向你能控制的地方。"
   STATIC_MODIFIER_NAME_gacha_ningguang_c1_modifier: "璃月商会分部"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c1_modifier: "「商会不是装饰，是触角。」\n她把商人组织进网络：沿海与要道出现“分部”，你的贸易渗透更深，也更快。"
   STATIC_MODIFIER_NAME_gacha_ningguang_c2_modifier: "重订契约"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c2_modifier: "「条款写得太软，就会被当作笑话。」\n违约成本被抬高：盟约、贷款、贸易协定更难被钻空子，你的信誉也更值钱。"
   STATIC_MODIFIER_NAME_gacha_ningguang_c3_modifier: "月下棋局"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c3_modifier: "「你以为那是晚宴？那是开盘。」\n她把社交变成谈判：一场宴会能换来一条港口、一笔赔款或一次默许。"
   STATIC_MODIFIER_NAME_gacha_ningguang_c4_modifier: "情报之网"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c4_modifier: "「信息比黄金更贵。」\n走私、宫廷八卦、军需价格都在她的网里：你更容易预判对手的动向，先手更多。"
   STATIC_MODIFIER_NAME_gacha_ningguang_c5_modifier: "人才储备"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c5_modifier: "「聪明人要用在刀刃上。」\n她会从商会与学堂里挑人：更容易获得高质量的官员、顾问与工匠，国家上限被抬高。"
   STATIC_MODIFIER_NAME_gacha_ningguang_c6_modifier: "最后的筹码"
+  STATIC_MODIFIER_DESC_gacha_ningguang_c6_modifier: "「当对方以为你只剩一条路时，我会把第二条路摆在桌上。」\n她能用财富买时间、买军队、买盟友：在绝境里翻盘，靠的不是祈祷，是现金流。"
 
   # 凝光 - 国家修正
   STATIC_MODIFIER_NAME_gacha_ningguang_country_modifier: "群玉阁的主人"

@@ -1,0 +1,22 @@
+﻿gacha_cyno_portrait = {
+  usage    = game
+  priority = 100
+
+  gacha_cyno_01 = {
+    dna_modifiers = {
+      accessory = {
+        mode     = replace
+        gene     = gacha_cyno_props_1
+        template = gacha_cyno_01
+        value    = 0.5
+      }
+    }
+    weight = {
+      base = 0
+      modifier = {
+        add = 255
+        has_character_modifier = gacha_cyno_modifier
+      }
+    }
+  }
+}

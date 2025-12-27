@@ -1,9 +1,66 @@
 ﻿# Character Roster Specification
 
 **Version**: 1.0  
-**Last Updated**: 2025-12-13  
+**Last Updated**: 2025-12-14  
 **Status**: 🟢 Production  
 **Purpose**: 记录所有已实装角色的技术细节与实现状态
+
+---
+
+## 0. 角色注册表 (JSON)
+
+我们维护一份**中文角色注册表**用于对照与后续补文案：
+
+- **路径**: `docs/registry/characters/`
+- **文件**: `liyue.json`, `inazuma.json`, `mondstadt.json`, `sumeru.json`, `fontaine.json`, `natlan.json`, `snezhnaya.json`
+- **用途**: 文档级“角色总档案”，不参与运行时逻辑
+- **内容**: 名字、Traits、命座名称/文案、池子归属、星辉商店、剧情模式、`buff_keys`
+
+### 0.1 字段约定
+
+| 字段 | 说明 |
+|:---|:---|
+| `code` | 角色代码名 |
+| `name.first` / `name.last` | 中文名（支持前/后名组合） |
+| `traits` | 初始/觉醒/超越/C2/C4/C6 的名称与文案 |
+| `constellations` | C0–C6 命座名与文案 |
+| `buff_keys` | 角色相关的修正键名（便于数值设计与对照） |
+| `buff_values` | 对应修正键名的数值展开（仅数值/yes/no） |
+| `pool.in_pool` | 是否进入卡池 |
+| `pool.group` | 卡池分组（`standard`/`liyue`/`inazuma` 等） |
+| `starlight_shop` | 是否进入星辉商店 |
+| `story_mode` | `default` / `custom` |
+| `story_ref` | 仅 `custom` 角色：事件文件与本地化前缀 |
+
+> [!NOTE]
+> `story_mode = custom` 用于**保留手写剧情**（如心海、刻晴等），避免模板化生成覆盖。
+
+### 0.2 `buff_keys` 结构
+
+`buff_keys` 仅用于文档对照，不参与运行时逻辑。键名来自 `main_menu/common/static_modifiers/`：
+
+```json
+"buff_keys": {
+  "character_modifier": "gacha_<code>_modifier",
+  "constellation_modifiers": { "c0": "...", "c1": "...", "c2": "...", "c3": "...", "c4": "...", "c5": "...", "c6": "..." },
+  "country_modifiers": { "base": "...", "c1": "...", "c2": "...", "c4": "...", "c5": "...", "c6": "..." },
+  "other_modifiers": [ "gacha_<code>_..." ]
+}
+```
+
+`buff_values` 为扁平映射：`modifier_key -> { buff_key: value }`。示例：
+
+```json
+"buff_values": {
+  "gacha_<code>_modifier": {
+    "gacha_core": "yes",
+    "gacha_stone_godeye": "yes"
+  },
+  "gacha_<code>_c0_modifier": {
+    "gacha_constellation_level": 0
+  }
+}
+```
 
 ---
 

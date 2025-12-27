@@ -34,12 +34,19 @@
 
   # === 命之座 (Constellations) ===
   STATIC_MODIFIER_NAME_gacha_ganyu_c0_modifier: "仙麟座·零命"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c0_modifier: "「我会把一切整理好。」\n她把璃月式的严谨带到你的朝廷：账目更清、流程更顺，国家机器开始“少出错”。"
   STATIC_MODIFIER_NAME_gacha_ganyu_c1_modifier: "永夜的烛火"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c1_modifier: "「再核对一遍……这样才放心。」\n烛火点到深夜：行政细节被反复校验，腐败与浪费更难藏身，但她自己也更疲惫。"
   STATIC_MODIFIER_NAME_gacha_ganyu_c2_modifier: "无人知晓的加班"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c2_modifier: "「这份我来补。」\n当制度出现缺口，她总能悄悄补上：临时征税、紧急军需、灾后重建都能更快回到正轨。"
   STATIC_MODIFIER_NAME_gacha_ganyu_c3_modifier: "梦中的清心花"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c3_modifier: "「偶尔……也该喘口气。」\n难得的片刻安宁让她更像“人”：长期的紧绷有所缓和，朝廷的情绪也更稳定。"
   STATIC_MODIFIER_NAME_gacha_ganyu_c4_modifier: "沉默的箭雨"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c4_modifier: "「请退后。」\n当你不得不战，她会用最少的言语做最干净的防守：守城、据点、要道的损失显著降低。"
   STATIC_MODIFIER_NAME_gacha_ganyu_c5_modifier: "三千年的档案"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c5_modifier: "「档案不会说谎。」\n她把经验写成制度：旧案可查、先例可依，新来的官员也能更快上手，行政能力整体上扬。"
   STATIC_MODIFIER_NAME_gacha_ganyu_c6_modifier: "放下卷宗的那一刻"
+  STATIC_MODIFIER_DESC_gacha_ganyu_c6_modifier: "「如果有人需要我，那我就不是多余的。」\n她终于敢停一下：不再用工作证明自己，而是用“留下来”证明羁绊。你获得的是一位真正愿意陪你走到底的支柱。"
 
   # 甘雨 - 国家修正
   STATIC_MODIFIER_NAME_gacha_ganyu_country_modifier: "三千年的秘书"

@@ -1,0 +1,1007 @@
+{
+  "version": 1,
+  "nation": "mondstadt",
+  "characters": [
+    {
+      "code": "albedo",
+      "name": {
+        "first": "阿贝多",
+        "last": "白垩"
+      },
+      "traits": {
+        "origin": {
+          "key": "gacha_albedo_origin_trait",
+          "name": "白垩的素描本",
+          "desc": "阿贝多：「这片大陆的矿脉走向与城防结构…很有意思。若允许我做些记录，我能把它们变成更稳固的城墙与更高效的工坊。」\n（他把纸笔放得很轻，仿佛连噪音都会干扰实验。）",
+          "aura_country_modifier": "gacha_albedo_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "global_construction_speed": 0.05,
+            "global_defensive": 0.05
+          }
+        },
+        "awakened": {
+          "key": "gacha_albedo_awakened_trait",
+          "name": "创生法·拟造阳华",
+          "desc": "阿贝多：「临时的高台、可重复的支点、可控的坍塌。攻城并不只靠蛮力——也可以靠几何。」\n（你发现工匠们开始照着他的“配方”加固炮台与城门。）",
+          "modifier": {
+            "siege_ability": 0.05
+          }
+        },
+        "transcended": {
+          "key": "gacha_albedo_transcended_trait",
+          "name": "诞生式·大地之潮",
+          "desc": "阿贝多：「当压力积累到某个阈值，结构会以最省力的方式崩解。战争也是如此。」\n他把战场当作一张可推演的图纸：哪里会裂，哪里会倒，都能提前写在边注里。",
+          "modifier": {
+            "land_morale_recovery": 0.025,
+            "land_unit_attrition": -0.025
+          }
+        },
+        "c2": {
+          "key": "gacha_albedo_c2_trait",
+          "name": "显生之宙",
+          "desc": "阿贝多：「记录并非为了回忆，而是为了复现。一次胜利若无法复现，就只是侥幸。」\n（你获得了一套“生灭计数”：每一次攻守都被归档，下一次会更快、更准。）",
+          "aura_country_modifier": "gacha_albedo_c2_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "global_construction_speed": 0.1,
+            "global_defensive": 0.1
+          }
+        },
+        "c4": {
+          "key": "gacha_albedo_c4_trait",
+          "name": "神性之陨",
+          "desc": "阿贝多：「高度差会放大冲击。把优势做成地形，让它自己工作。」\n（从此，突袭与强攻不再只是赌运气，而像一场被计算好的坠击。）",
+          "modifier": {
+            "siege_ability": 0.1
+          }
+        },
+        "c6": {
+          "key": "gacha_albedo_c6_trait",
+          "name": "无垢之土",
+          "desc": "阿贝多：「结晶不是装饰，是“容错”。当变量过多时，先给体系一层壳。」\n你看见军阵外沿泛起沉稳的岩光：混乱被隔在外面，秩序留在阵内。",
+          "modifier": {
+            "land_morale_recovery": 0.05,
+            "land_unit_attrition": -0.05
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "白垩座·零命",
+          "desc": "“白垩之子”并不追求神迹，只追求可验证的答案。随他而来的，是一套把城市、矿脉与军需都写成公式的工作方法。"
+        },
+        "c1": {
+          "name": "伊甸之花",
+          "desc": "每一朵“刹那之花”都像一次微型试验：让资源回流、让损耗可控。小收益被叠起来，最后变成稳定的优势。"
+        },
+        "c2": {
+          "name": "显生之宙",
+          "desc": "他开始给战争“计数”：胜利不是结果，而是过程的总和。只要计数不断累积，下一次爆发就更接近必然。"
+        },
+        "c3": {
+          "name": "太阳之华",
+          "desc": "阳华的构型被反复校正，工匠们甚至能照着图纸复刻。城防与工坊的效率，开始像日照一样稳定。"
+        },
+        "c4": {
+          "name": "神性之陨",
+          "desc": "当高台升起，重力就成了盟友。哪怕敌人披甲固守，也会在一轮轮坠击与震荡里露出裂缝。"
+        },
+        "c5": {
+          "name": "冥古之潮",
+          "desc": "更深的潮汐被唤醒：从地下到地表，整条补给链被重排。攻势不再断续，而是持续推进。"
+        },
+        "c6": {
+          "name": "无垢之土",
+          "desc": "最理想的体系不是完美，而是能承受错误。结晶的护持让你的军队在混战、围城与灾荒中仍能保持队形与纪律。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_albedo_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_albedo_c0_modifier",
+          "c1": "gacha_albedo_c1_modifier",
+          "c2": "gacha_albedo_c2_modifier",
+          "c3": "gacha_albedo_c3_modifier",
+          "c4": "gacha_albedo_c4_modifier",
+          "c5": "gacha_albedo_c5_modifier",
+          "c6": "gacha_albedo_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_albedo_country_modifier",
+          "c1": "gacha_albedo_c1_country_modifier",
+          "c2": "gacha_albedo_c2_country_modifier",
+          "c4": "gacha_albedo_c4_country_modifier",
+          "c5": "gacha_albedo_c5_country_modifier",
+          "c6": "gacha_albedo_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_albedo_modifier": {
+          "gacha_core": "yes",
+          "gacha_stone_godeye": "yes"
+        },
+        "gacha_albedo_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_albedo_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_albedo_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_albedo_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_albedo_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_albedo_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_albedo_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_albedo_country_modifier": {},
+        "gacha_albedo_c1_country_modifier": {
+          "government_size": 1
+        },
+        "gacha_albedo_c2_country_modifier": {},
+        "gacha_albedo_c4_country_modifier": {},
+        "gacha_albedo_c5_country_modifier": {
+          "expand_rgo_mining_cost_modifier": -0.1
+        },
+        "gacha_albedo_c6_country_modifier": {}
+      },
+      "story_mode": "default",
+      "nation": "mondstadt",
+      "pool": {
+        "in_pool": false,
+        "group": ""
+      },
+      "starlight_shop": false
+    },
+    {
+      "code": "fischl",
+      "name": {
+        "first": "菲谢尔",
+        "last": "幽夜"
+      },
+      "traits": {
+        "origin": {
+          "key": "gacha_fischl_origin_trait",
+          "name": "幽夜的窥视",
+          "desc": "菲谢尔：「此世的阴影中充满了虫豸的低语。但在本皇女的『断罪之眼』下，邻国的诡计如同白纸般苍白！没有什么能逃过幽夜的凝视！」\n奥兹：「小姐的意思是，我会负责侦查工作。这片大陆的间谍网似乎很薄弱，交给我去刺探情报吧。」",
+          "aura_country_modifier": "gacha_fischl_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "spy_network_construction": 0.4,
+            "max_diplomats": 1
+          }
+        },
+        "awakened": {
+          "key": "gacha_fischl_awakened_trait",
+          "name": "断罪雷影之弓",
+          "desc": "菲谢尔：「降下裁决之时已到！令那轰鸣的雷火（指火炮）响彻天际吧！那些愚蠢的敌军，终将在皇女的威光下化为劫灰！」\n奥兹：「小姐觉得您的炮兵方阵很有气势。我会协助校准弹道，减少误伤和损耗。」",
+          "modifier": {
+            "army_artillery_power": 0.25,
+            "land_unit_attrition": -0.2
+          }
+        },
+        "transcended": {
+          "key": "gacha_fischl_transcended_trait",
+          "name": "净土的降临者",
+          "desc": "菲谢尔：「哪怕身处异邦，皇女的高贵亦无法掩盖。看着吧，此地的臣民终将臣服于幽夜的法则，为我的降临献上赞歌！」\n奥兹：「小姐会努力学习这里的礼仪。不过……她这种自信的气场，似乎意外地很能镇住场面呢。」",
+          "modifier": {
+            "monthly_legitimacy": 0.08,
+            "monthly_prestige": 0.08
+          }
+        },
+        "c2": {
+          "key": "gacha_fischl_c2_trait",
+          "name": "极夜的真视界",
+          "desc": "菲谢尔：「看啊，那伪善的盟约上缠绕着背叛的黑气！这群凡人的把戏，在本皇女眼中如同小丑的闹剧。」\n奥兹：「小姐发现那个邻国的大使在撒谎。另外，我们在他们的宫廷里安插了眼线……小姐说那是『命运的伏笔』。」",
+          "aura_country_modifier": "gacha_fischl_c2_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "spy_network_construction": 0.8,
+            "max_diplomats": 2,
+            "country_cabinet_efficiency": 0.1
+          }
+        },
+        "c4": {
+          "key": "gacha_fischl_c4_trait",
+          "name": "皇女的幻梦庭",
+          "desc": "菲谢尔：「这就是『皇女的幻梦』！现实的边界已然破碎，让敌人在无尽的迷宫中哀嚎，被漆黑的箭雨（火炮）吞噬吧！」\n奥兹：「小姐利用地形布置了伏击圈。在这片战场上，她编写的剧本……似乎真的变成了现实。」",
+          "modifier": {
+            "army_artillery_power": 0.5,
+            "siege_ability": 0.2,
+            "land_unit_attrition": -0.4,
+            "global_hostile_attrition": 0.1
+          }
+        },
+        "c6": {
+          "key": "gacha_fischl_c6_trait",
+          "name": "永夜之主",
+          "desc": "菲谢尔：「不必再寻找归途了，奥兹。我看清楚了，这片大地……这片在此刻属于我们的疆域，正是新的『幽夜净土』。而你……（看向玩家）即是与我共赏这永恒黑夜的『祝圣之王』。」\n奥兹：「……小姐这次没有让我翻译。我想，您听懂了。」",
+          "modifier": {
+            "monthly_legitimacy": 0.16,
+            "monthly_prestige": 0.16,
+            "monthly_war_exhaustion": -0.1,
+            "global_hostile_attrition": 0.2
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "幻夜座·零命",
+          "desc": "菲谢尔：「命运将我投放至此，必有其深意。」\n奥兹：「小姐的意思是：我们会成为您情报与侦察的眼睛。」"
+        },
+        "c1": {
+          "name": "渡鸦的信使",
+          "desc": "菲谢尔：「黑鸦振翼，便是密信抵达之时。」\n奥兹：「我会替您在各国宫廷间传递与截获消息。只要有窗与阴影，就有路。」"
+        },
+        "c2": {
+          "name": "极夜之瞳",
+          "desc": "菲谢尔：「谎言的颜色，逃不过极夜的瞳。」\n奥兹：「对方的使节在撒谎——我已经记下了他们真正想要的东西。」"
+        },
+        "c3": {
+          "name": "皇女夜谭",
+          "desc": "菲谢尔：「让史官写下吧：幽夜的篇章从此翻页。」\n奥兹：「小姐的“故事”会被当作军令与国策解读……效果意外地不错。"
+        },
+        "c4": {
+          "name": "幻梦侵蚀",
+          "desc": "菲谢尔：「在梦与现实的夹缝里，敌军将迷失方向。」\n奥兹：「她布置的佯动与伏击让敌人判断失灵；他们会把失败归咎于“诅咒”。」"
+        },
+        "c5": {
+          "name": "宿命的仇敌",
+          "desc": "菲谢尔：「命运指定的仇敌已现身——不必怜悯。」\n奥兹：「当我们锁定一个对手，小姐会异常专注。对方的每一次失误都会被放大。」"
+        },
+        "c6": {
+          "name": "永夜净土",
+          "desc": "菲谢尔：「此地既为净土，便当有永夜的法则。」\n奥兹：「她不再只是扮演皇女——她开始把“幽夜”变成国家的气质。」"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_fischl_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_fischl_c0_modifier",
+          "c1": "gacha_fischl_c1_modifier",
+          "c2": "gacha_fischl_c2_modifier",
+          "c3": "gacha_fischl_c3_modifier",
+          "c4": "gacha_fischl_c4_modifier",
+          "c5": "gacha_fischl_c5_modifier",
+          "c6": "gacha_fischl_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_fischl_country_modifier",
+          "c1": "gacha_fischl_c1_country_modifier",
+          "c2": "gacha_fischl_c2_country_modifier",
+          "c4": "gacha_fischl_c4_country_modifier",
+          "c5": "gacha_fischl_c5_country_modifier",
+          "c6": "gacha_fischl_c6_country_modifier"
+        },
+        "other_modifiers": [
+          "gacha_fischl_blessed_pact_modifier",
+          "gacha_fischl_shelter_modifier"
+        ]
+      },
+      "buff_values": {
+        "gacha_fischl_modifier": {
+          "gacha_core": "yes",
+          "gacha_electro_godeye": "yes"
+        },
+        "gacha_fischl_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_fischl_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_fischl_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_fischl_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_fischl_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_fischl_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_fischl_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_fischl_country_modifier": {},
+        "gacha_fischl_c1_country_modifier": {
+          "max_diplomats": 1
+        },
+        "gacha_fischl_c2_country_modifier": {},
+        "gacha_fischl_c4_country_modifier": {},
+        "gacha_fischl_c5_country_modifier": {
+          "num_possible_rivals": 1
+        },
+        "gacha_fischl_c6_country_modifier": {},
+        "gacha_fischl_blessed_pact_modifier": {
+          "army_artillery_power": 0.05
+        },
+        "gacha_fischl_shelter_modifier": {
+          "spy_network_construction": 0.1
+        }
+      },
+      "story_mode": "custom",
+      "nation": "mondstadt",
+      "pool": {
+        "in_pool": true,
+        "group": "standard"
+      },
+      "starlight_shop": true,
+      "story_ref": {
+        "event_file": "in_game/events/gacha_fischl_events.txt",
+        "loc_prefix": "gacha_fischl_events"
+      }
+    },
+    {
+      "code": "klee",
+      "name": {
+        "first": "可莉",
+        "last": "火花骑士"
+      },
+      "traits": {
+        "origin": {
+          "key": "gacha_klee_origin_trait",
+          "name": "四叶草的幸运祝祷",
+          "desc": "「嘿嘿，只要看着这个四叶草，运气就会变好哦！士兵叔叔们看到可莉都很开心的样子，虽然……我不小心把城门的门闩弄坏了，但大家笑得更开心了，应该没问题吧？」",
+          "aura_country_modifier": "gacha_klee_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "siege_ability": 0.15,
+            "land_morale_recovery": 0.05
+          }
+        },
+        "awakened": {
+          "key": "gacha_klee_awakened_trait",
+          "name": "特级炸鱼大师",
+          "desc": "「那座城堡看起来好结实，就像蒙德城外的大石头一样！能不能让可莉丢一个蹦蹦进去？就一个！我保证，里面的坏蛋……呃，里面的鱼都会翻肚皮浮上来的！」",
+          "modifier": {
+            "siege_ability": 0.4,
+            "army_artillery_power": 0.35,
+            "artillery_bonus_vs_fort": 0.4
+          }
+        },
+        "transcended": {
+          "key": "gacha_klee_transcended_trait",
+          "name": "逃跑的太阳",
+          "desc": "「虽然不太懂当国王要做什么，但只要把如果不听话的坏人都炸飞，大家就能开开心心地过羽球节了吧？大家都会陪可莉玩的，对吧？不对吗？」",
+          "modifier": {
+            "monthly_prestige": 0.05,
+            "monthly_war_exhaustion": -0.05,
+            "diplomatic_reputation": -1
+          }
+        },
+        "c2": {
+          "key": "gacha_klee_c2_trait",
+          "name": "破破·弹片领域",
+          "desc": "「欸？那些城墙怎么自己倒了？肯定是因为它们也想和可莉一起玩吧！看呐，我们的士兵叔叔们笑得多开心，只要跟着可莉，前面的障碍物都会『砰』的一下消失不见哦！这可是幸运的魔法！」",
+          "aura_country_modifier": "gacha_klee_c2_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "siege_ability": 0.3,
+            "land_morale": 0.1,
+            "land_morale_recovery": 0.1
+          }
+        },
+        "c4": {
+          "key": "gacha_klee_c4_trait",
+          "name": "一触即发·之火",
+          "desc": "「嘿嘿，这是阿贝多哥哥教我的新配方！只要一点点火花，就能让整座城堡变成大烟花！敌人在里面躲猫猫也没用哦，因为爆炸是不分躲在哪里的！这就是火花骑士的攻坚艺术！」",
+          "modifier": {
+            "siege_ability": 0.8,
+            "army_artillery_power": 0.7,
+            "artillery_bonus_vs_fort": 0.8
+          }
+        },
+        "c6": {
+          "key": "gacha_klee_c6_trait",
+          "name": "火花无限·之梦",
+          "desc": "「听好啦！从今天起，这个国家的所有坏蛋都要小心了！不管你们躲在多厚的墙后面，可莉都会把你们找出来炸飞！虽然地可能会变得黑黑的……但那是胜利的颜色嘛！来吧，把世界变成我们的游乐场！」",
+          "modifier": {
+            "monthly_prestige": 0.1,
+            "monthly_war_exhaustion": -0.1,
+            "diplomatic_reputation": -2
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "四叶草座·零命",
+          "desc": "「可莉来啦！只要大家都笑着，坏蛋就会变少一点点！」\n（士兵们开始在头盔上别四叶草——迷信，但很管用。）"
+        },
+        "c1": {
+          "name": "连锁反应",
+          "desc": "「咚——咚咚——！哇！一个爆炸会带来好多爆炸！」\n（敌人越挤在一起，越像在帮可莉完成“表演”。）"
+        },
+        "c2": {
+          "name": "破破弹片",
+          "desc": "「破破会『噼里啪啦』飞出去！城墙也会怕痒吧？」\n（炮击之后的缺口更大，守军更难聚拢。）"
+        },
+        "c3": {
+          "name": "可莉特调",
+          "desc": "「这是可莉的新配方！嗯……可能会冒烟，但绝对是好东西！」\n（军需官学会了把火药、引信和“安全守则”写进同一本册子里。）"
+        },
+        "c4": {
+          "name": "一触即发",
+          "desc": "「嘘——别踩到这条线哦！踩到就会『砰』！」\n（攻城变成了“拆家”：敌人走哪儿都像踩在火星上。）"
+        },
+        "c5": {
+          "name": "轰天雷",
+          "desc": "「看！超级——大——烟花！」\n（当你决定全力炮击时，天际线会先亮起来，然后城门才想起自己要倒。）"
+        },
+        "c6": {
+          "name": "火力全开",
+          "desc": "「全部一起上！蹦蹦、火花、还有——胜利！」\n（从此再也没有“差不多就行”的火力：要么不开，要开就开到敌人不敢站上城墙。）"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_klee_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_klee_c0_modifier",
+          "c1": "gacha_klee_c1_modifier",
+          "c2": "gacha_klee_c2_modifier",
+          "c3": "gacha_klee_c3_modifier",
+          "c4": "gacha_klee_c4_modifier",
+          "c5": "gacha_klee_c5_modifier",
+          "c6": "gacha_klee_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_klee_country_modifier",
+          "c1": "gacha_klee_c1_country_modifier",
+          "c2": "gacha_klee_c2_country_modifier",
+          "c4": "gacha_klee_c4_country_modifier",
+          "c5": "gacha_klee_c5_country_modifier",
+          "c6": "gacha_klee_c6_country_modifier"
+        },
+        "other_modifiers": [
+          "gacha_klee_holy_gardener_modifier",
+          "gacha_klee_scorched_guardian_modifier"
+        ]
+      },
+      "buff_values": {
+        "gacha_klee_modifier": {
+          "gacha_core": "yes",
+          "gacha_fire_godeye": "yes"
+        },
+        "gacha_klee_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_klee_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_klee_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_klee_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_klee_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_klee_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_klee_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_klee_country_modifier": {},
+        "gacha_klee_c1_country_modifier": {
+          "army_artillery_build_cost_modifier": -0.25
+        },
+        "gacha_klee_c2_country_modifier": {},
+        "gacha_klee_c4_country_modifier": {},
+        "gacha_klee_c5_country_modifier": {
+          "army_artillery_power": 0.1,
+          "num_possible_rivals": 1
+        },
+        "gacha_klee_c6_country_modifier": {},
+        "gacha_klee_holy_gardener_modifier": {
+          "global_construction_speed": 0.05
+        },
+        "gacha_klee_scorched_guardian_modifier": {
+          "global_devastation_recovery": 0.2
+        }
+      },
+      "story_mode": "custom",
+      "nation": "mondstadt",
+      "pool": {
+        "in_pool": true,
+        "group": "standard"
+      },
+      "starlight_shop": true,
+      "story_ref": {
+        "event_file": "in_game/events/gacha_klee_events.txt",
+        "loc_prefix": "gacha_klee_events"
+      }
+    },
+    {
+      "code": "mona",
+      "name": {
+        "first": "莫娜",
+        "last": "占星"
+      },
+      "traits": {
+        "origin": {
+          "key": "gacha_mona_origin_trait",
+          "name": "水占盘的账本",
+          "desc": "莫娜：「命运的轨迹我可以解释，但不会替你篡改。至于咨询费——请按时结清。」\n她用水占盘照出港口潮汐、商路风向与宫廷流言：你不一定喜欢答案，但很难忽视它。",
+          "aura_country_modifier": "gacha_mona_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "trade_efficiency": 0.05,
+            "spy_network_construction": 0.15
+          }
+        },
+        "awakened": {
+          "key": "gacha_mona_awakened_trait",
+          "name": "虚实流动",
+          "desc": "莫娜：「想抓住我？那得先抓住水流。」\n她把护卫与信使安排得像一场魔术：刺客扑空、谣言失焦，关键时刻你总能比对手快半步。",
+          "modifier": {
+            "send_diplomat_cost_modifier": 0.075
+          }
+        },
+        "transcended": {
+          "key": "gacha_mona_transcended_trait",
+          "name": "星命定轨",
+          "desc": "莫娜：「星异并非诅咒，是“标记”。当某个结局被标记，所有岔路都会向它靠拢。」\n你开始按她的星图选择宣战、议和与投资——像是在顺着潮水行船。",
+          "modifier": {
+            "expected_warscore_modifier": 0.06,
+            "land_morale_recovery": 0.025
+          }
+        },
+        "c2": {
+          "key": "gacha_mona_c2_trait",
+          "name": "星月的连珠",
+          "desc": "莫娜：「星与月不会只落下一次讯号。把每一次小预兆串起来，才是完整的预言。」\n她能在政策与战局之间快速转向，让“临时调整”变成习惯。",
+          "aura_country_modifier": "gacha_mona_c2_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "trade_efficiency": 0.08,
+            "spy_network_construction": 0.25
+          }
+        },
+        "c4": {
+          "key": "gacha_mona_c4_trait",
+          "name": "灭绝的预言",
+          "desc": "莫娜：「当星图宣判‘败北’，敌人就会先在心里败一次。」\n被她点名的目标更容易出现裂痕：军心、盟约、甚至谈判桌上的底气。",
+          "modifier": {
+            "send_diplomat_cost_modifier": 0.15
+          }
+        },
+        "c6": {
+          "key": "gacha_mona_c6_trait",
+          "name": "厄运的修辞",
+          "desc": "莫娜：「厄运不会因为你闭上眼就消失。把它写进檄文里，至少能让它服务于你。」\n她将预言化作话语：在最需要的时候，恐惧会沿着文字传播得比军队更快。",
+          "modifier": {
+            "expected_warscore_modifier": 0.12,
+            "land_morale_recovery": 0.05
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "映天座·零命",
+          "desc": "穷归穷，占星术士的原则从不打折：她只揭示命运，不替命运说谎。"
+        },
+        "c1": {
+          "name": "沉没的预言",
+          "desc": "当她宣告某人“沉没”，连意外都会开始向那条轨迹聚拢。你看见敌军的失误越来越像连锁反应。"
+        },
+        "c2": {
+          "name": "星月的连珠",
+          "desc": "星月的讯号连续闪烁：一次成功会引来下一次更快的成功。"
+        },
+        "c3": {
+          "name": "不休的天象",
+          "desc": "天象被不断校准，星图细节更清晰。你在关键节点的判断失误明显减少。"
+        },
+        "c4": {
+          "name": "灭绝的预言",
+          "desc": "她把敌人“标在星异里”，于是全军都知道该把压力与资源放在哪里。"
+        },
+        "c5": {
+          "name": "命运的嘲弄",
+          "desc": "命运喜欢开玩笑——莫娜更喜欢把玩笑写成注脚。那些想靠侥幸翻盘的人，往往会被她先一步拆穿。"
+        },
+        "c6": {
+          "name": "厄运的修辞",
+          "desc": "把厄运说出口，它就不再只是阴影。她的宣告像一道冷水，让恐慌、狂热与阴谋都显形。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_mona_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_mona_c0_modifier",
+          "c1": "gacha_mona_c1_modifier",
+          "c2": "gacha_mona_c2_modifier",
+          "c3": "gacha_mona_c3_modifier",
+          "c4": "gacha_mona_c4_modifier",
+          "c5": "gacha_mona_c5_modifier",
+          "c6": "gacha_mona_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_mona_country_modifier",
+          "c1": "gacha_mona_c1_country_modifier",
+          "c2": "gacha_mona_c2_country_modifier",
+          "c4": "gacha_mona_c4_country_modifier",
+          "c5": "gacha_mona_c5_country_modifier",
+          "c6": "gacha_mona_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_mona_modifier": {
+          "gacha_core": "yes",
+          "gacha_water_godeye": "yes"
+        },
+        "gacha_mona_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_mona_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_mona_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_mona_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_mona_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_mona_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_mona_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_mona_country_modifier": {},
+        "gacha_mona_c1_country_modifier": {
+          "max_diplomats": 1
+        },
+        "gacha_mona_c2_country_modifier": {},
+        "gacha_mona_c4_country_modifier": {},
+        "gacha_mona_c5_country_modifier": {
+          "trade_range": 5
+        },
+        "gacha_mona_c6_country_modifier": {}
+      },
+      "story_mode": "default",
+      "nation": "mondstadt",
+      "pool": {
+        "in_pool": true,
+        "group": "mondstadt"
+      },
+      "starlight_shop": true
+    },
+    {
+      "code": "noelle",
+      "name": {
+        "first": "诺艾尔",
+        "last": "女仆"
+      },
+      "traits": {
+        "origin": {
+          "key": "gacha_noelle_origin_trait",
+          "name": "骑士团女仆的誓约",
+          "desc": "诺艾尔：「只要需要，我什么都能做！打扫、搬运、照料伤员……还有守住门口。」\n她把后勤整理得像一尘不染的大厅：军队吃得上、睡得稳，士气也跟着踏实。",
+          "aura_country_modifier": "gacha_noelle_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "land_morale_recovery": 0.05,
+            "global_devastation_recovery": 0.05
+          }
+        },
+        "awakened": {
+          "key": "gacha_noelle_awakened_trait",
+          "name": "护心铠",
+          "desc": "诺艾尔：「请站在我身后！我会保护大家的。」\n厚重的岩铠并不华丽，却能在最混乱的接战里把伤亡压到最低。",
+          "modifier": {
+            "global_defensive": 0.05,
+            "land_morale": 0.025
+          }
+        },
+        "transcended": {
+          "key": "gacha_noelle_transcended_trait",
+          "name": "大扫除",
+          "desc": "诺艾尔：「灰尘、暴徒、还有趁乱伸手的人……都要清理。」\n当她挥动大剑，前线像被扫过一遍：缺口被补上，散兵被收拢，阵线重新变得整齐。",
+          "modifier": {
+            "land_unit_attrition": -0.05,
+            "land_morale_recovery": 0.05
+          }
+        },
+        "c2": {
+          "key": "gacha_noelle_c2_trait",
+          "name": "旋风女仆",
+          "desc": "诺艾尔：「我会更快一点……不然大家又要等我了！」\n她的冲锋像旋风，能把拖延与犹豫一起卷走，让攻势更连贯。",
+          "aura_country_modifier": "gacha_noelle_c2_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "land_morale_recovery": 0.08,
+            "global_devastation_recovery": 0.08
+          }
+        },
+        "c4": {
+          "key": "gacha_noelle_c4_trait",
+          "name": "之后会扫干净的",
+          "desc": "诺艾尔：「没关系，打完仗我来收拾。」\n她总能在最糟的战场里把秩序捡回来：战后恢复更快，混乱更少。",
+          "modifier": {
+            "global_defensive": 0.1,
+            "land_morale": 0.05
+          }
+        },
+        "c6": {
+          "key": "gacha_noelle_c6_trait",
+          "name": "要一尘不染才行",
+          "desc": "诺艾尔：「做到最好，才配得上骑士的名字。」\n她不再只是“帮忙的人”：在她的标准里，胜利不只是赢——还要把国家整理到能继续前进。",
+          "modifier": {
+            "land_unit_attrition": -0.1,
+            "land_morale_recovery": 0.1
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "心护座·零命",
+          "desc": "她把“服务”当作武器：越是琐碎的事务，越能决定一个国家能不能撑到最后。"
+        },
+        "c1": {
+          "name": "支援就交给我吧",
+          "desc": "当战线同时需要进攻与守护，她总能把两件事一起做完——还会顺手把地上的碎片捡走。"
+        },
+        "c2": {
+          "name": "旋风女仆",
+          "desc": "旋风般的挥砍让敌人的阵形散开，也让你的军队更愿意跟上推进。"
+        },
+        "c3": {
+          "name": "女仆不会受伤",
+          "desc": "护心铠的训练被强化：她的防护更稳定，突发状况更少。"
+        },
+        "c4": {
+          "name": "之后会扫干净的",
+          "desc": "战斗结束不是放松，而是“清扫阶段”。她用一次沉稳的收尾，让敌人不敢回头。"
+        },
+        "c5": {
+          "name": "骑士团扫除专家",
+          "desc": "她把“扫除”练成了战术：从营地到城门，处处都有她的标准流程。"
+        },
+        "c6": {
+          "name": "要一尘不染才行",
+          "desc": "当她进入状态，连“不可能”都像是待清理的灰尘——只要继续用力，就会消失。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_noelle_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_noelle_c0_modifier",
+          "c1": "gacha_noelle_c1_modifier",
+          "c2": "gacha_noelle_c2_modifier",
+          "c3": "gacha_noelle_c3_modifier",
+          "c4": "gacha_noelle_c4_modifier",
+          "c5": "gacha_noelle_c5_modifier",
+          "c6": "gacha_noelle_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_noelle_country_modifier",
+          "c1": "gacha_noelle_c1_country_modifier",
+          "c2": "gacha_noelle_c2_country_modifier",
+          "c4": "gacha_noelle_c4_country_modifier",
+          "c5": "gacha_noelle_c5_country_modifier",
+          "c6": "gacha_noelle_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_noelle_modifier": {
+          "gacha_core": "yes",
+          "gacha_stone_godeye": "yes"
+        },
+        "gacha_noelle_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_noelle_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_noelle_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_noelle_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_noelle_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_noelle_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_noelle_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_noelle_country_modifier": {},
+        "gacha_noelle_c1_country_modifier": {
+          "max_constructions_at_same_time": 1
+        },
+        "gacha_noelle_c2_country_modifier": {},
+        "gacha_noelle_c4_country_modifier": {},
+        "gacha_noelle_c5_country_modifier": {
+          "tax_income_efficiency": 0.05
+        },
+        "gacha_noelle_c6_country_modifier": {}
+      },
+      "story_mode": "default",
+      "nation": "mondstadt",
+      "pool": {
+        "in_pool": true,
+        "group": "mondstadt"
+      },
+      "starlight_shop": true
+    },
+    {
+      "code": "venti",
+      "name": {
+        "first": "温迪",
+        "last": "风吟"
+      },
+      "traits": {
+        "origin": {
+          "key": "gacha_venti_origin_trait",
+          "name": "酒馆的风吟",
+          "desc": "温迪：「别紧张嘛！给我一杯酒、一个舞台，我就能把你们的烦恼吹散一点点。」\n他用歌声安抚城镇的躁动，也用玩笑拆穿贵族的傲慢——不树旗、不称王，却总能让人相信“自由”。",
+          "aura_country_modifier": "gacha_venti_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "global_estate_target_satisfaction": 0.05,
+            "global_estate_satisfaction_recovery": 0.05
+          }
+        },
+        "awakened": {
+          "key": "gacha_venti_awakened_trait",
+          "name": "高天之歌",
+          "desc": "温迪：「路要走得轻快，心也要飞得更高。」\n风在军队前方开道：行军更顺，撤退更稳，连坏天气都像被他哄得没那么难受。",
+          "modifier": {
+            "exploration_mission_speed_modifier": 0.075
+          }
+        },
+        "transcended": {
+          "key": "gacha_venti_transcended_trait",
+          "name": "风神之诗",
+          "desc": "温迪：「你以为我只是吟游诗人？嗯……那就继续这么以为吧。」\n当他认真起来，战场会起风。箭雨偏转、尘沙遮蔽、旗帜在暴风里重新聚拢——敌人很难判断真正的主攻方向。",
+          "modifier": {
+            "land_morale": 0.025,
+            "land_morale_recovery": 0.025,
+            "land_unit_attrition": -0.025
+          }
+        },
+        "c2": {
+          "key": "gacha_venti_c2_trait",
+          "name": "眷恋的泠风",
+          "desc": "温迪：「旧友的歌声会留下回响，哪怕隔着千年。」\n他的风像记忆一样贴近敌军护甲的缝隙：意志被削弱，防线也更容易松动。",
+          "aura_country_modifier": "gacha_venti_c2_country_modifier",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "global_estate_target_satisfaction": 0.08,
+            "global_estate_satisfaction_recovery": 0.08
+          }
+        },
+        "c4": {
+          "key": "gacha_venti_c4_trait",
+          "name": "自由的凛风",
+          "desc": "温迪：「自由不是放任，是让人愿意自己站出来。」\n城镇与军队更愿意自发承担责任：你能感觉到自治的活力，而不是被迫的服从。",
+          "modifier": {
+            "exploration_mission_speed_modifier": 0.15
+          }
+        },
+        "c6": {
+          "key": "gacha_venti_c6_trait",
+          "name": "抗争的暴风",
+          "desc": "温迪：「若有人要把风关进笼子，那我就把笼子吹散。」\n当敌人试图以强权压制，你的反击会更像暴风：来得快、范围广、而且难以阻挡。",
+          "modifier": {
+            "land_morale": 0.05,
+            "land_morale_recovery": 0.05,
+            "land_unit_attrition": -0.05
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "歌仙座·零命",
+          "desc": "他从不许诺统治，只许诺风：风会带来消息、带来酒香，也带来改变的可能。"
+        },
+        "c1": {
+          "name": "弦发的苍风",
+          "desc": "琴弦一拨，苍风分裂成多道回音；战场上，你会发现“多一支箭”有时就够了。"
+        },
+        "c2": {
+          "name": "眷恋的泠风",
+          "desc": "泠风把敌人的傲慢吹冷：士气与防备都会在不知不觉间下降。"
+        },
+        "c3": {
+          "name": "千风的诗篇",
+          "desc": "诗篇越长，风越熟练。你能更频繁地把局势拉回自己习惯的节奏。"
+        },
+        "c4": {
+          "name": "自由的凛风",
+          "desc": "获得风的馈赠的人，会更愿意奔跑、集结、再出发。"
+        },
+        "c5": {
+          "name": "高天的协奏",
+          "desc": "协奏让“高天之歌”更干净利落：该抬升的抬升，该坠落的坠落。"
+        },
+        "c6": {
+          "name": "抗争的暴风",
+          "desc": "当暴风之眼成形，抗争就不再是口号。敌人的防线像纸一样被撕开，而你的军心在风里越吹越亮。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_venti_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_venti_c0_modifier",
+          "c1": "gacha_venti_c1_modifier",
+          "c2": "gacha_venti_c2_modifier",
+          "c3": "gacha_venti_c3_modifier",
+          "c4": "gacha_venti_c4_modifier",
+          "c5": "gacha_venti_c5_modifier",
+          "c6": "gacha_venti_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_venti_country_modifier",
+          "c1": "gacha_venti_c1_country_modifier",
+          "c2": "gacha_venti_c2_country_modifier",
+          "c4": "gacha_venti_c4_country_modifier",
+          "c5": "gacha_venti_c5_country_modifier",
+          "c6": "gacha_venti_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_venti_modifier": {
+          "gacha_core": "yes",
+          "gacha_wind_godeye": "yes"
+        },
+        "gacha_venti_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_venti_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_venti_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_venti_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_venti_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_venti_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_venti_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_venti_country_modifier": {},
+        "gacha_venti_c1_country_modifier": {
+          "send_diplomat_cost_modifier": 0.1
+        },
+        "gacha_venti_c2_country_modifier": {},
+        "gacha_venti_c4_country_modifier": {},
+        "gacha_venti_c5_country_modifier": {
+          "prestige_decay": -0.05
+        },
+        "gacha_venti_c6_country_modifier": {}
+      },
+      "story_mode": "default",
+      "nation": "mondstadt",
+      "pool": {
+        "in_pool": true,
+        "group": "mondstadt"
+      },
+      "starlight_shop": true
+    }
+  ]
+}

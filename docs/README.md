@@ -21,6 +21,8 @@
 - **刻晴交互「璃月计划」**：两幕事件 + 一次性解锁（按钮置灰、防连点锁）
 - **角色身份标准化**：统一兜底 dynasty/estate，避免“抽出来变贵族/宗族缺失/统治者被拖回本国”
 
+> 文档提示：Phase 1-4 的进展要与 [spec/00_project_overview.md](spec/00_project_overview.md) 里的状态同步，`Version` / `Last Verified` 字段切勿遗漏。
+
 ---
 
 ## 目录说明
@@ -37,6 +39,12 @@
 
 过时草案、旧 Bug 记录、弃用方案等，只用于考古，不作为开发依据。
 
+## 文档治理
+
+- **分类与流程**：`docs/spec/` 记录“Current Truth”，`docs/design/` 讨论构想，`docs/archive/` 留存历史。详细的文档编写/审核流程请参阅 [`docs/documentation_playbook.md`](documentation_playbook.md)。
+- **同步与元数据**：任何代码变更都应配套更新文档，并在新文档开头写明 `Version`/`Last Verified`（参考 `docs/design/design_project_guidelines.md`）。
+- **可追查性**：正文提及具体文件路径或 Spec ID（如 `in_game/events/gacha_events.txt`），方便其他开发者迅速准确地验对代码。
+
 ---
 
 ## 常见任务入口
@@ -50,9 +58,10 @@
 
 ## 文档维护公约（强制）
 
-1. **Code + Docs in Sync**：任何核心机制变更必须在同一次提交中更新对应 Spec。
-2. **权威性**：Design 与 Spec 冲突 → 以 Spec 为准；Spec 与代码冲突 → 先修代码/验证，再修 Spec。
-3. **可验证**：每条关键结论尽量写清对应文件路径/关键变量/关键 effect，方便回查与复用。
+1. **Code + Docs in Sync**：任何核心机制的变更都要在同一次提交中更新 Spec，必要时同步拿掉原理设想，留下“已实现”片段。
+2. **权威性**：Design 与 Spec 冲突 → 以 Spec 为准；Spec 与代码冲突 → 先修代码/验证，再修 Spec，并在 `docs/design/` 相应位置加上“已同步”注记。
+3. **可验证**：每条结论写清涉及文件路径/变量/关键 effect，再附上对应 Spec ID 方便复查。
+4. **审阅清单**：提交前自查 [`docs/documentation_playbook.md`](documentation_playbook.md) 中的核对项（Scope 清理、随机/Localization 限制等），避免文档残缺或误导。
 
 ---
 

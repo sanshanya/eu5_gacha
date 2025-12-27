@@ -1,0 +1,77 @@
+﻿# 赛诺 Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_cyno_origin_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+
+
+
+gacha_cyno_awakened_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        monthly_war_exhaustion = -0.06
+        global_manpower_modifier = 0.06
+        monthly_prestige = 0.03
+    }
+}
+
+gacha_cyno_transcended_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        legislative_efficiency = 0.09
+        monthly_war_exhaustion = -0.08
+        monthly_legitimacy = 0.06
+        stability_cost = -0.06
+        country_cabinet_efficiency = 0.04
+    }
+}
+
+# Constellation upgrades
+
+gacha_cyno_c2_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+
+
+
+gacha_cyno_c4_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        monthly_war_exhaustion = -0.12
+        global_manpower_modifier = 0.12
+        monthly_prestige = 0.06
+    }
+}
+
+gacha_cyno_c6_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        legislative_efficiency = 0.18
+        monthly_war_exhaustion = -0.16
+        monthly_legitimacy = 0.12
+        stability_cost = -0.12
+        country_cabinet_efficiency = 0.08
+    }
+}

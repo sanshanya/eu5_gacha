@@ -1,0 +1,75 @@
+﻿# 宵宫 Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_yoimiya_origin_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_yoimiya_awakened_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        siege_ability = 0.075
+        artillery_bonus_vs_fort = 0.06
+        army_artillery_power = 0.03
+        army_artillery_build_cost_modifier = -0.06
+    }
+}
+
+gacha_yoimiya_transcended_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        global_construction_speed = 0.05
+        global_production_efficiency = 0.04
+        global_devastation_recovery = 0.10
+        global_build_buildings_cost = -0.05
+        stability_cost = -0.04
+        siege_ability = 0.025
+    }
+}
+
+# Constellation upgrades
+
+gacha_yoimiya_c2_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_yoimiya_c4_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        siege_ability = 0.15
+        artillery_bonus_vs_fort = 0.12
+        army_artillery_power = 0.06
+        army_artillery_build_cost_modifier = -0.12
+    }
+}
+
+gacha_yoimiya_c6_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        global_construction_speed = 0.10
+        global_production_efficiency = 0.08
+        global_devastation_recovery = 0.20
+        global_build_buildings_cost = -0.10
+        stability_cost = -0.08
+        siege_ability = 0.05
+    }
+}

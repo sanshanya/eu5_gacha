@@ -6,21 +6,28 @@ gacha_albedo_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 gacha_albedo_awakened_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        siege_ability = 0.05
+    }
 }
 
 gacha_albedo_transcended_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        land_morale_recovery = 0.025
+        land_unit_attrition = -0.025
+    }
 }
 
 # Constellation upgrades
@@ -29,19 +36,26 @@ gacha_albedo_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 gacha_albedo_c4_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        siege_ability = 0.10
+    }
 }
 
 gacha_albedo_c6_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        land_morale_recovery = 0.05
+        land_unit_attrition = -0.05
+    }
 }

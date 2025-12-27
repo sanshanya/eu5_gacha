@@ -8,7 +8,9 @@ gacha_klee_origin_trait = {
     flavor = personality
     allow = { always = no }
     # 陆军士气恢复+15% · 年度威望+1.00 · 要塞防御-10% (由 modifier 提供)
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 # 2. 特级炸鱼大师（职业 Trait：陆军）
@@ -31,9 +33,9 @@ gacha_klee_transcended_trait = {
     allow = { always = no }
     # AE影响-10% · 厌战度-0.05 · 外交声誉-2
     modifier = {
-        monthly_prestige = 0.50
-        monthly_war_exhaustion = -0.50
-        diplomatic_reputation = -10
+        monthly_prestige = 0.05
+        monthly_war_exhaustion = -0.05
+        diplomatic_reputation = -1
     }
 }
 
@@ -45,7 +47,9 @@ gacha_klee_c2_trait = {
     flavor = personality
     allow = { always = no }
     # 敌方要塞防御-20% · 陆军士气+10% (由 modifier 提供)
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 # C4：一触即发之火
@@ -69,7 +73,7 @@ gacha_klee_c6_trait = {
     # 攻城能力+30% · 造核花费-20% · 省份荒废度+0.1 (由 modifier 提供)
     modifier = {
         monthly_prestige = 0.1
-        monthly_war_exhaustion = -5
-        diplomatic_reputation = -66
+        monthly_war_exhaustion = -0.1
+        diplomatic_reputation = -2
     }
 }

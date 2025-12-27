@@ -11,7 +11,7 @@
   gacha_liyue_reconstruction_overview_desc: "Start the Cabinet Action: $gacha_create_liyue_nation$, then take the Situation Action: $gacha_liyue_build_market$ (required). Invest gold to accelerate. When progress reaches 100, Liyue will be founded immediately."
 
   gacha_liyue_reconstruction_status_title: "Status"
-  gacha_liyue_reconstruction_status_tt: "#bold Progress:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_progress').GetValue|Y0]/100\\n#bold Monthly Progress:#! +[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_monthly_progress').GetValue|Y1]\\n#bold Invested:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_investment').GetValue|Y0] Gold"
+  gacha_liyue_reconstruction_status_tt: "#bold Progress:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_progress').GetValue|Y0]/100\n#bold Monthly Progress:#! +[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_monthly_progress').GetValue|Y1]\n#bold Invested:#! [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('gacha_liyue_investment').GetValue|Y0] Gold"
   gacha_tt_liyue_plan_unlocked: "The “Liyue Plan” is unlocked."
   gacha_tt_liyue_not_established_yet: "Liyue has not been founded yet."
   gacha_tt_liyue_requires_keqing_alive: "Keqing is alive."

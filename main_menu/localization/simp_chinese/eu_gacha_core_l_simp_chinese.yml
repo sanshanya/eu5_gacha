@@ -136,6 +136,8 @@
   MODIFIER_TYPE_DESC_gacha_constellation_level: "「当凡人的渴望强烈到足以撼动星空的转瞬，来自高天的视线便会投射而下，凝结为这枚引导元素之力、以此见证命运的崇高信物。」"
   MODIFIER_TYPE_NAME_gacha_electro_godeye: "雷元素神之眼"
   MODIFIER_TYPE_DESC_gacha_electro_godeye: "来自稻妻的雷之印记，代表雷元素的认可。"
+  MODIFIER_TYPE_NAME_gacha_wind_godeye: "风元素神之眼"
+  MODIFIER_TYPE_DESC_gacha_wind_godeye: "来自风之神的印记，象征自由与疾行。"
   MODIFIER_TYPE_NAME_gacha_water_godeye: "水元素神之眼"
   MODIFIER_TYPE_DESC_gacha_water_godeye: "来自水之神的祝福，象征流动与治愈。"
   MODIFIER_TYPE_NAME_gacha_stone_godeye: "岩元素神之眼"

@@ -1,0 +1,61 @@
+﻿# 莫娜 Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_mona_origin_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_mona_awakened_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        send_diplomat_cost_modifier = 0.075
+    }
+}
+
+gacha_mona_transcended_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        expected_warscore_modifier = 0.06
+        land_morale_recovery = 0.025
+    }
+}
+
+# Constellation upgrades
+
+gacha_mona_c2_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_mona_c4_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        send_diplomat_cost_modifier = 0.15
+    }
+}
+
+gacha_mona_c6_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        expected_warscore_modifier = 0.12
+        land_morale_recovery = 0.05
+    }
+}

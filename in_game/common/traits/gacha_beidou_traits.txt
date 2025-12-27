@@ -7,9 +7,12 @@ gacha_beidou_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    # 海军士气/私掠效率（由国家修正提供）
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # 2. 斩浪者（职业·海军）
 gacha_beidou_awakened_trait = {
@@ -42,8 +45,12 @@ gacha_beidou_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # C4：踏海斩鲸（职业升级）
 gacha_beidou_c4_trait = {

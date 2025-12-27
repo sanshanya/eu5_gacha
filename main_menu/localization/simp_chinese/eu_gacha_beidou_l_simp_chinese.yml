@@ -34,12 +34,19 @@
 
   # === 命之座 (Constellations) ===
   STATIC_MODIFIER_NAME_gacha_beidou_c0_modifier: "南十字座·零命"
+  STATIC_MODIFIER_DESC_gacha_beidou_c0_modifier: "「先把旗升起来。海上很多事，不用开炮就能谈成。」\n南十字的名声开始在港口流传：对手更谨慎，商船更愿意靠你的码头。"
   STATIC_MODIFIER_NAME_gacha_beidou_c1_modifier: "老兄弟们"
+  STATIC_MODIFIER_DESC_gacha_beidou_c1_modifier: "「船是木头，命是兄弟。」\n她把老水手的规矩带进你的军队：赏罚分明、分赃讲信用，队伍更稳，也更耐打。"
   STATIC_MODIFIER_NAME_gacha_beidou_c2_modifier: "黑帆压境"
+  STATIC_MODIFIER_DESC_gacha_beidou_c2_modifier: "「黑帆一到，海面就安静了。」\n她擅长把威慑变成收益：封锁、劫掠、收税一条龙，让敌人的海路像被掐住喉咙。"
   STATIC_MODIFIER_NAME_gacha_beidou_c3_modifier: "甲板上的月亮"
+  STATIC_MODIFIER_DESC_gacha_beidou_c3_modifier: "「月亮照得清楚，谁在偷懒我一眼就看见。」\n夜航与突袭成了常态：你更容易抓住对手松懈的窗口，在海上先下一城。"
   STATIC_MODIFIER_NAME_gacha_beidou_c4_modifier: "海山再临"
+  STATIC_MODIFIER_DESC_gacha_beidou_c4_modifier: "「他们以为那是传说？那就让他们再信一次。」\n当战局胶着，她会用最野的打法打开缺口：哪怕面对强敌，也敢逼到近身决胜。"
   STATIC_MODIFIER_NAME_gacha_beidou_c5_modifier: "璃月的规矩"
+  STATIC_MODIFIER_DESC_gacha_beidou_c5_modifier: "「港口不是谁都能撒野的地方。」\n她不爱官话，但讲行规：走私、拖欠、两头吃的商人会被“请上船谈谈”，港口秩序随之变硬。"
   STATIC_MODIFIER_NAME_gacha_beidou_c6_modifier: "同舟共济"
+  STATIC_MODIFIER_DESC_gacha_beidou_c6_modifier: "「这趟航线，你我一人一半。」\n她不说效忠，却会把后背交给你：主力舰队的士气与凝聚力显著提升，海战成了你的王牌。"
 
   # 北斗 - 国家修正
   STATIC_MODIFIER_NAME_gacha_beidou_country_modifier: "南十字的旗号"

@@ -1,0 +1,61 @@
+﻿# Generated Modifiers for varesa (V3)
+
+# 角色标识：瓦雷莎本体
+gacha_varesa_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    gacha_fire_godeye = yes
+}
+
+# 命之座等级展示（0-6）
+gacha_varesa_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_varesa_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_varesa_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_varesa_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_varesa_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_varesa_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_varesa_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（占位）
+gacha_varesa_country_modifier = {
+    game_data = { category = country decaying = no }
+    monthly_legitimacy = 0.02
+    monthly_prestige = 0.02
+    global_manpower_modifier = 0.03
+    global_monthly_food_modifier = 0.03
+    global_devastation_recovery = 0.03
+}
+
+# C2 光环升级
+gacha_varesa_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    monthly_legitimacy = 0.03
+    monthly_prestige = 0.04
+    global_manpower_modifier = 0.06
+    global_monthly_food_modifier = 0.06
+    global_devastation_recovery = 0.06
+}
+
+# C1 专属机制：内阁席位 +1
+gacha_varesa_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    monthly_war_exhaustion = -0.05
+    global_manpower_modifier = 0.05
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_varesa_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：国策槽位 +1
+gacha_varesa_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    global_build_buildings_cost = -0.08
+    global_construction_speed = 0.06
+}
+
+# C6 国家级占位（主要属性在 Trait 中）
+gacha_varesa_c6_country_modifier = {
+    game_data = { category = country decaying = no }
+}

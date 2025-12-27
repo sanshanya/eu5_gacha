@@ -1,0 +1,68 @@
+﻿# 夏洛蒂 Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_charlotte_origin_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_charlotte_awakened_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        trade_range = 5
+        trade_efficiency = 0.03
+    }
+}
+
+gacha_charlotte_transcended_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        monthly_legitimacy = 0.05
+        monthly_prestige = 0.05
+        country_cabinet_efficiency = 0.04
+        legislative_efficiency = 0.03
+    }
+}
+
+# Constellation upgrades
+
+gacha_charlotte_c2_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+gacha_charlotte_c4_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        max_diplomats = 1
+        trade_range = 10
+        trade_efficiency = 0.06
+    }
+}
+
+gacha_charlotte_c6_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        monthly_legitimacy = 0.10
+        monthly_prestige = 0.10
+        country_cabinet_efficiency = 0.08
+        legislative_efficiency = 0.06
+    }
+}

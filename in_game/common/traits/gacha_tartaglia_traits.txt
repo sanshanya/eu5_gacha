@@ -1,0 +1,79 @@
+﻿# 达达利亚 Traits - V3 Design (placeholder)
+
+# C0: Base trio
+
+gacha_tartaglia_origin_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+
+
+
+gacha_tartaglia_awakened_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        naval_morale_modifier = 0.10
+        ship_capture_chance = 0.06
+        ship_build_speed = 0.05
+    }
+}
+
+gacha_tartaglia_transcended_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        monthly_war_exhaustion = -0.07
+        naval_morale_modifier = 0.12
+        ship_capture_chance = 0.08
+        privateer_durability = 0.09
+        global_manpower_modifier = 0.06
+        monthly_prestige = 0.05
+    }
+}
+
+# Constellation upgrades
+
+gacha_tartaglia_c2_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        gacha_country_aura = yes
+    }
+}
+
+
+
+
+gacha_tartaglia_c4_trait = {
+    category = general
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        naval_morale_modifier = 0.20
+        ship_capture_chance = 0.12
+        ship_build_speed = 0.10
+    }
+}
+
+gacha_tartaglia_c6_trait = {
+    category = ruler
+    flavor = personality
+    allow = { always = no }
+    modifier = {
+        monthly_war_exhaustion = -0.14
+        naval_morale_modifier = 0.24
+        ship_capture_chance = 0.16
+        privateer_durability = 0.18
+        global_manpower_modifier = 0.12
+        monthly_prestige = 0.10
+    }
+}

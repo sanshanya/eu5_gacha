@@ -35,12 +35,19 @@
 
   # === 命之座 (Constellations) ===
   STATIC_MODIFIER_NAME_gacha_klee_c0_modifier: "四叶草座·零命"
+  STATIC_MODIFIER_DESC_gacha_klee_c0_modifier: "「可莉来啦！只要大家都笑着，坏蛋就会变少一点点！」\n（士兵们开始在头盔上别四叶草——迷信，但很管用。）"
   STATIC_MODIFIER_NAME_gacha_klee_c1_modifier: "连锁反应"
+  STATIC_MODIFIER_DESC_gacha_klee_c1_modifier: "「咚——咚咚——！哇！一个爆炸会带来好多爆炸！」\n（敌人越挤在一起，越像在帮可莉完成“表演”。）"
   STATIC_MODIFIER_NAME_gacha_klee_c2_modifier: "破破弹片"
+  STATIC_MODIFIER_DESC_gacha_klee_c2_modifier: "「破破会『噼里啪啦』飞出去！城墙也会怕痒吧？」\n（炮击之后的缺口更大，守军更难聚拢。）"
   STATIC_MODIFIER_NAME_gacha_klee_c3_modifier: "可莉特调"
+  STATIC_MODIFIER_DESC_gacha_klee_c3_modifier: "「这是可莉的新配方！嗯……可能会冒烟，但绝对是好东西！」\n（军需官学会了把火药、引信和“安全守则”写进同一本册子里。）"
   STATIC_MODIFIER_NAME_gacha_klee_c4_modifier: "一触即发"
+  STATIC_MODIFIER_DESC_gacha_klee_c4_modifier: "「嘘——别踩到这条线哦！踩到就会『砰』！」\n（攻城变成了“拆家”：敌人走哪儿都像踩在火星上。）"
   STATIC_MODIFIER_NAME_gacha_klee_c5_modifier: "轰天雷"
+  STATIC_MODIFIER_DESC_gacha_klee_c5_modifier: "「看！超级——大——烟花！」\n（当你决定全力炮击时，天际线会先亮起来，然后城门才想起自己要倒。）"
   STATIC_MODIFIER_NAME_gacha_klee_c6_modifier: "火力全开"
+  STATIC_MODIFIER_DESC_gacha_klee_c6_modifier: "「全部一起上！蹦蹦、火花、还有——胜利！」\n（从此再也没有“差不多就行”的火力：要么不开，要开就开到敌人不敢站上城墙。）"
 
   # 可莉 - 国家修正
   STATIC_MODIFIER_NAME_gacha_klee_country_modifier: "四叶草的幸运"

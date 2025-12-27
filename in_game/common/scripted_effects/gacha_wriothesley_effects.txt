@@ -1,0 +1,284 @@
+﻿# ==============================================================================
+# 莱欧斯利 Character Logic - V3 Architecture (placeholder)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Main Entry Point
+# ------------------------------------------------------------------------------
+gacha_create_wriothesley_effect = {
+    # === A. Duplicate Logic (Upgrade) ===
+    if = {
+        limit = { has_global_variable = gacha_wriothesley_is_summoned }
+
+        clear_saved_scope = existing_char
+
+        # Prefer: find 莱欧斯利 in this country first
+        random_character = {
+            limit = {
+                is_alive = yes
+                has_character_modifier = gacha_wriothesley_modifier
+            }
+            save_scope_as = existing_char
+        }
+
+        # Fallback: global search (world-unique)
+        if = {
+            limit = { NOT = { exists = scope:existing_char } }
+            random_country = {
+                limit = {
+                    any_character = {
+                        is_alive = yes
+                        has_character_modifier = gacha_wriothesley_modifier
+                    }
+                }
+                random_character = {
+                    limit = {
+                        is_alive = yes
+                        has_character_modifier = gacha_wriothesley_modifier
+                    }
+                    save_scope_as = existing_char
+                }
+            }
+        }
+
+        if = {
+            limit = { exists = scope:existing_char }
+
+            scope:existing_char = {
+                if = {
+                    limit = { employer = root }
+                    # Standardize identity (estate/dynasty)
+                    gacha_standardize_character_identity = { who = wriothesley }
+
+                    # Save scope for UI
+                    save_scope_as = gacha_last_pulled_char
+
+                    # Check for C6 overflow
+                    if = {
+                        limit = {
+                            has_variable = gacha_constellation_lvl
+                            var:gacha_constellation_lvl >= 6
+                        }
+                        # Overflow: Starlight
+                        root = {
+                            change_variable = { name = gacha_starlight add = 1 }
+                            trigger_event_non_silently = { id = gacha_events.30 }
+                        }
+                    }
+                    else = {
+                        # Normal Upgrade
+                        if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+                        change_variable = { name = gacha_constellation_lvl add = 1 }
+
+                        gacha_apply_constellation_stats_effect = { who = wriothesley }
+                        gacha_wriothesley_apply_country_modifiers = yes
+                        gacha_wriothesley_update_traits = yes
+
+                        gacha_wriothesley_trigger_event = yes
+                    }
+                }
+                else = {
+                    # World-unique: the character exists elsewhere; do not steal or upgrade.
+                    root = {
+                        change_variable = { name = gacha_starlight add = 1 }
+                        trigger_event_non_silently = { id = gacha_events.31 }
+                    }
+                }
+            }
+
+            clear_saved_scope = existing_char
+        }
+        else = {
+            # Error fallback: Owned but not found (Dead/Dismissed)?
+            remove_global_variable = gacha_wriothesley_is_summoned
+        }
+    }
+
+    # === B. New Creation Logic ===
+    if = {
+        limit = { NOT = { has_global_variable = gacha_wriothesley_is_summoned } }
+        create_character = {
+            first_name = gacha_first_name_wriothesley
+            last_name = gacha_last_name_wriothesley
+            female = no
+            age = 500
+            culture = culture:fontaine_culture
+            religion = religion:catholic
+            birth_location = location:cherbourg
+            estate = estate_type:gacha_estate
+            adm = { 80 95 }
+            dip = { 80 95 }
+            mil = { 70 90 }
+            create_in_limbo = yes
+            save_scope_as = new_char
+        }
+
+        if = {
+            limit = { exists = scope:new_char }
+            scope:new_char = {
+                # 1. Register & Init
+                gacha_register_new_character = { who = wriothesley }
+                set_variable = { name = gacha_constellation_lvl value = 0 }
+
+                # 2. Apply Initial State (Level 0)
+                gacha_wriothesley_update_traits = yes
+                gacha_wriothesley_apply_country_modifiers = yes
+
+                # 3. Trigger Intro Event
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { has_variable = gacha_is_suppress_events_bool }
+                            var:gacha_is_suppress_events_bool = 0
+                        }
+                    }
+                    root = { trigger_event_non_silently = { id = gacha_wriothesley_events.1 } }
+                }
+            }
+        }
+
+        set_global_variable = { name = gacha_wriothesley_is_summoned value = 1 }
+        clear_saved_scope = new_char
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 2. Trait Management Helper (Delta Logic)
+# ------------------------------------------------------------------------------
+gacha_wriothesley_update_traits = {
+    # Safety Init
+    if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+
+    # Level 0 (Init): Awakened + Transcended
+    if = {
+        limit = { var:gacha_constellation_lvl = 0 }
+        add_trait = trait:gacha_wriothesley_awakened_trait
+        add_trait = trait:gacha_wriothesley_transcended_trait
+    }
+
+    # Level 1: Add Origin
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 1 }
+        add_trait = trait:gacha_wriothesley_origin_trait
+    }
+
+    # Level 2: Remove Origin, Add C2
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 2 }
+        remove_trait = trait:gacha_wriothesley_origin_trait
+        add_trait = trait:gacha_wriothesley_c2_trait
+    }
+
+    # Level 4: Remove Awakened, Add C4
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 4 }
+        remove_trait = trait:gacha_wriothesley_awakened_trait
+        add_trait = trait:gacha_wriothesley_c4_trait
+    }
+
+    # Level 6: Remove Transcended, Add C6
+    else_if = {
+        limit = { var:gacha_constellation_lvl = 6 }
+        remove_trait = trait:gacha_wriothesley_transcended_trait
+        add_trait = trait:gacha_wriothesley_c6_trait
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 3. Event Trigger Helper
+# ------------------------------------------------------------------------------
+gacha_wriothesley_trigger_event = {
+    if = {
+        limit = { NOT = { has_variable = gacha_constellation_lvl } }
+    }
+    else = {
+        if = {
+            limit = {
+                OR = {
+                    NOT = { has_variable = gacha_is_suppress_events_bool }
+                    var:gacha_is_suppress_events_bool = 0
+                }
+            }
+            if = {
+                limit = { var:gacha_constellation_lvl >= 6 }
+                root = { trigger_event_non_silently = { id = gacha_wriothesley_events.4 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 5 }
+                root = { trigger_event_non_silently = { id = gacha_wriothesley_events.14 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 4 }
+                root = { trigger_event_non_silently = { id = gacha_wriothesley_events.12 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 3 }
+                # C3 剧情暂不实装（测试阶段不触发事件）
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 2 }
+                root = { trigger_event_non_silently = { id = gacha_wriothesley_events.11 } }
+            }
+            else_if = {
+                limit = { var:gacha_constellation_lvl = 1 }
+                root = { trigger_event_non_silently = { id = gacha_wriothesley_events.13 } }
+            }
+        }
+    }
+}
+
+# ------------------------------------------------------------------------------
+# 4. Country Modifier Helper (Idempotent Rebuild)
+# ------------------------------------------------------------------------------
+gacha_wriothesley_apply_country_modifiers = {
+    if = {
+        limit = { exists = this }
+
+        if = { limit = { NOT = { has_variable = gacha_constellation_lvl } } set_variable = { name = gacha_constellation_lvl value = 0 } }
+
+        employer = {
+            remove_country_modifier = gacha_wriothesley_country_modifier
+            remove_country_modifier = gacha_wriothesley_c1_country_modifier
+            remove_country_modifier = gacha_wriothesley_c2_country_modifier
+            remove_country_modifier = gacha_wriothesley_c4_country_modifier
+            remove_country_modifier = gacha_wriothesley_c5_country_modifier
+            remove_country_modifier = gacha_wriothesley_c6_country_modifier
+        }
+
+        # C0: Base aura (C0/C1 active; replaced by C2 from C2+)
+        if = {
+            limit = { var:gacha_constellation_lvl < 2 }
+            employer = { add_country_modifier = { modifier = gacha_wriothesley_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # C1: Cabinet +1
+        if = {
+            limit = { var:gacha_constellation_lvl >= 1 }
+            employer = { add_country_modifier = { modifier = gacha_wriothesley_c1_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # C2: Aura upgrade
+        if = {
+            limit = { var:gacha_constellation_lvl >= 2 }
+            employer = { add_country_modifier = { modifier = gacha_wriothesley_c2_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # C4: Country placeholder (main stats in trait)
+        if = {
+            limit = { var:gacha_constellation_lvl >= 4 }
+            employer = { add_country_modifier = { modifier = gacha_wriothesley_c4_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # C5: Policy slot +1
+        if = {
+            limit = { var:gacha_constellation_lvl >= 5 }
+            employer = { add_country_modifier = { modifier = gacha_wriothesley_c5_country_modifier years = -1 mode = add_and_extend } }
+        }
+
+        # C6: Country placeholder (main stats in trait)
+        if = {
+            limit = { var:gacha_constellation_lvl >= 6 }
+            employer = { add_country_modifier = { modifier = gacha_wriothesley_c6_country_modifier years = -1 mode = add_and_extend } }
+        }
+    }
+}

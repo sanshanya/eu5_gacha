@@ -20,18 +20,21 @@ gacha_xinhai_c6_modifier = { game_data = { category = character decaying = no } 
 # 疾病抗性 +40% · 荒废恢复 +0.06 · 阶层满意恢复 +0.02
 gacha_xinhai_country_modifier = {
     game_data = { category = country decaying = no }
-    global_disease_resistance      = 0.15
-    global_devastation_recovery    = 0.30
+    global_disease_resistance = 0.12
+    global_devastation_recovery = 0.25
     global_estate_satisfaction_recovery = 0.05
+    naval_morale_modifier = 0.10
+    navy_movement_speed = 0.05
 }
 
 # C2 光环升级 · 白夜国 · 圣土潮音
 # 疾病抗性 +80% · 荒废恢复 +0.12 · 阶层满意恢复 +0.04
 gacha_xinhai_c2_country_modifier = {
     game_data = { category = country decaying = no }
-    global_disease_resistance           = 0.30
-    global_devastation_recovery         = 0.60
-    global_estate_satisfaction_recovery = 0.10
+    global_disease_resistance = 0.20
+    global_devastation_recovery = 0.35
+    global_estate_satisfaction_recovery = 0.08
+    stability_cost = -0.06
 }
 
 # C4 职业升级 · 渊下宫 · 抗狩龙王
@@ -43,14 +46,19 @@ gacha_xinhai_c4_country_modifier = {
 # C1 专属机制 · 内阁席位 +1
 gacha_xinhai_c1_country_modifier = {
     game_data = { category = country decaying = no }
-    government_size = 1
+    land_unit_attrition = -0.03
+    tax_income_efficiency = 0.04
+    army_maintenance_cost = -0.03
+    global_monthly_food_modifier = 0.05
 }
 
 # C5 专属机制 · 国策槽位 +1
 # 假设 government_reform_slots 是正确的 key，如果无效则需查阅文档
 gacha_xinhai_c5_country_modifier = {
     game_data = { category = country decaying = no }
-    government_reform_slots = 1
+    max_diplomats = 1
+    diplomatic_reputation = 1
+    send_diplomat_cost_modifier = -0.05
 }
 
 # C6 满命·国家级机制入口

@@ -6,26 +6,19 @@
   # === 姓名 ===
   gacha_first_name_neuvillette: "那维莱特"
   gacha_last_name_neuvillette: "审判官"
-
   # === 特质 (Traits) ===
-  gacha_neuvillette_origin_trait: "那维莱特·初始"
-  desc_gacha_neuvillette_origin_trait: "TODO"
-
-  gacha_neuvillette_awakened_trait: "那维莱特·觉醒"
-  desc_gacha_neuvillette_awakened_trait: "TODO"
-
-  gacha_neuvillette_transcended_trait: "那维莱特·超越"
-  desc_gacha_neuvillette_transcended_trait: "TODO"
-
-  gacha_neuvillette_c2_trait: "那维莱特·C2"
-  desc_gacha_neuvillette_c2_trait: "TODO"
-
-  gacha_neuvillette_c4_trait: "那维莱特·C4"
-  desc_gacha_neuvillette_c4_trait: "TODO"
-
-  gacha_neuvillette_c6_trait: "那维莱特·C6"
-  desc_gacha_neuvillette_c6_trait: "TODO"
-
+  gacha_neuvillette_origin_trait: "沫芒宫·最高审判官"
+  desc_gacha_neuvillette_origin_trait: "「律法并不关心你的出身，只关心你的行为。」\n\n那维莱特不抬高声音，却能让满朝沉默。你会发现：法条被重新解释，程序被重新整理，许多『惯例』在他面前失去合法性。"
+  gacha_neuvillette_awakened_trait: "衡平推裁"
+  desc_gacha_neuvillette_awakened_trait: "「裁决不需要愤怒，只需要精确。」\n\n他会把军法与行政法一道压到最严：赏罚明确，贪墨与渎职的代价陡增。对外，他不会施压——他只会要求对方按条款履行，然后静静等待违约。"
+  gacha_neuvillette_transcended_trait: "潮涌之章·归权"
+  desc_gacha_neuvillette_transcended_trait: "「你所追求的秩序，若仅靠恐惧维系，终会崩塌。」\n\n当他不再只是审判官，而愿意为你的国家『承担更大的责任』时，法律开始成为一种可被信赖的公共品：社会更能容纳不同阶层的利益，而不是靠一次次镇压去压平。"
+  gacha_neuvillette_c2_trait: "律法的命诫"
+  desc_gacha_neuvillette_c2_trait: "「把规则写清楚，是对弱者的保护，也是对强者的约束。」\n\n他推动成文法与判例体系：地方官的自由裁量被收束，中央的命令更容易落地。"
+  gacha_neuvillette_c4_trait: "悲悯的冠冕"
+  desc_gacha_neuvillette_c4_trait: "「怜悯并非放纵，而是让人有改过的机会。」\n\n他会为战后地区设计『复归秩序』的路径：赦免、安置、复工与再分配并行，让仇恨不至于成为下一场叛乱的燃料。"
+  gacha_neuvillette_c6_trait: "忿怒的报偿"
+  desc_gacha_neuvillette_c6_trait: "「若有人以不义挑战公理，我将以洪流回应。」\n\n当红线被触碰，他的手段会异常直接：制裁、封锁、强制执行——一切都在条文之内，却让对手体会到『不可抗拒』。"
   # === 修正 (Modifiers) ===
   STATIC_MODIFIER_NAME_gacha_neuvillette_modifier: "枫丹审判官"
   STATIC_MODIFIER_DESC_gacha_neuvillette_modifier: "TODO"
@@ -33,54 +26,40 @@
   gacha_neuvillette_modifier_desc: "TODO"
 
   # === 命之座 (Constellations) ===
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c0_modifier: "那维莱特·C0"
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c1_modifier: "那维莱特·C1"
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c2_modifier: "那维莱特·C2"
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c3_modifier: "那维莱特·C3"
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c4_modifier: "那维莱特·C4"
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c5_modifier: "那维莱特·C5"
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c6_modifier: "那维莱特·C6"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c0_modifier: "潮涌座·零命"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c0_modifier: "法度被重新擦亮：治理更可预期，内部腐败更难藏身。"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c1_modifier: "尊荣的创定"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c1_modifier: "确立权威与程序：重大决策更容易获得合法性与执行力。"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c2_modifier: "律法的命诫"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c2_modifier: "规则更清晰，例外更少：地方擅权与随意加税更难发生。"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c3_modifier: "溯古的拟制"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c3_modifier: "复盘旧案、重订条文：制度更新更平稳，改革成本更可控。"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c4_modifier: "悲悯的冠冕"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c4_modifier: "战后治理更温和但不软弱：更容易恢复生产与秩序，减少报复循环。"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c5_modifier: "公理的决裁"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c5_modifier: "在外交与审判上更具压迫感：对方更难用话术拖延或赖账。"
+  STATIC_MODIFIER_NAME_gacha_neuvillette_c6_modifier: "忿怒的报偿"
+  STATIC_MODIFIER_DESC_gacha_neuvillette_c6_modifier: "当违约与叛乱越线，他会用『合法的强制』迅速终结局势。"
 
-  # 那维莱特 - 国家修正
-  STATIC_MODIFIER_NAME_gacha_neuvillette_country_modifier: "那维莱特·光环"
-  STATIC_MODIFIER_DESC_gacha_neuvillette_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c1_country_modifier: "那维莱特·C1"
-  STATIC_MODIFIER_DESC_gacha_neuvillette_c1_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c2_country_modifier: "那维莱特·C2"
-  STATIC_MODIFIER_DESC_gacha_neuvillette_c2_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c4_country_modifier: "那维莱特·C4"
-  STATIC_MODIFIER_DESC_gacha_neuvillette_c4_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c5_country_modifier: "那维莱特·C5"
-  STATIC_MODIFIER_DESC_gacha_neuvillette_c5_country_modifier: "TODO"
-  STATIC_MODIFIER_NAME_gacha_neuvillette_c6_country_modifier: "那维莱特·C6"
-  STATIC_MODIFIER_DESC_gacha_neuvillette_c6_country_modifier: "TODO"
-
-  # === 事件 (Events) ===
   gacha_neuvillette_events.1.title: "那维莱特"
   gacha_neuvillette_events.1.desc: "TODO"
   gacha_neuvillette_events.1.a: "……"
-
   gacha_neuvillette_events.2.title: "那维莱特"
   gacha_neuvillette_events.2.a: "继续"
   gacha_neuvillette_events.3.title: "那维莱特"
   gacha_neuvillette_events.3.a: "继续"
-
   gacha_neuvillette_events.13.title: "那维莱特·C1"
   gacha_neuvillette_events.13.desc: "TODO"
   gacha_neuvillette_events.13.a: "……"
-
   gacha_neuvillette_events.11.title: "那维莱特·C2"
   gacha_neuvillette_events.11.desc: "TODO"
   gacha_neuvillette_events.11.a: "……"
-
   gacha_neuvillette_events.12.title: "那维莱特·C4"
   gacha_neuvillette_events.12.desc: "TODO"
   gacha_neuvillette_events.12.a: "……"
-
   gacha_neuvillette_events.14.title: "那维莱特·C5"
   gacha_neuvillette_events.14.desc: "TODO"
   gacha_neuvillette_events.14.a: "……"
-
   gacha_neuvillette_events.4.title: "那维莱特·C6"
   gacha_neuvillette_events.4.desc: "TODO"
   gacha_neuvillette_events.4.a: "……"

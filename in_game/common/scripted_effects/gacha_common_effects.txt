@@ -272,6 +272,108 @@ gacha_remove_summoned_flag_for_character = {
     }
     root = { remove_global_variable = gacha_zhongli_is_summoned }
   }
+  if = {
+    limit = {
+      has_character_modifier = gacha_ayaka_modifier
+    }
+    root = { remove_global_variable = gacha_ayaka_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_yoimiya_modifier
+    }
+    root = { remove_global_variable = gacha_yoimiya_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_kuki_shinobu_modifier
+    }
+    root = { remove_global_variable = gacha_kuki_shinobu_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_venti_modifier
+    }
+    root = { remove_global_variable = gacha_venti_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_noelle_modifier
+    }
+    root = { remove_global_variable = gacha_noelle_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_mona_modifier
+    }
+    root = { remove_global_variable = gacha_mona_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_cyno_modifier
+    }
+    root = { remove_global_variable = gacha_cyno_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_alhaitham_modifier
+    }
+    root = { remove_global_variable = gacha_alhaitham_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_nilou_modifier
+    }
+    root = { remove_global_variable = gacha_nilou_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_charlotte_modifier
+    }
+    root = { remove_global_variable = gacha_charlotte_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_navia_modifier
+    }
+    root = { remove_global_variable = gacha_navia_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_wriothesley_modifier
+    }
+    root = { remove_global_variable = gacha_wriothesley_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_mualani_modifier
+    }
+    root = { remove_global_variable = gacha_mualani_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_citlali_modifier
+    }
+    root = { remove_global_variable = gacha_citlali_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_varesa_modifier
+    }
+    root = { remove_global_variable = gacha_varesa_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_arlecchino_modifier
+    }
+    root = { remove_global_variable = gacha_arlecchino_is_summoned }
+  }
+  if = {
+    limit = {
+      has_character_modifier = gacha_tartaglia_modifier
+    }
+    root = { remove_global_variable = gacha_tartaglia_is_summoned }
+  }
 }
 
 # ------------------------------------------------------------------------------
@@ -319,6 +421,9 @@ gacha_register_new_character = {
         has_character_modifier = gacha_raiden_modifier
         has_character_modifier = gacha_xinhai_modifier
         has_character_modifier = gacha_yae_miko_modifier
+        has_character_modifier = gacha_ayaka_modifier
+        has_character_modifier = gacha_yoimiya_modifier
+        has_character_modifier = gacha_kuki_shinobu_modifier
       }
     }
     change_character_culture = culture:inazuma_culture
@@ -344,6 +449,9 @@ gacha_register_new_character = {
         has_character_modifier = gacha_klee_modifier
         has_character_modifier = gacha_fischl_modifier
         has_character_modifier = gacha_albedo_modifier
+        has_character_modifier = gacha_venti_modifier
+        has_character_modifier = gacha_noelle_modifier
+        has_character_modifier = gacha_mona_modifier
       }
     }
     change_character_culture = culture:mondstadt_culture
@@ -354,6 +462,9 @@ gacha_register_new_character = {
       OR = {
         has_character_modifier = gacha_furina_modifier
         has_character_modifier = gacha_neuvillette_modifier
+        has_character_modifier = gacha_charlotte_modifier
+        has_character_modifier = gacha_navia_modifier
+        has_character_modifier = gacha_wriothesley_modifier
       }
     }
     change_character_culture = culture:fontaine_culture
@@ -364,6 +475,9 @@ gacha_register_new_character = {
       OR = {
         has_character_modifier = gacha_nahida_modifier
         has_character_modifier = gacha_faruzan_modifier
+        has_character_modifier = gacha_cyno_modifier
+        has_character_modifier = gacha_alhaitham_modifier
+        has_character_modifier = gacha_nilou_modifier
       }
     }
     change_character_culture = culture:sumeru_culture
@@ -371,14 +485,23 @@ gacha_register_new_character = {
   }
   else_if = {
     limit = {
-      has_character_modifier = gacha_mavuika_modifier
+      OR = {
+        has_character_modifier = gacha_mavuika_modifier
+        has_character_modifier = gacha_mualani_modifier
+        has_character_modifier = gacha_citlali_modifier
+        has_character_modifier = gacha_varesa_modifier
+      }
     }
     change_character_culture = culture:natlan_culture
     change_character_religion = religion:nahuatl
   }
   else_if = {
     limit = {
-      has_character_modifier = gacha_columbina_modifier
+      OR = {
+        has_character_modifier = gacha_columbina_modifier
+        has_character_modifier = gacha_arlecchino_modifier
+        has_character_modifier = gacha_tartaglia_modifier
+      }
     }
     change_character_culture = culture:snezhnaya_culture
     change_character_religion = religion:orthodox
@@ -394,6 +517,9 @@ gacha_register_new_character = {
         has_character_modifier = gacha_raiden_modifier
         has_character_modifier = gacha_xinhai_modifier
         has_character_modifier = gacha_yae_miko_modifier
+        has_character_modifier = gacha_ayaka_modifier
+        has_character_modifier = gacha_yoimiya_modifier
+        has_character_modifier = gacha_kuki_shinobu_modifier
       }
     }
     root = {
@@ -441,6 +567,9 @@ gacha_register_new_character = {
         has_character_modifier = gacha_klee_modifier
         has_character_modifier = gacha_fischl_modifier
         has_character_modifier = gacha_albedo_modifier
+        has_character_modifier = gacha_venti_modifier
+        has_character_modifier = gacha_noelle_modifier
+        has_character_modifier = gacha_mona_modifier
       }
     }
     root = {
@@ -462,6 +591,9 @@ gacha_register_new_character = {
       OR = {
         has_character_modifier = gacha_furina_modifier
         has_character_modifier = gacha_neuvillette_modifier
+        has_character_modifier = gacha_charlotte_modifier
+        has_character_modifier = gacha_navia_modifier
+        has_character_modifier = gacha_wriothesley_modifier
       }
     }
     root = {
@@ -483,6 +615,9 @@ gacha_register_new_character = {
       OR = {
         has_character_modifier = gacha_nahida_modifier
         has_character_modifier = gacha_faruzan_modifier
+        has_character_modifier = gacha_cyno_modifier
+        has_character_modifier = gacha_alhaitham_modifier
+        has_character_modifier = gacha_nilou_modifier
       }
     }
     root = {
@@ -501,7 +636,12 @@ gacha_register_new_character = {
   }
   else_if = {
     limit = {
-      has_character_modifier = gacha_mavuika_modifier
+      OR = {
+        has_character_modifier = gacha_mavuika_modifier
+        has_character_modifier = gacha_mualani_modifier
+        has_character_modifier = gacha_citlali_modifier
+        has_character_modifier = gacha_varesa_modifier
+      }
     }
     root = {
       random_owned_location = {
@@ -519,7 +659,11 @@ gacha_register_new_character = {
   }
   else_if = {
     limit = {
-      has_character_modifier = gacha_columbina_modifier
+      OR = {
+        has_character_modifier = gacha_columbina_modifier
+        has_character_modifier = gacha_arlecchino_modifier
+        has_character_modifier = gacha_tartaglia_modifier
+      }
     }
     root = {
       random_owned_location = {
@@ -597,6 +741,9 @@ gacha_assign_to_gacha_estate = {
           has_character_modifier = gacha_raiden_modifier
           has_character_modifier = gacha_xinhai_modifier
           has_character_modifier = gacha_yae_miko_modifier
+          has_character_modifier = gacha_ayaka_modifier
+          has_character_modifier = gacha_yoimiya_modifier
+          has_character_modifier = gacha_kuki_shinobu_modifier
         }
       }
       change_character_culture = culture:inazuma_culture
@@ -622,6 +769,9 @@ gacha_assign_to_gacha_estate = {
           has_character_modifier = gacha_klee_modifier
           has_character_modifier = gacha_fischl_modifier
           has_character_modifier = gacha_albedo_modifier
+          has_character_modifier = gacha_venti_modifier
+          has_character_modifier = gacha_noelle_modifier
+          has_character_modifier = gacha_mona_modifier
         }
       }
       change_character_culture = culture:mondstadt_culture
@@ -632,6 +782,9 @@ gacha_assign_to_gacha_estate = {
         OR = {
           has_character_modifier = gacha_furina_modifier
           has_character_modifier = gacha_neuvillette_modifier
+          has_character_modifier = gacha_charlotte_modifier
+          has_character_modifier = gacha_navia_modifier
+          has_character_modifier = gacha_wriothesley_modifier
         }
       }
       change_character_culture = culture:fontaine_culture
@@ -642,25 +795,37 @@ gacha_assign_to_gacha_estate = {
         OR = {
           has_character_modifier = gacha_nahida_modifier
           has_character_modifier = gacha_faruzan_modifier
+          has_character_modifier = gacha_cyno_modifier
+          has_character_modifier = gacha_alhaitham_modifier
+          has_character_modifier = gacha_nilou_modifier
         }
       }
       change_character_culture = culture:sumeru_culture
       change_character_religion = religion:hindu
     }
-    else_if = {
-      limit = {
+  else_if = {
+    limit = {
+      OR = {
         has_character_modifier = gacha_mavuika_modifier
+        has_character_modifier = gacha_mualani_modifier
+        has_character_modifier = gacha_citlali_modifier
+        has_character_modifier = gacha_varesa_modifier
       }
-      change_character_culture = culture:natlan_culture
-      change_character_religion = religion:nahuatl
     }
-    else_if = {
-      limit = {
+    change_character_culture = culture:natlan_culture
+    change_character_religion = religion:nahuatl
+  }
+  else_if = {
+    limit = {
+      OR = {
         has_character_modifier = gacha_columbina_modifier
+        has_character_modifier = gacha_arlecchino_modifier
+        has_character_modifier = gacha_tartaglia_modifier
       }
-      change_character_culture = culture:snezhnaya_culture
-      change_character_religion = religion:orthodox
     }
+    change_character_culture = culture:snezhnaya_culture
+    change_character_religion = religion:orthodox
+  }
     else = {
       change_character_culture = culture:gacha_culture
       change_character_religion = religion:sanjiao
@@ -687,6 +852,9 @@ gacha_standardize_character_identity = {
           has_character_modifier = gacha_raiden_modifier
           has_character_modifier = gacha_xinhai_modifier
           has_character_modifier = gacha_yae_miko_modifier
+          has_character_modifier = gacha_ayaka_modifier
+          has_character_modifier = gacha_yoimiya_modifier
+          has_character_modifier = gacha_kuki_shinobu_modifier
         }
       }
       change_character_culture = culture:inazuma_culture
@@ -712,6 +880,9 @@ gacha_standardize_character_identity = {
           has_character_modifier = gacha_klee_modifier
           has_character_modifier = gacha_fischl_modifier
           has_character_modifier = gacha_albedo_modifier
+          has_character_modifier = gacha_venti_modifier
+          has_character_modifier = gacha_noelle_modifier
+          has_character_modifier = gacha_mona_modifier
         }
       }
       change_character_culture = culture:mondstadt_culture
@@ -722,6 +893,9 @@ gacha_standardize_character_identity = {
         OR = {
           has_character_modifier = gacha_furina_modifier
           has_character_modifier = gacha_neuvillette_modifier
+          has_character_modifier = gacha_charlotte_modifier
+          has_character_modifier = gacha_navia_modifier
+          has_character_modifier = gacha_wriothesley_modifier
         }
       }
       change_character_culture = culture:fontaine_culture
@@ -732,25 +906,37 @@ gacha_standardize_character_identity = {
         OR = {
           has_character_modifier = gacha_nahida_modifier
           has_character_modifier = gacha_faruzan_modifier
+          has_character_modifier = gacha_cyno_modifier
+          has_character_modifier = gacha_alhaitham_modifier
+          has_character_modifier = gacha_nilou_modifier
         }
       }
       change_character_culture = culture:sumeru_culture
       change_character_religion = religion:hindu
     }
-    else_if = {
-      limit = {
+  else_if = {
+    limit = {
+      OR = {
         has_character_modifier = gacha_mavuika_modifier
+        has_character_modifier = gacha_mualani_modifier
+        has_character_modifier = gacha_citlali_modifier
+        has_character_modifier = gacha_varesa_modifier
       }
-      change_character_culture = culture:natlan_culture
-      change_character_religion = religion:nahuatl
     }
-    else_if = {
-      limit = {
+    change_character_culture = culture:natlan_culture
+    change_character_religion = religion:nahuatl
+  }
+  else_if = {
+    limit = {
+      OR = {
         has_character_modifier = gacha_columbina_modifier
+        has_character_modifier = gacha_arlecchino_modifier
+        has_character_modifier = gacha_tartaglia_modifier
       }
-      change_character_culture = culture:snezhnaya_culture
-      change_character_religion = religion:orthodox
     }
+    change_character_culture = culture:snezhnaya_culture
+    change_character_religion = religion:orthodox
+  }
     else = {
       change_character_culture = culture:gacha_culture
       change_character_religion = religion:sanjiao
@@ -886,6 +1072,15 @@ gacha_join_seven_archons_io = {
       activate_situation = situation:gacha_sumeru_auto_recruitment
     }
   }
+
+  # Unlock regional pools when an Archon nation joins.
+  if = { limit = { scope:gacha_io_joiner = { this = c:GL1 } } set_global_variable = { name = gacha_liyue_pool_unlocked value = 1 } }
+  if = { limit = { scope:gacha_io_joiner = { this = c:GI1 } } set_global_variable = { name = gacha_inazuma_pool_unlocked value = 1 } }
+  if = { limit = { scope:gacha_io_joiner = { this = c:GM1 } } set_global_variable = { name = gacha_mondstadt_pool_unlocked value = 1 } }
+  if = { limit = { scope:gacha_io_joiner = { this = c:GF1 } } set_global_variable = { name = gacha_fontaine_pool_unlocked value = 1 } }
+  if = { limit = { scope:gacha_io_joiner = { this = c:GN1 } } set_global_variable = { name = gacha_natlan_pool_unlocked value = 1 } }
+  if = { limit = { scope:gacha_io_joiner = { this = c:GS1 } } set_global_variable = { name = gacha_snezhnaya_pool_unlocked value = 1 } }
+  if = { limit = { scope:gacha_io_joiner = { this = c:GU1 } } set_global_variable = { name = gacha_sumeru_pool_unlocked value = 1 } }
 
   clear_saved_scope = gacha_io_joiner
 }

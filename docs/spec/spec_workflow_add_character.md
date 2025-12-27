@@ -6,6 +6,7 @@
   - `in_game/common/traits/`
   - `main_menu/common/static_modifiers/`
   - `main_menu/localization/simp_chinese/`
+  - `docs/registry/characters/` (角色注册表，仅文档)
   - `in_game/common/scripted_effects/gacha_logic_effects.txt` (核心奖池逻辑)
   - `in_game/common/script_values/gacha_eu_values.txt` (奖池大小定义)
 
@@ -34,6 +35,7 @@
 | **逻辑** | `in_game/common/scripted_effects/gacha_raiden_effects.txt` | **新架构**：角色专属 Wrapper 文件 |
 | **奖池** | `in_game/common/scripted_effects/gacha_logic_effects.txt` | **[UPDATE]** 将角色加入常驻池轮询逻辑 |
 | **池大小** | `in_game/common/script_values/gacha_eu_values.txt` | **[UPDATE]** 更新常驻池总数 |
+| **注册表** | `docs/registry/characters/<nation>.json` | **[UPDATE]** 同步角色中文档案、`story_mode`、`buff_keys` 与 `buff_values` |
 
 ---
 

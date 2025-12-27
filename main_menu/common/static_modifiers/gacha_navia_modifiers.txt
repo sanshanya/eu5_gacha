@@ -1,0 +1,57 @@
+﻿# Generated Modifiers for navia (V3)
+
+# 角色标识：娜维娅本体
+gacha_navia_modifier = {
+    game_data = { category = character decaying = no }
+    gacha_core = yes
+    gacha_stone_godeye = yes
+}
+
+# 命之座等级展示（0-6）
+gacha_navia_c0_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 0 }
+gacha_navia_c1_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 1 }
+gacha_navia_c2_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 2 }
+gacha_navia_c3_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 3 }
+gacha_navia_c4_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 4 }
+gacha_navia_c5_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 5 }
+gacha_navia_c6_modifier = { game_data = { category = character decaying = no } gacha_constellation_level = 6 }
+
+# C0 基础光环（占位）
+gacha_navia_country_modifier = {
+    game_data = { category = country decaying = no }
+    global_construction_speed = 0.06
+    global_devastation_recovery = 0.12
+    global_estate_satisfaction_recovery = 0.04
+}
+
+# C2 光环升级
+gacha_navia_c2_country_modifier = {
+    game_data = { category = country decaying = no }
+    global_manpower_modifier = 0.08
+    global_production_efficiency = 0.06
+    trade_efficiency = 0.05
+}
+
+# C1 专属机制：内阁席位 +1
+gacha_navia_c1_country_modifier = {
+    game_data = { category = country decaying = no }
+    trade_efficiency = 0.06
+    hire_advisor_cost_modifier = -0.10
+}
+
+# C4 国家级占位（主要属性在 Trait 中）
+gacha_navia_c4_country_modifier = {
+    game_data = { category = country decaying = no }
+}
+
+# C5 专属机制：国策槽位 +1
+gacha_navia_c5_country_modifier = {
+    game_data = { category = country decaying = no }
+    trade_range = 10
+    hire_advisor_cost_modifier = -0.10
+}
+
+# C6 国家级占位（主要属性在 Trait 中）
+gacha_navia_c6_country_modifier = {
+    game_data = { category = country decaying = no }
+}

@@ -1,0 +1,567 @@
+{
+  "version": 1,
+  "nation": "snezhnaya",
+  "characters": [
+    {
+      "code": "arlecchino",
+      "name": {
+        "first": "阿蕾奇诺",
+        "last": "仆人"
+      },
+      "traits": {
+        "origin": {
+          "name": "壁炉之家·父亲",
+          "desc": "「在至冬，孩子学会的第一件事不是祈祷，而是活下去。」\n「你需要能在阴影里办事的人——我这里有。把他们安置进你的宫廷、行会与军需体系：侍从、信使、账房、书记……他们会长大，成为你的眼与手。」",
+          "key": "gacha_arlecchino_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "stability_cost": -0.02,
+            "country_cabinet_efficiency": 0.03,
+            "legislative_efficiency": 0.03,
+            "monthly_legitimacy": 0.02,
+            "monthly_prestige": 0.02
+          },
+          "aura_country_modifier": "gacha_arlecchino_country_modifier"
+        },
+        "awakened": {
+          "name": "血偿勒令",
+          "desc": "「纪律不是口号，是账。」\n「欠饷、拖税、阳奉阴违——都要被写得清清楚楚。赏要让人敢冲，罚要让人不敢试。我的『勒令』会让你的命令像火一样烫手。」",
+          "key": "gacha_arlecchino_awakened_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.03,
+            "global_manpower_modifier": 0.04,
+            "monthly_legitimacy": 0.04
+          }
+        },
+        "transcended": {
+          "name": "红死之宴",
+          "desc": "「战场上，恐惧会传染；秩序也会。」\n「让最精锐的方阵在最关键的时刻亮旗、推进、接管节奏——敌人会以为你永远还有后备军。你不必靠人数取胜，只要让他们相信自己已经输了。」",
+          "key": "gacha_arlecchino_transcended_trait",
+          "modifier": {
+            "stability_cost": -0.06,
+            "country_cabinet_efficiency": 0.07,
+            "legislative_efficiency": 0.07,
+            "monthly_legitimacy": 0.05,
+            "monthly_prestige": 0.04
+          }
+        },
+        "c2": {
+          "name": "清算之表",
+          "desc": "「治理与惩戒是同一件事：把代价写在纸上，让所有人都看得懂。」\n「从今天起，地方的含糊、贵族的拖延、军官的敷衍——都会被折算成可执行的条款。你会发现，国家突然‘听话’了。」",
+          "key": "gacha_arlecchino_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "stability_cost": -0.05,
+            "country_cabinet_efficiency": 0.06,
+            "legislative_efficiency": 0.06,
+            "monthly_legitimacy": 0.04,
+            "monthly_prestige": 0.03
+          },
+          "aura_country_modifier": "gacha_arlecchino_c2_country_modifier"
+        },
+        "c4": {
+          "name": "炉火的家法",
+          "desc": "「我不需要他们爱我。我只需要他们彼此守望。」\n「把最危险的岗位交给最信任的人，把最信任的人绑定在同一条责任链上。你的核心军团会更稳，你的宫廷会更安静。」",
+          "key": "gacha_arlecchino_c4_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.06,
+            "global_manpower_modifier": 0.08,
+            "monthly_legitimacy": 0.08
+          }
+        },
+        "c6": {
+          "name": "共飨新生",
+          "desc": "「壁炉之家教孩子们两件事：第一，世界不仁慈；第二，我们可以自己建一个家。」\n「你要的是帝国，我要的是秩序——它们并不冲突。让旧的腐朽在火里烧尽，剩下的灰烬，会成为新制度的地基。」\n「别担心骂名。需要有人做脏活的时候，叫我就行。」",
+          "key": "gacha_arlecchino_c6_trait",
+          "modifier": {
+            "stability_cost": -0.12,
+            "country_cabinet_efficiency": 0.14,
+            "legislative_efficiency": 0.14,
+            "monthly_legitimacy": 0.1,
+            "monthly_prestige": 0.08
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "净炼火座·零命",
+          "desc": "解锁「仆人」的治国风味：以壁炉之家的体系强化治安、情报与行政执行。"
+        },
+        "c1": {
+          "name": "「所有的仇与债皆由我偿…」",
+          "desc": "密探网络扩张更快，反间谍与暗线侦测更有效；敌国阴谋更难在你境内落地。"
+        },
+        "c2": {
+          "name": "「所有的赏与罚皆自我出…」",
+          "desc": "赏罚链条更清晰：地方拖延与军纪涣散更少，命令更容易被贯彻到最后一层。"
+        },
+        "c3": {
+          "name": "「你将成为我们新的家人…」",
+          "desc": "更擅长吸纳“边缘人”与外来人才进入官僚体系，减少阶层摩擦并提升办事效率。"
+        },
+        "c4": {
+          "name": "「此后，你们须相爱相护…」",
+          "desc": "核心卫队与直属机构的凝聚力提升，危机时更不易溃散；在动荡中维持秩序。"
+        },
+        "c5": {
+          "name": "「我们已孑然一身，与死无异…」",
+          "desc": "在高压与危局下仍能维持国家运转：对叛乱、恐慌与渗透的抗性提升。"
+        },
+        "c6": {
+          "name": "「自此以后，我们将共飨新生。」",
+          "desc": "当国家处于改革/战争高压期，整合与动员能力显著增强，直到局势稳定。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_arlecchino_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_arlecchino_c0_modifier",
+          "c1": "gacha_arlecchino_c1_modifier",
+          "c2": "gacha_arlecchino_c2_modifier",
+          "c3": "gacha_arlecchino_c3_modifier",
+          "c4": "gacha_arlecchino_c4_modifier",
+          "c5": "gacha_arlecchino_c5_modifier",
+          "c6": "gacha_arlecchino_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_arlecchino_country_modifier",
+          "c1": "gacha_arlecchino_c1_country_modifier",
+          "c2": "gacha_arlecchino_c2_country_modifier",
+          "c4": "gacha_arlecchino_c4_country_modifier",
+          "c5": "gacha_arlecchino_c5_country_modifier",
+          "c6": "gacha_arlecchino_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_arlecchino_modifier": {
+          "gacha_core": "yes",
+          "gacha_fire_godeye": "yes"
+        },
+        "gacha_arlecchino_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_arlecchino_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_arlecchino_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_arlecchino_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_arlecchino_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_arlecchino_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_arlecchino_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_arlecchino_country_modifier": {},
+        "gacha_arlecchino_c1_country_modifier": {
+          "government_size": 1,
+          "hire_advisor_cost_modifier": -0.1
+        },
+        "gacha_arlecchino_c2_country_modifier": {},
+        "gacha_arlecchino_c4_country_modifier": {
+          "monthly_war_exhaustion": -0.06,
+          "global_manpower_modifier": 0.08,
+          "monthly_legitimacy": 0.08
+        },
+        "gacha_arlecchino_c5_country_modifier": {
+          "government_reform_slots": 1,
+          "country_cabinet_efficiency": 0.06
+        },
+        "gacha_arlecchino_c6_country_modifier": {
+          "stability_cost": -0.12,
+          "country_cabinet_efficiency": 0.14,
+          "legislative_efficiency": 0.14,
+          "monthly_legitimacy": 0.1,
+          "monthly_prestige": 0.08
+        }
+      },
+      "story_mode": "default",
+      "nation": "snezhnaya",
+      "pool": {
+        "in_pool": true,
+        "group": "snezhnaya"
+      },
+      "starlight_shop": true
+    },
+    {
+      "code": "columbina",
+      "name": {
+        "first": "哥伦比娅",
+        "last": "少女"
+      },
+      "traits": {
+        "origin": {
+          "name": "静谧的圣歌",
+          "desc": "她在雪夜里轻声哼唱，像在祝福，也像在送别。\n大厅里的争吵逐渐停下，连火炉都像是放轻了噼啪声。\n「……别急。」她说，「审判会来到的。」",
+          "key": "gacha_columbina_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.1
+          },
+          "aura_country_modifier": "gacha_columbina_country_modifier"
+        },
+        "awakened": {
+          "name": "月下低语",
+          "desc": "她不争辩，只把手指按在地图的几处：港口、修道院、粮仓。\n几周后，那些地方的谣言自己消失了，反对的声音也变得稀薄。\n你问她做了什么，她只是笑：「我把话送到该听的人耳边。」",
+          "key": "gacha_columbina_awakened_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.06,
+            "global_devastation_recovery": 0.125,
+            "global_estate_satisfaction_recovery": 0.03
+          }
+        },
+        "transcended": {
+          "name": "无垢的注视",
+          "desc": "当她坐上高位，臣子不敢抬头。\n他们害怕的不是刑罚，而是自己的心思被看穿。\n你的法令执行得前所未有地顺畅——仿佛全境都在同一节拍里呼吸。",
+          "key": "gacha_columbina_transcended_trait",
+          "modifier": {
+            "stability_cost": -0.09,
+            "monthly_war_exhaustion": -0.08,
+            "country_cabinet_efficiency": 0.06,
+            "monthly_prestige": 0.06,
+            "monthly_legitimacy": 0.06,
+            "global_devastation_recovery": 0.175
+          }
+        },
+        "c2": {
+          "name": "安魂回环",
+          "desc": "「恐惧会制造暴民，暴民会制造更大的恐惧。」\n她让教堂的钟声、集市的歌谣、军营的号角统一节奏。\n民心像被抚平的水面，动荡的火种不再易燃。",
+          "key": "gacha_columbina_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "legislative_efficiency": 0.2
+          },
+          "aura_country_modifier": "gacha_columbina_c2_country_modifier"
+        },
+        "c4": {
+          "name": "无声的合唱",
+          "desc": "她把彼此敌对的派系请进同一间厅堂，像排练一样让他们轮流发言。\n没有人被羞辱，也没有人被纵容。\n离开时，他们忽然学会了用同一种语气谈“国家”。",
+          "key": "gacha_columbina_c4_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.12,
+            "global_devastation_recovery": 0.25,
+            "global_estate_satisfaction_recovery": 0.06
+          }
+        },
+        "c6": {
+          "name": "归乡之梦",
+          "desc": "「我并不渴望王座。」\n她轻声说，「我只是想看到，风暴之后还有人能回家。」\n在她的歌声里，你的国土更不易崩裂：疲惫会被安抚，裂痕会被缝合。",
+          "key": "gacha_columbina_c6_trait",
+          "modifier": {
+            "stability_cost": -0.18,
+            "monthly_war_exhaustion": -0.16,
+            "country_cabinet_efficiency": 0.12,
+            "monthly_prestige": 0.12,
+            "monthly_legitimacy": 0.12,
+            "global_devastation_recovery": 0.35
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "空月座·零命",
+          "desc": "解锁「少女」的治国风味：以“静默的影响”稳定宫廷与民心。（命之座为自拟占位）"
+        },
+        "c1": {
+          "name": "无声的聆听",
+          "desc": "宫廷阴谋更难扩散，流言造成的动荡更易被压住。"
+        },
+        "c2": {
+          "name": "月下低语",
+          "desc": "对叛乱与分裂的敏感度提升，提前发现并拆解风险。"
+        },
+        "c3": {
+          "name": "白羽的誓言",
+          "desc": "外交场景更易占据道德高地，谈判阻力降低。"
+        },
+        "c4": {
+          "name": "安魂回环",
+          "desc": "战争疲惫与社会撕裂的累积更慢，长期战争更可控。"
+        },
+        "c5": {
+          "name": "静海之梦",
+          "desc": "在危机与灾荒时仍能维持秩序与生产，减少连锁崩坏。"
+        },
+        "c6": {
+          "name": "归乡的终曲",
+          "desc": "当国家濒临失序时触发强力“稳定窗口”，为重整赢得时间。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_columbina_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_columbina_c0_modifier",
+          "c1": "gacha_columbina_c1_modifier",
+          "c2": "gacha_columbina_c2_modifier",
+          "c3": "gacha_columbina_c3_modifier",
+          "c4": "gacha_columbina_c4_modifier",
+          "c5": "gacha_columbina_c5_modifier",
+          "c6": "gacha_columbina_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_columbina_country_modifier",
+          "c1": "gacha_columbina_c1_country_modifier",
+          "c2": "gacha_columbina_c2_country_modifier",
+          "c4": "gacha_columbina_c4_country_modifier",
+          "c5": "gacha_columbina_c5_country_modifier",
+          "c6": "gacha_columbina_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_columbina_modifier": {
+          "gacha_core": "yes",
+          "gacha_ice_godeye": "yes"
+        },
+        "gacha_columbina_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_columbina_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_columbina_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_columbina_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_columbina_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_columbina_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_columbina_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_columbina_country_modifier": {},
+        "gacha_columbina_c1_country_modifier": {
+          "government_size": 1,
+          "max_diplomats": 1
+        },
+        "gacha_columbina_c2_country_modifier": {},
+        "gacha_columbina_c4_country_modifier": {
+          "monthly_war_exhaustion": -0.12,
+          "global_devastation_recovery": 0.25,
+          "global_estate_satisfaction_recovery": 0.06
+        },
+        "gacha_columbina_c5_country_modifier": {
+          "government_reform_slots": 1,
+          "monthly_legitimacy": 0.1
+        },
+        "gacha_columbina_c6_country_modifier": {
+          "stability_cost": -0.18,
+          "monthly_war_exhaustion": -0.16,
+          "country_cabinet_efficiency": 0.12,
+          "monthly_prestige": 0.12,
+          "monthly_legitimacy": 0.12,
+          "global_devastation_recovery": 0.35
+        }
+      },
+      "story_mode": "default",
+      "nation": "snezhnaya",
+      "pool": {
+        "in_pool": false,
+        "group": ""
+      },
+      "starlight_shop": false
+    },
+    {
+      "code": "tartaglia",
+      "name": {
+        "first": "达达利亚",
+        "last": "公子"
+      },
+      "traits": {
+        "origin": {
+          "name": "至冬的战士",
+          "desc": "「陛下，给我一个敌人就行。最好强一点——弱的我没兴趣。」\n「我会听命令。只是打赢以后，记得把下一场也安排上。」",
+          "key": "gacha_tartaglia_origin_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "monthly_war_exhaustion": -0.03,
+            "naval_morale_modifier": 0.05,
+            "ship_capture_chance": 0.03,
+            "privateer_durability": 0.04,
+            "global_manpower_modifier": 0.02,
+            "monthly_prestige": 0.02
+          },
+          "aura_country_modifier": "gacha_tartaglia_country_modifier"
+        },
+        "awakened": {
+          "name": "魔王武装·狂澜",
+          "desc": "「你们的军官太谨慎了。」\n「冲锋要像潮水：先撕开缺口，再让洪流把整条阵线卷走。让我带前锋——只要我在，士气就不会掉。」",
+          "key": "gacha_tartaglia_awakened_trait",
+          "modifier": {
+            "naval_morale_modifier": 0.1,
+            "ship_capture_chance": 0.06,
+            "ship_build_speed": 0.05
+          }
+        },
+        "transcended": {
+          "name": "永无谢幕",
+          "desc": "「别把胜利当终点，胜利只是开场的掌声。」\n「把你最敢打的那支军团交给我：训练、补给、轮换，我都要。我们会一直打到对手学会尊重你为止。」",
+          "key": "gacha_tartaglia_transcended_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.07,
+            "naval_morale_modifier": 0.12,
+            "ship_capture_chance": 0.08,
+            "privateer_durability": 0.09,
+            "global_manpower_modifier": 0.06,
+            "monthly_prestige": 0.05
+          }
+        },
+        "c2": {
+          "name": "暗流的猎手",
+          "desc": "「正面会战当然痛快，但真正致命的，是让他们的粮草和银库先慌起来。」\n「海上也一样：你不必沉他们的船，只要让他们不敢出港。」",
+          "key": "gacha_tartaglia_c2_trait",
+          "modifier": {
+            "gacha_country_aura": "yes",
+            "monthly_war_exhaustion": -0.06,
+            "naval_morale_modifier": 0.1,
+            "ship_capture_chance": 0.06,
+            "privateer_durability": 0.07,
+            "global_manpower_modifier": 0.05,
+            "monthly_prestige": 0.04
+          },
+          "aura_country_modifier": "gacha_tartaglia_c2_country_modifier"
+        },
+        "c4": {
+          "name": "纷争涡源",
+          "desc": "「你想多线作战？好啊。」\n「把地图摊开：我会让敌人以为每个方向都要被突破。等他们分兵——我们就挑最硬的那块狠狠干一拳。」",
+          "key": "gacha_tartaglia_c4_trait",
+          "modifier": {
+            "naval_morale_modifier": 0.2,
+            "ship_capture_chance": 0.12,
+            "ship_build_speed": 0.1
+          }
+        },
+        "c6": {
+          "name": "尽灭闪",
+          "desc": "「我不喜欢拖泥带水。」\n「一场决定性的会战、一次彻底的追击、一个让他们再也组织不起第二条防线的结果——这才叫战争。」",
+          "key": "gacha_tartaglia_c6_trait",
+          "modifier": {
+            "monthly_war_exhaustion": -0.14,
+            "naval_morale_modifier": 0.24,
+            "ship_capture_chance": 0.16,
+            "privateer_durability": 0.18,
+            "global_manpower_modifier": 0.12,
+            "monthly_prestige": 0.1
+          }
+        }
+      },
+      "constellations": {
+        "c0": {
+          "name": "鲸天座·零命",
+          "desc": "解锁「公子」的治国风味：偏向进攻、突击与海上主动权。"
+        },
+        "c1": {
+          "name": "魔王武装·遏浪",
+          "desc": "进攻节奏更紧凑，冲锋与转换阵型更快；更适合连续推进。"
+        },
+        "c2": {
+          "name": "魔王武装·暗流",
+          "desc": "袭扰补给线与私掠更高效；从战果中更快恢复士气与动能。"
+        },
+        "c3": {
+          "name": "深渊之灾·纷争涡源",
+          "desc": "主力军团训练与精锐化更快，长期战争中优势更明显。"
+        },
+        "c4": {
+          "name": "深渊之灾·凝水盛放",
+          "desc": "连续会战能力提升：作战间隔更短，疲惫累积更慢。"
+        },
+        "c5": {
+          "name": "极恶技·斩水斩雨",
+          "desc": "火力协同更顺畅：炮兵/舰炮的压制更稳定，突破更容易形成。"
+        },
+        "c6": {
+          "name": "极恶技·天使灭尽",
+          "desc": "关键胜利后更快发动下一波攻势，扩大胜果并逼迫敌人崩盘。"
+        }
+      },
+      "buff_keys": {
+        "character_modifier": "gacha_tartaglia_modifier",
+        "constellation_modifiers": {
+          "c0": "gacha_tartaglia_c0_modifier",
+          "c1": "gacha_tartaglia_c1_modifier",
+          "c2": "gacha_tartaglia_c2_modifier",
+          "c3": "gacha_tartaglia_c3_modifier",
+          "c4": "gacha_tartaglia_c4_modifier",
+          "c5": "gacha_tartaglia_c5_modifier",
+          "c6": "gacha_tartaglia_c6_modifier"
+        },
+        "country_modifiers": {
+          "base": "gacha_tartaglia_country_modifier",
+          "c1": "gacha_tartaglia_c1_country_modifier",
+          "c2": "gacha_tartaglia_c2_country_modifier",
+          "c4": "gacha_tartaglia_c4_country_modifier",
+          "c5": "gacha_tartaglia_c5_country_modifier",
+          "c6": "gacha_tartaglia_c6_country_modifier"
+        }
+      },
+      "buff_values": {
+        "gacha_tartaglia_modifier": {
+          "gacha_core": "yes",
+          "gacha_water_godeye": "yes"
+        },
+        "gacha_tartaglia_c0_modifier": {
+          "gacha_constellation_level": 0
+        },
+        "gacha_tartaglia_c1_modifier": {
+          "gacha_constellation_level": 1
+        },
+        "gacha_tartaglia_c2_modifier": {
+          "gacha_constellation_level": 2
+        },
+        "gacha_tartaglia_c3_modifier": {
+          "gacha_constellation_level": 3
+        },
+        "gacha_tartaglia_c4_modifier": {
+          "gacha_constellation_level": 4
+        },
+        "gacha_tartaglia_c5_modifier": {
+          "gacha_constellation_level": 5
+        },
+        "gacha_tartaglia_c6_modifier": {
+          "gacha_constellation_level": 6
+        },
+        "gacha_tartaglia_country_modifier": {},
+        "gacha_tartaglia_c1_country_modifier": {
+          "government_size": 1,
+          "global_manpower_modifier": 0.08
+        },
+        "gacha_tartaglia_c2_country_modifier": {},
+        "gacha_tartaglia_c4_country_modifier": {
+          "naval_morale_modifier": 0.2,
+          "ship_capture_chance": 0.12,
+          "ship_build_speed": 0.1
+        },
+        "gacha_tartaglia_c5_country_modifier": {
+          "government_reform_slots": 1,
+          "global_construction_speed": 0.06
+        },
+        "gacha_tartaglia_c6_country_modifier": {
+          "monthly_war_exhaustion": -0.14,
+          "naval_morale_modifier": 0.24,
+          "ship_capture_chance": 0.16,
+          "privateer_durability": 0.18,
+          "global_manpower_modifier": 0.12,
+          "monthly_prestige": 0.1
+        }
+      },
+      "story_mode": "default",
+      "nation": "snezhnaya",
+      "pool": {
+        "in_pool": true,
+        "group": "snezhnaya"
+      },
+      "starlight_shop": true
+    }
+  ]
+}

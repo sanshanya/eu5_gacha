@@ -6,21 +6,34 @@ gacha_faruzan_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 gacha_faruzan_awakened_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        global_construction_speed = 0.09
+        global_devastation_recovery = 0.15
+        stability_cost = -0.03
+    }
 }
 
 gacha_faruzan_transcended_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        global_construction_speed = 0.11
+        legislative_efficiency = 0.08
+        global_devastation_recovery = 0.175
+        country_cabinet_efficiency = 0.05
+    }
 }
 
 # Constellation upgrades
@@ -29,19 +42,32 @@ gacha_faruzan_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 gacha_faruzan_c4_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        global_construction_speed = 0.18
+        global_devastation_recovery = 0.30
+        stability_cost = -0.06
+    }
 }
 
 gacha_faruzan_c6_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        global_construction_speed = 0.22
+        legislative_efficiency = 0.16
+        global_devastation_recovery = 0.35
+        country_cabinet_efficiency = 0.10
+    }
 }

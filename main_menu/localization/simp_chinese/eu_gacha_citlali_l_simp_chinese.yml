@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 茜特莅莉 (citlali)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_citlali: "茜特菈莉"
+  gacha_last_name_citlali: "炽心"
+  # === 特质 (Traits) ===
+  gacha_citlali_origin_trait: "谜烟与曜石"
+  desc_gacha_citlali_origin_trait: "茜特菈莉：「你这王庭吵得像集市。把窗关上，火熄了——我只需要一面黑曜石镜。」\n「阴影里那些小把戏，会在镜面上起雾；我只要轻轻一划，就能知道是谁在替谁说话。」\n「……别叫我‘奶奶’。我只是懒得出门，不是老。」"
+  gacha_citlali_awakened_trait: "石心镜阵·寒刻"
+  desc_gacha_citlali_awakened_trait: "茜特菈莉：「在边境埋几块镜片，再点一缕谜烟。敌人的密使踏进来，脚下就会结霜。」\n「他们以为自己在潜行，其实是在我的镜阵里绕圈。等他们回过神，军报早已摆在你案头。」"
+  gacha_citlali_transcended_trait: "大萨满的敕令"
+  desc_gacha_citlali_transcended_trait: "茜特菈莉：「统治不是吼出来的，是让所有人都‘知道’你会兑现承诺。」\n「把法令写清楚，赏罚算明白。我替你在每个誓词上压一块曜石——从此，背誓的人会先被自己的梦魇追上。」"
+  gacha_citlali_c2_trait: "芒刃跃雪·破伪"
+  desc_gacha_citlali_c2_trait: "茜特菈莉：「酒？……也不是不行。只是喝之前，先把那份盟约拿来。」\n「纸上写得漂亮，墨迹里却藏着刀。放心，我会把刀尖掰断，再还给他们一张‘看起来同样漂亮’的。」"
+  gacha_citlali_c4_trait: "四百星芒·钉命"
+  desc_gacha_citlali_c4_trait: "茜特菈莉：「四百颗星里，总有一颗是为敌将亮的。」\n「等我把那颗星钉在他头顶，你的军队只要跟着那道光——就能找到胜利的路。」"
+  gacha_citlali_c6_trait: "无瑕之献·终局"
+  desc_gacha_citlali_c6_trait: "茜特菈莉：「我本来只想宅在家里看轻小说……可你把整个国家的命运递到了我面前。」\n「行吧。你要我出门，我就出门。」\n「从今天起，敢把你的疆土当成棋盘的人——我会让他们在镜里看见自己的终局。」"
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_citlali_modifier: "茜特莅莉"
+  STATIC_MODIFIER_DESC_gacha_citlali_modifier: "TODO"
+  gacha_citlali_modifier: "茜特莅莉的余韵"
+  gacha_citlali_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_citlali_c0_modifier: "石心镜座·零命"
+  STATIC_MODIFIER_DESC_gacha_citlali_c0_modifier: "黑曜石镜阵铺开，宫廷阴谋更难成形：稳定更易维持，间谍更难渗透。"
+  STATIC_MODIFIER_NAME_gacha_citlali_c1_modifier: "香韵奏者"
+  STATIC_MODIFIER_DESC_gacha_citlali_c1_modifier: "以咒香为引，谣言与密语更易收束：谍报与外交行动更顺畅。"
+  STATIC_MODIFIER_NAME_gacha_citlali_c2_modifier: "芒刃跃雪"
+  STATIC_MODIFIER_DESC_gacha_citlali_c2_modifier: "雪芒落处，暗线冻结：敌方渗透受挫，我方治安更稳。"
+  STATIC_MODIFIER_NAME_gacha_citlali_c3_modifier: "白燧夜炬"
+  STATIC_MODIFIER_DESC_gacha_citlali_c3_modifier: "夜炬照账，文书与供给更严密：行政与军需损耗降低。"
+  STATIC_MODIFIER_NAME_gacha_citlali_c4_modifier: "四百星的芒刃"
+  STATIC_MODIFIER_DESC_gacha_citlali_c4_modifier: "星芒标记敌将，战场决断更快：会战与追击更占上风。"
+  STATIC_MODIFIER_NAME_gacha_citlali_c5_modifier: "诸曜饬令"
+  STATIC_MODIFIER_DESC_gacha_citlali_c5_modifier: "以星序整饬法度：政令推行阻力下降，地方更易服从。"
+  STATIC_MODIFIER_NAME_gacha_citlali_c6_modifier: "无瑕之献"
+  STATIC_MODIFIER_DESC_gacha_citlali_c6_modifier: "以‘终局’震慑群心：动乱显著减少，国家凝聚力提升。"
+
+  gacha_citlali_events.1.title: "茜特莅莉"
+  gacha_citlali_events.1.desc: "TODO"
+  gacha_citlali_events.1.a: "……"
+  gacha_citlali_events.4.title: "茜特莅莉·C6"
+  gacha_citlali_events.4.desc: "TODO"
+  gacha_citlali_events.4.a: "……"
+  gacha_citlali_events.11.title: "茜特莅莉·C2"
+  gacha_citlali_events.11.desc: "TODO"
+  gacha_citlali_events.11.a: "……"
+  gacha_citlali_events.12.title: "茜特莅莉·C4"
+  gacha_citlali_events.12.desc: "TODO"
+  gacha_citlali_events.12.a: "……"
+  gacha_citlali_events.13.title: "茜特莅莉·C1"
+  gacha_citlali_events.13.desc: "TODO"
+  gacha_citlali_events.13.a: "……"
+  gacha_citlali_events.14.title: "茜特莅莉·C5"
+  gacha_citlali_events.14.desc: "TODO"
+  gacha_citlali_events.14.a: "……"

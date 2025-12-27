@@ -7,9 +7,12 @@ gacha_nahida_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    # 思潮传播+20% · 理念花费-5% (由 modifier 提供)
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # 2. 摩耶之梦的解析者（职业 Trait：攻城/智将）
 gacha_nahida_awakened_trait = {
@@ -41,9 +44,12 @@ gacha_nahida_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    # 思潮传播+40% · 理念花费-10% · 接纳思潮花费-20% (由 modifier 提供)
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # C4：蕴种印的锁死
 gacha_nahida_c4_trait = {

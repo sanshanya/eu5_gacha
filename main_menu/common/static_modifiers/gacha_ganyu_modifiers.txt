@@ -19,19 +19,20 @@ gacha_ganyu_c6_modifier = { game_data = { category = character decaying = no } g
 # C0 base aura
 gacha_ganyu_country_modifier = {
     game_data = { category = country decaying = no }
-    legislative_efficiency = 0.10
+    legislative_efficiency = 0.1
 }
 
 # C2 aura upgrade
 gacha_ganyu_c2_country_modifier = {
     game_data = { category = country decaying = no }
-    legislative_efficiency = 0.20
+    legislative_efficiency = 0.2
 }
 
 # C1: Cabinet size +1 (government size)
 gacha_ganyu_c1_country_modifier = {
     game_data = { category = country decaying = no }
-    government_size = 1
+    building_upkeep_costs = -0.05
+    stability_cost = -0.05
 }
 
 # C4 placeholder (main stats in trait)
@@ -43,6 +44,7 @@ gacha_ganyu_c4_country_modifier = {
 gacha_ganyu_c5_country_modifier = {
     game_data = { category = country decaying = no }
     government_reform_slots = 1
+    hire_advisor_cost_modifier = -0.10
 }
 
 # C6 placeholder (main stats in trait)

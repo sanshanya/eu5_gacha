@@ -19,13 +19,15 @@ gacha_albedo_c6_modifier = { game_data = { category = character decaying = no } 
 # C0 基础光环（占位）
 gacha_albedo_country_modifier = {
     game_data = { category = country decaying = no }
-    legislative_efficiency = 0.10
+    global_construction_speed = 0.05
+    global_defensive = 0.05
 }
 
 # C2 光环升级
 gacha_albedo_c2_country_modifier = {
     game_data = { category = country decaying = no }
-    legislative_efficiency = 0.20
+    global_construction_speed = 0.10
+    global_defensive = 0.10
 }
 
 # C1 专属机制：内阁席位 +1
@@ -42,7 +44,7 @@ gacha_albedo_c4_country_modifier = {
 # C5 专属机制：国策槽位 +1
 gacha_albedo_c5_country_modifier = {
     game_data = { category = country decaying = no }
-    government_reform_slots = 1
+    expand_rgo_mining_cost_modifier = -0.10
 }
 
 # C6 国家级占位（主要属性在 Trait 中）

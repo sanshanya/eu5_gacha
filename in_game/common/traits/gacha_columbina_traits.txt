@@ -6,21 +6,36 @@ gacha_columbina_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 gacha_columbina_awakened_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        monthly_war_exhaustion = -0.06
+        global_devastation_recovery = 0.125
+        global_estate_satisfaction_recovery = 0.03
+    }
 }
 
 gacha_columbina_transcended_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        stability_cost = -0.09
+        monthly_war_exhaustion = -0.08
+        country_cabinet_efficiency = 0.06
+        monthly_prestige = 0.06
+        monthly_legitimacy = 0.06
+        global_devastation_recovery = 0.175
+    }
 }
 
 # Constellation upgrades
@@ -29,19 +44,34 @@ gacha_columbina_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 gacha_columbina_c4_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        monthly_war_exhaustion = -0.12
+        global_devastation_recovery = 0.25
+        global_estate_satisfaction_recovery = 0.06
+    }
 }
 
 gacha_columbina_c6_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        stability_cost = -0.18
+        monthly_war_exhaustion = -0.16
+        country_cabinet_efficiency = 0.12
+        monthly_prestige = 0.12
+        monthly_legitimacy = 0.12
+        global_devastation_recovery = 0.35
+    }
 }

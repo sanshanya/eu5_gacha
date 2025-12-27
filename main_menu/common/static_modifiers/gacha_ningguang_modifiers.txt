@@ -19,14 +19,14 @@ gacha_ningguang_c6_modifier = { game_data = { category = character decaying = no
 # C0 基础光环（贸易效率+10%, 贸易范围+10）
 gacha_ningguang_country_modifier = {
     game_data = { category = country decaying = no }
-    trade_efficiency = 0.10
+    trade_efficiency = 0.1
     trade_range = 10
 }
 
 # C2 光环升级（贸易效率+20%, 贸易范围+20）
 gacha_ningguang_c2_country_modifier = {
     game_data = { category = country decaying = no }
-    trade_efficiency = 0.20
+    trade_efficiency = 0.2
     trade_range = 20
 }
 
@@ -34,21 +34,27 @@ gacha_ningguang_c2_country_modifier = {
 gacha_ningguang_c1_country_modifier = {
     game_data = { category = country decaying = no }
     global_merchant_capacity_modifier = 0.20
+    trade_range_modifier = 0.10
 }
 
 # C4 国家级占位（主要属性在 Trait 中）
 gacha_ningguang_c4_country_modifier = {
     game_data = { category = country decaying = no }
+    spy_network_construction = 0.25
+    max_diplomats = 1
 }
 
 # C5 专属机制：顾问花费-30%
 gacha_ningguang_c5_country_modifier = {
     game_data = { category = country decaying = no }
     hire_advisor_cost_modifier = -0.30
+    government_reform_slots = 1
 }
 
 # C6 国家级占位（主要属性在 Trait 中）
 gacha_ningguang_c6_country_modifier = {
     game_data = { category = country decaying = no }
+    total_loan_capacity_modifier = 0.25
+    trade_income = 0.10
+    trade_efficiency = 0.08
 }
-

@@ -1,0 +1,7 @@
+﻿gacha_charlotte_01 = {
+  entity = {
+    required_tags      = ""
+    shared_pose_entity = head
+    entity             = "gacha_charlotte_01_entity"
+  }
+}

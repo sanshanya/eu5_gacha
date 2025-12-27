@@ -6,21 +6,34 @@ gacha_ganyu_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 gacha_ganyu_awakened_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        global_defensive = 0.05
+        land_morale_recovery = 0.03
+        land_morale = 0.02
+    }
 }
 
 gacha_ganyu_transcended_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        monthly_legitimacy = 0.04
+        stability_cost = -0.05
+        global_devastation_recovery = 0.05
+        land_morale_recovery = 0.03
+    }
 }
 
 # Constellation upgrades
@@ -29,19 +42,32 @@ gacha_ganyu_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 gacha_ganyu_c4_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        global_defensive = 0.10
+        land_morale_recovery = 0.06
+        land_morale = 0.04
+    }
 }
 
 gacha_ganyu_c6_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        monthly_legitimacy = 0.08
+        stability_cost = -0.10
+        global_devastation_recovery = 0.10
+        land_morale_recovery = 0.06
+    }
 }

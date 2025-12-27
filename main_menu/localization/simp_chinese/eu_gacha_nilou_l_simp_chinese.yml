@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 妮露 (nilou)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_nilou: "妮露"
+  gacha_last_name_nilou: "祖拜尔"
+  # === 特质 (Traits) ===
+  gacha_nilou_origin_trait: "祖拜尔剧场的领舞"
+  desc_gacha_nilou_origin_trait: "「舞台上，每个人都需要自己的位置；舞台下，国家也是。\n\n若你愿意给平民一场能参与的节庆，他们就会把不满变成掌声。\n\n我不懂政治，但我懂人心的节奏。」"
+  gacha_nilou_awakened_trait: "莲舞·绽放之时"
+  desc_gacha_nilou_awakened_trait: "「有人说艺术无用。可当军队疲惫、城市饥饿时，一支舞能让人们记起：我们为何要活下去。\n\n让我把节庆变成制度，把欢呼变成凝聚。」"
+  gacha_nilou_transcended_trait: "花神的舞台"
+  desc_gacha_nilou_transcended_trait: "「把我推到王座上？我会害怕。\n\n但如果这能让更多人免于恐惧——我愿意学会如何统治。\n\n只是请记住：我希望这个国家，永远保留一盏给普通人的灯。」"
+  gacha_nilou_c2_trait: "清露与花冠"
+  desc_gacha_nilou_c2_trait: "「让剧场不只属于城市。\n\n在港口、集市与村庄，我们都能搭起小小的舞台。\n\n当文化被分享，阶层就没那么尖锐；当节庆成为习惯，忠诚就会自然生长。」"
+  gacha_nilou_c4_trait: "盈月的水镜"
+  desc_gacha_nilou_c4_trait: "「海风会带走谣言，也会带来消息。\n\n在舰队启航前，为他们跳一支送行的舞吧——不是迷信，是仪式。\n\n仪式能让人相信胜利，而相信本身，就是力量。」"
+  gacha_nilou_c6_trait: "永不落幕的谢幕"
+  desc_gacha_nilou_c6_trait: "「如果有一天战争结束，你会不会也像观众一样离席？\n\n……不，我不该这么想。\n\n我会把‘和平’写进日常：让税收不再像惩罚，让法律不再像鞭子。\n\n等到那天，人们回望这一段历史时，会说：那是一场终于迎来谢幕的噩梦。」"
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_nilou_modifier: "妮露"
+  STATIC_MODIFIER_DESC_gacha_nilou_modifier: "TODO"
+  gacha_nilou_modifier: "妮露的余韵"
+  gacha_nilou_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_nilou_c0_modifier: "睡莲座·零命"
+  STATIC_MODIFIER_DESC_gacha_nilou_c0_modifier: "文化凝聚：声望与民心上升，地方不满下降。"
+  STATIC_MODIFIER_NAME_gacha_nilou_c1_modifier: "却月的轻舞"
+  STATIC_MODIFIER_DESC_gacha_nilou_c1_modifier: "节庆常态化：稳定成本降低，叛乱更难酝酿。"
+  STATIC_MODIFIER_NAME_gacha_nilou_c2_modifier: "莲台的祝祷"
+  STATIC_MODIFIER_DESC_gacha_nilou_c2_modifier: "社群互助增强：发展更快，贫困地区恢复更迅速。"
+  STATIC_MODIFIER_NAME_gacha_nilou_c3_modifier: "剧场的幕布"
+  STATIC_MODIFIER_DESC_gacha_nilou_c3_modifier: "文化产业兴盛：贸易与城市收入提升。"
+  STATIC_MODIFIER_NAME_gacha_nilou_c4_modifier: "水镜的回响"
+  STATIC_MODIFIER_DESC_gacha_nilou_c4_modifier: "海军士气与补给更稳，远航更安全。"
+  STATIC_MODIFIER_NAME_gacha_nilou_c5_modifier: "花神的邀约"
+  STATIC_MODIFIER_DESC_gacha_nilou_c5_modifier: "外交更柔和：文化亲和与结盟倾向提升。"
+  STATIC_MODIFIER_NAME_gacha_nilou_c6_modifier: "繁花谢幕"
+  STATIC_MODIFIER_DESC_gacha_nilou_c6_modifier: "黄金时代的引子：全国范围繁荣与稳定的综合提升。"
+
+  gacha_nilou_events.1.title: "妮露"
+  gacha_nilou_events.1.desc: "TODO"
+  gacha_nilou_events.1.a: "……"
+  gacha_nilou_events.4.title: "妮露·C6"
+  gacha_nilou_events.4.desc: "TODO"
+  gacha_nilou_events.4.a: "……"
+  gacha_nilou_events.11.title: "妮露·C2"
+  gacha_nilou_events.11.desc: "TODO"
+  gacha_nilou_events.11.a: "……"
+  gacha_nilou_events.12.title: "妮露·C4"
+  gacha_nilou_events.12.desc: "TODO"
+  gacha_nilou_events.12.a: "……"
+  gacha_nilou_events.13.title: "妮露·C1"
+  gacha_nilou_events.13.desc: "TODO"
+  gacha_nilou_events.13.a: "……"
+  gacha_nilou_events.14.title: "妮露·C5"
+  gacha_nilou_events.14.desc: "TODO"
+  gacha_nilou_events.14.a: "……"

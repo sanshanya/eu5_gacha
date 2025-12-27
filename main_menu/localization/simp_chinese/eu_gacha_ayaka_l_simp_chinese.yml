@@ -1,0 +1,88 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 神里绫华 (ayaka)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_ayaka: "神里绫华"
+  gacha_last_name_ayaka: "白鹭"
+
+  # === 特质 (Traits) ===
+  gacha_ayaka_origin_trait: "白鹭姬的礼法"
+  desc_gacha_ayaka_origin_trait: "「在剑拔弩张的宫廷里，礼法不是装饰，而是刀鞘。\n\n把尖锐的话包进得体的措辞里，把各阶层的情绪安放在可接受的秩序中——这就是社奉行的工作。\n\n若您愿意给我一间能安静落笔的书房，我会让您的朝会少一点争吵，多一点服从。」"
+
+  gacha_ayaka_awakened_trait: "神里流·霜刃裁断"
+  desc_gacha_ayaka_awakened_trait: "「战场并不粗鄙，它只是更诚实。\n\n当谈判桌上仍有人试图用谎言拖延时，我会用一场干净利落的胜利，让他们重新学会‘守约’。\n\n请下令吧——我会让敌军明白，‘礼’与‘兵’，从来不是两条路。」"
+
+  gacha_ayaka_transcended_trait: "社奉行的治世之道"
+  desc_gacha_ayaka_transcended_trait: "「我见过太多国家死于‘正确’，也见过太多国家活于‘折中’。\n\n传统需要被尊重，但不该被供奉；改革需要被推动，但不该被崇拜。\n\n若您愿意把国是交给我分担，我会用最温和的方式推进最坚决的改变——让人们甚至来不及反对。」"
+
+  gacha_ayaka_c2_trait: "三奉行的棋局"
+  desc_gacha_ayaka_c2_trait: "「人们以为权力来自武力，其实权力来自‘共识’。\n\n让武家安心，让商人得利，让神社有体面——三方都满意时，国家就不会被内耗拖住脚步。\n\n我不保证人人喜欢您，但我能保证：他们都会选择‘继续合作’。」"
+
+  gacha_ayaka_c4_trait: "雪关扉下的誓约"
+  desc_gacha_ayaka_c4_trait: "「最冷的不是风雪，是军心动摇的那一刻。\n\n我会把粮秣、军饷、抚恤与荣誉一条条写清，让士兵知道自己为何而战，回乡时又能留下些什么。\n\n当秩序仍在，恐惧就进不来。」"
+
+  gacha_ayaka_c6_trait: "白鹭之章·国是"
+  desc_gacha_ayaka_c6_trait: "「我曾以为，‘白鹭姬’只是一种身份。\n\n但来到这里以后我才明白，它也可以是一种选择：在刀锋旁仍坚持温柔，在胜利后仍为失败者留路。\n\n陛下，若您要的是一个能让国家‘更像国家’的人——我愿意一直站在您身边。」"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_ayaka_modifier: "神里绫华"
+  STATIC_MODIFIER_DESC_gacha_ayaka_modifier: "TODO"
+  gacha_ayaka_modifier: "神里绫华的余韵"
+  gacha_ayaka_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_ayaka_c0_modifier: "白鹭座·零命"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c0_modifier: "社奉行的礼法被带入宫廷：谈判更顺滑，阶层更容易被安抚，仪式感变成可计算的秩序。"
+  STATIC_MODIFIER_NAME_gacha_ayaka_c1_modifier: "霜杀墨染樱"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c1_modifier: "每一次“温柔的提醒”背后都藏着锋利的底线：对外更难被试探底牌，对内更快压住流言与躁动。"
+  STATIC_MODIFIER_NAME_gacha_ayaka_c2_modifier: "三重雪关扉"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c2_modifier: "把防线写进制度：关隘、要塞与港口的调度更严密，敌人想钻空子会发现门后还有第二道门。"
+  STATIC_MODIFIER_NAME_gacha_ayaka_c3_modifier: "花白锦画纸吹雪"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c3_modifier: "以文化塑造合法性：节庆、礼乐与赞助让王权更“理所当然”，反对者会被舆论与风俗缓慢淹没。"
+  STATIC_MODIFIER_NAME_gacha_ayaka_c4_modifier: "盈缺流返"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c4_modifier: "危机时的回旋余地：当战事或饥荒逼近，朝廷更容易重新分配资源，避免秩序崩盘。"
+  STATIC_MODIFIER_NAME_gacha_ayaka_c5_modifier: "花云钟入月"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c5_modifier: "盟友愿意再多给你一次机会：外交场上更容易获得信任，甚至敌国也会更倾向先谈再打。"
+  STATIC_MODIFIER_NAME_gacha_ayaka_c6_modifier: "间水月"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c6_modifier: "决定性的一击不必喧嚣：关键会战中更容易打出“瞬间塌陷”的士气差，让胜利像雪落一样无声却彻底。"
+
+  # 神里绫华 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_ayaka_country_modifier: "神里绫华·光环"
+  STATIC_MODIFIER_DESC_gacha_ayaka_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_ayaka_c1_country_modifier: "神里绫华·C1"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_ayaka_c2_country_modifier: "神里绫华·C2"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_ayaka_c4_country_modifier: "神里绫华·C4"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_ayaka_c5_country_modifier: "神里绫华·C5"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_ayaka_c6_country_modifier: "神里绫华·C6"
+  STATIC_MODIFIER_DESC_gacha_ayaka_c6_country_modifier: "TODO"
+
+  # === 事件 (Events) ===
+  gacha_ayaka_events.1.title: "神里绫华"
+  gacha_ayaka_events.1.desc: "TODO"
+  gacha_ayaka_events.1.a: "……"
+
+  gacha_ayaka_events.4.title: "神里绫华·C6"
+  gacha_ayaka_events.4.desc: "TODO"
+  gacha_ayaka_events.4.a: "……"
+
+  gacha_ayaka_events.11.title: "神里绫华·C2"
+  gacha_ayaka_events.11.desc: "TODO"
+  gacha_ayaka_events.11.a: "……"
+
+  gacha_ayaka_events.12.title: "神里绫华·C4"
+  gacha_ayaka_events.12.desc: "TODO"
+  gacha_ayaka_events.12.a: "……"
+
+  gacha_ayaka_events.13.title: "神里绫华·C1"
+  gacha_ayaka_events.13.desc: "TODO"
+  gacha_ayaka_events.13.a: "……"
+
+  gacha_ayaka_events.14.title: "神里绫华·C5"
+  gacha_ayaka_events.14.desc: "TODO"
+  gacha_ayaka_events.14.a: "……"

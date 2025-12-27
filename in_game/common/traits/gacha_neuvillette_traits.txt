@@ -6,21 +6,32 @@ gacha_neuvillette_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 gacha_neuvillette_awakened_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        global_devastation_recovery = 0.125
+        global_estate_satisfaction_recovery = 0.03
+        global_disease_resistance = 0.05
+    }
 }
 
 gacha_neuvillette_transcended_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        monthly_legitimacy = 0.075
+        country_cabinet_efficiency = 0.05
+        global_manpower_modifier = 0.05
+        stability_cost = -0.04
+    }
 }
 
 # Constellation upgrades
@@ -29,19 +40,30 @@ gacha_neuvillette_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
 
 gacha_neuvillette_c4_trait = {
     category = general
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        global_devastation_recovery = 0.25
+        global_estate_satisfaction_recovery = 0.06
+        global_disease_resistance = 0.10
+    }
 }
 
 gacha_neuvillette_c6_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { }
+    modifier = {
+        monthly_legitimacy = 0.15
+        country_cabinet_efficiency = 0.10
+        global_manpower_modifier = 0.10
+        stability_cost = -0.08
+    }
 }

@@ -19,14 +19,14 @@ gacha_zhongli_c6_modifier = { game_data = { category = character decaying = no }
 # C0 基础光环（行政效率+10% · 正统性+1.0/年）
 gacha_zhongli_country_modifier = {
     game_data = { category = country decaying = no }
-    country_cabinet_efficiency = 0.10
+    country_cabinet_efficiency = 0.1
     monthly_legitimacy = 0.08
 }
 
 # C2 光环升级（行政效率+20% · 正统性+2.0/年）
 gacha_zhongli_c2_country_modifier = {
     game_data = { category = country decaying = no }
-    country_cabinet_efficiency = 0.20
+    country_cabinet_efficiency = 0.2
     monthly_legitimacy = 0.16
 }
 
@@ -34,20 +34,29 @@ gacha_zhongli_c2_country_modifier = {
 gacha_zhongli_c1_country_modifier = {
     game_data = { category = country decaying = no }
     government_size = 1
+    diplomatic_reputation = 1
 }
 
 # C4 国家级占位（主要属性在 Trait 中）
 gacha_zhongli_c4_country_modifier = {
     game_data = { category = country decaying = no }
+    siege_ability = 0.10
+    army_artillery_power = 0.05
+    discipline = 0.03
 }
 
 # C5 专属机制：治理余裕（以国策槽位表现）
 gacha_zhongli_c5_country_modifier = {
     game_data = { category = country decaying = no }
     government_reform_slots = 1
+    global_defensive = 0.08
 }
 
 # C6 国家级占位（主要属性在 Trait 中）
 gacha_zhongli_c6_country_modifier = {
     game_data = { category = country decaying = no }
+    stability_cost = -0.10
+    global_devastation_recovery = 0.15
+    land_morale_recovery = 0.05
+    land_unit_attrition = -0.05
 }

@@ -106,7 +106,7 @@ gacha_faruzan_events.1 = {
     type = country_event
     title = gacha_faruzan_events.1.title
     desc = gacha_faruzan_events.1.desc
-    hide_portraits = yes
+    hide_portraits = no
     image = "gfx/event_pictures/gacha_inazuma.dds"
     option = { name = gacha_faruzan_events.1.a }
 }

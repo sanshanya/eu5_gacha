@@ -34,12 +34,19 @@
 
   # === 命之座 (Constellations) ===
   STATIC_MODIFIER_NAME_gacha_zhongli_c0_modifier: "听书人座·零命"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c0_modifier: "「故事听多了，就知道什么该守。」\n他不争权，却让秩序落地：你的法度更像“契约”，而不是纸面。"
   STATIC_MODIFIER_NAME_gacha_zhongli_c1_modifier: "秩序之约"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c1_modifier: "「先立规矩，再谈仁慈。」\n当制度清晰，地方就不敢乱：治安与服从更稳定，内耗更少。"
   STATIC_MODIFIER_NAME_gacha_zhongli_c2_modifier: "金石之约"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c2_modifier: "「言出必践。」\n外交与内政都更“可兑现”：承诺更可信，违约更昂贵，你的威望随之上升。"
   STATIC_MODIFIER_NAME_gacha_zhongli_c3_modifier: "古岩残章"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c3_modifier: "「旧章不是束缚，是基座。」\n他擅长把古老法度重写成可用的条文：制度更耐久，短期风潮更难掀翻根基。"
   STATIC_MODIFIER_NAME_gacha_zhongli_c4_modifier: "天星坠落"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c4_modifier: "「该落下的时候，就会落下。」\n当你决定用力一击，他会把“势”砸出来：攻坚与决战的效果更像定音锤。"
   STATIC_MODIFIER_NAME_gacha_zhongli_c5_modifier: "万世之约"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c5_modifier: "「万世之约，不在口头。」\n他把承诺写进税制、军制与城防：国家韧性增强，动荡更难撼动你的统治。"
   STATIC_MODIFIER_NAME_gacha_zhongli_c6_modifier: "尘世闲游"
+  STATIC_MODIFIER_DESC_gacha_zhongli_c6_modifier: "「人间烟火，最值得珍惜。」\n当他选择留下，你得到的是“长治久安”的底色：不是爆发型的强，而是越打越稳、越久越强。"
 
   # 钟离 - 国家修正
   STATIC_MODIFIER_NAME_gacha_zhongli_country_modifier: "千年契约"

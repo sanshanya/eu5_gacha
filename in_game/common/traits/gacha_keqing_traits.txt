@@ -7,9 +7,12 @@ gacha_keqing_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    # 建造时间-15% · 发展度提升花费-10% (由 modifier 提供)
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # 2. 迅雷天街巡游（职业 Trait：陆军）
 gacha_keqing_awakened_trait = {
@@ -42,9 +45,12 @@ gacha_keqing_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    # 建造时间-30% · 发展度花费-20% · 商品产出+10% (由 modifier 提供)
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # C4：云来绝剑
 gacha_keqing_c4_trait = {

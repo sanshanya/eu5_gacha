@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 艾尔海森 (alhaitham)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_alhaitham: "艾尔海森"
+  gacha_last_name_alhaitham: "书记官"
+  # === 特质 (Traits) ===
+  gacha_alhaitham_origin_trait: "书记官的低耗法则"
+  desc_gacha_alhaitham_origin_trait: "「你想让我出面？先说明：我对‘功名’没兴趣。\n\n把卷宗交给我。把职责划清。把多余的仪式删掉。\n\n剩下的，我会用最省力的方式让它运转起来——这不是忠诚，是效率。」"
+  gacha_alhaitham_awakened_trait: "逻辑的破阵"
+  desc_gacha_alhaitham_awakened_trait: "「城墙、补给线、部队轮换……战争不过是一道大型算题。\n\n你负责决定要不要打，我负责告诉你：从哪里推，最省人命、也最省时间。」"
+  gacha_alhaitham_transcended_trait: "代理贤者·必要之举"
+  desc_gacha_alhaitham_transcended_trait: "「我不喜欢领导别人——因为那意味着要为别人的错误买单。\n\n但若无人能把系统修好，那就只能我来。\n\n放心，我不会建立个人崇拜。我只会把规则写到你们再也无法装作看不见。」"
+  gacha_alhaitham_c2_trait: "审读与驳论"
+  desc_gacha_alhaitham_c2_trait: "「在学者的世界里，最昂贵的不是知识，是错误。\n\n我会把错误的激励结构拆掉：谁制造混乱，谁付出代价；谁做出成果，谁得到资源。\n\n从此以后，官僚会学会‘把事情做完’。」"
+  gacha_alhaitham_c4_trait: "静默的索引"
+  desc_gacha_alhaitham_c4_trait: "「信息本身不会说谎，只有人会。\n\n把情报、账目、贸易与军需汇总成一张索引表——你会惊讶地发现，很多‘意外’其实都有轨迹。\n\n我不需要占卜，我只需要数据。」"
+  gacha_alhaitham_c6_trait: "正理之治"
+  desc_gacha_alhaitham_c6_trait: "「你想要一个不会自毁的帝国？那就别把它建立在某个‘伟人’身上。\n\n把权力锁进制度里，把制度写进每个人的利益里。\n\n至于我？我会在你不注意的时候，把最难的那部分做完，然后回去睡觉。」"
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_alhaitham_modifier: "艾尔海森"
+  STATIC_MODIFIER_DESC_gacha_alhaitham_modifier: "TODO"
+  gacha_alhaitham_modifier: "艾尔海森的余韵"
+  gacha_alhaitham_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_alhaitham_c0_modifier: "天隼座·零命"
+  STATIC_MODIFIER_DESC_gacha_alhaitham_c0_modifier: "以理性整理政务，降低官僚内耗；当你推进改革时，阻力更小。"
+  STATIC_MODIFIER_NAME_gacha_alhaitham_c1_modifier: "直观"
+  STATIC_MODIFIER_DESC_gacha_alhaitham_c1_modifier: "决策链条被压缩，内阁行动更迅捷；紧急状态下的反应更快。"
+  STATIC_MODIFIER_NAME_gacha_alhaitham_c2_modifier: "辩章"
+  STATIC_MODIFIER_DESC_gacha_alhaitham_c2_modifier: "学术与行政被迫对齐：创新与制度传播更顺畅。"
+  STATIC_MODIFIER_NAME_gacha_alhaitham_c3_modifier: "遮诠"
+  STATIC_MODIFIER_DESC_gacha_alhaitham_c3_modifier: "以“注释”修补漏洞：降低技术与制度的执行成本。"
+  STATIC_MODIFIER_NAME_gacha_alhaitham_c4_modifier: "义贯"
+  STATIC_MODIFIER_DESC_gacha_alhaitham_c4_modifier: "将纪律写成条款：军队的组织度与围城效率提升。"
+  STATIC_MODIFIER_NAME_gacha_alhaitham_c5_modifier: "智度"
+  STATIC_MODIFIER_DESC_gacha_alhaitham_c5_modifier: "学府与书库被系统化：顾问与学者更便宜，也更好用。"
+  STATIC_MODIFIER_NAME_gacha_alhaitham_c6_modifier: "正理"
+  STATIC_MODIFIER_DESC_gacha_alhaitham_c6_modifier: "腐败与渎职更难藏匿：国家更稳定，扩张更可持续。"
+
+  gacha_alhaitham_events.1.title: "艾尔海森"
+  gacha_alhaitham_events.1.desc: "TODO"
+  gacha_alhaitham_events.1.a: "……"
+  gacha_alhaitham_events.4.title: "艾尔海森·C6"
+  gacha_alhaitham_events.4.desc: "TODO"
+  gacha_alhaitham_events.4.a: "……"
+  gacha_alhaitham_events.11.title: "艾尔海森·C2"
+  gacha_alhaitham_events.11.desc: "TODO"
+  gacha_alhaitham_events.11.a: "……"
+  gacha_alhaitham_events.12.title: "艾尔海森·C4"
+  gacha_alhaitham_events.12.desc: "TODO"
+  gacha_alhaitham_events.12.a: "……"
+  gacha_alhaitham_events.13.title: "艾尔海森·C1"
+  gacha_alhaitham_events.13.desc: "TODO"
+  gacha_alhaitham_events.13.a: "……"
+  gacha_alhaitham_events.14.title: "艾尔海森·C5"
+  gacha_alhaitham_events.14.desc: "TODO"
+  gacha_alhaitham_events.14.a: "……"

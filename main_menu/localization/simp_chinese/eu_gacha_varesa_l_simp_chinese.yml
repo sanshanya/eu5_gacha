@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 瓦雷莎 (varesa)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_varesa: "瓦雷莎"
+  gacha_last_name_varesa: "炽鬃"
+  # === 特质 (Traits) ===
+  gacha_varesa_origin_trait: "沃陆果园·丰沃"
+  desc_gacha_varesa_origin_trait: "瓦雷莎：「咦？你们这儿的土看起来不错欸！要不要试试种点果树？我家的果园，能让最挑嘴的人都闭嘴。」\n「别看我慢吞吞的，做饭、搬货、护送队伍我都行。路上饿了？我还有备份点心。」"
+  gacha_varesa_awakened_trait: "面具英雄·雷光突进"
+  desc_gacha_varesa_awakened_trait: "瓦雷莎：「要打架？那我戴上面具就行。」\n「面具一扣，心跳就跟鼓点一样快——冲过去，撞开，摔倒，站起来。那些深渊的家伙？照样能被踢飞。」"
+  gacha_varesa_transcended_trait: "斗士假面·护路"
+  desc_gacha_varesa_transcended_trait: "瓦雷莎：「沃陆之邦的人啊，力气大，但不蛮。」\n「我会把巡逻、护送、征兵都安排得像货运一样准时。你给我一条路，我保证它天天有人走、天天有粮到。」"
+  gacha_varesa_c2_trait: "逾越天光·极限"
+  desc_gacha_varesa_c2_trait: "瓦雷莎：「极限？那不就是再往前一步嘛！」\n「别怕摔，摔倒了爬起来继续跑。只要你敢推进，我就敢把队伍顶到最前面。」"
+  gacha_varesa_c4_trait: "直面前路·勇气"
+  desc_gacha_varesa_c4_trait: "瓦雷莎：「前路要是黑的，就用雷光照亮它。」\n「有人想退？我就把他们拽回来——不是靠吼，是靠让他们相信：我们能赢。」"
+  gacha_varesa_c6_trait: "正义英雄·凯旋"
+  desc_gacha_varesa_c6_trait: "瓦雷莎：「大家都说我像郊游的孩子……可真遇到魔物，我也会认真的。」\n「胜利之后，果园的甜味会回到每条路上。」\n「到那时，你就知道：我戴面具不是为了吓人，是为了守住笑声。」"
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_varesa_modifier: "瓦雷莎"
+  STATIC_MODIFIER_DESC_gacha_varesa_modifier: "TODO"
+  gacha_varesa_modifier: "瓦雷莎的余韵"
+  gacha_varesa_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_varesa_c0_modifier: "斗士假面座·零命"
+  STATIC_MODIFIER_DESC_gacha_varesa_c0_modifier: "沃陆的丰沃成为国力：农业与人力上限提升。"
+  STATIC_MODIFIER_NAME_gacha_varesa_c1_modifier: "终始不熄的热诚"
+  STATIC_MODIFIER_DESC_gacha_varesa_c1_modifier: "热诚不灭：陆军士气与士气恢复提升。"
+  STATIC_MODIFIER_NAME_gacha_varesa_c2_modifier: "逾越天光的极限"
+  STATIC_MODIFIER_DESC_gacha_varesa_c2_modifier: "极限突进：行军速度提升，地形损耗降低。"
+  STATIC_MODIFIER_NAME_gacha_varesa_c3_modifier: "百折不摧的决意"
+  STATIC_MODIFIER_DESC_gacha_varesa_c3_modifier: "越挫越勇：战斗韧性更强，关键会战更不易崩盘。"
+  STATIC_MODIFIER_NAME_gacha_varesa_c4_modifier: "直面前路的勇气"
+  STATIC_MODIFIER_DESC_gacha_varesa_c4_modifier: "勇气压住恐惧：战争疲劳更易控制，动乱更少。"
+  STATIC_MODIFIER_NAME_gacha_varesa_c5_modifier: "暖风浮漾的心念"
+  STATIC_MODIFIER_DESC_gacha_varesa_c5_modifier: "心念如暖风：治安与行政运转更顺畅。"
+  STATIC_MODIFIER_NAME_gacha_varesa_c6_modifier: "正义英雄的凯旋"
+  STATIC_MODIFIER_DESC_gacha_varesa_c6_modifier: "凯旋之名凝聚人心：胜利带来更多声望与合法性，国家更易团结。"
+
+  gacha_varesa_events.1.title: "瓦雷莎"
+  gacha_varesa_events.1.desc: "TODO"
+  gacha_varesa_events.1.a: "……"
+  gacha_varesa_events.4.title: "瓦雷莎·C6"
+  gacha_varesa_events.4.desc: "TODO"
+  gacha_varesa_events.4.a: "……"
+  gacha_varesa_events.11.title: "瓦雷莎·C2"
+  gacha_varesa_events.11.desc: "TODO"
+  gacha_varesa_events.11.a: "……"
+  gacha_varesa_events.12.title: "瓦雷莎·C4"
+  gacha_varesa_events.12.desc: "TODO"
+  gacha_varesa_events.12.a: "……"
+  gacha_varesa_events.13.title: "瓦雷莎·C1"
+  gacha_varesa_events.13.desc: "TODO"
+  gacha_varesa_events.13.a: "……"
+  gacha_varesa_events.14.title: "瓦雷莎·C5"
+  gacha_varesa_events.14.desc: "TODO"
+  gacha_varesa_events.14.a: "……"

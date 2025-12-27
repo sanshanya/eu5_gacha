@@ -1,0 +1,61 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 玛拉妮 (mualani)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_mualani: "玛拉妮"
+  gacha_last_name_mualani: "潮声"
+  # === 特质 (Traits) ===
+  gacha_mualani_origin_trait: "金牌向导·悠游豚豚"
+  desc_gacha_mualani_origin_trait: "玛拉妮：「欢迎来到‘流泉之众’——哦不，是欢迎来到你的新海岸线！」\n「想要贸易兴旺，先让人愿意来。挑个‘幸运时刻’开港，我给你把最舒服的温泉、最安全的航线都标出来。」\n「放心啦，只要跟着我走，迷路的只会是坏天气！」"
+  gacha_mualani_awakened_trait: "浪尖突击·冲浪"
+  desc_gacha_mualani_awakened_trait: "玛拉妮：「海战也可以很快乐！你看，浪一起来，船就像在冲浪——冲到敌人脸上那种！」\n「把火炮摆稳，节奏跟上，剩下的交给海风和我。」"
+  gacha_mualani_transcended_trait: "流泉节庆·安民"
+  desc_gacha_mualani_transcended_trait: "玛拉妮：「统治可不是把人都绷紧呀。」\n「让港口有音乐，让集市有笑声。人们心情好，税收就顺；水路通，消息也快。」\n「嗯？你问我为什么这么懂？因为我可是金牌向导嘛！」"
+  gacha_mualani_c2_trait: "全力以赴·择潮"
+  desc_gacha_mualani_c2_trait: "玛拉妮：「全力以赴，玛拉妮！——这句话不只是口号。」\n「当你决定出击，我会挑出最好的潮汐、最短的航程。敌人还在数浪花，你的人已经登陆了。」"
+  gacha_mualani_c4_trait: "鲨影逐浪·断补给"
+  desc_gacha_mualani_c4_trait: "玛拉妮：「鲨鲨主食是豚豚……所以啊，海上的坏家伙最怕的不是炮，是被追着跑！」\n「给我几艘快船，我能把他们的补给线咬得只剩泡沫。」"
+  gacha_mualani_c6_trait: "流泉之众·同游"
+  desc_gacha_mualani_c6_trait: "玛拉妮：「旅途最重要的是快乐，其次是——别忘了带上同伴。」\n「当整个国家都学会在风浪里笑，你就不会被风浪打垮。」\n「来吧，把这片海变成我们的游乐场……和回家的路。」"
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_mualani_modifier: "玛拉妮"
+  STATIC_MODIFIER_DESC_gacha_mualani_modifier: "TODO"
+  gacha_mualani_modifier: "玛拉妮的余韵"
+  gacha_mualani_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_mualani_c0_modifier: "浪海豹座·零命"
+  STATIC_MODIFIER_DESC_gacha_mualani_c0_modifier: "流泉向导出手：舰队航速与海上补给提升，贸易更兴旺。"
+  STATIC_MODIFIER_NAME_gacha_mualani_c1_modifier: "悠闲的「梅兹特利」…"
+  STATIC_MODIFIER_DESC_gacha_mualani_c1_modifier: "航海节奏更稳：海军维护压力降低，士气恢复更快。"
+  STATIC_MODIFIER_NAME_gacha_mualani_c2_modifier: "全力以赴玛拉妮！"
+  STATIC_MODIFIER_DESC_gacha_mualani_c2_modifier: "择潮而击：登陆与海战冲击更强，突袭更有效。"
+  STATIC_MODIFIER_NAME_gacha_mualani_c3_modifier: "在欢乐海上冲浪"
+  STATIC_MODIFIER_DESC_gacha_mualani_c3_modifier: "乘风破浪：机动与远航能力提升，探索与拓展更顺。"
+  STATIC_MODIFIER_NAME_gacha_mualani_c4_modifier: "鲨鲨主食是豚豚。"
+  STATIC_MODIFIER_DESC_gacha_mualani_c4_modifier: "追猎补给线：私掠与封锁更强，敌方沿海更难安宁。"
+  STATIC_MODIFIER_NAME_gacha_mualani_c5_modifier: "同款冲浪板有售！"
+  STATIC_MODIFIER_DESC_gacha_mualani_c5_modifier: "港口生意火爆：贸易收入与港口建设效率提升。"
+  STATIC_MODIFIER_NAME_gacha_mualani_c6_modifier: "「流泉之众」的精神"
+  STATIC_MODIFIER_DESC_gacha_mualani_c6_modifier: "把海当家：厌战更易消退，民心更稳，海军与贸易双重增益。"
+
+  gacha_mualani_events.1.title: "玛拉妮"
+  gacha_mualani_events.1.desc: "TODO"
+  gacha_mualani_events.1.a: "……"
+  gacha_mualani_events.4.title: "玛拉妮·C6"
+  gacha_mualani_events.4.desc: "TODO"
+  gacha_mualani_events.4.a: "……"
+  gacha_mualani_events.11.title: "玛拉妮·C2"
+  gacha_mualani_events.11.desc: "TODO"
+  gacha_mualani_events.11.a: "……"
+  gacha_mualani_events.12.title: "玛拉妮·C4"
+  gacha_mualani_events.12.desc: "TODO"
+  gacha_mualani_events.12.a: "……"
+  gacha_mualani_events.13.title: "玛拉妮·C1"
+  gacha_mualani_events.13.desc: "TODO"
+  gacha_mualani_events.13.a: "……"
+  gacha_mualani_events.14.title: "玛拉妮·C5"
+  gacha_mualani_events.14.desc: "TODO"
+  gacha_mualani_events.14.a: "……"

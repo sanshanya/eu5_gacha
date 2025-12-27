@@ -1,0 +1,88 @@
+﻿l_simp_chinese:
+  # ============================================================
+  # Character - 诺艾尔 (noelle)
+  # ============================================================
+
+  # === 姓名 ===
+  gacha_first_name_noelle: "诺艾尔"
+  gacha_last_name_noelle: "女仆"
+
+  # === 特质 (Traits) ===
+  gacha_noelle_origin_trait: "骑士团女仆的誓约"
+  desc_gacha_noelle_origin_trait: "诺艾尔：「只要需要，我什么都能做！打扫、搬运、照料伤员……还有守住门口。」\n她把后勤整理得像一尘不染的大厅：军队吃得上、睡得稳，士气也跟着踏实。"
+
+  gacha_noelle_awakened_trait: "护心铠"
+  desc_gacha_noelle_awakened_trait: "诺艾尔：「请站在我身后！我会保护大家的。」\n厚重的岩铠并不华丽，却能在最混乱的接战里把伤亡压到最低。"
+
+  gacha_noelle_transcended_trait: "大扫除"
+  desc_gacha_noelle_transcended_trait: "诺艾尔：「灰尘、暴徒、还有趁乱伸手的人……都要清理。」\n当她挥动大剑，前线像被扫过一遍：缺口被补上，散兵被收拢，阵线重新变得整齐。"
+
+  gacha_noelle_c2_trait: "旋风女仆"
+  desc_gacha_noelle_c2_trait: "诺艾尔：「我会更快一点……不然大家又要等我了！」\n她的冲锋像旋风，能把拖延与犹豫一起卷走，让攻势更连贯。"
+
+  gacha_noelle_c4_trait: "之后会扫干净的"
+  desc_gacha_noelle_c4_trait: "诺艾尔：「没关系，打完仗我来收拾。」\n她总能在最糟的战场里把秩序捡回来：战后恢复更快，混乱更少。"
+
+  gacha_noelle_c6_trait: "要一尘不染才行"
+  desc_gacha_noelle_c6_trait: "诺艾尔：「做到最好，才配得上骑士的名字。」\n她不再只是“帮忙的人”：在她的标准里，胜利不只是赢——还要把国家整理到能继续前进。"
+
+  # === 修正 (Modifiers) ===
+  STATIC_MODIFIER_NAME_gacha_noelle_modifier: "诺艾尔"
+  STATIC_MODIFIER_DESC_gacha_noelle_modifier: "TODO"
+  gacha_noelle_modifier: "诺艾尔的余韵"
+  gacha_noelle_modifier_desc: "TODO"
+
+  # === 命之座 (Constellations) ===
+  STATIC_MODIFIER_NAME_gacha_noelle_c0_modifier: "心护座·零命"
+  STATIC_MODIFIER_DESC_gacha_noelle_c0_modifier: "她把“服务”当作武器：越是琐碎的事务，越能决定一个国家能不能撑到最后。"
+  STATIC_MODIFIER_NAME_gacha_noelle_c1_modifier: "支援就交给我吧"
+  STATIC_MODIFIER_DESC_gacha_noelle_c1_modifier: "当战线同时需要进攻与守护，她总能把两件事一起做完——还会顺手把地上的碎片捡走。"
+  STATIC_MODIFIER_NAME_gacha_noelle_c2_modifier: "旋风女仆"
+  STATIC_MODIFIER_DESC_gacha_noelle_c2_modifier: "旋风般的挥砍让敌人的阵形散开，也让你的军队更愿意跟上推进。"
+  STATIC_MODIFIER_NAME_gacha_noelle_c3_modifier: "女仆不会受伤"
+  STATIC_MODIFIER_DESC_gacha_noelle_c3_modifier: "护心铠的训练被强化：她的防护更稳定，突发状况更少。"
+  STATIC_MODIFIER_NAME_gacha_noelle_c4_modifier: "之后会扫干净的"
+  STATIC_MODIFIER_DESC_gacha_noelle_c4_modifier: "战斗结束不是放松，而是“清扫阶段”。她用一次沉稳的收尾，让敌人不敢回头。"
+  STATIC_MODIFIER_NAME_gacha_noelle_c5_modifier: "骑士团扫除专家"
+  STATIC_MODIFIER_DESC_gacha_noelle_c5_modifier: "她把“扫除”练成了战术：从营地到城门，处处都有她的标准流程。"
+  STATIC_MODIFIER_NAME_gacha_noelle_c6_modifier: "要一尘不染才行"
+  STATIC_MODIFIER_DESC_gacha_noelle_c6_modifier: "当她进入状态，连“不可能”都像是待清理的灰尘——只要继续用力，就会消失。"
+
+  # 诺艾尔 - 国家修正
+  STATIC_MODIFIER_NAME_gacha_noelle_country_modifier: "诺艾尔·光环"
+  STATIC_MODIFIER_DESC_gacha_noelle_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_noelle_c1_country_modifier: "诺艾尔·C1"
+  STATIC_MODIFIER_DESC_gacha_noelle_c1_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_noelle_c2_country_modifier: "诺艾尔·C2"
+  STATIC_MODIFIER_DESC_gacha_noelle_c2_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_noelle_c4_country_modifier: "诺艾尔·C4"
+  STATIC_MODIFIER_DESC_gacha_noelle_c4_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_noelle_c5_country_modifier: "诺艾尔·C5"
+  STATIC_MODIFIER_DESC_gacha_noelle_c5_country_modifier: "TODO"
+  STATIC_MODIFIER_NAME_gacha_noelle_c6_country_modifier: "诺艾尔·C6"
+  STATIC_MODIFIER_DESC_gacha_noelle_c6_country_modifier: "TODO"
+
+  # === 事件 (Events) ===
+  gacha_noelle_events.1.title: "诺艾尔"
+  gacha_noelle_events.1.desc: "TODO"
+  gacha_noelle_events.1.a: "……"
+
+  gacha_noelle_events.4.title: "诺艾尔·C6"
+  gacha_noelle_events.4.desc: "TODO"
+  gacha_noelle_events.4.a: "……"
+
+  gacha_noelle_events.11.title: "诺艾尔·C2"
+  gacha_noelle_events.11.desc: "TODO"
+  gacha_noelle_events.11.a: "……"
+
+  gacha_noelle_events.12.title: "诺艾尔·C4"
+  gacha_noelle_events.12.desc: "TODO"
+  gacha_noelle_events.12.a: "……"
+
+  gacha_noelle_events.13.title: "诺艾尔·C1"
+  gacha_noelle_events.13.desc: "TODO"
+  gacha_noelle_events.13.a: "……"
+
+  gacha_noelle_events.14.title: "诺艾尔·C5"
+  gacha_noelle_events.14.desc: "TODO"
+  gacha_noelle_events.14.a: "……"

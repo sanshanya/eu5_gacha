@@ -7,9 +7,12 @@ gacha_ningguang_origin_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    # 贸易效率/范围提升（由国家修正提供）
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # 2. 天权的裁决（职业·外交）
 gacha_ningguang_awakened_trait = {
@@ -40,8 +43,12 @@ gacha_ningguang_c2_trait = {
     category = ruler
     flavor = personality
     allow = { always = no }
-    modifier = { gacha_country_aura = yes }
+    modifier = {
+        gacha_country_aura = yes
+    }
 }
+
+
 
 # C4：七星之首（职业升级）
 gacha_ningguang_c4_trait = {

@@ -1,0 +1,66 @@
+﻿namespace = gacha_kuki_shinobu_events
+
+# ==============================================================================
+# 久岐忍 - Story Events (TODO)
+# ==============================================================================
+
+# 1. Intro
+
+gacha_kuki_shinobu_events.1 = {
+    type = country_event
+    title = gacha_kuki_shinobu_events.1.title
+    desc = gacha_kuki_shinobu_events.1.desc
+    hide_portraits = no
+    image = "gfx/event_pictures/gacha_inazuma.dds"
+    option = { name = gacha_kuki_shinobu_events.1.a }
+}
+
+# 4. C6
+
+gacha_kuki_shinobu_events.4 = {
+    type = country_event
+    title = gacha_kuki_shinobu_events.4.title
+    desc = gacha_kuki_shinobu_events.4.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_kuki_shinobu_events.4.a }
+}
+
+# 11. C2
+
+gacha_kuki_shinobu_events.11 = {
+    type = country_event
+    title = gacha_kuki_shinobu_events.11.title
+    desc = gacha_kuki_shinobu_events.11.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_kuki_shinobu_events.11.a }
+}
+
+# 12. C4
+
+gacha_kuki_shinobu_events.12 = {
+    type = country_event
+    title = gacha_kuki_shinobu_events.12.title
+    desc = gacha_kuki_shinobu_events.12.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_kuki_shinobu_events.12.a }
+}
+
+# 13. C1
+
+gacha_kuki_shinobu_events.13 = {
+    type = country_event
+    title = gacha_kuki_shinobu_events.13.title
+    desc = gacha_kuki_shinobu_events.13.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_kuki_shinobu_events.13.a }
+}
+
+# 14. C5
+
+gacha_kuki_shinobu_events.14 = {
+    type = country_event
+    title = gacha_kuki_shinobu_events.14.title
+    desc = gacha_kuki_shinobu_events.14.desc
+    immediate = { event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate } }
+    option = { name = gacha_kuki_shinobu_events.14.a }
+}
